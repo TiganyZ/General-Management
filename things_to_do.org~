@@ -1,0 +1,192 @@
+#+STARTUP: latexpreview
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
+#+LATEX_HEADER: \usepackage{physics}
+  #+LATEX_HEADER: \usepackage{hyperref, url}
+  #+LATEX_HEADER: \usepackage[square,numbers]{natbib}
+  #+LATEX_HEADER: \usepackage{subcaption}
+  #+LATEX_HEADER: \usepackage{cases}
+  #+LATEX_HEADER: \graphicspath{ {./} }
+  #+LATEX_HEADER: \usepackage{tikz}
+  #+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+  #+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds, url}
+  #+LATEX_HEADER: \usepackage[square,numbers]{natbib}
+  #+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+  #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
+  #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
+
+
+
+* Tasks 
+** TODO Summarise UCL DFT lectures. 
+** TODO Write summary of org-mode. 
+** TODO Show supercell of BOP working 
+** TODO Write first paragraph of Literature review
+** TODO Summarise Stacking Faults and write review
+** TODO Look at the range of the bond integrals we have in Titanium graphically. 
+** TODO Summarise dislocations and Oxygen interactions (review)
+
+* Useful Notes
+** Org-mode 
+#+BEGIN_SRC elisp
+(setq org-latex-create-formula-image-program 'dvipng)
+#+END_SRC
+
+** Physics
+*** Hartree-Fock
+    - Hartree-Fock is a method of calculating the energy of a configuration
+      with exact exchange.
+    - This is done by essentially putting everything we don't know into the
+      kinetic energy functional. 
+    - Hamiltonian is split into contributions: 
+      * $\hat{H} = \hat{T} + \hat{V}_{\text{ext}} + \hat{G}$
+      * $\hat{G} = \hat{J} - \hat{K}$
+      * $\hat{J}$ is the coulombic interaction:  \[ \bra{ \mathbf{r} } \hat{J} \ket{ \mathbf{n} } = \int \frac{ \bra{\mathbf{r}}\ket{n} }{|\mathbf{r} - \mathbf{r'}  |}d\mathbf{r} \]
+      * So $E_{\text{H}} = \int
+        \frac{\rho{\mathbf{r}\rho{\mathbf{r}'}}}{|\mathbf{r} - \mathbf{r'}|}$
+      * This includes fictitious self-interaction of electron density. 
+      * The Exchange functional removes this part, thus lowering the energy
+
+     - This method is used in Hybrid DFT. This corrects band gaps mainly. But
+       there are also problems.
+
+ 
+* DFT Lectures UCL 
+** David Bowler O(N) DFT
+*** Types of Exchange-correlation Functionals 
+
+**** LDA
+     - The electron density is the same as a uniform electron gas.
+     - Exchange is Slater. 
+     - Still parameterised (Ceperly). Parameters from Quantum Monte-Carlo
+       calculations.
+
+**** GGA
+     - The gradient of the electron density is included in functional.
+     - Have the reduced density \[ \frac{ \nabla n(\mathbf{r})}{n( \mathbf{r}
+       )}\]. 
+***** Perdew-Burke-Ernzerhof
+      - \[ E_{\text{x}} = \int n( \mathbf{r} ) \epsilon_{\text{xc}}[n( \mathbf{r}
+        )] F_{\text{x}}(S)d\mathbf{r} \]
+      - \[ E_{\text{c}} = \int n[ \epsilon_{\text{c}} + H(n,S) ]d\mathbf{r} \]
+      - These integrals are then fitted to various limits. 
+
+**** Hybrid Functionals
+     - These are functionals to correct the self-interaction energy that is
+       apparent in the previously mentioned functionals.
+     - The Hartree term \[V_{\text{H}}=\int
+       \frac{\rho(\mathbf{r})}{|\mathbf{r} - \mathbf{r}'|}  d\mathbf{r}  \]
+     - The exchange term cancels the celf interaction.
+     - Generally only a part of this Hartree-Fock calculation is included in
+       the function otherwise it is not stable. 
+
+
+ 
+
+
+DFT speed is limited by how it can find the energies of the system we are
+interested in. 
+Diagonalisation is inherently an $\mathcal{O}(N^3)$ process. 
+
+To actually build the hamiltonian it is of $\mathcal{O}(N^2)$. 
+Solving is $\mathcal{O}(N^3)$. 
+
+How do we solve for DFT?
+Generally it depends on the choice of functional we have. 
+Hybrid functionals almost scale as $\mathcal{O}(N^4)$ due to the inclusion of exact
+exchange interaction by Hartree-Fock. Because of this exact exchange, there
+are better band gaps . 
+
+The $\mathcal{O}(N)$ DFT generally comes because of the manipulation of sparse matrices. 
+Insead of matrix multiplication being of $\mathcal{O}(N^3)$ we can have matrix
+multiplication being of $\mathcal{O}(N)$. 
+
+The reason we can essentially do $\mathcal{O}(N)$ is that in the Kohn-Sham equations, the
+density is actually a local function ($n(\mathbf{r})$, not $n(\mathbf{r}-\mathbf{r}')$) 
+This means that in theory we can actually have a theory which sufficiently
+describes the dynamics of a given system with an electron density that is
+local in space. 
+In many DFT codes however, the electron density is non-local ($n(
+\mathbf{r} - \mathbf{r}')$), and
+this slows down the calculation. 
+To actually make it $\mathcal{O}(N)$, we have to have range cutoffs for the interactions
+of the atoms. This means that the hamilitonian is sparse as quite a lot of the
+elements are zero such that we can use methods that involve $\mathcal{O}(N)$
+multiplication. 
+
+When it comes to Structural relaxation there are a few things that come to
+mind when structures are not converging:
+there is usually only one atom that has some huge force on it. 
+Consider the boundary conditions. 
+
+For faster diagonalisation of the hamiltonian matrix it may be useful to look
+at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
+
+** Jochen Blumberger: Molecular dynamics 
+   
+   - Molecular dynamics is important. (Even at 0K there is a zero point energy
+     of vibration).
+   - Need theory to see how atoms move
+
+*** Born-Oppenheimer approximation 
+
+    - Have hamiltonian that consists of interaction between:
+      * nucleus-nucleus
+      * nucleus-electron
+      * electron-electron
+    - First assumption is that we can write the eigenfunction of
+      this large hamiltonian as a product state consisting of an electronic
+      ground state and nuclear eigenstate.
+    - Second approximation is that we are able to say, as the mass of the ion
+      $M_{I} \sim 1000 m_{e}$ then we can say that the kinetic energy term of
+      with regard to the nucleus positions will be small.
+    - From this we can say that the action of this nuclear kinetic energy
+      operator on the electronic eigenstate is small.
+    - This means we can neglect the *electronic* wavefunction, and work with
+      the equation \[ \hat{H}\Phi(\mathbf{R}) = E^0_{\mathbf{R}}\Phi(\mathbf{R}) \]
+      - Where $ E^0_{\mathbf{R}} $ is the ground state energy hypersurface
+        from the electronic wavefunction. We get this from DFT calculations. 
+    - Even now we can only really calculate 8 degrees of freedom for the
+      Nuclear wavefunction.
+
+*** Molecular Dynamics
+
+**** Verlet Algorithm
+     - This algorithm simply uses the forward and backward derivative of the
+       nuclear positions and adds them together to get a formula for the
+       positon.
+       - \[ \mathbf{R}_{I}(t + \delta t) = 2\mathbf{R}_{I} -
+         \mathbf{R}_{I}(t - \delta t) + \frac{f_I(t)}{M_{I}}\delta t^3 \mathcal{O}(\delta t^{4})  \]
+       - \[ \mathbf{\dot{R}}_{I}(t) = \frac{1}{2 \delta t} [
+         \mathbf{R}_{I}(t + \delta t) - \mathbf{R}_{I}(t - \delta t) ] + \mathcal{O}(\delta t^{3})  \]
+       - This causes a problem however: the velocity is calculated a step
+         after that of the positons. So this leads to the Velocity Verlet
+         algorithm. 
+
+**** Velocity Verlet Algorithm
+     - For this algorithm the forward derivative with respect to nuclear
+       positions is used with a calculation of the force at a later time. 
+     - Then the taylor expansion of the position at time t is used with the
+       terms of later time.
+     - \[ \mathbf{R}_{I}(t + \delta t) = \mathbf{R}_{I}(t) +  \mathbf{\dot{R}}_{I}\delta t + \frac{f_I(t)}{M_{I}}\delta t^3
+       \mathcal{O}(\delta t^{3})  \]
+     - \[ \mathbf{\dot{R}}_{I}(t + \delta t) = \mathbf{\dot{R}}_{I}(t) + \frac{1}{2 \delta t} [
+       \mathbf{f}_{I}(t + \delta t) + \mathbf{R}_{I}(t) ] + \mathcal{O}(\delta
+       t^{3})  \]
+
+
+
+* org-mode cheat sheet 
+** New TODO: M-<shift>-<ret>
+** Done TODO: C-c C-t
+** Links: [[][]] [link] then [description]
+** Open link: Move over cursor and do C-c C-o
+** Link to local files: 
+*** Open file (C-x C-f) then do C-c l, 
+*** then go back to org file and do C-c C-l (e.g. [[file:~/Documents/docs/PhDPaperSummary/upgrade_rep_plus_notes.tex::\documentclass%5B][Upgrade_report_plus_notes]])
+** To remove window in buffer C-x 0
+** Overview of document <shift>-<TAB> to condense to titles. 
+** Can have global todo list 
+** If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
+
+
