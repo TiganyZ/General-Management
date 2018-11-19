@@ -18,19 +18,126 @@
 
 
 * Tasks 
-** TODO Summarise UCL DFT lectures. 
-** TODO Implement Homogenous Shear boundary conditions
-** TODO Python script: remove include statements  -->  One file.  
-** TODO Investigate why rmaxh changes energy
-** TODO Plot the bond integrals of tbe with the cutoff and see what happens under different conditions. 
-** TODO Write summary of org-mode. 
-** TODO Write first paragraph of Literature review
-** TODO Summarise Stacking Faults and write review
+** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
+*** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
+    CLOSED: [2018-11-19 Mon 12:08]
 ** TODO Look at the range of the bond integrals we have in Titanium graphically. 
-** TODO Summarise dislocations and Oxygen interactions (review)
+*** TODO Plot the bond integrals of tbe with the cutoff and see what happens under different conditions. 
+** TODO Python script: remove include statements  -->  One file.  
+** TODO Summarise UCL DFT lectures. 
+** TODO Write first paragraph of Literature review
+*** TODO Summarise Stacking Faults and write review
+*** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
+*** TODO Summarise dislocations and Oxygen interactions (review)
+** TODO Write summary of org-mode
+** DONE Investigate why rmaxh changes energy
+   CLOSED: [2018-11-19 Mon 11:45]
+   - Variation of rmaxh does not change the energy
+   - Obviously the number of neighbours changes with rmaxh.
+   - Conclusion: rmaxh only determines what atoms are its neighbours. 
+   - This is the file which investigates this:
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/check_rmaxh_energy_neighbours.py][check_rmaxh_energy_number_neighbours]]
+   - Here is the data:
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/energy_for_energy_vs_rmaxh.pkl][Energy data for energy vs rmaxh]]
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/rmaxh_for_energy_or_n_neighbours_vs_rmaxh.pkl][rmaxh data for energy/n_neighbours vs rmaxh]]
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_for_n_neighbours_vs_rmaxh.pkl][n_neighbours for n_neighbours vs rmaxh]]
+   - The output pictures are this:
+   #+CAPTION: Variation of energy with change in rmaxh
+   #+NAME:   fig:Energy_vs_rmaxh.png
+   [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/Energy_vs_rmaxh.png]]
+   #+CAPTION: Variation of number of neighbours with change in rmaxh
+   #+NAME:   fig:n_neighbours_vs_rmaxh.png
+   [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
+
 ** DONE Show supercell of BOP working 
    CLOSED: [2018-11-16 Fri 13:38]
 
+
+* General notes of codes. 
+
+** Pair potentials in tbe code
+   - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
+   - This calls [[file:~/lm/tb/vppder.f][vppder.f]] which actually evaluates the pair potential at that
+     point
+   - In makvpp.f, if in the range of $r_1 < r < r_{\text{c}}$, then
+     augmentative/multiplicative polynomial is used.
+     - To make this polynomial [[file:~/lm/tb/pcut45.f][pcut45.f]] is used.
+     - Depending on the degree of polynomial we have this structure:
+       #+BEGIN_SRC fortran
+      rr = r1 - r2
+      xr1 = x - r1
+      xr2 = x - r2
+
+      c = val*rr*rr
+      if (n == 5) then
+        pnorm = rr**(-5)
+        a = (0.5d0*curv*rr - 3d0*slo)*rr + 6d0*val
+        b = (slo*rr - 3d0*val)*rr
+      elseif (n == 4) then
+        pnorm = rr**(-4)
+        a = (0.5d0*curv*rr - 2d0*slo)*rr + 3d0*val
+        b = (slo*rr - 2d0*val)*rr
+      p2 = pnorm*(c + xr1*(b + xr1*a))
+      dp2 = pnorm*(b + xr1*2d0*a)
+      ddp2 = pnorm*2d0*a
+      e = p2 * xr2**(n-2)
+      de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
+      dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
+C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
+        #+END_SRC
+     - So the form of the polynomial used is
+       - $$ P_5(x) = P_2(x) (x-r_2)^3 $$
+       - \[ P_2(x) = a(x-r1)^2 + b(x-r_1) + c \]
+       - \[ a = \frac{1}{ (r1-r2)^5 } \big{  frac{1}{2}(r_1-r_2)^2f"(r_1) -3(r_1-r_2)f'(r_1) + 6f(r_1) \big} \]
+       - \[  b = frac{1}{(r_1-r_2)^4} \big{ f'(r_1)*(r_1-r_2) - 3*f(r_1) \big}  \]
+       - \[ \frac{1}{(r_1 - r_2)^5} x \]
+       - \[  c = \frac{ f(r_1) }{ (r_1-r_2)^3} \]
+       - Where $f(x)$ is the function that needs to be cut off.
+     - 
+	 
+
+
+
+
+   
+
+
+
+
+** Ti Swarm fitting. 
+   - Here used fitting with uniform weights across all target quantities
+     without a regularisation of the parameters.
+   - It can be seen that the lattice parameters aren't as good as they could
+     be. This calls for the use of weighted parameters.
+   - Have now started weighted parameter search for the best parameters with
+     regards to titanium. 
+
+#+BEGIN_SRC bash
+Build Objective Function
+ ...with L1 norm 
+| Quantity      |  predicted |     target | squared diff. |    p_norm |   weight |  objective |
+|---------------+------------+------------+---------------+-----------+----------+------------|
+| a_hcp:        |   4.744693 |   5.576790 |      0.692385 |  0.832097 | 1.000000 |   1.524483 |
+| c_hcp:        |   7.495518 |   8.852101 |      1.840316 |  1.356583 | 1.000000 |   3.196899 |
+| c_11:         | 174.924630 | 176.100000 |      1.381495 |  1.175370 | 1.000000 |   2.556865 |
+| c_33:         | 190.161490 | 190.500000 |      0.114589 |  0.338510 | 1.000000 |   0.453099 |
+| c_44:         |  54.517320 |  50.800000 |     13.818465 |  3.717320 | 1.000000 |  17.535784 |
+| c_12:         |  65.010403 |  86.900000 |    479.154446 | 21.889597 | 1.000000 | 501.044043 |
+| c_13:         |  73.335501 |  68.300000 |     25.356271 |  5.035501 | 1.000000 |  30.391772 |
+| a_omega:      |   7.331279 |   8.732543 |      1.963543 |  1.401265 | 1.000000 |   3.364808 |
+| c_omega:      |   4.768459 |   5.323431 |      0.307994 |  0.554972 | 1.000000 |   0.862966 |
+| u_omega:      |   1.000025 |   1.000000 |      0.000000 |  0.000025 | 1.000000 |   0.000025 |
+| DeltaE_O_hcp: |  -1.170318 |  -0.734754 |      0.189716 |  0.435564 | 1.000000 |   0.625281 |
+| a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
+| bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |   0.110840 |
+Objective function: 563 
+
+Objective Function = 563.2340263379571 
+Stopping search: Swarm best position change less than 1e-08 
+[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
+563.2340263379571
+#+END_SRC
+   
 * Useful Notes
 ** Org-mode 
 #+BEGIN_SRC elisp
@@ -191,11 +298,17 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
   - Links: [[][]] [link] then [description]
   - Open link: Move over cursor and do C-c C-o
   - Link to local files:
-    - Open file (C-x C-f) then do C-c l,
-    - then go back to org file and do C-c C-l (e.g. [[file:~/Documents/docs/PhDPaperSummary/upgrade_rep_plus_notes.tex::\documentclass%5B][Upgrade_report_plus_notes]])
+    * Open file (C-x C-f) then do C-c l,
+    * then go back to org file and do C-c C-l (e.g. [[file:~/Documents/docs/PhDPaperSummary/upgrade_rep_plus_notes.tex::\documentclass%5B][Upgrade_report_plus_notes]])
   - To remove window in buffer C-x 0
   - Overview of document <shift>-<TAB> to condense to titles.
   - Can have global todo list
+  - < s TAB expands to a ‘src’ code block.
+  - < l TAB expands to:
+  #+BEGIN_EXPORT latex
+  #+END_EXPORT
+
+
   - If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
 
 
