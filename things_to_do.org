@@ -2,27 +2,33 @@
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 #+LATEX_HEADER: \usepackage{physics}
-  #+LATEX_HEADER: \usepackage{hyperref, url}
-  #+LATEX_HEADER: \usepackage[square,numbers]{natbib}
-  #+LATEX_HEADER: \usepackage{subcaption}
-  #+LATEX_HEADER: \usepackage{cases}
-  #+LATEX_HEADER: \graphicspath{ {./} }
-  #+LATEX_HEADER: \usepackage{tikz}
-  #+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
-  #+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds, url}
-  #+LATEX_HEADER: \usepackage[square,numbers]{natbib}
-  #+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
-  #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
-  #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
+#+LATEX_HEADER: \usepackage{hyperref, url}
+#+LATEX_HEADER: \usepackage[square,numbers]{natbib}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LATEX_HEADER: \usepackage{cases}
+#+LATEX_HEADER: \graphicspath{ {./} }
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+#+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds, url}
+#+LATEX_HEADER: \usepackage[square,numbers]{natbib}
+#+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+#+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
+#+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
 
 
 
 * Tasks 
 ** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
+*** Checking the convergence criteria
+     - Now checking the convergence criteria.
+     - Going to check:
+       - How the lattice parameters change with the fineness of the k mesh
+	 - Maybe with a less fine k mesh the lattice parameters become awful
+       - How does rmaxh change the energy of a supercell
+       - How does the number of neighbours change and what is the relation
+         between rmaxh and larger cell sizes.
 *** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
     CLOSED: [2018-11-19 Mon 12:08]
-** TODO Look at the range of the bond integrals we have in Titanium graphically. 
-*** TODO Plot the bond integrals of tbe with the cutoff and see what happens under different conditions. 
 ** TODO Python script: remove include statements  -->  One file.  
 ** TODO Summarise UCL DFT lectures. 
 ** TODO Write first paragraph of Literature review
@@ -30,6 +36,72 @@
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
 ** TODO Write summary of org-mode
+
+** DONE Look at the range of the bond integrals we have in Titanium graphically. 
+   CLOSED: [2018-11-20 Tue 11:13]
+*** Pair potentials in tbe code
+   - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
+   - This calls [[file:~/lm/tb/vppder.f][vppder.f]] which actually evaluates the pair potential at that
+     point
+   - In makvpp.f, if in the range of $r_1 < r < r_{\text{c}}$, then
+     augmentative/multiplicative polynomial is used.
+     - To make this polynomial [[file:~/lm/tb/pcut45.f][pcut45.f]] is used.
+     - Depending on the degree of polynomial we have this structure:
+       #+BEGIN_SRC fortran
+      rr = r1 - r2
+      xr1 = x - r1
+      xr2 = x - r2
+
+      c = val*rr*rr
+      if (n == 5) then
+        pnorm = rr**(-5)
+        a = (0.5d0*curv*rr - 3d0*slo)*rr + 6d0*val
+        b = (slo*rr - 3d0*val)*rr
+      elseif (n == 4) then
+        pnorm = rr**(-4)
+        a = (0.5d0*curv*rr - 2d0*slo)*rr + 3d0*val
+        b = (slo*rr - 2d0*val)*rr
+      p2 = pnorm*(c + xr1*(b + xr1*a))
+      dp2 = pnorm*(b + xr1*2d0*a)
+      ddp2 = pnorm*2d0*a
+      e = p2 * xr2**(n-2)
+      de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
+      dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
+C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
+       #+END_SRC
+     - So the form of the polynomial used is
+       - $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
+       - \[ P_2(x) = a(x-r1)^2 + b(x-r_1) + c \]
+       - \[ a = \frac{1}{ (r1-r2)^5 } \big\{  \frac{1}{2}(r_1-r_2)^2f"(r_1) -3(r_1-r_2)f'(r_1) + 6f(r_1) \big\} \]
+       - \[  b = \frac{1}{(r_1-r_2)^4} \big\{ f'(r_1)*(r_1-r_2) - 3f(r_1) \big\}  \]
+       - \[ \frac{1}{(r_1 - r_2)^5} x \]
+       - \[  c = \frac{ f(r_1) }{ (r_1-r_2)^3} \]
+       - Where $f(x)$ is the function that needs to be cut
+   - Current model has this
+     #+BEGIN_SRC bash
+Ti,Ti:
+   type 2 (Exp. decay), V(d) = a exp (- b d)
+             sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
+   coeff:   0.00   0.00   0.00   0.00   0.00   0.00   0.00  -2.75   1.84  -0.46
+   decay:   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.71   0.71   0.71
+   cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
+             sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
+   r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
+   rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
+     
+     #+END_SRC
+*** Bond integrals from tbe
+      - So bond integrals from titanium look like this, from this file
+        [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py][plot_bond_integrals.py]]
+      #+CAPTION: Bond integrals with multiplicative polynomial cutoffs.
+      #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png
+      [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png]]
+      #+CAPTION: Bond integrals with multiplicative polynomial cutoffs: zoomed in.
+      #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png
+      [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png]]
+
+	
+
 ** DONE Investigate why rmaxh changes energy
    CLOSED: [2018-11-19 Mon 11:45]
    - Variation of rmaxh does not change the energy
@@ -49,6 +121,7 @@
    #+NAME:   fig:n_neighbours_vs_rmaxh.png
    [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
    
+
 ** DONE Show supercell of BOP working 
    CLOSED: [2018-11-16 Fri 13:38]
 
@@ -106,92 +179,25 @@ Ti,Ti:
    rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
      
      #+END_SRC
-   - So bond integrals look like 
-     #+BEGIN_SRC python
-import numpy as np 
-import matplotlib.pyplot as plt
-rc('font', **{'family':'serif','serif':['Palatino'],  'size'   : 18})
-rc('text', usetex=True)
-import pickle
-
-def bond_integral(A, b, d):
-    f = A * np.exp( - b * d )
-    df =  - b * f
-    ddf = - b * df
-    return f, df, ddf
-
-def poly(x, deg, r1, r2, f, df, ddf ):
-    rr = r1 - rc
-    xr1 = x - r1
-    xr2 = x - r2
-    c = val*rr*rr
-    if (deg== 5):
-        pnorm = rr**(-5)
-        a = (0.5 * ddf * rr - 3. * df ) * rr   +   6. * val
-        b = (df * rr - 3. * val) * rr
-    elif deg == 4:
-        pnorm = rr**(-4)
-        a = (0.5 * ddf * rr   -   2 * slo) * rr   +   3. * val
-        b = (df * rr   -   2 * val) * rr
-    p2  = pnorm * ( c   +   xr1 * ( b   +   xr1 * a )  )
-    dp2 = pnorm * ( b   +   xr1 * 2. * a )
-    ddp2 = pnorm * 2. * a
-
-    e   = p2 * xr2**( deg - 2 )
-    de  = (xr2 * dp2   +   float( deg - 2 ) * p2 ) * xr2**( deg - 3 )
-    dde = (xr2 * xr2 * ddp2 + float( 2 * ( deg - 2 ) ) * xr2 * dp2  +  float( ( deg - 2 ) * ( deg - 3 ) ) * p2 )
-
-    return e, de, dde
-
-n_pts = 100
-x = np.linspace(0.1, 10, n_pts)
-
-A1 = -2.75
-A2 =  1.84
-A3 = -0.46
-A = np.array([A1, A2, A3])
-farr = np.zeros( (3,n_pts) )
-dec = 0.71
-deg = 5
-r1 = 6.2
-rc = 8.5
-
-for ind, v in enumerate(A):
-    f, df, ddf = bond_integral(v, dec, x)
-    ir1c = (x > r1) & (x < rc)
-    p, dp, ddp = poly( x, deg, r1, rc, f[ ir1c ], df[ ir1c ], ddf[ ir1c ] )
-    f[ir1c]   = f[ir1c] * p
-    df[ir1c]  = df[ir1c] * dp
-    ddf[ir1c] = ddf[ir1c] * ddp
-    farr[ind,:] = f
-
-fig = plt.figure()
-ax = plt.add_subplot(111)
-ax.set_title(' Bond integrals with polynomial tails ' )
-ax.set_xlabel(' Distance (Bohr) ')
-ax_set_ylabel(' Energy (Ryd) ')
-ax.plot( x, farr[0], label=r'$dd\sigma$'  )
-ax.plot( x, farr[1], label=r'$dd\pi$'  )
-ax.plot( x, farr[2], label=r'$dd\delta$'  )
-ax.plot( [r1, r1],[np.min(f_arr), np.max(f_arr)], label=r'$r_1$'  )
-ax.plot( [rc, rc],[np.min(f_arr), np.max(f_arr)], label=r'$r_c$'  )
-ax.legend()
-ax.savefig('tbe_bond_integrals_with_polynomial_cutoffs.png')
-plt.show()
-
-    
-
-     #+END_SRC
+   - So bond integrals from titanium look like this
+   - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png][Bond integrals with multiplicative polynomial cutoffs. ]]
+   - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png][Bond integrals with multiplicative polynomial cutoffs: zoomed in.]]
 	
 ** Notes for the gamma surfaces
    - Seems like some atoms are missing in the site file when it is being read
-     in to tbe.
+     in to tbe
    - This means that there are some erroneous forces that make the program
      exit.
-     - Must investigate how the site file is written and see the difference
-       between the expected and resultant coordinates. 
+     - SOLUTION: Coordinates were not in units of alat.
+*** Relaxing in tbe
+    - To relax in tbe need to modify:
+      - Ewald tolerance: ewtol
+	- This can generally be set quite low: 1d-14
+      - Convergence criteria:
+	- gtol: The tolerance in the force for convergence e.g. 1d-8
+	- xtol: The tolerance in the atomic positon e.g. 1d-8.
 
-
+	    
 ** Ti Swarm fitting. 
    - Here used fitting with uniform weights across all target quantities
      without a regularisation of the parameters.
@@ -226,6 +232,7 @@ Stopping search: Swarm best position change less than 1e-08
 563.2340263379571
 #+END_SRC
    
+
 * Useful Notes
 ** Org-mode 
 #+BEGIN_SRC elisp
