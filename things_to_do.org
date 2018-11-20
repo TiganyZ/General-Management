@@ -24,6 +24,12 @@
      - Going to check:
        - How the lattice parameters change with the fineness of the k mesh
 	 - Maybe with a less fine k mesh the lattice parameters become awful
+       - SOLUTION: The lattice parameters do not change that much under
+         differences with the k mesh. [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py::lattice_parameters_vs_k_mesh(%20tbe_command,%20minimiserf%3D'Nelder-Mead',%20plot%3DTrue,%20data%3Ddata)][File with change of the lattice
+         parameters with k mesh. ]]
+       - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png][a_vs_nk]]
+       - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png][c_vs_nk]]
+       - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png][e_vs_nk]]
        - How does rmaxh change the energy of a supercell
        - How does the number of neighbours change and what is the relation
          between rmaxh and larger cell sizes.
