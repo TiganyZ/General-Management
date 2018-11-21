@@ -17,22 +17,55 @@
 
 
 
-* Tasks 
+* Tasks x
 ** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
 *** Checking the convergence criteria
-     - Now checking the convergence criteria.
-     - Going to check:
-       - How the lattice parameters change with the fineness of the k mesh
-	 - Maybe with a less fine k mesh the lattice parameters become awful
-       - SOLUTION: The lattice parameters do not change that much under
-         differences with the k mesh. [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py::lattice_parameters_vs_k_mesh(%20tbe_command,%20minimiserf%3D'Nelder-Mead',%20plot%3DTrue,%20data%3Ddata)][File with change of the lattice
-         parameters with k mesh. ]]
-       - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png][a_vs_nk]]
-       - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png][c_vs_nk]]
-       - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png][e_vs_nk]]
-       - How does rmaxh change the energy of a supercell
-       - How does the number of neighbours change and what is the relation
-         between rmaxh and larger cell sizes.
+      - Now checking the convergence criteria.
+
+**** How the lattice parameters change with the fineness of the k mesh
+     - Maybe with a less fine k mesh the lattice parameters become
+       worse. 
+     - SOLUTION: The lattice parameters do not change that much under
+     differences with the k mesh. [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py::lattice_parameters_vs_k_mesh(%20tbe_command,%20minimiserf%3D'Nelder-Mead',%20plot%3DTrue,%20data%3Ddata)][File with change of the lattice
+     parameters with k mesh. ]]
+     [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png][a vs nk]]
+     [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png][c_vs_nk]]
+     [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png][e_vs_nk]]
+
+***** What if rmaxh is smaller or larger?
+      - If rmaxh is is smaller (say rmaxh = 6.7 bohr) then we get the same
+        results. 
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png][e_vs_nk rmaxh=6.7]]
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png][a_vs_nk rmaxh=6.7]]
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png][c_vs_nk rmaxh=6.7]]
+	- Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl][a_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl][c_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl][e_hcp small rmaxh]]. 
+      - If rmaxh is larger ( rmaxh = 20 bohr ), all possible interactions must
+        be included then. And so we get the same results. 
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png][e_vs_nk rmaxh=20]]
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png][a_vs_nk rmaxh=20]]
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png][c_vs_nk rmaxh=20]]
+      - Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl][a_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl][c_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl][e_hcp large rmaxh]]
+
+**** How does rmaxh change the lattice parameters?
+
+***** How does rmaxh change the energy of a supercell
+      - How does the number of neighbours change and what is the relation
+	between rmaxh and larger cell sizes.
+*** Notes on the model.
+    It seems that there is a lot of charge moving around when doing the
+    relaxations. 
+    I think that this may be due to the fact that there is no Hubbard U
+    interactions, a parameter for the coulomb interaction, which stops the
+    charges from moving freely. 
+    - TBE control file is currently set to this:
+     #+BEGIN_SRC 
+TBE: nbas = 128 nspec = 1 verb 31 
+TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
+bz: metal
+     #+END_SRC
+    
+
+     
 *** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
     CLOSED: [2018-11-19 Mon 12:08]
 ** TODO Python script: remove include statements  -->  One file.  
@@ -191,7 +224,7 @@ Ti,Ti:
 	
 ** Notes for the gamma surfaces
    - Seems like some atoms are missing in the site file when it is being read
-     in to tbe
+     in to tbe.
    - This means that there are some erroneous forces that make the program
      exit.
      - SOLUTION: Coordinates were not in units of alat.
@@ -215,6 +248,13 @@ Ti,Ti:
 #+BEGIN_SRC bash
 Build Objective Function
  ...with L1 norm 
+Objective function: 563 
+Objective Function = 563.2340263379571 
+Stopping search: Swarm best position change less than 1e-08 
+[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
+563.2340263379571
+#+END_SRC
+
 | Quantity      |  predicted |     target | squared diff. |    p_norm |   weight |  objective |
 |---------------+------------+------------+---------------+-----------+----------+------------|
 | a_hcp:        |   4.744693 |   5.576790 |      0.692385 |  0.832097 | 1.000000 |   1.524483 |
@@ -230,13 +270,6 @@ Build Objective Function
 | DeltaE_O_hcp: |  -1.170318 |  -0.734754 |      0.189716 |  0.435564 | 1.000000 |   0.625281 |
 | a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
 | bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |   0.110840 |
-Objective function: 563 
-
-Objective Function = 563.2340263379571 
-Stopping search: Swarm best position change less than 1e-08 
-[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
-563.2340263379571
-#+END_SRC
    
 
 * Useful Notes
@@ -283,7 +316,7 @@ Stopping search: Swarm best position change less than 1e-08
         )] F_{\text{x}}(S)d\mathbf{r} \]
       - \[ E_{\text{c}} = \int n[ \epsilon_{\text{c}} + H(n,S) ]d\mathbf{r} \]
       - These integrals are then fitted to various limits. 
-
+	
 **** Hybrid Functionals
      - These are functionals to correct the self-interaction energy that is
        apparent in the previously mentioned functionals.
@@ -373,7 +406,10 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
          \mathbf{R}_{I}(t + \delta t) - \mathbf{R}_{I}(t - \delta t) ] + \mathcal{O}(\delta t^{3})  \]
        - This causes a problem however: the velocity is calculated a step
          after that of the positons. So this leads to the Velocity Verlet
-         algorithm. 
+         algorithm.
+       - The timestep for these algorithms is on the order of $1fs$, such that
+         one can have adequate resolution of atomic vibrations ($\f sim
+         10^{-14}s^{-1}$, so period is around $10fs$)
 
 **** Velocity Verlet Algorithm
      - For this algorithm the forward derivative with respect to nuclear
@@ -386,9 +422,94 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 **** How to calculate the forces
      - Use the Hellmann-Feynman theorem.
-       - $$ \mathbf{f}_{I} = < \psi^{0}_{\mathbf{R}} | \frac{\partial}{\partial   \mathbf{R}_{I}}\hat{H} |\psi^{0}_{\mathbf{R}} >   $$
+       - $$ \mathbf{f}_{I} = \bra{ \psi^{0}_{\mathbf{R}} }
+         \frac{\partial}{\partial   \mathbf{R}_{I}}\hat{H} \ket{ \psi^{0}_{\mathbf{R}} }  $$
+     - This is derived using the parameter $\lambda$, assuming that the
+       Hamiltonian depends on this lambda.
 
-
+**** Carr-Parinello MD
+     - This is a form of molecular dynamics where both the positions and the
+       orbitals are used as dynamical variables.
+     - An \emph{orbital velocity} and \emph(orbital mass} is defined.
+     - Using this one can create trajectories that propagate both the ionic
+       positions and orbitals in time. 
+     - This circumvents the need for self-consistent cycles to obtain the
+       correct orbitals, but:
+       * The dynamics are not always in the ground state
+	 energy.
+       * The necessary time step is decreased by about $3-4$ times (speed
+         increase is $5-10$ times from removal of self-consistency)
+ 
+** Matteo Salvalglio: Enhanced Sampling
+*** Introduction
+   - Have a phase space that is $6N$ dimensional (3 spatial positions and 3
+     components of momenta).
+   - Each point in this phase space is a microstate.
+   - The microstates sampled are from the Canonical Ensemble (N,V,T).
+   - Can define partition function \[ Q(N,V,T) = \frac{1}{N!h^{3N}}\int
+     \text{d}x e^{-\beta\mathbf{H(x)}} \]
+   - Can have thermodynamic potential defined from this: \[ A(N,V,T) =
+     -k_{B}ln(Q(N,V,T)) \]
+   - What we really want to do is obtain an observable quantity from this high
+     dimensional space.
+*** Ergodic principle
+    - This is the principle which states that the amount of
+      time that microstates of the same energy spend in a configuration is
+      proportional to the volume of phase space they occupy.
+    - In other words, every microstate is equiprobable.
+    - So the observable quantity: \[ O = \langle O \rangle = \underset{t
+      \rightarrow \inf}{lim} \frac{1}{t} \int_{0}^{t} \text{d}t O(x(t)),  \] where
+      $O(x(t))$ is the instantaneous realisation of $O(x)$
+*** Collective variables
+    - Collective variables are just functions that depend on the coordinates
+      (CVs) $S(\mathbf{R})$
+    - Given a collective variable we can define a probability density $p(S)$
+    - So \[ p(S) = \int \text{d}\mathbf{R} [ \delta ( S(\mathbf{R}) - S ) ] p(\mathbf{R}) \]
+    - \[ p(\mathbf{R}) = \frac{e^{-\beta U(\mathbf{R)}}}{\int e^{-\beta
+      U(\mathbf{R)}} \text{d}\mathbf{R} }, \] where the denominator is the
+      configuration integral $\mathcal{Z}$
+**** Calculating free energies from collective variables
+       - Free energy profile is then just \[  F(S) = -k_{B}T ln( p(S) )\]
+       - The free energy change between configurations $\text{A}$ and B are then
+       	 just  \[ \Delta F_{\text{AB}} = -k_{B}T ln\big\{  \frac{\int_{B} p(S) \text{d}S}{\int_{A} p(S) \text{d}S}  \big\}\]
+       - Can think of these configurations as spikes in $p(S)$ and troughs in
+       	 $F(S)$, with some form of energy barrier between them. This region can
+       	 then be split in to regions belonging to A and B, from which the
+       	 separate integrations can be evaluated.
+       - This energy barrier is on the order of $kT$
+       - If not, then simulation times will be very large to be able to obtain
+         a result that obeys ergodicity.
+       - Can use a biased potential for the sampling and work backwards to
+         obtain the actual probability density.  
+** Useful definitions of Thermodynamic potentials
+   - Internal Energy:
+     * The capacity to do work and release heat.
+     * The energy contained withing the system excluding kinetic energy.
+     * Equation: \[ U = \int ( t\text{d}S -p\text{d}V + \sum_{i}\mu_{i}\text{d}N_{i} ) \]
+     * $\Delta U$ is the total energy added to the system.
+     * Natural variables: $\{ S, V, \{N_{i}\} \}$
+   - Helmholtz Free Energy:
+     * The energy at constant temperature and pressure.
+     * The capacity to do mechanical plus non-mechanical work
+     * Equation: \[ F = U - TS \]
+     * $\Delta F$ is the total work done on the system. 
+     * Natural variables: $\{ T, V, \{N_{i}\} \}$
+   - Gibbs Free Energy:
+     * The capacity to do non-mechanical work.
+     * The maximum amount of non-expansion work.
+     * The energy at constant temperature and pressure.
+     * Gibbs energy is the thermodynamic potential that is minimized when a
+       system reaches chemical equilibrium at constant pressure and
+       temperature. 
+     * Equation: \[ G = U + pV - TS  \]
+     * $\Delta G$ is the total non-mechanical work done on the system. 
+     * Natural variables: $\{ T, p, \{N_{i}\} \}$
+   - Enthalpy:
+     * The capacity to do non-mechanical work plus capacity to release heat.
+     * Equation: \[ H = U + pV \]
+     * $\Delta H$ is the total non-mechanical work and heat added to the
+       system. 
+     * Natural variables: $\{ S, p, \{N_{i}\} \}$
 
 * org-mode cheat sheet 
   - New TODO: M-<shift>-<ret>

@@ -1,4 +1,4 @@
-% Created 2018-11-20 Tue 13:28
+% Created 2018-11-20 Tue 16:57
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -49,8 +49,29 @@
 \label{sec-1}
 \subsection{{\bfseries\sffamily TODO} Finish doing the gamma surfaces for all planes for pure titanium.}
 \label{sec-1-1}
-\subsubsection{{\bfseries\sffamily DONE} Implement Homogenous Shear boundary conditions for gamma surface calculation.}
+\subsubsection{Checking the convergence criteria}
 \label{sec-1-1-1}
+\begin{itemize}
+\item Now checking the convergence criteria.
+\item Going to check:
+\begin{itemize}
+\item How the lattice parameters change with the fineness of the k mesh
+\begin{itemize}
+\item Maybe with a less fine k mesh the lattice parameters become awful
+\end{itemize}
+\item SOLUTION: The lattice parameters do not change that much under
+differences with the k mesh. \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py}{File with change of the lattice
+parameters with k mesh. }
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png}{a$_{\text{vs}}$$_{\text{nk}}$}
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png}{c$_{\text{vs}}$$_{\text{nk}}$}
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png}{e$_{\text{vs}}$$_{\text{nk}}$}
+\item How does rmaxh change the energy of a supercell
+\item How does the number of neighbours change and what is the relation
+between rmaxh and larger cell sizes.
+\end{itemize}
+\end{itemize}
+\subsubsection{{\bfseries\sffamily DONE} Implement Homogenous Shear boundary conditions for gamma surface calculation.}
+\label{sec-1-1-2}
 \subsection{{\bfseries\sffamily TODO} Python script: remove include statements  -->  One file.}
 \label{sec-1-2}
 \subsection{{\bfseries\sffamily TODO} Summarise UCL DFT lectures.}
@@ -65,6 +86,7 @@
 \label{sec-1-4-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
 \label{sec-1-5}
+
 \subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
 \label{sec-1-6}
 \subsubsection{Pair potentials in tbe code}
@@ -133,12 +155,12 @@ Ti,Ti:
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
-\caption{\label{fig:Bond-integrals-with-multiplicative-polynomial-cutoffs.}Bond integrals with multiplicative polynomial cutoffs.}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}Bond integrals with multiplicative polynomial cutoffs.}
 \end{figure}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
-\caption{\label{fig:Bond-integrals-with-multiplicative-polynomial-cutoffs:-zoomed-in.}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
 
 
@@ -264,6 +286,7 @@ exit.
 \end{itemize}
 \end{itemize}
 \end{itemize}
+
 
 \subsection{Ti Swarm fitting.}
 \label{sec-2-3}

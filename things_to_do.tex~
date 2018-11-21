@@ -1,4 +1,4 @@
-% Created 2018-11-20 Tue 13:25
+% Created 2018-11-20 Tue 13:28
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -130,8 +130,17 @@ Ti,Ti:
 \item So bond integrals from titanium look like this, from this file
 \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py}{plot$_{\text{bond}}$$_{\text{integrals}}$.py}
 \end{itemize}
-\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}{Bond integrals with multiplicative polynomial cutoffs. }
-\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}{Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
+\caption{\label{fig:Bond-integrals-with-multiplicative-polynomial-cutoffs.}Bond integrals with multiplicative polynomial cutoffs.}
+\end{figure}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
+\caption{\label{fig:Bond-integrals-with-multiplicative-polynomial-cutoffs:-zoomed-in.}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\end{figure}
+
 
 
 \subsection{{\bfseries\sffamily DONE} Investigate why rmaxh changes energy}
