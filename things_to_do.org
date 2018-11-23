@@ -17,7 +17,12 @@
 
 
 
-* Tasks x
+* Tasks 
+	
+** TODO Has anyone investigated the stacking faults of Omega phase?
+   - Maybe as Omega phase doesn't occur that often, perhaps it has not been
+     studied in detail.
+   - I should look further into this
 ** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
 *** Checking the convergence criteria
       - Now checking the convergence criteria.
@@ -35,15 +40,27 @@
 ***** What if rmaxh is smaller or larger?
       - If rmaxh is is smaller (say rmaxh = 6.7 bohr) then we get the same
         results. 
-	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png][e_vs_nk rmaxh=6.7]]
-	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png][a_vs_nk rmaxh=6.7]]
-	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png][c_vs_nk rmaxh=6.7]]
+   #+CAPTION: Variation of energy with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+      file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png
+   #+CAPTION: Variation of a hcp with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+      file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png
+   #+CAPTION: Variation of c hcp with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+      file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png]]
 	- Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl][a_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl][c_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl][e_hcp small rmaxh]]. 
       - If rmaxh is larger ( rmaxh = 20 bohr ), all possible interactions must
         be included then. And so we get the same results. 
-	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png][e_vs_nk rmaxh=20]]
-	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png][a_vs_nk rmaxh=20]]
-	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png][c_vs_nk rmaxh=20]]
+   #+CAPTION: Variation of energy with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png]]
+   #+CAPTION: Variation of a hcp with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png]]
+   #+CAPTION: Variation of c hcp with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png]]
       - Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl][a_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl][c_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl][e_hcp large rmaxh]]
 
 **** How does rmaxh change the lattice parameters?
@@ -58,7 +75,7 @@
     interactions, a parameter for the coulomb interaction, which stops the
     charges from moving freely. 
     - TBE control file is currently set to this:
-     #+BEGIN_SRC 
+     #+BEGIN_SRC bash
 TBE: nbas = 128 nspec = 1 verb 31 
 TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
 bz: metal
@@ -120,15 +137,18 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
      #+BEGIN_SRC bash
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
-             sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
-   coeff:   0.00   0.00   0.00   0.00   0.00   0.00   0.00  -2.75   1.84  -0.46
-   decay:   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.71   0.71   0.71
+             dds    ddp    ddd
+   coeff:  -2.75   1.84  -0.46
+   decay:   0.71   0.71   0.71
    cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
-             sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
-   r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
-   rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
+             dds    ddp    ddd
+   r1:      6.20   6.20   6.20
+   rc:      8.50   8.50   8.50
      
      #+END_SRC
+
+
+
 *** Bond integrals from tbe
       - So bond integrals from titanium look like this, from this file
         [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py][plot_bond_integrals.py]]
@@ -168,6 +188,7 @@ Ti,Ti:
 * General notes of codes. 
 
 ** Pair potentials in tbe code
+*** How are they constructed?
    - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
    - This calls [[file:~/lm/tb/vppder.f][vppder.f]] which actually evaluates the pair potential at that
      point
@@ -218,11 +239,14 @@ Ti,Ti:
    rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
      
      #+END_SRC
+*** Bond Integrals: tbe   
    - So bond integrals from titanium look like this
    - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png][Bond integrals with multiplicative polynomial cutoffs. ]]
    - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png][Bond integrals with multiplicative polynomial cutoffs: zoomed in.]]
 	
+
 ** Notes for the gamma surfaces
+*** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
      in to tbe.
    - This means that there are some erroneous forces that make the program
@@ -236,7 +260,58 @@ Ti,Ti:
 	- gtol: The tolerance in the force for convergence e.g. 1d-8
 	- xtol: The tolerance in the atomic positon e.g. 1d-8.
 
-	    
+*** Convergence and k-points in tbe
+    - Tony used a $30\times 30\times 30$ grid for the k-point mesh.
+    - Making a square cell, and increasing the length accordingly, one must
+      reduce the number ok k-points in that direction.
+    - Making a square cell with an increase of cell size along x to be
+      $\sqrt{3}$, then we must reduce the k-point mesh by $n_{\text{kx}} /
+      \sqrt{3} \approx 17.3 \approx 17$
+    - Therefore new grid is $17 \times 30 \times 30$
+
+| hcp cell type | Geometry | tetra | n atoms | nkx | nky | nkz | Maximum force | Total energy per atom | Band energy per atom | Pair pot. energy per atom |
+|---------------+----------+-------+---------+-----+-----+-----+---------------+-----------------------+----------------------+---------------------------|
+| Primitive     |    1x1x1 |     0 |       2 |  30 |  30 |  30 |      0.000000 |           -0.28614958 |          -0.93606433 |                0.18636598 |
+| Primitive     |    1x1x1 |     1 |       2 |  30 |  30 |  30 |      0.000001 |           -0.28614745 |          -0.93606220 |                0.18636599 |
+| Primitive     |    2x1x1 |     0 |       4 |  15 |  30 |  30 |      0.000001 |           -0.28614836 |          -0.93606433 |                0.18636599 |
+| Primitive     |    2x1x1 |     1 |       4 |  15 |  30 |  30 |      0.000511 |           -0.28614581 |          -0.93606056 |                0.18636599 |
+| Primitive     |    4x2x8 |     0 |     128 |   8 |  15 |   4 |      0.000061 |           -0.28615991 |          -0.93607466 |                0.18636599 |
+| Primitive     |    4x2x8 |     1 |     128 |   8 |  15 |   4 |      0.000118 |           -0.28615978 |          -0.93607452 |                0.18536599 |
+| Primitive     |    4x2x8 |     0 |     128 |   9 |  15 |   4 |      0.000063 |           -0.28614977 |          -0.93606452 |                0.18636599 |
+| Basal Square  |    1x1x1 |     0 |       4 |  16 |  30 |  30 |      0.000065 |           -0.28614681 |          -0.93606156 |                0.18636599 |
+| Basal Square  |    1x1x1 |     0 |       4 |  17 |  30 |  30 |      0.000064 |           -0.28615864 |          -0.93607339 |                0.18636599 |
+| Basal Square  |    1x1x1 |     0 |       4 |  18 |  30 |  30 |      0.000043 |           -0.28614481 |          -0.93605956 |                0.18636599 |
+| Basal Square  |    1x1x1 |     0 |       4 |  19 |  30 |  30 |      0.000054 |           -0.28615677 |          -0.93607152 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  15 |  15 |  30 |      0.000083 |           -0.28615743 |          -0.93606721 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  16 |  15 |  30 |      0.000020 |           -0.28614599 |          -0.93606074 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  17 |  15 |  30 |      0.000061 |           -0.28615547 |          -0.93607022 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  18 |  15 |  30 |      0.000057 |           -0.28614492 |          -0.93605967 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  15 |  15 |   4 |      0.000065 |           -0.28615784 |          -0.93607259 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  16 |  15 |   4 |      0.000028 |           -0.28614667 |          -0.93606014 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  17 |  15 |   4 |      0.000044 |           -0.28615651 |          -0.93607126 |                0.18636599 |
+| Basal Square  |    1x2x8 |     0 |      64 |  18 |  15 |   4 |      0.000052 |           -0.28614359 |          -0.93605834 |                0.18636599 |
+| Basal Square  |   1x2x10 |     0 |      80 |  15 |  15 |   3 |      0.000087 |           -0.28615445 |          -0.93606920 |                0.18636599 |
+| Basal Square  |   1x2x10 |     0 |      80 |  16 |  15 |   3 |      0.000065 |           -0.28614681 |          -0.93606156 |                0.18636599 |
+| Basal Square  |   1x2x10 |     0 |      80 |  17 |  15 |   3 |      0.000064 |           -0.28615864 |          -0.93607343 |                0.18636599 |
+| Basal Square  |   1x2x10 |     0 |      80 |  18 |  15 |   3 |      0.000052 |           -0.28614359 |          -0.93605834 |                0.18636599 |
+Less precise c/a below. 
+|---------------------+-------+---------+-----+-----+-----+---------------+-----------------------+----------------------+---------------------------|
+| Basal Square  1x1x1 |     0 |       4 |  18 |  30 |  30 |      0.000043 |           -0.28614662 |          -0.93605957 |                0.18636601 |
+| Basal Square  1x1x1 |     1 |       4 |  18 |  30 |  30 |      0.000097 |           -0.28614928 |          -0.93606369 |                0.18636601 |
+| Basal Square  1x1x1 |     0 |       4 |  17 |  30 |  30 |      0.000064 |           -0.28615864 |          -0.93607342 |                0.18636601 |
+| Basal Square  1x1x1 |     1 |       4 |  17 |  30 |  30 |      0.000024 |           -0.28615254 |          -0.93606731 |                0.18636601 |
+| Basal Square: 2x2x8 |     0 |     128 |   9 |  15 |   4 |      0.000052 |           -0.28614359 |          -0.93605835 |                0.18366000 |
+| Basal Square: 2x2x8 |     1 |     128 |   9 |  15 |   4 |      0.000121 |           -0.28614669 |          -0.93606145 |                0.18636600 |
+| Basal Square: 1x1x8 |     0 |      32 |  17 |  30 |   4 |      0.000044 |           -0.28615651 |          -0.93607127 |                0.18636600 |
+| Basal Square: 1x1x9 |     0 |      36 |  17 |  30 |   4 |      0.000058 |           -0.28615716 |          -0.93607192 |                0.18636600 |
+| Basal Square: 1x1x9 |     0 |      36 |  17 |  30 |   3 |      0.000071 |           -0.28615681 |          -0.93607157 |                0.18636600 |
+
+*** Results
+    - Have now done the gamma line along $1/3[1\bar{2}10]$, but the end points
+      do not seem quite right.
+    - File and data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py][basal_energy_plotting]]
+[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png]] 
+
 ** Ti Swarm fitting. 
    - Here used fitting with uniform weights across all target quantities
      without a regularisation of the parameters.
@@ -269,8 +344,16 @@ Stopping search: Swarm best position change less than 1e-08
 | u_omega:      |   1.000025 |   1.000000 |      0.000000 |  0.000025 | 1.000000 |   0.000025 |
 | DeltaE_O_hcp: |  -1.170318 |  -0.734754 |      0.189716 |  0.435564 | 1.000000 |   0.625281 |
 | a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
-| bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |   0.110840 |
-   
+| bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |         0. |
+|               |            |            |               |           |          |            |
+
+** DFT 
+   Run:
+   - lmchk --getwsr ti
+   - Copy the old rmax into the R category in SPEC
+   - lmfa ti -vhcp=1
+   - Copy basp0 to basp
+   - Run lmf 
 
 * Useful Notes
 ** Org-mode 
@@ -368,10 +451,10 @@ For faster diagonalisation of the hamiltonian matrix it may be useful to look
 at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 ** Jochen Blumberger: Molecular dynamics 
-   
-   - Molecular dynamics is important. (Even at 0K there is a zero point energy
-     of vibration).
-   - Need theory to see how atoms move
+*** Introduction
+     - Molecular dynamics is important. (Even at 0K there is a zero point energy
+       of vibration).
+     - Need theory to see how atoms move
 
 *** Born-Oppenheimer approximation 
 

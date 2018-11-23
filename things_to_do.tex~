@@ -1,4 +1,4 @@
-% Created 2018-11-20 Tue 13:28
+% Created 2018-11-21 Wed 18:45
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -49,8 +49,83 @@
 \label{sec-1}
 \subsection{{\bfseries\sffamily TODO} Finish doing the gamma surfaces for all planes for pure titanium.}
 \label{sec-1-1}
-\subsubsection{{\bfseries\sffamily DONE} Implement Homogenous Shear boundary conditions for gamma surface calculation.}
+\subsubsection{Checking the convergence criteria}
 \label{sec-1-1-1}
+\begin{itemize}
+\item Now checking the convergence criteria.
+\end{itemize}
+
+\begin{enumerate}
+\item How the lattice parameters change with the fineness of the k mesh
+\label{sec-1-1-1-1}
+\begin{itemize}
+\item Maybe with a less fine k mesh the lattice parameters become
+worse.
+\item SOLUTION: The lattice parameters do not change that much under
+\end{itemize}
+differences with the k mesh. \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py}{File with change of the lattice
+parameters with k mesh. }
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png}{a vs nk}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png}{c$_{\text{vs}}$$_{\text{nk}}$}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png}{e$_{\text{vs}}$$_{\text{nk}}$}
+
+\begin{enumerate}
+\item What if rmaxh is smaller or larger?
+\label{sec-1-1-1-1-1}
+\begin{itemize}
+\item If rmaxh is is smaller (say rmaxh = 6.7 bohr) then we get the same
+results.
+\end{itemize}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of energy with k mesh.}
+\end{figure}
+  \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png}{a$_{\text{vs}}$$_{\text{nk}}$ rmaxh=6.7}
+  \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png}{c$_{\text{vs}}$$_{\text{nk}}$ rmaxh=6.7}
+\begin{itemize}
+\item Data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl}{a$_{\text{hcp}}$ small rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl}{c$_{\text{hcp}}$ small rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl}{e$_{\text{hcp}}$ small rmaxh}.
+\item If rmaxh is larger ( rmaxh = 20 bohr ), all possible interactions must
+be included then. And so we get the same results. 
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png}{e$_{\text{vs}}$$_{\text{nk}}$ rmaxh=20}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png}{a$_{\text{vs}}$$_{\text{nk}}$ rmaxh=20}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png}{c$_{\text{vs}}$$_{\text{nk}}$ rmaxh=20}
+\item Data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl}{a$_{\text{hcp}}$ large rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl}{c$_{\text{hcp}}$ large rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl}{e$_{\text{hcp}}$ large rmaxh}
+\end{itemize}
+\end{enumerate}
+
+\item How does rmaxh change the lattice parameters?
+\label{sec-1-1-1-2}
+
+\begin{enumerate}
+\item How does rmaxh change the energy of a supercell
+\label{sec-1-1-1-2-1}
+\begin{itemize}
+\item How does the number of neighbours change and what is the relation
+between rmaxh and larger cell sizes.
+\end{itemize}
+\end{enumerate}
+\end{enumerate}
+\subsubsection{Notes on the model.}
+\label{sec-1-1-2}
+It seems that there is a lot of charge moving around when doing the
+relaxations. 
+I think that this may be due to the fact that there is no Hubbard U
+interactions, a parameter for the coulomb interaction, which stops the
+charges from moving freely. 
+\begin{itemize}
+\item TBE control file is currently set to this:
+\begin{verbatim}
+TBE: nbas = 128 nspec = 1 verb 31 
+TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
+bz: metal
+\end{verbatim}
+\end{itemize}
+
+
+
+\subsubsection{{\bfseries\sffamily DONE} Implement Homogenous Shear boundary conditions for gamma surface calculation.}
+\label{sec-1-1-3}
 \subsection{{\bfseries\sffamily TODO} Python script: remove include statements  -->  One file.}
 \label{sec-1-2}
 \subsection{{\bfseries\sffamily TODO} Summarise UCL DFT lectures.}
@@ -65,6 +140,7 @@
 \label{sec-1-4-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
 \label{sec-1-5}
+
 \subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
 \label{sec-1-6}
 \subsubsection{Pair potentials in tbe code}
@@ -133,12 +209,12 @@ Ti,Ti:
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
-\caption{\label{fig:Bond-integrals-with-multiplicative-polynomial-cutoffs.}Bond integrals with multiplicative polynomial cutoffs.}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}Bond integrals with multiplicative polynomial cutoffs.}
 \end{figure}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
-\caption{\label{fig:Bond-integrals-with-multiplicative-polynomial-cutoffs:-zoomed-in.}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
 
 
@@ -241,7 +317,7 @@ Ti,Ti:
 \label{sec-2-2}
 \begin{itemize}
 \item Seems like some atoms are missing in the site file when it is being read
-in to tbe
+in to tbe.
 \item This means that there are some erroneous forces that make the program
 exit.
 \begin{itemize}
@@ -265,6 +341,7 @@ exit.
 \end{itemize}
 \end{itemize}
 
+
 \subsection{Ti Swarm fitting.}
 \label{sec-2-3}
 \begin{itemize}
@@ -279,28 +356,32 @@ regards to titanium.
 \begin{verbatim}
 Build Objective Function
  ...with L1 norm 
-| Quantity      |  predicted |     target | squared diff. |    p_norm |   weight |  objective |
-|---------------+------------+------------+---------------+-----------+----------+------------|
-| a_hcp:        |   4.744693 |   5.576790 |      0.692385 |  0.832097 | 1.000000 |   1.524483 |
-| c_hcp:        |   7.495518 |   8.852101 |      1.840316 |  1.356583 | 1.000000 |   3.196899 |
-| c_11:         | 174.924630 | 176.100000 |      1.381495 |  1.175370 | 1.000000 |   2.556865 |
-| c_33:         | 190.161490 | 190.500000 |      0.114589 |  0.338510 | 1.000000 |   0.453099 |
-| c_44:         |  54.517320 |  50.800000 |     13.818465 |  3.717320 | 1.000000 |  17.535784 |
-| c_12:         |  65.010403 |  86.900000 |    479.154446 | 21.889597 | 1.000000 | 501.044043 |
-| c_13:         |  73.335501 |  68.300000 |     25.356271 |  5.035501 | 1.000000 |  30.391772 |
-| a_omega:      |   7.331279 |   8.732543 |      1.963543 |  1.401265 | 1.000000 |   3.364808 |
-| c_omega:      |   4.768459 |   5.323431 |      0.307994 |  0.554972 | 1.000000 |   0.862966 |
-| u_omega:      |   1.000025 |   1.000000 |      0.000000 |  0.000025 | 1.000000 |   0.000025 |
-| DeltaE_O_hcp: |  -1.170318 |  -0.734754 |      0.189716 |  0.435564 | 1.000000 |   0.625281 |
-| a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
-| bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |   0.110840 |
 Objective function: 563 
-
 Objective Function = 563.2340263379571 
 Stopping search: Swarm best position change less than 1e-08 
 [ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
 563.2340263379571
 \end{verbatim}
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
+Quantity & predicted & target & squared diff. & p$_{\text{norm}}$ & weight & objective\\
+\hline
+a$_{\text{hcp}}$: & 4.744693 & 5.576790 & 0.692385 & 0.832097 & 1.000000 & 1.524483\\
+c$_{\text{hcp}}$: & 7.495518 & 8.852101 & 1.840316 & 1.356583 & 1.000000 & 3.196899\\
+c$_{\text{11}}$: & 174.924630 & 176.100000 & 1.381495 & 1.175370 & 1.000000 & 2.556865\\
+c$_{\text{33}}$: & 190.161490 & 190.500000 & 0.114589 & 0.338510 & 1.000000 & 0.453099\\
+c$_{\text{44}}$: & 54.517320 & 50.800000 & 13.818465 & 3.717320 & 1.000000 & 17.535784\\
+c$_{\text{12}}$: & 65.010403 & 86.900000 & 479.154446 & 21.889597 & 1.000000 & 501.044043\\
+c$_{\text{13}}$: & 73.335501 & 68.300000 & 25.356271 & 5.035501 & 1.000000 & 30.391772\\
+a$_{\text{omega}}$: & 7.331279 & 8.732543 & 1.963543 & 1.401265 & 1.000000 & 3.364808\\
+c$_{\text{omega}}$: & 4.768459 & 5.323431 & 0.307994 & 0.554972 & 1.000000 & 0.862966\\
+u$_{\text{omega}}$: & 1.000025 & 1.000000 & 0.000000 & 0.000025 & 1.000000 & 0.000025\\
+DeltaE$_{\text{O}}$$_{\text{hcp}}$: & -1.170318 & -0.734754 & 0.189716 & 0.435564 & 1.000000 & 0.625281\\
+a$_{\text{bcc}}$: & 5.331467 & 6.179489 & 0.719140 & 0.848021 & 1.000000 & 1.567162\\
+bandwidth: & 0.325300 & 0.426000 & 0.010140 & 0.100700 & 1.000000 & 0.110840\\
+\end{tabular}
+\end{center}
 
 
 \section{Useful Notes}
@@ -427,7 +508,8 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 \subsection{Jochen Blumberger: Molecular dynamics}
 \label{sec-4-2}
-
+\subsubsection{Introduction}
+\label{sec-4-2-1}
 \begin{itemize}
 \item Molecular dynamics is important. (Even at 0K there is a zero point energy
 of vibration).
@@ -435,7 +517,7 @@ of vibration).
 \end{itemize}
 
 \subsubsection{Born-Oppenheimer approximation}
-\label{sec-4-2-1}
+\label{sec-4-2-2}
 
 \begin{itemize}
 \item Have hamiltonian that consists of interaction between:
@@ -463,11 +545,11 @@ Nuclear wavefunction.
 \end{itemize}
 
 \subsubsection{Molecular Dynamics}
-\label{sec-4-2-2}
+\label{sec-4-2-3}
 
 \begin{enumerate}
 \item Verlet Algorithm
-\label{sec-4-2-2-1}
+\label{sec-4-2-3-1}
 \begin{itemize}
 \item This algorithm simply uses the forward and backward derivative of the
 nuclear positions and adds them together to get a formula for the
@@ -480,11 +562,14 @@ positon.
 \item This causes a problem however: the velocity is calculated a step
 after that of the positons. So this leads to the Velocity Verlet
 algorithm.
+\item The timestep for these algorithms is on the order of $1fs$, such that
+one can have adequate resolution of atomic vibrations ($\f sim
+         10^{-14}s^{-1}$, so period is around $10fs$)
 \end{itemize}
 \end{itemize}
 
 \item Velocity Verlet Algorithm
-\label{sec-4-2-2-2}
+\label{sec-4-2-3-2}
 \begin{itemize}
 \item For this algorithm the forward derivative with respect to nuclear
 positions is used with a calculation of the force at a later time.
@@ -496,16 +581,132 @@ terms of later time.
 \end{itemize}
 
 \item How to calculate the forces
-\label{sec-4-2-2-3}
+\label{sec-4-2-3-3}
 \begin{itemize}
 \item Use the Hellmann-Feynman theorem.
 \begin{itemize}
-\item $$ \mathbf{f}_{I} = < \psi^{0}_{\mathbf{R}} | \frac{\partial}{\partial   \mathbf{R}_{I}}\hat{H} |\psi^{0}_{\mathbf{R}} >   $$
+\item $$ \mathbf{f}_{I} = \bra{ \psi^{0}_{\mathbf{R}} }
+         \frac{\partial}{\partial   \mathbf{R}_{I}}\hat{H} \ket{ \psi^{0}_{\mathbf{R}} }  $$
+\end{itemize}
+\item This is derived using the parameter $\lambda$, assuming that the
+Hamiltonian depends on this lambda.
+\end{itemize}
+
+\item Carr-Parinello MD
+\label{sec-4-2-3-4}
+\begin{itemize}
+\item This is a form of molecular dynamics where both the positions and the
+orbitals are used as dynamical variables.
+\item An \emph{orbital velocity} and \emph(orbital mass\} is defined.
+\item Using this one can create trajectories that propagate both the ionic
+positions and orbitals in time.
+\item This circumvents the need for self-consistent cycles to obtain the
+correct orbitals, but:
+\begin{itemize}
+\item The dynamics are not always in the ground state
+energy.
+\item The necessary time step is decreased by about $3-4$ times (speed
+increase is $5-10$ times from removal of self-consistency)
 \end{itemize}
 \end{itemize}
 \end{enumerate}
 
-
+\subsection{Matteo Salvalglio: Enhanced Sampling}
+\label{sec-4-3}
+\subsubsection{Introduction}
+\label{sec-4-3-1}
+\begin{itemize}
+\item Have a phase space that is $6N$ dimensional (3 spatial positions and 3
+components of momenta).
+\item Each point in this phase space is a microstate.
+\item The microstates sampled are from the Canonical Ensemble (N,V,T).
+\item Can define partition function \[ Q(N,V,T) = \frac{1}{N!h^{3N}}\int
+     \text{d}x e^{-\beta\mathbf{H(x)}} \]
+\item Can have thermodynamic potential defined from this: \[ A(N,V,T) =
+     -k_{B}ln(Q(N,V,T)) \]
+\item What we really want to do is obtain an observable quantity from this high
+dimensional space.
+\end{itemize}
+\subsubsection{Ergodic principle}
+\label{sec-4-3-2}
+\begin{itemize}
+\item This is the principle which states that the amount of
+time that microstates of the same energy spend in a configuration is
+proportional to the volume of phase space they occupy.
+\item In other words, every microstate is equiprobable.
+\item So the observable quantity: \[ O = \langle O \rangle = \underset{t
+      \rightarrow \inf}{lim} \frac{1}{t} \int_{0}^{t} \text{d}t O(x(t)),  \] where
+$O(x(t))$ is the instantaneous realisation of $O(x)$
+\end{itemize}
+\subsubsection{Collective variables}
+\label{sec-4-3-3}
+\begin{itemize}
+\item Collective variables are just functions that depend on the coordinates
+(CVs) $S(\mathbf{R})$
+\item Given a collective variable we can define a probability density $p(S)$
+\item So \[ p(S) = \int \text{d}\mathbf{R} [ \delta ( S(\mathbf{R}) - S ) ] p(\mathbf{R}) \]
+\item \[ p(\mathbf{R}) = \frac{e^{-\beta U(\mathbf{R)}}}{\int e^{-\beta
+      U(\mathbf{R)}} \text{d}\mathbf{R} }, \] where the denominator is the
+configuration integral $\mathcal{Z}$
+\end{itemize}
+\begin{enumerate}
+\item Calculating free energies from collective variables
+\label{sec-4-3-3-1}
+\begin{itemize}
+\item Free energy profile is then just \[  F(S) = -k_{B}T ln( p(S) )\]
+\item The free energy change between configurations $\text{A}$ and B are then
+just  \[ \Delta F_{\text{AB}} = -k_{B}T ln\big\{  \frac{\int_{B} p(S) \text{d}S}{\int_{A} p(S) \text{d}S}  \big\}\]
+\item Can think of these configurations as spikes in $p(S)$ and troughs in
+$F(S)$, with some form of energy barrier between them. This region can
+then be split in to regions belonging to A and B, from which the
+separate integrations can be evaluated.
+\item This energy barrier is on the order of $kT$
+\item If not, then simulation times will be very large to be able to obtain
+a result that obeys ergodicity.
+\item Can use a biased potential for the sampling and work backwards to
+obtain the actual probability density.
+\end{itemize}
+\end{enumerate}
+\subsection{Useful definitions of Thermodynamic potentials}
+\label{sec-4-4}
+\begin{itemize}
+\item Internal Energy:
+\begin{itemize}
+\item The capacity to do work and release heat.
+\item The energy contained withing the system excluding kinetic energy.
+\item Equation: \[ U = \int ( t\text{d}S -p\text{d}V + \sum_{i}\mu_{i}\text{d}N_{i} ) \]
+\item $\Delta U$ is the total energy added to the system.
+\item Natural variables: $\{ S, V, \{N_{i}\} \}$
+\end{itemize}
+\item Helmholtz Free Energy:
+\begin{itemize}
+\item The energy at constant temperature and pressure.
+\item The capacity to do mechanical plus non-mechanical work
+\item Equation: \[ F = U - TS \]
+\item $\Delta F$ is the total work done on the system.
+\item Natural variables: $\{ T, V, \{N_{i}\} \}$
+\end{itemize}
+\item Gibbs Free Energy:
+\begin{itemize}
+\item The capacity to do non-mechanical work.
+\item The maximum amount of non-expansion work.
+\item The energy at constant temperature and pressure.
+\item Gibbs energy is the thermodynamic potential that is minimized when a
+system reaches chemical equilibrium at constant pressure and
+temperature.
+\item Equation: \[ G = U + pV - TS  \]
+\item $\Delta G$ is the total non-mechanical work done on the system.
+\item Natural variables: $\{ T, p, \{N_{i}\} \}$
+\end{itemize}
+\item Enthalpy:
+\begin{itemize}
+\item The capacity to do non-mechanical work plus capacity to release heat.
+\item Equation: \[ H = U + pV \]
+\item $\Delta H$ is the total non-mechanical work and heat added to the
+system.
+\item Natural variables: $\{ S, p, \{N_{i}\} \}$
+\end{itemize}
+\end{itemize}
 
 \section{org-mode cheat sheet}
 \label{sec-5}
