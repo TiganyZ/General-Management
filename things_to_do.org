@@ -312,6 +312,102 @@ Less precise c/a below.
     - File and data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py][basal_energy_plotting]]
 [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png]] 
 
+*** Literature Review
+
+**** General notes on dislocations
+     - Dislocations have areas of tension (distance between atoms is larger
+       than the lattice vector) and compression (distance is less than the
+       lattice vector)
+     - A reasonable value for the dislocation core radius r0 therefore lies in the range $\mathbf{b}$ to $4\mathbf{b}$, i.e. $r_0 \geq 1 nm$ in most cases.
+
+**** How do stacking faults occur?
+     Stacking faults can occur:
+     - During crystal growth
+     - As part of other defects (e.g. dislocations)
+     - As evolution of other defects.
+       * There can be vacancy agglomeration, such that there is a vacancy
+         disk, creating a stacking fault if the disk is large enough for the
+         two surfaces to collapse together.
+       * Example of this is that these vacancy disks condense and are then
+         bordered by an edge dislocation. 
+     
+**** Types of stacking faults.
+     - Disk of vacancies: \emph{intrinsic} stacking fault.
+     - Interstitial agglomeration: \emph{extrinsic} stacking fault.
+     - Both are bordered by an edge dislocation.
+       * These are \emph{partial} dislocations.
+       * In fcc these are Frank partials of burgers vector $\mathbf{b} =
+         \pm \frac{a}{3}\langle 111\rangle$
+
+***** Types of stacking faults in hcp
+      - Intrinsic 1 ($I_1$) = (ABAB|CBCB) -- Basal plane
+      - Intrinsic 2 ($I_2$) = (ABAB|CACA) -- Basal plane
+      - Extrinsic ($I_{\text{E}}$) = (ABAB|C|ABAB) -- Basal plane
+      - Easy prismatic $F_{1} = \mathbf{b} / 2$
+	- This energy corresponds to a true metastable stacking fault but has
+          only been seen in the case of DFT so far. 
+
+**** Partial dislocations
+     - Partial dislocations \emph{must} be bordered by a two dimensional
+       defect: usually a stacking fault.
+       * (Think of double ended pencil slice, where dislocation lines are the
+	 border of the pencil and the plane is the stacking fault.)
+     - Shockley dislocations:
+       * Cut and weld but don't fill in (to finish full Volterra procedure.)
+       * Produce intrisic stacking fault.
+       * These can glide on the same plane as the perfect dislocation, and can
+         also change length.
+       * Frank partials bound loop and so can only move on their glide
+         cylinder. Changing length would involbe apsorption or emission of
+         point defects. 
+
+**** Energy considerations with stacking faults and partials. 
+     - Have energy gain from splitting into two smaller burgers vectors
+     - Interaction energy of two partials will be large at smaller distances
+     - but also, stacking fault energy is per unit length, so this would
+       minimise the distance
+     - So have an equilibrium distance between the partials.
+     - This makes dislocations like ribbons that stretch through the material.
+     - These ribbons can undergo constrictions from jogs
+     - Reason that stacking faults are not observed in bcc structures are just
+       that the stacking fault energies are too high. (Because of dense packing?)
+**** Gamma surfaces in DFT
+***** [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults. 
+     - Comparison between central force  embedded atom ineractions, N-body
+       central force, N-body angular, empirical potentials, tight binding and
+       DFT pseudopotential and DFT full electron calculations.
+     - Cauchy pressures are deemed to due to be N-body effects but really for Cauchy
+       pressures that are accurate one needs a volume-dependent energy term
+       which makes elastic constant contributions. **Needs more investigation**
+     - Legrand suggests that there is an energetic favouring of the prismatic
+       plane for these stacking fault energies due to the directional covalent
+       d-orbital bonding in transition metals.
+     - He also suggested a ratio to measure this \[ R = \frac{\gamma_{b}/C_{44}}{\gamma_{p}/C_{66}} \].
+     - Suggests that large fitting database of configurations far from the
+       ideal hcp lattice might provide accurate reproduction of dislocation
+       core structure.
+     - Not systematic improvement going from N-body central force potentials
+       to TB.
+     - Inversion in strength between $C_{66}$ and $C_{44}$ in the BOP
+       calculations of Girshick and Pettifor
+       - So it was stipulated that the N-body effects of this model were not
+         well accounted for.
+     - Free surfaces were introduced into the slab geometry to avoid problems
+       of asymmetric configuration of stacking faults in periodic images.
+     - Oscillations in the stacking fault energy with the number of slabs are
+       due to quantum size effects.
+     - Underestimation of the energy of basal faults and overestimation of the
+       prismatic easy excess energy lead to an inversion between the basal and
+       prismatic easy faults in terms of energetic preference. This was also
+       seen in the BOP model.  
+       - Not sure how this works. The Cauchy pressure was fitted to in certain
+         BOP models. Maybe this was only used in Stefan Znam's case and not
+         any others. It would be interesting to see if his model stands up
+         against this criteria.
+     - No models other than DFT produced a metastable stacking fault energy at
+       the prismatic easy fault. 
+     
+       
 ** Ti Swarm fitting. 
    - Here used fitting with uniform weights across all target quantities
      without a regularisation of the parameters.
