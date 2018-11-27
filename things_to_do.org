@@ -405,8 +405,9 @@ Less precise c/a below.
          any others. It would be interesting to see if his model stands up
          against this criteria.
      - No models other than DFT produced a metastable stacking fault energy at
-       the prismatic easy fault. 
-     
+       the prismatic easy fault.
+   
+
        
 ** Ti Swarm fitting. 
    - Here used fitting with uniform weights across all target quantities
@@ -443,6 +444,117 @@ Stopping search: Swarm best position change less than 1e-08
 | bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |         0. |
 |               |            |            |               |           |          |            |
 
+** Notes on Thermodynamics and Stability
+
+*** Wallace 1972
+    - For hexagonal materials, there are general stability requirements:
+      * $C_{11} - C_{12} > 0$
+      * $C_{11} + C_{12} + C_{33} > 0$
+      * $ ( C_{11} + C_{12} ) C_{33} - 2C_{13}^{2} > 0$
+      * $C_{44} > 0$
+      * $C_{66} = \frac{1}{2}(C_{11} - C_{12}) > 0$
+      * $( C_{11} + C_{12} )C_{33} > 0$
+      * $C_{11} + C_{12} > 0$
+      * $ C_{33} > 0 $
+      * $ C_{11} > 0$
+    - The equilibrium configuration of ions plus external forces is a stable
+      equilibrium if the total system potential $\Psi$ is minimum with respect
+      to small virtual displacements of dions from equilibrium.
+    - Cauchy relations (at least in the cubic case) will be destroyed if
+      non-central forces are included in the crystal potential.
+
+*** Fast, Will, Johansson: Elastic constants in hexagonal transition metals
+
+**** Cauchy Relations
+     - Cauchy relations for hexagonal materials:
+       - $C_{13} = C_{44}$
+       - $C_{12} = C_{66} = \frac{1}{2}(C_{11} - C_{12})$
+     - These only are meant to hold for central forces.
+     - These Cauchy forces have been shown to hold more in hexagonal materials
+       rather than cubic ones.
+     - In cubic materials sometimes one finds $C_{44}$ four times smaller than
+       $C_{12}$.
+     - They showed the Cauchy ratios:
+       - $C_{12}/C_{66}$
+       - $C_{13}/C_{44}$
+     - The Cauchy relations were close to 1 apart from calculations with Co, Zr and
+       Ti, where it was closer to 2.
+     - These are smaller than the $3/4$ times deviations in cubic crystals.
+       
+**** Normalised elastic constant
+       - To investigate Cauchy relations fully they used a normalised elastic constant which
+       	 was obtained by dividiing by the bulk modulus: $C'_{ij} = C_{ij}/B$
+       - It becomes easier to study trends as one is normlising the
+         interatomic forces with an average restoring force of the system,
+         when dividing by the bulk modulus.
+       - Suggest that the hexagonal materials are quite isotropic. 
+	 
+** Notes on Tight Binding and BOP Models
+
+*** Pair correlation and cutoffs
+    - Analysing the pair correlation function in ovito, it seems reasonable
+      that one should have cutoffs, if $ a = 2.95 $ and $ c = 4.683$ to give a
+      $c/a = 1.587$, of 4.7$\AA$, as this is past the third neighbour
+      distance.
+    - This was done in Znam's thesis.
+    - At the moment we are cutting off at $8.5 ryd$, which gives the
+      neighbours to be 20, so we are actually not including a multiple of the
+      coordination for the neighbour table, which may give a weird structure
+      by symmetry.
+    - Another reason is that in the model for Titania, the Ti-Ti integrals
+      were given a longer cutoff to stabilise the rutile and anatase
+      structures. 
+    - The TB Iron model has a cutoff which is twice the lattice parameter. 
+*** Trinkle 2006
+    - Collapse problem found in tight binding if atoms come too close
+      together. Electrons go in the bonding state and not the anti-bonding
+      state and so the energy goes down
+    - Can be fixed by implementing spline potential that levels off below a
+      given cutoff, which effectively simulates a pair potential.
+    - Environmentally dependent on-site terms were used instead of a pair potential.
+    - These on-site energies are dependent on the local density $\rho_{i}$ and
+      they have a cutoff function $f_{c}(r_{ij})$ which has fixed parameters
+      $R_{0}$ and $l_{0}$.\[
+      \epsilon_{i,l} = a_{l} + b_{l}\rho_{i}^{2/3} + c_{l}\rho_{i}^{4/3} +
+      d_{l}\rho_{i}^{2}\] 
+      \[ \rho_{i} = \sum_{j \neq i} \text{exp}\big\{ -\lambda^{2} r_{ij}
+      f_{c}(r_{ij}) \big\} \]
+      \[ f_{c}(r) = \frac{1}{1 + \text{exp}\Big\{  \frac{r-R_{0}}{l_{0}}\Big\}
+      }\]
+*** Stefan Znam 2001 Thesis
+**** Cauchy Pressures
+    - Cauchy pressures have zero contribution from pair potentials at
+      equilibrium. 
+    - Generally all Cauchy pressures in many-body central force models,
+      describing atoms embedded in an electron gas of the surrounding
+      neighbours, are positive when experimentally they are negative.
+      - This is the case with EAM and Finnis-Sinclair models.
+    - In TiAl the environmental screening effects are most profound in the
+      case of s and p orbital overlap repulsion, as these orbitals are being
+      squeezed into the core region under the influence of unsaturated
+      covalent d bonds. 
+***** Reason for Cauchy Pressures
+      - The reason for negative Cauchy pressures is meant to be from covalent
+        character of d bonding, but when using tight binding models, which
+        account for this, the cauchy pressure issue is not resolved.
+      - These effects are explained in detail with regards to tight binding in
+        Nguyen-Manh, Pettifor, Znam, Vitek: Negative Cauchy Pressure Within
+        The Tight-Binding Approximation. 
+      - This warrants the need for environmental terms:
+	- The physical reasoning behind these terms are due to the repulsion
+          between orbitals in the atom.
+***** Why TB can't have negative Cauchy Pressures
+      - TB only has contributions from the bond part of the interactions as the
+        pair potential at equilibrium has no contribution to the Cauchy
+        Pressures. 
+      - Failure of TB to reproduce negative Cauchy pressures because the
+        orbitals are tightly bound: interactions extend out only to nearest
+        neighbour atoms.
+      - This requires that orbitals are not \emph{unscreened} atomic
+        orbitals.
+      - Orbitals must be screened.
+      - For transition metals, the valence d orbitals aren't screened as they are
+        tightly bound anyway.
 ** DFT 
    Run:
    - lmchk --getwsr ti
