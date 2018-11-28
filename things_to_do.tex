@@ -1,4 +1,4 @@
-% Created 2018-11-27 Tue 15:35
+% Created 2018-11-28 Wed 20:20
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -281,14 +281,130 @@ Ti,Ti:
 \subsection{{\bfseries\sffamily DONE} Show supercell of BOP working}
 \label{sec-1-9}
 
+\subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
+\label{sec-1-10}
+\begin{itemize}
+\item Check if the matrix is complex
+\item Check if it is positive definite.
+\end{itemize}
+\subsubsection{Results}
+\label{sec-1-10-1}
+\begin{itemize}
+\item Without changing anything, the total energy of hcp in Tony's newest
+model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
+\item I thought perhaps that the lattice parameters and the elastic constants
+that way might produce a different result.
+\item Minimising the lattice parameters gives an energy of  \$ E$_{\text\text{\{tot
+hcp\}}}$ = -0.572351 \text{Ryd}\$ with lattice parameters of $a_{\text{hcp}}
+      = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
+\item Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
+\item The stability criteria are still satisfied.
+\end{itemize}
+\begin{verbatim}
+Checking Stability for tbe elastic constants. 
+ is C_ij matrix positive definite?: True
 
-\section{General notes of codes.}
+Criteria for stability:
+
+C_11 - C_12 > 0 
+  True
+
+C_11 + C_12 + C_33 > 0 
+  True
+
+( C_11 + C_12 ) * C_33 - 2 * C_13**2 > 0 
+  True
+
+C_44 > 0 
+  True
+
+(C_11 - C_12) > 0
+  True
+
+( C_11 + C_12 )*C_33 > 0 
+  True
+
+C_11 + C_12 > 0
+  True
+
+C_33 > 0
+  True
+
+C_11 > 0
+  True
+\end{verbatim}
+
+\subsection{{\bfseries\sffamily TODO} Build force constant matrix for hcp}
+\label{sec-1-11}
+\begin{itemize}
+\item If the force constant matrix is positive definite then there shan't be
+any soft modes.
+\end{itemize}
+
+\section{General notes}
 \label{sec-2}
-
-\subsection{Pair potentials in tbe code}
+\subsection{Force constant matrix}
 \label{sec-2-1}
-\subsubsection{How are they constructed?}
+\subsubsection{Wallace}
 \label{sec-2-1-1}
+\begin{enumerate}
+\item Crystal Potential: Introduction
+\label{sec-2-1-1-1}
+\begin{itemize}
+\item Since the vibrational energy of a crystal is generally considered to by
+small compared to its potential energy, the crystal potential is a first
+approximation to the free energy or the internal energy.
+\item Ions are labelled by the letters $M$ and $N$.
+\item Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
+displacements from equilibrium are denoted by $\mathbf{U}(M)$.
+\item Potential energy of the crystal due to interactions among ions in a
+given configuration is given by $\Phi$, which can be expanded as
+\begin{align}
+\Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
+     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
+     &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
+     &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
+\end{align}
+\item $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
+\item $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
+\item These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
+\item All of the coefficients are functions of the \emph{initial} configuration.
+\item This potential is supposed to represent the \emph{entire} energy of the crystal
+except for the kinetic energy of the ions.
+\item From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
+individual ions in a given cell.
+\item The total potential of the system plus externally applied forces is
+$\Psi$. For a virtual process where the crystal is deformed while the
+externally applies forces are held constant $\Psi$ is not conserved, if
+the forces are changed then it can be conserved. 
+\begin{align}
+\Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
+     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
+\end{align}
+\end{itemize}
+\item Stability and the Dynamical Matrix
+\label{sec-2-1-1-2}
+\begin{itemize}
+\item The equilibrium configuration of ions and external forces is a stable
+equilibrium if the total system potential is minimum with respet to
+small virtual displacements of the ions from equilirium.
+\end{itemize}
+\[\Psi = \Psi_{0}&+
+     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
+\begin{itemize}
+\item The stability condition is if they are positive definite: positive for
+any of the values $U_{i}(M)$, except if they are all 0.
+\item The stability condition is:
+\[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
+\item $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
+$>0$ means positive definite (all the eigenvalues are greater than zero).
+\item This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
+\end{itemize}
+\end{enumerate}
+\subsection{Pair potentials in tbe code}
+\label{sec-2-2}
+\subsubsection{How are they constructed?}
+\label{sec-2-2-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
@@ -345,18 +461,17 @@ Ti,Ti:
 \end{verbatim}
 \end{itemize}
 \subsubsection{Bond Integrals: tbe}
-\label{sec-2-1-2}
+\label{sec-2-2-2}
 \begin{itemize}
 \item So bond integrals from titanium look like this
 \item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}{Bond integrals with multiplicative polynomial cutoffs. }
 \item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}{Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{itemize}
 
-
 \subsection{Notes for the gamma surfaces}
-\label{sec-2-2}
+\label{sec-2-3}
 \subsubsection{Miscellaneous}
-\label{sec-2-2-1}
+\label{sec-2-3-1}
 \begin{itemize}
 \item Seems like some atoms are missing in the site file when it is being read
 in to tbe.
@@ -367,7 +482,7 @@ exit.
 \end{itemize}
 \end{itemize}
 \subsubsection{Relaxing in tbe}
-\label{sec-2-2-2}
+\label{sec-2-3-2}
 \begin{itemize}
 \item To relax in tbe need to modify:
 \begin{itemize}
@@ -384,7 +499,7 @@ exit.
 \end{itemize}
 
 \subsubsection{Convergence and k-points in tbe}
-\label{sec-2-2-3}
+\label{sec-2-3-3}
 \begin{itemize}
 \item Tony used a $30\times 30\times 30$ grid for the k-point mesh.
 \item Making a square cell, and increasing the length accordingly, one must
@@ -441,7 +556,7 @@ Basal Square: 1x1x9 & 0 & 36 & 17 & 30 & 3 & 0.000071 & -0.28615681 & -0.9360715
 \end{center}
 
 \subsubsection{Results}
-\label{sec-2-2-4}
+\label{sec-2-3-4}
 \begin{itemize}
 \item Have now done the gamma line along $1/3[1\bar{2}10]$, but the end points
 do not seem quite right.
@@ -450,11 +565,11 @@ do not seem quite right.
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png} 
 
 \subsubsection{Literature Review}
-\label{sec-2-2-5}
+\label{sec-2-3-5}
 
 \begin{enumerate}
 \item General notes on dislocations
-\label{sec-2-2-5-1}
+\label{sec-2-3-5-1}
 \begin{itemize}
 \item Dislocations have areas of tension (distance between atoms is larger
 than the lattice vector) and compression (distance is less than the
@@ -463,7 +578,7 @@ lattice vector)
 \end{itemize}
 
 \item How do stacking faults occur?
-\label{sec-2-2-5-2}
+\label{sec-2-3-5-2}
 Stacking faults can occur:
 \begin{itemize}
 \item During crystal growth
@@ -479,7 +594,7 @@ bordered by an edge dislocation.
 \end{itemize}
 
 \item Types of stacking faults.
-\label{sec-2-2-5-3}
+\label{sec-2-3-5-3}
 \begin{itemize}
 \item Disk of vacancies: \emph{intrinsic} stacking fault.
 \item Interstitial agglomeration: \emph{extrinsic} stacking fault.
@@ -493,7 +608,7 @@ bordered by an edge dislocation.
 
 \begin{enumerate}
 \item Types of stacking faults in hcp
-\label{sec-2-2-5-3-1}
+\label{sec-2-3-5-3-1}
 \begin{itemize}
 \item Intrinsic 1 ($I_1$) = (ABAB|CBCB) -- Basal plane
 \item Intrinsic 2 ($I_2$) = (ABAB|CACA) -- Basal plane
@@ -507,7 +622,7 @@ only been seen in the case of DFT so far.
 \end{enumerate}
 
 \item Partial dislocations
-\label{sec-2-2-5-4}
+\label{sec-2-3-5-4}
 \begin{itemize}
 \item Partial dislocations \emph{must} be bordered by a two dimensional
 defect: usually a stacking fault.
@@ -528,7 +643,7 @@ point defects.
 \end{itemize}
 
 \item Energy considerations with stacking faults and partials.
-\label{sec-2-2-5-5}
+\label{sec-2-3-5-5}
 \begin{itemize}
 \item Have energy gain from splitting into two smaller burgers vectors
 \item Interaction energy of two partials will be large at smaller distances
@@ -541,10 +656,10 @@ minimise the distance
 that the stacking fault energies are too high. (Because of dense packing?)
 \end{itemize}
 \item Gamma surfaces in DFT
-\label{sec-2-2-5-6}
+\label{sec-2-3-5-6}
 \begin{enumerate}
 \item\relax [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults.
-\label{sec-2-2-5-6-1}
+\label{sec-2-3-5-6-1}
 \begin{itemize}
 \item Comparison between central force  embedded atom ineractions, N-body
 central force, N-body angular, empirical potentials, tight binding and
@@ -588,9 +703,8 @@ the prismatic easy fault.
 \end{enumerate}
 
 
-
 \subsection{Ti Swarm fitting.}
-\label{sec-2-3}
+\label{sec-2-4}
 \begin{itemize}
 \item Here used fitting with uniform weights across all target quantities
 without a regularisation of the parameters.
@@ -632,22 +746,22 @@ bandwidth: & 0.325300 & 0.426000 & 0.010140 & 0.100700 & 1.000000 & 0.\\
 \end{center}
 
 \subsection{Notes on Thermodynamics and Stability}
-\label{sec-2-4}
+\label{sec-2-5}
 
 \subsubsection{Wallace 1972}
-\label{sec-2-4-1}
+\label{sec-2-5-1}
 \begin{itemize}
 \item For hexagonal materials, there are general stability requirements:
 \begin{itemize}
 \item $C_{11} - C_{12} > 0$
 \item $C_{11} + C_{12} + C_{33} > 0$
-\item \$ ( C$_{\text{11}}$ + C$_{\text{12}}$ ) C$_{\text{33}}$ - 2C$_{\text{13}}^{\text{2}}$ > 0\$
+\item $( C_{11} + C_{12} ) C_{33} - 2C_{13}^{2} > 0$
 \item $C_{44} > 0$
 \item $C_{66} = \frac{1}{2}(C_{11} - C_{12}) > 0$
 \item $( C_{11} + C_{12} )C_{33} > 0$
 \item $C_{11} + C_{12} > 0$
-\item \$ C$_{\text{33}}$ > 0 \$
-\item \$ C$_{\text{11}}$ > 0\$
+\item $C_{33} > 0$
+\item $C_{11} > 0$
 \end{itemize}
 \item The equilibrium configuration of ions plus external forces is a stable
 equilibrium if the total system potential $\Psi$ is minimum with respect
@@ -657,11 +771,11 @@ non-central forces are included in the crystal potential.
 \end{itemize}
 
 \subsubsection{Fast, Will, Johansson: Elastic constants in hexagonal transition metals}
-\label{sec-2-4-2}
+\label{sec-2-5-2}
 
 \begin{enumerate}
 \item Cauchy Relations
-\label{sec-2-4-2-1}
+\label{sec-2-5-2-1}
 \begin{itemize}
 \item Cauchy relations for hexagonal materials:
 \begin{itemize}
@@ -676,7 +790,7 @@ $C_{12}$.
 \item They showed the Cauchy ratios:
 \begin{itemize}
 \item $C_{12}/C_{66}$
-\item $C_{13}/C_{55}$
+\item $C_{13}/C_{44}$
 \end{itemize}
 \item The Cauchy relations were close to 1 apart from calculations with Co, Zr and
 Ti, where it was closer to 2.
@@ -684,7 +798,7 @@ Ti, where it was closer to 2.
 \end{itemize}
 
 \item Normalised elastic constant
-\label{sec-2-4-2-2}
+\label{sec-2-5-2-2}
 \begin{itemize}
 \item To investigate Cauchy relations fully they used a normalised elastic constant which
 was obtained by dividiing by the bulk modulus: $C'_{ij} = C_{ij}/B$
@@ -696,9 +810,27 @@ when dividing by the bulk modulus.
 \end{enumerate}
 
 \subsection{Notes on Tight Binding and BOP Models}
-\label{sec-2-5}
+\label{sec-2-6}
+
+\subsubsection{Pair correlation and cutoffs}
+\label{sec-2-6-1}
+\begin{itemize}
+\item Analysing the pair correlation function in ovito, it seems reasonable
+that one should have cutoffs, if \$ a = 2.95 \$ and \$ c = 4.683\$ to give a
+$c/a = 1.587$, of 4.7$\AA$, as this is past the third neighbour
+distance.
+\item This was done in Znam's thesis.
+\item At the moment we are cutting off at $8.5 ryd$, which gives the
+neighbours to be 20, so we are actually not including a multiple of the
+coordination for the neighbour table, which may give a weird structure
+by symmetry.
+\item Another reason is that in the model for Titania, the Ti-Ti integrals
+were given a longer cutoff to stabilise the rutile and anatase
+structures.
+\item The TB Iron model has a cutoff which is twice the lattice parameter.
+\end{itemize}
 \subsubsection{Trinkle 2006}
-\label{sec-2-5-1}
+\label{sec-2-6-2}
 \begin{itemize}
 \item Collapse problem found in tight binding if atoms come too close
 together. Electrons go in the bonding state and not the anti-bonding
@@ -706,16 +838,86 @@ state and so the energy goes down
 \item Can be fixed by implementing spline potential that levels off below a
 given cutoff, which effectively simulates a pair potential.
 \item Environmentally dependent on-site terms were used instead of a pair potential.
-\item These on-site energies are dependent on the local density $\pho_{i}$ \[
+\item These on-site energies are dependent on the local density $\rho_{i}$ and
+they have a cutoff function $f_{c}(r_{ij})$ which has fixed parameters
+$R_{0}$ and $l_{0}$.\[
       \epsilon_{i,l} = a_{l} + b_{l}\rho_{i}^{2/3} + c_{l}\rho_{i}^{4/3} +
       d_{l}\rho_{i}^{2}\] 
-      \[ \rho_{i} = \sum_{j \neq i} \text{exp}\big\{ -\lambda^{2} r_{ij}
+\[ \rho_{i} = \sum_{j \neq i} \text{exp}\big\{ -\lambda^{2} r_{ij}
       f_{c}(r_{ij}) \big\} \]
-      \[ f_{c}(r) = \frac{1}{1 + \text{exp}\Big\{  \frac{r-R_{0}}{l_{0}}\Big\}
+\[ f_{c}(r) = \frac{1}{1 + \text{exp}\Big\{  \frac{r-R_{0}}{l_{0}}\Big\}
       }\]
 \end{itemize}
+\subsubsection{Stefan Znam 2001 Thesis}
+\label{sec-2-6-3}
+\begin{enumerate}
+\item Cauchy Pressures
+\label{sec-2-6-3-1}
+\begin{itemize}
+\item Cauchy pressures have zero contribution from pair potentials at
+equilibrium.
+\item Generally all Cauchy pressures in many-body central force models,
+describing atoms embedded in an electron gas of the surrounding
+neighbours, are positive when experimentally they are negative.
+\begin{itemize}
+\item This is the case with EAM and Finnis-Sinclair models.
+\end{itemize}
+\item In TiAl the environmental screening effects are most profound in the
+case of s and p orbital overlap repulsion, as these orbitals are being
+squeezed into the core region under the influence of unsaturated
+covalent d bonds.
+\end{itemize}
+\begin{enumerate}
+\item Reason for Cauchy Pressures
+\label{sec-2-6-3-1-1}
+\begin{itemize}
+\item The reason for negative Cauchy pressures is meant to be from covalent
+character of d bonding, but when using tight binding models, which
+account for this, the cauchy pressure issue is not resolved.
+\item These effects are explained in detail with regards to tight binding in
+Nguyen-Manh, Pettifor, Znam, Vitek: Negative Cauchy Pressure Within
+The Tight-Binding Approximation.
+\item This warrants the need for environmental terms:
+\begin{itemize}
+\item The physical reasoning behind these terms are due to the repulsion
+between orbitals in the atom.
+\end{itemize}
+\end{itemize}
+\item Why TB can't have negative Cauchy Pressures
+\label{sec-2-6-3-1-2}
+\begin{itemize}
+\item TB only has contributions from the bond part of the interactions as the
+pair potential at equilibrium has no contribution to the Cauchy
+Pressures.
+\item Failure of TB to reproduce negative Cauchy pressures because the
+orbitals are tightly bound: interactions extend out only to nearest
+neighbour atoms.
+\item This requires that orbitals are not \emph{unscreened} atomic
+orbitals.
+\item Orbitals must be screened.
+\item For transition metals, the valence d orbitals aren't screened as they are
+tightly bound anyway.
+\end{itemize}
+\item Thoughts: What does this mean for Tight Binding
+\label{sec-2-6-3-1-3}
+\begin{itemize}
+\item As the Cauchy pressure contributions only come from the bond integrals
+and the pair potential, then the reason that some of the Cauchy
+pressures are off are because these terms might not be necessarily
+correct.
+\item There are screening of these bond integrals, hence the Yukawa terms,
+which change the interaction of these bond integrals.
+\item These classical environmental terms modify the elastic constants by
+including physically motivated screening terms in terms in terms of
+Ti-Al as there is some repulsion from s-p overlap, as these orbitals
+are squeezed into the core from the unsaturated d bonds.
+\item These \emph{reduce} the Cauchy pressures such that they are negative
+()
+\end{itemize}
+\end{enumerate}
+\end{enumerate}
 \subsection{DFT}
-\label{sec-2-6}
+\label{sec-2-7}
 Run:
 \begin{itemize}
 \item lmchk --getwsr ti
@@ -725,49 +927,17 @@ Run:
 \item Run lmf
 \end{itemize}
 
-\section{Useful Notes}
-\label{sec-3}
-\subsection{Org-mode}
-\label{sec-3-1}
-\begin{verbatim}
-(setq org-latex-create-formula-image-program 'dvipng)
-\end{verbatim}
-
-\subsection{Physics}
-\label{sec-3-2}
-\subsubsection{Hartree-Fock}
-\label{sec-3-2-1}
-\begin{itemize}
-\item Hartree-Fock is a method of calculating the energy of a configuration
-with exact exchange.
-\item This is done by essentially putting everything we don't know into the
-kinetic energy functional.
-\item Hamiltonian is split into contributions:
-\begin{itemize}
-\item \[\hat{H} = \hat{T} + \hat{V}_{ \text{ext} } + \hat{G}\]
-\item $\hat{G} = \hat{J} - \hat{K}$
-\item $\hat{J}$ is the coulombic interaction:
-\item \[ \bra{ \mathbf{r} } \hat{J} \ket{ \mathbf{n} } = \int \frac{ \bra{\mathbf{r}}\ket{n} }{|\mathbf{r} - \mathbf{r'}  |}d\mathbf{r} \]
-\item So \[ E_{\text{H}} = \int \frac{\rho{\mathbf{r}\rho{\mathbf{r}'}}}{|\mathbf{r} - \mathbf{r'}|}\]
-\item This includes fictitious self-interaction of electron density.
-\item The Exchange functional removes this part, thus lowering the energy
-\end{itemize}
-
-\item This method is used in Hybrid DFT. This corrects band gaps mainly. But
-there are also problems.
-\end{itemize}
-
 
 \section{DFT Lectures UCL}
-\label{sec-4}
+\label{sec-3}
 \subsection{David Bowler O(N) DFT}
-\label{sec-4-1}
+\label{sec-3-1}
 \subsubsection{Types of Exchange-correlation Functionals}
-\label{sec-4-1-1}
+\label{sec-3-1-1}
 
 \begin{enumerate}
 \item LDA
-\label{sec-4-1-1-1}
+\label{sec-3-1-1-1}
 \begin{itemize}
 \item The electron density is the same as a uniform electron gas.
 \item Exchange is Slater.
@@ -776,7 +946,7 @@ calculations.
 \end{itemize}
 
 \item GGA
-\label{sec-4-1-1-2}
+\label{sec-3-1-1-2}
 \begin{itemize}
 \item The gradient of the electron density is included in functional.
 \item Have the reduced density \[ \frac{ \nabla n(\mathbf{r})}{n( \mathbf{r}
@@ -784,7 +954,7 @@ calculations.
 \end{itemize}
 \begin{enumerate}
 \item Perdew-Burke-Ernzerhof
-\label{sec-4-1-1-2-1}
+\label{sec-3-1-1-2-1}
 \begin{itemize}
 \item \[ E_{\text{x}} = \int n( \mathbf{r} ) \epsilon_{\text{xc}}[n( \mathbf{r}
         )] F_{\text{x}}(S)d\mathbf{r} \]
@@ -794,7 +964,7 @@ calculations.
 \end{enumerate}
 
 \item Hybrid Functionals
-\label{sec-4-1-1-3}
+\label{sec-3-1-1-3}
 \begin{itemize}
 \item These are functionals to correct the self-interaction energy that is
 apparent in the previously mentioned functionals.
@@ -848,9 +1018,9 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 \end{enumerate}
 
 \subsection{Jochen Blumberger: Molecular dynamics}
-\label{sec-4-2}
+\label{sec-3-2}
 \subsubsection{Introduction}
-\label{sec-4-2-1}
+\label{sec-3-2-1}
 \begin{itemize}
 \item Molecular dynamics is important. (Even at 0K there is a zero point energy
 of vibration).
@@ -858,7 +1028,7 @@ of vibration).
 \end{itemize}
 
 \subsubsection{Born-Oppenheimer approximation}
-\label{sec-4-2-2}
+\label{sec-3-2-2}
 
 \begin{itemize}
 \item Have hamiltonian that consists of interaction between:
@@ -886,11 +1056,11 @@ Nuclear wavefunction.
 \end{itemize}
 
 \subsubsection{Molecular Dynamics}
-\label{sec-4-2-3}
+\label{sec-3-2-3}
 
 \begin{enumerate}
 \item Verlet Algorithm
-\label{sec-4-2-3-1}
+\label{sec-3-2-3-1}
 \begin{itemize}
 \item This algorithm simply uses the forward and backward derivative of the
 nuclear positions and adds them together to get a formula for the
@@ -910,7 +1080,7 @@ one can have adequate resolution of atomic vibrations ($\f sim
 \end{itemize}
 
 \item Velocity Verlet Algorithm
-\label{sec-4-2-3-2}
+\label{sec-3-2-3-2}
 \begin{itemize}
 \item For this algorithm the forward derivative with respect to nuclear
 positions is used with a calculation of the force at a later time.
@@ -922,7 +1092,7 @@ terms of later time.
 \end{itemize}
 
 \item How to calculate the forces
-\label{sec-4-2-3-3}
+\label{sec-3-2-3-3}
 \begin{itemize}
 \item Use the Hellmann-Feynman theorem.
 \begin{itemize}
@@ -934,7 +1104,7 @@ Hamiltonian depends on this lambda.
 \end{itemize}
 
 \item Carr-Parinello MD
-\label{sec-4-2-3-4}
+\label{sec-3-2-3-4}
 \begin{itemize}
 \item This is a form of molecular dynamics where both the positions and the
 orbitals are used as dynamical variables.
@@ -953,9 +1123,9 @@ increase is $5-10$ times from removal of self-consistency)
 \end{enumerate}
 
 \subsection{Matteo Salvalglio: Enhanced Sampling}
-\label{sec-4-3}
+\label{sec-3-3}
 \subsubsection{Introduction}
-\label{sec-4-3-1}
+\label{sec-3-3-1}
 \begin{itemize}
 \item Have a phase space that is $6N$ dimensional (3 spatial positions and 3
 components of momenta).
@@ -969,7 +1139,7 @@ components of momenta).
 dimensional space.
 \end{itemize}
 \subsubsection{Ergodic principle}
-\label{sec-4-3-2}
+\label{sec-3-3-2}
 \begin{itemize}
 \item This is the principle which states that the amount of
 time that microstates of the same energy spend in a configuration is
@@ -980,7 +1150,7 @@ proportional to the volume of phase space they occupy.
 $O(x(t))$ is the instantaneous realisation of $O(x)$
 \end{itemize}
 \subsubsection{Collective variables}
-\label{sec-4-3-3}
+\label{sec-3-3-3}
 \begin{itemize}
 \item Collective variables are just functions that depend on the coordinates
 (CVs) $S(\mathbf{R})$
@@ -992,7 +1162,7 @@ configuration integral $\mathcal{Z}$
 \end{itemize}
 \begin{enumerate}
 \item Calculating free energies from collective variables
-\label{sec-4-3-3-1}
+\label{sec-3-3-3-1}
 \begin{itemize}
 \item Free energy profile is then just \[  F(S) = -k_{B}T ln( p(S) )\]
 \item The free energy change between configurations $\text{A}$ and B are then
@@ -1008,8 +1178,55 @@ a result that obeys ergodicity.
 obtain the actual probability density.
 \end{itemize}
 \end{enumerate}
+\subsubsection{Biased Potentials}
+\label{sec-3-3-4}
+\begin{itemize}
+\item Biased potentials can be used to reconstruct the Free energy landscape
+of a system with respect to its collective variables.
+\item It does this by using a potential that reduces or removes the free
+energy barrier such that different parts of the phase space can be
+explored.
+\item From this, the whole of the phase space in consideration can be explored
+such that the probability distribution with respect to a collective
+variable $p^{b}(S(R))$ can be found.
+\item This probability distribution is related to the unbiased probability
+distribution $p^{U}(S(R))$.
+\end{itemize}
+
+\begin{enumerate}
+\item Introduction to Biased Potentials
+\label{sec-3-3-4-1}
+Two main equations:
+\begin{itemize}
+\item The configuration integral $\mathcal{Z}$ and the \emph\{Absolute Free
+Energy\} $\mathcal{A}(N,V,T)$:
+\end{itemize}
+\[ \mathcal{Z} = \int e^{-\beta U(R)} dR\]
+\[ \mathcal{A}(N,V,T) = -\frac{1}{\beta} \text{ln}\big\{ \mathcal{Z}
+     \big\} \]
+\begin{itemize}
+\item Considering two different systems $A$ and $B$, with two different
+potential energy functions $U_A(R)$ and $U_B(R)$, we can have separate
+configurational integrals $\mathcal{Z}_{A}$ and $\mathcal{Z}_{B}$ as per
+the definition above.
+\item Then, we can actually pertubate with respect to
+another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
+\[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
+       \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+\item The last term is the ensemble average with respect to $A$
+\item This means we can express the free energy difference 
+\[ -\text{k}_{\text{B}} T \text{ln} \Big(
+       \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
+       \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+\end{itemize}
+
+
+\item Zwanzig 1954
+\label{sec-3-3-4-2}
+\end{enumerate}
+
 \subsection{Useful definitions of Thermodynamic potentials}
-\label{sec-4-4}
+\label{sec-3-4}
 \begin{itemize}
 \item Internal Energy:
 \begin{itemize}
@@ -1047,6 +1264,38 @@ temperature.
 system.
 \item Natural variables: $\{ S, p, \{N_{i}\} \}$
 \end{itemize}
+\end{itemize}
+
+\section{Useful Notes}
+\label{sec-4}
+\subsection{Org-mode}
+\label{sec-4-1}
+\begin{verbatim}
+(setq org-latex-create-formula-image-program 'dvipng)
+\end{verbatim}
+
+\subsection{Physics}
+\label{sec-4-2}
+\subsubsection{Hartree-Fock}
+\label{sec-4-2-1}
+\begin{itemize}
+\item Hartree-Fock is a method of calculating the energy of a configuration
+with exact exchange.
+\item This is done by essentially putting everything we don't know into the
+kinetic energy functional.
+\item Hamiltonian is split into contributions:
+\begin{itemize}
+\item \[\hat{H} = \hat{T} + \hat{V}_{ \text{ext} } + \hat{G}\]
+\item $\hat{G} = \hat{J} - \hat{K}$
+\item $\hat{J}$ is the coulombic interaction:
+\item \[ \bra{ \mathbf{r} } \hat{J} \ket{ \mathbf{n} } = \int \frac{ \bra{\mathbf{r}}\ket{n} }{|\mathbf{r} - \mathbf{r'}  |}d\mathbf{r} \]
+\item So \[ E_{\text{H}} = \int \frac{\rho{\mathbf{r}\rho{\mathbf{r}'}}}{|\mathbf{r} - \mathbf{r'}|}\]
+\item This includes fictitious self-interaction of electron density.
+\item The Exchange functional removes this part, thus lowering the energy
+\end{itemize}
+
+\item This method is used in Hybrid DFT. This corrects band gaps mainly. But
+there are also problems.
 \end{itemize}
 
 \section{org-mode cheat sheet}

@@ -92,7 +92,9 @@ bz: metal
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
 ** TODO Write summary of org-mode
-
+** TODO Build force constant matrix for hcp 
+   - If the force constant matrix is positive definite then there shan't be
+     any soft modes. 
 ** DONE Look at the range of the bond integrals we have in Titanium graphically. 
    CLOSED: [2018-11-20 Tue 11:13]
 *** Pair potentials in tbe code
@@ -158,9 +160,6 @@ Ti,Ti:
       #+CAPTION: Bond integrals with multiplicative polynomial cutoffs: zoomed in.
       #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png
       [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png]]
-
-	
-
 ** DONE Investigate why rmaxh changes energy
    CLOSED: [2018-11-19 Mon 11:45]
    - Variation of rmaxh does not change the energy
@@ -180,13 +179,105 @@ Ti,Ti:
    #+NAME:   fig:n_neighbours_vs_rmaxh.png
    [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
    
-
 ** DONE Show supercell of BOP working 
    CLOSED: [2018-11-16 Fri 13:38]
+** DONE Check Stability Criteria
+   CLOSED: [2018-11-28 Wed 19:06]
+   - Check if the matrix is complex
+   - Check if it is positive definite. 
+*** Results 
+    - Without changing anything, the total energy of hcp in Tony's newest
+      model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
+    - I thought perhaps that the lattice parameters and the elastic constants
+      that way might produce a different result.
+    - Minimising the lattice parameters gives an energy of  $ E_{\text{tot
+      hcp}} = -0.572351 \text{Ryd}$ with lattice parameters of $a_{\text{hcp}}
+      = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
+    - Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
+    - The stability criteria are still satisfied. 
+#+BEGIN_SRC bash
+Checking Stability for tbe elastic constants. 
+ is C_ij matrix positive definite?: True
+
+Criteria for stability:
+
+C_11 - C_12 > 0 
+  True
+
+C_11 + C_12 + C_33 > 0 
+  True
+
+( C_11 + C_12 ) * C_33 - 2 * C_13**2 > 0 
+  True
+
+C_44 > 0 
+  True
+
+(C_11 - C_12) > 0
+  True
+
+( C_11 + C_12 )*C_33 > 0 
+  True
+
+C_11 + C_12 > 0
+  True
+
+C_33 > 0
+  True
+
+C_11 > 0
+  True
+
+#+END_SRC
 
 
-* General notes of codes. 
-
+* General notes 
+** Force constant matrix
+*** Wallace
+**** Crystal Potential: Introduction
+     - Since the vibrational energy of a crystal is generally considered to by
+       small compared to its potential energy, the crystal potential is a first
+       approximation to the free energy or the internal energy.
+     - Ions are labelled by the letters $M$ and $N$.
+     - Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
+       displacements from equilibrium are denoted by $\mathbf{U}(M)$.
+     - Potential energy of the crystal due to interactions among ions in a
+       given configuration is given by $\Phi$, which can be expanded as
+       \begin{align}
+       \Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
+            &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
+            &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
+            &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
+       \end{align}
+     - $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
+     - $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
+     - These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
+     - All of the coefficients are functions of the \emph{initial} configuration.
+     - This potential is supposed to represent the \emph{entire} energy of the crystal
+       except for the kinetic energy of the ions.
+     - From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
+       individual ions in a given cell.
+     - The total potential of the system plus externally applied forces is
+       $\Psi$. For a virtual process where the crystal is deformed while the
+       externally applies forces are held constant $\Psi$ is not conserved, if
+       the forces are changed then it can be conserved. 
+       \begin{align}
+       \Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
+            &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
+       \end{align}
+**** Stability and the Dynamical Matrix
+     - The equilibrium configuration of ions and external forces is a stable
+       equilibrium if the total system potential is minimum with respet to
+       small virtual displacements of the ions from equilirium.  
+     \[\Psi = \Psi_{0}&+
+     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
+     - The stability condition is if they are positive definite: positive for
+       any of the values $U_{i}(M)$, except if they are all 0.
+     - The stability condition is:
+       \[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
+     - $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
+       $>0$ means positive definite (all the eigenvalues are greater than zero).
+     - This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
 ** Pair potentials in tbe code
 *** How are they constructed?
    - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
@@ -244,7 +335,6 @@ Ti,Ti:
    - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png][Bond integrals with multiplicative polynomial cutoffs. ]]
    - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png][Bond integrals with multiplicative polynomial cutoffs: zoomed in.]]
 	
-
 ** Notes for the gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
@@ -408,7 +498,6 @@ Less precise c/a below.
        the prismatic easy fault.
    
 
-       
 ** Ti Swarm fitting. 
    - Here used fitting with uniform weights across all target quantities
      without a regularisation of the parameters.
@@ -450,13 +539,13 @@ Stopping search: Swarm best position change less than 1e-08
     - For hexagonal materials, there are general stability requirements:
       * $C_{11} - C_{12} > 0$
       * $C_{11} + C_{12} + C_{33} > 0$
-      * $ ( C_{11} + C_{12} ) C_{33} - 2C_{13}^{2} > 0$
+      * $( C_{11} + C_{12} ) C_{33} - 2C_{13}^{2} > 0$
       * $C_{44} > 0$
       * $C_{66} = \frac{1}{2}(C_{11} - C_{12}) > 0$
       * $( C_{11} + C_{12} )C_{33} > 0$
       * $C_{11} + C_{12} > 0$
-      * $ C_{33} > 0 $
-      * $ C_{11} > 0$
+      * $C_{33} > 0$
+      * $C_{11} > 0$
     - The equilibrium configuration of ions plus external forces is a stable
       equilibrium if the total system potential $\Psi$ is minimum with respect
       to small virtual displacements of dions from equilibrium.
@@ -555,6 +644,19 @@ Stopping search: Swarm best position change less than 1e-08
       - Orbitals must be screened.
       - For transition metals, the valence d orbitals aren't screened as they are
         tightly bound anyway.
+***** Thoughts: What does this mean for Tight Binding
+      - As the Cauchy pressure contributions only come from the bond integrals
+        and the pair potential, then the reason that some of the Cauchy
+        pressures are off are because these terms might not be necessarily
+        correct.
+      - There are screening of these bond integrals, hence the Yukawa terms,
+        which change the interaction of these bond integrals.
+      - These classical environmental terms modify the elastic constants by
+        including physically motivated screening terms in terms in terms of
+        Ti-Al as there is some repulsion from s-p overlap, as these orbitals
+        are squeezed into the core from the unsaturated d bonds.
+      - These \emph{reduce} the Cauchy pressures such that they are negative
+        () 
 ** DFT 
    Run:
    - lmchk --getwsr ti
@@ -562,31 +664,7 @@ Stopping search: Swarm best position change less than 1e-08
    - lmfa ti -vhcp=1
    - Copy basp0 to basp
    - Run lmf 
-
-* Useful Notes
-** Org-mode 
-#+BEGIN_SRC elisp
-(setq org-latex-create-formula-image-program 'dvipng)
-#+END_SRC
-
-** Physics
-*** Hartree-Fock
-    - Hartree-Fock is a method of calculating the energy of a configuration
-      with exact exchange.
-    - This is done by essentially putting everything we don't know into the
-      kinetic energy functional. 
-    - Hamiltonian is split into contributions:
-      - \[\hat{H} = \hat{T} + \hat{V}_{ \text{ext} } + \hat{G}\]
-      - $\hat{G} = \hat{J} - \hat{K}$
-      - $\hat{J}$ is the coulombic interaction:
-      - \[ \bra{ \mathbf{r} } \hat{J} \ket{ \mathbf{n} } = \int \frac{ \bra{\mathbf{r}}\ket{n} }{|\mathbf{r} - \mathbf{r'}  |}d\mathbf{r} \]
-      - So \[ E_{\text{H}} = \int \frac{\rho{\mathbf{r}\rho{\mathbf{r}'}}}{|\mathbf{r} - \mathbf{r'}|}\]
-      - This includes fictitious self-interaction of electron density. 
-      - The Exchange functional removes this part, thus lowering the energy
-
-    - This method is used in Hybrid DFT. This corrects band gaps mainly. But
-      there are also problems.
-
+      
  
 * DFT Lectures UCL 
 ** David Bowler O(N) DFT
@@ -771,7 +849,43 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
        - If not, then simulation times will be very large to be able to obtain
          a result that obeys ergodicity.
        - Can use a biased potential for the sampling and work backwards to
-         obtain the actual probability density.  
+         obtain the actual probability density.
+*** Biased Potentials
+    - Biased potentials can be used to reconstruct the Free energy landscape
+      of a system with respect to its collective variables.
+    - It does this by using a potential that reduces or removes the free
+      energy barrier such that different parts of the phase space can be
+      explored.
+    - From this, the whole of the phase space in consideration can be explored
+      such that the probability distribution with respect to a collective
+      variable $p^{b}(S(R))$ can be found.
+    - This probability distribution is related to the unbiased probability
+      distribution $p^{U}(S(R))$.
+
+**** Introduction to Biased Potentials
+     Two main equations:
+     - The configuration integral $\mathcal{Z}$ and the \emph{Absolute Free
+       Energy} $\mathcal{A}(N,V,T)$:
+     \[ \mathcal{Z} = \int e^{-\beta U(R)} dR\]
+     \[ \mathcal{A}(N,V,T) = -\frac{1}{\beta} \text{ln}\big\{ \mathcal{Z}
+     \big\} \]
+     - Considering two different systems $A$ and $B$, with two different
+        potential energy functions $U_A(R)$ and $U_B(R)$, we can have separate
+        configurational integrals $\mathcal{Z}_{A}$ and $\mathcal{Z}_{B}$ as per
+        the definition above. 
+     - Then, we can actually pertubate with respect to
+       another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
+       \[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
+       \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+     - The last term is the ensemble average with respect to $A$
+     - This means we can express the free energy difference 
+       \[ -\text{k}_{\text{B}} T \text{ln} \Big(
+       \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
+       \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+
+
+**** Zwanzig 1954
+
 ** Useful definitions of Thermodynamic potentials
    - Internal Energy:
      * The capacity to do work and release heat.
@@ -801,6 +915,30 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
      * $\Delta H$ is the total non-mechanical work and heat added to the
        system. 
      * Natural variables: $\{ S, p, \{N_{i}\} \}$
+
+* Useful Notes
+** Org-mode 
+#+BEGIN_SRC elisp
+(setq org-latex-create-formula-image-program 'dvipng)
+#+END_SRC
+
+** Physics
+*** Hartree-Fock
+    - Hartree-Fock is a method of calculating the energy of a configuration
+      with exact exchange.
+    - This is done by essentially putting everything we don't know into the
+      kinetic energy functional. 
+    - Hamiltonian is split into contributions:
+      - \[\hat{H} = \hat{T} + \hat{V}_{ \text{ext} } + \hat{G}\]
+      - $\hat{G} = \hat{J} - \hat{K}$
+      - $\hat{J}$ is the coulombic interaction:
+      - \[ \bra{ \mathbf{r} } \hat{J} \ket{ \mathbf{n} } = \int \frac{ \bra{\mathbf{r}}\ket{n} }{|\mathbf{r} - \mathbf{r'}  |}d\mathbf{r} \]
+      - So \[ E_{\text{H}} = \int \frac{\rho{\mathbf{r}\rho{\mathbf{r}'}}}{|\mathbf{r} - \mathbf{r'}|}\]
+      - This includes fictitious self-interaction of electron density. 
+      - The Exchange functional removes this part, thus lowering the energy
+
+    - This method is used in Hybrid DFT. This corrects band gaps mainly. But
+      there are also problems.
 
 * org-mode cheat sheet 
   - New TODO: M-<shift>-<ret>
