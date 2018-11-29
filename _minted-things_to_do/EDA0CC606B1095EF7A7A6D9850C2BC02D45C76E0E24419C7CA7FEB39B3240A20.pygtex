@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Eigenvalues
+\PYG{o}{[}\PYGZhy{}0.3173  \PYG{l+m}{0}.3173  \PYG{l+m}{2}.5963 \PYGZhy{}0.3185  \PYG{l+m}{0}.3185 \PYGZhy{}2.5963\PYG{o}{]}
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+\PYG{o}{[[} \PYG{l+m}{7}.7099e\PYGZhy{}13  \PYG{l+m}{2}.3901e\PYGZhy{}11 \PYGZhy{}2.3901e\PYGZhy{}11 \PYGZhy{}3.1729e\PYGZhy{}01  \PYG{l+m}{2}.3901e\PYGZhy{}11 \PYGZhy{}2.3901e\PYGZhy{}11\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}7.7099e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00 \PYGZhy{}7.7099e\PYGZhy{}13 \PYGZhy{}3.1847e\PYGZhy{}01  \PYG{l+m}{0}.0000e+00\PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{7}.7099e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{7}.7099e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{2}.5963e+00\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}3.1729e\PYGZhy{}01 \PYGZhy{}2.5443e\PYGZhy{}11  \PYG{l+m}{2}.5443e\PYGZhy{}11  \PYG{l+m}{2}.5443e\PYGZhy{}11 \PYGZhy{}2.5443e\PYGZhy{}11  \PYG{l+m}{2}.5443e\PYGZhy{}11\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}7.7099e\PYGZhy{}13 \PYGZhy{}3.1847e\PYGZhy{}01  \PYG{l+m}{0}.0000e+00 \PYGZhy{}7.7099e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00\PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{7}.7099e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{2}.5963e+00  \PYG{l+m}{7}.7099e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00\PYG{o}{]]}
+\end{Verbatim}

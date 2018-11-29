@@ -92,9 +92,6 @@ bz: metal
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
 ** TODO Write summary of org-mode
-** TODO Build force constant matrix for hcp 
-   - If the force constant matrix is positive definite then there shan't be
-     any soft modes. 
 ** DONE Look at the range of the bond integrals we have in Titanium graphically. 
    CLOSED: [2018-11-20 Tue 11:13]
 *** Pair potentials in tbe code
@@ -229,7 +226,77 @@ C_11 > 0
   True
 
 #+END_SRC
+** DONE Build force constant matrix for hcp 
+   CLOSED: [2018-11-29 Thu 18:12]
+   - If the force constant matrix is positive definite then there shan't be
+     any soft modes.
+*** Results
+    - File used is [[file:~/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py][check_ec_pos_definite.py]]
+    - Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
+      derivatives, one can find the $6\times6$ force constant matrix.
+      \begin{align}
+        \frac{1}{144 h^2} (     &  8.  (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
+                               &-  8.  (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
+                               &-  1.  (  f_{ 2,-2} +  f_{-2, 2} - f_{-2,-2} - f_{ 2, 2} )\\
+                               &+  64. (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
+      \end{align}
 
+      #+BEGIN_SRC bash
+Eigenvalues
+[-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 7.7099e-13  2.3901e-11 -2.3901e-11 -3.1729e-01  2.3901e-11 -2.3901e-11]
+ [-7.7099e-13  0.0000e+00  0.0000e+00 -7.7099e-13 -3.1847e-01  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  0.0000e+00  7.7099e-13  0.0000e+00  2.5963e+00]
+ [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
+ [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
+      #+END_SRC
+
+    - This matrix is not positive definite and so the structure is not
+      stable.
+
+    - Using second order formula one obtains
+      #+BEGIN_SRC bash
+Eigenvalues
+[ 0.32  -0.32   2.545 -2.545  0.32  -0.32 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 0.     0.     0.    -0.32   0.     0.   ]
+ [ 0.     0.     0.     0.    -0.32   0.   ]
+ [ 0.     0.     0.     0.     0.     2.545]
+ [-0.32   0.     0.     0.     0.     0.   ]
+ [ 0.    -0.32   0.     0.     0.     0.   ]
+ [ 0.     0.     2.545  0.     0.     0.   ]]
+
+     #+END_SRC
+
+    - Using another model we get another matrix that is not positive
+      definite. 
+      #+BEGIN_SRC 
+tbe ti -vhcp=1  -vfddtt=0.4668418806546737 -vqddstt=0.6660968695540497 -vb0tt=94.4011791926749 
+-vp0tt=1.1902574670213237 -vb1tt=-26.704816810939302 -vp1tt=0.9999600888309667 
+-vcr1=-6.158653986495596 -vcr2=3.9496749559495172 -vcr3=-1.0282840982939534 
+-vndt=1.992406298332605 -vahcp=5.5274  -vqq=1.5997394796830335 -vrmaxh=8.51 -vnk=30 
+Eigenvalues
+[ 1.8512 -1.8512  0.2823 -0.2823 -0.281   0.281 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[-2.4672e-13 -4.8572e-13 -5.0114e-13 -2.8232e-01  0.0000e+00  1.0618e-03]
+ [-4.8572e-13  0.0000e+00  0.0000e+00  0.0000e+00 -2.8103e-01  0.0000e+00]
+ [-5.0114e-13  0.0000e+00  0.0000e+00  1.0618e-03  0.0000e+00  1.8512e+00]
+ [-2.8232e-01  0.0000e+00  1.0618e-03 -2.5443e-13  0.0000e+00 -1.0618e-03]
+ [ 0.0000e+00 -2.8103e-01  2.4672e-13  0.0000e+00  0.0000e+00  0.0000e+00]
+ [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
+
+      #+END_SRC
+
+
+      
 
 * General notes 
 ** Force constant matrix
@@ -497,7 +564,6 @@ Less precise c/a below.
      - No models other than DFT produced a metastable stacking fault energy at
        the prismatic easy fault.
    
-
 ** Ti Swarm fitting. 
    - Here used fitting with uniform weights across all target quantities
      without a regularisation of the parameters.
@@ -664,7 +730,7 @@ Stopping search: Swarm best position change less than 1e-08
    - lmfa ti -vhcp=1
    - Copy basp0 to basp
    - Run lmf 
-      
+     
  
 * DFT Lectures UCL 
 ** David Bowler O(N) DFT

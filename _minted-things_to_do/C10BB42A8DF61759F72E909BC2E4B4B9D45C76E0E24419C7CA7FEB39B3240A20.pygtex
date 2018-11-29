@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Ti,Ti:
+   \PYG{n+nb}{type} \PYG{l+m}{2} \PYG{o}{(}Exp. decay\PYG{o}{)}, V\PYG{o}{(}d\PYG{o}{)} \PYG{o}{=} a exp \PYG{o}{(}\PYGZhy{} b d\PYG{o}{)}
+	     dds    ddp    ddd
+   coeff:  \PYGZhy{}2.75   \PYG{l+m}{1}.84  \PYGZhy{}0.46
+   decay:   \PYG{l+m}{0}.71   \PYG{l+m}{0}.71   \PYG{l+m}{0}.71
+   cutoff \PYG{n+nb}{type} \PYG{l+m}{2} \PYG{o}{(}multiplicative\PYG{o}{)}, 5th order polynomial, range \PYG{o}{[}r1, rc\PYG{o}{]}
+	     dds    ddp    ddd
+   r1:      \PYG{l+m}{6}.20   \PYG{l+m}{6}.20   \PYG{l+m}{6}.20
+   rc:      \PYG{l+m}{8}.50   \PYG{l+m}{8}.50   \PYG{l+m}{8}.50
+\end{Verbatim}

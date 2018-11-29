@@ -1,4 +1,4 @@
-% Created 2018-11-28 Wed 20:20
+% Created 2018-11-29 Thu 18:38
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -16,6 +16,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \tolerance=1000
+\usepackage{minted}
 \usepackage[hyperref,x11names]{xcolor}
 \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 \usepackage{physics}
@@ -145,11 +146,11 @@ interactions, a parameter for the coulomb interaction, which stops the
 charges from moving freely. 
 \begin{itemize}
 \item TBE control file is currently set to this:
-\begin{verbatim}
+\begin{minted}[]{bash}
 TBE: nbas = 128 nspec = 1 verb 31 
 TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
 bz: metal
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
@@ -170,7 +171,6 @@ bz: metal
 \label{sec-1-5-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
 \label{sec-1-6}
-
 \subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
 \label{sec-1-7}
 \subsubsection{Pair potentials in tbe code}
@@ -184,7 +184,7 @@ augmentative/multiplicative polynomial is used.
 \begin{itemize}
 \item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
 \item Depending on the degree of polynomial we have this structure:
-\begin{verbatim}
+\begin{minted}[]{fortran}
       rr = r1 - r2
       xr1 = x - r1
       xr2 = x - r2
@@ -205,7 +205,7 @@ augmentative/multiplicative polynomial is used.
       de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
       dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
 C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{verbatim}
+\end{minted}
 \item So the form of the polynomial used is
 \begin{itemize}
 \item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
@@ -218,7 +218,7 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \end{itemize}
 \end{itemize}
 \item Current model has this
-\begin{verbatim}
+\begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
 	     dds    ddp    ddd
@@ -228,7 +228,7 @@ Ti,Ti:
 	     dds    ddp    ddd
    r1:      6.20   6.20   6.20
    rc:      8.50   8.50   8.50
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
@@ -249,9 +249,6 @@ Ti,Ti:
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
 \caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
-
-
-
 \subsection{{\bfseries\sffamily DONE} Investigate why rmaxh changes energy}
 \label{sec-1-8}
 \begin{itemize}
@@ -277,10 +274,8 @@ Ti,Ti:
 \caption{\label{fig:n_neighbours_vs_rmaxh.png}Variation of number of neighbours with change in rmaxh}
 \end{figure}
 
-
 \subsection{{\bfseries\sffamily DONE} Show supercell of BOP working}
 \label{sec-1-9}
-
 \subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
 \label{sec-1-10}
 \begin{itemize}
@@ -300,7 +295,7 @@ hcp\}}}$ = -0.572351 \text{Ryd}\$ with lattice parameters of $a_{\text{hcp}}
 \item Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
 \item The stability criteria are still satisfied.
 \end{itemize}
-\begin{verbatim}
+\begin{minted}[]{bash}
 Checking Stability for tbe elastic constants. 
  is C_ij matrix positive definite?: True
 
@@ -332,14 +327,59 @@ C_33 > 0
 
 C_11 > 0
   True
-\end{verbatim}
-
-\subsection{{\bfseries\sffamily TODO} Build force constant matrix for hcp}
+\end{minted}
+\subsection{{\bfseries\sffamily DONE} Build force constant matrix for hcp}
 \label{sec-1-11}
 \begin{itemize}
 \item If the force constant matrix is positive definite then there shan't be
 any soft modes.
 \end{itemize}
+\subsubsection{Results}
+\label{sec-1-11-1}
+\begin{itemize}
+\item Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
+derivatives, one can find the $6\times6$ force constant matrix.
+\begin{align}
+  \frac{1}{144 h^2} (     &  8.  (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
+                         &-  8.  (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
+                         &-  1.  (  f_{ 2,-2} +  f_{-2, 2} - f_{-2,-2} - f_{ 2, 2} )\\
+                         &+  64. (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
+\end{align}
+
+\begin{minted}[]{bash}
+Eigenvalues
+[-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 7.7099e-13  2.3901e-11 -2.3901e-11 -3.1729e-01  2.3901e-11 -2.3901e-11]
+ [-7.7099e-13  0.0000e+00  0.0000e+00 -7.7099e-13 -3.1847e-01  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  0.0000e+00  7.7099e-13  0.0000e+00  2.5963e+00]
+ [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
+ [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
+\end{minted}
+
+\item This matrix is not positive definite and so the structure is not
+stable.
+
+\item Using second order formula one obtains
+\begin{minted}[]{bash}
+Eigenvalues
+[ 0.32  -0.32   2.545 -2.545  0.32  -0.32 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 0.     0.     0.    -0.32   0.     0.   ]
+ [ 0.     0.     0.     0.    -0.32   0.   ]
+ [ 0.     0.     0.     0.     0.     2.545]
+ [-0.32   0.     0.     0.     0.     0.   ]
+ [ 0.    -0.32   0.     0.     0.     0.   ]
+ [ 0.     0.     2.545  0.     0.     0.   ]]
+\end{minted}
+\end{itemize}
+
+
 
 \section{General notes}
 \label{sec-2}
@@ -414,7 +454,7 @@ augmentative/multiplicative polynomial is used.
 \begin{itemize}
 \item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
 \item Depending on the degree of polynomial we have this structure:
-\begin{verbatim}
+\begin{minted}[]{fortran}
       rr = r1 - r2
       xr1 = x - r1
       xr2 = x - r2
@@ -435,7 +475,7 @@ augmentative/multiplicative polynomial is used.
       de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
       dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
 C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{verbatim}
+\end{minted}
 \item So the form of the polynomial used is
 \begin{itemize}
 \item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
@@ -448,7 +488,7 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \end{itemize}
 \end{itemize}
 \item Current model has this
-\begin{verbatim}
+\begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
 	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
@@ -458,7 +498,7 @@ Ti,Ti:
 	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
    r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
    rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
-\end{verbatim}
+\end{minted}
 \end{itemize}
 \subsubsection{Bond Integrals: tbe}
 \label{sec-2-2-2}
@@ -702,7 +742,6 @@ the prismatic easy fault.
 \end{enumerate}
 \end{enumerate}
 
-
 \subsection{Ti Swarm fitting.}
 \label{sec-2-4}
 \begin{itemize}
@@ -714,7 +753,7 @@ be. This calls for the use of weighted parameters.
 regards to titanium.
 \end{itemize}
 
-\begin{verbatim}
+\begin{minted}[]{bash}
 Build Objective Function
  ...with L1 norm 
 Objective function: 563 
@@ -722,7 +761,7 @@ Objective Function = 563.2340263379571
 Stopping search: Swarm best position change less than 1e-08 
 [ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
 563.2340263379571
-\end{verbatim}
+\end{minted}
 
 \begin{center}
 \begin{tabular}{lrrrrrr}
@@ -1270,9 +1309,9 @@ system.
 \label{sec-4}
 \subsection{Org-mode}
 \label{sec-4-1}
-\begin{verbatim}
+\begin{minted}[]{elisp}
 (setq org-latex-create-formula-image-program 'dvipng)
-\end{verbatim}
+\end{minted}
 
 \subsection{Physics}
 \label{sec-4-2}

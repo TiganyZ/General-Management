@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+TBE: \PYG{n+nv}{nbas} \PYG{o}{=} \PYG{l+m}{128} \PYG{n+nv}{nspec} \PYG{o}{=} \PYG{l+m}{1} verb \PYG{l+m}{31}
+TB: \PYG{n+nv}{rmaxh} \PYG{o}{=} \PYG{l+m}{20}, m\PYGZhy{}stat: F\PYGZhy{}P rlx\PYGZhy{}vol, rho
+bz: metal
+\end{Verbatim}

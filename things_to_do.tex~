@@ -1,4 +1,4 @@
-% Created 2018-11-28 Wed 19:53
+% Created 2018-11-29 Thu 18:11
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -16,6 +16,7 @@
 \usepackage{amssymb}
 \usepackage{hyperref}
 \tolerance=1000
+\usepackage{minted}
 \usepackage[hyperref,x11names]{xcolor}
 \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 \usepackage{physics}
@@ -145,11 +146,11 @@ interactions, a parameter for the coulomb interaction, which stops the
 charges from moving freely. 
 \begin{itemize}
 \item TBE control file is currently set to this:
-\begin{verbatim}
+\begin{minted}[]{bash}
 TBE: nbas = 128 nspec = 1 verb 31 
 TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
 bz: metal
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
@@ -170,11 +171,45 @@ bz: metal
 \label{sec-1-5-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
 \label{sec-1-6}
+\subsection{{\bfseries\sffamily TODO} Build force constant matrix for hcp}
+\label{sec-1-7}
+\begin{itemize}
+\item If the force constant matrix is positive definite then there shan't be
+any soft modes.
+\end{itemize}
+\subsubsection{Results}
+\label{sec-1-7-1}
+\begin{itemize}
+\item Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
+derivatives, one can find the $6\times6$ force constant matrix.
+\begin{align}
+  \frac{1}{144 h^2} (     &  8. * (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
+                         &-  8. * (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
+                         &-  1. * (  f_{ 2,-2} +  f_{-2, 2} - f_{-2,-2} - f_{ 2, 2} )\\
+                         &+  64.* (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
+\end{align}
+\begin{minted}[]{bash}
+Eigenvalues
+[-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 7.7099e-13  2.3901e-11 -2.3901e-11 -3.1729e-01  2.3901e-11 -2.3901e-11]
+ [-7.7099e-13  0.0000e+00  0.0000e+00 -7.7099e-13 -3.1847e-01  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  0.0000e+00  7.7099e-13  0.0000e+00  2.5963e+00]
+ [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
+ [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
+\end{minted}
+
+\item This matrix is not positive definite and so the structure is not
+stable.
+\end{itemize}
 
 \subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
-\label{sec-1-7}
+\label{sec-1-8}
 \subsubsection{Pair potentials in tbe code}
-\label{sec-1-7-1}
+\label{sec-1-8-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
@@ -184,7 +219,7 @@ augmentative/multiplicative polynomial is used.
 \begin{itemize}
 \item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
 \item Depending on the degree of polynomial we have this structure:
-\begin{verbatim}
+\begin{minted}[]{fortran}
       rr = r1 - r2
       xr1 = x - r1
       xr2 = x - r2
@@ -205,7 +240,7 @@ augmentative/multiplicative polynomial is used.
       de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
       dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
 C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{verbatim}
+\end{minted}
 \item So the form of the polynomial used is
 \begin{itemize}
 \item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
@@ -218,7 +253,7 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \end{itemize}
 \end{itemize}
 \item Current model has this
-\begin{verbatim}
+\begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
 	     dds    ddp    ddd
@@ -228,13 +263,13 @@ Ti,Ti:
 	     dds    ddp    ddd
    r1:      6.20   6.20   6.20
    rc:      8.50   8.50   8.50
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
 
 \subsubsection{Bond integrals from tbe}
-\label{sec-1-7-2}
+\label{sec-1-8-2}
 \begin{itemize}
 \item So bond integrals from titanium look like this, from this file
 \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py}{plot$_{\text{bond}}$$_{\text{integrals}}$.py}
@@ -249,11 +284,8 @@ Ti,Ti:
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
 \caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
-
-
-
 \subsection{{\bfseries\sffamily DONE} Investigate why rmaxh changes energy}
-\label{sec-1-8}
+\label{sec-1-9}
 \begin{itemize}
 \item Variation of rmaxh does not change the energy
 \item Obviously the number of neighbours changes with rmaxh.
@@ -277,18 +309,16 @@ Ti,Ti:
 \caption{\label{fig:n_neighbours_vs_rmaxh.png}Variation of number of neighbours with change in rmaxh}
 \end{figure}
 
-
 \subsection{{\bfseries\sffamily DONE} Show supercell of BOP working}
-\label{sec-1-9}
-
-\subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
 \label{sec-1-10}
+\subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
+\label{sec-1-11}
 \begin{itemize}
 \item Check if the matrix is complex
 \item Check if it is positive definite.
 \end{itemize}
 \subsubsection{Results}
-\label{sec-1-10-1}
+\label{sec-1-11-1}
 \begin{itemize}
 \item Without changing anything, the total energy of hcp in Tony's newest
 model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
@@ -300,7 +330,7 @@ hcp\}}}$ = -0.572351 \text{Ryd}\$ with lattice parameters of $a_{\text{hcp}}
 \item Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
 \item The stability criteria are still satisfied.
 \end{itemize}
-\begin{verbatim}
+\begin{minted}[]{bash}
 Checking Stability for tbe elastic constants. 
  is C_ij matrix positive definite?: True
 
@@ -332,14 +362,8 @@ C_33 > 0
 
 C_11 > 0
   True
-\end{verbatim}
+\end{minted}
 
-\subsection{{\bfseries\sffamily TODO} Build force constant matrix for hcp}
-\label{sec-1-11}
-\begin{itemize}
-\item If the force constant matrix is positive definite then there shan't be
-any soft modes.
-\end{itemize}
 
 \section{General notes}
 \label{sec-2}
@@ -347,6 +371,9 @@ any soft modes.
 \label{sec-2-1}
 \subsubsection{Wallace}
 \label{sec-2-1-1}
+\begin{enumerate}
+\item Crystal Potential: Introduction
+\label{sec-2-1-1-1}
 \begin{itemize}
 \item Since the vibrational energy of a crystal is generally considered to by
 small compared to its potential energy, the crystal potential is a first
@@ -358,11 +385,46 @@ displacements from equilibrium are denoted by $\mathbf{U}(M)$.
 given configuration is given by $\Phi$, which can be expanded as
 \begin{align}
 \Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
-     &+ \frac{1}{2}\sum{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
+     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
      &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
      &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
 \end{align}
+\item $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
+\item $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
+\item These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
+\item All of the coefficients are functions of the \emph{initial} configuration.
+\item This potential is supposed to represent the \emph{entire} energy of the crystal
+except for the kinetic energy of the ions.
+\item From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
+individual ions in a given cell.
+\item The total potential of the system plus externally applied forces is
+$\Psi$. For a virtual process where the crystal is deformed while the
+externally applies forces are held constant $\Psi$ is not conserved, if
+the forces are changed then it can be conserved. 
+\begin{align}
+\Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
+     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
+\end{align}
 \end{itemize}
+\item Stability and the Dynamical Matrix
+\label{sec-2-1-1-2}
+\begin{itemize}
+\item The equilibrium configuration of ions and external forces is a stable
+equilibrium if the total system potential is minimum with respet to
+small virtual displacements of the ions from equilirium.
+\end{itemize}
+\[\Psi = \Psi_{0}&+
+     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
+\begin{itemize}
+\item The stability condition is if they are positive definite: positive for
+any of the values $U_{i}(M)$, except if they are all 0.
+\item The stability condition is:
+\[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
+\item $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
+$>0$ means positive definite (all the eigenvalues are greater than zero).
+\item This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
+\end{itemize}
+\end{enumerate}
 \subsection{Pair potentials in tbe code}
 \label{sec-2-2}
 \subsubsection{How are they constructed?}
@@ -376,7 +438,7 @@ augmentative/multiplicative polynomial is used.
 \begin{itemize}
 \item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
 \item Depending on the degree of polynomial we have this structure:
-\begin{verbatim}
+\begin{minted}[]{fortran}
       rr = r1 - r2
       xr1 = x - r1
       xr2 = x - r2
@@ -397,7 +459,7 @@ augmentative/multiplicative polynomial is used.
       de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
       dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
 C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{verbatim}
+\end{minted}
 \item So the form of the polynomial used is
 \begin{itemize}
 \item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
@@ -410,7 +472,7 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \end{itemize}
 \end{itemize}
 \item Current model has this
-\begin{verbatim}
+\begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
 	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
@@ -420,7 +482,7 @@ Ti,Ti:
 	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
    r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
    rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
-\end{verbatim}
+\end{minted}
 \end{itemize}
 \subsubsection{Bond Integrals: tbe}
 \label{sec-2-2-2}
@@ -676,7 +738,7 @@ be. This calls for the use of weighted parameters.
 regards to titanium.
 \end{itemize}
 
-\begin{verbatim}
+\begin{minted}[]{bash}
 Build Objective Function
  ...with L1 norm 
 Objective function: 563 
@@ -684,7 +746,7 @@ Objective Function = 563.2340263379571
 Stopping search: Swarm best position change less than 1e-08 
 [ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
 563.2340263379571
-\end{verbatim}
+\end{minted}
 
 \begin{center}
 \begin{tabular}{lrrrrrr}
@@ -1232,9 +1294,9 @@ system.
 \label{sec-4}
 \subsection{Org-mode}
 \label{sec-4-1}
-\begin{verbatim}
+\begin{minted}[]{elisp}
 (setq org-latex-create-formula-image-program 'dvipng)
-\end{verbatim}
+\end{minted}
 
 \subsection{Physics}
 \label{sec-4-2}
