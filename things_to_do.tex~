@@ -1,4 +1,4 @@
-% Created 2018-11-29 Thu 18:11
+% Created 2018-11-30 Fri 17:50
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -171,45 +171,10 @@ bz: metal
 \label{sec-1-5-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
 \label{sec-1-6}
-\subsection{{\bfseries\sffamily TODO} Build force constant matrix for hcp}
-\label{sec-1-7}
-\begin{itemize}
-\item If the force constant matrix is positive definite then there shan't be
-any soft modes.
-\end{itemize}
-\subsubsection{Results}
-\label{sec-1-7-1}
-\begin{itemize}
-\item Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
-derivatives, one can find the $6\times6$ force constant matrix.
-\begin{align}
-  \frac{1}{144 h^2} (     &  8. * (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
-                         &-  8. * (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
-                         &-  1. * (  f_{ 2,-2} +  f_{-2, 2} - f_{-2,-2} - f_{ 2, 2} )\\
-                         &+  64.* (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
-\end{align}
-\begin{minted}[]{bash}
-Eigenvalues
-[-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
-
- Is force constant matrix positive definite? False
-Force Constant Matrix
-[[ 7.7099e-13  2.3901e-11 -2.3901e-11 -3.1729e-01  2.3901e-11 -2.3901e-11]
- [-7.7099e-13  0.0000e+00  0.0000e+00 -7.7099e-13 -3.1847e-01  0.0000e+00]
- [ 7.7099e-13  0.0000e+00  0.0000e+00  7.7099e-13  0.0000e+00  2.5963e+00]
- [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
- [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
- [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
-\end{minted}
-
-\item This matrix is not positive definite and so the structure is not
-stable.
-\end{itemize}
-
 \subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
-\label{sec-1-8}
+\label{sec-1-7}
 \subsubsection{Pair potentials in tbe code}
-\label{sec-1-8-1}
+\label{sec-1-7-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
@@ -269,7 +234,7 @@ Ti,Ti:
 
 
 \subsubsection{Bond integrals from tbe}
-\label{sec-1-8-2}
+\label{sec-1-7-2}
 \begin{itemize}
 \item So bond integrals from titanium look like this, from this file
 \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py}{plot$_{\text{bond}}$$_{\text{integrals}}$.py}
@@ -285,7 +250,7 @@ Ti,Ti:
 \caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
 \subsection{{\bfseries\sffamily DONE} Investigate why rmaxh changes energy}
-\label{sec-1-9}
+\label{sec-1-8}
 \begin{itemize}
 \item Variation of rmaxh does not change the energy
 \item Obviously the number of neighbours changes with rmaxh.
@@ -310,15 +275,15 @@ Ti,Ti:
 \end{figure}
 
 \subsection{{\bfseries\sffamily DONE} Show supercell of BOP working}
-\label{sec-1-10}
+\label{sec-1-9}
 \subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
-\label{sec-1-11}
+\label{sec-1-10}
 \begin{itemize}
 \item Check if the matrix is complex
 \item Check if it is positive definite.
 \end{itemize}
 \subsubsection{Results}
-\label{sec-1-11-1}
+\label{sec-1-10-1}
 \begin{itemize}
 \item Without changing anything, the total energy of hcp in Tony's newest
 model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
@@ -363,17 +328,113 @@ C_33 > 0
 C_11 > 0
   True
 \end{minted}
+\subsection{{\bfseries\sffamily DONE} Build force constant matrix for hcp}
+\label{sec-1-11}
+\begin{itemize}
+\item If the force constant matrix is positive definite then there shan't be
+any soft modes.
+\end{itemize}
+\subsubsection{Results}
+\label{sec-1-11-1}
+\begin{itemize}
+\item File used is \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py}{check$_{\text{ec}}$$_{\text{pos}}$$_{\text{definite}}$.py}
+\item Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
+derivatives, one can find the $6\times6$ force constant matrix.
+\begin{align}
+  \frac{1}{144 h^2} (     &  8.  (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
+                         &-  8.  (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
+                         &-  1.  (  f_{ 2,-2} +  f_{-2, 2} - f_{-2,-2} - f_{ 2, 2} )\\
+                         &+  64. (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
+\end{align}
+
+\begin{minted}[]{bash}
+Eigenvalues
+[-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 7.7099e-13  2.3901e-11 -2.3901e-11 -3.1729e-01  2.3901e-11 -2.3901e-11]
+ [-7.7099e-13  0.0000e+00  0.0000e+00 -7.7099e-13 -3.1847e-01  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  0.0000e+00  7.7099e-13  0.0000e+00  2.5963e+00]
+ [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
+ [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
+\end{minted}
+
+\item This matrix is not positive definite and so the structure is not
+stable.
+
+\item Using second order formula one obtains
+\begin{minted}[]{bash}
+Eigenvalues
+[ 0.32  -0.32   2.545 -2.545  0.32  -0.32 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 0.     0.     0.    -0.32   0.     0.   ]
+ [ 0.     0.     0.     0.    -0.32   0.   ]
+ [ 0.     0.     0.     0.     0.     2.545]
+ [-0.32   0.     0.     0.     0.     0.   ]
+ [ 0.    -0.32   0.     0.     0.     0.   ]
+ [ 0.     0.     2.545  0.     0.     0.   ]]
+\end{minted}
+
+\item Using another model we get another matrix that is not positive
+definite. 
+\begin{minted}[]{bash}
+tbe ti -vhcp=1  -vfddtt=0.4668418806546737 -vqddstt=0.6660968695540497 -vb0tt=94.4011791926749 
+-vp0tt=1.1902574670213237 -vb1tt=-26.704816810939302 -vp1tt=0.9999600888309667 
+-vcr1=-6.158653986495596 -vcr2=3.9496749559495172 -vcr3=-1.0282840982939534 
+-vndt=1.992406298332605 -vahcp=5.5274  -vqq=1.5997394796830335 -vrmaxh=8.51 -vnk=30 
+Eigenvalues
+[ 1.8512 -1.8512  0.2823 -0.2823 -0.281   0.281 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[-2.4672e-13 -4.8572e-13 -5.0114e-13 -2.8232e-01  0.0000e+00  1.0618e-03]
+ [-4.8572e-13  0.0000e+00  0.0000e+00  0.0000e+00 -2.8103e-01  0.0000e+00]
+ [-5.0114e-13  0.0000e+00  0.0000e+00  1.0618e-03  0.0000e+00  1.8512e+00]
+ [-2.8232e-01  0.0000e+00  1.0618e-03 -2.5443e-13  0.0000e+00 -1.0618e-03]
+ [ 0.0000e+00 -2.8103e-01  2.4672e-13  0.0000e+00  0.0000e+00  0.0000e+00]
+ [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
+\end{minted}
+\end{itemize}
+
+
 
 
 \section{General notes}
 \label{sec-2}
-\subsection{Force constant matrix}
+\subsection{Dislocation arrays}
 \label{sec-2-1}
+Dislocation arrays are used within simulation cells to negate the effects of
+the long range strain fields produced from dislocations in the periodic array
+of cells one has in the simulation.
+\begin{itemize}
+\item Method of Clouet: Dislocation locking versus easy glide in titanium and
+zirconium. \cite{Clouet2015}
+\begin{itemize}
+\item Introduced two dislocations into the simulation cell
+\item This formed a quadrupolar periodic array of dislocations which
+minimises the elastic interaction between dislocations and their
+images.
+\item This is because of the centrosymmetry of the Volterra elastic field,
+which means that the stress of this quadrupolar array ensures that the
+stress field created by the periodic image dislocations cancels locally
+at each dislocation position, thus limiting the perturbation of the
+dislocation core by the boundary conditions.
+\item Arrangement is the same as the "S" arrangement found in
+\cite{Clouet2012}
+\end{itemize}
+\end{itemize}
+
+\subsection{Force constant matrix}
+\label{sec-2-2}
 \subsubsection{Wallace}
-\label{sec-2-1-1}
+\label{sec-2-2-1}
 \begin{enumerate}
 \item Crystal Potential: Introduction
-\label{sec-2-1-1-1}
+\label{sec-2-2-1-1}
 \begin{itemize}
 \item Since the vibrational energy of a crystal is generally considered to by
 small compared to its potential energy, the crystal potential is a first
@@ -407,7 +468,7 @@ the forces are changed then it can be conserved.
 \end{align}
 \end{itemize}
 \item Stability and the Dynamical Matrix
-\label{sec-2-1-1-2}
+\label{sec-2-2-1-2}
 \begin{itemize}
 \item The equilibrium configuration of ions and external forces is a stable
 equilibrium if the total system potential is minimum with respet to
@@ -426,9 +487,9 @@ $>0$ means positive definite (all the eigenvalues are greater than zero).
 \end{itemize}
 \end{enumerate}
 \subsection{Pair potentials in tbe code}
-\label{sec-2-2}
+\label{sec-2-3}
 \subsubsection{How are they constructed?}
-\label{sec-2-2-1}
+\label{sec-2-3-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
@@ -485,17 +546,17 @@ Ti,Ti:
 \end{minted}
 \end{itemize}
 \subsubsection{Bond Integrals: tbe}
-\label{sec-2-2-2}
+\label{sec-2-3-2}
 \begin{itemize}
 \item So bond integrals from titanium look like this
 \item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}{Bond integrals with multiplicative polynomial cutoffs. }
 \item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}{Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{itemize}
 
-\subsection{Notes for the gamma surfaces}
-\label{sec-2-3}
+\subsection{Gamma surfaces}
+\label{sec-2-4}
 \subsubsection{Miscellaneous}
-\label{sec-2-3-1}
+\label{sec-2-4-1}
 \begin{itemize}
 \item Seems like some atoms are missing in the site file when it is being read
 in to tbe.
@@ -506,7 +567,7 @@ exit.
 \end{itemize}
 \end{itemize}
 \subsubsection{Relaxing in tbe}
-\label{sec-2-3-2}
+\label{sec-2-4-2}
 \begin{itemize}
 \item To relax in tbe need to modify:
 \begin{itemize}
@@ -523,7 +584,7 @@ exit.
 \end{itemize}
 
 \subsubsection{Convergence and k-points in tbe}
-\label{sec-2-3-3}
+\label{sec-2-4-3}
 \begin{itemize}
 \item Tony used a $30\times 30\times 30$ grid for the k-point mesh.
 \item Making a square cell, and increasing the length accordingly, one must
@@ -580,20 +641,23 @@ Basal Square: 1x1x9 & 0 & 36 & 17 & 30 & 3 & 0.000071 & -0.28615681 & -0.9360715
 \end{center}
 
 \subsubsection{Results}
-\label{sec-2-3-4}
+\label{sec-2-4-4}
 \begin{itemize}
 \item Have now done the gamma line along $1/3[1\bar{2}10]$, but the end points
 do not seem quite right.
-\item File and data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py}{basal$_{\text{energy}}$$_{\text{plotting}}$}
+\item File and data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py}{basal$_{\text{energy}}$$_{\text{plotting}}$} \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png}
+\item Basal plot $8\times 8\times 8$
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/Figures/gamma_surface_8-8-8_basal_tbe.png}{Basal Plane gamma surface}
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py}{plot$_{\text{hbgs}}$}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl}{energy}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl\%20}{x}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl\%20}{y}
 \end{itemize}
-\includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png} 
+
 
 \subsubsection{Literature Review}
-\label{sec-2-3-5}
+\label{sec-2-4-5}
 
 \begin{enumerate}
 \item General notes on dislocations
-\label{sec-2-3-5-1}
+\label{sec-2-4-5-1}
 \begin{itemize}
 \item Dislocations have areas of tension (distance between atoms is larger
 than the lattice vector) and compression (distance is less than the
@@ -602,7 +666,7 @@ lattice vector)
 \end{itemize}
 
 \item How do stacking faults occur?
-\label{sec-2-3-5-2}
+\label{sec-2-4-5-2}
 Stacking faults can occur:
 \begin{itemize}
 \item During crystal growth
@@ -618,7 +682,7 @@ bordered by an edge dislocation.
 \end{itemize}
 
 \item Types of stacking faults.
-\label{sec-2-3-5-3}
+\label{sec-2-4-5-3}
 \begin{itemize}
 \item Disk of vacancies: \emph{intrinsic} stacking fault.
 \item Interstitial agglomeration: \emph{extrinsic} stacking fault.
@@ -632,7 +696,7 @@ bordered by an edge dislocation.
 
 \begin{enumerate}
 \item Types of stacking faults in hcp
-\label{sec-2-3-5-3-1}
+\label{sec-2-4-5-3-1}
 \begin{itemize}
 \item Intrinsic 1 ($I_1$) = (ABAB|CBCB) -- Basal plane
 \item Intrinsic 2 ($I_2$) = (ABAB|CACA) -- Basal plane
@@ -646,7 +710,7 @@ only been seen in the case of DFT so far.
 \end{enumerate}
 
 \item Partial dislocations
-\label{sec-2-3-5-4}
+\label{sec-2-4-5-4}
 \begin{itemize}
 \item Partial dislocations \emph{must} be bordered by a two dimensional
 defect: usually a stacking fault.
@@ -667,7 +731,7 @@ point defects.
 \end{itemize}
 
 \item Energy considerations with stacking faults and partials.
-\label{sec-2-3-5-5}
+\label{sec-2-4-5-5}
 \begin{itemize}
 \item Have energy gain from splitting into two smaller burgers vectors
 \item Interaction energy of two partials will be large at smaller distances
@@ -680,10 +744,10 @@ minimise the distance
 that the stacking fault energies are too high. (Because of dense packing?)
 \end{itemize}
 \item Gamma surfaces in DFT
-\label{sec-2-3-5-6}
+\label{sec-2-4-5-6}
 \begin{enumerate}
 \item\relax [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults.
-\label{sec-2-3-5-6-1}
+\label{sec-2-4-5-6-1}
 \begin{itemize}
 \item Comparison between central force  embedded atom ineractions, N-body
 central force, N-body angular, empirical potentials, tight binding and
@@ -725,50 +789,6 @@ the prismatic easy fault.
 \end{itemize}
 \end{enumerate}
 \end{enumerate}
-
-
-\subsection{Ti Swarm fitting.}
-\label{sec-2-4}
-\begin{itemize}
-\item Here used fitting with uniform weights across all target quantities
-without a regularisation of the parameters.
-\item It can be seen that the lattice parameters aren't as good as they could
-be. This calls for the use of weighted parameters.
-\item Have now started weighted parameter search for the best parameters with
-regards to titanium.
-\end{itemize}
-
-\begin{minted}[]{bash}
-Build Objective Function
- ...with L1 norm 
-Objective function: 563 
-Objective Function = 563.2340263379571 
-Stopping search: Swarm best position change less than 1e-08 
-[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
-563.2340263379571
-\end{minted}
-
-\begin{center}
-\begin{tabular}{lrrrrrr}
-Quantity & predicted & target & squared diff. & p$_{\text{norm}}$ & weight & objective\\
-\hline
-a$_{\text{hcp}}$: & 4.744693 & 5.576790 & 0.692385 & 0.832097 & 1.000000 & 1.524483\\
-c$_{\text{hcp}}$: & 7.495518 & 8.852101 & 1.840316 & 1.356583 & 1.000000 & 3.196899\\
-c$_{\text{11}}$: & 174.924630 & 176.100000 & 1.381495 & 1.175370 & 1.000000 & 2.556865\\
-c$_{\text{33}}$: & 190.161490 & 190.500000 & 0.114589 & 0.338510 & 1.000000 & 0.453099\\
-c$_{\text{44}}$: & 54.517320 & 50.800000 & 13.818465 & 3.717320 & 1.000000 & 17.535784\\
-c$_{\text{12}}$: & 65.010403 & 86.900000 & 479.154446 & 21.889597 & 1.000000 & 501.044043\\
-c$_{\text{13}}$: & 73.335501 & 68.300000 & 25.356271 & 5.035501 & 1.000000 & 30.391772\\
-a$_{\text{omega}}$: & 7.331279 & 8.732543 & 1.963543 & 1.401265 & 1.000000 & 3.364808\\
-c$_{\text{omega}}$: & 4.768459 & 5.323431 & 0.307994 & 0.554972 & 1.000000 & 0.862966\\
-u$_{\text{omega}}$: & 1.000025 & 1.000000 & 0.000000 & 0.000025 & 1.000000 & 0.000025\\
-DeltaE$_{\text{O}}$$_{\text{hcp}}$: & -1.170318 & -0.734754 & 0.189716 & 0.435564 & 1.000000 & 0.625281\\
-a$_{\text{bcc}}$: & 5.331467 & 6.179489 & 0.719140 & 0.848021 & 1.000000 & 1.567162\\
-bandwidth: & 0.325300 & 0.426000 & 0.010140 & 0.100700 & 1.000000 & 0.\\
- &  &  &  &  &  & \\
-\end{tabular}
-\end{center}
-
 \subsection{Notes on Thermodynamics and Stability}
 \label{sec-2-5}
 
@@ -832,7 +852,6 @@ when dividing by the bulk modulus.
 \item Suggest that the hexagonal materials are quite isotropic.
 \end{itemize}
 \end{enumerate}
-
 \subsection{Notes on Tight Binding and BOP Models}
 \label{sec-2-6}
 
@@ -940,8 +959,49 @@ are squeezed into the core from the unsaturated d bonds.
 \end{itemize}
 \end{enumerate}
 \end{enumerate}
-\subsection{DFT}
+\subsection{Ti Swarm fitting.}
 \label{sec-2-7}
+\begin{itemize}
+\item Here used fitting with uniform weights across all target quantities
+without a regularisation of the parameters.
+\item It can be seen that the lattice parameters aren't as good as they could
+be. This calls for the use of weighted parameters.
+\item Have now started weighted parameter search for the best parameters with
+regards to titanium.
+\end{itemize}
+
+\begin{minted}[]{bash}
+Build Objective Function
+ ...with L1 norm 
+Objective function: 563 
+Objective Function = 563.2340263379571 
+Stopping search: Swarm best position change less than 1e-08 
+[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
+563.2340263379571
+\end{minted}
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
+Quantity & predicted & target & squared diff. & p$_{\text{norm}}$ & weight & objective\\
+\hline
+a$_{\text{hcp}}$: & 4.744693 & 5.576790 & 0.692385 & 0.832097 & 1.000000 & 1.524483\\
+c$_{\text{hcp}}$: & 7.495518 & 8.852101 & 1.840316 & 1.356583 & 1.000000 & 3.196899\\
+c$_{\text{11}}$: & 174.924630 & 176.100000 & 1.381495 & 1.175370 & 1.000000 & 2.556865\\
+c$_{\text{33}}$: & 190.161490 & 190.500000 & 0.114589 & 0.338510 & 1.000000 & 0.453099\\
+c$_{\text{44}}$: & 54.517320 & 50.800000 & 13.818465 & 3.717320 & 1.000000 & 17.535784\\
+c$_{\text{12}}$: & 65.010403 & 86.900000 & 479.154446 & 21.889597 & 1.000000 & 501.044043\\
+c$_{\text{13}}$: & 73.335501 & 68.300000 & 25.356271 & 5.035501 & 1.000000 & 30.391772\\
+a$_{\text{omega}}$: & 7.331279 & 8.732543 & 1.963543 & 1.401265 & 1.000000 & 3.364808\\
+c$_{\text{omega}}$: & 4.768459 & 5.323431 & 0.307994 & 0.554972 & 1.000000 & 0.862966\\
+u$_{\text{omega}}$: & 1.000025 & 1.000000 & 0.000000 & 0.000025 & 1.000000 & 0.000025\\
+DeltaE$_{\text{O}}$$_{\text{hcp}}$: & -1.170318 & -0.734754 & 0.189716 & 0.435564 & 1.000000 & 0.625281\\
+a$_{\text{bcc}}$: & 5.331467 & 6.179489 & 0.719140 & 0.848021 & 1.000000 & 1.567162\\
+bandwidth: & 0.325300 & 0.426000 & 0.010140 & 0.100700 & 1.000000 & 0.\\
+ &  &  &  &  &  & \\
+\end{tabular}
+\end{center}
+\subsection{DFT}
+\label{sec-2-8}
 Run:
 \begin{itemize}
 \item lmchk --getwsr ti
@@ -950,7 +1010,68 @@ Run:
 \item Copy basp0 to basp
 \item Run lmf
 \end{itemize}
+\subsection{Python}
+\label{sec-2-9}
+\subsubsection{OS}
+\label{sec-2-9-1}
+Use OS module rather than making a load of files to a certain directory. 
+\begin{minted}[]{python}
+import os
+############   Current working directory  ########################
+# detect the current working directory and print it
+path = os.getcwd()  
+print ("The current working directory is %s" % path) 
 
+#################   Directories  ########################
+# define the name of the directory to be created
+path = "/tmp/year"
+
+try:  
+    os.mkdir(path)
+except OSError:  
+    print ("Creation of the directory %s failed" % path)
+else:  
+    print ("Successfully created the directory %s " % path)
+
+#################   Subdirectories  ########################
+# define the name of the directory to be created
+path = "/tmp/year/month/week/day"
+
+try:  
+    os.makedirs(path)
+except OSError:  
+    print ("Creation of the directory %s failed" % path)
+else:  
+    print ("Successfully created the directory %s" % path)
+\end{minted}
+\subsubsection{Shelve}
+\label{sec-2-9-2}
+Use the shelve module to store multiple objects. 
+
+To write in:
+\begin{minted}[]{python}
+import shelve
+
+integers = [1, 2, 3, 4, 5]
+
+# If you're using Python 2.7, import contextlib and use
+# the line:
+# with contextlib.closing(shelve.open('shelf-example', 'c')) as shelf:
+with shelve.open('shelf-example', 'c') as shelf:
+    shelf['ints'] = integers
+\end{minted}
+
+To extract values:
+\begin{minted}[]{python}
+import shelve
+
+# If you're using Python 2.7, import contextlib and use
+# the line:
+# with contextlib.closing(shelve.open('shelf-example', 'r')) as shelf:
+with shelve.open('shelf-example', 'r') as shelf:
+    for key in shelf.keys():
+	print(repr(key), repr(shelf[key])))
+\end{minted}
 
 \section{DFT Lectures UCL}
 \label{sec-3}
@@ -1347,5 +1468,11 @@ there are also problems.
 \begin{itemize}
 \item If I want more help I can go to the \href{https://orgmode.org/manual/}{org-mode manual}
 \end{itemize}
+
+
+
+
+\%\bibliographystyle{plain}
+\%\bibliography{org-refs}
 % Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}

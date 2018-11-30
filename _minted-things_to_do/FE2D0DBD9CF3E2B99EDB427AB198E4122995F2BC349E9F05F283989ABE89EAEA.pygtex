@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{shelve}
+
+\PYG{n}{integers} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} If you\PYGZsq{}re using Python 2.7, import contextlib and use}
+\PYG{c+c1}{\PYGZsh{} the line:}
+\PYG{c+c1}{\PYGZsh{} with contextlib.closing(shelve.open(\PYGZsq{}shelf\PYGZhy{}example\PYGZsq{}, \PYGZsq{}c\PYGZsq{})) as shelf:}
+\PYG{k}{with} \PYG{n}{shelve}\PYG{o}{.}\PYG{n}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}shelf\PYGZhy{}example\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{shelf}\PYG{p}{:}
+    \PYG{n}{shelf}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}ints\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{integers}
+\end{Verbatim}

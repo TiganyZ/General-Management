@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+\PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}   Current working directory  \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{c+c1}{\PYGZsh{} detect the current working directory and print it}
+\PYG{n}{path} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getcwd}\PYG{p}{()}
+\PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}The current working directory is }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{path}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}   Directories  \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{c+c1}{\PYGZsh{} define the name of the directory to be created}
+\PYG{n}{path} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}/tmp/year\PYGZdq{}}
+
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{os}\PYG{o}{.}\PYG{n}{mkdir}\PYG{p}{(}\PYG{n}{path}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{OSError}\PYG{p}{:}
+    \PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Creation of the directory }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{ failed\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{path}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Successfully created the directory }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{ \PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{path}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}   Subdirectories  \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{c+c1}{\PYGZsh{} define the name of the directory to be created}
+\PYG{n}{path} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}/tmp/year/month/week/day\PYGZdq{}}
+
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{os}\PYG{o}{.}\PYG{n}{makedirs}\PYG{p}{(}\PYG{n}{path}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{OSError}\PYG{p}{:}
+    \PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Creation of the directory }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{ failed\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{path}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{k}{print} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Successfully created the directory }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{path}\PYG{p}{)}
+\end{Verbatim}

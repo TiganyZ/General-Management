@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+tbe ti \PYGZhy{}vhcp\PYG{o}{=}\PYG{l+m}{1}  \PYGZhy{}vfddtt\PYG{o}{=}\PYG{l+m}{0}.4668418806546737 \PYGZhy{}vqddstt\PYG{o}{=}\PYG{l+m}{0}.6660968695540497 \PYGZhy{}vb0tt\PYG{o}{=}\PYG{l+m}{94}.4011791926749
+\PYGZhy{}vp0tt\PYG{o}{=}\PYG{l+m}{1}.1902574670213237 \PYGZhy{}vb1tt\PYG{o}{=}\PYGZhy{}26.704816810939302 \PYGZhy{}vp1tt\PYG{o}{=}\PYG{l+m}{0}.9999600888309667
+\PYGZhy{}vcr1\PYG{o}{=}\PYGZhy{}6.158653986495596 \PYGZhy{}vcr2\PYG{o}{=}\PYG{l+m}{3}.9496749559495172 \PYGZhy{}vcr3\PYG{o}{=}\PYGZhy{}1.0282840982939534
+\PYGZhy{}vndt\PYG{o}{=}\PYG{l+m}{1}.992406298332605 \PYGZhy{}vahcp\PYG{o}{=}\PYG{l+m}{5}.5274  \PYGZhy{}vqq\PYG{o}{=}\PYG{l+m}{1}.5997394796830335 \PYGZhy{}vrmaxh\PYG{o}{=}\PYG{l+m}{8}.51 \PYGZhy{}vnk\PYG{o}{=}\PYG{l+m}{30}
+Eigenvalues
+\PYG{o}{[} \PYG{l+m}{1}.8512 \PYGZhy{}1.8512  \PYG{l+m}{0}.2823 \PYGZhy{}0.2823 \PYGZhy{}0.281   \PYG{l+m}{0}.281 \PYG{o}{]}
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+\PYG{o}{[[}\PYGZhy{}2.4672e\PYGZhy{}13 \PYGZhy{}4.8572e\PYGZhy{}13 \PYGZhy{}5.0114e\PYGZhy{}13 \PYGZhy{}2.8232e\PYGZhy{}01  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{1}.0618e\PYGZhy{}03\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}4.8572e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00 \PYGZhy{}2.8103e\PYGZhy{}01  \PYG{l+m}{0}.0000e+00\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}5.0114e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{1}.0618e\PYGZhy{}03  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{1}.8512e+00\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}2.8232e\PYGZhy{}01  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{1}.0618e\PYGZhy{}03 \PYGZhy{}2.5443e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00 \PYGZhy{}1.0618e\PYGZhy{}03\PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{0}.0000e+00 \PYGZhy{}2.8103e\PYGZhy{}01  \PYG{l+m}{2}.4672e\PYGZhy{}13  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00  \PYG{l+m}{0}.0000e+00\PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{1}.0618e\PYGZhy{}03 \PYGZhy{}2.4672e\PYGZhy{}13  \PYG{l+m}{1}.8512e+00 \PYGZhy{}1.0618e\PYGZhy{}03 \PYGZhy{}2.4672e\PYGZhy{}13 \PYGZhy{}7.4015e\PYGZhy{}13\PYG{o}{]]}
+\end{Verbatim}

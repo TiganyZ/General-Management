@@ -1,4 +1,3 @@
-#+STARTUP: latexpreview
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 #+LATEX_HEADER: \usepackage{physics}
@@ -14,6 +13,7 @@
 #+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
 #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
 #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
+#+BIBLIOGRAPHY: org-bib plain
 
 
 
@@ -276,7 +276,7 @@ Force Constant Matrix
 
     - Using another model we get another matrix that is not positive
       definite. 
-      #+BEGIN_SRC 
+      #+BEGIN_SRC bash
 tbe ti -vhcp=1  -vfddtt=0.4668418806546737 -vqddstt=0.6660968695540497 -vb0tt=94.4011791926749 
 -vp0tt=1.1902574670213237 -vb1tt=-26.704816810939302 -vp1tt=0.9999600888309667 
 -vcr1=-6.158653986495596 -vcr2=3.9496749559495172 -vcr3=-1.0282840982939534 
@@ -292,13 +292,30 @@ Force Constant Matrix
  [-2.8232e-01  0.0000e+00  1.0618e-03 -2.5443e-13  0.0000e+00 -1.0618e-03]
  [ 0.0000e+00 -2.8103e-01  2.4672e-13  0.0000e+00  0.0000e+00  0.0000e+00]
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
-
       #+END_SRC
 
 
-      
+    
 
 * General notes 
+** Dislocation arrays
+   Dislocation arrays are used within simulation cells to negate the effects of
+   the long range strain fields produced from dislocations in the periodic array
+   of cells one has in the simulation.
+   - Method of Clouet: Dislocation locking versus easy glide in titanium and
+     zirconium. \cite{Clouet2015}
+     - Introduced two dislocations into the simulation cell
+     - This formed a quadrupolar periodic array of dislocations which
+       minimises the elastic interaction between dislocations and their
+       images.
+     - This is because of the centrosymmetry of the Volterra elastic field,
+       which means that the stress of this quadrupolar array ensures that the
+       stress field created by the periodic image dislocations cancels locally
+       at each dislocation position, thus limiting the perturbation of the
+       dislocation core by the boundary conditions.
+     - Arrangement is the same as the "S" arrangement found in
+       \cite{Clouet2012}
+
 ** Force constant matrix
 *** Wallace
 **** Crystal Potential: Introduction
@@ -402,7 +419,7 @@ Ti,Ti:
    - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png][Bond integrals with multiplicative polynomial cutoffs. ]]
    - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png][Bond integrals with multiplicative polynomial cutoffs: zoomed in.]]
 	
-** Notes for the gamma surfaces
+** Gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
      in to tbe.
@@ -470,7 +487,7 @@ Less precise c/a below.
     - Basal plot $8\times 8\times 8$
     - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/Figures/gamma_surface_8-8-8_basal_tbe.png][Basal Plane gamma surface]]
     - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py][plot_hbgs]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl][energy]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl%20][x]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl%20][y]]
-
+      
 
 *** Literature Review
 
@@ -566,42 +583,6 @@ Less precise c/a below.
          against this criteria.
      - No models other than DFT produced a metastable stacking fault energy at
        the prismatic easy fault.
-   
-** Ti Swarm fitting. 
-   - Here used fitting with uniform weights across all target quantities
-     without a regularisation of the parameters.
-   - It can be seen that the lattice parameters aren't as good as they could
-     be. This calls for the use of weighted parameters.
-   - Have now started weighted parameter search for the best parameters with
-     regards to titanium. 
-
-#+BEGIN_SRC bash
-Build Objective Function
- ...with L1 norm 
-Objective function: 563 
-Objective Function = 563.2340263379571 
-Stopping search: Swarm best position change less than 1e-08 
-[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
-563.2340263379571
-#+END_SRC
-
-| Quantity      |  predicted |     target | squared diff. |    p_norm |   weight |  objective |
-|---------------+------------+------------+---------------+-----------+----------+------------|
-| a_hcp:        |   4.744693 |   5.576790 |      0.692385 |  0.832097 | 1.000000 |   1.524483 |
-| c_hcp:        |   7.495518 |   8.852101 |      1.840316 |  1.356583 | 1.000000 |   3.196899 |
-| c_11:         | 174.924630 | 176.100000 |      1.381495 |  1.175370 | 1.000000 |   2.556865 |
-| c_33:         | 190.161490 | 190.500000 |      0.114589 |  0.338510 | 1.000000 |   0.453099 |
-| c_44:         |  54.517320 |  50.800000 |     13.818465 |  3.717320 | 1.000000 |  17.535784 |
-| c_12:         |  65.010403 |  86.900000 |    479.154446 | 21.889597 | 1.000000 | 501.044043 |
-| c_13:         |  73.335501 |  68.300000 |     25.356271 |  5.035501 | 1.000000 |  30.391772 |
-| a_omega:      |   7.331279 |   8.732543 |      1.963543 |  1.401265 | 1.000000 |   3.364808 |
-| c_omega:      |   4.768459 |   5.323431 |      0.307994 |  0.554972 | 1.000000 |   0.862966 |
-| u_omega:      |   1.000025 |   1.000000 |      0.000000 |  0.000025 | 1.000000 |   0.000025 |
-| DeltaE_O_hcp: |  -1.170318 |  -0.734754 |      0.189716 |  0.435564 | 1.000000 |   0.625281 |
-| a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
-| bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |         0. |
-|               |            |            |               |           |          |            |
-
 ** Notes on Thermodynamics and Stability
 
 *** Wallace 1972
@@ -646,7 +627,6 @@ Stopping search: Swarm best position change less than 1e-08
          interatomic forces with an average restoring force of the system,
          when dividing by the bulk modulus.
        - Suggest that the hexagonal materials are quite isotropic. 
-	 
 ** Notes on Tight Binding and BOP Models
 
 *** Pair correlation and cutoffs
@@ -726,14 +706,106 @@ Stopping search: Swarm best position change less than 1e-08
         are squeezed into the core from the unsaturated d bonds.
       - These \emph{reduce} the Cauchy pressures such that they are negative
         () 
+** Ti Swarm fitting. 
+   - Here used fitting with uniform weights across all target quantities
+     without a regularisation of the parameters.
+   - It can be seen that the lattice parameters aren't as good as they could
+     be. This calls for the use of weighted parameters.
+   - Have now started weighted parameter search for the best parameters with
+     regards to titanium. 
+
+#+BEGIN_SRC bash
+Build Objective Function
+ ...with L1 norm 
+Objective function: 563 
+Objective Function = 563.2340263379571 
+Stopping search: Swarm best position change less than 1e-08 
+[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
+563.2340263379571
+#+END_SRC
+
+| Quantity      |  predicted |     target | squared diff. |    p_norm |   weight |  objective |
+|---------------+------------+------------+---------------+-----------+----------+------------|
+| a_hcp:        |   4.744693 |   5.576790 |      0.692385 |  0.832097 | 1.000000 |   1.524483 |
+| c_hcp:        |   7.495518 |   8.852101 |      1.840316 |  1.356583 | 1.000000 |   3.196899 |
+| c_11:         | 174.924630 | 176.100000 |      1.381495 |  1.175370 | 1.000000 |   2.556865 |
+| c_33:         | 190.161490 | 190.500000 |      0.114589 |  0.338510 | 1.000000 |   0.453099 |
+| c_44:         |  54.517320 |  50.800000 |     13.818465 |  3.717320 | 1.000000 |  17.535784 |
+| c_12:         |  65.010403 |  86.900000 |    479.154446 | 21.889597 | 1.000000 | 501.044043 |
+| c_13:         |  73.335501 |  68.300000 |     25.356271 |  5.035501 | 1.000000 |  30.391772 |
+| a_omega:      |   7.331279 |   8.732543 |      1.963543 |  1.401265 | 1.000000 |   3.364808 |
+| c_omega:      |   4.768459 |   5.323431 |      0.307994 |  0.554972 | 1.000000 |   0.862966 |
+| u_omega:      |   1.000025 |   1.000000 |      0.000000 |  0.000025 | 1.000000 |   0.000025 |
+| DeltaE_O_hcp: |  -1.170318 |  -0.734754 |      0.189716 |  0.435564 | 1.000000 |   0.625281 |
+| a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
+| bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |         0. |
+|               |            |            |               |           |          |            |
 ** DFT 
    Run:
    - lmchk --getwsr ti
    - Copy the old rmax into the R category in SPEC
    - lmfa ti -vhcp=1
    - Copy basp0 to basp
-   - Run lmf 
-     
+   - Run lmf
+** Python
+*** OS
+   Use OS module rather than making a load of files to a certain directory. 
+   #+BEGIN_SRC python
+import os
+############   Current working directory  ########################
+# detect the current working directory and print it
+path = os.getcwd()  
+print ("The current working directory is %s" % path) 
+
+#################   Directories  ########################
+# define the name of the directory to be created
+path = "/tmp/year"
+
+try:  
+    os.mkdir(path)
+except OSError:  
+    print ("Creation of the directory %s failed" % path)
+else:  
+    print ("Successfully created the directory %s " % path)
+
+#################   Subdirectories  ########################
+# define the name of the directory to be created
+path = "/tmp/year/month/week/day"
+
+try:  
+    os.makedirs(path)
+except OSError:  
+    print ("Creation of the directory %s failed" % path)
+else:  
+    print ("Successfully created the directory %s" % path)
+   #+END_SRC
+*** Shelve
+    Use the shelve module to store multiple objects. 
+
+    To write in:
+    #+BEGIN_SRC python
+import shelve
+
+integers = [1, 2, 3, 4, 5]
+
+# If you're using Python 2.7, import contextlib and use
+# the line:
+# with contextlib.closing(shelve.open('shelf-example', 'c')) as shelf:
+with shelve.open('shelf-example', 'c') as shelf:
+    shelf['ints'] = integers
+#+END_SRC
+
+    To extract values:
+    #+BEGIN_SRC python
+import shelve
+
+# If you're using Python 2.7, import contextlib and use
+# the line:
+# with contextlib.closing(shelve.open('shelf-example', 'r')) as shelf:
+with shelve.open('shelf-example', 'r') as shelf:
+    for key in shelf.keys():
+        print(repr(key), repr(shelf[key])))
+#+END_SRC
  
 * DFT Lectures UCL 
 ** David Bowler O(N) DFT
@@ -1029,3 +1101,7 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
   - If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
 
 
+
+
+%\bibliographystyle{plain}
+%\bibliography{org-refs}

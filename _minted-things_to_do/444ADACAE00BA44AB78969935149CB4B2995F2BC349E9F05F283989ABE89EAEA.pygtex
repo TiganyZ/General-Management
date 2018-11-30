@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{shelve}
+
+\PYG{c+c1}{\PYGZsh{} If you\PYGZsq{}re using Python 2.7, import contextlib and use}
+\PYG{c+c1}{\PYGZsh{} the line:}
+\PYG{c+c1}{\PYGZsh{} with contextlib.closing(shelve.open(\PYGZsq{}shelf\PYGZhy{}example\PYGZsq{}, \PYGZsq{}r\PYGZsq{})) as shelf:}
+\PYG{k}{with} \PYG{n}{shelve}\PYG{o}{.}\PYG{n}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}shelf\PYGZhy{}example\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{shelf}\PYG{p}{:}
+    \PYG{k}{for} \PYG{n}{key} \PYG{o+ow}{in} \PYG{n}{shelf}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{():}
+	\PYG{k}{print}\PYG{p}{(}\PYG{n+nb}{repr}\PYG{p}{(}\PYG{n}{key}\PYG{p}{),} \PYG{n+nb}{repr}\PYG{p}{(}\PYG{n}{shelf}\PYG{p}{[}\PYG{n}{key}\PYG{p}{])))}
+\end{Verbatim}
