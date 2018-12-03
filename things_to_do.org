@@ -295,8 +295,6 @@ Force Constant Matrix
       #+END_SRC
 
 
-    
-
 * General notes 
 ** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
@@ -1005,27 +1003,82 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 **** Introduction to Biased Potentials
      Two main equations:
-     - The configuration integral $\mathcal{Z}$ and the \emph{Absolute Free
+     The configuration integral $\mathcal{Z}$ and the \emph{Absolute Free
        Energy} $\mathcal{A}(N,V,T)$:
      \[ \mathcal{Z} = \int e^{-\beta U(R)} dR\]
      \[ \mathcal{A}(N,V,T) = -\frac{1}{\beta} \text{ln}\big\{ \mathcal{Z}
      \big\} \]
-     - Considering two different systems $A$ and $B$, with two different
-        potential energy functions $U_A(R)$ and $U_B(R)$, we can have separate
-        configurational integrals $\mathcal{Z}_{A}$ and $\mathcal{Z}_{B}$ as per
-        the definition above. 
-     - Then, we can actually pertubate with respect to
-       another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
-       \[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
-       \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
-     - The last term is the ensemble average with respect to $A$
-     - This means we can express the free energy difference 
-       \[ -\text{k}_{\text{B}} T \text{ln} \Big(
-       \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
-       \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+
+     Considering two different systems $A$ and $B$, with two different
+     potential energy functions $U_A(R)$ and $U_B(R)$, we can have separate
+     configurational integrals $\mathcal{Z}_{A}$ and $\mathcal{Z}_{B}$ as per
+     the definition above. 
+
+     Then, we can actually pertubate with respect to
+     another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
+     \[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
+     \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+
+     The last term is the ensemble average with respect to $A$
+     This means we can express the free energy difference (Zwanzig 1953)
+     \[ \Delta \mathcal{A}_{AB} =  -\text{k}_{\text{B}} T \text{ln} \Big(
+     \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
+     \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+
+     To sample this efficiently we can use biased potentials. 
+     \[ U_{\text{tot}} = U_{0}(R) + V( S(R) ),  \]
+     where $V(S(R))$ is the biased potential which is a function of the collective variables. 
+
+     We can define a partition function:
+     \[ Q_{\text{tot}} = Q_{0}\big\langle e^{-\beta V(S(R))}\big\rangle_{0}  \]
+
+     Can express the actual probability density of the system in terms of a biased potential 
+     \[ p^{u}(S(R)) = p^{b}(S(R)) e^{ \beta V(S(R)) } \big\langle e^{-\beta V}\big\rangle_{0} \]
+     where $u$ and $b$ denote unbiased and biased configurations.  
+
+     This gives the free energy as
+     \begin{align}
+     F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R))\\
+                 &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
+     \end{align}
+     where the term on the second line is a constant. 
+
+**** Umbrella sampling
+     If we don't know the shape of the free energy surface then we can use /Umbrella Sampling/
+     If we know for example, two metastable states that we want to sample the we can make a pathway between them using this method.
+     
+     Umbrella sampling defines a series of biases simulations (/windows/) such that one can reconstruct the free energy surface. 
+     These simulations must have probability distributions that overlap. 
+
+     When one goes through the process of umbrella sampling, naively going through the reconstruction of the free energy surface
+     gives a poor reconstruction. It is necessary that weights are in place such that the reconstruction of the global free energy
+     profile is smooth. 
+     
+     \[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) + C_{i}}  \},\] 
+     \[ p_{i} = p^{b}_{i}(S) e^{ +\beta V(R) }e^{\beta C_{i}} \]
+     \[ p(S) = \sum_{N \text{windows}} p_i{S} w_{i} \]
+     \[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{N \text{windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} } \]
+     
+     
+     For these terms we need to know what the unbiased $p(S)$ is, but that is what we are trying to solve. 
+     We need to know the ensemble average over the unbiased probability distribution. 
+     \[ e^{-\beta C_{i}} = \int e^{ \beta V_{i}(S) } p(S) \text{d}S \]
+     We can guess that all $C_{i} = 0$ and then solve self-consistently until shifts of $C_i$ are within some tolerance. 
+
+***** Related papers and books
+      Look up *Umbrella integration* and *Thermodynamic integration*, where one can achieve this result analytically. 
+      
+      Original paper by Zwanzig in 1954
+      
+      1993 Ben Roux: WHAM
+
+      m.salvalaglio@ucl.ac.uk
 
 
-**** Zwanzig 1954
+      For the error of these one can do block averaging. 
+
+
+**** Adaptive potential bias
 
 ** Useful definitions of Thermodynamic potentials
    - Internal Energy:
