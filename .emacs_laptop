@@ -1,0 +1,92 @@
+ 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-enabled-themes '(misterioso))
+ '(global-display-line-numbers-mode t)
+ '(ido-mode 'both nil (ido))
+ '(inhibit-startup-echo-area-message "tigany")
+ '(inhibit-startup-screen t)
+ '(package-selected-packages
+   '(flycheck py-autopep8 ein golden-ratio gnuplot-mode magit elpy powerline))
+ '(powerline-default-separator 'arrow-fade)
+ '(powerline-display-hud t)
+ '(save-place t)
+ '(show-paren-mode t))
+ 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 151 :width normal))))
+ '(mode-line ((t (:background "magenta4" :foreground "goldenrod1"))))
+ '(mode-line-buffer-id ((t (:weight bold))))
+ '(mode-line-buffer-id-inactive ((t nil)))
+ '(mode-line-emphasis ((t (:background "chocolate" :weight bold))))
+ '(mode-line-highlight ((t (:box (:line-width 2 :color "grey40" :style released-button)))))
+ '(mode-line-inactive ((t (:background "DarkGoldenrod4" :foreground "light steel blue"))))
+ '(powerline-active1 ((t (:inherit mode-line :background "DarkOrchid3" :foreground "dark red"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "MediumOrchid1" :foreground "white"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "goldenrod3"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :background "goldenrod1")))))
+ ;; (package-initialize)
+ (require 'package)
+ ;; Melpa
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; Jedi
+  (require 'ein)
+  (add-hook 'python-mode-hook 'jedi:setup)                                                          
+  (setq jedi:complete-on-dot t)                 ; optional
+;; Elpy
+(elpy-enable)
+(setq elpy-rpc-python-command "python3.6")
+(setq elpy-rpc-backend "jedi")                                                                    
+(setq python-shell-interpreter "python3.6";"jupyter"
+      python-shell-interpreter-args "";"console --simple-prompt"
+      python-shell-prompt-detect-failure-warning nil)
+(add-to-list 'python-shell-completion-native-disabled-interpreters
+             "python3.6");"jupyter")
+;(elpy-use-ipython)
+
+;; use flycheck not flymake with elpy
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+;; enable autopep8 formatting on save
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+;; Magit
+(global-set-key (kbd "C-x g") 'magit-status)
+;; Golden ratio scroll
+ (require 'golden-ratio-scroll-screen)
+ (global-set-key [remap scroll-down-command] 'golden-ratio-scroll-screen-down)
+ (global-set-key [remap scroll-up-command] 'golden-ratio-scroll-screen-up)
+;;(load-theme 'zenburn t)
+;;(require ido)
+;;(ido-mode t)
+;; Powerline
+(require 'powerline)
+(powerline-default-theme)
+;;
+ (require 'org-ref)
+  (setq org-highlight-latex-and-related '(latex))                                                   
+  (setq org-latex-listings 'minted                                                                  
+      org-latex-packages-alist '(("" "minted"))                                                     
+      org-latex-pdf-process                                                                         
+      '("latexmk -pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"          
+        "latexmk -pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))        
+  (global-set-key "\C-cl" 'org-store-link)                                                          
+  (global-set-key "\C-ca" 'org-agenda)                                                              
+  (global-set-key "\C-cc" 'org-capture)                                                             
+  (global-set-key "\C-cb" 'org-switchb)                                                             
+  (plist-put org-format-latex-options :scale 1.5)   
+;;
