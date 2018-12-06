@@ -1,4 +1,4 @@
-% Created 2018-11-30 Fri 18:13
+% Created 2018-12-06 Thu 15:03
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -401,8 +401,6 @@ Force Constant Matrix
 \end{itemize}
 
 
-
-
 \section{General notes}
 \label{sec-2}
 \subsection{Dislocation arrays}
@@ -427,6 +425,56 @@ dislocation core by the boundary conditions.
 \cite{Clouet2012}
 \end{itemize}
 \end{itemize}
+
+\subsubsection{Files to produce dislocations}
+\label{sec-2-1-1}
+\begin{enumerate}
+\item Single Dislocations
+\label{sec-2-1-1-1}
+Here are the files used to produce single dislocations
+\href{file:///home/tigany/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations/gen_prismatic_screw_tbe.py}{Generate prismatic screw} \href{file:///home/tigany/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations/test/generated_dislocations/site.ti_9x_9y_8z_square_1_dislanis_prim_rot_convert.xyz}{Ovito file }
+\href{file:///home/tigany/Pictures/prismatic_screw_tbe_full_anis.png}{prismatic screw from ovito }
+\item Quadrupolar arrangements
+\label{sec-2-1-1-2}
+\end{enumerate}
+
+\subsubsection{Bulatov and Cai: Computer simulations of dislocations}
+\label{sec-2-1-2}
+
+\begin{enumerate}
+\item Sum of displacements from dipoles
+\label{sec-2-1-2-1}
+Simulating dislocation dipoles will introduce singularity in displacement
+between them. As we are not in the continuous case, this singularity is
+fine. However, the periodic boundary conditions are \textbf{not} satisfied,
+\emph{i.e.} pair of dislocations forming a dipole will not be periodic
+along y, as the displacement field is not periodic along y. 
+
+This mismatch could relax away during energy minimization, but it is not
+guaranteed. 
+
+A naive way to try and remove this result is to try and construct a
+periodic displacement field from the non-periodic one generated, by the
+principle of linear superposition, but this does not work. 
+\[ u_{z}^{\text{sum}} = \sum_{\mathbf{R}} u_{z}^{\inf}(\mathbf{r}
+     -\mathbf{R}) = u_{z}^{\inf}(\marhbf{r}) + u_{z}^{\text{img}}(\mathbf{r})
+     \]
+\[  u_{z}^{\text{img}}(\mathbf{r}) = \sum_{\mathbf{R}}' u_{z}^{\inf}(\mathbf{r}
+     -\mathbf{R}) \]
+
+where $\mathbf{R}$ is a periodic vector of the two dimensional lattice
+vectors along $x$ and $y$ axes: $\mathbf{R} = n_{1}\mathbf{c}_1 +
+     n_{2}\mathbf{c}_2$.
+$u_{z}^{\text{img}}(\mathbf{r})$ only accounts for \textbf{image} dipoles
+($\mathbf{R}\neq 0$)
+whereas the other sum is the sum of all of them. 
+This is because the sum of the displacements is \emph{conditionally
+convergent}. This means that the ordering of the sum of the displacements
+will determine if the sum actually converges.
+
+To remove this spurious displacement, one must find the st
+\end{enumerate}
+
 
 \subsection{Force constant matrix}
 \label{sec-2-2}
@@ -1342,32 +1390,87 @@ distribution $p^{U}(S(R))$.
 \item Introduction to Biased Potentials
 \label{sec-3-3-4-1}
 Two main equations:
-\begin{itemize}
-\item The configuration integral $\mathcal{Z}$ and the \emph\{Absolute Free
-Energy\} $\mathcal{A}(N,V,T)$:
-\end{itemize}
+The configuration integral $\mathcal{Z}$ and the \emph\{Absolute Free
+  Energy\} $\mathcal{A}(N,V,T)$:
 \[ \mathcal{Z} = \int e^{-\beta U(R)} dR\]
 \[ \mathcal{A}(N,V,T) = -\frac{1}{\beta} \text{ln}\big\{ \mathcal{Z}
      \big\} \]
-\begin{itemize}
-\item Considering two different systems $A$ and $B$, with two different
+
+Considering two different systems $A$ and $B$, with two different
 potential energy functions $U_A(R)$ and $U_B(R)$, we can have separate
 configurational integrals $\mathcal{Z}_{A}$ and $\mathcal{Z}_{B}$ as per
-the definition above.
-\item Then, we can actually pertubate with respect to
+the definition above. 
+
+Then, we can actually pertubate with respect to
 another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
 \[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
-       \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
-\item The last term is the ensemble average with respect to $A$
-\item This means we can express the free energy difference 
-\[ -\text{k}_{\text{B}} T \text{ln} \Big(
-       \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
-       \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
-\end{itemize}
+     \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
 
+The last term is the ensemble average with respect to $A$
+This means we can express the free energy difference (Zwanzig 1953)
+\[ \Delta \mathcal{A}_{AB} =  -\text{k}_{\text{B}} T \text{ln} \Big(
+     \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
+     \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
 
-\item Zwanzig 1954
+To sample this efficiently we can use biased potentials. 
+\[ U_{\text{tot}} = U_{0}(R) + V( S(R) ),  \]
+where $V(S(R))$ is the biased potential which is a function of the collective variables. 
+
+We can define a partition function:
+\[ Q_{\text{tot}} = Q_{0}\big\langle e^{-\beta V(S(R))}\big\rangle_{0}  \]
+
+Can express the actual probability density of the system in terms of a biased potential 
+\[ p^{u}(S(R)) = p^{b}(S(R)) e^{ \beta V(S(R)) } \big\langle e^{-\beta V}\big\rangle_{0} \]
+where $u$ and $b$ denote unbiased and biased configurations.  
+
+This gives the free energy as
+\begin{align}
+F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R))\\
+            &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
+\end{align}
+where the term on the second line is a constant. 
+
+\item Umbrella sampling
 \label{sec-3-3-4-2}
+If we don't know the shape of the free energy surface then we can use \emph{Umbrella Sampling}
+If we know for example, two metastable states that we want to sample the we can make a pathway between them using this method.
+
+Umbrella sampling defines a series of biases simulations (\emph{windows}) such that one can reconstruct the free energy surface. 
+These simulations must have probability distributions that overlap. 
+
+When one goes through the process of umbrella sampling, naively going through the reconstruction of the free energy surface
+gives a poor reconstruction. It is necessary that weights are in place such that the reconstruction of the global free energy
+profile is smooth. 
+
+\[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) + C_{i}}  \},\] 
+\[ p_{i} = p^{b}_{i}(S) e^{ +\beta V(R) }e^{\beta C_{i}} \]
+\[ p(S) = \sum_{N \text{windows}} p_i{S} w_{i} \]
+\[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{N \text{windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} } \]
+
+
+For these terms we need to know what the unbiased $p(S)$ is, but that is what we are trying to solve. 
+We need to know the ensemble average over the unbiased probability distribution. 
+\[ e^{-\beta C_{i}} = \int e^{ \beta V_{i}(S) } p(S) \text{d}S \]
+We can guess that all $C_{i} = 0$ and then solve self-consistently until shifts of $C_i$ are within some tolerance. 
+
+\begin{enumerate}
+\item Related papers and books
+\label{sec-3-3-4-2-1}
+Look up \textbf{Umbrella integration} and \textbf{Thermodynamic integration}, where one can achieve this result analytically. 
+
+Original paper by Zwanzig in 1954
+
+1993 Ben Roux: WHAM
+
+m.salvalaglio@ucl.ac.uk
+
+
+For the error of these one can do block averaging.
+\end{enumerate}
+
+
+\item Adaptive potential bias
+\label{sec-3-3-4-3}
 \end{enumerate}
 
 \subsection{Useful definitions of Thermodynamic potentials}

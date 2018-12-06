@@ -1,19 +1,22 @@
-% Created 2018-11-30 Fri 20:41
-% Intended LaTeX compiler: pdflatex
+% Created 2018-12-06 Thu 16:36
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
 \usepackage{graphicx}
-\usepackage{grffile}
 \usepackage{longtable}
+\usepackage{float}
 \usepackage{wrapfig}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
 \usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
 \usepackage{amssymb}
-\usepackage{capt-of}
 \usepackage{hyperref}
+\tolerance=1000
+\usepackage{minted}
 \usepackage[hyperref,x11names]{xcolor}
 \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
 \usepackage{physics}
@@ -29,116 +32,105 @@
 \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
 \tikzset{snake it/.style={decorate, decoration=snake}}
 \usepackage[nottoc]{tocbibind}
-\author{Tigany}
 \date{\today}
-\title{}
+\title{things\_to\_do}
 \hypersetup{
- pdfauthor={Tigany},
- pdftitle={},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 27.0.50 (Org mode 9.1.9)}, 
- pdflang={English}}
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
 \begin{document}
 
+\maketitle
 \tableofcontents
 
 
 
 
 \section{Tasks}
-\label{sec:orgca4f6c1}
+\label{sec-1}
 
 \subsection{{\bfseries\sffamily TODO} Has anyone investigated the stacking faults of Omega phase?}
-\label{sec:org921a015}
+\label{sec-1-1}
 \begin{itemize}
 \item Maybe as Omega phase doesn't occur that often, perhaps it has not been
 studied in detail.
 \item I should look further into this
 \end{itemize}
 \subsection{{\bfseries\sffamily TODO} Finish doing the gamma surfaces for all planes for pure titanium.}
-\label{sec:org5ed5e38}
+\label{sec-1-2}
 \subsubsection{Checking the convergence criteria}
-\label{sec:orgfdf205b}
+\label{sec-1-2-1}
 \begin{itemize}
 \item Now checking the convergence criteria.
 \end{itemize}
 
 \begin{enumerate}
 \item How the lattice parameters change with the fineness of the k mesh
-\label{sec:orge02ddc3}
+\label{sec-1-2-1-1}
 \begin{itemize}
 \item Maybe with a less fine k mesh the lattice parameters become
 worse.
 \item SOLUTION: The lattice parameters do not change that much under
 \end{itemize}
-differences with the k mesh. \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/get\_hom\_shear\_bc\_gs.py}{File with change of the lattice
+differences with the k mesh. \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py}{File with change of the lattice
 parameters with k mesh. }
-\href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/a\_hcp\_vs\_nk.png}{a vs nk}
-\href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/c\_hcp\_vs\_nk.png}{c\(_{\text{vs}}\)\(_{\text{nk}}\)}
-\href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/e\_hcp\_vs\_nk.png}{e\(_{\text{vs}}\)\(_{\text{nk}}\)}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png}{a vs nk}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png}{c$_{\text{vs}}$$_{\text{nk}}$}
+\href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png}{e$_{\text{vs}}$$_{\text{nk}}$}
 
 \begin{enumerate}
 \item What if rmaxh is smaller or larger?
-\label{sec:orgc2cc590}
+\label{sec-1-2-1-1-1}
 \begin{itemize}
 \item If rmaxh is is smaller (say rmaxh = 6.7 bohr) then we get the same
 results.
 \end{itemize}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png}
-\caption{\label{fig:org1a0d309}
-Variation of energy with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of energy with k mesh.}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png}
-\caption{\label{fig:org9ccaf5a}
-Variation of a hcp with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of a hcp with k mesh.}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png}
-\caption{\label{fig:org6159d3e}
-Variation of c hcp with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of c hcp with k mesh.}
 \end{figure}]]
 \begin{itemize}
-\item Data: \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/a\_hcp\_vs\_nk\_rmaxh\_small.pkl}{a\(_{\text{hcp}}\) small rmaxh}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/c\_hcp\_vs\_nk\_rmaxh\_small.pkl}{c\(_{\text{hcp}}\) small rmaxh}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/e\_hcp\_vs\_nk\_rmaxh\_small.pkl}{e\(_{\text{hcp}}\) small rmaxh}.
-\end{itemize}
-\begin{itemize}
+\item Data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl}{a$_{\text{hcp}}$ small rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl}{c$_{\text{hcp}}$ small rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl}{e$_{\text{hcp}}$ small rmaxh}.
 \item If rmaxh is larger ( rmaxh = 20 bohr ), all possible interactions must
 be included then. And so we get the same results.
 \end{itemize}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png}
-\caption{\label{fig:orgc83adf4}
-Variation of energy with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of energy with k mesh.}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png}
-\caption{\label{fig:org09e2ffc}
-Variation of a hcp with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of a hcp with k mesh.}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png}
-\caption{\label{fig:orga0e6128}
-Variation of c hcp with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of c hcp with k mesh.}
 \end{figure}
 \begin{itemize}
-\item Data: \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/a\_hcp\_vs\_nk\_rmaxh\_large.pkl}{a\(_{\text{hcp}}\) large rmaxh}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/c\_hcp\_vs\_nk\_rmaxh\_large.pkl}{c\(_{\text{hcp}}\) large rmaxh}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/e\_hcp\_vs\_nk\_rmaxh\_large.pkl}{e\(_{\text{hcp}}\) large rmaxh}
+\item Data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl}{a$_{\text{hcp}}$ large rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl}{c$_{\text{hcp}}$ large rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl}{e$_{\text{hcp}}$ large rmaxh}
 \end{itemize}
 \end{enumerate}
 
 \item How does rmaxh change the lattice parameters?
-\label{sec:org401c4cf}
+\label{sec-1-2-1-2}
 
 \begin{enumerate}
 \item How does rmaxh change the energy of a supercell
-\label{sec:org00a35ff}
+\label{sec-1-2-1-2-1}
 \begin{itemize}
 \item How does the number of neighbours change and what is the relation
 between rmaxh and larger cell sizes.
@@ -146,7 +138,7 @@ between rmaxh and larger cell sizes.
 \end{enumerate}
 \end{enumerate}
 \subsubsection{Notes on the model.}
-\label{sec:org348ac53}
+\label{sec-1-2-2}
 It seems that there is a lot of charge moving around when doing the
 relaxations. 
 I think that this may be due to the fact that there is no Hubbard U
@@ -154,45 +146,45 @@ interactions, a parameter for the coulomb interaction, which stops the
 charges from moving freely. 
 \begin{itemize}
 \item TBE control file is currently set to this:
-\begin{verbatim}
+\begin{minted}[]{bash}
 TBE: nbas = 128 nspec = 1 verb 31 
 TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
 bz: metal
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
 
 \subsubsection{{\bfseries\sffamily DONE} Implement Homogenous Shear boundary conditions for gamma surface calculation.}
-\label{sec:org20300c8}
+\label{sec-1-2-3}
 \subsection{{\bfseries\sffamily TODO} Python script: remove include statements  -->  One file.}
-\label{sec:org9feeda7}
+\label{sec-1-3}
 \subsection{{\bfseries\sffamily TODO} Summarise UCL DFT lectures.}
-\label{sec:org170dfb5}
+\label{sec-1-4}
 \subsection{{\bfseries\sffamily TODO} Write first paragraph of Literature review}
-\label{sec:org04cb1a9}
+\label{sec-1-5}
 \subsubsection{{\bfseries\sffamily TODO} Summarise Stacking Faults and write review}
-\label{sec:org3dff623}
+\label{sec-1-5-1}
 \subsubsection{{\bfseries\sffamily TODO} Write up the tight binding fitting of oxygen and an explanation for paramagnetism.}
-\label{sec:org3dbdb50}
+\label{sec-1-5-2}
 \subsubsection{{\bfseries\sffamily TODO} Summarise dislocations and Oxygen interactions (review)}
-\label{sec:org3d33875}
+\label{sec-1-5-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
-\label{sec:orgee26689}
+\label{sec-1-6}
 \subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
-\label{sec:orge77b2cf}
+\label{sec-1-7}
 \subsubsection{Pair potentials in tbe code}
-\label{sec:org2a0c6fb}
+\label{sec-1-7-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
 point
-\item In makvpp.f, if in the range of \(r_1 < r < r_{\text{c}}\), then
+\item In makvpp.f, if in the range of $r_1 < r < r_{\text{c}}$, then
 augmentative/multiplicative polynomial is used.
 \begin{itemize}
 \item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
 \item Depending on the degree of polynomial we have this structure:
-\begin{verbatim}
+\begin{minted}[]{fortran}
       rr = r1 - r2
       xr1 = x - r1
       xr2 = x - r2
@@ -213,7 +205,7 @@ augmentative/multiplicative polynomial is used.
       de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
       dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
 C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{verbatim}
+\end{minted}
 \item So the form of the polynomial used is
 \begin{itemize}
 \item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
@@ -222,11 +214,11 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \item \[  b = \frac{1}{(r_1-r_2)^4} \big\{ f'(r_1)*(r_1-r_2) - 3f(r_1) \big\}  \]
 \item \[ \frac{1}{(r_1 - r_2)^5} x \]
 \item \[  c = \frac{ f(r_1) }{ (r_1-r_2)^3} \]
-\item Where \(f(x)\) is the function that needs to be cut
+\item Where $f(x)$ is the function that needs to be cut
 \end{itemize}
 \end{itemize}
 \item Current model has this
-\begin{verbatim}
+\begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
 	     dds    ddp    ddd
@@ -236,79 +228,74 @@ Ti,Ti:
 	     dds    ddp    ddd
    r1:      6.20   6.20   6.20
    rc:      8.50   8.50   8.50
-
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
 
 \subsubsection{Bond integrals from tbe}
-\label{sec:org4f73f32}
+\label{sec-1-7-2}
 \begin{itemize}
 \item So bond integrals from titanium look like this, from this file
-\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/plot\_bond\_integrals/plot\_bond\_integrals.py}{plot\(_{\text{bond}}\)\(_{\text{integrals.py}}\)}
+\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py}{plot$_{\text{bond}}$$_{\text{integrals}}$.py}
 \end{itemize}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
-\caption{\label{fig:orgb9fb1d6}
-Bond integrals with multiplicative polynomial cutoffs.}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}Bond integrals with multiplicative polynomial cutoffs.}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
-\caption{\label{fig:org4080250}
-Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
 \subsection{{\bfseries\sffamily DONE} Investigate why rmaxh changes energy}
-\label{sec:org82ff440}
+\label{sec-1-8}
 \begin{itemize}
 \item Variation of rmaxh does not change the energy
 \item Obviously the number of neighbours changes with rmaxh.
 \item Conclusion: rmaxh only determines what atoms are its neighbours.
 \item This is the file which investigates this:
-\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/mod\_rmaxh/check\_rmaxh\_energy\_neighbours.py}{check\(_{\text{rmaxh}}\)\(_{\text{energy}}\)\(_{\text{number}}\)\(_{\text{neighbours}}\)}
+\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/check_rmaxh_energy_neighbours.py}{check$_{\text{rmaxh}}$$_{\text{energy}}$$_{\text{number}}$$_{\text{neighbours}}$}
 \item Here is the data:
-\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/mod\_rmaxh/energy\_for\_energy\_vs\_rmaxh.pkl}{Energy data for energy vs rmaxh}
-\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/mod\_rmaxh/rmaxh\_for\_energy\_or\_n\_neighbours\_vs\_rmaxh.pkl}{rmaxh data for energy/n\(_{\text{neighbours}}\) vs rmaxh}
-\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/mod\_rmaxh/n\_neighbours\_for\_n\_neighbours\_vs\_rmaxh.pkl}{n\(_{\text{neighbours}}\) for n\(_{\text{neighbours}}\) vs rmaxh}
+\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/energy_for_energy_vs_rmaxh.pkl}{Energy data for energy vs rmaxh}
+\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/rmaxh_for_energy_or_n_neighbours_vs_rmaxh.pkl}{rmaxh data for energy/n$_{\text{neighbours}}$ vs rmaxh}
+\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_for_n_neighbours_vs_rmaxh.pkl}{n$_{\text{neighbours}}$ for n$_{\text{neighbours}}$ vs rmaxh}
 \item The output pictures are this:
 \end{itemize}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/Energy_vs_rmaxh.png}
-\caption{\label{fig:org7318d60}
-Variation of energy with change in rmaxh}
+\caption{\label{fig:Energy_vs_rmaxh.png}Variation of energy with change in rmaxh}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png}
-\caption{\label{fig:org5c9660b}
-Variation of number of neighbours with change in rmaxh}
+\caption{\label{fig:n_neighbours_vs_rmaxh.png}Variation of number of neighbours with change in rmaxh}
 \end{figure}
 
 \subsection{{\bfseries\sffamily DONE} Show supercell of BOP working}
-\label{sec:org18def8c}
+\label{sec-1-9}
 \subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
-\label{sec:orga88f38d}
+\label{sec-1-10}
 \begin{itemize}
 \item Check if the matrix is complex
 \item Check if it is positive definite.
 \end{itemize}
 \subsubsection{Results}
-\label{sec:org666de2e}
+\label{sec-1-10-1}
 \begin{itemize}
 \item Without changing anything, the total energy of hcp in Tony's newest
-model is \(E_{\text{tot hcp}} = -0.57230068 \text{Ryd}\)
+model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
 \item I thought perhaps that the lattice parameters and the elastic constants
 that way might produce a different result.
-\item Minimising the lattice parameters gives an energy of  \$ E\(_{\text\text{\{tot
-      hcp\}}}\) = -0.572351 \text{Ryd}\$ with lattice parameters of \(a_{\text{hcp}}
-      = 5.4908 \text{bohr}\), \(c_{\text{hcp}} = 8.8353 \text{bohr}\) giving \(c/a_{\text{hcp}} = 1.6091 \text{bohr}\)
+\item Minimising the lattice parameters gives an energy of  \$ E$_{\text\text{\{tot
+hcp\}}}$ = -0.572351 \text{Ryd}\$ with lattice parameters of $a_{\text{hcp}}
+      = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
 \item Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
 \item The stability criteria are still satisfied.
 \end{itemize}
-\begin{verbatim}
+\begin{minted}[]{bash}
 Checking Stability for tbe elastic constants. 
  is C_ij matrix positive definite?: True
 
@@ -340,20 +327,19 @@ C_33 > 0
 
 C_11 > 0
   True
-
-\end{verbatim}
+\end{minted}
 \subsection{{\bfseries\sffamily DONE} Build force constant matrix for hcp}
-\label{sec:org8cf6dd4}
+\label{sec-1-11}
 \begin{itemize}
 \item If the force constant matrix is positive definite then there shan't be
 any soft modes.
 \end{itemize}
 \subsubsection{Results}
-\label{sec:orgb6859a5}
+\label{sec-1-11-1}
 \begin{itemize}
-\item File used is \href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/check\_ec\_pos\_definite/check\_ec\_pos\_definite.py}{check\(_{\text{ec}}\)\(_{\text{pos}}\)\(_{\text{definite.py}}\)}
-\item Using Fourth order \(\mathcal{O}(h^{4})\) formula for the mixed
-derivatives, one can find the \(6\times6\) force constant matrix.
+\item File used is \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py}{check$_{\text{ec}}$$_{\text{pos}}$$_{\text{definite}}$.py}
+\item Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
+derivatives, one can find the $6\times6$ force constant matrix.
 \begin{align}
   \frac{1}{144 h^2} (     &  8.  (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
                          &-  8.  (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
@@ -361,7 +347,7 @@ derivatives, one can find the \(6\times6\) force constant matrix.
                          &+  64. (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
 \end{align}
 
-\begin{verbatim}
+\begin{minted}[]{bash}
 Eigenvalues
 [-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
 
@@ -373,13 +359,13 @@ Force Constant Matrix
  [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
  [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
  [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
-\end{verbatim}
+\end{minted}
 
 \item This matrix is not positive definite and so the structure is not
 stable.
 
 \item Using second order formula one obtains
-\begin{verbatim}
+\begin{minted}[]{bash}
 Eigenvalues
 [ 0.32  -0.32   2.545 -2.545  0.32  -0.32 ]
 
@@ -391,12 +377,11 @@ Force Constant Matrix
  [-0.32   0.     0.     0.     0.     0.   ]
  [ 0.    -0.32   0.     0.     0.     0.   ]
  [ 0.     0.     2.545  0.     0.     0.   ]]
-
-\end{verbatim}
+\end{minted}
 
 \item Using another model we get another matrix that is not positive
 definite. 
-\begin{verbatim}
+\begin{minted}[]{bash}
 tbe ti -vhcp=1  -vfddtt=0.4668418806546737 -vqddstt=0.6660968695540497 -vb0tt=94.4011791926749 
 -vp0tt=1.1902574670213237 -vb1tt=-26.704816810939302 -vp1tt=0.9999600888309667 
 -vcr1=-6.158653986495596 -vcr2=3.9496749559495172 -vcr3=-1.0282840982939534 
@@ -412,16 +397,14 @@ Force Constant Matrix
  [-2.8232e-01  0.0000e+00  1.0618e-03 -2.5443e-13  0.0000e+00 -1.0618e-03]
  [ 0.0000e+00 -2.8103e-01  2.4672e-13  0.0000e+00  0.0000e+00  0.0000e+00]
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
-\end{verbatim}
+\end{minted}
 \end{itemize}
 
 
-
-
 \section{General notes}
-\label{sec:org9b02dd5}
+\label{sec-2}
 \subsection{Dislocation arrays}
-\label{sec:org40012b6}
+\label{sec-2-1}
 Dislocation arrays are used within simulation cells to negate the effects of
 the long range strain fields produced from dislocations in the periodic array
 of cells one has in the simulation.
@@ -443,39 +426,162 @@ dislocation core by the boundary conditions.
 \end{itemize}
 \end{itemize}
 
+\subsubsection{Files to produce dislocations}
+\label{sec-2-1-1}
+\begin{enumerate}
+\item Single Dislocations
+\label{sec-2-1-1-1}
+Here are the files used to produce single dislocations
+\href{file:///home/tigany/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations/gen_prismatic_screw_tbe.py}{Generate prismatic screw} \href{file:///home/tigany/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations/test/generated_dislocations/site.ti_9x_9y_8z_square_1_dislanis_prim_rot_convert.xyz}{Ovito file }
+\href{file:///home/tigany/Pictures/prismatic_screw_tbe_full_anis.png}{prismatic screw from ovito }
+\item Quadrupolar arrangements
+\label{sec-2-1-1-2}
+\end{enumerate}
+
+\subsubsection{Bulatov and Cai: Computer simulations of dislocations}
+\label{sec-2-1-2}
+
+\begin{enumerate}
+\item Sum of displacements from dipoles
+\label{sec-2-1-2-1}
+Simulating dislocation dipoles will introduce singularity in displacement
+between them. As we are not in the continuous case, this singularity is
+fine. However, the periodic boundary conditions are \textbf{not} satisfied,
+\emph{i.e.} pair of dislocations forming a dipole will not be periodic
+along y, as the displacement field is not periodic along y. 
+
+This mismatch could relax away during energy minimization, but it is not
+guaranteed. 
+
+A naive way to try and remove this result is to try and construct a
+periodic displacement field from the non-periodic one generated, by the
+principle of linear superposition, but this does not work. 
+\[ u_{z}^{\text{sum}} = \sum_{\mathbf{R}} u_{z}^{\inf}(\mathbf{r}
+     -\mathbf{R}) = u_{z}^{\inf}(\marhbf{r}) + u_{z}^{\text{img}}(\mathbf{r})
+     \]
+\[  u_{z}^{\text{img}}(\mathbf{r}) = \sum_{\mathbf{R}}' u_{z}^{\inf}(\mathbf{r}
+     -\mathbf{R}) \]
+
+where $\mathbf{R}$ is a periodic vector of the two dimensional lattice
+vectors along $x$ and $y$ axes: $\mathbf{R} = n_{1}\mathbf{c}_1 +
+     n_{2}\mathbf{c}_2$.
+$u_{z}^{\text{img}}(\mathbf{r})$ only accounts for \textbf{image} dipoles
+($\mathbf{R}\neq 0$)
+whereas the other sum is the sum of all of them. 
+This is because the sum of the displacements is \emph{conditionally
+convergent}. This means that the ordering of the sum of the displacements
+will determine if the sum actually converges.
+
+\item How to remove non-periodic displacements
+\label{sec-2-1-2-2}
+One can find the periodic displacement $u_{z}^{text{PBC}}(\mathbf{r})$
+from the relation, which arises from the fact that
+$\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}(\mathbf{r})$
+\[ u_{z}^{text{sum}}(\mathbf{r}) =  u_{z}^{text{PBC}}(\mathbf{r}) +
+     \mathbf{s}\cdot\mathbf{r} + \mathbf{u}_{0} \]
+$\mathbf{u}_{0}$ is a constant term, so it can be ignored. 
+
+Recipe to remove the spurious non-periodic part of the displacement field:
+\begin{enumerate}
+\item Evaluate the conditionally convergent sum
+$u_{z}^{\text{sum}}(\mathbf{r})$, using an arbitrary truncation.
+\item "Measure" the linear spurious part of the resulting field, using the
+equation below, by comparing it's values at four points in the
+periodic supercell from the above equation 
+\[ u_{z}^{\text{err}}(\mathbf{r}) =  \mathbf{s}\cdot\mathbf{r},  \]
+\[ u_{z}^{\text{sum}}(\mathbf{r} + \mathbf{c}_{i})  -
+        u_{z}^{\text{sum}}(\mathbf{r}) = \mathbf{s}\cdot\mathbf{c}_{i}, \]
+where $i=1,2$.
+\item Finally, subtract the linear term $u_{z}^{\text{err}}(\mathbf{r})$ from
+$u_{z}^{\text{sum}}(\mathbf{r})$ to obtain the corrected solution
+$u_{z}^{\text{PBC}}(\mathbf{r})$.
+\end{enumerate}
+
+
+This procedure is independent of the truncation in the limit of large
+radius.
+
+\item Adjusting the shape of the supercell
+\label{sec-2-1-2-3}
+When a dislocation dipole is introduced, there is a plastic strain that
+is generated. 
+\[ \epsilon^{\text{pl}} = \frac{1}{2\Omega}( \mathbf{b} \otimes
+     \mathbf{A} + \mathbf{A} \otimes \mathbf{b} ), \]
+where $\Omega = (\mathbf{c}_{1} \times \mathbf{c}_{2}) \cdot
+     \mathbf{c}_{3}$, and $\mathbf{A}$, is the vector normal to the plane of
+the plane connecting the dipoles and $\mathbf{c}_{i}$ are the periodicity vectors. 
+
+In a supercell with fixed periodicity vectors, an increment in the
+plastic strain will be compensated by an oppositely signed increment of
+the elastic strain of the same magnitude: $\epsilon^{\text{el}} = -
+     \epsilon^{\text{pl}}$.
+
+In response to this elastic strain, there will be an internal
+\emph{back-stress} acting to eliminate the source of the strain (i.e. the
+dislocation dipole). This back-stress may be large enought to push the
+dislocations back from their intended positions and may even lead to
+dislocation recombination. 
+
+Allowing for the simulation box to change shape during relaxation, one
+would see that it could reach a state of zero average internal stress. 
+We can do this step \textbf{before relaxation}, such that we can accomodate/match the
+\textbf{plastic strain} produced by the dislocation dipole.
+
+In the case study, the cut plane bounded by two dislocations is parallel
+to two of the repeat vectors, $\mathbf{c}_{1}$ and $\mathbf{c}_{3}$. In
+this case the internal stress induced by the dipole can be removed by
+adjusting only the $\mathbf{c}_{2}$ repeat vector. 
+
+\[ \mathbf{c}_{2} \rightarrow \mathbf{c}_{2} + \mathbf{b} \frac{A}{A_{0},} \]
+
+If we say that $A_{0} = | \mathbf{c}_{3} \times \mathbf{c}_{1} |$ is the area of simulation box on the plane
+parallel to the dislocation dipoles, and $A$ is the area that is between
+the dislocation dipoles in the simulation cell. 
+
+Adjusting this vector means that we have added an extra term
+$\mathbf{u}_{z}^{\text{tilt}}(\mathbf{r})$ to the solution of
+$\mathbf{u}_{z}^{\text{PBC}}(\mathbf{r})$ from before. 
+In this study, it is 
+\[ u_{z}^{\text{tilt}}(\mathbf{r}) = b \frac{Ay}{A_{0}c_{2}}, \]
+where $c_{2}$ is the length of the periodicity vector before it has been
+tilted.
+\end{enumerate}
+
+
+
 \subsection{Force constant matrix}
-\label{sec:orgdce6002}
+\label{sec-2-2}
 \subsubsection{Wallace}
-\label{sec:org7405681}
+\label{sec-2-2-1}
 \begin{enumerate}
 \item Crystal Potential: Introduction
-\label{sec:orgf2336e5}
+\label{sec-2-2-1-1}
 \begin{itemize}
 \item Since the vibrational energy of a crystal is generally considered to by
 small compared to its potential energy, the crystal potential is a first
 approximation to the free energy or the internal energy.
-\item Ions are labelled by the letters \(M\) and \(N\).
-\item Equilibrium positions are given by the vectors \(\mathbf{R}(M)\) and
-displacements from equilibrium are denoted by \(\mathbf{U}(M)\).
+\item Ions are labelled by the letters $M$ and $N$.
+\item Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
+displacements from equilibrium are denoted by $\mathbf{U}(M)$.
 \item Potential energy of the crystal due to interactions among ions in a
-given configuration is given by \(\Phi\), which can be expanded as
+given configuration is given by $\Phi$, which can be expanded as
 \begin{align}
 \Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
      &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
      &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
      &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
 \end{align}
-\item \(\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}\)
-\item \(\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}\)
-\item These are symmetric in their index pairs; \emph{i.e.} \(\Phi_{ij}(M,N) = \Phi_{ji}(N,M)\)
+\item $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
+\item $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
+\item These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
 \item All of the coefficients are functions of the \emph{initial} configuration.
 \item This potential is supposed to represent the \emph{entire} energy of the crystal
 except for the kinetic energy of the ions.
-\item From now on \(M, N\) represent the unit cell and \(\mu, \nu\) represent the
+\item From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
 individual ions in a given cell.
 \item The total potential of the system plus externally applied forces is
-\(\Psi\). For a virtual process where the crystal is deformed while the
-externally applies forces are held constant \(\Psi\) is not conserved, if
+$\Psi$. For a virtual process where the crystal is deformed while the
+externally applies forces are held constant $\Psi$ is not conserved, if
 the forces are changed then it can be conserved. 
 \begin{align}
 \Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
@@ -483,7 +589,7 @@ the forces are changed then it can be conserved.
 \end{align}
 \end{itemize}
 \item Stability and the Dynamical Matrix
-\label{sec:orgc0cd02e}
+\label{sec-2-2-1-2}
 \begin{itemize}
 \item The equilibrium configuration of ions and external forces is a stable
 equilibrium if the total system potential is minimum with respet to
@@ -493,28 +599,28 @@ small virtual displacements of the ions from equilirium.
      \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
 \begin{itemize}
 \item The stability condition is if they are positive definite: positive for
-any of the values \(U_{i}(M)\), except if they are all 0.
+any of the values $U_{i}(M)$, except if they are all 0.
 \item The stability condition is:
 \[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
-\item \(\alpha\), \(\beta \dots\) are indices which refer to the pair  \(Mi\) and
-\(>0\) means positive definite (all the eigenvalues are greater than zero).
-\item This is only satisfied if the matrix \(\Phi_{\alpha\beta}\) is positive definite.
+\item $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
+$>0$ means positive definite (all the eigenvalues are greater than zero).
+\item This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
 \end{itemize}
 \end{enumerate}
 \subsection{Pair potentials in tbe code}
-\label{sec:orgf37b7e5}
+\label{sec-2-3}
 \subsubsection{How are they constructed?}
-\label{sec:org014081e}
+\label{sec-2-3-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
 point
-\item In makvpp.f, if in the range of \(r_1 < r < r_{\text{c}}\), then
+\item In makvpp.f, if in the range of $r_1 < r < r_{\text{c}}$, then
 augmentative/multiplicative polynomial is used.
 \begin{itemize}
 \item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
 \item Depending on the degree of polynomial we have this structure:
-\begin{verbatim}
+\begin{minted}[]{fortran}
       rr = r1 - r2
       xr1 = x - r1
       xr2 = x - r2
@@ -535,7 +641,7 @@ augmentative/multiplicative polynomial is used.
       de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
       dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
 C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{verbatim}
+\end{minted}
 \item So the form of the polynomial used is
 \begin{itemize}
 \item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
@@ -544,11 +650,11 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \item \[  b = \frac{1}{(r_1-r_2)^4} \big\{ f'(r_1)*(r_1-r_2) - 3f(r_1) \big\}  \]
 \item \[ \frac{1}{(r_1 - r_2)^5} x \]
 \item \[  c = \frac{ f(r_1) }{ (r_1-r_2)^3} \]
-\item Where \(f(x)\) is the function that needs to be cut
+\item Where $f(x)$ is the function that needs to be cut
 \end{itemize}
 \end{itemize}
 \item Current model has this
-\begin{verbatim}
+\begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
 	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
@@ -558,21 +664,20 @@ Ti,Ti:
 	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
    r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
    rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
-
-\end{verbatim}
+\end{minted}
 \end{itemize}
 \subsubsection{Bond Integrals: tbe}
-\label{sec:org245c8a6}
+\label{sec-2-3-2}
 \begin{itemize}
 \item So bond integrals from titanium look like this
-\item \href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/plot\_bond\_integrals/tbe\_bond\_integrals\_with\_polynomial\_cutoffs\_multiplicative\_alt.png}{Bond integrals with multiplicative polynomial cutoffs. }
-\item \href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/plot\_bond\_integrals/tbe\_bond\_integrals\_with\_polynomial\_cutoffs\_multiplicative\_zoomed\_in.png}{Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}{Bond integrals with multiplicative polynomial cutoffs. }
+\item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}{Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{itemize}
 
 \subsection{Gamma surfaces}
-\label{sec:orgc706fd9}
+\label{sec-2-4}
 \subsubsection{Miscellaneous}
-\label{sec:org0b42ebe}
+\label{sec-2-4-1}
 \begin{itemize}
 \item Seems like some atoms are missing in the site file when it is being read
 in to tbe.
@@ -583,7 +688,7 @@ exit.
 \end{itemize}
 \end{itemize}
 \subsubsection{Relaxing in tbe}
-\label{sec:orgad3d3f4}
+\label{sec-2-4-2}
 \begin{itemize}
 \item To relax in tbe need to modify:
 \begin{itemize}
@@ -600,15 +705,15 @@ exit.
 \end{itemize}
 
 \subsubsection{Convergence and k-points in tbe}
-\label{sec:orge961286}
+\label{sec-2-4-3}
 \begin{itemize}
-\item Tony used a \(30\times 30\times 30\) grid for the k-point mesh.
+\item Tony used a $30\times 30\times 30$ grid for the k-point mesh.
 \item Making a square cell, and increasing the length accordingly, one must
 reduce the number ok k-points in that direction.
 \item Making a square cell with an increase of cell size along x to be
-\(\sqrt{3}\), then we must reduce the k-point mesh by \(n_{\text{kx}} /
-      \sqrt{3} \approx 17.3 \approx 17\)
-\item Therefore new grid is \(17 \times 30 \times 30\)
+$\sqrt{3}$, then we must reduce the k-point mesh by $n_{\text{kx}} /
+      \sqrt{3} \approx 17.3 \approx 17$
+\item Therefore new grid is $17 \times 30 \times 30$
 \end{itemize}
 
 \begin{center}
@@ -657,34 +762,32 @@ Basal Square: 1x1x9 & 0 & 36 & 17 & 30 & 3 & 0.000071 & -0.28615681 & -0.9360715
 \end{center}
 
 \subsubsection{Results}
-\label{sec:org0346d1b}
+\label{sec-2-4-4}
 \begin{itemize}
-\item Have now done the gamma line along \(1/3[1\bar{2}10]\), but the end points
+\item Have now done the gamma line along $1/3[1\bar{2}10]$, but the end points
 do not seem quite right.
-\item File and data: \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/data/plot\_hsbc\_pkl.py}{basal\(_{\text{energy}}\)\(_{\text{plotting}}\)} \begin{center}
-\includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png}
-\end{center}
-\item Basal plot \(8\times 8\times 8\)
-\item \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/data/supercell\_8-8-8/Figures/gamma\_surface\_8-8-8\_basal\_tbe.png}{Basal Plane gamma surface}
-\item \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/data/supercell\_8-8-8/plot\_hsbc\_pkl.py}{plot\(_{\text{hbgs}}\)}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/data/supercell\_8-8-8/hgsBte888.pkl}{energy}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/data/supercell\_8-8-8/hgsBtx888.pkl\%20}{x}, \href{file:///home/tigany/Documents/disl\_gsurf/hcp\_pris\_screw/hcp\_relaxed\_pris\_screw/gamma\_surfaces/data/supercell\_8-8-8/hgsBty888.pkl\%20}{y}
+\item File and data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py}{basal$_{\text{energy}}$$_{\text{plotting}}$} \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png}
+\item Basal plot $8\times 8\times 8$
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/Figures/gamma_surface_8-8-8_basal_tbe.png}{Basal Plane gamma surface}
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py}{plot$_{\text{hbgs}}$}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl}{energy}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl\%20}{x}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl\%20}{y}
 \end{itemize}
 
 
 \subsubsection{Literature Review}
-\label{sec:org0a415e9}
+\label{sec-2-4-5}
 
 \begin{enumerate}
 \item General notes on dislocations
-\label{sec:orgdce10a6}
+\label{sec-2-4-5-1}
 \begin{itemize}
 \item Dislocations have areas of tension (distance between atoms is larger
 than the lattice vector) and compression (distance is less than the
 lattice vector)
-\item A reasonable value for the dislocation core radius r0 therefore lies in the range \(\mathbf{b}\) to \(4\mathbf{b}\), i.e. \(r_0 \geq 1 nm\) in most cases.
+\item A reasonable value for the dislocation core radius r0 therefore lies in the range $\mathbf{b}$ to $4\mathbf{b}$, i.e. $r_0 \geq 1 nm$ in most cases.
 \end{itemize}
 
 \item How do stacking faults occur?
-\label{sec:org82aac54}
+\label{sec-2-4-5-2}
 Stacking faults can occur:
 \begin{itemize}
 \item During crystal growth
@@ -700,26 +803,26 @@ bordered by an edge dislocation.
 \end{itemize}
 
 \item Types of stacking faults.
-\label{sec:org9e07d93}
+\label{sec-2-4-5-3}
 \begin{itemize}
 \item Disk of vacancies: \emph{intrinsic} stacking fault.
 \item Interstitial agglomeration: \emph{extrinsic} stacking fault.
 \item Both are bordered by an edge dislocation.
 \begin{itemize}
 \item These are \emph{partial} dislocations.
-\item In fcc these are Frank partials of burgers vector \(\mathbf{b} =
-         \pm \frac{a}{3}\langle 111\rangle\)
+\item In fcc these are Frank partials of burgers vector $\mathbf{b} =
+         \pm \frac{a}{3}\langle 111\rangle$
 \end{itemize}
 \end{itemize}
 
 \begin{enumerate}
 \item Types of stacking faults in hcp
-\label{sec:org01e4e26}
+\label{sec-2-4-5-3-1}
 \begin{itemize}
-\item Intrinsic 1 (\(I_1\)) = (ABAB|CBCB) -- Basal plane
-\item Intrinsic 2 (\(I_2\)) = (ABAB|CACA) -- Basal plane
-\item Extrinsic (\(I_{\text{E}}\)) = (ABAB|C|ABAB) -- Basal plane
-\item Easy prismatic \(F_{1} = \mathbf{b} / 2\)
+\item Intrinsic 1 ($I_1$) = (ABAB|CBCB) -- Basal plane
+\item Intrinsic 2 ($I_2$) = (ABAB|CACA) -- Basal plane
+\item Extrinsic ($I_{\text{E}}$) = (ABAB|C|ABAB) -- Basal plane
+\item Easy prismatic $F_{1} = \mathbf{b} / 2$
 \begin{itemize}
 \item This energy corresponds to a true metastable stacking fault but has
 only been seen in the case of DFT so far.
@@ -728,7 +831,7 @@ only been seen in the case of DFT so far.
 \end{enumerate}
 
 \item Partial dislocations
-\label{sec:orgf40ea45}
+\label{sec-2-4-5-4}
 \begin{itemize}
 \item Partial dislocations \emph{must} be bordered by a two dimensional
 defect: usually a stacking fault.
@@ -749,7 +852,7 @@ point defects.
 \end{itemize}
 
 \item Energy considerations with stacking faults and partials.
-\label{sec:orga72fca6}
+\label{sec-2-4-5-5}
 \begin{itemize}
 \item Have energy gain from splitting into two smaller burgers vectors
 \item Interaction energy of two partials will be large at smaller distances
@@ -762,10 +865,10 @@ minimise the distance
 that the stacking fault energies are too high. (Because of dense packing?)
 \end{itemize}
 \item Gamma surfaces in DFT
-\label{sec:org5c15c52}
+\label{sec-2-4-5-6}
 \begin{enumerate}
-\item\relax [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium \$\(\gamma\)\$-surfaces and stacking faults.
-\label{sec:org675bd39}
+\item\relax [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults.
+\label{sec-2-4-5-6-1}
 \begin{itemize}
 \item Comparison between central force  embedded atom ineractions, N-body
 central force, N-body angular, empirical potentials, tight binding and
@@ -782,7 +885,7 @@ ideal hcp lattice might provide accurate reproduction of dislocation
 core structure.
 \item Not systematic improvement going from N-body central force potentials
 to TB.
-\item Inversion in strength between \(C_{66}\) and \(C_{44}\) in the BOP
+\item Inversion in strength between $C_{66}$ and $C_{44}$ in the BOP
 calculations of Girshick and Pettifor
 \begin{itemize}
 \item So it was stipulated that the N-body effects of this model were not
@@ -808,62 +911,62 @@ the prismatic easy fault.
 \end{enumerate}
 \end{enumerate}
 \subsection{Notes on Thermodynamics and Stability}
-\label{sec:orgd2afb44}
+\label{sec-2-5}
 
 \subsubsection{Wallace 1972}
-\label{sec:org18ba163}
+\label{sec-2-5-1}
 \begin{itemize}
 \item For hexagonal materials, there are general stability requirements:
 \begin{itemize}
-\item \(C_{11} - C_{12} > 0\)
-\item \(C_{11} + C_{12} + C_{33} > 0\)
-\item \(( C_{11} + C_{12} ) C_{33} - 2C_{13}^{2} > 0\)
-\item \(C_{44} > 0\)
-\item \(C_{66} = \frac{1}{2}(C_{11} - C_{12}) > 0\)
-\item \(( C_{11} + C_{12} )C_{33} > 0\)
-\item \(C_{11} + C_{12} > 0\)
-\item \(C_{33} > 0\)
-\item \(C_{11} > 0\)
+\item $C_{11} - C_{12} > 0$
+\item $C_{11} + C_{12} + C_{33} > 0$
+\item $( C_{11} + C_{12} ) C_{33} - 2C_{13}^{2} > 0$
+\item $C_{44} > 0$
+\item $C_{66} = \frac{1}{2}(C_{11} - C_{12}) > 0$
+\item $( C_{11} + C_{12} )C_{33} > 0$
+\item $C_{11} + C_{12} > 0$
+\item $C_{33} > 0$
+\item $C_{11} > 0$
 \end{itemize}
 \item The equilibrium configuration of ions plus external forces is a stable
-equilibrium if the total system potential \(\Psi\) is minimum with respect
+equilibrium if the total system potential $\Psi$ is minimum with respect
 to small virtual displacements of dions from equilibrium.
 \item Cauchy relations (at least in the cubic case) will be destroyed if
 non-central forces are included in the crystal potential.
 \end{itemize}
 
 \subsubsection{Fast, Will, Johansson: Elastic constants in hexagonal transition metals}
-\label{sec:org73d4275}
+\label{sec-2-5-2}
 
 \begin{enumerate}
 \item Cauchy Relations
-\label{sec:org39bc28a}
+\label{sec-2-5-2-1}
 \begin{itemize}
 \item Cauchy relations for hexagonal materials:
 \begin{itemize}
-\item \(C_{13} = C_{44}\)
-\item \(C_{12} = C_{66} = \frac{1}{2}(C_{11} - C_{12})\)
+\item $C_{13} = C_{44}$
+\item $C_{12} = C_{66} = \frac{1}{2}(C_{11} - C_{12})$
 \end{itemize}
 \item These only are meant to hold for central forces.
 \item These Cauchy forces have been shown to hold more in hexagonal materials
 rather than cubic ones.
-\item In cubic materials sometimes one finds \(C_{44}\) four times smaller than
-\(C_{12}\).
+\item In cubic materials sometimes one finds $C_{44}$ four times smaller than
+$C_{12}$.
 \item They showed the Cauchy ratios:
 \begin{itemize}
-\item \(C_{12}/C_{66}\)
-\item \(C_{13}/C_{44}\)
+\item $C_{12}/C_{66}$
+\item $C_{13}/C_{44}$
 \end{itemize}
 \item The Cauchy relations were close to 1 apart from calculations with Co, Zr and
 Ti, where it was closer to 2.
-\item These are smaller than the \(3/4\) times deviations in cubic crystals.
+\item These are smaller than the $3/4$ times deviations in cubic crystals.
 \end{itemize}
 
 \item Normalised elastic constant
-\label{sec:org62fe3a6}
+\label{sec-2-5-2-2}
 \begin{itemize}
 \item To investigate Cauchy relations fully they used a normalised elastic constant which
-was obtained by dividiing by the bulk modulus: \(C'_{ij} = C_{ij}/B\)
+was obtained by dividiing by the bulk modulus: $C'_{ij} = C_{ij}/B$
 \item It becomes easier to study trends as one is normlising the
 interatomic forces with an average restoring force of the system,
 when dividing by the bulk modulus.
@@ -871,17 +974,17 @@ when dividing by the bulk modulus.
 \end{itemize}
 \end{enumerate}
 \subsection{Notes on Tight Binding and BOP Models}
-\label{sec:org111ade3}
+\label{sec-2-6}
 
 \subsubsection{Pair correlation and cutoffs}
-\label{sec:orge93930d}
+\label{sec-2-6-1}
 \begin{itemize}
 \item Analysing the pair correlation function in ovito, it seems reasonable
 that one should have cutoffs, if \$ a = 2.95 \$ and \$ c = 4.683\$ to give a
-\(c/a = 1.587\), of 4.7\(\AA\), as this is past the third neighbour
+$c/a = 1.587$, of 4.7$\AA$, as this is past the third neighbour
 distance.
 \item This was done in Znam's thesis.
-\item At the moment we are cutting off at \(8.5 ryd\), which gives the
+\item At the moment we are cutting off at $8.5 ryd$, which gives the
 neighbours to be 20, so we are actually not including a multiple of the
 coordination for the neighbour table, which may give a weird structure
 by symmetry.
@@ -891,7 +994,7 @@ structures.
 \item The TB Iron model has a cutoff which is twice the lattice parameter.
 \end{itemize}
 \subsubsection{Trinkle 2006}
-\label{sec:org8eebce7}
+\label{sec-2-6-2}
 \begin{itemize}
 \item Collapse problem found in tight binding if atoms come too close
 together. Electrons go in the bonding state and not the anti-bonding
@@ -899,9 +1002,9 @@ state and so the energy goes down
 \item Can be fixed by implementing spline potential that levels off below a
 given cutoff, which effectively simulates a pair potential.
 \item Environmentally dependent on-site terms were used instead of a pair potential.
-\item These on-site energies are dependent on the local density \(\rho_{i}\) and
-they have a cutoff function \(f_{c}(r_{ij})\) which has fixed parameters
-\(R_{0}\) and \(l_{0}\).\[
+\item These on-site energies are dependent on the local density $\rho_{i}$ and
+they have a cutoff function $f_{c}(r_{ij})$ which has fixed parameters
+$R_{0}$ and $l_{0}$.\[
       \epsilon_{i,l} = a_{l} + b_{l}\rho_{i}^{2/3} + c_{l}\rho_{i}^{4/3} +
       d_{l}\rho_{i}^{2}\] 
 \[ \rho_{i} = \sum_{j \neq i} \text{exp}\big\{ -\lambda^{2} r_{ij}
@@ -910,10 +1013,10 @@ they have a cutoff function \(f_{c}(r_{ij})\) which has fixed parameters
       }\]
 \end{itemize}
 \subsubsection{Stefan Znam 2001 Thesis}
-\label{sec:orgd935c17}
+\label{sec-2-6-3}
 \begin{enumerate}
 \item Cauchy Pressures
-\label{sec:org3167c42}
+\label{sec-2-6-3-1}
 \begin{itemize}
 \item Cauchy pressures have zero contribution from pair potentials at
 equilibrium.
@@ -930,7 +1033,7 @@ covalent d bonds.
 \end{itemize}
 \begin{enumerate}
 \item Reason for Cauchy Pressures
-\label{sec:org67f214d}
+\label{sec-2-6-3-1-1}
 \begin{itemize}
 \item The reason for negative Cauchy pressures is meant to be from covalent
 character of d bonding, but when using tight binding models, which
@@ -945,7 +1048,7 @@ between orbitals in the atom.
 \end{itemize}
 \end{itemize}
 \item Why TB can't have negative Cauchy Pressures
-\label{sec:orge0e687e}
+\label{sec-2-6-3-1-2}
 \begin{itemize}
 \item TB only has contributions from the bond part of the interactions as the
 pair potential at equilibrium has no contribution to the Cauchy
@@ -960,7 +1063,7 @@ orbitals.
 tightly bound anyway.
 \end{itemize}
 \item Thoughts: What does this mean for Tight Binding
-\label{sec:orgcd1f21f}
+\label{sec-2-6-3-1-3}
 \begin{itemize}
 \item As the Cauchy pressure contributions only come from the bond integrals
 and the pair potential, then the reason that some of the Cauchy
@@ -978,7 +1081,7 @@ are squeezed into the core from the unsaturated d bonds.
 \end{enumerate}
 \end{enumerate}
 \subsection{Ti Swarm fitting.}
-\label{sec:org7a67a5a}
+\label{sec-2-7}
 \begin{itemize}
 \item Here used fitting with uniform weights across all target quantities
 without a regularisation of the parameters.
@@ -988,7 +1091,7 @@ be. This calls for the use of weighted parameters.
 regards to titanium.
 \end{itemize}
 
-\begin{verbatim}
+\begin{minted}[]{bash}
 Build Objective Function
  ...with L1 norm 
 Objective function: 563 
@@ -996,30 +1099,30 @@ Objective Function = 563.2340263379571
 Stopping search: Swarm best position change less than 1e-08 
 [ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
 563.2340263379571
-\end{verbatim}
+\end{minted}
 
 \begin{center}
 \begin{tabular}{lrrrrrr}
-Quantity & predicted & target & squared diff. & p\(_{\text{norm}}\) & weight & objective\\
+Quantity & predicted & target & squared diff. & p$_{\text{norm}}$ & weight & objective\\
 \hline
-a\(_{\text{hcp}}\): & 4.744693 & 5.576790 & 0.692385 & 0.832097 & 1.000000 & 1.524483\\
-c\(_{\text{hcp}}\): & 7.495518 & 8.852101 & 1.840316 & 1.356583 & 1.000000 & 3.196899\\
-c\(_{\text{11}}\): & 174.924630 & 176.100000 & 1.381495 & 1.175370 & 1.000000 & 2.556865\\
-c\(_{\text{33}}\): & 190.161490 & 190.500000 & 0.114589 & 0.338510 & 1.000000 & 0.453099\\
-c\(_{\text{44}}\): & 54.517320 & 50.800000 & 13.818465 & 3.717320 & 1.000000 & 17.535784\\
-c\(_{\text{12}}\): & 65.010403 & 86.900000 & 479.154446 & 21.889597 & 1.000000 & 501.044043\\
-c\(_{\text{13}}\): & 73.335501 & 68.300000 & 25.356271 & 5.035501 & 1.000000 & 30.391772\\
-a\(_{\text{omega}}\): & 7.331279 & 8.732543 & 1.963543 & 1.401265 & 1.000000 & 3.364808\\
-c\(_{\text{omega}}\): & 4.768459 & 5.323431 & 0.307994 & 0.554972 & 1.000000 & 0.862966\\
-u\(_{\text{omega}}\): & 1.000025 & 1.000000 & 0.000000 & 0.000025 & 1.000000 & 0.000025\\
-DeltaE\(_{\text{O}}\)\(_{\text{hcp}}\): & -1.170318 & -0.734754 & 0.189716 & 0.435564 & 1.000000 & 0.625281\\
-a\(_{\text{bcc}}\): & 5.331467 & 6.179489 & 0.719140 & 0.848021 & 1.000000 & 1.567162\\
+a$_{\text{hcp}}$: & 4.744693 & 5.576790 & 0.692385 & 0.832097 & 1.000000 & 1.524483\\
+c$_{\text{hcp}}$: & 7.495518 & 8.852101 & 1.840316 & 1.356583 & 1.000000 & 3.196899\\
+c$_{\text{11}}$: & 174.924630 & 176.100000 & 1.381495 & 1.175370 & 1.000000 & 2.556865\\
+c$_{\text{33}}$: & 190.161490 & 190.500000 & 0.114589 & 0.338510 & 1.000000 & 0.453099\\
+c$_{\text{44}}$: & 54.517320 & 50.800000 & 13.818465 & 3.717320 & 1.000000 & 17.535784\\
+c$_{\text{12}}$: & 65.010403 & 86.900000 & 479.154446 & 21.889597 & 1.000000 & 501.044043\\
+c$_{\text{13}}$: & 73.335501 & 68.300000 & 25.356271 & 5.035501 & 1.000000 & 30.391772\\
+a$_{\text{omega}}$: & 7.331279 & 8.732543 & 1.963543 & 1.401265 & 1.000000 & 3.364808\\
+c$_{\text{omega}}$: & 4.768459 & 5.323431 & 0.307994 & 0.554972 & 1.000000 & 0.862966\\
+u$_{\text{omega}}$: & 1.000025 & 1.000000 & 0.000000 & 0.000025 & 1.000000 & 0.000025\\
+DeltaE$_{\text{O}}$$_{\text{hcp}}$: & -1.170318 & -0.734754 & 0.189716 & 0.435564 & 1.000000 & 0.625281\\
+a$_{\text{bcc}}$: & 5.331467 & 6.179489 & 0.719140 & 0.848021 & 1.000000 & 1.567162\\
 bandwidth: & 0.325300 & 0.426000 & 0.010140 & 0.100700 & 1.000000 & 0.\\
  &  &  &  &  &  & \\
 \end{tabular}
 \end{center}
 \subsection{DFT}
-\label{sec:org101dd9b}
+\label{sec-2-8}
 Run:
 \begin{itemize}
 \item lmchk --getwsr ti
@@ -1029,11 +1132,11 @@ Run:
 \item Run lmf
 \end{itemize}
 \subsection{Python}
-\label{sec:org59d5140}
+\label{sec-2-9}
 \subsubsection{OS}
-\label{sec:org21cdcdc}
+\label{sec-2-9-1}
 Use OS module rather than making a load of files to a certain directory. 
-\begin{verbatim}
+\begin{minted}[]{python}
 import os
 ############   Current working directory  ########################
 # detect the current working directory and print it
@@ -1061,13 +1164,13 @@ except OSError:
     print ("Creation of the directory %s failed" % path)
 else:  
     print ("Successfully created the directory %s" % path)
-\end{verbatim}
+\end{minted}
 \subsubsection{Shelve}
-\label{sec:org5a8532b}
+\label{sec-2-9-2}
 Use the shelve module to store multiple objects. 
 
 To write in:
-\begin{verbatim}
+\begin{minted}[]{python}
 import shelve
 
 integers = [1, 2, 3, 4, 5]
@@ -1077,10 +1180,10 @@ integers = [1, 2, 3, 4, 5]
 # with contextlib.closing(shelve.open('shelf-example', 'c')) as shelf:
 with shelve.open('shelf-example', 'c') as shelf:
     shelf['ints'] = integers
-\end{verbatim}
+\end{minted}
 
 To extract values:
-\begin{verbatim}
+\begin{minted}[]{python}
 import shelve
 
 # If you're using Python 2.7, import contextlib and use
@@ -1089,18 +1192,18 @@ import shelve
 with shelve.open('shelf-example', 'r') as shelf:
     for key in shelf.keys():
 	print(repr(key), repr(shelf[key])))
-\end{verbatim}
+\end{minted}
 
 \section{DFT Lectures UCL}
-\label{sec:org6c42b08}
+\label{sec-3}
 \subsection{David Bowler O(N) DFT}
-\label{sec:org6bf5861}
+\label{sec-3-1}
 \subsubsection{Types of Exchange-correlation Functionals}
-\label{sec:orgb74718b}
+\label{sec-3-1-1}
 
 \begin{enumerate}
 \item LDA
-\label{sec:orgd5a873b}
+\label{sec-3-1-1-1}
 \begin{itemize}
 \item The electron density is the same as a uniform electron gas.
 \item Exchange is Slater.
@@ -1109,7 +1212,7 @@ calculations.
 \end{itemize}
 
 \item GGA
-\label{sec:org39d568e}
+\label{sec-3-1-1-2}
 \begin{itemize}
 \item The gradient of the electron density is included in functional.
 \item Have the reduced density \[ \frac{ \nabla n(\mathbf{r})}{n( \mathbf{r}
@@ -1117,7 +1220,7 @@ calculations.
 \end{itemize}
 \begin{enumerate}
 \item Perdew-Burke-Ernzerhof
-\label{sec:org64b69e2}
+\label{sec-3-1-1-2-1}
 \begin{itemize}
 \item \[ E_{\text{x}} = \int n( \mathbf{r} ) \epsilon_{\text{xc}}[n( \mathbf{r}
         )] F_{\text{x}}(S)d\mathbf{r} \]
@@ -1127,7 +1230,7 @@ calculations.
 \end{enumerate}
 
 \item Hybrid Functionals
-\label{sec:org64d0f60}
+\label{sec-3-1-1-3}
 \begin{itemize}
 \item These are functionals to correct the self-interaction energy that is
 apparent in the previously mentioned functionals.
@@ -1143,32 +1246,32 @@ the function otherwise it is not stable.
 
 DFT speed is limited by how it can find the energies of the system we are
 interested in. 
-Diagonalisation is inherently an \(\mathcal{O}(N^3)\) process. 
+Diagonalisation is inherently an $\mathcal{O}(N^3)$ process. 
 
-To actually build the hamiltonian it is of \(\mathcal{O}(N^2)\). 
-Solving is \(\mathcal{O}(N^3)\). 
+To actually build the hamiltonian it is of $\mathcal{O}(N^2)$. 
+Solving is $\mathcal{O}(N^3)$. 
 
 How do we solve for DFT?
 Generally it depends on the choice of functional we have. 
-Hybrid functionals almost scale as \(\mathcal{O}(N^4)\) due to the inclusion of exact
+Hybrid functionals almost scale as $\mathcal{O}(N^4)$ due to the inclusion of exact
 exchange interaction by Hartree-Fock. Because of this exact exchange, there
 are better band gaps . 
 
-The \(\mathcal{O}(N)\) DFT generally comes because of the manipulation of sparse matrices. 
-Insead of matrix multiplication being of \(\mathcal{O}(N^3)\) we can have matrix
-multiplication being of \(\mathcal{O}(N)\). 
+The $\mathcal{O}(N)$ DFT generally comes because of the manipulation of sparse matrices. 
+Insead of matrix multiplication being of $\mathcal{O}(N^3)$ we can have matrix
+multiplication being of $\mathcal{O}(N)$. 
 
-The reason we can essentially do \(\mathcal{O}(N)\) is that in the Kohn-Sham equations, the
-density is actually a local function (\(n(\mathbf{r})\), not \(n(\mathbf{r}-\mathbf{r}')\)) 
+The reason we can essentially do $\mathcal{O}(N)$ is that in the Kohn-Sham equations, the
+density is actually a local function ($n(\mathbf{r})$, not $n(\mathbf{r}-\mathbf{r}')$) 
 This means that in theory we can actually have a theory which sufficiently
 describes the dynamics of a given system with an electron density that is
 local in space. 
-In many DFT codes however, the electron density is non-local (\(n(
-\mathbf{r} - \mathbf{r}')\)), and
+In many DFT codes however, the electron density is non-local ($n(
+\mathbf{r} - \mathbf{r}')$), and
 this slows down the calculation. 
-To actually make it \(\mathcal{O}(N)\), we have to have range cutoffs for the interactions
+To actually make it $\mathcal{O}(N)$, we have to have range cutoffs for the interactions
 of the atoms. This means that the hamilitonian is sparse as quite a lot of the
-elements are zero such that we can use methods that involve \(\mathcal{O}(N)\)
+elements are zero such that we can use methods that involve $\mathcal{O}(N)$
 multiplication. 
 
 When it comes to Structural relaxation there are a few things that come to
@@ -1181,9 +1284,9 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 \end{enumerate}
 
 \subsection{Jochen Blumberger: Molecular dynamics}
-\label{sec:org2c5110a}
+\label{sec-3-2}
 \subsubsection{Introduction}
-\label{sec:orgb1b95c3}
+\label{sec-3-2-1}
 \begin{itemize}
 \item Molecular dynamics is important. (Even at 0K there is a zero point energy
 of vibration).
@@ -1191,7 +1294,7 @@ of vibration).
 \end{itemize}
 
 \subsubsection{Born-Oppenheimer approximation}
-\label{sec:orgf0d7713}
+\label{sec-3-2-2}
 
 \begin{itemize}
 \item Have hamiltonian that consists of interaction between:
@@ -1204,14 +1307,14 @@ of vibration).
 this large hamiltonian as a product state consisting of an electronic
 ground state and nuclear eigenstate.
 \item Second approximation is that we are able to say, as the mass of the ion
-\(M_{I} \sim 1000 m_{e}\) then we can say that the kinetic energy term of
+$M_{I} \sim 1000 m_{e}$ then we can say that the kinetic energy term of
 with regard to the nucleus positions will be small.
 \item From this we can say that the action of this nuclear kinetic energy
 operator on the electronic eigenstate is small.
 \item This means we can neglect the \textbf{electronic} wavefunction, and work with
 the equation \[ \hat{H}\Phi(\mathbf{R}) = E^0_{\mathbf{R}}\Phi(\mathbf{R}) \]
 \begin{itemize}
-\item Where \(E^{0}_{ \mathbf{R} }\) is the ground state energy hypersurface
+\item Where $E^{0}_{ \mathbf{R} }$ is the ground state energy hypersurface
 from the electronic wavefunction. We get this from DFT calculations.
 \end{itemize}
 \item Even now we can only really calculate 8 degrees of freedom for the
@@ -1219,11 +1322,11 @@ Nuclear wavefunction.
 \end{itemize}
 
 \subsubsection{Molecular Dynamics}
-\label{sec:orgfea4bbd}
+\label{sec-3-2-3}
 
 \begin{enumerate}
 \item Verlet Algorithm
-\label{sec:org9e61c52}
+\label{sec-3-2-3-1}
 \begin{itemize}
 \item This algorithm simply uses the forward and backward derivative of the
 nuclear positions and adds them together to get a formula for the
@@ -1236,14 +1339,14 @@ positon.
 \item This causes a problem however: the velocity is calculated a step
 after that of the positons. So this leads to the Velocity Verlet
 algorithm.
-\item The timestep for these algorithms is on the order of \(1fs\), such that
-one can have adequate resolution of atomic vibrations (\(\f sim
-         10^{-14}s^{-1}\), so period is around \(10fs\))
+\item The timestep for these algorithms is on the order of $1fs$, such that
+one can have adequate resolution of atomic vibrations ($\f sim
+         10^{-14}s^{-1}$, so period is around $10fs$)
 \end{itemize}
 \end{itemize}
 
 \item Velocity Verlet Algorithm
-\label{sec:org523c111}
+\label{sec-3-2-3-2}
 \begin{itemize}
 \item For this algorithm the forward derivative with respect to nuclear
 positions is used with a calculation of the force at a later time.
@@ -1255,19 +1358,19 @@ terms of later time.
 \end{itemize}
 
 \item How to calculate the forces
-\label{sec:org28a6ae8}
+\label{sec-3-2-3-3}
 \begin{itemize}
 \item Use the Hellmann-Feynman theorem.
 \begin{itemize}
 \item $$ \mathbf{f}_{I} = \bra{ \psi^{0}_{\mathbf{R}} }
          \frac{\partial}{\partial   \mathbf{R}_{I}}\hat{H} \ket{ \psi^{0}_{\mathbf{R}} }  $$
 \end{itemize}
-\item This is derived using the parameter \(\lambda\), assuming that the
+\item This is derived using the parameter $\lambda$, assuming that the
 Hamiltonian depends on this lambda.
 \end{itemize}
 
 \item Carr-Parinello MD
-\label{sec:org6d63a53}
+\label{sec-3-2-3-4}
 \begin{itemize}
 \item This is a form of molecular dynamics where both the positions and the
 orbitals are used as dynamical variables.
@@ -1279,18 +1382,18 @@ correct orbitals, but:
 \begin{itemize}
 \item The dynamics are not always in the ground state
 energy.
-\item The necessary time step is decreased by about \(3-4\) times (speed
-increase is \(5-10\) times from removal of self-consistency)
+\item The necessary time step is decreased by about $3-4$ times (speed
+increase is $5-10$ times from removal of self-consistency)
 \end{itemize}
 \end{itemize}
 \end{enumerate}
 
 \subsection{Matteo Salvalglio: Enhanced Sampling}
-\label{sec:org965450c}
+\label{sec-3-3}
 \subsubsection{Introduction}
-\label{sec:orgb0c58e3}
+\label{sec-3-3-1}
 \begin{itemize}
-\item Have a phase space that is \(6N\) dimensional (3 spatial positions and 3
+\item Have a phase space that is $6N$ dimensional (3 spatial positions and 3
 components of momenta).
 \item Each point in this phase space is a microstate.
 \item The microstates sampled are from the Canonical Ensemble (N,V,T).
@@ -1302,7 +1405,7 @@ components of momenta).
 dimensional space.
 \end{itemize}
 \subsubsection{Ergodic principle}
-\label{sec:org29ba9ca}
+\label{sec-3-3-2}
 \begin{itemize}
 \item This is the principle which states that the amount of
 time that microstates of the same energy spend in a configuration is
@@ -1310,31 +1413,31 @@ proportional to the volume of phase space they occupy.
 \item In other words, every microstate is equiprobable.
 \item So the observable quantity: \[ O = \langle O \rangle = \underset{t
       \rightarrow \inf}{lim} \frac{1}{t} \int_{0}^{t} \text{d}t O(x(t)),  \] where
-\(O(x(t))\) is the instantaneous realisation of \(O(x)\)
+$O(x(t))$ is the instantaneous realisation of $O(x)$
 \end{itemize}
 \subsubsection{Collective variables}
-\label{sec:orgfe7d56b}
+\label{sec-3-3-3}
 \begin{itemize}
 \item Collective variables are just functions that depend on the coordinates
-(CVs) \(S(\mathbf{R})\)
-\item Given a collective variable we can define a probability density \(p(S)\)
+(CVs) $S(\mathbf{R})$
+\item Given a collective variable we can define a probability density $p(S)$
 \item So \[ p(S) = \int \text{d}\mathbf{R} [ \delta ( S(\mathbf{R}) - S ) ] p(\mathbf{R}) \]
 \item \[ p(\mathbf{R}) = \frac{e^{-\beta U(\mathbf{R)}}}{\int e^{-\beta
       U(\mathbf{R)}} \text{d}\mathbf{R} }, \] where the denominator is the
-configuration integral \(\mathcal{Z}\)
+configuration integral $\mathcal{Z}$
 \end{itemize}
 \begin{enumerate}
 \item Calculating free energies from collective variables
-\label{sec:org485d6ae}
+\label{sec-3-3-3-1}
 \begin{itemize}
 \item Free energy profile is then just \[  F(S) = -k_{B}T ln( p(S) )\]
-\item The free energy change between configurations \(\text{A}\) and B are then
+\item The free energy change between configurations $\text{A}$ and B are then
 just  \[ \Delta F_{\text{AB}} = -k_{B}T ln\big\{  \frac{\int_{B} p(S) \text{d}S}{\int_{A} p(S) \text{d}S}  \big\}\]
-\item Can think of these configurations as spikes in \(p(S)\) and troughs in
-\(F(S)\), with some form of energy barrier between them. This region can
+\item Can think of these configurations as spikes in $p(S)$ and troughs in
+$F(S)$, with some form of energy barrier between them. This region can
 then be split in to regions belonging to A and B, from which the
 separate integrations can be evaluated.
-\item This energy barrier is on the order of \(kT\)
+\item This energy barrier is on the order of $kT$
 \item If not, then simulation times will be very large to be able to obtain
 a result that obeys ergodicity.
 \item Can use a biased potential for the sampling and work backwards to
@@ -1342,7 +1445,7 @@ obtain the actual probability density.
 \end{itemize}
 \end{enumerate}
 \subsubsection{Biased Potentials}
-\label{sec:org0f4238b}
+\label{sec-3-3-4}
 \begin{itemize}
 \item Biased potentials can be used to reconstruct the Free energy landscape
 of a system with respect to its collective variables.
@@ -1351,32 +1454,32 @@ energy barrier such that different parts of the phase space can be
 explored.
 \item From this, the whole of the phase space in consideration can be explored
 such that the probability distribution with respect to a collective
-variable \(p^{b}(S(R))\) can be found.
+variable $p^{b}(S(R))$ can be found.
 \item This probability distribution is related to the unbiased probability
-distribution \(p^{U}(S(R))\).
+distribution $p^{U}(S(R))$.
 \end{itemize}
 
 \begin{enumerate}
 \item Introduction to Biased Potentials
-\label{sec:org2f4b2fa}
+\label{sec-3-3-4-1}
 Two main equations:
-The configuration integral \(\mathcal{Z}\) and the \emph\{Absolute Free
-  Energy\} \(\mathcal{A}(N,V,T)\):
+The configuration integral $\mathcal{Z}$ and the \emph\{Absolute Free
+  Energy\} $\mathcal{A}(N,V,T)$:
 \[ \mathcal{Z} = \int e^{-\beta U(R)} dR\]
 \[ \mathcal{A}(N,V,T) = -\frac{1}{\beta} \text{ln}\big\{ \mathcal{Z}
      \big\} \]
 
-Considering two different systems \(A\) and \(B\), with two different
-potential energy functions \(U_A(R)\) and \(U_B(R)\), we can have separate
-configurational integrals \(\mathcal{Z}_{A}\) and \(\mathcal{Z}_{B}\) as per
+Considering two different systems $A$ and $B$, with two different
+potential energy functions $U_A(R)$ and $U_B(R)$, we can have separate
+configurational integrals $\mathcal{Z}_{A}$ and $\mathcal{Z}_{B}$ as per
 the definition above. 
 
 Then, we can actually pertubate with respect to
-another variable defining \(\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)\)
+another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
 \[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
      \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
 
-The last term is the ensemble average with respect to \(A\)
+The last term is the ensemble average with respect to $A$
 This means we can express the free energy difference (Zwanzig 1953)
 \[ \Delta \mathcal{A}_{AB} =  -\text{k}_{\text{B}} T \text{ln} \Big(
      \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
@@ -1384,14 +1487,14 @@ This means we can express the free energy difference (Zwanzig 1953)
 
 To sample this efficiently we can use biased potentials. 
 \[ U_{\text{tot}} = U_{0}(R) + V( S(R) ),  \]
-where \(V(S(R))\) is the biased potential which is a function of the collective variables. 
+where $V(S(R))$ is the biased potential which is a function of the collective variables. 
 
 We can define a partition function:
 \[ Q_{\text{tot}} = Q_{0}\big\langle e^{-\beta V(S(R))}\big\rangle_{0}  \]
 
 Can express the actual probability density of the system in terms of a biased potential 
 \[ p^{u}(S(R)) = p^{b}(S(R)) e^{ \beta V(S(R)) } \big\langle e^{-\beta V}\big\rangle_{0} \]
-where \(u\) and \(b\) denote unbiased and biased configurations.  
+where $u$ and $b$ denote unbiased and biased configurations.  
 
 This gives the free energy as
 \begin{align}
@@ -1401,32 +1504,66 @@ F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(
 where the term on the second line is a constant. 
 
 \item Umbrella sampling
-\label{sec:org7b54838}
+\label{sec-3-3-4-2}
 If we don't know the shape of the free energy surface then we can use \emph{Umbrella Sampling}
+If we know for example, two metastable states that we want to sample the we can make a pathway between them using this method.
+
+Umbrella sampling defines a series of biases simulations (\emph{windows}) such that one can reconstruct the free energy surface. 
+These simulations must have probability distributions that overlap. 
+
+When one goes through the process of umbrella sampling, naively going through the reconstruction of the free energy surface
+gives a poor reconstruction. It is necessary that weights are in place such that the reconstruction of the global free energy
+profile is smooth. 
+
+\[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) + C_{i}}  \},\] 
+\[ p_{i} = p^{b}_{i}(S) e^{ +\beta V(R) }e^{\beta C_{i}} \]
+\[ p(S) = \sum_{N \text{windows}} p_i{S} w_{i} \]
+\[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{N \text{windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} } \]
 
 
+For these terms we need to know what the unbiased $p(S)$ is, but that is what we are trying to solve. 
+We need to know the ensemble average over the unbiased probability distribution. 
+\[ e^{-\beta C_{i}} = \int e^{ \beta V_{i}(S) } p(S) \text{d}S \]
+We can guess that all $C_{i} = 0$ and then solve self-consistently until shifts of $C_i$ are within some tolerance. 
 
-\item 
-\label{sec:orgd73edd6}
+\begin{enumerate}
+\item Related papers and books
+\label{sec-3-3-4-2-1}
+Look up \textbf{Umbrella integration} and \textbf{Thermodynamic integration}, where one can achieve this result analytically. 
+
+Original paper by Zwanzig in 1954
+
+1993 Ben Roux: WHAM
+
+m.salvalaglio@ucl.ac.uk
+
+
+For the error of these one can do block averaging.
 \end{enumerate}
+
+
+\item Adaptive potential bias
+\label{sec-3-3-4-3}
+\end{enumerate}
+
 \subsection{Useful definitions of Thermodynamic potentials}
-\label{sec:orgb3681e6}
+\label{sec-3-4}
 \begin{itemize}
 \item Internal Energy:
 \begin{itemize}
 \item The capacity to do work and release heat.
 \item The energy contained withing the system excluding kinetic energy.
 \item Equation: \[ U = \int ( t\text{d}S -p\text{d}V + \sum_{i}\mu_{i}\text{d}N_{i} ) \]
-\item \(\Delta U\) is the total energy added to the system.
-\item Natural variables: \(\{ S, V, \{N_{i}\} \}\)
+\item $\Delta U$ is the total energy added to the system.
+\item Natural variables: $\{ S, V, \{N_{i}\} \}$
 \end{itemize}
 \item Helmholtz Free Energy:
 \begin{itemize}
 \item The energy at constant temperature and pressure.
 \item The capacity to do mechanical plus non-mechanical work
 \item Equation: \[ F = U - TS \]
-\item \(\Delta F\) is the total work done on the system.
-\item Natural variables: \(\{ T, V, \{N_{i}\} \}\)
+\item $\Delta F$ is the total work done on the system.
+\item Natural variables: $\{ T, V, \{N_{i}\} \}$
 \end{itemize}
 \item Gibbs Free Energy:
 \begin{itemize}
@@ -1437,31 +1574,31 @@ If we don't know the shape of the free energy surface then we can use \emph{Umbr
 system reaches chemical equilibrium at constant pressure and
 temperature.
 \item Equation: \[ G = U + pV - TS  \]
-\item \(\Delta G\) is the total non-mechanical work done on the system.
-\item Natural variables: \(\{ T, p, \{N_{i}\} \}\)
+\item $\Delta G$ is the total non-mechanical work done on the system.
+\item Natural variables: $\{ T, p, \{N_{i}\} \}$
 \end{itemize}
 \item Enthalpy:
 \begin{itemize}
 \item The capacity to do non-mechanical work plus capacity to release heat.
 \item Equation: \[ H = U + pV \]
-\item \(\Delta H\) is the total non-mechanical work and heat added to the
+\item $\Delta H$ is the total non-mechanical work and heat added to the
 system.
-\item Natural variables: \(\{ S, p, \{N_{i}\} \}\)
+\item Natural variables: $\{ S, p, \{N_{i}\} \}$
 \end{itemize}
 \end{itemize}
 
 \section{Useful Notes}
-\label{sec:org286228f}
+\label{sec-4}
 \subsection{Org-mode}
-\label{sec:orga8f61f0}
-\begin{verbatim}
+\label{sec-4-1}
+\begin{minted}[]{elisp}
 (setq org-latex-create-formula-image-program 'dvipng)
-\end{verbatim}
+\end{minted}
 
 \subsection{Physics}
-\label{sec:orgaac880f}
+\label{sec-4-2}
 \subsubsection{Hartree-Fock}
-\label{sec:org1d7d2f0}
+\label{sec-4-2-1}
 \begin{itemize}
 \item Hartree-Fock is a method of calculating the energy of a configuration
 with exact exchange.
@@ -1470,8 +1607,8 @@ kinetic energy functional.
 \item Hamiltonian is split into contributions:
 \begin{itemize}
 \item \[\hat{H} = \hat{T} + \hat{V}_{ \text{ext} } + \hat{G}\]
-\item \(\hat{G} = \hat{J} - \hat{K}\)
-\item \(\hat{J}\) is the coulombic interaction:
+\item $\hat{G} = \hat{J} - \hat{K}$
+\item $\hat{J}$ is the coulombic interaction:
 \item \[ \bra{ \mathbf{r} } \hat{J} \ket{ \mathbf{n} } = \int \frac{ \bra{\mathbf{r}}\ket{n} }{|\mathbf{r} - \mathbf{r'}  |}d\mathbf{r} \]
 \item So \[ E_{\text{H}} = \int \frac{\rho{\mathbf{r}\rho{\mathbf{r}'}}}{|\mathbf{r} - \mathbf{r'}|}\]
 \item This includes fictitious self-interaction of electron density.
@@ -1483,7 +1620,7 @@ there are also problems.
 \end{itemize}
 
 \section{org-mode cheat sheet}
-\label{sec:org01b1324}
+\label{sec-5}
 \begin{itemize}
 \item New TODO: M-<shift>-<ret>
 \item Done TODO: C-c C-t
@@ -1492,7 +1629,7 @@ there are also problems.
 \item Link to local files:
 \begin{itemize}
 \item Open file (C-x C-f) then do C-c l,
-\item then go back to org file and do C-c C-l (e.g. \href{file:///home/tigany/Documents/docs/PhDPaperSummary/upgrade\_rep\_plus\_notes.tex}{Upgrade\(_{\text{report}}\)\(_{\text{plus}}\)\(_{\text{notes}}\)})
+\item then go back to org file and do C-c C-l (e.g. \href{file:///home/tigany/Documents/docs/PhDPaperSummary/upgrade_rep_plus_notes.tex}{Upgrade$_{\text{report}}$$_{\text{plus}}$$_{\text{notes}}$})
 \end{itemize}
 \item To remove window in buffer C-x 0
 \item Overview of document <shift>-<TAB> to condense to titles.
@@ -1500,6 +1637,8 @@ there are also problems.
 \item < s TAB expands to a ‘src’ code block.
 \item < l TAB expands to:
 \end{itemize}
+\begin{export}
+\end{export}
 
 
 \begin{itemize}
@@ -1511,4 +1650,5 @@ there are also problems.
 
 \%\bibliographystyle{plain}
 \%\bibliography{org-refs}
+% Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}
