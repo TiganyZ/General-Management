@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1544114214 "/home/tigany/Documents/docs/Management/things_to_do.tex" "things_to_do.pdf" "things_to_do" 1544114214
+["pdflatex"] 1544115693 "/home/tigany/Documents/docs/Management/things_to_do.tex" "things_to_do.pdf" "things_to_do" 1544115694
   "/dev/null" 1537971319 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1497361437 33773 fa5cb09265807b095f2f1e0834c2617c ""
-  "/home/tigany/Documents/docs/Management/things_to_do.tex" 1544114214 71695 cbcafe0130ae6d192f1ecb4cc0881f52 ""
+  "/home/tigany/Documents/docs/Management/things_to_do.tex" 1544115693 71667 5c936677c11674fff60b29af06e86e63 ""
   "/home/tigany/texmf/tex/latex/minted.sty" 1542709435 47511 90c249760ba422c158bf08efbef8adc7 ""
   "/home/tigany/texmf/tex/latex/wrapfig.sty" 1542709435 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "/usr/share/texmf/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -74,8 +74,8 @@
   "/usr/share/texmf/tex/latex/xcolor/xcolor.sty" 1480098843 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1497361437 33773 fa5cb09265807b095f2f1e0834c2617c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1534171278 3598530 3c68b09cb3b400209a2ed7e6dccaa0fb ""
-  "things_to_do.aux" 1544114214 8 a94a2480d3289e625eea47cd1b285758 ""
-  "things_to_do.tex" 1544114214 71695 cbcafe0130ae6d192f1ecb4cc0881f52 ""
+  "things_to_do.aux" 1544115693 8 a94a2480d3289e625eea47cd1b285758 ""
+  "things_to_do.tex" 1544115693 71667 5c936677c11674fff60b29af06e86e63 ""
   "things_to_do.w18" 0 -1 0 ""
   (generated)
   "things_to_do.pdf"

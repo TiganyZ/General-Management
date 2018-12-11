@@ -1,4 +1,4 @@
-% Created 2018-12-06 Thu 15:03
+% Created 2018-12-06 Thu 16:59
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -19,10 +19,9 @@
 \usepackage{minted}
 \usepackage[hyperref,x11names]{xcolor}
 \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-\usepackage{physics}
 \usepackage{hyperref, url}
 \usepackage[square,numbers]{natbib}
-\usepackage{subcaption}
+\usepackage{subcaption, physics}
 \usepackage{cases}
 \graphicspath{ {./} }
 \usepackage{tikz}
@@ -472,8 +471,81 @@ This is because the sum of the displacements is \emph{conditionally
 convergent}. This means that the ordering of the sum of the displacements
 will determine if the sum actually converges.
 
-To remove this spurious displacement, one must find the st
+\item How to remove non-periodic displacements
+\label{sec-2-1-2-2}
+One can find the periodic displacement $u_{z}^{text{PBC}}(\mathbf{r})$
+from the relation, which arises from the fact that
+$\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}(\mathbf{r})$
+\[ u_{z}^{text{sum}}(\mathbf{r}) =  u_{z}^{text{PBC}}(\mathbf{r}) +
+     \mathbf{s}\cdot\mathbf{r} + \mathbf{u}_{0} \]
+$\mathbf{u}_{0}$ is a constant term, so it can be ignored. 
+
+Recipe to remove the spurious non-periodic part of the displacement field:
+\begin{enumerate}
+\item Evaluate the conditionally convergent sum
+$u_{z}^{\text{sum}}(\mathbf{r})$, using an arbitrary truncation.
+\item "Measure" the linear spurious part of the resulting field, using the
+equation below, by comparing it's values at four points in the
+periodic supercell from the above equation 
+\[ u_{z}^{\text{err}}(\mathbf{r}) =  \mathbf{s}\cdot\mathbf{r},  \]
+\[ u_{z}^{\text{sum}}(\mathbf{r} + \mathbf{c}_{i})  -
+        u_{z}^{\text{sum}}(\mathbf{r}) = \mathbf{s}\cdot\mathbf{c}_{i}, \]
+where $i=1,2$.
+\item Finally, subtract the linear term $u_{z}^{\text{err}}(\mathbf{r})$ from
+$u_{z}^{\text{sum}}(\mathbf{r})$ to obtain the corrected solution
+$u_{z}^{\text{PBC}}(\mathbf{r})$.
 \end{enumerate}
+
+
+This procedure is independent of the truncation in the limit of large
+radius.
+
+\item Adjusting the shape of the supercell
+\label{sec-2-1-2-3}
+When a dislocation dipole is introduced, there is a plastic strain that
+is generated. 
+\[ \epsilon^{\text{pl}} = \frac{1}{2\Omega}( \mathbf{b} \otimes
+     \mathbf{A} + \mathbf{A} \otimes \mathbf{b} ), \]
+where $\Omega = (\mathbf{c}_{1} \times \mathbf{c}_{2}) \cdot
+     \mathbf{c}_{3}$, and $\mathbf{A}$, is the vector normal to the plane of
+the plane connecting the dipoles and $\mathbf{c}_{i}$ are the periodicity vectors. 
+
+In a supercell with fixed periodicity vectors, an increment in the
+plastic strain will be compensated by an oppositely signed increment of
+the elastic strain of the same magnitude: $\epsilon^{\text{el}} = -
+     \epsilon^{\text{pl}}$.
+
+In response to this elastic strain, there will be an internal
+\emph{back-stress} acting to eliminate the source of the strain (i.e. the
+dislocation dipole). This back-stress may be large enought to push the
+dislocations back from their intended positions and may even lead to
+dislocation recombination. 
+
+Allowing for the simulation box to change shape during relaxation, one
+would see that it could reach a state of zero average internal stress. 
+We can do this step \textbf{before relaxation}, such that we can accomodate/match the
+\textbf{plastic strain} produced by the dislocation dipole.
+
+In the case study, the cut plane bounded by two dislocations is parallel
+to two of the repeat vectors, $\mathbf{c}_{1}$ and $\mathbf{c}_{3}$. In
+this case the internal stress induced by the dipole can be removed by
+adjusting only the $\mathbf{c}_{2}$ repeat vector. 
+
+\[ \mathbf{c}_{2} \rightarrow \mathbf{c}_{2} + \mathbf{b} \frac{A}{A_{0},} \]
+
+If we say that $A_{0} = | \mathbf{c}_{3} \times \mathbf{c}_{1} |$ is the area of simulation box on the plane
+parallel to the dislocation dipoles, and $A$ is the area that is between
+the dislocation dipoles in the simulation cell. 
+
+Adjusting this vector means that we have added an extra term
+$\mathbf{u}_{z}^{\text{tilt}}(\mathbf{r})$ to the solution of
+$\mathbf{u}_{z}^{\text{PBC}}(\mathbf{r})$ from before. 
+In this study, it is 
+\[ u_{z}^{\text{tilt}}(\mathbf{r}) = b \frac{Ay}{A_{0}c_{2}}, \]
+where $c_{2}$ is the length of the periodicity vector before it has been
+tilted.
+\end{enumerate}
+
 
 
 \subsection{Force constant matrix}

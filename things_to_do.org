@@ -1,9 +1,8 @@
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-#+LATEX_HEADER: \usepackage{physics}
-#+LATEX_HEADER: \usepackage{hyperref, url}
 #+LATEX_HEADER: \usepackage[square,numbers]{natbib}
-#+LATEX_HEADER: \usepackage{subcaption}
+#+LATEX_HEADER: \usepackage{subcaption
+#+LATEX_HEADER: \usepackage{physics}
 #+LATEX_HEADER: \usepackage{cases}
 #+LATEX_HEADER: \graphicspath{ {./} }
 #+LATEX_HEADER: \usepackage{tikz}
@@ -293,6 +292,13 @@ Force Constant Matrix
  [ 0.0000e+00 -2.8103e-01  2.4672e-13  0.0000e+00  0.0000e+00  0.0000e+00]
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
       #+END_SRC
+
+** TODO Make dislocations go through centre of triangle of atoms 
+
+** TODO Change the lattice vectors to make the dislocation displacement fields periodic
+
+** TODO Make sure that the displacements are periodic 
+
 
 
 * General notes 
@@ -848,6 +854,41 @@ Stopping search: Swarm best position change less than 1e-08
 | a_bcc:        |   5.331467 |   6.179489 |      0.719140 |  0.848021 | 1.000000 |   1.567162 |
 | bandwidth:    |   0.325300 |   0.426000 |      0.010140 |  0.100700 | 1.000000 |         0. |
 |               |            |            |               |           |          |            |
+*** Fitting varying the canonical weights. 
+
+    rmaxh was set to 8.51, as this is the maximum range of the cutoff. 
+
+| Quantity    |  predicted |     target | squared diff. |    p_norm |      weight |  objective |
+|-------------+------------+------------+---------------+-----------+-------------+------------|
+| a_hcp       |   5.533022 |   5.576790 |      0.001916 |  0.043768 | 1000.000000 |  45.683665 |
+| c_hcp       |   8.850424 |   8.852101 |      0.000003 |  0.001677 | 1000.000000 |   1.680027 |
+| c_11        | 182.244765 | 176.100000 |     37.758133 |  6.144765 |    1.000000 |  43.902897 |
+| c_33        | 188.810134 | 190.500000 |      2.855646 |  1.689866 |    1.000000 |   4.545512 |
+| c_44        |  39.062885 |  50.800000 |    137.759875 | 11.737115 |    1.000000 | 149.496991 |
+| c_12        |  68.120096 |  86.900000 |    352.684798 | 18.779904 |    1.000000 | 371.464703 |
+| c_13        |  68.010464 |  68.300000 |      0.083831 |  0.289536 |    1.000000 |   0.373367 |
+| a_omega     |   8.670219 |   8.732543 |      0.003884 |  0.062324 |  250.000000 |  16.552204 |
+| c_omega     |   5.402550 |   5.323431 |      0.006260 |  0.079119 |  250.000000 |  21.344836 |
+| u_omega     |   0.999970 |   1.000000 |      0.000000 |  0.000030 |    1.000000 |   0.000030 |
+| DE (o, hcp) |  -2.451465 |  -0.734754 |      2.947097 |  1.716711 |    1.000000 |   4.663808 |
+| a_bcc       |   6.293291 |   6.179489 |      0.012951 |  0.113803 |  500.000000 |  63.376810 |
+| bandwidth   |   0.493300 |   0.426000 |      0.004529 |  0.067300 | 1000.000000 |  71.829290 |
+
+#+BEGIN_SRC 
+
+fddtt=0.46858665192192056 qddstt=0.6675934593368511 
+b0tt=94.48656458962752 p0tt=1.1904330020322709 b1tt=-26.68382995150727 p1tt=0.9999607945279216 
+cr1=-6.159908080507984 cr2=3.949841729455178 cr3=-1.0282365318567852 ndt=1.9924390340762406
+
+Objective function: 794
+Objective Function  =  794.9141378839079
+Stopping search: Swarm best position change less than 1e-08
+[ 4.68586652e-01 -4.04075885e-01  9.44865646e+01  1.74317108e-01
+ -2.66838300e+01 -3.92062406e-05  1.99243903e+00 -6.15990808e+00
+  3.94984173e+00 -1.02823653e+00]
+794.9141378839079
+#+END_SRC
+
 ** DFT 
    Run:
    - lmchk --getwsr ti
