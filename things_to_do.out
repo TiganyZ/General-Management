@@ -1,0 +1,73 @@
+\BOOKMARK [1][-]{section.1}{Tasks}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{TODO Has anyone investigated the stacking faults of Omega phase?}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{TODO Finish doing the gamma surfaces for all planes for pure titanium.}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Checking the convergence criteria}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Notes on the model.}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.}{subsection.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.3}{TODO Python script: remove include statements \205> One file.}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.4}{TODO Summarise UCL DFT lectures.}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.5}{TODO Write first paragraph of Literature review}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.5.1}{TODO Summarise Stacking Faults and write review}{subsection.1.5}% 10
+\BOOKMARK [3][-]{subsubsection.1.5.2}{TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism.}{subsection.1.5}% 11
+\BOOKMARK [3][-]{subsubsection.1.5.3}{TODO Summarise dislocations and Oxygen interactions \(review\)}{subsection.1.5}% 12
+\BOOKMARK [2][-]{subsection.1.6}{TODO Write summary of org-mode}{section.1}% 13
+\BOOKMARK [2][-]{subsection.1.7}{DONE Investigate why rmaxh changes energy}{section.1}% 14
+\BOOKMARK [2][-]{subsection.1.8}{DONE Show supercell of BOP working}{section.1}% 15
+\BOOKMARK [2][-]{subsection.1.9}{DONE Check Stability Criteria}{section.1}% 16
+\BOOKMARK [3][-]{subsubsection.1.9.1}{Results}{subsection.1.9}% 17
+\BOOKMARK [2][-]{subsection.1.10}{DONE Build force constant matrix for hcp}{section.1}% 18
+\BOOKMARK [3][-]{subsubsection.1.10.1}{Results}{subsection.1.10}% 19
+\BOOKMARK [2][-]{subsection.1.11}{TODO Make dislocations go through centre of triangle of atoms}{section.1}% 20
+\BOOKMARK [2][-]{subsection.1.12}{TODO Investigate why the gamma surface minima are not along the lines joining the vectors.}{section.1}% 21
+\BOOKMARK [2][-]{subsection.1.13}{TODO Change the lattice vectors to make the dislocation displacement fields periodic}{section.1}% 22
+\BOOKMARK [2][-]{subsection.1.14}{TODO Make sure that the displacements are periodic}{section.1}% 23
+\BOOKMARK [1][-]{section.2}{General notes}{}% 24
+\BOOKMARK [2][-]{subsection.2.1}{Dislocation arrays}{section.2}% 25
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Files to produce dislocations}{subsection.2.1}% 26
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Bulatov and Cai: Computer simulations of dislocations}{subsection.2.1}% 27
+\BOOKMARK [2][-]{subsection.2.2}{TBE Pair potentials and Bond integrals}{section.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Pair potentials in tbe code}{subsection.2.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Bond integrals from tbe}{subsection.2.2}% 30
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Bond Integrals for first neighbour interaction}{subsection.2.2}% 31
+\BOOKMARK [2][-]{subsection.2.3}{Force constant matrix}{section.2}% 32
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Wallace}{subsection.2.3}% 33
+\BOOKMARK [2][-]{subsection.2.4}{Gamma surfaces}{section.2}% 34
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Miscellaneous}{subsection.2.4}% 35
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Relaxing in tbe}{subsection.2.4}% 36
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Convergence and k-points in tbe}{subsection.2.4}% 37
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Results}{subsection.2.4}% 38
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Literature Review}{subsection.2.4}% 39
+\BOOKMARK [2][-]{subsection.2.5}{Notes on Thermodynamics and Stability}{section.2}% 40
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Wallace 1972}{subsection.2.5}% 41
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Fast, Will, Johansson: Elastic constants in hexagonal transition metals}{subsection.2.5}% 42
+\BOOKMARK [2][-]{subsection.2.6}{Notes on Tight Binding and BOP Models}{section.2}% 43
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Pair correlation and cutoffs}{subsection.2.6}% 44
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Trinkle 2006}{subsection.2.6}% 45
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Stefan Znam 2001 Thesis}{subsection.2.6}% 46
+\BOOKMARK [2][-]{subsection.2.7}{Ti Swarm fitting.}{section.2}% 47
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Fitting varying the canonical weights.}{subsection.2.7}% 48
+\BOOKMARK [2][-]{subsection.2.8}{DFT}{section.2}% 49
+\BOOKMARK [2][-]{subsection.2.9}{Python}{section.2}% 50
+\BOOKMARK [3][-]{subsubsection.2.9.1}{OS}{subsection.2.9}% 51
+\BOOKMARK [3][-]{subsubsection.2.9.2}{Shelve}{subsection.2.9}% 52
+\BOOKMARK [1][-]{section.3}{DFT Lectures UCL}{}% 53
+\BOOKMARK [2][-]{subsection.3.1}{David Bowler O\(N\) DFT}{section.3}% 54
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Types of Exchange-correlation Functionals}{subsection.3.1}% 55
+\BOOKMARK [2][-]{subsection.3.2}{Jochen Blumberger: Molecular dynamics}{section.3}% 56
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Introduction}{subsection.3.2}% 57
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Born-Oppenheimer approximation}{subsection.3.2}% 58
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Molecular Dynamics}{subsection.3.2}% 59
+\BOOKMARK [2][-]{subsection.3.3}{Matteo Salvalglio: Enhanced Sampling}{section.3}% 60
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Introduction}{subsection.3.3}% 61
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Ergodic principle}{subsection.3.3}% 62
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Collective variables}{subsection.3.3}% 63
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Biased Potentials}{subsection.3.3}% 64
+\BOOKMARK [2][-]{subsection.3.4}{Michail Stamakatis: Statistical Mechanics}{section.3}% 65
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Introduction}{subsection.3.4}% 66
+\BOOKMARK [2][-]{subsection.3.5}{Useful definitions of Thermodynamic potentials}{section.3}% 67
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Mnemonic Picture}{subsection.3.5}% 68
+\BOOKMARK [1][-]{section.4}{Useful Notes}{}% 69
+\BOOKMARK [2][-]{subsection.4.1}{Org-mode}{section.4}% 70
+\BOOKMARK [2][-]{subsection.4.2}{Physics}{section.4}% 71
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Hartree-Fock}{subsection.4.2}% 72
+\BOOKMARK [1][-]{section.5}{org-mode cheat sheet}{}% 73

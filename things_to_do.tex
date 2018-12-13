@@ -1,4 +1,4 @@
-% Created 2018-12-06 Thu 17:01
+% Created 2018-12-13 Thu 17:07
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,16 +18,12 @@
 \tolerance=1000
 \usepackage{minted}
 \usepackage[hyperref,x11names]{xcolor}
-\usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-\usepackage[square,numbers]{natbib}
-\usepackage{subcaption
 \usepackage{physics}
 \usepackage{cases}
 \graphicspath{ {./} }
 \usepackage{tikz}
 \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
-\usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds, url}
-\usepackage[square,numbers]{natbib}
+\usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
 \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
 \tikzset{snake it/.style={decorate, decoration=snake}}
 \usepackage[nottoc]{tocbibind}
@@ -92,12 +88,12 @@ results.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png}
-\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of a hcp with k mesh.}
+\caption{\label{fig:a-hcp_vs_nk_small_rmaxh.png}Variation of a hcp with k mesh.}
 \end{figure}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png}
-\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of c hcp with k mesh.}
+\caption{\label{fig:c_hcp_vs_nk_small_rmaxh.png}Variation of c hcp with k mesh.}
 \end{figure}]]
 \begin{itemize}
 \item Data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl}{a$_{\text{hcp}}$ small rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl}{c$_{\text{hcp}}$ small rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl}{e$_{\text{hcp}}$ small rmaxh}.
@@ -107,17 +103,17 @@ be included then. And so we get the same results.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png}
-\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of energy with k mesh.}
+\caption{\label{fig:e_hcp_vs_nk_large_rmaxh.png}Variation of energy with k mesh.}
 \end{figure}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png}
-\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of a hcp with k mesh.}
+\caption{\label{fig:a_hcp_vs_nk_large_rmaxh.png}Variation of a hcp with k mesh.}
 \end{figure}
 \begin{figure}[htb]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png}
-\caption{\label{fig:e_hcp_vs_nk_small_rmaxh.png}Variation of c hcp with k mesh.}
+\caption{\label{fig:c_hcp_vs_nk_large_rmaxh.png}Variation of c hcp with k mesh.}
 \end{figure}
 \begin{itemize}
 \item Data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl}{a$_{\text{hcp}}$ large rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl}{c$_{\text{hcp}}$ large rmaxh}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl}{e$_{\text{hcp}}$ large rmaxh}
@@ -170,86 +166,9 @@ bz: metal
 \label{sec-1-5-3}
 \subsection{{\bfseries\sffamily TODO} Write summary of org-mode}
 \label{sec-1-6}
-\subsection{{\bfseries\sffamily DONE} Look at the range of the bond integrals we have in Titanium graphically.}
-\label{sec-1-7}
-\subsubsection{Pair potentials in tbe code}
-\label{sec-1-7-1}
-\begin{itemize}
-\item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
-\item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
-point
-\item In makvpp.f, if in the range of $r_1 < r < r_{\text{c}}$, then
-augmentative/multiplicative polynomial is used.
-\begin{itemize}
-\item To make this polynomial \href{file:///home/tigany/lm/tb/pcut45.f}{pcut45.f} is used.
-\item Depending on the degree of polynomial we have this structure:
-\begin{minted}[]{fortran}
-      rr = r1 - r2
-      xr1 = x - r1
-      xr2 = x - r2
 
-      c = val*rr*rr
-      if (n == 5) then
-	pnorm = rr**(-5)
-	a = (0.5d0*curv*rr - 3d0*slo)*rr + 6d0*val
-	b = (slo*rr - 3d0*val)*rr
-      elseif (n == 4) then
-	pnorm = rr**(-4)
-	a = (0.5d0*curv*rr - 2d0*slo)*rr + 3d0*val
-	b = (slo*rr - 2d0*val)*rr
-      p2 = pnorm*(c + xr1*(b + xr1*a))
-      dp2 = pnorm*(b + xr1*2d0*a)
-      ddp2 = pnorm*2d0*a
-      e = p2 * xr2**(n-2)
-      de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
-      dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
-C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-\end{minted}
-\item So the form of the polynomial used is
-\begin{itemize}
-\item $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
-\item \[ P_2(x) = a(x-r1)^2 + b(x-r_1) + c \]
-\item \[ a = \frac{1}{ (r1-r2)^5 } \big\{  \frac{1}{2}(r_1-r_2)^2f"(r_1) -3(r_1-r_2)f'(r_1) + 6f(r_1) \big\} \]
-\item \[  b = \frac{1}{(r_1-r_2)^4} \big\{ f'(r_1)*(r_1-r_2) - 3f(r_1) \big\}  \]
-\item \[ \frac{1}{(r_1 - r_2)^5} x \]
-\item \[  c = \frac{ f(r_1) }{ (r_1-r_2)^3} \]
-\item Where $f(x)$ is the function that needs to be cut
-\end{itemize}
-\end{itemize}
-\item Current model has this
-\begin{minted}[]{bash}
-Ti,Ti:
-   type 2 (Exp. decay), V(d) = a exp (- b d)
-	     dds    ddp    ddd
-   coeff:  -2.75   1.84  -0.46
-   decay:   0.71   0.71   0.71
-   cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
-	     dds    ddp    ddd
-   r1:      6.20   6.20   6.20
-   rc:      8.50   8.50   8.50
-\end{minted}
-\end{itemize}
-
-
-
-\subsubsection{Bond integrals from tbe}
-\label{sec-1-7-2}
-\begin{itemize}
-\item So bond integrals from titanium look like this, from this file
-\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py}{plot$_{\text{bond}}$$_{\text{integrals}}$.py}
-\end{itemize}
-\begin{figure}[htb]
-\centering
-\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
-\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}Bond integrals with multiplicative polynomial cutoffs.}
-\end{figure}
-\begin{figure}[htb]
-\centering
-\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
-\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
-\end{figure}
 \subsection{{\bfseries\sffamily DONE} Investigate why rmaxh changes energy}
-\label{sec-1-8}
+\label{sec-1-7}
 \begin{itemize}
 \item Variation of rmaxh does not change the energy
 \item Obviously the number of neighbours changes with rmaxh.
@@ -274,23 +193,23 @@ Ti,Ti:
 \end{figure}
 
 \subsection{{\bfseries\sffamily DONE} Show supercell of BOP working}
-\label{sec-1-9}
+\label{sec-1-8}
 \subsection{{\bfseries\sffamily DONE} Check Stability Criteria}
-\label{sec-1-10}
+\label{sec-1-9}
 \begin{itemize}
 \item Check if the matrix is complex
 \item Check if it is positive definite.
 \end{itemize}
 \subsubsection{Results}
-\label{sec-1-10-1}
+\label{sec-1-9-1}
 \begin{itemize}
 \item Without changing anything, the total energy of hcp in Tony's newest
 model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
 \item I thought perhaps that the lattice parameters and the elastic constants
 that way might produce a different result.
-\item Minimising the lattice parameters gives an energy of  \$ E$_{\text\text{\{tot
-hcp\}}}$ = -0.572351 \text{Ryd}\$ with lattice parameters of $a_{\text{hcp}}
-      = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
+\item Minimising the lattice parameters gives an energy of  $E_{\text{tot
+      hcp}} = -0.572351 \text{Ryd}$ with lattice parameters of
+$a_{\text{hcp}} = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
 \item Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
 \item The stability criteria are still satisfied.
 \end{itemize}
@@ -328,13 +247,13 @@ C_11 > 0
   True
 \end{minted}
 \subsection{{\bfseries\sffamily DONE} Build force constant matrix for hcp}
-\label{sec-1-11}
+\label{sec-1-10}
 \begin{itemize}
 \item If the force constant matrix is positive definite then there shan't be
 any soft modes.
 \end{itemize}
 \subsubsection{Results}
-\label{sec-1-11-1}
+\label{sec-1-10-1}
 \begin{itemize}
 \item File used is \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py}{check$_{\text{ec}}$$_{\text{pos}}$$_{\text{definite}}$.py}
 \item Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
@@ -399,6 +318,18 @@ Force Constant Matrix
 \end{minted}
 \end{itemize}
 
+\subsection{{\bfseries\sffamily TODO} Make dislocations go through centre of triangle of atoms}
+\label{sec-1-11}
+
+\subsection{{\bfseries\sffamily TODO} Investigate why the gamma surface minima are not along the lines joining the vectors.}
+\label{sec-1-12}
+
+\subsection{{\bfseries\sffamily TODO} Change the lattice vectors to make the dislocation displacement fields periodic}
+\label{sec-1-13}
+
+\subsection{{\bfseries\sffamily TODO} Make sure that the displacements are periodic}
+\label{sec-1-14}
+
 
 \section{General notes}
 \label{sec-2}
@@ -456,7 +387,7 @@ A naive way to try and remove this result is to try and construct a
 periodic displacement field from the non-periodic one generated, by the
 principle of linear superposition, but this does not work. 
 \[ u_{z}^{\text{sum}} = \sum_{\mathbf{R}} u_{z}^{\inf}(\mathbf{r}
-     -\mathbf{R}) = u_{z}^{\inf}(\marhbf{r}) + u_{z}^{\text{img}}(\mathbf{r})
+     -\mathbf{R}) = u_{z}^{\inf}(\mathbf{r}) + u_{z}^{\text{img}}(\mathbf{r})
      \]
 \[  u_{z}^{\text{img}}(\mathbf{r}) = \sum_{\mathbf{R}}' u_{z}^{\inf}(\mathbf{r}
      -\mathbf{R}) \]
@@ -475,7 +406,7 @@ will determine if the sum actually converges.
 \label{sec-2-1-2-2}
 One can find the periodic displacement $u_{z}^{text{PBC}}(\mathbf{r})$
 from the relation, which arises from the fact that
-$\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}(\mathbf{r})$
+$\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}}(\mathbf{r})$
 \[ u_{z}^{text{sum}}(\mathbf{r}) =  u_{z}^{text{PBC}}(\mathbf{r}) +
      \mathbf{s}\cdot\mathbf{r} + \mathbf{u}_{0} \]
 $\mathbf{u}_{0}$ is a constant term, so it can be ignored. 
@@ -547,69 +478,10 @@ tilted.
 \end{enumerate}
 
 
-
-\subsection{Force constant matrix}
+\subsection{TBE Pair potentials and Bond integrals}
 \label{sec-2-2}
-\subsubsection{Wallace}
+\subsubsection{Pair potentials in tbe code}
 \label{sec-2-2-1}
-\begin{enumerate}
-\item Crystal Potential: Introduction
-\label{sec-2-2-1-1}
-\begin{itemize}
-\item Since the vibrational energy of a crystal is generally considered to by
-small compared to its potential energy, the crystal potential is a first
-approximation to the free energy or the internal energy.
-\item Ions are labelled by the letters $M$ and $N$.
-\item Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
-displacements from equilibrium are denoted by $\mathbf{U}(M)$.
-\item Potential energy of the crystal due to interactions among ions in a
-given configuration is given by $\Phi$, which can be expanded as
-\begin{align}
-\Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
-     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
-     &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
-     &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
-\end{align}
-\item $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
-\item $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
-\item These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
-\item All of the coefficients are functions of the \emph{initial} configuration.
-\item This potential is supposed to represent the \emph{entire} energy of the crystal
-except for the kinetic energy of the ions.
-\item From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
-individual ions in a given cell.
-\item The total potential of the system plus externally applied forces is
-$\Psi$. For a virtual process where the crystal is deformed while the
-externally applies forces are held constant $\Psi$ is not conserved, if
-the forces are changed then it can be conserved. 
-\begin{align}
-\Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
-     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
-\end{align}
-\end{itemize}
-\item Stability and the Dynamical Matrix
-\label{sec-2-2-1-2}
-\begin{itemize}
-\item The equilibrium configuration of ions and external forces is a stable
-equilibrium if the total system potential is minimum with respet to
-small virtual displacements of the ions from equilirium.
-\end{itemize}
-\[\Psi = \Psi_{0}&+
-     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
-\begin{itemize}
-\item The stability condition is if they are positive definite: positive for
-any of the values $U_{i}(M)$, except if they are all 0.
-\item The stability condition is:
-\[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
-\item $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
-$>0$ means positive definite (all the eigenvalues are greater than zero).
-\item This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
-\end{itemize}
-\end{enumerate}
-\subsection{Pair potentials in tbe code}
-\label{sec-2-3}
-\subsubsection{How are they constructed?}
-\label{sec-2-3-1}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
@@ -656,23 +528,105 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
 \begin{minted}[]{bash}
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
-	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
-   coeff:   0.00   0.00   0.00   0.00   0.00   0.00   0.00  -2.75   1.84  -0.46
-   decay:   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.71   0.71   0.71
+	     dds    ddp    ddd
+   coeff:  -2.75   1.84  -0.46
+   decay:   0.71   0.71   0.71
    cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
-	     sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
-   r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
-   rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
+	     dds    ddp    ddd
+   r1:      6.20   6.20   6.20
+   rc:      8.50   8.50   8.50
 \end{minted}
 \end{itemize}
-\subsubsection{Bond Integrals: tbe}
-\label{sec-2-3-2}
-\begin{itemize}
-\item So bond integrals from titanium look like this
-\item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}{Bond integrals with multiplicative polynomial cutoffs. }
-\item \href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}{Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
-\end{itemize}
 
+
+
+\subsubsection{Bond integrals from tbe}
+\label{sec-2-2-2}
+\begin{itemize}
+\item So bond integrals from titanium look like this, from this file
+\href{file:///home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py}{plot$_{\text{bond}}$$_{\text{integrals}}$.py}
+\end{itemize}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}Bond integrals with multiplicative polynomial cutoffs.}
+\end{figure}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
+\caption{\label{fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
+\end{figure}
+
+\subsubsection{Bond Integrals for first neighbour interaction}
+\label{sec-2-2-3}
+To make first neighbours it is optimal to have a cutoff that is within
+alat and \$1.4 \texttimes{} \$ alat. This is within the next shell of 6 neighbours
+and so having the cutoff between alat and $1.2\times$ alat should be
+optimal. 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/check_new_cutoffs/cutoffs_at_alat_and_one_point_four_alat.png}
+\caption{\label{fig:tbe_bond_integrals_new__with_polynomial_cutoffs_multiplicative_zoomed_in.png}Bond integrals with multiplicative polynomial cutoffs for first neighbour interactions: zoomed in.}
+\end{figure}
+
+\subsection{Force constant matrix}
+\label{sec-2-3}
+\subsubsection{Wallace}
+\label{sec-2-3-1}
+\begin{enumerate}
+\item Crystal Potential: Introduction
+\label{sec-2-3-1-1}
+\begin{itemize}
+\item Since the vibrational energy of a crystal is generally considered to by
+small compared to its potential energy, the crystal potential is a first
+approximation to the free energy or the internal energy.
+\item Ions are labelled by the letters $M$ and $N$.
+\item Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
+displacements from equilibrium are denoted by $\mathbf{U}(M)$.
+\item Potential energy of the crystal due to interactions among ions in a
+given configuration is given by $\Phi$, which can be expanded as
+\begin{align}
+\Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
+     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
+     &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
+     &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
+\end{align}
+\item $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
+\item $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
+\item These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
+\item All of the coefficients are functions of the \emph{initial} configuration.
+\item This potential is supposed to represent the \emph{entire} energy of the crystal
+except for the kinetic energy of the ions.
+\item From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
+individual ions in a given cell.
+\item The total potential of the system plus externally applied forces is
+$\Psi$. For a virtual process where the crystal is deformed while the
+externally applies forces are held constant $\Psi$ is not conserved, if
+the forces are changed then it can be conserved. 
+\begin{align}
+\Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
+     &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
+\end{align}
+\end{itemize}
+\item Stability and the Dynamical Matrix
+\label{sec-2-3-1-2}
+\begin{itemize}
+\item The equilibrium configuration of ions and external forces is a stable
+equilibrium if the total system potential is minimum with respet to
+small virtual displacements of the ions from equilirium.
+\end{itemize}
+\[\Psi = \Psi_{0}+
+     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
+\begin{itemize}
+\item The stability condition is if they are positive definite: positive for
+any of the values $U_{i}(M)$, except if they are all 0.
+\item The stability condition is:
+\[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
+\item $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
+$>0$ means positive definite (all the eigenvalues are greater than zero).
+\item This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
+\end{itemize}
+\end{enumerate}
 \subsection{Gamma surfaces}
 \label{sec-2-4}
 \subsubsection{Miscellaneous}
@@ -1120,6 +1074,45 @@ bandwidth: & 0.325300 & 0.426000 & 0.010140 & 0.100700 & 1.000000 & 0.\\
  &  &  &  &  &  & \\
 \end{tabular}
 \end{center}
+\subsubsection{Fitting varying the canonical weights.}
+\label{sec-2-7-1}
+
+rmaxh was set to 8.51, as this is the maximum range of the cutoff. 
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
+Quantity & predicted & target & squared diff. & p$_{\text{norm}}$ & weight & objective\\
+\hline
+a$_{\text{hcp}}$ & 5.533022 & 5.576790 & 0.001916 & 0.043768 & 1000.000000 & 45.683665\\
+c$_{\text{hcp}}$ & 8.850424 & 8.852101 & 0.000003 & 0.001677 & 1000.000000 & 1.680027\\
+c$_{\text{11}}$ & 182.244765 & 176.100000 & 37.758133 & 6.144765 & 1.000000 & 43.902897\\
+c$_{\text{33}}$ & 188.810134 & 190.500000 & 2.855646 & 1.689866 & 1.000000 & 4.545512\\
+c$_{\text{44}}$ & 39.062885 & 50.800000 & 137.759875 & 11.737115 & 1.000000 & 149.496991\\
+c$_{\text{12}}$ & 68.120096 & 86.900000 & 352.684798 & 18.779904 & 1.000000 & 371.464703\\
+c$_{\text{13}}$ & 68.010464 & 68.300000 & 0.083831 & 0.289536 & 1.000000 & 0.373367\\
+a$_{\text{omega}}$ & 8.670219 & 8.732543 & 0.003884 & 0.062324 & 250.000000 & 16.552204\\
+c$_{\text{omega}}$ & 5.402550 & 5.323431 & 0.006260 & 0.079119 & 250.000000 & 21.344836\\
+u$_{\text{omega}}$ & 0.999970 & 1.000000 & 0.000000 & 0.000030 & 1.000000 & 0.000030\\
+DE (o, hcp) & -2.451465 & -0.734754 & 2.947097 & 1.716711 & 1.000000 & 4.663808\\
+a$_{\text{bcc}}$ & 6.293291 & 6.179489 & 0.012951 & 0.113803 & 500.000000 & 63.376810\\
+bandwidth & 0.493300 & 0.426000 & 0.004529 & 0.067300 & 1000.000000 & 71.829290\\
+\end{tabular}
+\end{center}
+
+\begin{minted}[]{bash}
+fddtt=0.46858665192192056 qddstt=0.6675934593368511 
+b0tt=94.48656458962752 p0tt=1.1904330020322709 b1tt=-26.68382995150727 p1tt=0.9999607945279216 
+cr1=-6.159908080507984 cr2=3.949841729455178 cr3=-1.0282365318567852 ndt=1.9924390340762406
+
+Objective function: 794
+Objective Function  =  794.9141378839079
+Stopping search: Swarm best position change less than 1e-08
+[ 4.68586652e-01 -4.04075885e-01  9.44865646e+01  1.74317108e-01
+ -2.66838300e+01 -3.92062406e-05  1.99243903e+00 -6.15990808e+00
+  3.94984173e+00 -1.02823653e+00]
+794.9141378839079
+\end{minted}
+
 \subsection{DFT}
 \label{sec-2-8}
 Run:
@@ -1339,8 +1332,7 @@ positon.
 after that of the positons. So this leads to the Velocity Verlet
 algorithm.
 \item The timestep for these algorithms is on the order of $1fs$, such that
-one can have adequate resolution of atomic vibrations ($\f sim
-         10^{-14}s^{-1}$, so period is around $10fs$)
+one can have adequate resolution of atomic vibrations ( $fs \sim 10^{-14}s^{-1}$, so period is around $10fs$)
 \end{itemize}
 \end{itemize}
 
@@ -1480,9 +1472,11 @@ another variable defining $\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)$
 
 The last term is the ensemble average with respect to $A$
 This means we can express the free energy difference (Zwanzig 1953)
-\[ \Delta \mathcal{A}_{AB} =  -\text{k}_{\text{B}} T \text{ln} \Big(
-     \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
-     \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+\begin{align}
+\Delta \mathcal{A}_{AB} &=  -\text{k}_{\text{B}} T \text{ln} \Big(
+\frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)\\ &=  -\text{k}_{\text{B}} T
+\text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} 
+\end{align}
 
 To sample this efficiently we can use biased potentials. 
 \[ U_{\text{tot}} = U_{0}(R) + V( S(R) ),  \]
@@ -1497,8 +1491,8 @@ where $u$ and $b$ denote unbiased and biased configurations.
 
 This gives the free energy as
 \begin{align}
-F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R))\\
-            &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
+F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) \\
+             &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
 \end{align}
 where the term on the second line is a constant. 
 
@@ -1514,10 +1508,12 @@ When one goes through the process of umbrella sampling, naively going through th
 gives a poor reconstruction. It is necessary that weights are in place such that the reconstruction of the global free energy
 profile is smooth. 
 
-\[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) + C_{i}}  \},\] 
+\[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R))
+     \big\} - V(S(R)) + C_{i} , \] 
 \[ p_{i} = p^{b}_{i}(S) e^{ +\beta V(R) }e^{\beta C_{i}} \]
 \[ p(S) = \sum_{N \text{windows}} p_i{S} w_{i} \]
-\[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{N \text{windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} } \]
+\[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{ N
+     \text{ windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} }} \]
 
 
 For these terms we need to know what the unbiased $p(S)$ is, but that is what we are trying to solve. 
@@ -1545,8 +1541,15 @@ For the error of these one can do block averaging.
 \label{sec-3-3-4-3}
 \end{enumerate}
 
-\subsection{Useful definitions of Thermodynamic potentials}
+\subsection{Michail Stamakatis: Statistical Mechanics}
 \label{sec-3-4}
+
+\subsubsection{Introduction}
+\label{sec-3-4-1}
+Intensive variables don't depend on size of system (e.g. T, $\mu$)
+Extensive variables do: ($\mathcal{N}$, V$\mathcal{V}$, $\mathcal{S}$)
+\subsection{Useful definitions of Thermodynamic potentials}
+\label{sec-3-5}
 \begin{itemize}
 \item Internal Energy:
 \begin{itemize}
@@ -1585,6 +1588,10 @@ system.
 \item Natural variables: $\{ S, p, \{N_{i}\} \}$
 \end{itemize}
 \end{itemize}
+
+\subsubsection{Mnemonic Picture}
+\label{sec-3-5-1}
+\includegraphics[width=.9\linewidth]{Images/Thermodynamic_mnemonic.png}
 
 \section{Useful Notes}
 \label{sec-4}
@@ -1647,7 +1654,7 @@ there are also problems.
 
 
 
-\%\bibliographystyle{plain}
-\%\bibliography{org-refs}
+\bibliographystyle{plain}
+\bibliography{org-refs}
 % Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}

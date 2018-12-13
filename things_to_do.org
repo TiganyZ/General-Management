@@ -1,14 +1,10 @@
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
-#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4]{hyperref}
-#+LATEX_HEADER: \usepackage[square,numbers]{natbib}
-#+LATEX_HEADER: \usepackage{subcaption
 #+LATEX_HEADER: \usepackage{physics}
 #+LATEX_HEADER: \usepackage{cases}
 #+LATEX_HEADER: \graphicspath{ {./} }
 #+LATEX_HEADER: \usepackage{tikz}
 #+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
-#+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds, url}
-#+LATEX_HEADER: \usepackage[square,numbers]{natbib}
+#+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
 #+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
 #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
 #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
@@ -43,22 +39,22 @@
    #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
       file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png
    #+CAPTION: Variation of a hcp with k mesh.
-   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+   #+NAME:   fig:a hcp_vs_nk_small_rmaxh.png
       file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png
    #+CAPTION: Variation of c hcp with k mesh.
-   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+   #+NAME:   fig:c_hcp_vs_nk_small_rmaxh.png
       file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png]]
 	- Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl][a_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl][c_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl][e_hcp small rmaxh]]. 
       - If rmaxh is larger ( rmaxh = 20 bohr ), all possible interactions must
         be included then. And so we get the same results. 
    #+CAPTION: Variation of energy with k mesh.
-   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+   #+NAME:   fig:e_hcp_vs_nk_large_rmaxh.png
 	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png]]
    #+CAPTION: Variation of a hcp with k mesh.
-   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+   #+NAME:   fig:a_hcp_vs_nk_large_rmaxh.png
 	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png]]
    #+CAPTION: Variation of c hcp with k mesh.
-   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+   #+NAME:   fig:c_hcp_vs_nk_large_rmaxh.png
 	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png]]
       - Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl][a_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl][c_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl][e_hcp large rmaxh]]
 
@@ -91,71 +87,7 @@ bz: metal
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
 ** TODO Write summary of org-mode
-** DONE Look at the range of the bond integrals we have in Titanium graphically. 
-   CLOSED: [2018-11-20 Tue 11:13]
-*** Pair potentials in tbe code
-   - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
-   - This calls [[file:~/lm/tb/vppder.f][vppder.f]] which actually evaluates the pair potential at that
-     point
-   - In makvpp.f, if in the range of $r_1 < r < r_{\text{c}}$, then
-     augmentative/multiplicative polynomial is used.
-     - To make this polynomial [[file:~/lm/tb/pcut45.f][pcut45.f]] is used.
-     - Depending on the degree of polynomial we have this structure:
-       #+BEGIN_SRC fortran
-      rr = r1 - r2
-      xr1 = x - r1
-      xr2 = x - r2
-
-      c = val*rr*rr
-      if (n == 5) then
-        pnorm = rr**(-5)
-        a = (0.5d0*curv*rr - 3d0*slo)*rr + 6d0*val
-        b = (slo*rr - 3d0*val)*rr
-      elseif (n == 4) then
-        pnorm = rr**(-4)
-        a = (0.5d0*curv*rr - 2d0*slo)*rr + 3d0*val
-        b = (slo*rr - 2d0*val)*rr
-      p2 = pnorm*(c + xr1*(b + xr1*a))
-      dp2 = pnorm*(b + xr1*2d0*a)
-      ddp2 = pnorm*2d0*a
-      e = p2 * xr2**(n-2)
-      de = (xr2*dp2 + float(n-2)*p2) * xr2**(n-3)
-      dde = (xr2*xr2*ddp2+float(2*(n-2))*xr2*dp2+float((n-2)*(n-3))*p2)
-C ... e, de and dde are the values and derivatives of the polynomial in the region r1 , r < rc
-       #+END_SRC
-     - So the form of the polynomial used is
-       - $$ P_5(x) = (x-r_2)^3 P_2(x)  $$
-       - \[ P_2(x) = a(x-r1)^2 + b(x-r_1) + c \]
-       - \[ a = \frac{1}{ (r1-r2)^5 } \big\{  \frac{1}{2}(r_1-r_2)^2f"(r_1) -3(r_1-r_2)f'(r_1) + 6f(r_1) \big\} \]
-       - \[  b = \frac{1}{(r_1-r_2)^4} \big\{ f'(r_1)*(r_1-r_2) - 3f(r_1) \big\}  \]
-       - \[ \frac{1}{(r_1 - r_2)^5} x \]
-       - \[  c = \frac{ f(r_1) }{ (r_1-r_2)^3} \]
-       - Where $f(x)$ is the function that needs to be cut
-   - Current model has this
-     #+BEGIN_SRC bash
-Ti,Ti:
-   type 2 (Exp. decay), V(d) = a exp (- b d)
-             dds    ddp    ddd
-   coeff:  -2.75   1.84  -0.46
-   decay:   0.71   0.71   0.71
-   cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
-             dds    ddp    ddd
-   r1:      6.20   6.20   6.20
-   rc:      8.50   8.50   8.50
-     
-     #+END_SRC
-
-
-
-*** Bond integrals from tbe
-      - So bond integrals from titanium look like this, from this file
-        [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py][plot_bond_integrals.py]]
-      #+CAPTION: Bond integrals with multiplicative polynomial cutoffs.
-      #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png
-      [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png]]
-      #+CAPTION: Bond integrals with multiplicative polynomial cutoffs: zoomed in.
-      #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png
-      [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png]]
+    
 ** DONE Investigate why rmaxh changes energy
    CLOSED: [2018-11-19 Mon 11:45]
    - Variation of rmaxh does not change the energy
@@ -186,9 +118,9 @@ Ti,Ti:
       model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
     - I thought perhaps that the lattice parameters and the elastic constants
       that way might produce a different result.
-    - Minimising the lattice parameters gives an energy of  $ E_{\text{tot
-      hcp}} = -0.572351 \text{Ryd}$ with lattice parameters of $a_{\text{hcp}}
-      = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
+    - Minimising the lattice parameters gives an energy of  $E_{\text{tot
+      hcp}} = -0.572351 \text{Ryd}$ with lattice parameters of
+     $a_{\text{hcp}} = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
     - Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
     - The stability criteria are still satisfied. 
 #+BEGIN_SRC bash
@@ -295,12 +227,13 @@ Force Constant Matrix
 
 ** TODO Make dislocations go through centre of triangle of atoms 
 
+** TODO Investigate why the gamma surface minima are not along the lines joining the vectors. 
+
 ** TODO Change the lattice vectors to make the dislocation displacement fields periodic
 
 ** TODO Make sure that the displacements are periodic 
 
-
-
+** TODO Why is the displacement in the x direction in the graphs of create cells?
 * General notes 
 ** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
@@ -343,7 +276,7 @@ Force Constant Matrix
      periodic displacement field from the non-periodic one generated, by the
      principle of linear superposition, but this does not work. 
      \[ u_{z}^{\text{sum}} = \sum_{\mathbf{R}} u_{z}^{\inf}(\mathbf{r}
-     -\mathbf{R}) = u_{z}^{\inf}(\marhbf{r}) + u_{z}^{\text{img}}(\mathbf{r})
+     -\mathbf{R}) = u_{z}^{\inf}(\mathbf{r}) + u_{z}^{\text{img}}(\mathbf{r})
      \]
      \[  u_{z}^{\text{img}}(\mathbf{r}) = \sum_{\mathbf{R}}' u_{z}^{\inf}(\mathbf{r}
      -\mathbf{R}) \]
@@ -361,7 +294,7 @@ Force Constant Matrix
 **** How to remove non-periodic displacements
      One can find the periodic displacement $u_{z}^{text{PBC}}(\mathbf{r})$
      from the relation, which arises from the fact that
-     $\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}(\mathbf{r})$
+     $\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}}(\mathbf{r})$
      \[ u_{z}^{text{sum}}(\mathbf{r}) =  u_{z}^{text{PBC}}(\mathbf{r}) +
      \mathbf{s}\cdot\mathbf{r} + \mathbf{u}_{0} \]
      $\mathbf{u}_{0}$ is a constant term, so it can be ignored. 
@@ -429,55 +362,8 @@ Force Constant Matrix
      tilted. 
 
      
-
-** Force constant matrix
-*** Wallace
-**** Crystal Potential: Introduction
-     - Since the vibrational energy of a crystal is generally considered to by
-       small compared to its potential energy, the crystal potential is a first
-       approximation to the free energy or the internal energy.
-     - Ions are labelled by the letters $M$ and $N$.
-     - Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
-       displacements from equilibrium are denoted by $\mathbf{U}(M)$.
-     - Potential energy of the crystal due to interactions among ions in a
-       given configuration is given by $\Phi$, which can be expanded as
-       \begin{align}
-       \Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
-            &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
-            &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
-            &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
-       \end{align}
-     - $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
-     - $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
-     - These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
-     - All of the coefficients are functions of the \emph{initial} configuration.
-     - This potential is supposed to represent the \emph{entire} energy of the crystal
-       except for the kinetic energy of the ions.
-     - From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
-       individual ions in a given cell.
-     - The total potential of the system plus externally applied forces is
-       $\Psi$. For a virtual process where the crystal is deformed while the
-       externally applies forces are held constant $\Psi$ is not conserved, if
-       the forces are changed then it can be conserved. 
-       \begin{align}
-       \Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
-            &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
-       \end{align}
-**** Stability and the Dynamical Matrix
-     - The equilibrium configuration of ions and external forces is a stable
-       equilibrium if the total system potential is minimum with respet to
-       small virtual displacements of the ions from equilirium.  
-     \[\Psi = \Psi_{0}&+
-     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
-     - The stability condition is if they are positive definite: positive for
-       any of the values $U_{i}(M)$, except if they are all 0.
-     - The stability condition is:
-       \[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
-     - $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
-       $>0$ means positive definite (all the eigenvalues are greater than zero).
-     - This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
-** Pair potentials in tbe code
-*** How are they constructed?
+** TBE Pair potentials and Bond integrals
+*** Pair potentials in tbe code
    - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
    - This calls [[file:~/lm/tb/vppder.f][vppder.f]] which actually evaluates the pair potential at that
      point
@@ -519,20 +405,83 @@ C ... e, de and dde are the values and derivatives of the polynomial in the regi
      #+BEGIN_SRC bash
 Ti,Ti:
    type 2 (Exp. decay), V(d) = a exp (- b d)
-             sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
-   coeff:   0.00   0.00   0.00   0.00   0.00   0.00   0.00  -2.75   1.84  -0.46
-   decay:   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.71   0.71   0.71
+             dds    ddp    ddd
+   coeff:  -2.75   1.84  -0.46
+   decay:   0.71   0.71   0.71
    cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
-             sss    sps    pps    ppp    sds    pds    pdp    dds    ddp    ddd
-   r1:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   6.20   6.20   6.20
-   rc:      0.00   0.00   0.00   0.00   0.00   0.00   0.00   8.50   8.50   8.
+             dds    ddp    ddd
+   r1:      6.20   6.20   6.20
+   rc:      8.50   8.50   8.50
      
      #+END_SRC
-*** Bond Integrals: tbe   
-   - So bond integrals from titanium look like this
-   - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png][Bond integrals with multiplicative polynomial cutoffs. ]]
-   - [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png][Bond integrals with multiplicative polynomial cutoffs: zoomed in.]]
-	
+
+
+
+*** Bond integrals from tbe
+      - So bond integrals from titanium look like this, from this file
+        [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/plot_bond_integrals.py][plot_bond_integrals.py]]
+      #+CAPTION: Bond integrals with multiplicative polynomial cutoffs.
+      #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png
+      [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png]]
+      #+CAPTION: Bond integrals with multiplicative polynomial cutoffs: zoomed in.
+      #+NAME:   fig:tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png
+      [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png]]
+
+*** Bond Integrals for first neighbour interaction
+    To make first neighbours it is optimal to have a cutoff that is within
+    alat and $1.4 \times $ alat. This is within the next shell of 6 neighbours
+    and so having the cutoff between alat and $1.2\times$ alat should be
+    optimal. 
+    #+CAPTION: Bond integrals with multiplicative polynomial cutoffs for first neighbour interactions: zoomed in.
+    #+NAME:   fig:tbe_bond_integrals_new__with_polynomial_cutoffs_multiplicative_zoomed_in.png
+    [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/check_new_cutoffs/cutoffs_at_alat_and_one_point_four_alat.png]]
+
+** Force constant matrix
+*** Wallace
+**** Crystal Potential: Introduction
+     - Since the vibrational energy of a crystal is generally considered to by
+       small compared to its potential energy, the crystal potential is a first
+       approximation to the free energy or the internal energy.
+     - Ions are labelled by the letters $M$ and $N$.
+     - Equilibrium positions are given by the vectors $\mathbf{R}(M)$ and
+       displacements from equilibrium are denoted by $\mathbf{U}(M)$.
+     - Potential energy of the crystal due to interactions among ions in a
+       given configuration is given by $\Phi$, which can be expanded as
+       \begin{align}
+       \Phi = \Phi_{0} &+ \sum_{M}\sum_{i} \Phi_{i}(M)U_{i}(M) \\ 
+            &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N)\\ 
+            &+ \frac{1}{3!} \sum_{MNP}\sum_{ijk}\Phi_{ijk}(M,N,P)U_{i}(M)U_{j}(N)U_{k}(P) \\
+            &+ \frac{1}{4!} \sum_{MNPQ}\sum_{ijkl}\Phi_{ijkl}(M,N,P,Q)U_{i}(M)U_{j}(N)U_{k}(P)U_{l}(Q) + \dots \\
+       \end{align}
+     - $\Phi_{i}(M) = \frac{\partial \Phi}{\partial U_{i}(M)}$
+     - $\Phi_{ij}(M) = \frac{\partial^{2} \Phi}{\partial U_{i}(M)U_{j}(N)}$
+     - These are symmetric in their index pairs; \emph{i.e.} $\Phi_{ij}(M,N) = \Phi_{ji}(N,M)$
+     - All of the coefficients are functions of the \emph{initial} configuration.
+     - This potential is supposed to represent the \emph{entire} energy of the crystal
+       except for the kinetic energy of the ions.
+     - From now on $M, N$ represent the unit cell and $\mu, \nu$ represent the
+       individual ions in a given cell.
+     - The total potential of the system plus externally applied forces is
+       $\Psi$. For a virtual process where the crystal is deformed while the
+       externally applies forces are held constant $\Psi$ is not conserved, if
+       the forces are changed then it can be conserved. 
+       \begin{align}
+       \Psi = \Psi_{0} &+ \sum_{M}\sum_{i}[\Phi_{i}(M) - f_i(M)]U_{i}(M)\\
+            &+ \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) \dots
+       \end{align}
+**** Stability and the Dynamical Matrix
+     - The equilibrium configuration of ions and external forces is a stable
+       equilibrium if the total system potential is minimum with respet to
+       small virtual displacements of the ions from equilirium.  
+     \[\Psi = \Psi_{0}+
+     \frac{1}{2}\sum_{MN}\sum_{ij}\Phi_{ij}(M,N)U_i(M)U_j(N) + \dots \]
+     - The stability condition is if they are positive definite: positive for
+       any of the values $U_{i}(M)$, except if they are all 0.
+     - The stability condition is:
+       \[ \sum_{\alpha \beta} \Phi_{\alpha\beta}U_{\alpha}U_{\beta} > 0 \]
+     - $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
+       $>0$ means positive definite (all the eigenvalues are greater than zero).
+     - This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
 ** Gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
@@ -874,7 +823,7 @@ Stopping search: Swarm best position change less than 1e-08
 | a_bcc       |   6.293291 |   6.179489 |      0.012951 |  0.113803 |  500.000000 |  63.376810 |
 | bandwidth   |   0.493300 |   0.426000 |      0.004529 |  0.067300 | 1000.000000 |  71.829290 |
 
-#+BEGIN_SRC 
+#+BEGIN_SRC bash
 
 fddtt=0.46858665192192056 qddstt=0.6675934593368511 
 b0tt=94.48656458962752 p0tt=1.1904330020322709 b1tt=-26.68382995150727 p1tt=0.9999607945279216 
@@ -1067,8 +1016,7 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
          after that of the positons. So this leads to the Velocity Verlet
          algorithm.
        - The timestep for these algorithms is on the order of $1fs$, such that
-         one can have adequate resolution of atomic vibrations ($\f sim
-         10^{-14}s^{-1}$, so period is around $10fs$)
+         one can have adequate resolution of atomic vibrations ( $fs \sim 10^{-14}s^{-1}$, so period is around $10fs$)
 
 **** Velocity Verlet Algorithm
      - For this algorithm the forward derivative with respect to nuclear
@@ -1172,9 +1120,11 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
      The last term is the ensemble average with respect to $A$
      This means we can express the free energy difference (Zwanzig 1953)
-     \[ \Delta \mathcal{A}_{AB} =  -\text{k}_{\text{B}} T \text{ln} \Big(
-     \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)} =  -\text{k}_{\text{B}} T
-     \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+     \begin{align}
+     \Delta \mathcal{A}_{AB} &=  -\text{k}_{\text{B}} T \text{ln} \Big(
+     \frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)\\ &=  -\text{k}_{\text{B}} T
+     \text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} 
+     \end{align}
 
      To sample this efficiently we can use biased potentials. 
      \[ U_{\text{tot}} = U_{0}(R) + V( S(R) ),  \]
@@ -1189,8 +1139,8 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
      This gives the free energy as
      \begin{align}
-     F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R))\\
-                 &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
+     F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) \\
+                  &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
      \end{align}
      where the term on the second line is a constant. 
 
@@ -1205,10 +1155,12 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
      gives a poor reconstruction. It is necessary that weights are in place such that the reconstruction of the global free energy
      profile is smooth. 
      
-     \[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) + C_{i}}  \},\] 
+     \[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R))
+     \big\} - V(S(R)) + C_{i} , \] 
      \[ p_{i} = p^{b}_{i}(S) e^{ +\beta V(R) }e^{\beta C_{i}} \]
      \[ p(S) = \sum_{N \text{windows}} p_i{S} w_{i} \]
-     \[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{N \text{windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} } \]
+     \[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{ N
+     \text{ windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} }} \]
      
      
      For these terms we need to know what the unbiased $p(S)$ is, but that is what we are trying to solve. 
@@ -1228,9 +1180,14 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
       For the error of these one can do block averaging. 
 
-
+      
 **** Adaptive potential bias
 
+** Michail Stamakatis: Statistical Mechanics
+   
+*** Introduction
+    Intensive variables don't depend on size of system (e.g. T, $\mu$)
+    Extensive variables do: ($\mathcal{N}$, V$\mathcal{V}$, $\mathcal{S}$)
 ** Useful definitions of Thermodynamic potentials
    - Internal Energy:
      * The capacity to do work and release heat.
@@ -1260,6 +1217,9 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
      * $\Delta H$ is the total non-mechanical work and heat added to the
        system. 
      * Natural variables: $\{ S, p, \{N_{i}\} \}$
+
+*** Mnemonic Picture
+    [[file:Images/Thermodynamic_mnemonic.png]]
 
 * Useful Notes
 ** Org-mode 
@@ -1307,5 +1267,5 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 
 
-%\bibliographystyle{plain}
-%\bibliography{org-refs}
+ \bibliographystyle{plain}
+ \bibliography{org-refs}

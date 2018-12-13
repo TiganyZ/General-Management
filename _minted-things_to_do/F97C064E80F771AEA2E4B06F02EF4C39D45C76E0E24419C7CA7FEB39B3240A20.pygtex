@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nv}{fddtt}\PYG{o}{=}\PYG{l+m}{0}.46858665192192056 \PYG{n+nv}{qddstt}\PYG{o}{=}\PYG{l+m}{0}.6675934593368511
+\PYG{n+nv}{b0tt}\PYG{o}{=}\PYG{l+m}{94}.48656458962752 \PYG{n+nv}{p0tt}\PYG{o}{=}\PYG{l+m}{1}.1904330020322709 \PYG{n+nv}{b1tt}\PYG{o}{=}\PYGZhy{}26.68382995150727 \PYG{n+nv}{p1tt}\PYG{o}{=}\PYG{l+m}{0}.9999607945279216
+\PYG{n+nv}{cr1}\PYG{o}{=}\PYGZhy{}6.159908080507984 \PYG{n+nv}{cr2}\PYG{o}{=}\PYG{l+m}{3}.949841729455178 \PYG{n+nv}{cr3}\PYG{o}{=}\PYGZhy{}1.0282365318567852 \PYG{n+nv}{ndt}\PYG{o}{=}\PYG{l+m}{1}.9924390340762406
+
+Objective \PYG{k}{function}: \PYG{l+m}{794}
+Objective \PYG{n+nv}{Function}  \PYG{o}{=}  \PYG{l+m}{794}.9141378839079
+Stopping search: Swarm best position change less than 1e\PYGZhy{}08
+\PYG{o}{[} \PYG{l+m}{4}.68586652e\PYGZhy{}01 \PYGZhy{}4.04075885e\PYGZhy{}01  \PYG{l+m}{9}.44865646e+01  \PYG{l+m}{1}.74317108e\PYGZhy{}01
+ \PYGZhy{}2.66838300e+01 \PYGZhy{}3.92062406e\PYGZhy{}05  \PYG{l+m}{1}.99243903e+00 \PYGZhy{}6.15990808e+00
+  \PYG{l+m}{3}.94984173e+00 \PYGZhy{}1.02823653e+00\PYG{o}{]}
+\PYG{l+m}{794}.9141378839079
+\end{Verbatim}
