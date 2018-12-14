@@ -1,3 +1,5 @@
+#+TITLE: things-to-do
+#+AUTHOR: Tigany Zarrouk
 #+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
 #+LATEX_HEADER: \usepackage{physics}
 #+LATEX_HEADER: \usepackage{cases}
@@ -8,7 +10,6 @@
 #+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
 #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
 #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
-#+BIBLIOGRAPHY: org-bib plain
 
 
 
@@ -234,13 +235,15 @@ Force Constant Matrix
 ** TODO Make sure that the displacements are periodic 
 
 ** TODO Why is the displacement in the x direction in the graphs of create cells?
+
+** TODO Calculate the Internal elastic constants, like in Cousins 
 * General notes 
 ** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
    the long range strain fields produced from dislocations in the periodic array
    of cells one has in the simulation.
    - Method of Clouet: Dislocation locking versus easy glide in titanium and
-     zirconium. \cite{Clouet2015}
+     zirconium. cite:Clouet2015 
      - Introduced two dislocations into the simulation cell
      - This formed a quadrupolar periodic array of dislocations which
        minimises the elastic interaction between dislocations and their
@@ -251,7 +254,7 @@ Force Constant Matrix
        at each dislocation position, thus limiting the perturbation of the
        dislocation core by the boundary conditions.
      - Arrangement is the same as the "S" arrangement found in
-       \cite{Clouet2012}
+       cite:Clouet2012 
 
 *** Files to produce dislocations
 **** Single Dislocations
@@ -549,7 +552,7 @@ Less precise c/a below.
     - File and data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py][basal_energy_plotting]] [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png]]
     - Basal plot $8\times 8\times 8$
     - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/Figures/gamma_surface_8-8-8_basal_tbe.png][Basal Plane gamma surface]]
-    - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py][plot_hbgs]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl][energy]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl%20][x]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl%20][y]]
+    - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py][plot_hbgs]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl][energy]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl][x]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl][y]]
       
 
 *** Literature Review
@@ -1256,16 +1259,19 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
   - To remove window in buffer C-x 0
   - Overview of document <shift>-<TAB> to condense to titles.
   - Can have global todo list
-  - < s TAB expands to a ‘src’ code block.
-  - < l TAB expands to:
-  #+BEGIN_EXPORT latex
-  #+END_EXPORT
+  - <s TAB expands to a ‘src’ code block.
+  - <l TAB expands to a 'latex' code block. '
 
 
   - If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
 
 
 
+* Bibliography 
+<<bibliography link>>
 
- \bibliographystyle{plain}
- \bibliography{org-refs}
+bibliographystyle:plain
+bibliography:org-refs.bib
+
+# \bibliographystyle{plain}
+# \bibliography{org-refs.bib}

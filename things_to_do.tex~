@@ -1,4 +1,4 @@
-% Created 2018-12-13 Thu 16:28
+% Created 2018-12-14 Fri 15:36
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -27,8 +27,9 @@
 \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
 \tikzset{snake it/.style={decorate, decoration=snake}}
 \usepackage[nottoc]{tocbibind}
+\author{Tigany Zarrouk}
 \date{\today}
-\title{things\_to\_do}
+\title{things-to-do}
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
@@ -330,7 +331,11 @@ Force Constant Matrix
 \subsection{{\bfseries\sffamily TODO} Make sure that the displacements are periodic}
 \label{sec-1-14}
 
+\subsection{{\bfseries\sffamily TODO} Why is the displacement in the x direction in the graphs of create cells?}
+\label{sec-1-15}
 
+\subsection{{\bfseries\sffamily TODO} Calculate the Internal elastic constants, like in Cousins}
+\label{sec-1-16}
 \section{General notes}
 \label{sec-2}
 \subsection{Dislocation arrays}
@@ -340,7 +345,7 @@ the long range strain fields produced from dislocations in the periodic array
 of cells one has in the simulation.
 \begin{itemize}
 \item Method of Clouet: Dislocation locking versus easy glide in titanium and
-zirconium. \cite{Clouet2015}
+zirconium. \cite{Clouet2015} 
 \begin{itemize}
 \item Introduced two dislocations into the simulation cell
 \item This formed a quadrupolar periodic array of dislocations which
@@ -722,7 +727,7 @@ do not seem quite right.
 \item File and data: \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/plot_hsbc_pkl.py}{basal$_{\text{energy}}$$_{\text{plotting}}$} \includegraphics[width=.9\linewidth]{/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png}
 \item Basal plot $8\times 8\times 8$
 \item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/Figures/gamma_surface_8-8-8_basal_tbe.png}{Basal Plane gamma surface}
-\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py}{plot$_{\text{hbgs}}$}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl}{energy}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl\%20}{x}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl\%20}{y}
+\item \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py}{plot$_{\text{hbgs}}$}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl}{energy}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl}{x}, \href{file:///home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl}{y}
 \end{itemize}
 
 
@@ -1640,11 +1645,9 @@ there are also problems.
 \item To remove window in buffer C-x 0
 \item Overview of document <shift>-<TAB> to condense to titles.
 \item Can have global todo list
-\item < s TAB expands to a ‘src’ code block.
-\item < l TAB expands to:
+\item <s TAB expands to a ‘src’ code block.
+\item <l TAB expands to a 'latex' code block. '
 \end{itemize}
-\begin{export}
-\end{export}
 
 
 \begin{itemize}
@@ -1653,8 +1656,11 @@ there are also problems.
 
 
 
+\section{Bibliography}
+\label{sec-6}
+\label{bibliography-link}
 
 \bibliographystyle{plain}
-\bibliography{org-refs}
+\href{bibliography/org-refs.bib}{\bibliography{org-refs}}
 % Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}
