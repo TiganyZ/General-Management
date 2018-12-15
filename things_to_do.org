@@ -439,7 +439,7 @@ Ti,Ti:
     #+NAME:   fig:tbe_bond_integrals_new__with_polynomial_cutoffs_multiplicative_zoomed_in.png
     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/check_new_cutoffs/cutoffs_at_alat_and_one_point_four_alat.png]]
 
-** Force constant matrix
+** Elastic constants and Force constant matrix
 *** Wallace
 **** Crystal Potential: Introduction
      - Since the vibrational energy of a crystal is generally considered to by
@@ -485,6 +485,23 @@ Ti,Ti:
      - $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
        $>0$ means positive definite (all the eigenvalues are greater than zero).
      - This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
+*** Sutton
+Can express the elastic constants as 
+\[ C_{ijkl} = \frac{\partial^2 E}{\partial e_{ij}\partial e_{kl}} \]
+And also we can express them as 
+\[ C_{ikjl} = -\frac{1}{2\Omega} \sum_{p\neq n} \big( X_k^{(p)} - X_k^{(n)} \big) S_{ij}^{(np)}  \big( X_l^{(p)} - X_l^{(n)}  \big)  \]
+
+And to respect the symmetries of the crystal we have 
+\begin{align}
+ C_{ikjl} = -\frac{1}{8\Omega}  \Big\{ 
+    &\sum_{p\neq n}\big( X_k^{(p)} - X_k^{(n)} \big) S_{ij}^{(np)}  \big( X_l^{(p)} - X_l^{(n)}  \big) \\
+  + &\sum_{p\neq n}\big( X_i^{(p)} - X_i^{(n)} \big) S_{kj}^{(np)}  \big( X_l^{(p)} - X_l^{(n)}  \big) \\
+  + &\sum_{p\neq n}\big( X_k^{(p)} - X_k^{(n)} \big) S_{il}^{(np)}  \big( X_j^{(p)} - X_j^{(n)}  \big) \\
+  + &\sum_{p\neq n}\big( X_i^{(p)} - X_i^{(n)} \big) S_{kl}^{(np)}  \big( X_j^{(p)} - X_j^{(n)}  \big)  \Big\},
+\end{align}
+where $\Omega$ is the volume of the primitive unit cell. 
+
+
 ** Gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
