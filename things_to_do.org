@@ -499,7 +499,15 @@ And to respect the symmetries of the crystal we have
   + &\sum_{p\neq n}\big( X_k^{(p)} - X_k^{(n)} \big) S_{il}^{(np)}  \big( X_j^{(p)} - X_j^{(n)}  \big) \\
   + &\sum_{p\neq n}\big( X_i^{(p)} - X_i^{(n)} \big) S_{kl}^{(np)}  \big( X_j^{(p)} - X_j^{(n)}  \big)  \Big\},
 \end{align}
-where $\Omega$ is the volume of the primitive unit cell. 
+where $\Omega$ is the volume of the primitive unit cell and
+\[ S_{ij}^{(np)} =  \frac{\partial E}{\partial u_i^{(n)} \partial u_j^{(p)} } \]
+
+If there is more than one atom associated with each lattice site, 
+those atoms not on lattice sites may undergo small displacements in addition to those prescribed by the homogeneous strain.
+These additional displacements are sometimes called the 'internal strain'. 
+Although the strain is stil imposed by displacing atoms at lattice sites, atoms between lattice sites will expreience 
+net forces as a result of the strain if they are not at centres of inversion. 
+Relaxation of those forces reduces the energy of the homogeneously strained crystal, and therefore it affects the calculated elastic constants. 
 
 
 ** Gamma surfaces
