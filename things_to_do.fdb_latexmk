@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex things_to_do"] 1544801888 "things_to_do.aux" "things_to_do.bbl" "things_to_do" 1544801889
+["bibtex things_to_do"] 1544803727 "things_to_do.aux" "things_to_do.bbl" "things_to_do" 1544803728
   "/usr/share/texmf/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "org-refs.bib" 0 -1 0 ""
-  "things_to_do.aux" 1544801889 23912 3ba5f71128f7c1fe3da1d3ed806b3b95 ""
+  "bibliography/org-refs.bib" 1544803557 3193 5e102408b8d6b3fe88702f629ea79258 ""
+  "things_to_do.aux" 1544803728 24085 06e884fc65213e9834fb645d946cd9e2 ""
   (generated)
-  "things_to_do.bbl"
   "things_to_do.blg"
-["pdflatex"] 1544801888 "/home/tigany/Documents/docs/Management/things_to_do.tex" "things_to_do.pdf" "things_to_do" 1544801889
+  "things_to_do.bbl"
+["pdflatex"] 1544803727 "/home/tigany/Documents/docs/Management/things_to_do.tex" "things_to_do.pdf" "things_to_do" 1544803728
   "/dev/null" 1537971319 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1497361437 33773 fa5cb09265807b095f2f1e0834c2617c ""
   "/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png" 1542795596 16055 04b6c19f7b325f4651cf9bed8d023278 ""
@@ -16,7 +16,7 @@
   "/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/gamma_line_along_1-210_wrong_endpoints.png" 1543003550 31794 62371b8b81cd53c43adfca130aa5af1b ""
   "/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png" 1542795597 14152 371a8304479fdbf352a89421629cf5c2 ""
   "/home/tigany/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png" 1542794378 29049 3ce17ba750ca54b58dc089d10377fd1f ""
-  "/home/tigany/Documents/docs/Management/things_to_do.tex" 1544801884 72289 a57e9732eb14e6fd60793c7b6f89101e ""
+  "/home/tigany/Documents/docs/Management/things_to_do.tex" 1544803723 72319 31c468c150cd91d77243ce74612ddc28 ""
   "/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/Energy_vs_rmaxh.png" 1542626413 14694 443bf35ca8439dcdac81a045a82c9488 ""
   "/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png" 1542626414 23285 dfef55da43071b41601f943a0030f28d ""
   "/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/check_new_cutoffs/cutoffs_at_alat_and_one_point_four_alat.png" 1544641172 74319 ff20bd3a5f6a890342aa4be26ceed47e ""
@@ -273,17 +273,17 @@
   "_minted-things_to_do/default-pyg-prefix.pygstyle" 1543490758 7889 3ce1fbc763e3e2c748310f4fe31722b6 ""
   "_minted-things_to_do/default.pygstyle" 1543490758 9275 f200be7fc0b7de2461cca28cb35b1427 ""
   "things_to_do.aex" 0 -1 0 ""
-  "things_to_do.aux" 1544801889 23912 3ba5f71128f7c1fe3da1d3ed806b3b95 ""
-  "things_to_do.bbl" 1544801888 49 0eba253fc001332e731e8aba3f23127b "bibtex things_to_do"
-  "things_to_do.out" 1544801889 6494 ff94d9c67d481269265b7950f8735828 ""
+  "things_to_do.aux" 1544803728 24085 06e884fc65213e9834fb645d946cd9e2 ""
+  "things_to_do.bbl" 1544803727 760 4d9e84dcd5a8a4c89fc064a3e8d33084 "bibtex things_to_do"
+  "things_to_do.out" 1544803728 6506 667069dbe1e2bcf3ebc7fcd3c80ffc72 ""
   "things_to_do.pyg" 0 -1 0 ""
-  "things_to_do.tex" 1544801884 72289 a57e9732eb14e6fd60793c7b6f89101e ""
-  "things_to_do.toc" 1544801889 8172 80ce94e4a573798ef1d26c30c4c37456 ""
+  "things_to_do.tex" 1544803723 72319 31c468c150cd91d77243ce74612ddc28 ""
+  "things_to_do.toc" 1544803728 8192 7369436778c15ef47e7c05079e5fd190 ""
   "things_to_do.w18" 0 -1 0 ""
   (generated)
   "things_to_do.aux"
-  "things_to_do.pyg"
+  "things_to_do.out"
   "things_to_do.toc"
   "things_to_do.log"
-  "things_to_do.out"
   "things_to_do.pdf"
+  "things_to_do.pyg"

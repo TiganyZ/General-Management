@@ -1,3 +1,22 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Clouet2012}
+Emmanuel Clouet.
+\newblock {Screw dislocation in zirconium: An ab initio study}.
+\newblock {\em Physical Review B - Condensed Matter and Materials Physics},
+  86(14):1--11, 2012.
+
+\bibitem{Clouet2015}
+Emmanuel Clouet, Daniel Caillard, Nermine Chaari, Fabien Onimus, and David
+  Rodney.
+\newblock {Dislocation locking versus easy glide in titanium and zirconium}.
+\newblock {\em Nature Materials}, 14(9):931--936, sep 2015.
+
+\bibitem{Cousins1979}
+C~S~G Cousins.
+\newblock {Electrostatic contributions to the second- and third-order inner
+  elastic constants of HCP metals for a range of axial ratios}.
+\newblock {\em Journal of Physics C: Solid State Physics}, 12(6):989--994, mar
+  1979.
 
 \end{thebibliography}

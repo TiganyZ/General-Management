@@ -13,6 +13,7 @@
 
 
 
+
 * Tasks 
 	
 ** TODO Has anyone investigated the stacking faults of Omega phase?
@@ -235,8 +236,7 @@ Force Constant Matrix
 ** TODO Make sure that the displacements are periodic 
 
 ** TODO Why is the displacement in the x direction in the graphs of create cells?
-
-** TODO Calculate the Internal elastic constants, like in Cousins 
+** TODO Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
 * General notes 
 ** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
@@ -485,6 +485,23 @@ Ti,Ti:
      - $\alpha$, $\beta \dots$ are indices which refer to the pair  $Mi$ and
        $>0$ means positive definite (all the eigenvalues are greater than zero).
      - This is only satisfied if the matrix $\Phi_{\alpha\beta}$ is positive definite.
+** Inner Elastic constants
+   This is a file which is to evaluate the elastic constants in both relaxed and unrelaxed configurations
+   According to cite:Clouet2012 and cite:Cousins1979, in a strained hcp lattice there are internal degrees of freedom
+   that are not accounted for when applying a homogeneous strain.
+   This is necessary for $C_{11}$, $C_{12}$ and $C_{66}$ elastic constants.
+   Two of these inner elastic constants, $e_{11}$, $e_{11}$, are related to the phonon frequencies of the optical branches at the gamma point.
+   \[\omega_i = 2 * \sqrt{ \Omega * e_{ii} / m }\]
+   Where $\Omega = a^2  c  \sqrt{3} / 2$ (The atomic volume), and $m$ is the mass
+   The inner elastic constants $d_{21}$ couples the internal degrees of freedom to the homogeneous strain, leading to a contribution:
+   \[delta * C_{12} = d_{21}**2 / e_{11}\]
+   $C^0_{ij}$ are the unrelaxed elastic constants
+   The true elastic constants are then given by 
+   $C_{11} = C^0_{11} - delta * C_{12}$ 
+   $C_{12} = C^0_{11} + delta * C_{12}$ 
+   $C_{66} = C^0_{66} - delta * C_{12}$ 
+   With all others being unchanged 
+
 ** Gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
@@ -1266,12 +1283,11 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
   - If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
 
 
-
 * Bibliography 
 <<bibliography link>>
 
-bibliographystyle:plain
-bibliography:org-refs.bib
+bibliographystyle:unsrt
+bibliography:./bibliography/org-refs.bib
 
 # \bibliographystyle{plain}
 # \bibliography{org-refs.bib}

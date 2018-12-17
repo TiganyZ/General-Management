@@ -1,4 +1,4 @@
-% Created 2018-12-14 Fri 15:36
+% Created 2018-12-14 Fri 16:02
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -1661,6 +1661,6 @@ there are also problems.
 \label{bibliography-link}
 
 \bibliographystyle{plain}
-\href{bibliography/org-refs.bib}{\bibliography{org-refs}}
+\bibliography{org-refs}
 % Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}
