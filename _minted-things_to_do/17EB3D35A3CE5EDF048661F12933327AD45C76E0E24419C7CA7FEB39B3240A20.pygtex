@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Eigenvalues
+\PYG{o}{[} \PYG{l+m}{0}.32  \PYGZhy{}0.32   \PYG{l+m}{2}.545 \PYGZhy{}2.545  \PYG{l+m}{0}.32  \PYGZhy{}0.32 \PYG{o}{]}
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+\PYG{o}{[[} \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.    \PYGZhy{}0.32   \PYG{l+m}{0}.     \PYG{l+m}{0}.   \PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.    \PYGZhy{}0.32   \PYG{l+m}{0}.   \PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{2}.545\PYG{o}{]}
+ \PYG{o}{[}\PYGZhy{}0.32   \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.   \PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{0}.    \PYGZhy{}0.32   \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.   \PYG{o}{]}
+ \PYG{o}{[} \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{2}.545  \PYG{l+m}{0}.     \PYG{l+m}{0}.     \PYG{l+m}{0}.   \PYG{o}{]]}
+\end{Verbatim}

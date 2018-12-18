@@ -1,0 +1,5 @@
+PWD /home/tigany/Documents/docs/Management
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/latex.fmt
+OUTPUT texput.log

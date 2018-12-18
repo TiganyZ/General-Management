@@ -232,7 +232,6 @@ Force Constant Matrix
 ** TODO Investigate why the gamma surface minima are not along the lines joining the vectors. 
 
 ** TODO Change the lattice vectors to make the dislocation displacement fields periodic
-
 ** TODO Make sure that the displacements are periodic 
 
 ** TODO Why is the displacement in the x direction in the graphs of create cells?
@@ -492,15 +491,15 @@ Ti,Ti:
    that are not accounted for when applying a homogeneous strain.
    This is necessary for $C_{11}$, $C_{12}$ and $C_{66}$ elastic constants.
    Two of these inner elastic constants, $e_{11}$, $e_{11}$, are related to the phonon frequencies of the optical branches at the gamma point.
-   \[\omega_i = 2 * \sqrt{ \Omega * e_{ii} / m }\]
+   \[\omega_i = 2  \sqrt{ \Omega  e_{ii} / m }\]
    Where $\Omega = a^2  c  \sqrt{3} / 2$ (The atomic volume), and $m$ is the mass
    The inner elastic constants $d_{21}$ couples the internal degrees of freedom to the homogeneous strain, leading to a contribution:
-   \[delta * C_{12} = d_{21}**2 / e_{11}\]
+   \[\delta C_{12} = d_{21}^2 / e_{11}\]
    $C^0_{ij}$ are the unrelaxed elastic constants
    The true elastic constants are then given by 
-   $C_{11} = C^0_{11} - delta * C_{12}$ 
-   $C_{12} = C^0_{11} + delta * C_{12}$ 
-   $C_{66} = C^0_{66} - delta * C_{12}$ 
+   $C_{11} = C^0_{11} - \delta C_{12}$ 
+   $C_{12} = C^0_{11} + \delta C_{12}$ 
+   $C_{66} = C^0_{66} - \delta C_{12}$ 
    With all others being unchanged 
 
 *** Sutton
@@ -598,6 +597,19 @@ Less precise c/a below.
     - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/Figures/gamma_surface_8-8-8_basal_tbe.png][Basal Plane gamma surface]]
     - [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/plot_hsbc_pkl.py][plot_hbgs]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBte888.pkl][energy]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBtx888.pkl][x]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/data/supercell_8-8-8/hgsBty888.pkl][y]]
       
+
+*** Results: December 2018
+With Tony's new model we have gamma surfaces which are reasonable. 
+[[file:Images/basal_gamma_surface_2018-12-18.png]]
+[[file:Images/prismatic_gamma_surface_2018-12-18.png]]
+
+With the prismatic gamma surface, there is no apparent splitting in
+halfway along the $1/3[1\bar{2}10]$ direction, which does not bode
+well for the model. 
+
+The basal gamma surface is still a bit off-kilter. This must be
+rectified. 
+
 
 *** Literature Review
 
