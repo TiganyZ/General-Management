@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{C11} \PYG{o}{=}  \PYG{l+m+mf}{165.8231485457}\PYG{p}{,}   \PYG{n}{C11\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{176.1000000000}
+\PYG{n}{C33} \PYG{o}{=}  \PYG{l+m+mf}{164.5632628633}\PYG{p}{,}   \PYG{n}{C33\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{190.5000000000}
+\PYG{n}{C44} \PYG{o}{=}  \PYG{l+m+mf}{38.1494487390}\PYG{p}{,}   \PYG{n}{C44\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{50.8000000000}
+\PYG{n}{C66} \PYG{o}{=}  \PYG{l+m+mf}{207.5028445231}\PYG{p}{,}   \PYG{n}{C66\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{44.6000000000}
+\PYG{n}{C12} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{249.1825405004}\PYG{p}{,}   \PYG{n}{C12\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{86.9000000000}
+\PYG{n}{C13} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{273.1296728747}\PYG{p}{,}   \PYG{n}{C13\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{68.3000000000}
+\PYG{n}{K} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1094.6742125447}\PYG{p}{,}   \PYG{n}{K\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{109.9666666667}
+\PYG{n}{R} \PYG{o}{=}  \PYG{l+m+mf}{669.1429126353}\PYG{p}{,}   \PYG{n}{R\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{61.8000000000}
+\PYG{n}{H} \PYG{o}{=}  \PYG{l+m+mf}{634.1671283357}\PYG{p}{,}   \PYG{n}{H\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{45.9650000000}
+\end{Verbatim}
