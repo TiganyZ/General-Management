@@ -16,6 +16,7 @@
 
 * Tasks 
 	
+** TODO Use python voronoi around a surface to find triangles through which dislocations will pass
 ** TODO Has anyone investigated the stacking faults of Omega phase?
    - Maybe as Omega phase doesn't occur that often, perhaps it has not been
      studied in detail.
@@ -236,7 +237,305 @@ Force Constant Matrix
 
 ** TODO Why is the displacement in the x direction in the graphs of create cells?
 ** TODO Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+** DONE Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
+CLOSED: [2019-01-14 Mon 19:45]
 * General notes 
+** Titanium tight-binding models
+*** Tony's Models
+**** 2019-01-07
+***** Elastic Constants
+****** Strain Derivatives
+******* Unrelaxed h = 1e-3
+#+BEGIN_SRC python
+Elastic constant matrix GPa:
+   182.002200    68.805800    59.293400     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    68.805800   176.770400    59.452000     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    59.293400    59.452000   199.124400     0.000000     0.000000    -0.000000     0.000000     0.000000    -0.000000 
+     0.000000     0.000000     0.000000    48.829800     0.000000     0.000000    50.098200     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    49.464000     0.000000     0.000000    47.561600     0.000000 
+     0.000000     0.000000    -0.000000     0.000000     0.000000    55.171400     0.000000     0.000000    52.634800 
+     0.000000     0.000000     0.000000    50.098200     0.000000     0.000000    49.464000     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    47.561600     0.000000     0.000000    48.829800     0.000000 
+     0.000000     0.000000    -0.000000     0.000000     0.000000    52.634800     0.000000     0.000000    55.171400 
+
+c11_avg = 179.385  c33 = 199.1243383216876 c44_avg = 49.1469 
+c12 = 68.80570289133829 c13_avg = 59.3727
+
+#+END_SRC
+******* Relaxed h=1e-3
+#+BEGIN_SRC python
+Elastic constant matrix GPa
+   173.124000    76.098400    59.293400    -0.158538     0.000000     0.000000     0.000000     0.000000     0.000000 
+    76.098400   170.111800    59.293400     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    59.293400    59.293400   199.124400     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    -0.158538     0.000000     0.000000    48.829800     0.000000     0.000000    49.781000     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    49.464000     0.000000     0.000000    48.195600     0.000000 
+     0.000000     0.000000     0.000000     0.000000     0.000000    48.195600     0.000000     0.000000    46.610400 
+     0.000000     0.000000     0.000000    49.781000     0.000000     0.000000    49.464000     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    48.195600     0.000000     0.000000    48.829800     0.000000 
+     0.000000     0.000000     0.000000     0.000000     0.000000    46.610400     0.000000     0.000000    48.195600 
+
+c11_avg = 171.6179  c33 = 199.124400  c44_avg = 49.1469 
+ c_12 = 76.098400 c_13 = 59.293400
+#+END_SRC
+
+With relaxation one finds that there is a negative $C_{14}$ component
+when it should be zero. This implies that the structure, on
+relaxation, is moving away from hcp and into another more optimal
+structure. 
+****** Unrelaxed 09/01/19
+From Girshick 
+[[file:Images/girshick_ec_09-01-19.png]]
+#+BEGIN_SRC python
+ C11 =  179.4105487815,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2452549871,   C44_exp =  50.8000000000
+ C66 =  55.1996755007,   C66_exp =  44.6000000000
+ C12 = -12062.1968073992,   C12_exp =  86.9000000000
+ C13 = -11773.0959208918,   C13_exp =  68.3000000000
+ K =  103.7213715237,   K_FR =  109.9666666667
+ R =  67.3715578360,   R_FR =  61.8000000000
+ H =  58.5592139578,   H_FR =  45.9650000000 
+
+#+END_SRC
+
+[[file:Images/tony_ec_09-01-19.png]]
+From Tony
+#+BEGIN_SRC python
+ C11 =  179.4144752885,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2723940787,   C44_exp =  50.8000000000
+ C66 =  220.7854442689,   C66_exp =  44.6000000000
+ C12 = -262.1564132494,   C12_exp =  86.9000000000
+ C13 = -324.7738952427,   C13_exp =  68.3000000000
+ K = -1264.8383336416,   K_FR =  109.9666666667
+ R =  807.9179447561,   R_FR =  61.8000000000
+ H =  698.7467357942,   H_FR =  45.9650000000 
+
+#+END_SRC
+****** Relaxed 09/01/19
+******* gtol = 1e-6
+[[file:Images/girshick_ec_09-01-19_gtol1e-6.png]]
+Girshick 
+#+BEGIN_SRC python
+ C11 =  172.9087030436,   C11_exp =  176.1000000000
+ C33 =  198.5744121594,   C33_exp =  190.5000000000
+ C44 =  49.2523330247,   C44_exp =  50.8000000000
+ C66 =  48.0100583268,   C66_exp =  44.6000000000
+ C12 = -11615.4942407936,   C12_exp =  86.9000000000
+ C13 = -11535.5170624530,   C13_exp =  68.3000000000
+ K =  103.1312742638,   K_FR =  109.9666666667
+ R =  65.5404379802,   R_FR =  61.8000000000
+ H =  54.3174856150,   H_FR =  45.9650000000 
+
+Girshick CURVATURES GPa 
+ [0.0, 172.9004311080267, 172.9169749790961, 198.57441215940486, 497.48462721215066, 292.5218297904287, 486.695326183829, 486.7329294063404, 928.1814683742241, 197.14858238024067, 197.09765185486694, 393.79109416080956, 192.17246592014106, 191.90800069434025, 196.6213139405376, 162.95245684504613] 
+
+Polynomial coeffs 0 
+ [ 2.403846172680e+03 -6.920163181274e+01 -6.273310025869e+00  1.357572843835e+00  7.517680653379e-04 -5.869865103730e-01]
+
+Polynomial coeffs 1 
+ [ 1.903044861896e+03 -4.334207465834e+01 -6.200648309028e+00  1.357754953393e+00  7.540378787786e-04 -5.869865113054e-01]
+
+Polynomial coeffs 2 
+ [-4.917868589163e+04 -6.796328672108e+02  3.263585371778e+00  1.574863053623e+00 -8.199050699247e-03 -5.869864952914e-01]
+
+Polynomial coeffs 3 
+ [ 3.205128206180e+04 -3.898965618549e+02 -1.980113636524e+01  3.916451777404e+00  1.496786130586e-03 -5.869865149184e-01]
+
+Polynomial coeffs 4 
+ [ 9.465144240806e+03 -1.305725525278e+02 -9.881173515241e+00  2.297486159688e+00  1.126506118904e-03 -5.869865121212e-01]
+
+Polynomial coeffs 5 
+ [-5.809294876445e+03 -9.852127061358e+01 -1.135453088524e+01  3.868858537321e+00 -7.467478438242e-03 -5.869865101165e-01]
+
+Polynomial coeffs 6 
+ [-6.310096153941e+03 -8.322406783073e+01 -1.124981789038e+01  3.868797348514e+00 -7.467399766901e-03 -5.869865112354e-01]
+
+Polynomial coeffs 7 
+ [-4.006410093002e+02  6.337412569028e+01 -2.770032051469e+01  7.360139860159e+00 -6.716937062899e-03 -5.869865079021e-01]
+
+Polynomial coeffs 8 
+ [ 6.558740582196e-07 -6.337412596426e+01 -1.619448271167e-10  1.554425990689e+00  7.588095945650e-15 -5.869865174592e-01]
+
+Polynomial coeffs 9 
+ [ 1.332430917251e-05 -5.463286706175e+01 -1.964485796358e-09  1.554023892774e+00  5.655976830621e-14 -5.869865153613e-01]
+
+Polynomial coeffs 10 
+ [ 6.892467635713e-07 -1.700903263886e+02 -1.655851650898e-10  3.104864510502e+00  7.639041260611e-15 -5.869864947086e-01]
+
+Polynomial coeffs 11 
+ [ 1.036658653955e+04 -2.354676574146e+02 -5.373142481023e-01  1.515364947563e+00 -4.065559458558e-06 -5.869865112587e-01]
+
+Polynomial coeffs 12 
+ [-7.785735317634e-06 -2.225378791006e+02  1.384014746019e-09  1.513116258773e+00 -5.405862742570e-14 -5.869864990443e-01]
+
+Polynomial coeffs 13 
+ [-1.664162660344e+05 -2.467038170221e+03  1.228884396969e+01  1.593577360145e+00 -8.816020687671e-03 -5.869863451515e-01]
+
+Polynomial coeffs 14 
+ [ 1.096754809783e+04 -3.547494172056e+02 -7.043360288293e+00  1.255349650346e+00  4.476896561852e-03 -5.869865091142e-01]
+
+#+END_SRC
+
+
+Tony
+[[file:Images/tony_ec_09-01-19_gtol1e-6.png]]
+#+BEGIN_SRC python
+ C11 =  173.0346579154,   C11_exp =  176.1000000000
+ C33 =  198.5744121594,   C33_exp =  190.5000000000
+ C44 =  49.2568530334,   C44_exp =  50.8000000000
+ C66 =  191.9023467596,   C66_exp =  44.6000000000
+ C12 = -210.7700356038,   C12_exp =  86.9000000000
+ C13 = -317.8089744286,   C13_exp =  68.3000000000
+ K = -1148.1322409320,   K_FR =  109.9666666667
+ R =  815.3246721725,   R_FR =  61.8000000000
+ H =  635.6114482523,   H_FR =  45.9650000000 
+
+Tony CURVATURES GPa 
+[0.0, 173.03465791544974, 198.57441215940486, 191.9023467596449, 251.80675473303774, 49.256853033364514, 196.6213139405376, 163.8312829442945, 146.72504872873364]
+
+Polynomial coeffs 0 
+ [ 4.507211527019e+03 -8.449883471457e+01 -6.437754951847e+00  1.358490676015e+00  7.541054778124e-04 -5.869865162471e-01]
+
+Polynomial coeffs 1 
+ [-4.917868589163e+04 -6.796328672108e+02  3.263585371778e+00  1.574863053623e+00 -8.199050699247e-03 -5.869864952914e-01]
+
+Polynomial coeffs 2 
+ [ 8.463541680370e+03 -2.123397437739e+02 -3.994573151874e-01  1.513192016341e+00 -1.159964998503e-06 -5.869865029371e-01]
+
+Polynomial coeffs 3 
+ [ 1.832431891172e+05 -2.767883158595e+03 -1.595434513613e+01  1.976062791391e+00  8.808944930130e-03 -5.869863668531e-01]
+
+Polynomial coeffs 4 
+ [ 1.810477061546e-05 -2.549533859606e+00 -2.196695165670e-09  3.883668415017e-01  4.328971618917e-14 -5.869865119580e-01]
+
+Polynomial coeffs 5 
+ [-1.664162660344e+05 -2.467038170221e+03  1.228884396969e+01  1.593577360145e+00 -8.816020687671e-03 -5.869863451515e-01]
+
+Polynomial coeffs 6 
+ [ 2.328725961840e+04 -3.853438230453e+02 -8.112889714681e+00  1.257934149210e+00  4.483477564102e-03 -5.869865099068e-01]
+
+Polynomial coeffs 7 
+ [-9.014423067864e+02 -5.754662013020e+01 -3.494500291531e+00  1.155801282067e+00  4.609557103966e-07 -5.869865136131e-01]
+
+#+END_SRC
+
+******* gtol=xtol=1e-4
+With gtol=xtol=1e-4
+[[file:Images/girshick_ec_relaxed_09-01-19.png]]
+From Girshick
+#+BEGIN_SRC python
+ C11 =  172.1868387548,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2731447340,   C44_exp =  50.8000000000
+ C66 =  48.1178624998,   C66_exp =  44.6000000000
+ C12 = -11566.5314256067,   C12_exp =  86.9000000000
+ C13 = -11547.6359443159,   C13_exp =  68.3000000000
+ K =  103.7213715237,   K_FR =  109.9666666667
+ R =  67.3715578360,   R_FR =  61.8000000000
+ H =  53.0548981566,   H_FR =  45.9650000000 
+#+END_SRC
+
+[[file:Images/tony_ec_relaxed_09-01-19.png]]
+From Tony
+#+BEGIN_SRC python
+ C11 =  172.1685458528,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2568728288,   C44_exp =  50.8000000000
+ C66 =  191.8736970813,   C66_exp =  44.6000000000
+ C12 = -211.5788483097,   C12_exp =  86.9000000000
+ C13 = -315.1951126369,   C13_exp =  68.3000000000
+ K = -1139.8599322106,   K_FR =  109.9666666667
+ R =  810.4261972965,   R_FR =  61.8000000000
+ H =  634.3223677569,   H_FR =  45.9650000000 
+
+#+END_SRC
+****** Unrelaxed
+[[file:Images/tonyelastic-2019-01-07.png]]
+[[file:Images/girshickelastic-2019-01-07.png]]
+****** Relaxed
+[[file:Images/tonyelastic-Relaxed-2019-01-07.png]]
+#+BEGIN_SRC python
+ C11 =  382.0257364183,   C11_exp =  176.1000000000
+ C33 =  177.1904094545,   C33_exp =  190.5000000000
+ C44 = -284.3306443299,   C44_exp =  50.8000000000
+ C66 =  150.4770441289,   C66_exp =  44.6000000000
+ C12 =  81.0716481605,   C12_exp =  86.9000000000
+ C13 = -613.5092486992,   C13_exp =  68.3000000000
+ K = -150.07242402052222,   K_FR =  109.9666666667
+ R =  1635.7575991424,   R_FR =  61.8000000000
+ H =  747.5127490757,   H_FR =  45.9650000000 
+#+END_SRC
+[[file:Images/girshickelastic-Relaxed-2019-01-07.png]]
+#+BEGIN_SRC python
+ C11 =  175.6668786250,   C11_exp =  176.1000000000
+ C33 =  177.1904094545,   C33_exp =  190.5000000000
+ C44 =  32.8529899251,   C44_exp =  50.8000000000
+ C66 =  9.8949010487,   C66_exp =  44.6000000000
+ C12 = -11833.3066409149,   C12_exp =  86.9000000000
+ C13 = -10947.0085442945,   C13_exp =  68.3000000000
+ K =  97.5253130124,   K_FR =  109.9666666667
+ R =  52.5007525634,   R_FR =  61.8000000000
+ H = -53.1082678520,   H_FR =  45.9650000000 
+
+#+END_SRC
+****** Checking Calculation of Elastic constants
+This is the output I obtain using Tony's files. 
+
+#+BEGIN_SRC python
+python Ti.py -p 'fddtt=0.2682945357 cr2=4.025997513 cr3=-1.111420839 qddstt=0.5207844798 '
+Ti.py starting.. ext = ti , file = fmin.val , vals = fddtt=0.2682945357 cr2=4.025997513 cr3=-1.111420839 qddstt=0.5207844798  binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+Get hcp - fcc energy difference ..
+ Delta_E    : 7.41700 mRy/atom
+ LDA Target : 6.60015 mRy/atom
+Getting hcp c/a ...
+Got a, c : a=5.4890, c=8.8905 c/a=1.6197. Volume per atom=115.9878
+Targets  : a=5.5768, c=8.8521 c/a=1.5873. Volume per atom=119.2108
+bandwidth: 0.535 (target: 0.426)
+Getting LO curvatures ...
+ LO mode curvatures, A:  1.593,  K:  0.586
+      Targets (LDA), A:  1.850,  K:  0.827
+Getting hcp shear constants ...
+shear constants: c_11=179.2, c_33=189.1, c_44= 48.8, c_12= 69.5, c_13= 76.0, Cp=  54.8, Cpp= 54.1, S= 76.2, R=161.4, H=163.7 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, Cp=  44.6, Cpp= 57.5, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 110; target: 110 
+Getting omega phase lattice constants and internal parameter ...
+Got omega : a=8.5664, c=5.5116 c/a=0.6434, u=0.9849. Volume per atom=116.7581
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = -0.636mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.06, K=192 Volume per atom=111, Cp=  8.7, c_44= 32.3
+target:  a=  6.18, K=118,                     Cp= 12.0, c_44= 36.0
+        E_bcc - E_hcp = 16.141mRy per atom 
+ 
+Build Objective Function ..
+                   predicted       target      squared diff.  weight        objective
+ a_hcp       :     5.488990       5.576790       0.007709     20000        154.175711 
+ c_hcp       :     8.890510       8.852101       0.001475     20000         29.505302 
+ c_11        :   179.158035     176.100000       9.351576         5         46.757880 
+ c_33        :   189.068274     190.500000       2.049840         5         10.249201 
+ c_44        :    48.819033      50.800000       3.924232         5         19.621161 
+ c_12        :    69.481301      86.900000     303.411074         5       1517.055371 
+ c_13        :    75.975964      68.300000      58.920429         5        294.602143 
+ a_omega     :     8.566450       8.732543       0.027587      2000         55.174046 
+ c_omega     :     5.511577       5.323431       0.035399      2000         70.797683 
+ u_omega     :     0.984896       1.000000       0.000228        20          0.004563 
+ DE (o, hcp) :    -0.635500      -0.734754       0.009851        10          0.098513 
+ a_bcc       :     6.055721       6.179489       0.015318        10          0.153184 
+ bandwidth   :     0.535000       0.426000       0.011881        20          0.237620 
+ LO-A        :     1.593190       1.850320       0.066116       200         13.223167 
+ LO-K        :     0.585928       0.826586       0.057916       200         11.583255 
+ e_fcc-e_hcp :     7.417000       6.600150       0.667244        50         33.362196 
+Objective function: 2256
+
+#+END_SRC
+
+***** Phonons
+The phonons for the model are as follows
+# ()convertfrompdf:t
+[[file:Images/hcp-band-dos-2019-01-07.png]] 
+#Conversion from [[file:Images/hcp-band-dos-2019-01-07.pdf]]
 ** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
    the long range strain fields produced from dislocations in the periodic array
@@ -363,7 +662,46 @@ Force Constant Matrix
      where $c_{2}$ is the length of the periodicity vector before it has been
      tilted. 
 
-     
+    
+** Phonons 
+
+*** DFT and TBE Phonons
+The phonons and q points for the fitting using LDA are here
+[[file:~/Documents/swarm_fit_ti/phonons_and_strain_derivatives/test_phonopy_conf/dft_results/dft_ctrl_files/from_init/phonon_frequency_calc/hcp_lmf/hcp-band_dos_dft.pdf]]
+Q point frequencies at M and H are 
+#+BEGIN_SRC python
+- q-position: [    0.0000000,    0.0000000,    0.5000000 ]
+  band:
+  - # 1
+    frequency:    2.8585871860
+  - # 2
+    frequency:    2.8585871860
+  - # 3
+    frequency:    2.8585871860
+  - # 4
+    frequency:    2.8585871860
+  - # 5
+    frequency:    5.6670604683
+  - # 6
+    frequency:    5.6670604683
+
+- q-position: [    0.3300000,    0.3300000,    0.0000000 ]
+  band:
+  - # 1
+    frequency:    4.8064342322
+  - # 2
+    frequency:    5.5801002486
+  - # 3
+    frequency:    5.6531673769
+  - # 4
+    frequency:    6.3665184154
+  - # 5
+    frequency:    6.4005018626
+  - # 6
+    frequency:    7.6408237318
+
+#+END_SRC
+
 ** TBE Pair potentials and Bond integrals
 *** Pair potentials in tbe code
    - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
@@ -536,13 +874,27 @@ Relaxation of those forces reduces the energy of the homogeneously strained crys
      exit.
      - SOLUTION: Coordinates were not in units of alat.
 *** Relaxing in tbe
+**** Notes on how to invoke relaxation
     - To relax in tbe need to modify:
       - Ewald tolerance: ewtol
 	- This can generally be set quite low: 1d-14
       - Convergence criteria:
 	- gtol: The tolerance in the force for convergence e.g. 1d-8
 	- xtol: The tolerance in the atomic positon e.g. 1d-8.
+**** Using Tony's cell for gamma surfaces. 
+#+BEGIN_SRC python
+        plat = np.array([[0.,           -1.,   0.],
+                         [3**(0.5)/2.,  0.5,   0.],
+                         [0.,           0.0,   q ] ] )
+        
+        X_n = np.array([0., 0., 0.])
+        X_p = np.array( [ 1./(2. * 3**(0.5) ), -0.5, q/2. ] )
 
+        # In this configuration, we have
+        # 1/3[1-210] == -[010]
+        # 1/2[10-10] ==  [100]
+        # So for basal stacking fault using this cell, we need to use combinations of vectors [0-10] and [3**(0.5), -0.5, 0]
+#+END_SRC
 *** Convergence and k-points in tbe
     - Tony used a $30\times 30\times 30$ grid for the k-point mesh.
     - Making a square cell, and increasing the length accordingly, one must
@@ -602,6 +954,10 @@ Less precise c/a below.
 With Tony's new model we have gamma surfaces which are reasonable. 
 [[file:Images/basal_gamma_surface_2018-12-18.png]]
 [[file:Images/prismatic_gamma_surface_2018-12-18.png]]
+[[file:Images/pyramidal_plane_gamma_surface_07-01-18_Ready.png]]
+ 
+Apart from the pyramidal plane which seems erroneous
+[[file:Images/wrongpyramidalgammasurftbe.png]]
 
 With the prismatic gamma surface, there is no apparent splitting in
 halfway along the $1/3[1\bar{2}10]$ direction, which does not bode

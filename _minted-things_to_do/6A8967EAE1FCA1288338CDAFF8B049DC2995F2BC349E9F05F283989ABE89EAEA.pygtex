@@ -1,0 +1,38 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYG{n}{C11} \PYG{o}{=}  \PYG{l+m+mf}{173.0346579154}\PYG{p}{,}   \PYG{n}{C11\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{176.1000000000}
+ \PYG{n}{C33} \PYG{o}{=}  \PYG{l+m+mf}{198.5744121594}\PYG{p}{,}   \PYG{n}{C33\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{190.5000000000}
+ \PYG{n}{C44} \PYG{o}{=}  \PYG{l+m+mf}{49.2568530334}\PYG{p}{,}   \PYG{n}{C44\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{50.8000000000}
+ \PYG{n}{C66} \PYG{o}{=}  \PYG{l+m+mf}{191.9023467596}\PYG{p}{,}   \PYG{n}{C66\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{44.6000000000}
+ \PYG{n}{C12} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{210.7700356038}\PYG{p}{,}   \PYG{n}{C12\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{86.9000000000}
+ \PYG{n}{C13} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{317.8089744286}\PYG{p}{,}   \PYG{n}{C13\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{68.3000000000}
+ \PYG{n}{K} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1148.1322409320}\PYG{p}{,}   \PYG{n}{K\PYGZus{}FR} \PYG{o}{=}  \PYG{l+m+mf}{109.9666666667}
+ \PYG{n}{R} \PYG{o}{=}  \PYG{l+m+mf}{815.3246721725}\PYG{p}{,}   \PYG{n}{R\PYGZus{}FR} \PYG{o}{=}  \PYG{l+m+mf}{61.8000000000}
+ \PYG{n}{H} \PYG{o}{=}  \PYG{l+m+mf}{635.6114482523}\PYG{p}{,}   \PYG{n}{H\PYGZus{}FR} \PYG{o}{=}  \PYG{l+m+mf}{45.9650000000}
+
+\PYG{n}{Tony} \PYG{n}{CURVATURES} \PYG{n}{GPa}
+\PYG{p}{[}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{173.03465791544974}\PYG{p}{,} \PYG{l+m+mf}{198.57441215940486}\PYG{p}{,} \PYG{l+m+mf}{191.9023467596449}\PYG{p}{,} \PYG{l+m+mf}{251.80675473303774}\PYG{p}{,} \PYG{l+m+mf}{49.256853033364514}\PYG{p}{,} \PYG{l+m+mf}{196.6213139405376}\PYG{p}{,} \PYG{l+m+mf}{163.8312829442945}\PYG{p}{,} \PYG{l+m+mf}{146.72504872873364}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{0}
+ \PYG{p}{[} \PYG{l+m+mf}{4.507211527019e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.449883471457e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.437754951847e+00}  \PYG{l+m+mf}{1.358490676015e+00}  \PYG{l+m+mf}{7.541054778124e\PYGZhy{}04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865162471e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{1}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.917868589163e+04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.796328672108e+02}  \PYG{l+m+mf}{3.263585371778e+00}  \PYG{l+m+mf}{1.574863053623e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.199050699247e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869864952914e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{2}
+ \PYG{p}{[} \PYG{l+m+mf}{8.463541680370e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.123397437739e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.994573151874e\PYGZhy{}01}  \PYG{l+m+mf}{1.513192016341e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.159964998503e\PYGZhy{}06} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865029371e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{3}
+ \PYG{p}{[} \PYG{l+m+mf}{1.832431891172e+05} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.767883158595e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.595434513613e+01}  \PYG{l+m+mf}{1.976062791391e+00}  \PYG{l+m+mf}{8.808944930130e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869863668531e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{4}
+ \PYG{p}{[} \PYG{l+m+mf}{1.810477061546e\PYGZhy{}05} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.549533859606e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.196695165670e\PYGZhy{}09}  \PYG{l+m+mf}{3.883668415017e\PYGZhy{}01}  \PYG{l+m+mf}{4.328971618917e\PYGZhy{}14} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865119580e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{5}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.664162660344e+05} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.467038170221e+03}  \PYG{l+m+mf}{1.228884396969e+01}  \PYG{l+m+mf}{1.593577360145e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.816020687671e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869863451515e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{6}
+ \PYG{p}{[} \PYG{l+m+mf}{2.328725961840e+04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.853438230453e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.112889714681e+00}  \PYG{l+m+mf}{1.257934149210e+00}  \PYG{l+m+mf}{4.483477564102e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865099068e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{7}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9.014423067864e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.754662013020e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.494500291531e+00}  \PYG{l+m+mf}{1.155801282067e+00}  \PYG{l+m+mf}{4.609557103966e\PYGZhy{}07} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865136131e\PYGZhy{}01}\PYG{p}{]}
+\end{Verbatim}

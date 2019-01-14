@@ -1,0 +1,59 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYG{n}{C11} \PYG{o}{=}  \PYG{l+m+mf}{172.9087030436}\PYG{p}{,}   \PYG{n}{C11\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{176.1000000000}
+ \PYG{n}{C33} \PYG{o}{=}  \PYG{l+m+mf}{198.5744121594}\PYG{p}{,}   \PYG{n}{C33\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{190.5000000000}
+ \PYG{n}{C44} \PYG{o}{=}  \PYG{l+m+mf}{49.2523330247}\PYG{p}{,}   \PYG{n}{C44\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{50.8000000000}
+ \PYG{n}{C66} \PYG{o}{=}  \PYG{l+m+mf}{48.0100583268}\PYG{p}{,}   \PYG{n}{C66\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{44.6000000000}
+ \PYG{n}{C12} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{11615.4942407936}\PYG{p}{,}   \PYG{n}{C12\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{86.9000000000}
+ \PYG{n}{C13} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{11535.5170624530}\PYG{p}{,}   \PYG{n}{C13\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{68.3000000000}
+ \PYG{n}{K} \PYG{o}{=}  \PYG{l+m+mf}{103.1312742638}\PYG{p}{,}   \PYG{n}{K\PYGZus{}FR} \PYG{o}{=}  \PYG{l+m+mf}{109.9666666667}
+ \PYG{n}{R} \PYG{o}{=}  \PYG{l+m+mf}{65.5404379802}\PYG{p}{,}   \PYG{n}{R\PYGZus{}FR} \PYG{o}{=}  \PYG{l+m+mf}{61.8000000000}
+ \PYG{n}{H} \PYG{o}{=}  \PYG{l+m+mf}{54.3174856150}\PYG{p}{,}   \PYG{n}{H\PYGZus{}FR} \PYG{o}{=}  \PYG{l+m+mf}{45.9650000000}
+
+\PYG{n}{Girshick} \PYG{n}{CURVATURES} \PYG{n}{GPa}
+ \PYG{p}{[}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{172.9004311080267}\PYG{p}{,} \PYG{l+m+mf}{172.9169749790961}\PYG{p}{,} \PYG{l+m+mf}{198.57441215940486}\PYG{p}{,} \PYG{l+m+mf}{497.48462721215066}\PYG{p}{,} \PYG{l+m+mf}{292.5218297904287}\PYG{p}{,} \PYG{l+m+mf}{486.695326183829}\PYG{p}{,} \PYG{l+m+mf}{486.7329294063404}\PYG{p}{,} \PYG{l+m+mf}{928.1814683742241}\PYG{p}{,} \PYG{l+m+mf}{197.14858238024067}\PYG{p}{,} \PYG{l+m+mf}{197.09765185486694}\PYG{p}{,} \PYG{l+m+mf}{393.79109416080956}\PYG{p}{,} \PYG{l+m+mf}{192.17246592014106}\PYG{p}{,} \PYG{l+m+mf}{191.90800069434025}\PYG{p}{,} \PYG{l+m+mf}{196.6213139405376}\PYG{p}{,} \PYG{l+m+mf}{162.95245684504613}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{0}
+ \PYG{p}{[} \PYG{l+m+mf}{2.403846172680e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.920163181274e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.273310025869e+00}  \PYG{l+m+mf}{1.357572843835e+00}  \PYG{l+m+mf}{7.517680653379e\PYGZhy{}04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865103730e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{1}
+ \PYG{p}{[} \PYG{l+m+mf}{1.903044861896e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.334207465834e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.200648309028e+00}  \PYG{l+m+mf}{1.357754953393e+00}  \PYG{l+m+mf}{7.540378787786e\PYGZhy{}04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865113054e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{2}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.917868589163e+04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.796328672108e+02}  \PYG{l+m+mf}{3.263585371778e+00}  \PYG{l+m+mf}{1.574863053623e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.199050699247e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869864952914e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{3}
+ \PYG{p}{[} \PYG{l+m+mf}{3.205128206180e+04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.898965618549e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.980113636524e+01}  \PYG{l+m+mf}{3.916451777404e+00}  \PYG{l+m+mf}{1.496786130586e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865149184e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{4}
+ \PYG{p}{[} \PYG{l+m+mf}{9.465144240806e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.305725525278e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9.881173515241e+00}  \PYG{l+m+mf}{2.297486159688e+00}  \PYG{l+m+mf}{1.126506118904e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865121212e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{5}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.809294876445e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9.852127061358e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.135453088524e+01}  \PYG{l+m+mf}{3.868858537321e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{7.467478438242e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865101165e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{6}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.310096153941e+03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.322406783073e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.124981789038e+01}  \PYG{l+m+mf}{3.868797348514e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{7.467399766901e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865112354e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{7}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.006410093002e+02}  \PYG{l+m+mf}{6.337412569028e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.770032051469e+01}  \PYG{l+m+mf}{7.360139860159e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.716937062899e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865079021e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{8}
+ \PYG{p}{[} \PYG{l+m+mf}{6.558740582196e\PYGZhy{}07} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.337412596426e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.619448271167e\PYGZhy{}10}  \PYG{l+m+mf}{1.554425990689e+00}  \PYG{l+m+mf}{7.588095945650e\PYGZhy{}15} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865174592e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{9}
+ \PYG{p}{[} \PYG{l+m+mf}{1.332430917251e\PYGZhy{}05} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.463286706175e+01} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.964485796358e\PYGZhy{}09}  \PYG{l+m+mf}{1.554023892774e+00}  \PYG{l+m+mf}{5.655976830621e\PYGZhy{}14} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865153613e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{10}
+ \PYG{p}{[} \PYG{l+m+mf}{6.892467635713e\PYGZhy{}07} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.700903263886e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.655851650898e\PYGZhy{}10}  \PYG{l+m+mf}{3.104864510502e+00}  \PYG{l+m+mf}{7.639041260611e\PYGZhy{}15} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869864947086e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{11}
+ \PYG{p}{[} \PYG{l+m+mf}{1.036658653955e+04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.354676574146e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.373142481023e\PYGZhy{}01}  \PYG{l+m+mf}{1.515364947563e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.065559458558e\PYGZhy{}06} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865112587e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{12}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{7.785735317634e\PYGZhy{}06} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.225378791006e+02}  \PYG{l+m+mf}{1.384014746019e\PYGZhy{}09}  \PYG{l+m+mf}{1.513116258773e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.405862742570e\PYGZhy{}14} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869864990443e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{13}
+ \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.664162660344e+05} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.467038170221e+03}  \PYG{l+m+mf}{1.228884396969e+01}  \PYG{l+m+mf}{1.593577360145e+00} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.816020687671e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869863451515e\PYGZhy{}01}\PYG{p}{]}
+
+\PYG{n}{Polynomial} \PYG{n}{coeffs} \PYG{l+m+mi}{14}
+ \PYG{p}{[} \PYG{l+m+mf}{1.096754809783e+04} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.547494172056e+02} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{7.043360288293e+00}  \PYG{l+m+mf}{1.255349650346e+00}  \PYG{l+m+mf}{4.476896561852e\PYGZhy{}03} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.869865091142e\PYGZhy{}01}\PYG{p}{]}
+\end{Verbatim}
