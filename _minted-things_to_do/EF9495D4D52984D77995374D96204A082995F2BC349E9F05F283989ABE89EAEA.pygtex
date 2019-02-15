@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Elastic} \PYG{n}{Constants}\PYG{p}{:} \PYG{n}{Girshick} \PYG{n}{Routine} \PYG{n}{Applied} \PYG{n}{Strains}
+
+
+\PYG{n}{C11} \PYG{o}{=}  \PYG{l+m+mf}{165.8623476695}\PYG{p}{,}   \PYG{n}{C11\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{176.1000000000}
+\PYG{n}{C33} \PYG{o}{=}  \PYG{l+m+mf}{164.5632628633}\PYG{p}{,}   \PYG{n}{C33\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{190.5000000000}
+\PYG{n}{C44} \PYG{o}{=}  \PYG{l+m+mf}{38.1796557562}\PYG{p}{,}    \PYG{n}{C44\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{50.8000000000}
+\PYG{n}{C66} \PYG{o}{=}  \PYG{l+m+mf}{51.8860924371}\PYG{p}{,}    \PYG{n}{C66\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{44.6000000000}
+\PYG{n}{C12} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{10383.7435816516}\PYG{p}{,} \PYG{n}{C12\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{86.9000000000}
+\PYG{n}{C13} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9548.9999553500}\PYG{p}{,}  \PYG{n}{C13\PYGZus{}exp} \PYG{o}{=}  \PYG{l+m+mf}{68.3000000000}
+\PYG{n}{K}   \PYG{o}{=}  \PYG{l+m+mf}{93.6545272856}\PYG{p}{,}    \PYG{n}{K\PYGZus{}FR}    \PYG{o}{=}  \PYG{l+m+mf}{109.9666666667}
+\PYG{n}{R}   \PYG{o}{=}  \PYG{l+m+mf}{55.7940512318}\PYG{p}{,}    \PYG{n}{R\PYGZus{}FR}    \PYG{o}{=}  \PYG{l+m+mf}{61.8000000000}
+\PYG{n}{H}   \PYG{o}{=}  \PYG{l+m+mf}{52.8336415119}\PYG{p}{,}    \PYG{n}{H\PYGZus{}FR}    \PYG{o}{=}  \PYG{l+m+mf}{45.9650000000}
+\end{Verbatim}

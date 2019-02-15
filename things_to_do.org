@@ -14,12 +14,25 @@
 
 
 
-* Tasks 
+* Tasks
+ 
+** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
+** TODO Calculate solution enthalpy of oxygen in titanium. 
+- The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
+  $$ E_{\text{sol} = E( \text{Ti}_n \text{O} ) - E( \text{Ti}_n ) - E(O) $$
+  $$ \Delta V = V( \text{Ti}_n \text{O} ) - V( \text{Ti}_n ) $$
+- $E( \text{Ti}_n \text{O} )$ is the excess energ of the bulk supercell with n
+  Ti atoms and one impurity atom. $E( \text{Ti}_n )$ is the energy of the pure
+  cells.
+- Influence of cell sizes and solution enthalpy needs to be considered.
+
+** TODO Compile list of papers to read for Omar
 	
+** TODO Use python voronoi around a surface to find triangles through which dislocations will pass
 ** TODO Has anyone investigated the stacking faults of Omega phase?
    - Maybe as Omega phase doesn't occur that often, perhaps it has not been
      studied in detail.
-   - I should look further into this
+   - I should look further into thsi
 ** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
 *** Checking the convergence criteria
       - Now checking the convergence criteria.
@@ -83,11 +96,11 @@ bz: metal
 *** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
     CLOSED: [2018-11-19 Mon 12:08]
 ** TODO Python script: remove include statements  -->  One file.  
-** TODO Summarise UCL DFT lectures. 
 ** TODO Write first paragraph of Literature review
 *** TODO Summarise Stacking Faults and write review
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
+** TODO Summarise UCL DFT lectures. 
 ** TODO Write summary of org-mode
     
 ** DONE Investigate why rmaxh changes energy
@@ -232,11 +245,497 @@ Force Constant Matrix
 ** TODO Investigate why the gamma surface minima are not along the lines joining the vectors. 
 
 ** TODO Change the lattice vectors to make the dislocation displacement fields periodic
-** TODO Make sure that the displacements are periodic 
 
 ** TODO Why is the displacement in the x direction in the graphs of create cells?
+** TODO Make sure that the displacements are periodic 
 ** TODO Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+** DONE Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
+CLOSED: [2019-01-14 Mon 19:45]
 * General notes 
+** Titanium tight-binding models
+*** Tigany's Models
+**** 2019-01-16  
+Just looking at a model that the optimisation on tar spat out.
+#+BEGIN_SRC python
+START: OBJECTIVE FUNCTION
+
+ti_obj_new_ec_cutoffs_canon.py 
+ starting..
+   ext = ti ,
+   file = fmin.val ,
+   vals = fdd=0.1737703199 qdds=0.5706158058 qddp=0.6421834099 qddd=0.7560903882 b0=278.8444422514 p0=1.7961642354 b1=0.0000000000 p1=0.0000000
+000 ndt=1.9624397374 cr1=-6.9348461726 cr2=4.0612686987 cr3=-1.0000000000 r1=0.9819448403 rc=1.3464870767 rmaxh=1.3599519474  
+   binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+
+
+
+Getting hcp c/a ...
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.333512
+         Iterations: 29
+         Function evaluations: 60
+Got a, c : a=5.5401081318, c=8.9583629249 c/a=1.6170014577. Volume per atom=119.0599707593
+Targets  : a=5.5767896900, c=8.8521008200 c/a=1.5873112152. Volume per atom=119.2107777334
+
+Obtaining Bandwidth 
+
+  eval 1 for bandwidth = -0.1587
+  eval 2 for bandwidth = 0.129
+bandwidth: 0.288 (target: 0.426)
+
+Getting hcp shear constants ...
+
+ C_11 =    177.624 GPa
+
+ C_33 =    191.588 GPa
+
+ C_44 =     46.334 GPa
+
+ C_12 =     88.164 GPa
+
+ C_13 =     67.996 GPa
+
+shear constants: c_11=177.6, c_33=191.6, c_44= 46.3, c_12= 88.2, c_13= 68.0, c_66=  44.7, S= 68.7, R=188.5, H=147.8 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, c_66=  44.6, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 111; target: 110 
+
+Obtaining bcc Ti quantities
+
+  trial bcc output from pfit = 0.0
+  VF = 0.943542
+  Epp bcc = 0.491615
+
+Getting omega phase lattice constants and internal parameter ...
+
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.498206
+         Iterations: 38
+         Function evaluations: 81
+
+Got omega : a=8.7091, c=5.4026 c/a=0.6203, u=1.0001. Volume per atom=118.2943
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = 0.687mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.08, K=57 Volume per atom=112
+target:  a=  6.18, K=118,                     
+        E_bcc - E_hcp = 19.358mRy per atom 
+
+
+ Build Objective Function
+     ...with L1 norm
+                    predicted       target      squared diff.        p_norm         weight       objective
+  a_hcp       :   5.54010813     5.57678969     0.00134554       0.03668156     1000.00000000       38.02709489 
+  c_hcp       :   8.95836292     8.85210082     0.01129163       0.10626210     1000.00000000      117.55373983 
+  c_11        : 177.62375172   176.10000000     2.32181932       1.52375172       1.00000000        3.84557104 
+  c_33        : 191.58842280   190.50000000     1.18466418       1.08842280       1.00000000        2.27308698 
+  c_44        :  46.33439251    50.80000000    19.94165025       4.46560749       1.00000000       24.40725774 
+  c_12        :  88.16405241    86.90000000     1.59782850       1.26405241       1.00000000        2.86188091 
+  c_13        :  67.99572101    68.30000000     0.09258571       0.30427899       1.00000000        0.39686470 
+  a_omega     :   8.70914358     8.73254342     0.00054755       0.02339984     250.00000000        5.98684832 
+  c_omega     :   5.40260729     5.32343103     0.00626888       0.07917626     250.00000000       21.36128389 
+  u_omega     :   1.00009549     1.00000000     0.00000001       0.00009549     500.00000000        0.04774897 
+  DE (o, hcp) :   0.68707833    -0.73475386     2.02160678       1.42183219       1.00000000        3.44343897 
+  a_bcc       :   6.08183509     6.17948863     0.00953621       0.09765354     500.00000000       53.59487776 
+  bandwidth   :   0.28770000     0.42600000     0.01912689       0.13830000     1000.00000000      157.42689000 
+
+Objective function: 431
+
+#+END_SRC
+
+Here are the phonons:
+[[file:~/Documents/phonopy/ti-phonons/2019-01-16-TiganyModel/hcp/hcp-band_dos.pdf][hcp phonons 2019-01-16]]
+[[file:~/Documents/phonopy/ti-phonons/2019-01-16-TiganyModel/omega/omega-band_dos.pdf][omega phonons 2019-01-16]]
+[[file:~/Documents/phonopy/ti-phonons/2019-01-16-TiganyModel/bcc/bcc-band_dos.pdf][bcc
+phonons 2019-01-16]]
+**** 2019-01-16 gherkin
+#+BEGIN_SRC python
+START: OBJECTIVE FUNCTION
+
+ti_obj_new_ec_cutoffs_canon.py 
+ starting..
+   ext = ti ,
+   file = fmin.val ,
+   vals = fdd=0.0612208622 qdds=0.3902890045 qddp=0.4649455926 qddd=0.5756575714 b0=254.7932729989 p0=1.8871236540 b1=0.0000000000 p1=0.0000000
+000 ndt=1.9510574036 cr1=-6.4416591804 cr2=3.6704407936 cr3=-1.0000000000 r1=0.9680179778 rc=1.3439860367 rmaxh=1.3574258970  
+   binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+
+
+
+Getting hcp c/a ...
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.340763
+         Iterations: 31
+         Function evaluations: 62
+Got a, c : a=5.5326800768, c=8.8578811280 c/a=1.6010109034. Volume per atom=117.4090570706
+Targets  : a=5.5767896900, c=8.8521008200 c/a=1.5873112152. Volume per atom=119.2107777334
+
+Obtaining Bandwidth 
+
+  eval 1 for bandwidth = -0.1401
+  eval 2 for bandwidth = 0.1151
+bandwidth: 0.255 (target: 0.426)
+
+Getting hcp shear constants ...
+
+ C_11 =    177.759 GPa
+
+ C_33 =    188.157 GPa
+
+ C_44 =     52.311 GPa
+
+ C_12 =     89.739 GPa
+
+ C_13 =     64.932 GPa
+
+shear constants: c_11=177.8, c_33=188.2, c_44= 52.3, c_12= 89.7, c_13= 64.9, c_66=  44.0, S= 74.3, R=192.0, H=147.0 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, c_66=  44.6, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 109; target: 110 
+
+Obtaining bcc Ti quantities
+
+  trial bcc output from pfit = 0.0
+  VF = 0.903835
+  Epp bcc = 0.574544
+
+Getting omega phase lattice constants and internal parameter ...
+
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.506159
+         Iterations: 39
+         Function evaluations: 81
+
+Got omega : a=8.6332, c=5.3331 c/a=0.6177, u=1.0000. Volume per atom=114.7451
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = 1.662mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.00, K=64 Volume per atom=108
+target:  a=  6.18, K=118,                     
+        E_bcc - E_hcp = 21.698mRy per atom 
+
+
+ Build Objective Function
+     ...with L1 norm
+                    predicted       target      squared diff.        p_norm         weight       objective
+  a_hcp       :   5.53268008     5.57678969     0.00194566       0.04410961     1000.00000000       46.05527115 
+  c_hcp       :   8.85788113     8.85210082     0.00003341       0.00578031     1000.00000000        5.81371992 
+  c_11        : 177.75900987   176.10000000     2.75231373       1.65900987       1.00000000        4.41132360 
+  c_33        : 188.15681778   190.50000000     5.49050290       2.34318222       1.00000000        7.83368512 
+  c_44        :  52.31098007    50.80000000     2.28306077       1.51098007       1.00000000        3.79404084 
+  c_12        :  89.73873801    86.90000000     8.05843351       2.83873801       1.00000000       10.89717152 
+  c_13        :  64.93191763    68.30000000    11.34397888       3.36808237       1.00000000       14.71206126 
+  a_omega     :   8.63324520     8.73254342     0.00986014       0.09929822     250.00000000       27.28958940 
+  c_omega     :   5.33306014     5.32343103     0.00009272       0.00962910     250.00000000        2.43045557 
+  u_omega     :   0.99998979     1.00000000     0.00000000       0.00001021     500.00000000        0.00510460 
+  DE (o, hcp) :   1.66201667    -0.73475386     5.74450895       2.39677052       1.00000000        8.14127947 
+  a_bcc       :   5.99529576     6.17948863     0.03392701       0.18419287     500.00000000      109.05994138 
+  bandwidth   :   0.25520000     0.42600000     0.02917264       0.17080000     1000.00000000      199.97264000 
+
+Objective function: 440
+
+#+END_SRC
+*** Tony's Models
+**** 2019-01-07
+***** Elastic Constants
+****** Strain Derivatives
+******* Unrelaxed h = 1e-3
+#+BEGIN_SRC python
+Elastic constant matrix GPa:
+   182.002200    68.805800    59.293400     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    68.805800   176.770400    59.452000     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    59.293400    59.452000   199.124400     0.000000     0.000000    -0.000000     0.000000     0.000000    -0.000000 
+     0.000000     0.000000     0.000000    48.829800     0.000000     0.000000    50.098200     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    49.464000     0.000000     0.000000    47.561600     0.000000 
+     0.000000     0.000000    -0.000000     0.000000     0.000000    55.171400     0.000000     0.000000    52.634800 
+     0.000000     0.000000     0.000000    50.098200     0.000000     0.000000    49.464000     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    47.561600     0.000000     0.000000    48.829800     0.000000 
+     0.000000     0.000000    -0.000000     0.000000     0.000000    52.634800     0.000000     0.000000    55.171400 
+
+c11_avg = 179.385  c33 = 199.1243383216876 c44_avg = 49.1469 
+c12 = 68.80570289133829 c13_avg = 59.3727
+
+#+END_SRC
+******* Relaxed h=1e-3
+#+BEGIN_SRC python
+Elastic constant matrix GPa
+   173.124000    76.098400    59.293400    -0.158538     0.000000     0.000000     0.000000     0.000000     0.000000 
+    76.098400   170.111800    59.293400     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    59.293400    59.293400   199.124400     0.000000     0.000000     0.000000     0.000000     0.000000     0.000000 
+    -0.158538     0.000000     0.000000    48.829800     0.000000     0.000000    49.781000     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    49.464000     0.000000     0.000000    48.195600     0.000000 
+     0.000000     0.000000     0.000000     0.000000     0.000000    48.195600     0.000000     0.000000    46.610400 
+     0.000000     0.000000     0.000000    49.781000     0.000000     0.000000    49.464000     0.000000     0.000000 
+     0.000000     0.000000     0.000000     0.000000    48.195600     0.000000     0.000000    48.829800     0.000000 
+     0.000000     0.000000     0.000000     0.000000     0.000000    46.610400     0.000000     0.000000    48.195600 
+
+c11_avg = 171.6179  c33 = 199.124400  c44_avg = 49.1469 
+ c_12 = 76.098400 c_13 = 59.293400
+#+END_SRC
+
+With relaxation one finds that there is a negative $C_{14}$ component
+when it should be zero. This implies that the structure, on
+relaxation, is moving away from hcp and into another more optimal
+structure. 
+****** Unrelaxed 09/01/19
+From Girshick 
+[[file:Images/girshick_ec_09-01-19.png]]
+#+BEGIN_SRC python
+ C11 =  179.4105487815,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2452549871,   C44_exp =  50.8000000000
+ C66 =  55.1996755007,   C66_exp =  44.6000000000
+ C12 = -12062.1968073992,   C12_exp =  86.9000000000
+ C13 = -11773.0959208918,   C13_exp =  68.3000000000
+ K =  103.7213715237,   K_FR =  109.9666666667
+ R =  67.3715578360,   R_FR =  61.8000000000
+ H =  58.5592139578,   H_FR =  45.9650000000 
+
+#+END_SRC
+
+[[file:Images/tony_ec_09-01-19.png]]
+From Tony
+#+BEGIN_SRC python
+ C11 =  179.4144752885,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2723940787,   C44_exp =  50.8000000000
+ C66 =  220.7854442689,   C66_exp =  44.6000000000
+ C12 = -262.1564132494,   C12_exp =  86.9000000000
+ C13 = -324.7738952427,   C13_exp =  68.3000000000
+ K = -1264.8383336416,   K_FR =  109.9666666667
+ R =  807.9179447561,   R_FR =  61.8000000000
+ H =  698.7467357942,   H_FR =  45.9650000000 
+
+#+END_SRC
+****** Relaxed 09/01/19
+******* gtol = 1e-6
+[[file:Images/girshick_ec_09-01-19_gtol1e-6.png]]
+Girshick 
+#+BEGIN_SRC python
+ C11 =  172.9087030436,   C11_exp =  176.1000000000
+ C33 =  198.5744121594,   C33_exp =  190.5000000000
+ C44 =  49.2523330247,   C44_exp =  50.8000000000
+ C66 =  48.0100583268,   C66_exp =  44.6000000000
+ C12 = -11615.4942407936,   C12_exp =  86.9000000000
+ C13 = -11535.5170624530,   C13_exp =  68.3000000000
+ K =  103.1312742638,   K_FR =  109.9666666667
+ R =  65.5404379802,   R_FR =  61.8000000000
+ H =  54.3174856150,   H_FR =  45.9650000000 
+
+Girshick CURVATURES GPa 
+ [0.0, 172.9004311080267, 172.9169749790961, 198.57441215940486, 497.48462721215066, 292.5218297904287, 486.695326183829, 486.7329294063404, 928.1814683742241, 197.14858238024067, 197.09765185486694, 393.79109416080956, 192.17246592014106, 191.90800069434025, 196.6213139405376, 162.95245684504613] 
+
+Polynomial coeffs 0 
+ [ 2.403846172680e+03 -6.920163181274e+01 -6.273310025869e+00  1.357572843835e+00  7.517680653379e-04 -5.869865103730e-01]
+
+Polynomial coeffs 1 
+ [ 1.903044861896e+03 -4.334207465834e+01 -6.200648309028e+00  1.357754953393e+00  7.540378787786e-04 -5.869865113054e-01]
+
+Polynomial coeffs 2 
+ [-4.917868589163e+04 -6.796328672108e+02  3.263585371778e+00  1.574863053623e+00 -8.199050699247e-03 -5.869864952914e-01]
+
+Polynomial coeffs 3 
+ [ 3.205128206180e+04 -3.898965618549e+02 -1.980113636524e+01  3.916451777404e+00  1.496786130586e-03 -5.869865149184e-01]
+
+Polynomial coeffs 4 
+ [ 9.465144240806e+03 -1.305725525278e+02 -9.881173515241e+00  2.297486159688e+00  1.126506118904e-03 -5.869865121212e-01]
+
+Polynomial coeffs 5 
+ [-5.809294876445e+03 -9.852127061358e+01 -1.135453088524e+01  3.868858537321e+00 -7.467478438242e-03 -5.869865101165e-01]
+
+Polynomial coeffs 6 
+ [-6.310096153941e+03 -8.322406783073e+01 -1.124981789038e+01  3.868797348514e+00 -7.467399766901e-03 -5.869865112354e-01]
+
+Polynomial coeffs 7 
+ [-4.006410093002e+02  6.337412569028e+01 -2.770032051469e+01  7.360139860159e+00 -6.716937062899e-03 -5.869865079021e-01]
+
+Polynomial coeffs 8 
+ [ 6.558740582196e-07 -6.337412596426e+01 -1.619448271167e-10  1.554425990689e+00  7.588095945650e-15 -5.869865174592e-01]
+
+Polynomial coeffs 9 
+ [ 1.332430917251e-05 -5.463286706175e+01 -1.964485796358e-09  1.554023892774e+00  5.655976830621e-14 -5.869865153613e-01]
+
+Polynomial coeffs 10 
+ [ 6.892467635713e-07 -1.700903263886e+02 -1.655851650898e-10  3.104864510502e+00  7.639041260611e-15 -5.869864947086e-01]
+
+Polynomial coeffs 11 
+ [ 1.036658653955e+04 -2.354676574146e+02 -5.373142481023e-01  1.515364947563e+00 -4.065559458558e-06 -5.869865112587e-01]
+
+Polynomial coeffs 12 
+ [-7.785735317634e-06 -2.225378791006e+02  1.384014746019e-09  1.513116258773e+00 -5.405862742570e-14 -5.869864990443e-01]
+
+Polynomial coeffs 13 
+ [-1.664162660344e+05 -2.467038170221e+03  1.228884396969e+01  1.593577360145e+00 -8.816020687671e-03 -5.869863451515e-01]
+
+Polynomial coeffs 14 
+ [ 1.096754809783e+04 -3.547494172056e+02 -7.043360288293e+00  1.255349650346e+00  4.476896561852e-03 -5.869865091142e-01]
+
+#+END_SRC
+
+
+Tony
+[[file:Images/tony_ec_09-01-19_gtol1e-6.png]]
+#+BEGIN_SRC python
+ C11 =  173.0346579154,   C11_exp =  176.1000000000
+ C33 =  198.5744121594,   C33_exp =  190.5000000000
+ C44 =  49.2568530334,   C44_exp =  50.8000000000
+ C66 =  191.9023467596,   C66_exp =  44.6000000000
+ C12 = -210.7700356038,   C12_exp =  86.9000000000
+ C13 = -317.8089744286,   C13_exp =  68.3000000000
+ K = -1148.1322409320,   K_FR =  109.9666666667
+ R =  815.3246721725,   R_FR =  61.8000000000
+ H =  635.6114482523,   H_FR =  45.9650000000 
+
+Tony CURVATURES GPa 
+[0.0, 173.03465791544974, 198.57441215940486, 191.9023467596449, 251.80675473303774, 49.256853033364514, 196.6213139405376, 163.8312829442945, 146.72504872873364]
+
+Polynomial coeffs 0 
+ [ 4.507211527019e+03 -8.449883471457e+01 -6.437754951847e+00  1.358490676015e+00  7.541054778124e-04 -5.869865162471e-01]
+
+Polynomial coeffs 1 
+ [-4.917868589163e+04 -6.796328672108e+02  3.263585371778e+00  1.574863053623e+00 -8.199050699247e-03 -5.869864952914e-01]
+
+Polynomial coeffs 2 
+ [ 8.463541680370e+03 -2.123397437739e+02 -3.994573151874e-01  1.513192016341e+00 -1.159964998503e-06 -5.869865029371e-01]
+
+Polynomial coeffs 3 
+ [ 1.832431891172e+05 -2.767883158595e+03 -1.595434513613e+01  1.976062791391e+00  8.808944930130e-03 -5.869863668531e-01]
+
+Polynomial coeffs 4 
+ [ 1.810477061546e-05 -2.549533859606e+00 -2.196695165670e-09  3.883668415017e-01  4.328971618917e-14 -5.869865119580e-01]
+
+Polynomial coeffs 5 
+ [-1.664162660344e+05 -2.467038170221e+03  1.228884396969e+01  1.593577360145e+00 -8.816020687671e-03 -5.869863451515e-01]
+
+Polynomial coeffs 6 
+ [ 2.328725961840e+04 -3.853438230453e+02 -8.112889714681e+00  1.257934149210e+00  4.483477564102e-03 -5.869865099068e-01]
+
+Polynomial coeffs 7 
+ [-9.014423067864e+02 -5.754662013020e+01 -3.494500291531e+00  1.155801282067e+00  4.609557103966e-07 -5.869865136131e-01]
+
+#+END_SRC
+
+******* gtol=xtol=1e-4
+With gtol=xtol=1e-4
+[[file:Images/girshick_ec_relaxed_09-01-19.png]]
+From Girshick
+#+BEGIN_SRC python
+ C11 =  172.1868387548,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2731447340,   C44_exp =  50.8000000000
+ C66 =  48.1178624998,   C66_exp =  44.6000000000
+ C12 = -11566.5314256067,   C12_exp =  86.9000000000
+ C13 = -11547.6359443159,   C13_exp =  68.3000000000
+ K =  103.7213715237,   K_FR =  109.9666666667
+ R =  67.3715578360,   R_FR =  61.8000000000
+ H =  53.0548981566,   H_FR =  45.9650000000 
+#+END_SRC
+
+[[file:Images/tony_ec_relaxed_09-01-19.png]]
+From Tony
+#+BEGIN_SRC python
+ C11 =  172.1685458528,   C11_exp =  176.1000000000
+ C33 =  199.7411232511,   C33_exp =  190.5000000000
+ C44 =  49.2568728288,   C44_exp =  50.8000000000
+ C66 =  191.8736970813,   C66_exp =  44.6000000000
+ C12 = -211.5788483097,   C12_exp =  86.9000000000
+ C13 = -315.1951126369,   C13_exp =  68.3000000000
+ K = -1139.8599322106,   K_FR =  109.9666666667
+ R =  810.4261972965,   R_FR =  61.8000000000
+ H =  634.3223677569,   H_FR =  45.9650000000 
+
+#+END_SRC
+****** Unrelaxed
+[[file:Images/tonyelastic-2019-01-07.png]]
+[[file:Images/girshickelastic-2019-01-07.png]]
+****** Relaxed
+[[file:Images/tonyelastic-Relaxed-2019-01-07.png]]
+#+BEGIN_SRC python
+ C11 =  382.0257364183,   C11_exp =  176.1000000000
+ C33 =  177.1904094545,   C33_exp =  190.5000000000
+ C44 = -284.3306443299,   C44_exp =  50.8000000000
+ C66 =  150.4770441289,   C66_exp =  44.6000000000
+ C12 =  81.0716481605,   C12_exp =  86.9000000000
+ C13 = -613.5092486992,   C13_exp =  68.3000000000
+ K = -150.07242402052222,   K_FR =  109.9666666667
+ R =  1635.7575991424,   R_FR =  61.8000000000
+ H =  747.5127490757,   H_FR =  45.9650000000 
+#+END_SRC
+[[file:Images/girshickelastic-Relaxed-2019-01-07.png]]
+#+BEGIN_SRC python
+ C11 =  175.6668786250,   C11_exp =  176.1000000000
+ C33 =  177.1904094545,   C33_exp =  190.5000000000
+ C44 =  32.8529899251,   C44_exp =  50.8000000000
+ C66 =  9.8949010487,   C66_exp =  44.6000000000
+ C12 = -11833.3066409149,   C12_exp =  86.9000000000
+ C13 = -10947.0085442945,   C13_exp =  68.3000000000
+ K =  97.5253130124,   K_FR =  109.9666666667
+ R =  52.5007525634,   R_FR =  61.8000000000
+ H = -53.1082678520,   H_FR =  45.9650000000 
+
+#+END_SRC
+****** Checking Calculation of Elastic constants
+This is the output I obtain using Tony's files. 
+
+#+BEGIN_SRC python
+python Ti.py -p 'fddtt=0.2682945357 cr2=4.025997513 cr3=-1.111420839 qddstt=0.5207844798 '
+Ti.py starting.. ext = ti , file = fmin.val , vals = fddtt=0.2682945357 cr2=4.025997513 cr3=-1.111420839 qddstt=0.5207844798  binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+Get hcp - fcc energy difference ..
+ Delta_E    : 7.41700 mRy/atom
+ LDA Target : 6.60015 mRy/atom
+Getting hcp c/a ...
+Got a, c : a=5.4890, c=8.8905 c/a=1.6197. Volume per atom=115.9878
+Targets  : a=5.5768, c=8.8521 c/a=1.5873. Volume per atom=119.2108
+bandwidth: 0.535 (target: 0.426)
+Getting LO curvatures ...
+ LO mode curvatures, A:  1.593,  K:  0.586
+      Targets (LDA), A:  1.850,  K:  0.827
+Getting hcp shear constants ...
+shear constants: c_11=179.2, c_33=189.1, c_44= 48.8, c_12= 69.5, c_13= 76.0, Cp=  54.8, Cpp= 54.1, S= 76.2, R=161.4, H=163.7 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, Cp=  44.6, Cpp= 57.5, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 110; target: 110 
+Getting omega phase lattice constants and internal parameter ...
+Got omega : a=8.5664, c=5.5116 c/a=0.6434, u=0.9849. Volume per atom=116.7581
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = -0.636mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.06, K=192 Volume per atom=111, Cp=  8.7, c_44= 32.3
+target:  a=  6.18, K=118,                     Cp= 12.0, c_44= 36.0
+        E_bcc - E_hcp = 16.141mRy per atom 
+ 
+Build Objective Function ..
+                   predicted       target      squared diff.  weight        objective
+ a_hcp       :     5.488990       5.576790       0.007709     20000        154.175711 
+ c_hcp       :     8.890510       8.852101       0.001475     20000         29.505302 
+ c_11        :   179.158035     176.100000       9.351576         5         46.757880 
+ c_33        :   189.068274     190.500000       2.049840         5         10.249201 
+ c_44        :    48.819033      50.800000       3.924232         5         19.621161 
+ c_12        :    69.481301      86.900000     303.411074         5       1517.055371 
+ c_13        :    75.975964      68.300000      58.920429         5        294.602143 
+ a_omega     :     8.566450       8.732543       0.027587      2000         55.174046 
+ c_omega     :     5.511577       5.323431       0.035399      2000         70.797683 
+ u_omega     :     0.984896       1.000000       0.000228        20          0.004563 
+ DE (o, hcp) :    -0.635500      -0.734754       0.009851        10          0.098513 
+ a_bcc       :     6.055721       6.179489       0.015318        10          0.153184 
+ bandwidth   :     0.535000       0.426000       0.011881        20          0.237620 
+ LO-A        :     1.593190       1.850320       0.066116       200         13.223167 
+ LO-K        :     0.585928       0.826586       0.057916       200         11.583255 
+ e_fcc-e_hcp :     7.417000       6.600150       0.667244        50         33.362196 
+Objective function: 2256
+
+#+END_SRC
+
+***** Phonons
+The phonons for the model are as follows
+# ()convertfrompdf:t
+[[file:Images/hcp-band-dos-2019-01-07.png]] 
+#Conversion from [[file:Images/hcp-band-dos-2019-01-07.pdf]]
 ** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
    the long range strain fields produced from dislocations in the periodic array
@@ -363,7 +862,156 @@ Force Constant Matrix
      where $c_{2}$ is the length of the periodicity vector before it has been
      tilted. 
 
-     
+*** Results
+For dipole in the O arrangement we have [[file:~/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations_clean/create_supercell_with_quadrupole.py]]
+
+Original displacement in O config
+ [[file:Images/u_dipole_O_arrangement_non_periodic_displacement.png]]
+Adding in the contribution of the images
+[[file:Images/u_image_dipole_O_arrangement.png]]
+Subtracting from $u_{\text{sum}}$, the spurious linear displacement:
+[[file:Images/u_err_dipole_O_arrangement.png]]
+Resulting in the final periodic displacement for the supercell. 
+[[file:Images/u_dipole_O_arrangement_periodic_displacement.png]]
+** DFT
+*** Functionals
+*** LMTO
+*** Running lmf
+**** Run Generic Calculation
+   Run:
+   - lmchk --getwsr ti
+   - Copy the old rmax into the R category in SPEC
+   - lmfa ti -vhcp=1
+   - Copy basp0 to basp
+   - Run lmf
+** Multi-objective optimisation
+
+*** Solutions
+Solutions to multi-objective optimisations are members of the Pareto
+set.
+Dominance is the concept of how a particular vectors of inputs may be
+compared with respect to graphs of particular objectives and how each
+vector minimises each. So pairs of vectors can be compared.
+
+- a dominates b if it is better in at least one objective and worse in
+  none. We write $a \succ b$.
+  a weakly dominates b if it dominates b or is equal to b. We also
+  write $a \succeq b$.
+- a strongly dominates b if it is strictly better than b in all objectives. We also write
+  $a \succ\succ  b$.
+- a is incomparable to b if neither a nor b dominates the other, and they are not equal
+  to one another. We write $a || b$.
+NOTE: $a \succ\succ b \implies a \succ b \implies a \succeq b$
+
+There is partial ordering as some points will dominate others with
+respect to one objective but not necessarily the other. 
+
+*** Pareto Optimality
+The Pareto Front $Z^*$of an objective space is the set of nondominated
+points of an objective space $Z$: $Z^{*} = \text{min}(Z)$
+
+The Pareto Optimal set $X^*$ of a decision/search space $X$ is the
+pre-image of the Pareto front. (Basically the input vectors map to the
+Pareto front, the set of points which minimise objectives).
+
+Can define better relations on sets of points  by saying that some
+sets of points are objectively better than others 
+$A \rhd B \Leftrightarrow \text{min} A \cup B = A \neq B$.
+For other pairs it is a matter of preference.
+
+When a point $x^*$ is Pareto optimal, there exist vectors 
+$mathbf{0}\leq \mathfrak{R}^{k}$ and $mathbf{0}\leq \mathfrak{R}^{m}$
+for which $(\lambda,\mu) \neq (\mathbf{0}, \mathbf{0})$ such that
+\[ \sum_{i=1}^{k} \lambda_{i} \Delta f_{i}(x^*) + \sum_{j=1}^{m}
+\lambda_{j} \Delta g_{i}(x^*) = 0, \]
+\[ \mu_j g_j(x^*) = 0 \forall j = 1,\ldots,m, \]
+where $k$ are objectives and $m$ are equality constraints, $f_i$ are
+the objective function and $g_j$ are the constraint functions.
+
+
+
+
+
+*** Differential Evolution Algorithms
+
+Evolutionary Algorithms have proven to be very effective in dealing
+with hard optimization problems whose solution space is so large as
+to make an exhaustive search unviable. 
+
+Main disadvantage to Differential Evolution algorithms is their
+convergence speed. 
+
+To increase this convergence speed, one may implement structured
+versions of the algorithm where the population is split into
+semi-isolated subpopulations (demes) which are connected to each other
+using a particular network topology. 
+
+These subpopulations evolve independently and interact by means of a
+migration operator that is used to exchange individuals. 
+
+The number of individuals that are sent to/received from other demes
+is determined by the migration rate, while a replacement function
+defines how ti include the immigrants into the target subpopulation. 
+
+The migration interval establishes the exchange frequency among
+neighbouring subpopulations. 
+
+Network topologies may be categorised as either the \emph{island
+model} (fully connected demes) or the \emph{stepping-stone model},
+(interaction is restricted to customized logical or physically
+connected demes).  
+
+The connectivity degree of the topology beneath determines
+the number of the neighboring subpopulations and its diameter is the
+most important factor influencing the propagation of good individuals.
+
+The separation of demes serves as a natural way to maintain the diversity
+reducing the possibility of population stagnation, may guide the evolution
+in many directions simultaneously, and may allow speedup in computation and
+improve solution quality with respect to a single EA evolution.
+
+**** Topology
+In or
+
+** Phonons 
+
+*** DFT and TBE Phonons
+The phonons and q points for the fitting using LDA are here
+[[file:~/Documents/swarm_fit_ti/phonons_and_strain_derivatives/test_phonopy_conf/dft_results/dft_ctrl_files/from_init/phonon_frequency_calc/hcp_lmf/hcp-band_dos_dft.pdf]]
+Q point frequencies at M and H are 
+#+BEGIN_SRC python
+- q-position: [    0.0000000,    0.0000000,    0.5000000 ]
+  band:
+  - # 1
+    frequency:    2.8585871860
+  - # 2
+    frequency:    2.8585871860
+  - # 3
+    frequency:    2.8585871860
+  - # 4
+    frequency:    2.8585871860
+  - # 5
+    frequency:    5.6670604683
+  - # 6
+    frequency:    5.6670604683
+
+- q-position: [    0.3300000,    0.3300000,    0.0000000 ]
+  band:
+  - # 1
+    frequency:    4.8064342322
+  - # 2
+    frequency:    5.5801002486
+  - # 3
+    frequency:    5.6531673769
+  - # 4
+    frequency:    6.3665184154
+  - # 5
+    frequency:    6.4005018626
+  - # 6
+    frequency:    7.6408237318
+
+#+END_SRC
+
 ** TBE Pair potentials and Bond integrals
 *** Pair potentials in tbe code
    - Pair potential is constructed by [[file:~/lm/tb/makvpp.f][makvpp.f]]. 
@@ -527,7 +1175,6 @@ net forces as a result of the strain if they are not at centres of inversion.
 Relaxation of those forces reduces the energy of the homogeneously strained crystal, and therefore it affects the calculated elastic constants. 
 
 
-
 ** Gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
@@ -536,13 +1183,27 @@ Relaxation of those forces reduces the energy of the homogeneously strained crys
      exit.
      - SOLUTION: Coordinates were not in units of alat.
 *** Relaxing in tbe
+**** Notes on how to invoke relaxation
     - To relax in tbe need to modify:
       - Ewald tolerance: ewtol
 	- This can generally be set quite low: 1d-14
       - Convergence criteria:
 	- gtol: The tolerance in the force for convergence e.g. 1d-8
 	- xtol: The tolerance in the atomic positon e.g. 1d-8.
+**** Using Tony's cell for gamma surfaces. 
+#+BEGIN_SRC python
+        plat = np.array([[0.,           -1.,   0.],
+                         [3**(0.5)/2.,  0.5,   0.],
+                         [0.,           0.0,   q ] ] )
+        
+        X_n = np.array([0., 0., 0.])
+        X_p = np.array( [ 1./(2. * 3**(0.5) ), -0.5, q/2. ] )
 
+        # In this configuration, we have
+        # 1/3[1-210] == -[010]
+        # 1/2[10-10] ==  [100]
+        # So for basal stacking fault using this cell, we need to use combinations of vectors [0-10] and [3**(0.5), -0.5, 0]
+#+END_SRC
 *** Convergence and k-points in tbe
     - Tony used a $30\times 30\times 30$ grid for the k-point mesh.
     - Making a square cell, and increasing the length accordingly, one must
@@ -602,6 +1263,10 @@ Less precise c/a below.
 With Tony's new model we have gamma surfaces which are reasonable. 
 [[file:Images/basal_gamma_surface_2018-12-18.png]]
 [[file:Images/prismatic_gamma_surface_2018-12-18.png]]
+[[file:Images/pyramidal_plane_gamma_surface_07-01-18_Ready.png]]
+ 
+Apart from the pyramidal plane which seems erroneous
+[[file:Images/wrongpyramidalgammasurftbe.png]]
 
 With the prismatic gamma surface, there is no apparent splitting in
 halfway along the $1/3[1\bar{2}10]$ direction, which does not bode
@@ -670,8 +1335,8 @@ rectified.
      - These ribbons can undergo constrictions from jogs
      - Reason that stacking faults are not observed in bcc structures are just
        that the stacking fault energies are too high. (Because of dense packing?)
-**** Gamma surfaces in DFT
-***** [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults. 
+**** Gamma surfaces in DTF
+***** [Benoit, Tarrat and Morillo 2012] cite:Benoit_2012 Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults. 
      - Comparison between central force  embedded atom ineractions, N-body
        central force, N-body angular, empirical potentials, tight binding and
        DFT pseudopotential and DFT full electron calculations.
@@ -705,6 +1370,7 @@ rectified.
          against this criteria.
      - No models other than DFT produced a metastable stacking fault energy at
        the prismatic easy fault.
+
 ** Notes on Thermodynamics and Stability
 
 *** Wallace 1972
@@ -1120,7 +1786,7 @@ With tony's routines we have
  K = -1094.6742125423,   K_FR =  109.9666666667
  R =  669.1429126355,   R_FR =  61.8000000000
  H =  634.1671283369,   H_FR =  45.9650000000
-#+END_SRC
+#+END_SCR
 ** Notes on Tight Binding and BOP Models
 
 *** Pair correlation and cutoffs
@@ -1269,13 +1935,7 @@ Stopping search: Swarm best position change less than 1e-08
 794.9141378839079
 #+END_SRC
 
-** DFT s
-   Run:
-   - lmchk --getwsr ti
-   - Copy the old rmax into the R category in SPEC
-   - lmfa ti -vhcp=1
-   - Copy basp0 to basp
-   - Run lmf
+
 ** Python
 *** OS
    Use OS module rather than making a load of files to a certain directory. 
@@ -1638,8 +2298,8 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
      * The energy at constant temperature and pressure.
      * Gibbs energy is the thermodynamic potential that is minimized when a
        system reaches chemical equilibrium at constant pressure and
-       temperature. 
-     * Equation: \[ G = U + pV - TS  \]
+       temperature.  
+    * Equation: \[ G = U + pV - TS  \]
      * $\Delta G$ is the total non-mechanical work done on the system. 
      * Natural variables: $\{ T, p, \{N_{i}\} \}$
    - Enthalpy:
@@ -1692,6 +2352,7 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 
   - If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
+
 
 
 * Bibliography 

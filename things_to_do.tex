@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 % Created 2019-01-29 Tue 20:13
+=======
+% Created 2019-01-16 Wed 11:39
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -40,6 +44,7 @@
 \maketitle
 \tableofcontents
 
+<<<<<<< HEAD
 
 
 
@@ -1630,28 +1635,24 @@ Run:
 \subsubsection{OS}
 \label{sec:org6272254}
 Use OS module rather than making a load of files to a certain directory. 
+=======
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 \begin{minted}[]{python}
-import os
-############   Current working directory  ########################
-# detect the current working directory and print it
-path = os.getcwd()  
-print ("The current working directory is %s" % path) 
+START: OBJECTIVE FUNCTION
 
-#################   Directories  ########################
-# define the name of the directory to be created
-path = "/tmp/year"
+ti_obj_new_ec_cutoffs_canon.py 
+ starting..
+   ext = ti ,
+   file = fmin.val ,
+   vals = fdd=0.1737703199 qdds=0.5706158058 qddp=0.6421834099 qddd=0.7560903882 
+	  b0=278.8444422514 p0=1.7961642354 b1=0.0000000000 p1=0.000000000
+	  ndt=1.9624397374 cr1=-6.9348461726 cr2=4.0612686987 cr3=-1.0000000000
+	  r1=0.9819448403 rc=1.3464870767 rmaxh=1.3599519474  
+   binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
 
-try:  
-    os.mkdir(path)
-except OSError:  
-    print ("Creation of the directory %s failed" % path)
-else:  
-    print ("Successfully created the directory %s " % path)
 
-#################   Subdirectories  ########################
-# define the name of the directory to be created
-path = "/tmp/year/month/week/day"
 
+<<<<<<< HEAD
 try:  
     os.makedirs(path)
 except OSError:  
@@ -1733,50 +1734,56 @@ apparent in the previously mentioned functionals.
 \item Generally only a part of this Hartree-Fock calculation is included in
 the function otherwise it is not stable.
 \end{itemize}
+=======
+Getting hcp c/a ...
+Using Nelder-Mead
 
+Optimization terminated successfully.
+	 Current function value: -0.333512
+	 Iterations: 29
+	 Function evaluations: 60
+Got a, c : a=5.5401081318, c=8.9583629249 c/a=1.6170014577. Volume per atom=119.0599707593
+Targets  : a=5.5767896900, c=8.8521008200 c/a=1.5873112152. Volume per atom=119.2107777334
 
+Obtaining Bandwidth 
 
+  eval 1 for bandwidth = -0.1587
+  eval 2 for bandwidth = 0.129
+bandwidth: 0.288 (target: 0.426)
 
+Getting hcp shear constants ...
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 
-DFT speed is limited by how it can find the energies of the system we are
-interested in. 
-Diagonalisation is inherently an \(\mathcal{O}(N^3)\) process. 
+ C_11 =    177.624 GPa
 
-To actually build the hamiltonian it is of \(\mathcal{O}(N^2)\). 
-Solving is \(\mathcal{O}(N^3)\). 
+ C_33 =    191.588 GPa
 
-How do we solve for DFT?
-Generally it depends on the choice of functional we have. 
-Hybrid functionals almost scale as \(\mathcal{O}(N^4)\) due to the inclusion of exact
-exchange interaction by Hartree-Fock. Because of this exact exchange, there
-are better band gaps . 
+ C_44 =     46.334 GPa
 
-The \(\mathcal{O}(N)\) DFT generally comes because of the manipulation of sparse matrices. 
-Insead of matrix multiplication being of \(\mathcal{O}(N^3)\) we can have matrix
-multiplication being of \(\mathcal{O}(N)\). 
+ C_12 =     88.164 GPa
 
-The reason we can essentially do \(\mathcal{O}(N)\) is that in the Kohn-Sham equations, the
-density is actually a local function (\(n(\mathbf{r})\), not \(n(\mathbf{r}-\mathbf{r}')\)) 
-This means that in theory we can actually have a theory which sufficiently
-describes the dynamics of a given system with an electron density that is
-local in space. 
-In many DFT codes however, the electron density is non-local (\(n(
-\mathbf{r} - \mathbf{r}')\)), and
-this slows down the calculation. 
-To actually make it \(\mathcal{O}(N)\), we have to have range cutoffs for the interactions
-of the atoms. This means that the hamilitonian is sparse as quite a lot of the
-elements are zero such that we can use methods that involve \(\mathcal{O}(N)\)
-multiplication. 
+ C_13 =     67.996 GPa
 
-When it comes to Structural relaxation there are a few things that come to
-mind when structures are not converging:
-there is usually only one atom that has some huge force on it. 
-Consider the boundary conditions. 
+shear constants: c_11=177.6, c_33=191.6, c_44= 46.3, c_12= 88.2, c_13= 68.0, c_66=  44.7, S= 68.7, R=188.5, H=147.8 
+	 target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, c_66=  44.6, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 111; target: 110 
 
-For faster diagonalisation of the hamiltonian matrix it may be useful to look
-at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
-\end{enumerate}
+Obtaining bcc Ti quantities
 
+  trial bcc output from pfit = 0.0
+  VF = 0.943542
+  Epp bcc = 0.491615
+
+Getting omega phase lattice constants and internal parameter ...
+
+Using Nelder-Mead
+
+Optimization terminated successfully.
+	 Current function value: -0.498206
+	 Iterations: 38
+	 Function evaluations: 81
+
+<<<<<<< HEAD
 \subsection{Jochen Blumberger: Molecular dynamics}
 \label{sec:org17c3a43}
 \subsubsection{Introduction}
@@ -1789,32 +1796,20 @@ of vibration).
 
 \subsubsection{Born-Oppenheimer approximation}
 \label{sec:orgbcf28cf}
+=======
+Got omega : a=8.7091, c=5.4026 c/a=0.6203, u=1.0001. Volume per atom=118.2943
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = 0.687mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.08, K=57 Volume per atom=112
+target:  a=  6.18, K=118,                     
+	E_bcc - E_hcp = 19.358mRy per atom 
 
-\begin{itemize}
-\item Have hamiltonian that consists of interaction between:
-\begin{itemize}
-\item nucleus-nucleus
-\item nucleus-electron
-\item electron-electron
-\end{itemize}
-\item First assumption is that we can write the eigenfunction of
-this large hamiltonian as a product state consisting of an electronic
-ground state and nuclear eigenstate.
-\item Second approximation is that we are able to say, as the mass of the ion
-\(M_{I} \sim 1000 m_{e}\) then we can say that the kinetic energy term of
-with regard to the nucleus positions will be small.
-\item From this we can say that the action of this nuclear kinetic energy
-operator on the electronic eigenstate is small.
-\item This means we can neglect the \textbf{electronic} wavefunction, and work with
-the equation \[ \hat{H}\Phi(\mathbf{R}) = E^0_{\mathbf{R}}\Phi(\mathbf{R}) \]
-\begin{itemize}
-\item Where \(E^{0}_{ \mathbf{R} }\) is the ground state energy hypersurface
-from the electronic wavefunction. We get this from DFT calculations.
-\end{itemize}
-\item Even now we can only really calculate 8 degrees of freedom for the
-Nuclear wavefunction.
-\end{itemize}
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 
+ Build Objective Function
+
+<<<<<<< HEAD
 \subsubsection{Molecular Dynamics}
 \label{sec:org1be89d1}
 
@@ -2160,4 +2155,24 @@ there are also problems.
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography/org-refs}
+=======
+		    predicted       target   
+  a_hcp       :   5.54010813     5.57678969  
+  c_hcp       :   8.95836292     8.85210082  
+  c_11        : 177.62375172   176.10000000  
+  c_33        : 191.58842280   190.50000000  
+  c_44        :  46.33439251    50.80000000  
+  c_12        :  88.16405241    86.90000000  
+  c_13        :  67.99572101    68.30000000  
+  a_omega     :   8.70914358     8.73254342  
+  c_omega     :   5.40260729     5.32343103  
+  u_omega     :   1.00009549     1.00000000  
+  DE (o, hcp) :   0.68707833    -0.73475386  
+  a_bcc       :   6.08183509     6.17948863  
+  bandwidth   :   0.28770000     0.42600000  
+
+Objective function: 431
+
+\end{minted}
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 \end{document}

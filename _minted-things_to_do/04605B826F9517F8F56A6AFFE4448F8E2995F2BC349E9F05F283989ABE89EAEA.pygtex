@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Elastic} \PYG{n}{constant} \PYG{n}{matrix} \PYG{n}{GPa}
+   \PYG{l+m+mf}{173.124000}    \PYG{l+m+mf}{76.098400}    \PYG{l+m+mf}{59.293400}    \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.158538}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}
+    \PYG{l+m+mf}{76.098400}   \PYG{l+m+mf}{170.111800}    \PYG{l+m+mf}{59.293400}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}
+    \PYG{l+m+mf}{59.293400}    \PYG{l+m+mf}{59.293400}   \PYG{l+m+mf}{199.124400}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}
+    \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.158538}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{48.829800}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{49.781000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}
+     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{49.464000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{48.195600}     \PYG{l+m+mf}{0.000000}
+     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{48.195600}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{46.610400}
+     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{49.781000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{49.464000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}
+     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{48.195600}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{48.829800}     \PYG{l+m+mf}{0.000000}
+     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{46.610400}     \PYG{l+m+mf}{0.000000}     \PYG{l+m+mf}{0.000000}    \PYG{l+m+mf}{48.195600}
+
+\PYG{n}{c11\PYGZus{}avg} \PYG{o}{=} \PYG{l+m+mf}{171.6179}  \PYG{n}{c33} \PYG{o}{=} \PYG{l+m+mf}{199.124400}  \PYG{n}{c44\PYGZus{}avg} \PYG{o}{=} \PYG{l+m+mf}{49.1469}
+ \PYG{n}{c\PYGZus{}12} \PYG{o}{=} \PYG{l+m+mf}{76.098400} \PYG{n}{c\PYGZus{}13} \PYG{o}{=} \PYG{l+m+mf}{59.293400}
+\end{Verbatim}

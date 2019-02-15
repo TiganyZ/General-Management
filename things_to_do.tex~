@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 % Created 2018-12-18 Tue 12:20
+=======
+% Created 2019-01-10 Thu 13:49
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -40,6 +44,7 @@
 \maketitle
 \tableofcontents
 
+<<<<<<< HEAD
 
 
 
@@ -736,35 +741,15 @@ reduce the number ok k-points in that direction.
 \item Therefore new grid is \(17 \times 30 \times 30\)
 \end{itemize}
 
+=======
+\section{Unrelaxed 09/01/19}
+\label{sec:org9b7dc08}
+From Girshick 
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 \begin{center}
-\begin{tabular}{lrrrrrrrrrr}
-hcp cell type & Geometry & tetra & n atoms & nkx & nky & nkz & Maximum force & Total energy per atom & Band energy per atom & Pair pot. energy per atom\\
-\hline
-Primitive & 1x1x1 & 0 & 2 & 30 & 30 & 30 & 0.000000 & -0.28614958 & -0.93606433 & 0.18636598\\
-Primitive & 1x1x1 & 1 & 2 & 30 & 30 & 30 & 0.000001 & -0.28614745 & -0.93606220 & 0.18636599\\
-Primitive & 2x1x1 & 0 & 4 & 15 & 30 & 30 & 0.000001 & -0.28614836 & -0.93606433 & 0.18636599\\
-Primitive & 2x1x1 & 1 & 4 & 15 & 30 & 30 & 0.000511 & -0.28614581 & -0.93606056 & 0.18636599\\
-Primitive & 4x2x8 & 0 & 128 & 8 & 15 & 4 & 0.000061 & -0.28615991 & -0.93607466 & 0.18636599\\
-Primitive & 4x2x8 & 1 & 128 & 8 & 15 & 4 & 0.000118 & -0.28615978 & -0.93607452 & 0.18536599\\
-Primitive & 4x2x8 & 0 & 128 & 9 & 15 & 4 & 0.000063 & -0.28614977 & -0.93606452 & 0.18636599\\
-Basal Square & 1x1x1 & 0 & 4 & 16 & 30 & 30 & 0.000065 & -0.28614681 & -0.93606156 & 0.18636599\\
-Basal Square & 1x1x1 & 0 & 4 & 17 & 30 & 30 & 0.000064 & -0.28615864 & -0.93607339 & 0.18636599\\
-Basal Square & 1x1x1 & 0 & 4 & 18 & 30 & 30 & 0.000043 & -0.28614481 & -0.93605956 & 0.18636599\\
-Basal Square & 1x1x1 & 0 & 4 & 19 & 30 & 30 & 0.000054 & -0.28615677 & -0.93607152 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 15 & 15 & 30 & 0.000083 & -0.28615743 & -0.93606721 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 16 & 15 & 30 & 0.000020 & -0.28614599 & -0.93606074 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 17 & 15 & 30 & 0.000061 & -0.28615547 & -0.93607022 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 18 & 15 & 30 & 0.000057 & -0.28614492 & -0.93605967 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 15 & 15 & 4 & 0.000065 & -0.28615784 & -0.93607259 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 16 & 15 & 4 & 0.000028 & -0.28614667 & -0.93606014 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 17 & 15 & 4 & 0.000044 & -0.28615651 & -0.93607126 & 0.18636599\\
-Basal Square & 1x2x8 & 0 & 64 & 18 & 15 & 4 & 0.000052 & -0.28614359 & -0.93605834 & 0.18636599\\
-Basal Square & 1x2x10 & 0 & 80 & 15 & 15 & 3 & 0.000087 & -0.28615445 & -0.93606920 & 0.18636599\\
-Basal Square & 1x2x10 & 0 & 80 & 16 & 15 & 3 & 0.000065 & -0.28614681 & -0.93606156 & 0.18636599\\
-Basal Square & 1x2x10 & 0 & 80 & 17 & 15 & 3 & 0.000064 & -0.28615864 & -0.93607343 & 0.18636599\\
-Basal Square & 1x2x10 & 0 & 80 & 18 & 15 & 3 & 0.000052 & -0.28614359 & -0.93605834 & 0.18636599\\
-\end{tabular}
+\includegraphics[width=.9\linewidth]{Images/girshick_ec_09-01-19.png}
 \end{center}
+<<<<<<< HEAD
 Less precise c/a below. 
 \begin{center}
 \begin{tabular}{lrrrrrrrrr}
@@ -1112,18 +1097,23 @@ be. This calls for the use of weighted parameters.
 \item Have now started weighted parameter search for the best parameters with
 regards to titanium.
 \end{itemize}
+=======
+\begin{minted}[]{python}
+C11 =  179.4105487815,   C11_exp =  176.1000000000
+C33 =  199.7411232511,   C33_exp =  190.5000000000
+C44 =  49.2452549871,   C44_exp =  50.8000000000
+C66 =  55.1996755007,   C66_exp =  44.6000000000
+C12 = -12062.1968073992,   C12_exp =  86.9000000000
+C13 = -11773.0959208918,   C13_exp =  68.3000000000
+K =  103.7213715237,   K_FR =  109.9666666667
+R =  67.3715578360,   R_FR =  61.8000000000
+H =  58.5592139578,   H_FR =  45.9650000000 
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 
-\begin{minted}[]{bash}
-Build Objective Function
- ...with L1 norm 
-Objective function: 563 
-Objective Function = 563.2340263379571 
-Stopping search: Swarm best position change less than 1e-08 
-[ 0.34606728 -0.22330935 65.79555644 0.52284417 0. -0.62229341 1.98315066] 
-563.2340263379571
 \end{minted}
 
 \begin{center}
+<<<<<<< HEAD
 \begin{tabular}{lrrrrrr}
 Quantity & predicted & target & squared diff. & p\(_{\text{norm}}\) & weight & objective\\
 \hline
@@ -1232,29 +1222,24 @@ else:
 Use the shelve module to store multiple objects. 
 
 To write in:
+=======
+\includegraphics[width=.9\linewidth]{Images/tony_ec_09-01-19.png}
+\end{center}
+From Tony
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 \begin{minted}[]{python}
-import shelve
+C11 =  179.4144752885,   C11_exp =  176.1000000000
+C33 =  199.7411232511,   C33_exp =  190.5000000000
+C44 =  49.2723940787,   C44_exp =  50.8000000000
+C66 =  220.7854442689,   C66_exp =  44.6000000000
+C12 = -262.1564132494,   C12_exp =  86.9000000000
+C13 = -324.7738952427,   C13_exp =  68.3000000000
+K = -1264.8383336416,   K_FR =  109.9666666667
+R =  807.9179447561,   R_FR =  61.8000000000
+H =  698.7467357942,   H_FR =  45.9650000000 
 
-integers = [1, 2, 3, 4, 5]
-
-# If you're using Python 2.7, import contextlib and use
-# the line:
-# with contextlib.closing(shelve.open('shelf-example', 'c')) as shelf:
-with shelve.open('shelf-example', 'c') as shelf:
-    shelf['ints'] = integers
 \end{minted}
-
-To extract values:
-\begin{minted}[]{python}
-import shelve
-
-# If you're using Python 2.7, import contextlib and use
-# the line:
-# with contextlib.closing(shelve.open('shelf-example', 'r')) as shelf:
-with shelve.open('shelf-example', 'r') as shelf:
-    for key in shelf.keys():
-	print(repr(key), repr(shelf[key])))
-\end{minted}
+<<<<<<< HEAD
 
 \section{DFT Lectures UCL}
 \label{sec:org09c50d6}
@@ -1357,32 +1342,38 @@ of vibration).
 
 \subsubsection{Born-Oppenheimer approximation}
 \label{sec:org944acc0}
+=======
+\item Relaxed 09/01/19
+\label{sec:orgdd38424}
+\begin{enumerate}
+\item gtol = 1e-6
+\label{sec:orgb2fbbcb}
+\begin{center}
+\includegraphics[width=.9\linewidth]{Images/girshick_ec_09-01-19_gtol1e-6.png}
+\end{center}
+Girshick 
+\begin{minted}[]{python}
+ C11 =  172.9087030436,   C11_exp =  176.1000000000
+ C33 =  198.5744121594,   C33_exp =  190.5000000000
+ C44 =  49.2523330247,   C44_exp =  50.8000000000
+ C66 =  48.0100583268,   C66_exp =  44.6000000000
+ C12 = -11615.4942407936,   C12_exp =  86.9000000000
+ C13 = -11535.5170624530,   C13_exp =  68.3000000000
+ K =  103.1312742638,   K_FR =  109.9666666667
+ R =  65.5404379802,   R_FR =  61.8000000000
+ H =  54.3174856150,   H_FR =  45.9650000000 
 
-\begin{itemize}
-\item Have hamiltonian that consists of interaction between:
-\begin{itemize}
-\item nucleus-nucleus
-\item nucleus-electron
-\item electron-electron
-\end{itemize}
-\item First assumption is that we can write the eigenfunction of
-this large hamiltonian as a product state consisting of an electronic
-ground state and nuclear eigenstate.
-\item Second approximation is that we are able to say, as the mass of the ion
-\(M_{I} \sim 1000 m_{e}\) then we can say that the kinetic energy term of
-with regard to the nucleus positions will be small.
-\item From this we can say that the action of this nuclear kinetic energy
-operator on the electronic eigenstate is small.
-\item This means we can neglect the \textbf{electronic} wavefunction, and work with
-the equation \[ \hat{H}\Phi(\mathbf{R}) = E^0_{\mathbf{R}}\Phi(\mathbf{R}) \]
-\begin{itemize}
-\item Where \(E^{0}_{ \mathbf{R} }\) is the ground state energy hypersurface
-from the electronic wavefunction. We get this from DFT calculations.
-\end{itemize}
-\item Even now we can only really calculate 8 degrees of freedom for the
-Nuclear wavefunction.
-\end{itemize}
+Girshick CURVATURES GPa 
+ [0.0, 172.9004311080267, 172.9169749790961, 198.57441215940486, 497.48462721215066, 292.5218297904287, 486.695326183829, 486.7329294063404, 928.1814683742241, 197.14858238024067, 197.09765185486694, 393.79109416080956, 192.17246592014106, 191.90800069434025, 196.6213139405376, 162.95245684504613] 
 
+Polynomial coeffs 0 
+ [ 2.403846172680e+03 -6.920163181274e+01 -6.273310025869e+00  1.357572843835e+00  7.517680653379e-04 -5.869865103730e-01]
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
+
+Polynomial coeffs 1 
+ [ 1.903044861896e+03 -4.334207465834e+01 -6.200648309028e+00  1.357754953393e+00  7.540378787786e-04 -5.869865113054e-01]
+
+<<<<<<< HEAD
 \subsubsection{Molecular Dynamics}
 \label{sec:org8588310}
 
@@ -1529,82 +1520,109 @@ The configuration integral \(\mathcal{Z}\) and the \emph\{Absolute Free
 \[ \mathcal{Z} = \int e^{-\beta U(R)} dR\]
 \[ \mathcal{A}(N,V,T) = -\frac{1}{\beta} \text{ln}\big\{ \mathcal{Z}
      \big\} \]
+=======
+Polynomial coeffs 2 
+ [-4.917868589163e+04 -6.796328672108e+02  3.263585371778e+00  1.574863053623e+00 -8.199050699247e-03 -5.869864952914e-01]
 
-Considering two different systems \(A\) and \(B\), with two different
-potential energy functions \(U_A(R)\) and \(U_B(R)\), we can have separate
-configurational integrals \(\mathcal{Z}_{A}\) and \(\mathcal{Z}_{B}\) as per
-the definition above. 
+Polynomial coeffs 3 
+ [ 3.205128206180e+04 -3.898965618549e+02 -1.980113636524e+01  3.916451777404e+00  1.496786130586e-03 -5.869865149184e-01]
 
-Then, we can actually pertubate with respect to
-another variable defining \(\Delta U_{BA}(R) = U_{B}(R) - U_{A}(R)\)
-\[ \mathcal{Z}_{B} =  \frac{\mathcal{Z}_{B}\mathcal{Z}_{A}}{\mathcal{Z}_{A}} = \mathcal{Z}_{A}
-     \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} \]
+Polynomial coeffs 4 
+ [ 9.465144240806e+03 -1.305725525278e+02 -9.881173515241e+00  2.297486159688e+00  1.126506118904e-03 -5.869865121212e-01]
 
-The last term is the ensemble average with respect to \(A\)
-This means we can express the free energy difference (Zwanzig 1953)
-\begin{align}
-\Delta \mathcal{A}_{AB} &=  -\text{k}_{\text{B}} T \text{ln} \Big(
-\frac{\mathcal{Z}_{B}}{\mathcal{Z}_{A}}\Big)\\ &=  -\text{k}_{\text{B}} T
-\text{ln} \big\langle e^{-\beta \Delta U_{BA}(R)}\big\rangle_{A} 
-\end{align}
+Polynomial coeffs 5 
+ [-5.809294876445e+03 -9.852127061358e+01 -1.135453088524e+01  3.868858537321e+00 -7.467478438242e-03 -5.869865101165e-01]
 
-To sample this efficiently we can use biased potentials. 
-\[ U_{\text{tot}} = U_{0}(R) + V( S(R) ),  \]
-where \(V(S(R))\) is the biased potential which is a function of the collective variables. 
+Polynomial coeffs 6 
+ [-6.310096153941e+03 -8.322406783073e+01 -1.124981789038e+01  3.868797348514e+00 -7.467399766901e-03 -5.869865112354e-01]
 
-We can define a partition function:
-\[ Q_{\text{tot}} = Q_{0}\big\langle e^{-\beta V(S(R))}\big\rangle_{0}  \]
+Polynomial coeffs 7 
+ [-4.006410093002e+02  6.337412569028e+01 -2.770032051469e+01  7.360139860159e+00 -6.716937062899e-03 -5.869865079021e-01]
 
-Can express the actual probability density of the system in terms of a biased potential 
-\[ p^{u}(S(R)) = p^{b}(S(R)) e^{ \beta V(S(R)) } \big\langle e^{-\beta V}\big\rangle_{0} \]
-where \(u\) and \(b\) denote unbiased and biased configurations.  
+Polynomial coeffs 8 
+ [ 6.558740582196e-07 -6.337412596426e+01 -1.619448271167e-10  1.554425990689e+00  7.588095945650e-15 -5.869865174592e-01]
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 
-This gives the free energy as
-\begin{align}
-F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(S(R)) \\
-             &- \text{k}_{\text{B}} T \text{ln} \big\{ \big\langle e^{-\beta V}\big\rangle_{0} \}, 
-\end{align}
-where the term on the second line is a constant. 
+Polynomial coeffs 9 
+ [ 1.332430917251e-05 -5.463286706175e+01 -1.964485796358e-09  1.554023892774e+00  5.655976830621e-14 -5.869865153613e-01]
 
+Polynomial coeffs 10 
+ [ 6.892467635713e-07 -1.700903263886e+02 -1.655851650898e-10  3.104864510502e+00  7.639041260611e-15 -5.869864947086e-01]
+
+Polynomial coeffs 11 
+ [ 1.036658653955e+04 -2.354676574146e+02 -5.373142481023e-01  1.515364947563e+00 -4.065559458558e-06 -5.869865112587e-01]
+
+Polynomial coeffs 12 
+ [-7.785735317634e-06 -2.225378791006e+02  1.384014746019e-09  1.513116258773e+00 -5.405862742570e-14 -5.869864990443e-01]
+
+Polynomial coeffs 13 
+ [-1.664162660344e+05 -2.467038170221e+03  1.228884396969e+01  1.593577360145e+00 -8.816020687671e-03 -5.869863451515e-01]
+
+Polynomial coeffs 14 
+ [ 1.096754809783e+04 -3.547494172056e+02 -7.043360288293e+00  1.255349650346e+00  4.476896561852e-03 -5.869865091142e-01]
+
+\end{minted}
+
+<<<<<<< HEAD
 \item Umbrella sampling
 \label{sec:orgdd3fdc7}
 If we don't know the shape of the free energy surface then we can use \emph{Umbrella Sampling}
 If we know for example, two metastable states that we want to sample the we can make a pathway between them using this method.
+=======
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 
-Umbrella sampling defines a series of biases simulations (\emph{windows}) such that one can reconstruct the free energy surface. 
-These simulations must have probability distributions that overlap. 
+Tony
+\begin{center}
+\includegraphics[width=.9\linewidth]{Images/tony_ec_09-01-19_gtol1e-6.png}
+\end{center}
+\begin{minted}[]{python}
+ C11 =  173.0346579154,   C11_exp =  176.1000000000
+ C33 =  198.5744121594,   C33_exp =  190.5000000000
+ C44 =  49.2568530334,   C44_exp =  50.8000000000
+ C66 =  191.9023467596,   C66_exp =  44.6000000000
+ C12 = -210.7700356038,   C12_exp =  86.9000000000
+ C13 = -317.8089744286,   C13_exp =  68.3000000000
+ K = -1148.1322409320,   K_FR =  109.9666666667
+ R =  815.3246721725,   R_FR =  61.8000000000
+ H =  635.6114482523,   H_FR =  45.9650000000 
 
-When one goes through the process of umbrella sampling, naively going through the reconstruction of the free energy surface
-gives a poor reconstruction. It is necessary that weights are in place such that the reconstruction of the global free energy
-profile is smooth. 
+Tony CURVATURES GPa 
+[0.0, 173.03465791544974, 198.57441215940486, 191.9023467596449, 251.80675473303774, 49.256853033364514, 196.6213139405376, 163.8312829442945, 146.72504872873364]
 
-\[  F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R))
-     \big\} - V(S(R)) + C_{i} , \] 
-\[ p_{i} = p^{b}_{i}(S) e^{ +\beta V(R) }e^{\beta C_{i}} \]
-\[ p(S) = \sum_{N \text{windows}} p_i{S} w_{i} \]
-\[ \frac{ \eta_{i} e^{ -\beta U_{i}(S) e^{\beta C_{i}}  }  }{ \sum^{ N
-     \text{ windows}}_{J=1} \eta_{J} e^{ -\beta V_{J}(S) } e^{ \beta C_{J} }} \]
+Polynomial coeffs 0 
+ [ 4.507211527019e+03 -8.449883471457e+01 -6.437754951847e+00  1.358490676015e+00  7.541054778124e-04 -5.869865162471e-01]
 
+Polynomial coeffs 1 
+ [-4.917868589163e+04 -6.796328672108e+02  3.263585371778e+00  1.574863053623e+00 -8.199050699247e-03 -5.869864952914e-01]
 
-For these terms we need to know what the unbiased \(p(S)\) is, but that is what we are trying to solve. 
-We need to know the ensemble average over the unbiased probability distribution. 
-\[ e^{-\beta C_{i}} = \int e^{ \beta V_{i}(S) } p(S) \text{d}S \]
-We can guess that all \(C_{i} = 0\) and then solve self-consistently until shifts of \(C_i\) are within some tolerance. 
+Polynomial coeffs 2 
+ [ 8.463541680370e+03 -2.123397437739e+02 -3.994573151874e-01  1.513192016341e+00 -1.159964998503e-06 -5.869865029371e-01]
 
+<<<<<<< HEAD
 \begin{enumerate}
 \item Related papers and books
 \label{sec:orgd0eb77a}
 Look up \textbf{Umbrella integration} and \textbf{Thermodynamic integration}, where one can achieve this result analytically. 
+=======
+Polynomial coeffs 3 
+ [ 1.832431891172e+05 -2.767883158595e+03 -1.595434513613e+01  1.976062791391e+00  8.808944930130e-03 -5.869863668531e-01]
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 
-Original paper by Zwanzig in 1954
+Polynomial coeffs 4 
+ [ 1.810477061546e-05 -2.549533859606e+00 -2.196695165670e-09  3.883668415017e-01  4.328971618917e-14 -5.869865119580e-01]
 
-1993 Ben Roux: WHAM
+Polynomial coeffs 5 
+ [-1.664162660344e+05 -2.467038170221e+03  1.228884396969e+01  1.593577360145e+00 -8.816020687671e-03 -5.869863451515e-01]
 
-m.salvalaglio@ucl.ac.uk
+Polynomial coeffs 6 
+ [ 2.328725961840e+04 -3.853438230453e+02 -8.112889714681e+00  1.257934149210e+00  4.483477564102e-03 -5.869865099068e-01]
 
+Polynomial coeffs 7 
+ [-9.014423067864e+02 -5.754662013020e+01 -3.494500291531e+00  1.155801282067e+00  4.609557103966e-07 -5.869865136131e-01]
 
-For the error of these one can do block averaging.
+\end{minted}
 \end{enumerate}
+<<<<<<< HEAD
 
 
 \item Adaptive potential bias
@@ -1728,4 +1746,7 @@ there are also problems.
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography/org-refs}
+=======
+\end{enumerate}
+>>>>>>> 9fea82f19527f04d0227cad35cfa3ce4f25e6cfa
 \end{document}
