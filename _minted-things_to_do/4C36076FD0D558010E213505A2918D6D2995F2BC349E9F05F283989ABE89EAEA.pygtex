@@ -1,0 +1,88 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{START}\PYG{p}{:} \PYG{n}{OBJECTIVE} \PYG{n}{FUNCTION}
+
+\PYG{n}{ti\PYGZus{}obj\PYGZus{}new\PYGZus{}ec\PYGZus{}cutoffs\PYGZus{}canon}\PYG{o}{.}\PYG{n}{py}
+ \PYG{n}{starting}\PYG{o}{..}
+   \PYG{n}{ext} \PYG{o}{=} \PYG{n}{ti} \PYG{p}{,}
+   \PYG{n+nb}{file} \PYG{o}{=} \PYG{n}{fmin}\PYG{o}{.}\PYG{n}{val} \PYG{p}{,}
+   \PYG{n}{vals} \PYG{o}{=} \PYG{n}{fdd}\PYG{o}{=}\PYG{l+m+mf}{0.1737703199} \PYG{n}{qdds}\PYG{o}{=}\PYG{l+m+mf}{0.5706158058} \PYG{n}{qddp}\PYG{o}{=}\PYG{l+m+mf}{0.6421834099} \PYG{n}{qddd}\PYG{o}{=}\PYG{l+m+mf}{0.7560903882} \PYG{n}{b0}\PYG{o}{=}\PYG{l+m+mf}{278.8444422514} \PYG{n}{p0}\PYG{o}{=}\PYG{l+m+mf}{1.7961642354} \PYG{n}{b1}\PYG{o}{=}\PYG{l+m+mf}{0.0000000000} \PYG{n}{p1}\PYG{o}{=}\PYG{l+m+mf}{0.0000000}
+\PYG{l+m+mo}{000} \PYG{n}{ndt}\PYG{o}{=}\PYG{l+m+mf}{1.9624397374} \PYG{n}{cr1}\PYG{o}{=\PYGZhy{}}\PYG{l+m+mf}{6.9348461726} \PYG{n}{cr2}\PYG{o}{=}\PYG{l+m+mf}{4.0612686987} \PYG{n}{cr3}\PYG{o}{=\PYGZhy{}}\PYG{l+m+mf}{1.0000000000} \PYG{n}{r1}\PYG{o}{=}\PYG{l+m+mf}{0.9819448403} \PYG{n}{rc}\PYG{o}{=}\PYG{l+m+mf}{1.3464870767} \PYG{n}{rmaxh}\PYG{o}{=}\PYG{l+m+mf}{1.3599519474}
+   \PYG{n}{binaries} \PYG{o+ow}{in} \PYG{o}{/}\PYG{n}{opt}\PYG{o}{/}\PYG{n}{lmto}\PYG{o}{/}\PYG{n}{bld7}\PYG{o}{.}\PYG{l+m+mf}{13.0}\PYG{o}{/}\PYG{n}{openmpi}\PYG{o}{/}\PYG{l+m+mf}{3.1}\PYG{o}{.}\PYG{l+m+mi}{0}\PYG{o}{/}\PYG{n}{intel}\PYG{o}{/}\PYG{l+m+mf}{14.0}\PYG{o}{.}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{o}
+
+
+
+\PYG{n}{Getting} \PYG{n}{hcp} \PYG{n}{c}\PYG{o}{/}\PYG{n}{a} \PYG{o}{...}
+\PYG{n}{Using} \PYG{n}{Nelder}\PYG{o}{\PYGZhy{}}\PYG{n}{Mead}
+
+\PYG{n}{Optimization} \PYG{n}{terminated} \PYG{n}{successfully}\PYG{o}{.}
+	 \PYG{n}{Current} \PYG{n}{function} \PYG{n}{value}\PYG{p}{:} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.333512}
+	 \PYG{n}{Iterations}\PYG{p}{:} \PYG{l+m+mi}{29}
+	 \PYG{n}{Function} \PYG{n}{evaluations}\PYG{p}{:} \PYG{l+m+mi}{60}
+\PYG{n}{Got} \PYG{n}{a}\PYG{p}{,} \PYG{n}{c} \PYG{p}{:} \PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{5.5401081318}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mf}{8.9583629249} \PYG{n}{c}\PYG{o}{/}\PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{1.6170014577}\PYG{o}{.} \PYG{n}{Volume} \PYG{n}{per} \PYG{n}{atom}\PYG{o}{=}\PYG{l+m+mf}{119.0599707593}
+\PYG{n}{Targets}  \PYG{p}{:} \PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{5.5767896900}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mf}{8.8521008200} \PYG{n}{c}\PYG{o}{/}\PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{1.5873112152}\PYG{o}{.} \PYG{n}{Volume} \PYG{n}{per} \PYG{n}{atom}\PYG{o}{=}\PYG{l+m+mf}{119.2107777334}
+
+\PYG{n}{Obtaining} \PYG{n}{Bandwidth}
+
+  \PYG{n+nb}{eval} \PYG{l+m+mi}{1} \PYG{k}{for} \PYG{n}{bandwidth} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.1587}
+  \PYG{n+nb}{eval} \PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{bandwidth} \PYG{o}{=} \PYG{l+m+mf}{0.129}
+\PYG{n}{bandwidth}\PYG{p}{:} \PYG{l+m+mf}{0.288} \PYG{p}{(}\PYG{n}{target}\PYG{p}{:} \PYG{l+m+mf}{0.426}\PYG{p}{)}
+
+\PYG{n}{Getting} \PYG{n}{hcp} \PYG{n}{shear} \PYG{n}{constants} \PYG{o}{...}
+
+ \PYG{n}{C\PYGZus{}11} \PYG{o}{=}    \PYG{l+m+mf}{177.624} \PYG{n}{GPa}
+
+ \PYG{n}{C\PYGZus{}33} \PYG{o}{=}    \PYG{l+m+mf}{191.588} \PYG{n}{GPa}
+
+ \PYG{n}{C\PYGZus{}44} \PYG{o}{=}     \PYG{l+m+mf}{46.334} \PYG{n}{GPa}
+
+ \PYG{n}{C\PYGZus{}12} \PYG{o}{=}     \PYG{l+m+mf}{88.164} \PYG{n}{GPa}
+
+ \PYG{n}{C\PYGZus{}13} \PYG{o}{=}     \PYG{l+m+mf}{67.996} \PYG{n}{GPa}
+
+\PYG{n}{shear} \PYG{n}{constants}\PYG{p}{:} \PYG{n}{c\PYGZus{}11}\PYG{o}{=}\PYG{l+m+mf}{177.6}\PYG{p}{,} \PYG{n}{c\PYGZus{}33}\PYG{o}{=}\PYG{l+m+mf}{191.6}\PYG{p}{,} \PYG{n}{c\PYGZus{}44}\PYG{o}{=} \PYG{l+m+mf}{46.3}\PYG{p}{,} \PYG{n}{c\PYGZus{}12}\PYG{o}{=} \PYG{l+m+mf}{88.2}\PYG{p}{,} \PYG{n}{c\PYGZus{}13}\PYG{o}{=} \PYG{l+m+mf}{68.0}\PYG{p}{,} \PYG{n}{c\PYGZus{}66}\PYG{o}{=}  \PYG{l+m+mf}{44.7}\PYG{p}{,} \PYG{n}{S}\PYG{o}{=} \PYG{l+m+mf}{68.7}\PYG{p}{,} \PYG{n}{R}\PYG{o}{=}\PYG{l+m+mf}{188.5}\PYG{p}{,} \PYG{n}{H}\PYG{o}{=}\PYG{l+m+mf}{147.8}
+	 \PYG{n}{target}\PYG{p}{:} \PYG{n}{c\PYGZus{}11}\PYG{o}{=}\PYG{l+m+mf}{176.1}\PYG{p}{,} \PYG{n}{c\PYGZus{}33}\PYG{o}{=}\PYG{l+m+mf}{190.5}\PYG{p}{,} \PYG{n}{c\PYGZus{}44}\PYG{o}{=} \PYG{l+m+mf}{50.8}\PYG{p}{,} \PYG{n}{c\PYGZus{}12}\PYG{o}{=} \PYG{l+m+mf}{86.9}\PYG{p}{,} \PYG{n}{c\PYGZus{}13}\PYG{o}{=} \PYG{l+m+mf}{68.3}\PYG{p}{,} \PYG{n}{c\PYGZus{}66}\PYG{o}{=}  \PYG{l+m+mf}{44.6}\PYG{p}{,} \PYG{n}{S}\PYG{o}{=} \PYG{l+m+mf}{73.1}\PYG{p}{,} \PYG{n}{R}\PYG{o}{=}\PYG{l+m+mf}{185.4}\PYG{p}{,} \PYG{n}{H}\PYG{o}{=}\PYG{l+m+mf}{146.7}
+   \PYG{n}{bulk} \PYG{n}{modulus}\PYG{p}{:} \PYG{l+m+mi}{111}\PYG{p}{;} \PYG{n}{target}\PYG{p}{:} \PYG{l+m+mi}{110}
+
+\PYG{n}{Obtaining} \PYG{n}{bcc} \PYG{n}{Ti} \PYG{n}{quantities}
+
+  \PYG{n}{trial} \PYG{n}{bcc} \PYG{n}{output} \PYG{k+kn}{from} \PYG{n+nn}{pfit} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+  \PYG{n}{VF} \PYG{o}{=} \PYG{l+m+mf}{0.943542}
+  \PYG{n}{Epp} \PYG{n}{bcc} \PYG{o}{=} \PYG{l+m+mf}{0.491615}
+
+\PYG{n}{Getting} \PYG{n}{omega} \PYG{n}{phase} \PYG{n}{lattice} \PYG{n}{constants} \PYG{o+ow}{and} \PYG{n}{internal} \PYG{n}{parameter} \PYG{o}{...}
+
+\PYG{n}{Using} \PYG{n}{Nelder}\PYG{o}{\PYGZhy{}}\PYG{n}{Mead}
+
+\PYG{n}{Optimization} \PYG{n}{terminated} \PYG{n}{successfully}\PYG{o}{.}
+	 \PYG{n}{Current} \PYG{n}{function} \PYG{n}{value}\PYG{p}{:} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.498206}
+	 \PYG{n}{Iterations}\PYG{p}{:} \PYG{l+m+mi}{38}
+	 \PYG{n}{Function} \PYG{n}{evaluations}\PYG{p}{:} \PYG{l+m+mi}{81}
+
+\PYG{n}{Got} \PYG{n}{omega} \PYG{p}{:} \PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{8.7091}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mf}{5.4026} \PYG{n}{c}\PYG{o}{/}\PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{0.6203}\PYG{p}{,} \PYG{n}{u}\PYG{o}{=}\PYG{l+m+mf}{1.0001}\PYG{o}{.} \PYG{n}{Volume} \PYG{n}{per} \PYG{n}{atom}\PYG{o}{=}\PYG{l+m+mf}{118.2943}
+\PYG{n}{Targets}   \PYG{p}{:} \PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{8.7325}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mf}{5.3234} \PYG{n}{c}\PYG{o}{/}\PYG{n}{a}\PYG{o}{=}\PYG{l+m+mf}{0.6096}\PYG{p}{,} \PYG{n}{u}\PYG{o}{=}\PYG{l+m+mf}{1.0000}\PYG{o}{.} \PYG{n}{Volume} \PYG{n}{per} \PYG{n}{atom}\PYG{o}{=}\PYG{l+m+mf}{117.1878}
+\PYG{n}{E\PYGZus{}omega} \PYG{o}{\PYGZhy{}} \PYG{n}{E\PYGZus{}hcp} \PYG{o}{=} \PYG{l+m+mf}{0.687}\PYG{n}{mRy} \PYG{n}{per} \PYG{n}{atom}
+      \PYG{n}{GGA} \PYG{n}{Target}\PYG{p}{:} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.735}
+\PYG{n}{bcc}\PYG{p}{:}     \PYG{n}{a}\PYG{o}{=}  \PYG{l+m+mf}{6.08}\PYG{p}{,} \PYG{n}{K}\PYG{o}{=}\PYG{l+m+mi}{57} \PYG{n}{Volume} \PYG{n}{per} \PYG{n}{atom}\PYG{o}{=}\PYG{l+m+mi}{112}
+\PYG{n}{target}\PYG{p}{:}  \PYG{n}{a}\PYG{o}{=}  \PYG{l+m+mf}{6.18}\PYG{p}{,} \PYG{n}{K}\PYG{o}{=}\PYG{l+m+mi}{118}\PYG{p}{,}
+	\PYG{n}{E\PYGZus{}bcc} \PYG{o}{\PYGZhy{}} \PYG{n}{E\PYGZus{}hcp} \PYG{o}{=} \PYG{l+m+mf}{19.358}\PYG{n}{mRy} \PYG{n}{per} \PYG{n}{atom}
+
+
+ \PYG{n}{Build} \PYG{n}{Objective} \PYG{n}{Function}
+
+		    \PYG{n}{predicted}       \PYG{n}{target}
+  \PYG{n}{a\PYGZus{}hcp}       \PYG{p}{:}   \PYG{l+m+mf}{5.54010813}     \PYG{l+m+mf}{5.57678969}
+  \PYG{n}{c\PYGZus{}hcp}       \PYG{p}{:}   \PYG{l+m+mf}{8.95836292}     \PYG{l+m+mf}{8.85210082}
+  \PYG{n}{c\PYGZus{}11}        \PYG{p}{:} \PYG{l+m+mf}{177.62375172}   \PYG{l+m+mf}{176.10000000}
+  \PYG{n}{c\PYGZus{}33}        \PYG{p}{:} \PYG{l+m+mf}{191.58842280}   \PYG{l+m+mf}{190.50000000}
+  \PYG{n}{c\PYGZus{}44}        \PYG{p}{:}  \PYG{l+m+mf}{46.33439251}    \PYG{l+m+mf}{50.80000000}
+  \PYG{n}{c\PYGZus{}12}        \PYG{p}{:}  \PYG{l+m+mf}{88.16405241}    \PYG{l+m+mf}{86.90000000}
+  \PYG{n}{c\PYGZus{}13}        \PYG{p}{:}  \PYG{l+m+mf}{67.99572101}    \PYG{l+m+mf}{68.30000000}
+  \PYG{n}{a\PYGZus{}omega}     \PYG{p}{:}   \PYG{l+m+mf}{8.70914358}     \PYG{l+m+mf}{8.73254342}
+  \PYG{n}{c\PYGZus{}omega}     \PYG{p}{:}   \PYG{l+m+mf}{5.40260729}     \PYG{l+m+mf}{5.32343103}
+  \PYG{n}{u\PYGZus{}omega}     \PYG{p}{:}   \PYG{l+m+mf}{1.00009549}     \PYG{l+m+mf}{1.00000000}
+  \PYG{n}{DE} \PYG{p}{(}\PYG{n}{o}\PYG{p}{,} \PYG{n}{hcp}\PYG{p}{)} \PYG{p}{:}   \PYG{l+m+mf}{0.68707833}    \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.73475386}
+  \PYG{n}{a\PYGZus{}bcc}       \PYG{p}{:}   \PYG{l+m+mf}{6.08183509}     \PYG{l+m+mf}{6.17948863}
+  \PYG{n}{bandwidth}   \PYG{p}{:}   \PYG{l+m+mf}{0.28770000}     \PYG{l+m+mf}{0.42600000}
+
+\PYG{n}{Objective} \PYG{n}{function}\PYG{p}{:} \PYG{l+m+mi}{431}
+\end{Verbatim}

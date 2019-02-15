@@ -14,13 +14,25 @@
 
 
 
-* Tasks 
+* Tasks
+ 
+** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
+** TODO Calculate solution enthalpy of oxygen in titanium. 
+- The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
+  $$ E_{\text{sol} = E( \text{Ti}_n \text{O} ) - E( \text{Ti}_n ) - E(O) $$
+  $$ \Delta V = V( \text{Ti}_n \text{O} ) - V( \text{Ti}_n ) $$
+- $E( \text{Ti}_n \text{O} )$ is the excess energ of the bulk supercell with n
+  Ti atoms and one impurity atom. $E( \text{Ti}_n )$ is the energy of the pure
+  cells.
+- Influence of cell sizes and solution enthalpy needs to be considered.
+
+** TODO Compile list of papers to read for Omar
 	
 ** TODO Use python voronoi around a surface to find triangles through which dislocations will pass
 ** TODO Has anyone investigated the stacking faults of Omega phase?
    - Maybe as Omega phase doesn't occur that often, perhaps it has not been
      studied in detail.
-   - I should look further into this
+   - I should look further into thsi
 ** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
 *** Checking the convergence criteria
       - Now checking the convergence criteria.
@@ -84,11 +96,11 @@ bz: metal
 *** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
     CLOSED: [2018-11-19 Mon 12:08]
 ** TODO Python script: remove include statements  -->  One file.  
-** TODO Summarise UCL DFT lectures. 
 ** TODO Write first paragraph of Literature review
 *** TODO Summarise Stacking Faults and write review
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
+** TODO Summarise UCL DFT lectures. 
 ** TODO Write summary of org-mode
     
 ** DONE Investigate why rmaxh changes energy
@@ -233,14 +245,202 @@ Force Constant Matrix
 ** TODO Investigate why the gamma surface minima are not along the lines joining the vectors. 
 
 ** TODO Change the lattice vectors to make the dislocation displacement fields periodic
-** TODO Make sure that the displacements are periodic 
 
 ** TODO Why is the displacement in the x direction in the graphs of create cells?
+** TODO Make sure that the displacements are periodic 
 ** TODO Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
 ** DONE Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
 CLOSED: [2019-01-14 Mon 19:45]
 * General notes 
 ** Titanium tight-binding models
+*** Tigany's Models
+**** 2019-01-16  
+Just looking at a model that the optimisation on tar spat out.
+#+BEGIN_SRC python
+START: OBJECTIVE FUNCTION
+
+ti_obj_new_ec_cutoffs_canon.py 
+ starting..
+   ext = ti ,
+   file = fmin.val ,
+   vals = fdd=0.1737703199 qdds=0.5706158058 qddp=0.6421834099 qddd=0.7560903882 b0=278.8444422514 p0=1.7961642354 b1=0.0000000000 p1=0.0000000
+000 ndt=1.9624397374 cr1=-6.9348461726 cr2=4.0612686987 cr3=-1.0000000000 r1=0.9819448403 rc=1.3464870767 rmaxh=1.3599519474  
+   binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+
+
+
+Getting hcp c/a ...
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.333512
+         Iterations: 29
+         Function evaluations: 60
+Got a, c : a=5.5401081318, c=8.9583629249 c/a=1.6170014577. Volume per atom=119.0599707593
+Targets  : a=5.5767896900, c=8.8521008200 c/a=1.5873112152. Volume per atom=119.2107777334
+
+Obtaining Bandwidth 
+
+  eval 1 for bandwidth = -0.1587
+  eval 2 for bandwidth = 0.129
+bandwidth: 0.288 (target: 0.426)
+
+Getting hcp shear constants ...
+
+ C_11 =    177.624 GPa
+
+ C_33 =    191.588 GPa
+
+ C_44 =     46.334 GPa
+
+ C_12 =     88.164 GPa
+
+ C_13 =     67.996 GPa
+
+shear constants: c_11=177.6, c_33=191.6, c_44= 46.3, c_12= 88.2, c_13= 68.0, c_66=  44.7, S= 68.7, R=188.5, H=147.8 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, c_66=  44.6, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 111; target: 110 
+
+Obtaining bcc Ti quantities
+
+  trial bcc output from pfit = 0.0
+  VF = 0.943542
+  Epp bcc = 0.491615
+
+Getting omega phase lattice constants and internal parameter ...
+
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.498206
+         Iterations: 38
+         Function evaluations: 81
+
+Got omega : a=8.7091, c=5.4026 c/a=0.6203, u=1.0001. Volume per atom=118.2943
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = 0.687mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.08, K=57 Volume per atom=112
+target:  a=  6.18, K=118,                     
+        E_bcc - E_hcp = 19.358mRy per atom 
+
+
+ Build Objective Function
+     ...with L1 norm
+                    predicted       target      squared diff.        p_norm         weight       objective
+  a_hcp       :   5.54010813     5.57678969     0.00134554       0.03668156     1000.00000000       38.02709489 
+  c_hcp       :   8.95836292     8.85210082     0.01129163       0.10626210     1000.00000000      117.55373983 
+  c_11        : 177.62375172   176.10000000     2.32181932       1.52375172       1.00000000        3.84557104 
+  c_33        : 191.58842280   190.50000000     1.18466418       1.08842280       1.00000000        2.27308698 
+  c_44        :  46.33439251    50.80000000    19.94165025       4.46560749       1.00000000       24.40725774 
+  c_12        :  88.16405241    86.90000000     1.59782850       1.26405241       1.00000000        2.86188091 
+  c_13        :  67.99572101    68.30000000     0.09258571       0.30427899       1.00000000        0.39686470 
+  a_omega     :   8.70914358     8.73254342     0.00054755       0.02339984     250.00000000        5.98684832 
+  c_omega     :   5.40260729     5.32343103     0.00626888       0.07917626     250.00000000       21.36128389 
+  u_omega     :   1.00009549     1.00000000     0.00000001       0.00009549     500.00000000        0.04774897 
+  DE (o, hcp) :   0.68707833    -0.73475386     2.02160678       1.42183219       1.00000000        3.44343897 
+  a_bcc       :   6.08183509     6.17948863     0.00953621       0.09765354     500.00000000       53.59487776 
+  bandwidth   :   0.28770000     0.42600000     0.01912689       0.13830000     1000.00000000      157.42689000 
+
+Objective function: 431
+
+#+END_SRC
+
+Here are the phonons:
+[[file:~/Documents/phonopy/ti-phonons/2019-01-16-TiganyModel/hcp/hcp-band_dos.pdf][hcp phonons 2019-01-16]]
+[[file:~/Documents/phonopy/ti-phonons/2019-01-16-TiganyModel/omega/omega-band_dos.pdf][omega phonons 2019-01-16]]
+[[file:~/Documents/phonopy/ti-phonons/2019-01-16-TiganyModel/bcc/bcc-band_dos.pdf][bcc
+phonons 2019-01-16]]
+**** 2019-01-16 gherkin
+#+BEGIN_SRC python
+START: OBJECTIVE FUNCTION
+
+ti_obj_new_ec_cutoffs_canon.py 
+ starting..
+   ext = ti ,
+   file = fmin.val ,
+   vals = fdd=0.0612208622 qdds=0.3902890045 qddp=0.4649455926 qddd=0.5756575714 b0=254.7932729989 p0=1.8871236540 b1=0.0000000000 p1=0.0000000
+000 ndt=1.9510574036 cr1=-6.4416591804 cr2=3.6704407936 cr3=-1.0000000000 r1=0.9680179778 rc=1.3439860367 rmaxh=1.3574258970  
+   binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+
+
+
+Getting hcp c/a ...
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.340763
+         Iterations: 31
+         Function evaluations: 62
+Got a, c : a=5.5326800768, c=8.8578811280 c/a=1.6010109034. Volume per atom=117.4090570706
+Targets  : a=5.5767896900, c=8.8521008200 c/a=1.5873112152. Volume per atom=119.2107777334
+
+Obtaining Bandwidth 
+
+  eval 1 for bandwidth = -0.1401
+  eval 2 for bandwidth = 0.1151
+bandwidth: 0.255 (target: 0.426)
+
+Getting hcp shear constants ...
+
+ C_11 =    177.759 GPa
+
+ C_33 =    188.157 GPa
+
+ C_44 =     52.311 GPa
+
+ C_12 =     89.739 GPa
+
+ C_13 =     64.932 GPa
+
+shear constants: c_11=177.8, c_33=188.2, c_44= 52.3, c_12= 89.7, c_13= 64.9, c_66=  44.0, S= 74.3, R=192.0, H=147.0 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, c_66=  44.6, S= 73.1, R=185.4, H=146.7 
+   bulk modulus: 109; target: 110 
+
+Obtaining bcc Ti quantities
+
+  trial bcc output from pfit = 0.0
+  VF = 0.903835
+  Epp bcc = 0.574544
+
+Getting omega phase lattice constants and internal parameter ...
+
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.506159
+         Iterations: 39
+         Function evaluations: 81
+
+Got omega : a=8.6332, c=5.3331 c/a=0.6177, u=1.0000. Volume per atom=114.7451
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, u=1.0000. Volume per atom=117.1878
+E_omega - E_hcp = 1.662mRy per atom 
+      GGA Target: -0.735
+bcc:     a=  6.00, K=64 Volume per atom=108
+target:  a=  6.18, K=118,                     
+        E_bcc - E_hcp = 21.698mRy per atom 
+
+
+ Build Objective Function
+     ...with L1 norm
+                    predicted       target      squared diff.        p_norm         weight       objective
+  a_hcp       :   5.53268008     5.57678969     0.00194566       0.04410961     1000.00000000       46.05527115 
+  c_hcp       :   8.85788113     8.85210082     0.00003341       0.00578031     1000.00000000        5.81371992 
+  c_11        : 177.75900987   176.10000000     2.75231373       1.65900987       1.00000000        4.41132360 
+  c_33        : 188.15681778   190.50000000     5.49050290       2.34318222       1.00000000        7.83368512 
+  c_44        :  52.31098007    50.80000000     2.28306077       1.51098007       1.00000000        3.79404084 
+  c_12        :  89.73873801    86.90000000     8.05843351       2.83873801       1.00000000       10.89717152 
+  c_13        :  64.93191763    68.30000000    11.34397888       3.36808237       1.00000000       14.71206126 
+  a_omega     :   8.63324520     8.73254342     0.00986014       0.09929822     250.00000000       27.28958940 
+  c_omega     :   5.33306014     5.32343103     0.00009272       0.00962910     250.00000000        2.43045557 
+  u_omega     :   0.99998979     1.00000000     0.00000000       0.00001021     500.00000000        0.00510460 
+  DE (o, hcp) :   1.66201667    -0.73475386     5.74450895       2.39677052       1.00000000        8.14127947 
+  a_bcc       :   5.99529576     6.17948863     0.03392701       0.18419287     500.00000000      109.05994138 
+  bandwidth   :   0.25520000     0.42600000     0.02917264       0.17080000     1000.00000000      199.97264000 
+
+Objective function: 440
+
+#+END_SRC
 *** Tony's Models
 **** 2019-01-07
 ***** Elastic Constants
@@ -662,7 +862,117 @@ The phonons for the model are as follows
      where $c_{2}$ is the length of the periodicity vector before it has been
      tilted. 
 
-    
+*** Results
+For dipole in the O arrangement we have [[file:~/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations_clean/create_supercell_with_quadrupole.py]]
+
+Original displacement in O config
+ [[file:Images/u_dipole_O_arrangement_non_periodic_displacement.png]]
+Adding in the contribution of the images
+[[file:Images/u_image_dipole_O_arrangement.png]]
+Subtracting from $u_{\text{sum}}$, the spurious linear displacement:
+[[file:Images/u_err_dipole_O_arrangement.png]]
+Resulting in the final periodic displacement for the supercell. 
+[[file:Images/u_dipole_O_arrangement_periodic_displacement.png]]
+** DFT
+*** Functionals
+*** LMTO
+*** Running lmf
+**** Run Generic Calculation
+   Run:
+   - lmchk --getwsr ti
+   - Copy the old rmax into the R category in SPEC
+   - lmfa ti -vhcp=1
+   - Copy basp0 to basp
+   - Run lmf
+** Multi-objective optimisation
+
+*** Solutions
+Solutions to multi-objective optimisations are members of the Pareto
+set.
+Dominance is the concept of how a particular vectors of inputs may be
+compared with respect to graphs of particular objectives and how each
+vector minimises each. So pairs of vectors can be compared.
+
+- a dominates b if it is better in at least one objective and worse in
+  none. We write $a \succ b$.
+  a weakly dominates b if it dominates b or is equal to b. We also
+  write $a \succeq b$.
+- a strongly dominates b if it is strictly better than b in all objectives. We also write
+  $a \succ\succ  b$.
+- a is incomparable to b if neither a nor b dominates the other, and they are not equal
+  to one another. We write $a || b$.
+NOTE: $a \succ\succ b \implies a \succ b \implies a \succeq b$
+
+There is partial ordering as some points will dominate others with
+respect to one objective but not necessarily the other. 
+
+*** Pareto Optimality
+The Pareto Front $Z^*$of an objective space is the set of nondominated
+points of an objective space $Z$: $Z^{*} = \text{min}(Z)$
+
+The Pareto Optimal set $X^*$ of a decision/search space $X$ is the
+pre-image of the Pareto front. (Basically the input vectors map to the
+Pareto front, the set of points which minimise objectives).
+
+Can define better relations on sets of points  by saying that some
+sets of points are objectively better than others 
+$A \rhd B \Leftrightarrow \text{min} A \cup B = A \neq B$.
+For other pairs it is a matter of preference.
+
+When a point $x^*$ is Pareto optimal, there exist vectors 
+$mathbf{0}\leq \mathfrak{R}^{k}$ and $mathbf{0}\leq \mathfrak{R}^{m}$
+for which $(\lambda,\mu) \neq (\mathbf{0}, \mathbf{0})$ such that
+\[ \sum_{i=1}^{k} \lambda_{i} \Delta f_{i}(x^*) + \sum_{j=1}^{m}
+\lambda_{j} \Delta g_{i}(x^*) = 0, \]
+\[ \mu_j g_j(x^*) = 0 \forall j = 1,\ldots,m, \]
+where $k$ are objectives and $m$ are equality constraints, $f_i$ are
+the objective function and $g_j$ are the constraint functions.
+
+
+
+
+
+*** Differential Evolution Algorithms
+
+Evolutionary Algorithms have proven to be very effective in dealing
+with hard optimization problems whose solution space is so large as
+to make an exhaustive search unviable. 
+
+Main disadvantage to Differential Evolution algorithms is their
+convergence speed. 
+
+To increase this convergence speed, one may implement structured
+versions of the algorithm where the population is split into
+semi-isolated subpopulations (demes) which are connected to each other
+using a particular network topology. 
+
+These subpopulations evolve independently and interact by means of a
+migration operator that is used to exchange individuals. 
+
+The number of individuals that are sent to/received from other demes
+is determined by the migration rate, while a replacement function
+defines how ti include the immigrants into the target subpopulation. 
+
+The migration interval establishes the exchange frequency among
+neighbouring subpopulations. 
+
+Network topologies may be categorised as either the \emph{island
+model} (fully connected demes) or the \emph{stepping-stone model},
+(interaction is restricted to customized logical or physically
+connected demes).  
+
+The connectivity degree of the topology beneath determines
+the number of the neighboring subpopulations and its diameter is the
+most important factor influencing the propagation of good individuals.
+
+The separation of demes serves as a natural way to maintain the diversity
+reducing the possibility of population stagnation, may guide the evolution
+in many directions simultaneously, and may allow speedup in computation and
+improve solution quality with respect to a single EA evolution.
+
+**** Topology
+In or
+
 ** Phonons 
 
 *** DFT and TBE Phonons
@@ -865,7 +1175,6 @@ net forces as a result of the strain if they are not at centres of inversion.
 Relaxation of those forces reduces the energy of the homogeneously strained crystal, and therefore it affects the calculated elastic constants. 
 
 
-
 ** Gamma surfaces
 *** Miscellaneous
    - Seems like some atoms are missing in the site file when it is being read
@@ -1026,8 +1335,8 @@ rectified.
      - These ribbons can undergo constrictions from jogs
      - Reason that stacking faults are not observed in bcc structures are just
        that the stacking fault energies are too high. (Because of dense packing?)
-**** Gamma surfaces in DFT
-***** [Benoit, Tarrat and Morillo 2012] Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults. 
+**** Gamma surfaces in DTF
+***** [Benoit, Tarrat and Morillo 2012] cite:Benoit_2012 Density functional theory investigations of titanium $\gamma$-surfaces and stacking faults. 
      - Comparison between central force  embedded atom ineractions, N-body
        central force, N-body angular, empirical potentials, tight binding and
        DFT pseudopotential and DFT full electron calculations.
@@ -1061,6 +1370,7 @@ rectified.
          against this criteria.
      - No models other than DFT produced a metastable stacking fault energy at
        the prismatic easy fault.
+
 ** Notes on Thermodynamics and Stability
 
 *** Wallace 1972
@@ -1455,7 +1765,7 @@ With tony's routines we have
  K = -1094.6742125423,   K_FR =  109.9666666667
  R =  669.1429126355,   R_FR =  61.8000000000
  H =  634.1671283369,   H_FR =  45.9650000000
-#+END_SRC
+#+END_SCR
 ** Notes on Tight Binding and BOP Models
 
 *** Pair correlation and cutoffs
@@ -1604,13 +1914,7 @@ Stopping search: Swarm best position change less than 1e-08
 794.9141378839079
 #+END_SRC
 
-** DFT s
-   Run:
-   - lmchk --getwsr ti
-   - Copy the old rmax into the R category in SPEC
-   - lmfa ti -vhcp=1
-   - Copy basp0 to basp
-   - Run lmf
+
 ** Python
 *** OS
    Use OS module rather than making a load of files to a certain directory. 
@@ -1973,8 +2277,8 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
      * The energy at constant temperature and pressure.
      * Gibbs energy is the thermodynamic potential that is minimized when a
        system reaches chemical equilibrium at constant pressure and
-       temperature. 
-     * Equation: \[ G = U + pV - TS  \]
+       temperature.  
+    * Equation: \[ G = U + pV - TS  \]
      * $\Delta G$ is the total non-mechanical work done on the system. 
      * Natural variables: $\{ T, p, \{N_{i}\} \}$
    - Enthalpy:
@@ -2027,6 +2331,7 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 
 
   - If I want more help I can go to the [[https://orgmode.org/manual/][org-mode manual]]
+
 
 
 * Bibliography 
