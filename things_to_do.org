@@ -240,18 +240,159 @@ Force Constant Matrix
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
       #+END_SRC
 
-** TODO Make dislocations go through centre of triangle of atoms 
+** DONE Make dislocations go through centre of triangle of atoms 
+CLOSED: [2019-02-15 Fri 10:40]
 
-** TODO Investigate why the gamma surface minima are not along the lines joining the vectors. 
+** DONE Investigate why the gamma surface minima are not along the lines joining the vectors. 
+CLOSED: [2019-02-15 Fri 10:40]
 
-** TODO Change the lattice vectors to make the dislocation displacement fields periodic
+** DONE Change the lattice vectors to make the dislocation displacement fields periodic
+CLOSED: [2019-02-15 Fri 10:40]
 
-** TODO Why is the displacement in the x direction in the graphs of create cells?
-** TODO Make sure that the displacements are periodic 
-** TODO Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+** DONE Why is the displacement in the x direction in the graphs of create cells?
+CLOSED: [2019-02-15 Fri 10:40]
+** DONE Make sure that the displacements are periodic 
+CLOSED: [2019-02-15 Fri 10:40]
+** DONE Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+CLOSED: [2019-02-15 Fri 10:41]
 ** DONE Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
 CLOSED: [2019-01-14 Mon 19:45]
 * General notes 
+** Tight Binding
+*** Tight Binding Band Model
+
+As with all tight-binding models, they are based on a linear combination of atomic orbitals basis. 
+We compose our hamiltonian as a matrix that is in this basis, where each column/row corresponds to a particular
+atom's orbital.
+The /on-site/ terms are on the diagonal as these simply correspond to the energy of a particular orbital
+e.g.$\epsilon_s$, $\epsilon_p$, $\epsilon_d$, which are also parameters along with the assumed orbital occupancies 
+of the free atoms $N_{\mathbf{R}\ell}$.
+The other terms are off diagonal terms which either represent the bonding between different atoms, if it is a matrix element
+between two different atomic sites, or if the terms are on the the same atomic site, this represents an interaction
+between orbitals on the same atom. These are crystal field terms and relate to the distortion of sperical symmetry arising from
+interaction of orbitals on the same site, which causes a splitting of energy levels. 
+In the tight binding model these come from the self-consistent polarisable tight-binding 
+model. If the cutoffs between bond integrals is short, then the Hamiltonian matrix becomes sparse, 
+which means that diagonalisation is quick. 
+
+For the band model we have the density matrix composed in the normal way. 
+$$ \hat{\rho} = \sum_{n} f_{n} \ket{n} \bra{n}$$ and it is straight forward to see that this density matrix satisfies 
+$$ \hat{\rho} = N $$ where $N$ is the number of electrons in this system. 
+
+The band energy is then given by $$E_{\text{band}} = \text{Tr}\hat{\rho}\hat{H} = \sum_{n} f_{n}\epsilon_{n} $$, where $\epsilon_{n}$
+is the energy of an eigenstate. This band energy is essentially the sum of the electron kinetic energies and electron-ion interaction energies. 
+
+A pair potential is added to this to account for the electron-electron and ion-ion contributions to the total energy 
+as given in density functional theory.
+So the total energy is 
+
+$$ E_{\text{tot}} =   E_{\text{band}} + E_{\text{rep}} $$
+
+
+The band model is /not/ consistent with the force theorem, as the bond model is.
+The force theorem states that there is no contribution to the force from self-consistent redistribution of charge 
+as a result of the virtual displacement of an atom. 
+
+There is no self-consistent charge redistribution in the band model.
+
+If we move an atom in the band model, then there should be a change in the band structure energy from electron-electron interaction. 
+However, all electron-electron interactions are controlled by the pair-potential, as per its definition so there is /not/ exact 
+cancellation. 
+
+This is exactly cancelled in DFT by the double counting term. 
+
+
+*** Tight Binding Bond Model
+
+In the TBBM we use the /covalent bond energy/ as the fundamental quantity of interest that we want to calculate.
+To obtain this energy, one simply ignores the diagonal terms when taking the trace over the product of the density matrix and
+the Hamiltonian (when we calculate the band energy):)
+
+#+BEGIN_EXPORT latex
+\[ 
+E_{\text{bond}} = \frac{1}{2} \sum_{\mathbf{R}L\mathbf{R}'L'//\mathbf{R}/neq\mathbf{R}'}
+                             2\rho_{\mathbf{R}L\mathbf{R}'L'} H^{0}_{\mathbf{R}'L'\mathbf{R}L}.
+\]
+#+END_EXPORT
+
+
+The terms we have excluded from the band energy are now grouped with the corresponding quantities in the free atom. 
+This gives rise to the /promotion energy/.
+
+#+BEGIN_EXPORT latex
+\begin{align}
+E_{\test{prom}} &= \sum_{\mathbf{R}L} \Big(\rho_{\mathbf{R}L\mathbf{R}'L'}H^{0\mathbf{R}'L'\mathbf{R}L} - N_{\mathbf{R}\ell}\epsilon_{\mathbf{R}\ell} \Big)\\
+              &= \sum_{\mathbf{R}L} \Big(\rho_{\mathbf{R}L\mathbf{R}'L'} - N_{\mathbf{R}\ell} \Big) \epsilon_{\mathbf{R}L}\\
+              &= \sum_{\mathbf{R}L} \Delta q_{\mathbf{R}L} \epsilon_{\mathbf{R}\ell}
+\end{align}
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\begin{align}
+E_{\test{prom}}^{\text{TBBM}} &= \sum_{\mathbf{R}L} \Big(\rho_{\mathbf{R}L\mathbf{R}'L'} - N_{\mathbf{R}\ell} \Big) H_{\mathbf{R}L\mathbf{R}L}\\
+              &= \sum_{\mathbf{R}L} \Delta q_{\mathbf{R}L}( \epsilon_{\mathbf{R}\ell} + \Delta \epsilon_{\mathbf{R}\ell} )
+\end{align}
+#+END_EXPORT
+
+Where the promotion energy represents the preparation of an atom going from the free state to that of one about to undergo bonding. 
+E.g. the energy levels of particular atoms being prepared to undergo hybridisation.
+
+
+The band model /is/ consistent with the force theorem as there is  self-consistent redistribution of charges. 
+In the /band/ model there is no contribution to the forces from the promotion energy as 
+$ \epsilon_{\mathbf{R}L}\delta q = \delta\epsilon{\mathbf{R}L} q = 0 $ as the eigenvalues do not change: they are constants. 
+
+However the Mulliken charge transfers are not necessarily zero, and the force theorem necessitates contributions due to  
+electrostatic charge transfer to be included in the calculation of the interatomic force. This means that the band model is 
+inconsistent due to its neglect of these terms. 
+
+The self-consistency that is imposed in the TBBM bond model is that of /local charge neutrality/. This means that the total charge 
+on a particular site should equal that of the reference atom. This means that the /total/ Mulliken charge difference between that and
+free atoms is /zero/. 
+
+This self consistency is achieved by adjusting the on-site orbital energies. This only affects the diagonal of the Hamiltonian 
+so only $E_{\text{prom}}$ changes. 
+
+This means there is an additional contribtion to the force on atom $\mathbf{R}$ which comes from $\sum_{L} \Delta q_{L} \Delta \epsilon_{\ell}$. 
+
+If all orbital energies are shifted by the same amount at each site, during self-consistency, then this term vanishes as 
+$ \epsilon_{\ell}$ is independent of $L$---as $L$ is the index which corresponds to angular momentum $nlm$ *CHECK THIS*. 
+So the term moves to the front of the summation size, and as the sum of all changes in charges are zero, by local charge neutrality,
+ then the term vanishes. 
+
+
+***  Self-Consistent Polarisable-Ion Tight-Binding
+
+Remember that the expansion of the Hohenburg-Kohn-Sham functional to second order in the energy, if $H = H^0 + H'$,
+where $H^0$ is the Hamiltonian generated from the reference charge density $\rho^0$ (about which the HKS functional has been expanded)
+
+
+#+BEGIN_EXPORT latex
+\begin{align}
+E^{(2)} = & \sum_{n} f_{n} \expval{H^{0}}{n} \\
+&- \int \rho^{0}(\mathbf{r}) V^{0}_{xc} \text{d}\mathbf{r} - E_{H} + E^{0}_{xc} + E_{ZZ}\\
+&+ \frac{1}{2} \int \text{d}\mathbf{r} \int \text{d}\mathbf{r}' \Big{ 
+ e^2 \frac{\delta\rho(\mathbf{r})\delta\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} \Big} \\
+& \delta\rho(\mathbf{r})\frac{\delta^2E_{xc}}{\delta\rho(\mathbf{r})\delta\rho(\mathbf{r}')}\delta\rho(\mathbf{r}')
+\end{align}
+#+END_EXPORT
+
+Where the first two lines are the /Harris-Foulkes Functional/.
+
+This is because, as a potential changes, 
+
+In terms of multipole moments, we cannot construct these from the charge density as we do not calculate one. 
+We can however use the eigenvalues such that we can construct them. 
+
+So we can construct the multipoles in terms of the expansion coefficients. 
+
+#+BEGIN_EXPORT latex
+\begin{equation}
+Q_{\mathbf{R}L} = \sum_{L'L} \sum_{n}  f_{n} \bar{c}_{\mathbf{R}L}^{n} c_{\mathbf{R}L}^{n} 
+                        \bra{\mathbf{R}L'}\hat{Q}_{\mathbf{R}L}\ket{\mathbf{R}L''}
+\end{equation}
+#+END_EXPORT
+
 ** Titanium tight-binding models
 *** Tigany's Models
 **** 2019-01-16  
