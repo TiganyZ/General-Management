@@ -15,7 +15,6 @@
 
 
 * Tasks
- 
 ** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
 ** TODO Calculate solution enthalpy of oxygen in titanium. 
 - The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
@@ -95,16 +94,14 @@ bz: metal
      
 *** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
     CLOSED: [2018-11-19 Mon 12:08]
-** TODO Python script: remove include statements  -->  One file.  
 ** TODO Write first paragraph of Literature review
 *** TODO Summarise Stacking Faults and write review
 *** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
 *** TODO Summarise dislocations and Oxygen interactions (review)
-** TODO Summarise UCL DFT lectures. 
-** TODO Write summary of org-mode
-    
-** DONE Investigate why rmaxh changes energy
-   CLOSED: [2018-11-19 Mon 11:45]
+
+
+** Completed Tasks
+*** Investigate why rmaxh changes energy
    - Variation of rmaxh does not change the energy
    - Obviously the number of neighbours changes with rmaxh.
    - Conclusion: rmaxh only determines what atoms are its neighbours. 
@@ -122,13 +119,12 @@ bz: metal
    #+NAME:   fig:n_neighbours_vs_rmaxh.png
    [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
    
-** DONE Show supercell of BOP working 
-   CLOSED: [2018-11-16 Fri 13:38]
-** DONE Check Stability Criteria
-   CLOSED: [2018-11-28 Wed 19:06]
+*** Show supercell of BOP working 
+
+*** Check Stability Criteria
    - Check if the matrix is complex
    - Check if it is positive definite. 
-*** Results 
+**** Results 
     - Without changing anything, the total energy of hcp in Tony's newest
       model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
     - I thought perhaps that the lattice parameters and the elastic constants
@@ -172,11 +168,10 @@ C_11 > 0
   True
 
 #+END_SRC
-** DONE Build force constant matrix for hcp 
-   CLOSED: [2018-11-29 Thu 18:12]
+*** Build force constant matrix for hcp 
    - If the force constant matrix is positive definite then there shan't be
      any soft modes.
-*** Results
+**** Results
     - File used is [[file:~/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py][check_ec_pos_definite.py]]
     - Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
       derivatives, one can find the $6\times6$ force constant matrix.
@@ -240,23 +235,24 @@ Force Constant Matrix
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
       #+END_SRC
 
-** DONE Make dislocations go through centre of triangle of atoms 
-CLOSED: [2019-02-15 Fri 10:40]
+*** Make dislocations go through centre of triangle of atoms 
 
-** DONE Investigate why the gamma surface minima are not along the lines joining the vectors. 
-CLOSED: [2019-02-15 Fri 10:40]
+*** Investigate why the gamma surface minima are not along the lines joining the vectors. 
 
-** DONE Change the lattice vectors to make the dislocation displacement fields periodic
-CLOSED: [2019-02-15 Fri 10:40]
+*** Change the lattice vectors to make the dislocation displacement fields periodic
 
-** DONE Why is the displacement in the x direction in the graphs of create cells?
-CLOSED: [2019-02-15 Fri 10:40]
-** DONE Make sure that the displacements are periodic 
-CLOSED: [2019-02-15 Fri 10:40]
-** DONE Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
-CLOSED: [2019-02-15 Fri 10:41]
-** DONE Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
-CLOSED: [2019-01-14 Mon 19:45]
+*** Why is the displacement in the x direction in the graphs of create cells?
+
+*** Make sure that the displacements are periodic 
+
+*** Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+
+*** Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
+*** Python script: remove include statements  -->  One file.  
+
+
+
+
 * General notes 
 ** Tight Binding
 *** Tight Binding Band Model
