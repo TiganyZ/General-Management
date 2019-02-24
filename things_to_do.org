@@ -1235,6 +1235,62 @@ Prismatic slip dominates. It can be seen that only after deformation of 0.43\% i
 the $\langle \mathbf{a} \rangle$ and $\langle \mathbf{c} +  \mathbf{a}\rangle$ dislocations associated with the $\pi_1$
 plane become important. (Data was obtained from Barkia's PhD Thesis 2014)
 
+****** Stacking Faults 
+
+******* Ghazisaeidi and Trinkle 2012
+Ghazisaeidi and Trinkle cite:Ghazisaeidi2012 investigated the core structure of Ti screw dislocations, extending the work done by cite:Tarrat2009.
+Tarrat /et at/ found that there are two metastable core configurations, from different initial positions of the dislocation lines. 
+One of the cores is symmetrically prismatic---with the lowest excess energy---while the other shows a combination of 
+prismatic and pyramidal spreading. We consider this problem to identify (a) if the existence of metastable cores is an artifact
+of the boundary conditions and (b) if the cores can be easily transformed from one to the other (e.g. cross-slip or transition states).
+ Using the Lattice Green's function approach, they found that found that the higher-energy core always reconstructs 
+into the lower-energy one independent of the applied strain direction.
+
+
+ In a hexagonal close-packed (hcp) structure, the $(10\bar{1}0)$ prism planes are separated by a/3 or 2a/3. 
+Therefore, two types of prismatic stacking faults are possible: the “easy” and “hard” stacking faults which 
+are created between a widely spaced or a closely spaced pair of prism planes, respectively; both appear in the dislocation core.
+
+MEAM potentials had lower energy than DFT results. 
+
+The mirrored (symmetric) core was lower in energy than the unmirrored (asymmetric) core. 
+
+[[file:Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png][Ghazisaeidi Trinkle core structure plots.]]
+The Nye tensor plots showed the three components of spreading (screw, basal edge and prismatic edge).Partial
+dislocations are identified by local extrema in the Nye tensor distribution or a closed triad of atoms in DD maps.
+Unmirrored core partials have both screw and edge character and form a non-planar core structure.
+
+
+| J/m$^2$ | $\gamma_{\text{easy}}$ | $\gamma_{\text{hard}}$ | $\gamma_{\text{pyramidal}}$ | $\gamma_{\text{I}2$ |
+|---------+------------------------+------------------------+-----------------------------+---------------------|
+| DFT     |                  0.220 |                  1.185 |                       0.689 |               0.292 |
+| MEAM    |                  0.297 |                  1.495 |                       0.443 |               0.172 |
+
+Note that the initial position of the mirrored core is located between a widely spaced pair of prism planes and exactly on a basal plane.
+In this case, dislocation displacements tend to create an easy prismatic stacking fault in the core without a possibility of displacing basal planes. The low value of ceasy allows
+these displacements and creates a symmetric prismatic core. On the other hand, the initial position of the unmirrored core is located between closely spaced prismatic
+planes and halfway between two basal planes. Here, the dislocation displacement field induces a hard prismatic
+stacking fault which requires a very high energy according to Table 1 (the table above). Therefore, a combination of a basal followed by
+an easy prismatic fault creates the non-planar core.
+
+
+The mirrored core is the stable configuration, even under strain. 
+
+ We found that the mirrored core starts to move under $\epsilon_{\text{prism}} =$ 0.005 prismatic strain.
+The higher-energy unmirrored core reconstructs into the lower-energy mirrored core and begins to move on 
+the prismatic plane at $\epsilon_{\text{prism}} =$ 0.007. Since the unmirrored core is non-planar, we also 
+put the cores under strain pyramidal on the pyramidal plane for testing purposes. The mirrored core begins 
+to slip on the prism plane under $\epsilon_{\text{pyramidal}} =$ 0.005 pyramidal strain. At 
+$\epsilon_{\text{pyramidal}} =$ 0.012 the unmirrored core transforms into the mirrored one again and
+starts to slip on the prism plane. For completeness, we applied basal strains basal to the cores as well. 
+The mirrored core starts to move along prismatic planes at $\epsilon_{\text{basal}} =$ 0.012 and the 
+unmirrored core again transforms into the mirrored one under $\epsilon_{\text{basal}} =$ 0.015 and moves on
+prismatic planes. This suggests that the mirrored core is the ground state and is the dominant core configuration,
+even under stress. The unmirrored core is not expected to impact the mechanical behavior of Ti; it appears to be a
+metastable artifact of relaxing the dislocation from the initial displacements of anisotropic elasticity theory for a perfect dislocation.
+
+******* 
+
 
 
 
