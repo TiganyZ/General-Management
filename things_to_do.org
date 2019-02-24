@@ -1128,6 +1128,118 @@ ground-state density matrix.
 This works well if the electron temperature is less than $10\%$ of the
 bandwidth. 
 
+
+*** Theses
+
+**** Ab initio simulation of extended defects of Ti in presence of interstitial H and O atoms: Liang Liang
+cite:liang:tel-01355132
+
+***** Introduction
+
+At room temperature plastic deformation is controlled by screw dislocations, and due to their 
+non-planar core structure, this introduces a large Peierls stress. cite:Biget1989 ## READ ##
+
+Due to the insufficient number independent slip systems in Ti, there is also twinning activation. 
+This can generally be seen along the $\mathbf{c}$-axis and/or at low temperature. 
+
+Oxygen has been known to decrease the mobility of screw dislocations and has hardening effects. 
+It has also been thought to be responsible for dynamic strain aging. 
+
+Definition: Dynamic strain aging
+- In materials, the motion of dislocations is a discontinuous process. When dislocation meets obstacles 
+  (like forest dislocations) they are temporarily arrested for a certain time. During this time solutes 
+  (such as interstitial particles) diffuse around the dislocations further strengthening the obstacles
+   held on the dislocations. Eventually these dislocations will overcome these obstacles with sufficient 
+  stress and will quickly move to the next obstacle where they are stopped and the process can repeat. 
+  This process's most well-known manifestations are Lüders bands and the Portevin–Le Chatelier effect. 
+  Though the mechanism is known to affect materials without these physical observations.
+- Essentially this is a jerky flow of a dislocation as the material undergoes plastic deformation.
+- Generally this can happen by solutes pinning the dislocation. 
+
+Definition: Portevin–Le Chatelier effect. 
+- This is the stress-strain curve for the jerky flow of a dislocation as a material undergoes plastic deformation.
+- This effect has been long associated with dynamic strain aging or the competition between diffusing solutes
+  pinning dislocations and dislocation breaking free of this stoppage.
+
+Hydrogen has been shown to lead to a softening effect and a hardening effect. The HELP 
+(Hydrogen enhanced localized plasticity) mechanism has been proposed to explain the softening effect. 
+Essentially it arises from hydrogen facilitating dislocation emission (dislocations leaving the material
+at the edges) and glide at crack tips, thus reducing the capability for attainment of high localized
+stresses in these regions. necessary for fracture. 
+
+
+
+
+
+
+***** Literature Review
+
+****** Phases and Stability
+Pure titanium can be seen to exist mainly in three phases: $\alpha$ (hcp) at low temperature; 
+$\beta$ (bcc) at high temperature and $\omega$ which is a hexagonal phase with three atoms per 
+unit cell that is gernerally formed under high pressure.
+
+$\gamma$ and $\delta$ phases have also been also been observed under high pressure and they are
+obtained from $\omega$ phase under pressures of around 120/140 GPa respectively. These are distorted 
+hcp ($\gamma$) and distorted bcc ($\delta$) structures respectively. 
+
+Most DFT calculations generally give $\omega$ phase to be more stable that $\alpha$ phase by several 
+meV per atom, at 0K.
+
+Tonkov (1992) phase diagram gives $\omega$ to be more stable at 0K, while Zhang's (2008) gives $\alpha$ phase
+to be more stable at 0K, with a transition pressure at 5GPa. So both $\alpha$ and $\omega$ can be considered 
+to be metastable at 0K. 
+
+The contribution to the Zero-point energy at 0K can play an important contribution to the stability of 
+the material. It can be known to reverse phases and so phase stability should be explicitly checked
+with ZPE in mind. 
+
+#####################
+Can calculate the Zero point energy if the phonon spectrum is known 
+\[
+ZPE = \sum_i \frac{\hslash\beta}{2}
+\]
+So these contributions can be included. 
+
+Stabilty of TiO$_2$ phases by using quantum monte carlo has been done by cite:Luo2016, 
+where they found that anatase was the most stable phase at low temperature, with rutile being more stable 
+at higher temperature, and brookite being always the most unstable. Zero-point energies were found from 
+density functional perturbation theory calculations to investigate why rutile was the more stable at finite temperature
+in experiments. 
+
+####################
+
+****** Slip in $\alpha$-Ti
+
+Independent slip modes within one family may not be independedt with respect to modes of other families. 
+
+There are three families associated with $\langle \mathbf{a} \rangle$, which only provide /four/ slip systems, and 
+so then to satisfy the von-Mises criterion of five independed modes for easy plastic deformation
+ $\langle \mathbf{c} +  \mathbf{a}\rangle$ associated slip is required.
+
+As this slip systen may be difficult to activate a twinning mode may be activated insead. 
+
+| Direction                                 | Plane     | Crystallographic elements                          | Number of independent modes |
+|-------------------------------------------+-----------+----------------------------------------------------+-----------------------------|
+| $\langle \mathbf{a} \rangle$              | Prismatic | $\{1\bar{1}00\}  \langle 1\bar{2}10 \rangle$       |                           2 |
+| $\langle \mathbf{a} \rangle$              | Basal     | $\{0001\}        \langle 1\bar{2}10 \rangle$       |                           2 |
+| $\langle \mathbf{a} \rangle$              | $\pi_1$   | $\{10\bar{1}1\}  \langle 1\bar{2}10 \rangle$       |                           4 |
+| $\langle \mathbf{c} +  \mathbf{a}\rangle$ | $\pi_1$   | $\{10\bar{1}1\}  \langle 11\bar{2}\bar{3} \rangle$ |                           5 |
+| $\langle \mathbf{c} +  \mathbf{a}\rangle$ | $\pi_2$   | $\{11\bar{2}2\}  \langle 11\bar{2}\bar{3} \rangle$ |                           5 |
+|-------------------------------------------+-----------+----------------------------------------------------+-----------------------------|
+| Twinning Modes                            |           | $\{K_1\} \langle \eta_1 \rangle\$                  |                           5 |
+
+where $K_1$ and $\eta_1$ are the twinning plane and twinning direction of a given twinning mode. 
+
+Prismatic slip dominates. It can be seen that only after deformation of 0.43\% in T60 transverse tensile tests, that 
+the $\langle \mathbf{a} \rangle$ and $\langle \mathbf{c} +  \mathbf{a}\rangle$ dislocations associated with the $\pi_1$
+plane become important. (Data was obtained from Barkia's PhD Thesis 2014)
+
+
+
+
+
+
 ** Dislocations
 *** Dislocation arrays
    Dislocation arrays are used within simulation cells to negate the effects of
