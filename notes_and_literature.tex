@@ -1,4 +1,4 @@
-% Created 2019-02-26 Tue 10:02
+% Created 2019-03-01 Fri 09:57
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -33,7 +33,7 @@
  pdftitle={Notes and Literature},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 25.3.1 (Org mode 9.1.14)}, 
+ pdfcreator={Emacs 25.3.1 (Org mode 9.2.1)}, 
  pdflang={English}}
 \begin{document}
 
@@ -43,15 +43,15 @@
 
 
 \section{General notes}
-\label{sec:org986c3e7}
+\label{sec:org6fcaa11}
 
 \subsection{Electronic Structure}
-\label{sec:org481b94f}
+\label{sec:org2fd7e1c}
 \subsubsection{Tight Binding}
-\label{sec:orgce36ee0}
+\label{sec:org4de4e49}
 \begin{enumerate}
 \item Tight Binding Band Model
-\label{sec:orgfe072c9}
+\label{sec:orgcbe6b80}
 
 As with all tight-binding models, they are based on a linear combination of atomic orbitals basis. 
 We compose our hamiltonian as a matrix that is in this basis, where each column/row corresponds to a particular
@@ -95,11 +95,11 @@ This is exactly cancelled in DFT by the double counting term.
 
 
 \item Tight Binding Bond Model
-\label{sec:org81da198}
+\label{sec:org6c91632}
 
 \begin{enumerate}
 \item Paxton: Implementation by Diagonalisation.
-\label{sec:orgfc3ee8a}
+\label{sec:orga9fcfa0}
 This follows from \cite{Paxton:153084}
 
 In the TBBM we use the \emph{covalent bond energy} as the fundamental quantity of interest that we want to calculate.
@@ -153,12 +153,12 @@ So the term moves to the front of the summation, and as the sum of all changes i
  then the term vanishes. 
 
 \item Sutton 1988: The Tight-Binding Bond Model
-\label{sec:org3ceecb6}
+\label{sec:org9a19d13}
 \cite{Sutton1988}
 
 \begin{enumerate}
 \item General Formulation
-\label{sec:orgd403aeb}
+\label{sec:orgd76b97e}
 In the original paper of the tight-binding bond model, Sutton \emph{et al} obtain
 the tight-binding bond model from the Harris-Foulkes functional.
 
@@ -254,6 +254,8 @@ orbital representation as a sum over on-site terms and a sum over inter-site
 terms. 
 
 
+
+
 \begin{equation}
 \text{Tr}(\rho^{\text{out}} - \rho^{\text{f}})\widetilde{H} =
    \underset{\text{Promotion Energy}}{ 
@@ -309,7 +311,7 @@ promotion energies, where each bond energy is a sum of the covalent energy of
 the bond and the pair potential interaction. 
 
 \item Interatomic forces
-\label{sec:orgf84ff16}
+\label{sec:org16bdedc}
 
 The forces on each atom can be found by differentiating the binding energy
 with respect to \(\mathbf{r}\), using the relation between the density matrix
@@ -370,7 +372,7 @@ These approximations give the derivative of the binding energy to be:
 \end{equation}
 
 \item Local Charge Neutrality
-\label{sec:org6fb9af1}
+\label{sec:org870478c}
 
 The approximation to local charge neutrality is motivated by 
 \begin{enumerate}
@@ -424,7 +426,7 @@ in the strain \cite{Heine1980}.
 
 \begin{enumerate}
 \item Priester Ge-GaAs Justification
-\label{sec:org45de5b8}
+\label{sec:orgbe458a3}
 From \cite{Priester1986} local charge neutrality was motivated in a Ge-GaAs
 interface. 
 
@@ -497,20 +499,15 @@ the other, i.e. to make the quantity \(\Delta \neq = 0\).
 
 So local charge neutrality tells us that 
 
-\[ 
-\delta N_1(\Delta) + \delta N_2(\Delta) = 0
-\]
+
+$$\delta N_1(\Delta) + \delta N_2(\Delta) = 0$$
 \end{enumerate}
 \end{enumerate}
 \end{enumerate}
-
-
-
-
 
 \item Self-Consistent Polarisable-Ion Tight-Binding
-\label{sec:orgafdab75}
-Following \cite{Paxton:153084}, original paper by \cite{Finnis1997}.
+\label{sec:org9e3ee97}
+Following \cite{Paxton:153084}. Original paper by \cite{Finnis1997}.
 
 
 Remember that the expansion of the Hohenburg-Kohn-Sham functional to second order in the energy, if \(H = H^0 + H'\),
@@ -518,7 +515,7 @@ where \(H^0\) is the Hamiltonian generated from the reference charge density \(\
 
 
 \begin{align}
-E^{(2)} = & \sum_{n} f_{n} \expval{H^{0}}{n} \\
+E^{(2)} = &\sum_{n} f_{n} \bra{n} H^{0} \ket{n} %\expval{H^{0}}{n} \\
 &- \int \rho^{0}(\mathbf{r}) V^{0}_{xc} \text{d}\mathbf{r} - E_{H} + E^{0}_{xc} + E_{ZZ}\\
 &+ \frac{1}{2} \int \text{d}\mathbf{r} \int \text{d}\mathbf{r}' \Big{ 
  e^2 \frac{\delta\rho(\mathbf{r})\delta\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} \Big} \\
@@ -534,6 +531,8 @@ We can however use the eigenvalues such that we can construct them.
 
 So we can construct the multipoles in terms of the expansion coefficients. 
 
+
+
 \begin{equation}
 Q_{\mathbf{R}L} = \sum_{L'L} \sum_{n}  f_{n} \bar{c}_{\mathbf{R}L}^{n} c_{\mathbf{R}L}^{n} 
                         \bra{\mathbf{R}L'}\hat{Q}_{\mathbf{R}L}\ket{\mathbf{R}L''}
@@ -541,7 +540,7 @@ Q_{\mathbf{R}L} = \sum_{L'L} \sum_{n}  f_{n} \bar{c}_{\mathbf{R}L}^{n} c_{\mathb
 
 
 \item Trinkle 2006
-\label{sec:org5ab179a}
+\label{sec:orgc060de5}
 \begin{itemize}
 \item Collapse problem found in tight binding if atoms come too close
 together. Electrons go in the bonding state and not the anti-bonding
@@ -551,19 +550,19 @@ given cutoff, which effectively simulates a pair potential.
 \item Environmentally dependent on-site terms were used instead of a pair potential.
 \item These on-site energies are dependent on the local density \(\rho_{i}\) and
 they have a cutoff function \(f_{c}(r_{ij})\) which has fixed parameters
-\(R_{0}\) and \(l_{0}\).\#+BEGIN\(_{\text{EXPORT}}\) latex
+\(R_{0}\) and \(l_{0}\).\#+BEGIN\textsubscript{EXPORT} latex
 \end{itemize}
 \begin{equation}
       \epsilon_{i,l} = a_{l} + b_{l}\rho_{i}^{2/3} + c_{l}\rho_{i}^{4/3} +
       d_{l}\rho_{i}^{2}\end{equation}
-\#+END\(_{\text{EXPORT}}\) 
+\#+END\textsubscript{EXPORT} 
       \[ \rho_{i} = \sum_{j \neq i} \text{exp}\big\{ -\lambda^{2} r_{ij}
       f_{c}(r_{ij}) \big\} \]
       \[ f_{c}(r) = \frac{1}{1 + \text{exp}\Big\{  \frac{r-R_{0}}{l_{0}}\Big\}
       }\]
 
 \item Notation
-\label{sec:org6be9c85}
+\label{sec:org7c1e5b5}
 
 Some nice tensor notation was introduced by \cite{Ballentine1986}
 
@@ -573,10 +572,10 @@ of vectors etc.
 \end{enumerate}
 
 \subsubsection{DFT}
-\label{sec:orgef40b38}
+\label{sec:orgb192204}
 \begin{enumerate}
 \item Hartree-Fock
-\label{sec:org1c8ddac}
+\label{sec:orgcd10164}
 \begin{itemize}
 \item Hartree-Fock is a method of calculating the energy of a configuration
 with exact exchange.
@@ -598,19 +597,19 @@ there are also problems.
 \end{itemize}
 
 \item Functionals
-\label{sec:org461d8ae}
+\label{sec:orgb5f9884}
 \item LMTO
-\label{sec:org6452d2c}
+\label{sec:org101e91c}
 \end{enumerate}
 
 \subsubsection{LMTO Suite}
-\label{sec:orga94507f}
+\label{sec:org229dd71}
 \begin{enumerate}
 \item TBE Pair potentials and Bond integrals
-\label{sec:org51329e5}
+\label{sec:orgf59cd21}
 \begin{enumerate}
 \item Pair potentials in tbe code
-\label{sec:orgc0d8c79}
+\label{sec:orga691250}
 \begin{itemize}
 \item Pair potential is constructed by \href{file:///home/tigany/lm/tb/makvpp.f}{makvpp.f}.
 \item This calls \href{file:///home/tigany/lm/tb/vppder.f}{vppder.f} which actually evaluates the pair potential at that
@@ -671,26 +670,26 @@ Ti,Ti:
 
 
 \item Bond integrals from tbe
-\label{sec:org116479d}
+\label{sec:org69e91a3}
 \begin{itemize}
 \item So bond integrals from titanium look like this, from this file
-\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/plot\_bond\_integrals/plot\_bond\_integrals.py}{plot\(_{\text{bond}}\)\(_{\text{integrals.py}}\)}
+\href{file:///home/tigany/Documents/ti/complete\_titanium/ti\_01-11-18/plot\_bond\_integrals/plot\_bond\_integrals.py}{plot\textsubscript{bond}\textsubscript{integrals.py}}
 \end{itemize}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_alt.png}
-\caption{\label{fig:org18f4d4a}
+\caption{\label{fig:org2c5c260}
 Bond integrals with multiplicative polynomial cutoffs.}
 \end{figure}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/tbe_bond_integrals_with_polynomial_cutoffs_multiplicative_zoomed_in.png}
-\caption{\label{fig:orged8ddf3}
+\caption{\label{fig:orgdea6679}
 Bond integrals with multiplicative polynomial cutoffs: zoomed in.}
 \end{figure}
 
 \item Bond Integrals for first neighbour interaction
-\label{sec:org6fd0a27}
+\label{sec:orge6456a3}
 To make first neighbours it is optimal to have a cutoff that is within
 alat and \$1.4 \texttimes{} \$ alat. This is within the next shell of 6 neighbours
 and so having the cutoff between alat and \(1.2\times\) alat should be
@@ -698,16 +697,16 @@ optimal.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/ti/complete_titanium/ti_01-11-18/plot_bond_integrals/check_new_cutoffs/cutoffs_at_alat_and_one_point_four_alat.png}
-\caption{\label{fig:org947640e}
+\caption{\label{fig:org81d2df1}
 Bond integrals with multiplicative polynomial cutoffs for first neighbour interactions: zoomed in.}
 \end{figure}
 \end{enumerate}
 
 \item Running lmf
-\label{sec:orge3035ba}
+\label{sec:orgaed2496}
 \begin{enumerate}
 \item Run Generic Calculation
-\label{sec:org71a7afd}
+\label{sec:org213f07d}
 Run:
 \begin{itemize}
 \item lmchk --getwsr ti
@@ -720,13 +719,13 @@ Run:
 \end{enumerate}
 
 \subsubsection{BOP}
-\label{sec:org20b3405}
+\label{sec:org3f74788}
 \begin{enumerate}
 \item Stefan Znam 2001 Thesis
-\label{sec:org7ea87b5}
+\label{sec:org8bd8fa1}
 \begin{enumerate}
 \item Cauchy Pressures
-\label{sec:orgcec62f7}
+\label{sec:orge3c6560}
 \begin{itemize}
 \item Cauchy pressures have zero contribution from pair potentials at
 equilibrium.
@@ -743,7 +742,7 @@ covalent d bonds.
 \end{itemize}
 \begin{enumerate}
 \item Reason for Cauchy Pressures
-\label{sec:org4e2edab}
+\label{sec:org248ee23}
 \begin{itemize}
 \item The reason for negative Cauchy pressures is meant to be from covalent
 character of d bonding, but when using tight binding models, which
@@ -758,7 +757,7 @@ between orbitals in the atom.
 \end{itemize}
 \end{itemize}
 \item Why TB can't have negative Cauchy Pressures
-\label{sec:org47053cf}
+\label{sec:org8d895b0}
 \begin{itemize}
 \item TB only has contributions from the bond part of the interactions as the
 pair potential at equilibrium has no contribution to the Cauchy
@@ -773,7 +772,7 @@ orbitals.
 tightly bound anyway.
 \end{itemize}
 \item Thoughts: What does this mean for Tight Binding
-\label{sec:orga9097ad}
+\label{sec:orgf2f4042}
 \begin{itemize}
 \item As the Cauchy pressure contributions only come from the bond integrals
 and the pair potential, then the reason that some of the Cauchy
@@ -791,7 +790,7 @@ are squeezed into the core from the unsaturated d bonds.
 \end{enumerate}
 \end{enumerate}
 \item Environmental terms
-\label{sec:org08ec4fe}
+\label{sec:org9ba9849}
 \cite{NguyenManh2000}
 
 Analytic environment dependent terms for tight-binding bond integrals were
@@ -849,8 +848,8 @@ Elements of \(S^{-1} =  (I + O)^{-1}\) can be obtained from their BOP. Which
 expresses the elements of the Green's function matrix \(G(E) = (EI - H)^{-1}\)
 in a rapidly convergent real-space manner by imposing the physical constraint
 that at any level of approximation the poles of the intersite Green's function
-G\(_{\text{ij}}\) are the same as those of the averate on-site Green's function
-\$(1/2)(G\(_{\text{ii}}\) + G\(_{\text{jj}}\)). 
+G\textsubscript{ij} are the same as those of the averate on-site Green's function
+\$(1/2)(G\textsubscript{ii} + G\textsubscript{jj}). 
 
 
 Going to \emph{three} recursion levels in BOP is exact for the inversion of
@@ -890,10 +889,10 @@ it comes to the behaviour of second-neighbour force constants and removes the
 problem of the unstable T2 phonon mode at the N point that is found in most
 two-center TB fits. 
 \item Finite Electron Temperature
-\label{sec:org028fe7c}
+\label{sec:orgdbdee45}
 \begin{enumerate}
 \item Gillian 1986
-\label{sec:orgd12d7a6}
+\label{sec:org3dcd0cb}
 \cite{Gillan1989}
 
 Finite electron temperature for estimation of the band energy at zero kelvin. 
@@ -951,7 +950,7 @@ this is the reason for introducing the finite-temperature generalisation of
 density functional theory. 
 
 \item Horsfield 1996
-\label{sec:org8707f1e}
+\label{sec:org91b7d6b}
 \cite{Horsfield1996}
 
 Used Gillian's technique \cite{Gillan1989} with finite electron temperature for estimation of
@@ -1036,16 +1035,16 @@ bandwidth.
 
 
 \subsubsection{Theses}
-\label{sec:org974b1ba}
+\label{sec:orgac1047d}
 
 \begin{enumerate}
 \item Ab initio simulation of extended defects of Ti in presence of interstitial H and O atoms: Liang Liang
-\label{sec:org344f947}
+\label{sec:org10e1824}
 \cite{liang:tel-01355132}
 
 \begin{enumerate}
 \item Introduction
-\label{sec:org49b660c}
+\label{sec:org435c0e4}
 
 At room temperature plastic deformation is controlled by screw dislocations, and due to their 
 non-planar core structure, this introduces a large Peierls stress. \cite{Biget1989} \#\# READ \#\#
@@ -1088,11 +1087,11 @@ stresses in these regions. necessary for fracture.
 
 
 \item Literature Review
-\label{sec:org6a29cb9}
+\label{sec:org2edc184}
 
 \begin{enumerate}
 \item Phases and Stability
-\label{sec:orgcd4da69}
+\label{sec:org1d05150}
 Pure titanium can be seen to exist mainly in three phases: \(\alpha\) (hcp) at low temperature; 
 \(\beta\) (bcc) at high temperature and \(\omega\) which is a hexagonal phase with three atoms per 
 unit cell that is gernerally formed under high pressure.
@@ -1128,7 +1127,7 @@ in experiments.
 \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
 
 \item Slip in \$\(\alpha\)\$-Ti
-\label{sec:orgd6981fb}
+\label{sec:org40ae484}
 
 Independent slip modes within one family may not be independedt with respect to modes of other families. 
 
@@ -1159,11 +1158,11 @@ the \(\langle \mathbf{a} \rangle\) and \(\langle \mathbf{c} +  \mathbf{a}\rangle
 plane become important. (Data was obtained from Barkia's PhD Thesis 2014)
 
 \item Stacking Faults
-\label{sec:org5ec4deb}
+\label{sec:org58f8141}
 
 \begin{enumerate}
 \item Ghazisaeidi and Trinkle 2012
-\label{sec:orgc2eceb2}
+\label{sec:org76580a8}
 Ghazisaeidi and Trinkle \cite{Ghazisaeidi2012} investigated the core structure of Ti screw dislocations, extending the work done by \cite{Tarrat2009}.
 Tarrat \emph{et at} found that there are two metastable core configurations, from different initial positions of the dislocation lines. 
 One of the cores is symmetrically prismatic---with the lowest excess energy---while the other shows a combination of 
@@ -1220,7 +1219,7 @@ even under stress. The unmirrored core is not expected to impact the mechanical 
 metastable artifact of relaxing the dislocation from the initial displacements of anisotropic elasticity theory for a perfect dislocation.
 
 \item 
-\label{sec:orgacb3709}
+\label{sec:org34f7f05}
 \end{enumerate}
 \end{enumerate}
 \end{enumerate}
@@ -1232,9 +1231,9 @@ metastable artifact of relaxing the dislocation from the initial displacements o
 
 
 \subsection{Dislocations}
-\label{sec:org60a8a27}
+\label{sec:org088f70b}
 \subsubsection{Dislocation arrays}
-\label{sec:org032e6f5}
+\label{sec:org09b77c0}
 Dislocation arrays are used within simulation cells to negate the effects of
 the long range strain fields produced from dislocations in the periodic array
 of cells one has in the simulation.
@@ -1258,23 +1257,23 @@ dislocation core by the boundary conditions.
 
 \begin{enumerate}
 \item Files to produce dislocations
-\label{sec:org1234ec5}
+\label{sec:org2ad8cbf}
 \begin{enumerate}
 \item Single Dislocations
-\label{sec:orge777038}
+\label{sec:org5eaf3e8}
 Here are the files used to produce single dislocations
 \href{file:///home/tigany/Documents/disl\_gsurf/useful\_python/bop/dislocations/create\_dislocations/gen\_prismatic\_screw\_tbe.py}{Generate prismatic screw} \href{file:///home/tigany/Documents/disl\_gsurf/useful\_python/bop/dislocations/create\_dislocations/test/generated\_dislocations/site.ti\_9x\_9y\_8z\_square\_1\_dislanis\_prim\_rot\_convert.xyz}{Ovito file }
 \href{file:///home/tigany/Pictures/prismatic\_screw\_tbe\_full\_anis.png}{prismatic screw from ovito }
 \item Quadrupolar arrangements
-\label{sec:org7cf4eaf}
+\label{sec:org1d53958}
 \end{enumerate}
 
 \item Bulatov and Cai: Computer simulations of dislocations
-\label{sec:orgb8fd040}
+\label{sec:org661bdbd}
 
 \begin{enumerate}
 \item Sum of displacements from dipoles
-\label{sec:org358e26e}
+\label{sec:orgfebc801}
 Simulating dislocation dipoles will introduce singularity in displacement
 between them. As we are not in the continuous case, this singularity is
 fine. However, the periodic boundary conditions are \textbf{not} satisfied,
@@ -1304,7 +1303,7 @@ convergent}. This means that the ordering of the sum of the displacements
 will determine if the sum actually converges.
 
 \item How to remove non-periodic displacements
-\label{sec:org417e06a}
+\label{sec:org053a1ec}
 One can find the periodic displacement \(u_{z}^{text{PBC}}(\mathbf{r})\)
 from the relation, which arises from the fact that
 \(\partial_{i}\partial_{j}u_{z}^{\text{sum}}(\mathbf{r}) = \partial_{i}\partial_{j}u_{z}^{\text{PBC}}(\mathbf{r})\)
@@ -1333,7 +1332,7 @@ This procedure is independent of the truncation in the limit of large
 radius.
 
 \item Adjusting the shape of the supercell
-\label{sec:orgb952698}
+\label{sec:org127e336}
 When a dislocation dipole is introduced, there is a plastic strain that
 is generated. 
 \[ \epsilon^{\text{pl}} = \frac{1}{2\Omega}( \mathbf{b} \otimes
@@ -1379,7 +1378,7 @@ tilted.
 \end{enumerate}
 
 \item Results
-\label{sec:org833cb53}
+\label{sec:org71ea986}
 
 For dipole in the O arrangement we have \url{file:///home/tigany/Documents/disl\_gsurf/useful\_python/bop/dislocations/create\_dislocations\_clean/create\_supercell\_with\_quadrupole.py}
 
@@ -1402,13 +1401,13 @@ Resulting in the final periodic displacement for the supercell.
 \end{enumerate}
 
 \subsection{Phonons, Elastic Constants and Stability}
-\label{sec:org9d8e8be}
+\label{sec:orgfc4374c}
 \subsubsection{Phonons}
-\label{sec:org9a76a65}
+\label{sec:orgc2c87bb}
 
 \begin{enumerate}
 \item DFT and TBE Phonons
-\label{sec:org9b191a5}
+\label{sec:org1c025c0}
 The phonons and q points for the fitting using LDA are here
 \begin{center}
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/swarm_fit_ti/phonons_and_strain_derivatives/test_phonopy_conf/dft_results/dft_ctrl_files/from_init/phonon_frequency_calc/hcp_lmf/hcp-band_dos_dft.pdf}
@@ -1449,13 +1448,13 @@ Q point frequencies at M and H are
 \end{enumerate}
 
 \subsubsection{Elastic constants and Force constant matrix}
-\label{sec:orgb41ba2f}
+\label{sec:org613331d}
 \begin{enumerate}
 \item Wallace
-\label{sec:org9dcfa33}
+\label{sec:org42c5371}
 \begin{enumerate}
 \item Crystal Potential: Introduction
-\label{sec:org5c14d6f}
+\label{sec:org2c8603f}
 \begin{itemize}
 \item Since the vibrational energy of a crystal is generally considered to by
 small compared to its potential energy, the crystal potential is a first
@@ -1489,7 +1488,7 @@ the forces are changed then it can be conserved.
 \end{align}
 \end{itemize}
 \item Stability and the Dynamical Matrix
-\label{sec:org99d151c}
+\label{sec:orged3228b}
 \begin{itemize}
 \item The equilibrium configuration of ions and external forces is a stable
 equilibrium if the total system potential is minimum with respet to
@@ -1509,7 +1508,7 @@ any of the values \(U_{i}(M)\), except if they are all 0.
 \end{enumerate}
 \end{enumerate}
 \subsubsection{Inner Elastic constants}
-\label{sec:org1ce88fc}
+\label{sec:org39c42e8}
 This is a file which is to evaluate the elastic constants in both relaxed and unrelaxed configurations
 According to \cite{Clouet2012} and \cite{Cousins1979}, in a strained hcp lattice there are internal degrees of freedom
 that are not accounted for when applying a homogeneous strain.
@@ -1528,7 +1527,7 @@ With all others being unchanged
 
 \begin{enumerate}
 \item Sutton
-\label{sec:org2323d79}
+\label{sec:org0151a5a}
 Can express the elastic constants as 
 \[ C_{ijkl} = \frac{\partial^2 E}{\partial e_{ij}\partial e_{kl}} \]
 And also we can express them as 
@@ -1554,11 +1553,11 @@ net forces as a result of the strain if they are not at centres of inversion.
 Relaxation of those forces reduces the energy of the homogeneously strained crystal, and therefore it affects the calculated elastic constants.
 \end{enumerate}
 \subsubsection{Notes on Thermodynamics and Stability}
-\label{sec:org9f5a904}
+\label{sec:org0f28478}
 
 \begin{enumerate}
 \item Wallace 1972
-\label{sec:org8695829}
+\label{sec:org4622896}
 \begin{itemize}
 \item For hexagonal materials, there are general stability requirements:
 \begin{itemize}
@@ -1580,11 +1579,11 @@ non-central forces are included in the crystal potential.
 \end{itemize}
 
 \item Fast, Will, Johansson: Elastic constants in hexagonal transition metals
-\label{sec:org4f0f7e8}
+\label{sec:org0fb2d80}
 
 \begin{enumerate}
 \item Cauchy Relations
-\label{sec:org0a1dc4b}
+\label{sec:org6cfe983}
 \begin{itemize}
 \item Cauchy relations for hexagonal materials:
 \begin{itemize}
@@ -1607,7 +1606,7 @@ Ti, where it was closer to 2.
 \end{itemize}
 
 \item Normalised elastic constant
-\label{sec:org5119075}
+\label{sec:orge43ba64}
 \begin{itemize}
 \item To investigate Cauchy relations fully they used a normalised elastic constant which
 was obtained by dividiing by the bulk modulus: \(C'_{ij} = C_{ij}/B\)
@@ -1619,19 +1618,19 @@ when dividing by the bulk modulus.
 \end{enumerate}
 
 \item Calculation of elastic constants by various means
-\label{sec:org545450a}
+\label{sec:org2b0cc79}
 \begin{enumerate}
 \item Calculation by derivative of energy with strain
-\label{sec:org7aeebcc}
+\label{sec:orgf075c8f}
 One way to calculate the elastic constants is to take derivatives of the elastic energy density with respect to strain
 \[ C_{ijkl} = \frac{1}{2}\frac{\partial E}{ \partial e_{ij} \partial
 e_{kl} } \]
 \begin{enumerate}
 \item Results
-\label{sec:org81c0fd4}
+\label{sec:org760fe74}
 \begin{enumerate}
 \item Correct Strain Derivative
-\label{sec:org6c950b2}
+\label{sec:org56fd21e}
 Initially it was thought that checking if the 9x9 matrix of elastic constants was positive definite was enough
 to ascertain the stability of the crystal, but it seems that acutally all of the stability criteria
 are satisfied and that actually it is the 6x6 elastic constant matrix that needs to be positive definite,
@@ -1752,7 +1751,7 @@ C_13 55.64408945578736
 \end{minted}
 with none of the spurious off diagonal terms. 
 \item Miscellaneous
-\label{sec:orgf37764f}
+\label{sec:org21830d6}
 These are the results for the model from December by tony. 
 \begin{minted}[]{bash}
 
@@ -1814,13 +1813,13 @@ array([[ 133.05,  14.784,  56.055,  17.453,  0,    0,    0,    0,    0],
 \end{enumerate}
 \end{enumerate}
 \item Calculation using fifth order polynomials
-\label{sec:orgcd81806}
+\label{sec:org153230f}
 \begin{enumerate}
 \item Results: December 2018
-\label{sec:org799405f}
+\label{sec:orge50467e}
 \begin{enumerate}
 \item Applied Strains in code
-\label{sec:org4502ad2}
+\label{sec:orgdac538c}
 \begin{center}
 \includegraphics[width=.9\linewidth]{Images/tony_real_strains_2018_12_22.png}
 \end{center}
@@ -1859,7 +1858,7 @@ H   =  52.8336415119,    H_FR    =  45.9650000000
 \end{minted}
 
 \item Applied Strains in tbe
-\label{sec:orgf01df30}
+\label{sec:org00e9d28}
 
 Girshick 
 
@@ -1898,7 +1897,7 @@ H =  634.1671283357,   H_exp =  45.9650000000
 
 
 \item Unordered Results
-\label{sec:orgea361a7}
+\label{sec:org7441a2c}
 \begin{center}
 \includegraphics[width=.9\linewidth]{Images/girshickstrains.png}
 \end{center}
@@ -1985,7 +1984,7 @@ H =  634.1671283369,   H_FR =  45.9650000000
 
 
 \item Girshick Routines
-\label{sec:org0bad0b6}
+\label{sec:org53774e9}
 This was done by using the methods implemented by Girshick 
 \begin{minted}[]{python}
 C11 =  174.6582002879,   C11_exp =  176.1000000000
@@ -2016,7 +2015,7 @@ H =  52.8336415120,   H_FR =  45.9650000000
 \end{center}
 
 \item Tony Routines
-\label{sec:orga430c6f}
+\label{sec:org2a1f90d}
 With tony's routines we have 
 \begin{minted}[]{python}
 C11 =  165.8231485464,   C11_exp =  176.1000000000
@@ -2034,13 +2033,13 @@ H =  634.1671283369,   H_FR =  45.9650000000
 \end{enumerate}
 
 \subsection{Mechanics of Crystals}
-\label{sec:org7d0e346}
+\label{sec:org23452ce}
 \begin{enumerate}
 \item Phase transformations
-\label{sec:org9090646}
+\label{sec:org40f824a}
 \begin{enumerate}
 \item Diffusive Transformations
-\label{sec:orge73203e}
+\label{sec:org8c42396}
 The martensitic transformation is very different to the movement of atoms by
 \emph{diffusive/reconstructive transformations}. 
 
@@ -2054,7 +2053,7 @@ This can change the neighbours of atoms (which is incredibly important in
 alloys)/. 
 
 \item Diffusionless Transformations
-\label{sec:orgf1509af}
+\label{sec:org2ee1d3d}
 Nice paper from \cite{Christian1995} on this, which is actually where the
 diagram below comes from. 
 
@@ -2107,14 +2106,14 @@ then the transformation is \emph{quasi-martensitic}.
 \end{enumerate}
 
 \subsection{Gamma surfaces}
-\label{sec:orgc62000e}
+\label{sec:org97fb10b}
 
 \subsubsection{Literature Review}
-\label{sec:org31c7708}
+\label{sec:orgea0d2e9}
 
 \begin{enumerate}
 \item General notes on dislocations
-\label{sec:org733e528}
+\label{sec:orgd9e0d85}
 \begin{itemize}
 \item Dislocations have areas of tension (distance between atoms is larger
 than the lattice vector) and compression (distance is less than the
@@ -2123,7 +2122,7 @@ lattice vector)
 \end{itemize}
 
 \item How do stacking faults occur?
-\label{sec:org076bb8c}
+\label{sec:org10db36f}
 Stacking faults can occur:
 \begin{itemize}
 \item During crystal growth
@@ -2139,7 +2138,7 @@ bordered by an edge dislocation.
 \end{itemize}
 
 \item Types of stacking faults.
-\label{sec:org1d062a1}
+\label{sec:orgff2c662}
 \begin{itemize}
 \item Disk of vacancies: \emph{intrinsic} stacking fault.
 \item Interstitial agglomeration: \emph{extrinsic} stacking fault.
@@ -2153,7 +2152,7 @@ bordered by an edge dislocation.
 
 \begin{enumerate}
 \item Types of stacking faults in hcp
-\label{sec:orgdcf5857}
+\label{sec:org00d6c60}
 \begin{itemize}
 \item Intrinsic 1 (\(I_1\)) = (ABAB|CBCB) -- Basal plane
 \item Intrinsic 2 (\(I_2\)) = (ABAB|CACA) -- Basal plane
@@ -2167,7 +2166,7 @@ only been seen in the case of DFT so far.
 \end{enumerate}
 
 \item Partial dislocations
-\label{sec:org2e810d8}
+\label{sec:orgd453bea}
 \begin{itemize}
 \item Partial dislocations \emph{must} be bordered by a two dimensional
 defect: usually a stacking fault.
@@ -2188,7 +2187,7 @@ point defects.
 \end{itemize}
 
 \item Energy considerations with stacking faults and partials.
-\label{sec:orgb241e52}
+\label{sec:org0d059dd}
 \begin{itemize}
 \item Have energy gain from splitting into two smaller burgers vectors
 \item Interaction energy of two partials will be large at smaller distances
@@ -2201,10 +2200,10 @@ minimise the distance
 that the stacking fault energies are too high. (Because of dense packing?)
 \end{itemize}
 \item Gamma surfaces in DFT
-\label{sec:orgb21fd66}
+\label{sec:org2a0a907}
 \begin{enumerate}
 \item\relax [Benoit, Tarrat and Morillo 2012] \cite{Benoit_2012} Density functional theory investigations of titanium \$\(\gamma\)\$-surfaces and stacking faults.
-\label{sec:orgc5a895e}
+\label{sec:org4a898a6}
 \begin{itemize}
 \item Comparison between central force  embedded atom ineractions, N-body
 central force, N-body angular, empirical potentials, tight binding and
@@ -2244,11 +2243,12 @@ against this criteria.
 \item No models other than DFT produced a metastable stacking fault energy at
 the prismatic easy fault.
 \end{itemize}
+\end{enumerate}
 \item Ising Model Gamma surfaces
-\label{sec:orge86e17b}
+\label{sec:orgb7479e1}
 \begin{enumerate}
 \item Hu 2013 Basal plane stacking faults of hcp metals.
-\label{sec:org1098ff4}
+\label{sec:org137fd13}
 \cite{Hu2013}
 
 Stackng faults are closely related to two deformation modes of metals: twinning
@@ -2279,7 +2279,7 @@ E_{spt} = J_0 - \frac{1}{3}J_1 &+ \frac{1}{3}J_2 + J_3 &+ \frac{1}{3}J_4 + \ldot
 \end{LaTeX}
 
 \item Denteneer 1987 Stacking-fault energies in semiconductors from first-principles calculations
-\label{sec:org525b575}
+\label{sec:org2b14363}
 \cite{Denteneer1987}
 
 Denteneer \emph{et al} calculated the stacking fault energies of SiC and Ge using a procedure
@@ -2369,23 +2369,77 @@ so
 Stacking fault energies \(\gamma_{ISF/ESF}\) are then obtained by dividing this
 energy by \(\frac{1}{4} a_c^2 \sqrt{3}\), which is the area of a hexagon that
 defines the unit cell in one layer, if \(a_c\) is the lattice constant of the
-corresponding zincblende unit cell.
-\end{enumerate}
-\end{enumerate}
-\end{enumerate}
+corresponding zincblende unit cell. 
 
 
 
+\item Yang and Zhao 1992 Proposed mechanism of HCP → FCC phase transition in titianium
+\label{sec:org95d1877}
+
+
+
+\cite{Yang2018}
+
+HCP to FCC phase transition can be induced by mechanical deformation or
+temperature change.
+
+Generally been believed that the HCP and FCC structures should follow the Burger's
+orientation relation of 
+\begin{gather}
+\{ 0001 \}_{\text{hcp}} \middle\| \{ 111 \}_{\text{fcc}}\\
+\[ 11\bar{2}0 ]_{\text{hcp}} \middle\| [ 110 ]_{\text{fcc}}
+\end{gather}
+
+through the gliding of the Shockley partial dislocations on every two
+close-packed planes of HCP. 
+
+However there is a different relation of
+
+\begin{gather}
+\{ 10\bar{1}0 \}_{\text{hcp}} \middle\| \{ 1\bar{1}0 \}_{\text{fcc}}\\
+\[ 0001 ]_{\text{hcp}} \middle\| [ 001 ]_{\text{fcc}}
+\end{gather}
+has been observed under cryogenic plain-strain compression and such an
+orientation relation can be names as prismatic relation. 
+
+There are a few methods of how this prismatic relation is obtained. 
+The first, by Hong \emph{et al} is that there is a series of Shockley partial
+dislocations with a burger's vector of \(\frac{1}{6}\langle 1\bar{2}10 \rangle\)
+on \(\{ 10\bar{1}0 \}\) on stacking.
+Wu \emph{et al.} showed another mechanism that this prismatic relation can be
+accomplished by nucleation via pure shuffle and growth via shear-shuffle
+mechanisms. The detailed process of transformation is lacked in the first
+mechanisme and the driving force to make the atoms move a displacement along
+different orientations in small regions seems implausible in the second
+mechanism.
+
+There are differences in the volume expansion between the two. \(19.5\%\) normal
+to the phase boundary in the first one and \(14.2\%\) in polycrystalline Ti
+through rolling at room temperature. 
+
+ Wu \emph{et al.} argued that, according to the frst transformation mechanism, 
+the gliding of Shockley partial dislocations cannot generate the lattice expansion normal to the
+phase boundary.
+
+During the prismatic transformation with the orientation relation 
+\begin{gather}
+\{ 10\bar{1}0 \}_{\text{hcp}} \middle\| \{ 1\bar{1}0 \}_{\text{fcc}}\\
+\langle 0001 \rangle_{\text{hcp}} \middle\| \langle 001 \rangle_{\text{fcc}}
+\end{gather}
+the stacking of A-B-C-D in the \(\{ 10\bar{1}0 \}\) HCP planes would transform to
+the stacking of A-B-A-B in the \(\{ 1\bar{1}0 \}\) planes of the FCC structure.
+\end{enumerate}
+\end{enumerate}
 
 
 \subsection{Optimisation}
-\label{sec:org83734cb}
+\label{sec:org2ca93af}
 \subsubsection{Multi-objective optimisation}
-\label{sec:org6c774f4}
+\label{sec:org51fafc1}
 
 \begin{enumerate}
 \item Solutions
-\label{sec:org5f23cb0}
+\label{sec:org1f8019d}
 Solutions to multi-objective optimisations are members of the Pareto
 set.
 Dominance is the concept of how a particular vectors of inputs may be
@@ -2408,8 +2462,8 @@ There is partial ordering as some points will dominate others with
 respect to one objective but not necessarily the other. 
 
 \item Pareto Optimality
-\label{sec:org03f159b}
-The Pareto Front \$Z\(^{\text{*}}\)\$of an objective space is the set of nondominated
+\label{sec:org70825e0}
+The Pareto Front \$Z\textsuperscript{*}\$of an objective space is the set of nondominated
 points of an objective space \(Z\): \(Z^{*} = \text{min}(Z)\)
 
 The Pareto Optimal set \(X^*\) of a decision/search space \(X\) is the
@@ -2435,7 +2489,7 @@ the objective function and \(g_j\) are the constraint functions.
 
 
 \item Differential Evolution Algorithms
-\label{sec:orgdfd5f58}
+\label{sec:org2c8237b}
 
 Evolutionary Algorithms have proven to be very effective in dealing
 with hard optimization problems whose solution space is so large as
@@ -2475,15 +2529,15 @@ improve solution quality with respect to a single EA evolution.
 
 \begin{enumerate}
 \item Topology
-\label{sec:org6301b43}
+\label{sec:org83f3217}
 In or
 \end{enumerate}
 \end{enumerate}
 
 \subsection{Python}
-\label{sec:orgd178798}
+\label{sec:org0b81919}
 \subsubsection{OS}
-\label{sec:org83d19a2}
+\label{sec:org3aabac0}
 Use OS module rather than making a load of files to a certain directory. 
 \begin{minted}[]{python}
 import os
@@ -2515,7 +2569,7 @@ else:
     print ("Successfully created the directory %s" % path)
 \end{minted}
 \subsubsection{Shelve}
-\label{sec:org1413b7c}
+\label{sec:org4dd50a6}
 Use the shelve module to store multiple objects. 
 
 To write in:
@@ -2544,15 +2598,15 @@ with shelve.open('shelf-example', 'r') as shelf:
 \end{minted}
 
 \section{DFT Lectures UCL}
-\label{sec:org8ff4075}
+\label{sec:org0adee81}
 \subsection{David Bowler O(N) DFT}
-\label{sec:orgb46bd1d}
+\label{sec:org983c894}
 \subsubsection{Types of Exchange-correlation Functionals}
-\label{sec:org3fe12bc}
+\label{sec:org29c5783}
 
 \begin{enumerate}
 \item LDA
-\label{sec:org31a3726}
+\label{sec:org2aa767f}
 \begin{itemize}
 \item The electron density is the same as a uniform electron gas.
 \item Exchange is Slater.
@@ -2561,7 +2615,7 @@ calculations.
 \end{itemize}
 
 \item GGA
-\label{sec:orga6805d1}
+\label{sec:org3c2f58e}
 \begin{itemize}
 \item The gradient of the electron density is included in functional.
 \item Have the reduced density \[ \frac{ \nabla n(\mathbf{r})}{n( \mathbf{r}
@@ -2569,7 +2623,7 @@ calculations.
 \end{itemize}
 \begin{enumerate}
 \item Perdew-Burke-Ernzerhof
-\label{sec:orga47b8d6}
+\label{sec:org69aa5fb}
 \begin{itemize}
 \item \[ E_{\text{x}} = \int n( \mathbf{r} ) \epsilon_{\text{xc}}[n( \mathbf{r}
         )] F_{\text{x}}(S)d\mathbf{r} \]
@@ -2579,7 +2633,7 @@ calculations.
 \end{enumerate}
 
 \item Hybrid Functionals
-\label{sec:org76a0f0e}
+\label{sec:org8dce78a}
 \begin{itemize}
 \item These are functionals to correct the self-interaction energy that is
 apparent in the previously mentioned functionals.
@@ -2633,9 +2687,9 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 \end{enumerate}
 
 \subsection{Jochen Blumberger: Molecular dynamics}
-\label{sec:org4358539}
+\label{sec:org39c5527}
 \subsubsection{Introduction}
-\label{sec:org2150557}
+\label{sec:org94d4c6f}
 \begin{itemize}
 \item Molecular dynamics is important. (Even at 0K there is a zero point energy
 of vibration).
@@ -2643,7 +2697,7 @@ of vibration).
 \end{itemize}
 
 \subsubsection{Born-Oppenheimer approximation}
-\label{sec:org72a1845}
+\label{sec:orgcf25af5}
 
 \begin{itemize}
 \item Have hamiltonian that consists of interaction between:
@@ -2671,11 +2725,11 @@ Nuclear wavefunction.
 \end{itemize}
 
 \subsubsection{Molecular Dynamics}
-\label{sec:orgc3f064f}
+\label{sec:org681638b}
 
 \begin{enumerate}
 \item Verlet Algorithm
-\label{sec:orgedbab30}
+\label{sec:orgaafa3d8}
 \begin{itemize}
 \item This algorithm simply uses the forward and backward derivative of the
 nuclear positions and adds them together to get a formula for the
@@ -2694,7 +2748,7 @@ one can have adequate resolution of atomic vibrations ( \(fs \sim 10^{-14}s^{-1}
 \end{itemize}
 
 \item Velocity Verlet Algorithm
-\label{sec:org5bdf0e9}
+\label{sec:orgbc4bdad}
 \begin{itemize}
 \item For this algorithm the forward derivative with respect to nuclear
 positions is used with a calculation of the force at a later time.
@@ -2706,7 +2760,7 @@ terms of later time.
 \end{itemize}
 
 \item How to calculate the forces
-\label{sec:org1ca43fc}
+\label{sec:org6f72602}
 \begin{itemize}
 \item Use the Hellmann-Feynman theorem.
 \begin{itemize}
@@ -2718,7 +2772,7 @@ Hamiltonian depends on this lambda.
 \end{itemize}
 
 \item Carr-Parinello MD
-\label{sec:orga2ef6bf}
+\label{sec:orgb23a777}
 \begin{itemize}
 \item This is a form of molecular dynamics where both the positions and the
 orbitals are used as dynamical variables.
@@ -2737,9 +2791,9 @@ increase is \(5-10\) times from removal of self-consistency)
 \end{enumerate}
 
 \subsection{Matteo Salvalglio: Enhanced Sampling}
-\label{sec:org4ac6320}
+\label{sec:org2da30ab}
 \subsubsection{Introduction}
-\label{sec:org5b7e31d}
+\label{sec:org63afd7e}
 \begin{itemize}
 \item Have a phase space that is \(6N\) dimensional (3 spatial positions and 3
 components of momenta).
@@ -2753,7 +2807,7 @@ components of momenta).
 dimensional space.
 \end{itemize}
 \subsubsection{Ergodic principle}
-\label{sec:orgb43b6a3}
+\label{sec:org8814e8a}
 \begin{itemize}
 \item This is the principle which states that the amount of
 time that microstates of the same energy spend in a configuration is
@@ -2764,7 +2818,7 @@ proportional to the volume of phase space they occupy.
 \(O(x(t))\) is the instantaneous realisation of \(O(x)\)
 \end{itemize}
 \subsubsection{Collective variables}
-\label{sec:orgd28a06d}
+\label{sec:org1c703c8}
 \begin{itemize}
 \item Collective variables are just functions that depend on the coordinates
 (CVs) \(S(\mathbf{R})\)
@@ -2776,7 +2830,7 @@ configuration integral \(\mathcal{Z}\)
 \end{itemize}
 \begin{enumerate}
 \item Calculating free energies from collective variables
-\label{sec:org9d697ff}
+\label{sec:org51e4e2c}
 \begin{itemize}
 \item Free energy profile is then just \[  F(S) = -k_{B}T ln( p(S) )\]
 \item The free energy change between configurations \(\text{A}\) and B are then
@@ -2793,7 +2847,7 @@ obtain the actual probability density.
 \end{itemize}
 \end{enumerate}
 \subsubsection{Biased Potentials}
-\label{sec:org8eef79f}
+\label{sec:orgf07a62b}
 \begin{itemize}
 \item Biased potentials can be used to reconstruct the Free energy landscape
 of a system with respect to its collective variables.
@@ -2809,7 +2863,7 @@ distribution \(p^{U}(S(R))\).
 
 \begin{enumerate}
 \item Introduction to Biased Potentials
-\label{sec:orge683f6a}
+\label{sec:org4c03890}
 Two main equations:
 The configuration integral \(\mathcal{Z}\) and the \emph\{Absolute Free
   Energy\} \(\mathcal{A}(N,V,T)\):
@@ -2854,7 +2908,7 @@ F( S(R) )  =  - \text{k}_{\text{B}} T \text{ln} \big\{  p^{b}(S(R)) \big\} &- V(
 where the term on the second line is a constant. 
 
 \item Umbrella sampling
-\label{sec:orgab6727a}
+\label{sec:org8f4cbe4}
 If we don't know the shape of the free energy surface then we can use \emph{Umbrella Sampling}
 If we know for example, two metastable states that we want to sample the we can make a pathway between them using this method.
 
@@ -2880,7 +2934,7 @@ We can guess that all \(C_{i} = 0\) and then solve self-consistently until shift
 
 \begin{enumerate}
 \item Related papers and books
-\label{sec:orge62e83f}
+\label{sec:org91377f1}
 Look up \textbf{Umbrella integration} and \textbf{Thermodynamic integration}, where one can achieve this result analytically. 
 
 Original paper by Zwanzig in 1954
@@ -2895,18 +2949,18 @@ For the error of these one can do block averaging.
 
 
 \item Adaptive potential bias
-\label{sec:orgc6e1d9f}
+\label{sec:org770cc1f}
 \end{enumerate}
 
 \subsection{Michail Stamakatis: Statistical Mechanics}
-\label{sec:orgb9e3175}
+\label{sec:org5f1309f}
 
 \subsubsection{Introduction}
-\label{sec:org1c1afb1}
+\label{sec:orge157789}
 Intensive variables don't depend on size of system (e.g. T, \(\mu\))
 Extensive variables do: (\(\mathcal{N}\), V\(\mathcal{V}\), \(\mathcal{S}\))
 \subsection{Useful definitions of Thermodynamic potentials}
-\label{sec:orgec23185}
+\label{sec:orgdc98479}
 \begin{itemize}
 \item Internal Energy:
 \begin{itemize}
@@ -2951,16 +3005,21 @@ system.
 \end{itemize}
 
 \subsubsection{Mnemonic Picture}
-\label{sec:orgf97701b}
+\label{sec:org7a96fa0}
 \begin{center}
 \includegraphics[width=.9\linewidth]{Images/Thermodynamic_mnemonic.png}
 \end{center}
 
 
 \section{Bibliography}
-\label{sec:orga7fa8de}
-\label{org579a319}
+\label{sec:orge4dd1f1}
+\label{org5217ed7}
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography/org-refs}
+
+\begin{LaTeX}
+\bibliographystyle{unsrt}
+\bibliography{./bibliiography/org-refs.bib}
+\end{LaTeX}
 \end{document}

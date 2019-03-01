@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.8.13)  26 FEB 2019 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/TeX Live for SUSE Linux) (preloaded format=pdflatex 2018.8.13)  1 MAR 2019 09:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2417,17 +2417,17 @@ Overfull \hbox (0.1109pt too wide) in paragraph at lines 160--164
  []
 
 [4] [5]
-Overfull \hbox (63.2386pt too wide) detected at line 269
+Overfull \hbox (63.2386pt too wide) detected at line 271
 [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^Z[] \OMS/cmsy/m/n/10.95 ^^@ \OML/
 cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.95 )[] = [] + []
  []
 
 [6]
 
-LaTeX Warning: Citation `Foulkes1989' on page 7 undefined on input line 327.
+LaTeX Warning: Citation `Foulkes1989' on page 7 undefined on input line 329.
 
 
-Overfull \hbox (88.0185pt too wide) detected at line 338
+Overfull \hbox (88.0185pt too wide) detected at line 340
 [][] \OT1/cmr/m/n/10.95 = [] [] [] 2(\OML/cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.9
 5 )[][] \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^Z[]
 \OT1/cmr/m/n/10.95 )[][] + [][]^^A\OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 [\O
@@ -2436,7 +2436,7 @@ r/m/n/10.95 [\OML/cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.95 ][]
  []
 
 
-Overfull \hbox (3.6804pt too wide) detected at line 370
+Overfull \hbox (3.6804pt too wide) detected at line 372
 [][] \OT1/cmr/m/n/10.95 = [] [] 2(\OML/cmm/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.95 )
 [][] + [][]^^A\OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 ^^
 Z[]\OT1/cmr/m/n/10.95 ] + ^^A\OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 [\OML/cm
@@ -2444,50 +2444,50 @@ m/m/it/10.95 ^^Z[]\OT1/cmr/m/n/10.95 ][]
  []
 
 [7]
-Overfull \hbox (15.12595pt too wide) in paragraph at lines 377--383
+Overfull \hbox (15.12595pt too wide) in paragraph at lines 379--385
 \T1/cmr/m/n/10.95 charge as-so-ci-ated with an atom will be neutralised---simil
 arly
  []
 
 [8]
 
-LaTeX Warning: Citation `Heine1980' on page 9 undefined on input line 423.
+LaTeX Warning: Citation `Heine1980' on page 9 undefined on input line 425.
 
 
-LaTeX Warning: Citation `Priester1986' on page 9 undefined on input line 428.
+LaTeX Warning: Citation `Priester1986' on page 9 undefined on input line 430.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 444.
+LaTeX Warning: Command \r invalid in math mode on input line 446.
 
 Missing character: There is no Å in font cmr10!
 [9]
 
-LaTeX Warning: Citation `Paxton:153084' on page 10 undefined on input line 513.
+LaTeX Warning: Citation `Paxton:153084' on page 10 undefined on input line 510.
 
 
 
-LaTeX Warning: Citation `Finnis1997' on page 10 undefined on input line 513.
+LaTeX Warning: Citation `Finnis1997' on page 10 undefined on input line 510.
 
 [10]
 ! Missing delimiter (. inserted).
 <to be read again> 
                    e
-l.526 \end{align}
+l.523 \end{align}
                  
 ? 
 ! Emergency stop.
 <to be read again> 
                    e
-l.526 \end{align}
+l.523 \end{align}
                  
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 30678 strings out of 494031
- 594914 string characters out of 6158395
- 698323 words of memory out of 5000000
- 33545 multiletter control sequences out of 15000+600000
+ 30681 strings out of 494031
+ 594962 string characters out of 6158395
+ 698441 words of memory out of 5000000
+ 33548 multiletter control sequences out of 15000+600000
  545777 words of font info for 62 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  55i,13n,65p,10414b,663s stack positions out of 5000i,500n,10000p,200000b,80000s

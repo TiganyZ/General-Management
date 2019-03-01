@@ -212,6 +212,8 @@ They express $\text{Tr}(\rho^{\text{out}} - \rho^{\text{f}})\widetilde{H}$ in th
 orbital representation as a sum over on-site terms and a sum over inter-site
 terms. 
 
+
+
 #+BEGIN_EXPORT latex
 
 \begin{equation}
@@ -452,31 +454,24 @@ the other, i.e. to make the quantity $\Delta \neq = 0$.
 
 So local charge neutrality tells us that 
 
-\[ 
-\delta N_1(\Delta) + \delta N_2(\Delta) = 0
-\]
 
-
-
-
+$$\delta N_1(\Delta) + \delta N_2(\Delta) = 0$$
 
 **** Self-Consistent Polarisable-Ion Tight-Binding
-Following cite:Paxton:153084, original paper by cite:Finnis1997.
+Following cite:Paxton:153084. Original paper by cite:Finnis1997.
 
 
 Remember that the expansion of the Hohenburg-Kohn-Sham functional to second order in the energy, if $H = H^0 + H'$,
 where $H^0$ is the Hamiltonian generated from the reference charge density $\rho^0$ (about which the HKS functional has been expanded)
 
 
-#+BEGIN_EXPORT latex
 \begin{align}
-E^{(2)} = & \sum_{n} f_{n} \expval{H^{0}}{n} \\
+E^{(2)} = &\sum_{n} f_{n} \bra{n} H^{0} \ket{n} %\expval{H^{0}}{n} \\
 &- \int \rho^{0}(\mathbf{r}) V^{0}_{xc} \text{d}\mathbf{r} - E_{H} + E^{0}_{xc} + E_{ZZ}\\
 &+ \frac{1}{2} \int \text{d}\mathbf{r} \int \text{d}\mathbf{r}' \Big{ 
  e^2 \frac{\delta\rho(\mathbf{r})\delta\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|} \Big} \\
 & \delta\rho(\mathbf{r})\frac{\delta^2E_{xc}}{\delta\rho(\mathbf{r})\delta\rho(\mathbf{r}')}\delta\rho(\mathbf{r}')
 \end{align}
-#+END_EXPORT
 
 Where the first two lines are the /Harris-Foulkes Functional/.
 
@@ -486,6 +481,8 @@ In terms of multipole moments, we cannot construct these from the charge density
 We can however use the eigenvalues such that we can construct them. 
 
 So we can construct the multipoles in terms of the expansion coefficients. 
+
+
 
 #+BEGIN_EXPORT latex
 \begin{equation}
@@ -1050,7 +1047,7 @@ The Nye tensor plots showed the three components of spreading (screw, basal edge
 dislocations are identified by local extrema in the Nye tensor distribution or a closed triad of atoms in DD maps.
 Unmirrored core partials have both screw and edge character and form a non-planar core structure.
 
-
+[[ref:table:ghazitrin-cores][Energies of LGF relaxed prismatic dislocation cores]]
 | J/m$^2$ | $\gamma_{\text{easy}}$ | $\gamma_{\text{hard}}$ | $\gamma_{\text{pyramidal}}$ | $\gamma_{\text{I}2$ |
 |---------+------------------------+------------------------+-----------------------------+---------------------|
 | DFT     |                  0.220 |                  1.185 |                       0.689 |               0.292 |
@@ -1933,8 +1930,8 @@ then the transformation is /quasi-martensitic/.
          against this criteria.
      - No models other than DFT produced a metastable stacking fault energy at
        the prismatic easy fault.
-***** Ising Model Gamma surfaces
-****** Hu 2013 Basal plane stacking faults of hcp metals.
+**** Ising Model Gamma surfaces
+***** Hu 2013 Basal plane stacking faults of hcp metals.
 cite:Hu2013
 
 Stackng faults are closely related to two deformation modes of metals: twinning
@@ -1964,7 +1961,7 @@ E_{spt} = J_0 - \frac{1}{3}J_1 &+ \frac{1}{3}J_2 + J_3 &+ \frac{1}{3}J_4 + \ldot
 \end{align}
 #+END_LaTeX
 
-****** Denteneer 1987 Stacking-fault energies in semiconductors from first-principles calculations
+***** Denteneer 1987 Stacking-fault energies in semiconductors from first-principles calculations
 cite:Denteneer1987
 
 Denteneer /et al/ calculated the stacking fault energies of SiC and Ge using a procedure
@@ -2056,6 +2053,60 @@ corresponding zincblende unit cell.
 
 
 
+***** Yang and Zhao 1992 Proposed mechanism of HCP → FCC phase transition in titianium
+
+
+
+cite:Yang2018
+
+HCP to FCC phase transition can be induced by mechanical deformation or
+temperature change.
+ 
+Generally been believed that the HCP and FCC structures should follow the Burger's
+orientation relation of 
+\begin{gather}
+\{ 0001 \}_{\text{hcp}} \middle\| \{ 111 \}_{\text{fcc}}\\
+\[ 11\bar{2}0 ]_{\text{hcp}} \middle\| [ 110 ]_{\text{fcc}}
+\end{gather}
+
+through the gliding of the Shockley partial dislocations on every two
+close-packed planes of HCP. 
+
+However there is a different relation of
+
+\begin{gather}
+\{ 10\bar{1}0 \}_{\text{hcp}} \middle\| \{ 1\bar{1}0 \}_{\text{fcc}}\\
+\[ 0001 ]_{\text{hcp}} \middle\| [ 001 ]_{\text{fcc}}
+\end{gather}
+ has been observed under cryogenic plain-strain compression and such an
+ orientation relation can be names as prismatic relation. 
+
+There are a few methods of how this prismatic relation is obtained. 
+The first, by Hong /et al/ is that there is a series of Shockley partial
+dislocations with a burger's vector of $\frac{1}{6}\langle 1\bar{2}10 \rangle$
+on $\{ 10\bar{1}0 \}$ on stacking.
+Wu /et al./ showed another mechanism that this prismatic relation can be
+accomplished by nucleation via pure shuffle and growth via shear-shuffle
+mechanisms. The detailed process of transformation is lacked in the first
+mechanisme and the driving force to make the atoms move a displacement along
+different orientations in small regions seems implausible in the second
+mechanism.
+
+There are differences in the volume expansion between the two. $19.5\%$ normal
+to the phase boundary in the first one and $14.2\%$ in polycrystalline Ti
+through rolling at room temperature. 
+
+ Wu /et al./ argued that, according to the frst transformation mechanism, 
+the gliding of Shockley partial dislocations cannot generate the lattice expansion normal to the
+phase boundary.
+
+During the prismatic transformation with the orientation relation 
+\begin{gather}
+\{ 10\bar{1}0 \}_{\text{hcp}} \middle\| \{ 1\bar{1}0 \}_{\text{fcc}}\\
+\langle 0001 \rangle_{\text{hcp}} \middle\| \langle 001 \rangle_{\text{fcc}}
+\end{gather}
+the stacking of A-B-C-D in the $\{ 10\bar{1}0 \}$ HCP planes would transform to
+the stacking of A-B-A-B in the $\{ 1\bar{1}0 \}$ planes of the FCC structure. 
 
 
 ** Optimisation
@@ -2531,5 +2582,3 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 bibliographystyle:unsrt
 bibliography:./bibliography/org-refs.bib
 
-# \bibliographystyle{plain}
-# \bibliography{org-refs.bib}

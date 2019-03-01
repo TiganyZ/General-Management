@@ -1,0 +1,10 @@
+Ti,Ti:
+   type 2 (Exp. decay), V(d) = a exp (- b d)
+	     dds    ddp    ddd
+   coeff:  -2.75   1.84  -0.46
+   decay:   0.71   0.71   0.71
+   cutoff type 2 (multiplicative), 5th order polynomial, range [r1, rc]
+	     dds    ddp    ddd
+   r1:      6.20   6.20   6.20
+   rc:      8.50   8.50   8.50
+
