@@ -1,0 +1,571 @@
+* Deep Learning for Julia
+  :PROPERTIES:
+  :LOCATION: 70 Wilson Street, EC2A 2DB, London, United Kingdom
+  :LINK: [[https://www.google.com/calendar/event?eid=NjFpajBkOWg2bGo2NmI5ZzZnb2pnYjlrNzRvMzBiOXA3MHBqY2I5aDcwb200cDFtYzloamVjcGtjNCB0aWdhbnl6YXJyb3VrQG0][Go to gcal web page]]
+  :ID: 61ij0d9h6lj66b9g6gojgb9k74o30b9p70pjcb9h70om4p1mc9hjecpkc4
+  :END:
+
+  <2019-02-13 Wed 18:30-21:00>
+
+We start 2019 with an exploration of deep learning in Julia. We will present two deep learning tools available Julia -- Tensorflow.jl, a wrapper around Google's Tensorflow, and Flux.jl, an elegant pure Julia deep learning library. We will see how they were built, how to use them, and discuss some of the recent advances in that area, including our papers at NeurIPS.
+
+Schedule:
+18:30 Pizza and Networking
+19:00 Talks Start
+21:00 Talks End
+
+7 PM : Lyndon White - TensorFlow.jl and other tools for ML in Julia
+
+Lyndon is a core contributor and maintainer of numerous Julia language packages including DataStructures.jl, TensorFlow.jl, and DataDeps.jl. He used Julia throughout his PhD on NLP at the University of Western Australia. His key research areas include natural language processing / computational linguistics, with a focus on the capturing of sentence meaning. Lyndon’s overarching goal is to develop methods to allow for better computational processing of the vast amounts of data which has been prepared for manual (human) processing, e.g., books, blogs, newspapers. He currently works as a Research Engineer at Invenia Labs in Cambridge whose Advisors include Doyne Farmer and Zoubin Ghahramani. Lyndon is coauthor of the recent book, "Neural Representations of Natural Language", published by Springer.
+
+Abstract:
+Julia is a fantastic language for machine learning, this talk will explain why and how. It will have something for everyone, from ML practitioner to package developer:
+- How TensorFlow.jl was created and how it works
+- How to use TensorFlow.jl within the Julia Ecosystem to solve problems with ML
+- Why Julia is great language to implement or wrap a data science tool
+- The language features, the ecosystem and the community.
+
+This talk assumes little knowledge of the TensorFlow language. A passing familiarity with neural networks and with the Julia programming language will be helpful. Further information on TensorFlow.jl can be found in the recently published paper, “TensorFlow.jl: An Idiomatic Julia Front End for TensorFlow“, JOSS, 1 Nov, 2018 http://joss.theoj.org/papers/10.21105/joss.01002 and also on GitHub: https://github.com/malmaud/TensorFlow.jl .
+
+8 PM : Mike Innes – Flux.jl
+
+Mike Innes is a software at Julia Computing, where he created and develops the Flux machine learning library, as well as several other Julia packages. Previously he worked for MIT, where he made the Juno IDE widely used by Julia users.
+
+Abstract:
+Deep learning is a rapidly evolving field, and models are increasingly complex. Recently, researchers have begun to explore "differentiable programming", a powerful way to combine neural networks with traditional programming. Differentiable programs may include control flow, functions and data structures, and can even incorporate ray tracers, simulations and scientific models, giving us even unprecedented power to find subtle patterns in our data.
+
+This talk will explore how this technique, and particularly Flux – a state-of-the-art deep learning library – is impacting the machine learning world, including discussion of our recent papers from NeurIPS 2018. We'll outline important recent work and show how Flux allows us to easily combine neural networks with tools like differential equations solvers.
+
+This event is co-hosted with the London Deep Learning Lab (https://www.meetup.com/Deep-Learning-Lab/events/257404837/)
+
+Image credit: Packed butterflies by @cormullion : https://flic.kr/p/2dTeeqM
+
+Details: https://www.meetup.com/London-Julia-User-Group/events/257956548/
+* Deep Learning for Julia
+  :PROPERTIES:
+  :LOCATION: Microsoft Reactor, 70 Wilson Street, London, England, gb, EC2A 2DB
+  :LINK: [[https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVob21tdDNsZWhnbW9lOWs2OHEzYXJwZzcwcDZtcWJrY2xyNm1zcmZkMG9tMnNqOWNzczdhcDFnZW9wbTZyYjhjOWtuOHRqYmR0aG4yZGhpYzVoNmUgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: _6tlnaqrle5p6cpb4dhmj4phpehommt3lehgmoe9k68q3arpg70p6mqbkclr6msrfd0om2sj9css7ap1geopm6rb8c9kn8tjbdthn2dhic5h6e
+  :END:
+
+  <2019-02-13 Wed 18:30-21:00>
+
+To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar
+
+This event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DM1vEvNbXliWdtzyZgnxyuKBvWrM1RHYQs
+* How to finish a PhD and have a successful viva
+  :PROPERTIES:
+  :LOCATION: Franklin-Wilkins Building, 150 Stamford St, South Bank, London SE1 9NH, UK
+  :LINK: [[https://www.google.com/calendar/event?eid=NjVobTZvcGs2NWdtYWJiMjYxaGpnYjlrYzlpNjJiYjI2MG9qMGJiMzcwb2o0ZWI1NjhwNmNlMWhjZyB0aWdhbnl6YXJyb3VrQG0][Go to gcal web page]]
+  :ID: 65hm6opk65gmabb261hjgb9kc9i62bb260oj0bb370oj4eb568p6ce1hcg
+  :END:
+
+  <2019-02-28 Thu 14:00-16:00>
+* ONEOHTRIX POINT NEVER
+  :PROPERTIES:
+  :LOCATION: Roundhouse, Roundhouse, London, London, GB, NW1 8EH
+  :LINK: [[https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVocW0ycGphNjRzMzhkYm1lZHI2Z3NyZTZkcjMwczloZG9vbTRzMWc2NWlqY3RocDY1bTZtdDFqZWRsNzhyYjY2NHJqNGNiY2Qxb240ZDlqZThxajAgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: _6tlnaqrle5p6cpb4dhmj4phpehqm2pja64s38dbmedr6gsre6dr30s9hdoom4s1g65ijcthp65m6mt1jedl78rb664rj4cbcd1on4d9je8qj0
+  :END:
+
+  <2019-03-08 Fri 19:30-20:30>
+
+To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar
+
+This event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DP-3tVB7OAQkUa-CsB6T_U4R6426HMn07s
+* Stand Up
+  :PROPERTIES:
+  :LOCATION: 39
+  :LINK: [[https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVobTZnc2IxZTVxbWd0amtkOW43MnEzNDY0cjcwczNqZGdvNjJwcmVlbHI3Y3ExcGU1aTdhY2JnZWhwM2VkajE2aG42ZW9ybWN0bDc4dGpqNjVrbWUgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: _6tlnaqrle5p6cpb4dhmj4phpehm6gsb1e5qmgtjkd9n72q3464r70s3jdgo62preelr7cq1pe5i7acbgehp3edj16hn6eormctl78tjj65kme
+  :END:
+
+  <2019-03-10 Sun 13:00-14:00>
+
+To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar
+
+This event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPLZ7Bc60nhan0c0f7DdFFvyatjj1qU-w0
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NG42c2FiYzRzZW9sZGZ1OHYycnRxMWYwcDAgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 4n6sabc4seoldfu8v2rtq1f0p0
+  :END:
+
+  <2019-03-14 Thu 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=MWEzdTA0M2w2a2s1dTdhYmJjb2pkdHM4cWcgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 1a3u043l6kk5u7abbcojdts8qg
+  :END:
+
+  <2019-03-15 Fri 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Meeting with Tony. 
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NmtvbThjcGdjNHJqYWJiNWM5aTZjYjlrY2hpamNiYjI2OWo2OGJiNGM1aGpjZDlpNzFpM2llMzU2byB0aWdhbnl6YXJyb3VrQG0][Go to gcal web page]]
+  :ID: 6kom8cpgc4rjabb5c9i6cb9kchijcbb269j68bb4c5hjcd9i71i3ie356o
+  :END:
+
+  <2019-03-15 Fri 13:30-14:30>
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=dGJwazU4a291cGc1NzMyZmJ1cmtqMnR2ZDggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: tbpk58koupg5732fburkj2tvd8
+  :END:
+
+  <2019-03-15 Fri 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=MjU2YmpydmVkYTkzdHB1dTdqc2czbWVkbDggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 256bjrveda93tpuu7jsg3medl8
+  :END:
+
+  <2019-03-16 Sat 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=M2xnMGU3cXM4dXBiaDNucWQ1bjY5YmYzY3MgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 3lg0e7qs8upbh3nqd5n69bf3cs
+  :END:
+
+  <2019-03-17 Sun 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=aGs0Z25vYTljbDBibzN1NWx2ZWU1a2Rya3MgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: hk4gnoa9cl0bo3u5lvee5kdrks
+  :END:
+
+  <2019-03-17 Sun 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=MHRjNWhiOTNmMnZqNWNiczM1ZDFibXRuMmsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 0tc5hb93f2vj5cbs35d1bmtn2k
+  :END:
+
+  <2019-03-18 Mon 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=dmc4bWtvb3QxZWZlbm10Z2JkZ3VuOWJpZzggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: vg8mkoot1efenmtgbdgun9big8
+  :END:
+
+  <2019-03-19 Tue 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* busy
+  :PROPERTIES:
+  :LOCATION: Western Eye Hospital, 153-173 Marylebone Rd, Marylebone, London NW1 5QH, UK
+  :LINK: [[https://www.google.com/calendar/event?eid=NjRwbTJkMWw2NHJtMmJiMTZkaTYyYjlrNjBzbTRiOW82a3MzY2JiNTZzcjNhb2hwYzVoamFvaGs2MCB0aWdhbnl6YXJyb3VrQG0][Go to gcal web page]]
+  :ID: 64pm2d1l64rm2bb16di62b9k60sm4b9o6ks3cbb56sr3aohpc5hjaohk60
+  :END:
+
+  <2019-03-19 Tue 10:30-11:30>
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=a2tzcmltMGQ4MzVsbHZxOHNkMDJyOGJ2MG8gdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: kksrim0d835llvq8sd02r8bv0o
+  :END:
+
+  <2019-03-20 Wed 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=N242aXFldWhqbnB1MjZuc292Zmc2Y2dkdGsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 7n6iqeuhjnpu26nsovfg6cgdtk
+  :END:
+
+  <2019-03-20 Wed 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=Mmxzdjkyc3Zncm9oaTdyMWZsYm5zamJsa2sgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 2lsv92svgrohi7r1flbnsjblkk
+  :END:
+
+  <2019-03-21 Thu 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Data Science for Finance Coding Dojo 1
+  :PROPERTIES:
+  :LOCATION: King William St, City of London, United Kingdom
+  :LINK: [[https://www.google.com/calendar/event?eid=NzFoM2dkcG9jNWlqMGI5Z2Nnb2oyYjlrY29wM2ViYjE2cGozZWJiMjZwZ2o4cDFnNjBxNmFkajRjNCB0aWdhbnl6YXJyb3VrQG0][Go to gcal web page]]
+  :ID: 71h3gdpoc5ij0b9gcgoj2b9kcop3ebb16pj3ebb26pgj8p1g60q6adj4c4
+  :END:
+
+  <2019-03-21 Thu 18:00-21:00>
+
+Bring your own laptop with some programming tool available. R Studio and python 3/anaconda are typical choices.
+
+M&G Group
+Laurence Pountney Hill
+London
+EC4R 0HH
+United Kingdom
+
+Details: https://www.meetup.com/Data-Science-for-Finance-Coding-Dojo/events/bpjrlqyzfbcc/
+* Data Science for Finance Coding Dojo 1
+  :PROPERTIES:
+  :LOCATION: Tito's, King William St, City of London, gb, EC4R 9
+  :LINK: [[https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVocW44c2hsNjloMzJkM2E3NWdqY3I5aDZwam1zY3IxNnRoajJkYmdlaG82aWViY2M1azY4c2plZDloNnVyaGw2c3A2ZXFqM2U1azZrdGpnZWxqMzAgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: _6tlnaqrle5p6cpb4dhmj4phpehqn8shl69h32d3a75gjcr9h6pjmscr16thj2dbgeho6iebcc5k68sjed9h6urhl6sp6eqj3e5k6ktjgelj30
+  :END:
+
+  <2019-03-21 Thu 18:00-21:00>
+
+To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar
+
+This event was created from an email you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPVJZGYSGQ6jWGrWj5R8pOZEZxKwNgZjKY
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=MDNyYm5zY2k3MW82c3JwYmZyN3R1bjQ5ZWcgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 03rbnsci71o6srpbfr7tun49eg
+  :END:
+
+  <2019-03-22 Fri 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NjY3cjRqbHVxM3NqcHYxdHYxamZ0ZnFnZzggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 667r4jluq3sjpv1tv1jftfqgg8
+  :END:
+
+  <2019-03-22 Fri 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=cGhmM2o1a2VkcXVoc2s1ZDE0N2Voc2U4MmsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: phf3j5kedquhsk5d147ehse82k
+  :END:
+
+  <2019-03-23 Sat 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=OGtiNzJscGtramEzaHI5NG4zZ2RoMzlzMWMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 8kb72lpkkja3hr94n3gdh39s1c
+  :END:
+
+  <2019-03-23 Sat 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=dGJiaTl1amlqcTNoNmI4bXVqdWtnZ3FmY28gdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: tbbi9ujijq3h6b8mujukggqfco
+  :END:
+
+  <2019-03-24 Sun 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=OWw1bXRzYnZiamx0Nmd1ZG92dDB2cHRjaDggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 9l5mtsbvbjlt6gudovt0vptch8
+  :END:
+
+  <2019-03-24 Sun 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=dGs4OGc5a2hsbTBwdGhkc3VyY2UyaWdmM3MgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: tk88g9khlm0pthdsurce2igf3s
+  :END:
+
+  <2019-03-25 Mon 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=cDVyM2JnNHV0YzFiaHFrazE5Z2N0anJsaTQgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: p5r3bg4utc1bhqkk19gctjrli4
+  :END:
+
+  <2019-03-26 Tue 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NzlwYW4zcGJjNDBidnRkZmc2bWZtZWxxZGMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 79pan3pbc40bvtdfg6mfmelqdc
+  :END:
+
+  <2019-03-27 Wed 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=a2piZG0wcWhyam9mY3U5bjFuODQzNGtucDAgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: kjbdm0qhrjofcu9n1n8434knp0
+  :END:
+
+  <2019-03-27 Wed 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=dHExMm9mZG12dHZxYjJ1bDZhZ3ZmcHNvMG8gdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: tq12ofdmvtvqb2ul6agvfpso0o
+  :END:
+
+  <2019-03-28 Thu 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=aWp2MXFwdjdocjFhaHYxaGNqaHFsNzFzcGsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: ijv1qpv7hr1ahv1hcjhql71spk
+  :END:
+
+  <2019-03-29 Fri 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=ZmFhYTFnOGsxNjQzczZtN2RjOXV0aDlnbm8gdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: faaa1g8k1643s6m7dc9uth9gno
+  :END:
+
+  <2019-03-29 Fri 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=dHRhNjhwdTk1bGI3N2MxZThpM2I1bDE1NWMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: tta68pu95lb77c1e8i3b5l155c
+  :END:
+
+  <2019-03-30 Sat 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NXR1cDgycGM4cW5pcDkxMjNtbjhjcmw0NGMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 5tup82pc8qnip9123mn8crl44c
+  :END:
+
+  <2019-03-30 Sat 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=N2E0YTk5ajdxNjI0dmhxcWtrcXU0YnVsZ2cgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 7a4a99j7q624vhqqkkqu4bulgg
+  :END:
+
+  <2019-03-31 Sun 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NWxtMzNodWZxYzRmYzkzYWkzNDF1aXZlb28gdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 5lm33hufqc4fc93ai341uiveoo
+  :END:
+
+  <2019-03-31 Sun 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=MWdkcW1nNm45NXBuMHBvbmVrcXA2anZxZTggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 1gdqmg6n95pn0ponekqp6jvqe8
+  :END:
+
+  <2019-04-01 Mon 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=OG40NnBxbDUxcnAydnFqMGdnODBzNGhrNzQgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 8n46pql51rp2vqj0gg80s4hk74
+  :END:
+
+  <2019-04-02 Tue 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=cDJpbGJyNHIwcmNtbzMwOW1yMTBxYnFzaDAgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: p2ilbr4r0rcmo309mr10qbqsh0
+  :END:
+
+  <2019-04-03 Wed 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=bHFyaGhmZ284MTByZHF0c2JoMWhvdDNzMTggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: lqrhhfgo810rdqtsbh1hot3s18
+  :END:
+
+  <2019-04-03 Wed 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=M3N0dWtmNjI0M29hOHNzb2F0MGpkam1wbTggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 3stukf6243oa8ssoat0jdjmpm8
+  :END:
+
+  <2019-04-04 Thu 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=bGR2dHQybGM0bThlMGdjMWE2cnIwZHVsazggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: ldvtt2lc4m8e0gc1a6rr0dulk8
+  :END:
+
+  <2019-04-05 Fri 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=Ymd2cXFjOGk5aWdjdm9vOWVxMm42bm82ZHMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: bgvqqc8i9igcvoo9eq2n6no6ds
+  :END:
+
+  <2019-04-05 Fri 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=MHBybWVodW9lOGcwMW83czM4Y2VtOWxjZ2sgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 0prmehuoe8g01o7s38cem9lcgk
+  :END:
+
+  <2019-04-06 Sat 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=b25kZ2hrbHNobHRnZnFpN2RzbWFoOW5tNzAgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: ondghklshltgfqi7dsmah9nm70
+  :END:
+
+  <2019-04-06 Sat 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=YnBuZTIxMWx1N3FyY2h2MjBpdXB0bjBkcW8gdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: bpne211lu7qrchv20iuptn0dqo
+  :END:
+
+  <2019-04-07 Sun 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=OXJxamg1cGZkdWxpbWJxZ3JrY3N2YnRxYTQgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 9rqjh5pfdulimbqgrkcsvbtqa4
+  :END:
+
+  <2019-04-07 Sun 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=N3A5MXFjYTcycTI2YWNhOTNob3FoODlmMnMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 7p91qca72q26aca93hoqh89f2s
+  :END:
+
+  <2019-04-08 Mon 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=ZGJnNDdkc3VjM3BuYzkyaGlzZWswdDhzY2sgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: dbg47dsuc3pnc92hisek0t8sck
+  :END:
+
+  <2019-04-09 Tue 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=ZW51bmdmc2VxZWpmaTVpcmhsNGlnZnUzYzQgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: enungfseqejfi5irhl4igfu3c4
+  :END:
+
+  <2019-04-10 Wed 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=b3Bzbm5hdmM0ZmlydXZoYnB1bTZscWEyOGsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: opsnnavc4firuvhbpum6lqa28k
+  :END:
+
+  <2019-04-10 Wed 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=ZjVhZ2NqOTBmczNoc2FlaTJwYmtpOWt2dDggdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: f5agcj90fs3hsaei2pbki9kvt8
+  :END:
+
+  <2019-04-11 Thu 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Plan the day
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=OHA0MGFjYjZtc2owZ2RtYWVhdXN2aHA5OGsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: 8p40acb6msj0gdmaeausvhp98k
+  :END:
+
+  <2019-04-12 Fri 08:00-08:15>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=bG9lZjhkZXBuMWxuanFndGEzZzZqamw3NGsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: loef8depn1lnjqgta3g6jjl74k
+  :END:
+
+  <2019-04-12 Fri 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Dislocation Theory
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=Zm1ibzU0MjRzZDRydmgxdHJqcHY1NzBuaHMgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: fmbo5424sd4rvh1trjpv570nhs
+  :END:
+
+  <2019-04-13 Sat 18:00-19:00>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Make Anki Cards
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=bmh1aXQwYzJrbTd2cWZnbzBwdHI4OXVwcWsgdGlnYW55emFycm91a0Bt][Go to gcal web page]]
+  :ID: nhuit0c2km7vqfgo0ptr89upqk
+  :END:
+
+  <2019-04-13 Sat 19:00-19:30>
+
+This event was added from Goals in Google Calendar. Changes made to it here may not save. Use the Google Calendar app to edit and view Goal details.
+* Corrosion day meeting
+  :PROPERTIES:
+  :LINK: [[https://www.google.com/calendar/event?eid=NzRzNjhjMzFjbGozZ2JiNDY5aDM0YjlrY2twbWNiOW9jb3M2NGI5aWNoaW02b2hwY2dyNmFvOXBjayB0aWdhbnl6YXJyb3VrQG0][Go to gcal web page]]
+  :ID: 74s68c31clj3gbb469h34b9kckpmcb9ocos64b9ichim6ohpcgr6ao9pck
+  :END:
+
+  <2019-04-25 Thu>

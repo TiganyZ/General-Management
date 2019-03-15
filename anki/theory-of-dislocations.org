@@ -1,0 +1,92 @@
+
+* Item
+:PROPERTIES:
+:ANKI_DECK: Theory of Dislocations
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1552682274115
+:END:
+
+** Front
+What are the assumptions that underly the fact that the total elastic energy
+of a stressed body does not include cross terms between the internal stress of
+the system and externally applied forces?
+** Back
+Assumptions:
+  1. Stress and strain fields are related by linear elastic moduli
+  2. The strain fields are obtained by differentiation of a compatible
+     displacement field
+  3. The stress fields obey equilibrium at interior points and on the
+     surface.
+  4. The internal stress fields do not generate any surface tractions or body
+     forces
+
+* Item
+:PROPERTIES:
+:ANKI_DECK: Theory of Dislocations
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1552682275290
+:END:
+
+** Text
+The total {{c1::elastic}} energy of a stressed body does not have cross terms
+between the internal stress (locked-in stress present when no external forces
+act) and the stress caused by externally applied forces. 
+** Extra
+Think of an already stressed (lets say shear stressed) body and one that does not have stresses. 
+How easy do you think it is to shear each of the two bodies? Linear elasticity
+says that it should be equally easy to shear each of them. 
+
+The theorem in the text above shows that the stress and strain caused by
+external and internal sources of stress can be superposed. 
+
+This theorem holds only if the locked-in stress state of the body does not
+produce any point forces, body forces or tractions on the surface of the
+body. 
+
+Look at more cards for the assumptions
+
+* Item
+:PROPERTIES:
+:ANKI_DECK: Theory of Dislocations
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1552678722841
+:END:
+
+** Front
+What are the equations for the separation of a burgers vector into screw and
+edge components?
+** Back
+$$\mathbf{b}_{\text{screw}} = (\mathbf{b} \cdot \mathbf{\xi})\mathbf{\xi}$$
+$$\mathbf{b}_{\text{edge}}  = \mathbf{\xi}\times (\mathbf{b} \times \mathbf{\xi})$$
+* Item
+:PROPERTIES:
+:ANKI_DECK: Theory of Dislocations
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1552593187140
+:END:
+** Front
+What are the axioms for dislocation theory?
+** Back
+
+1. The direction of $\mathbf{b}$ is reversed when the dislocation sense
+   $\mathbf{\xi}$ is reversed.
+2. If all dislocation senses $\mathbf{\xi}$ are taken to be positive from a
+   node, then $\sum_{i}^{N} \mathbf{b}_{i} = 0$.
+3. If a dislocation line glides in a direction $\mathbf{x}$ that is locally
+   perpendiculare the the line sense $\mathbf{\xi}$, then the crystal on the
+   positiove site of the slip plane displaces by $\mathbf{b}$ relative to the
+   material on the negative side, where the vector $\mathbf{\xi} \times
+   \mathbf{x}$ points from the negative side to the positive side.
+** Item
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1552594088015
+:END:
+*** Front
+What is the definition of the effective burgers vector?
+*** Back
+This the the definiton of a burger's vector defined at the continuum level. 
+
+$$ \mathbf{b}_{\text{eff}} = \mathbf{\alpha} \cdot A \mathbf{n} $$
+
+Where $\mathbf{\alpha}$ is the Nye dislocation density 

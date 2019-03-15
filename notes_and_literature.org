@@ -1212,6 +1212,19 @@ metastable artifact of relaxing the dislocation from the initial displacements o
 
 **** Results
 
+***** S configuration Clouet
+cite:Clouet2012
+
+Here are the results from generating dislocations according to Clouet's
+principles. 
+
+[[file:Images/S_conguration_u.png]]
+[[file:Images/S_conguration_usum.png]]
+[[file:Images/S_conguration_uimg.png]] This one is actually rotated 90 degrees
+[[file:Images/S_conguration_uerr.png]]
+[[file:Images/S_conguration_usum-uerr_periodic.png]]
+
+***** Erroneous
 For dipole in the O arrangement we have [[file:~/Documents/disl_gsurf/useful_python/bop/dislocations/create_dislocations_clean/create_supercell_with_quadrupole.py]]
 
 Original displacement in O config

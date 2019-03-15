@@ -1,0 +1,33 @@
+
+* Item
+:PROPERTIES:
+:ANKI_DECK: Theory of Dislocations
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1552593187140
+:END:
+** Front
+What are the axioms for dislocation theory?
+** Back
+
+1. The direction of $\mathbf{b}$ is reversed when the dislocation sense
+   $\mathbf{\xi}$ is reversed.
+2. If all dislocation senses $\mathbf{\xi}$ are taken to be positive from a
+   node, then $\sum_{i}^{N} \mathbf{b}_{i} = 0$.
+3. If a dislocation line glides in a direction $\mathbf{x}$ that is locally
+   perpendiculare the the line sense $\mathbf{\xi}$, then the crystal on the
+   positiove site of the slip plane displaces by $\mathbf{b}$ relative to the
+   material on the negative side, where the vector $\mathbf{\xi} \times
+   \mathbf{x}$ points from the negative side to the positive side.
+** Item
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1552594088015
+:END:
+*** Front
+What is the definition of the effective burgers vector?
+*** Back
+This the the definiton of a burger's vector defined at the continuum level. 
+
+$$ \mathbf{b}_{\text{eff}} = \mathbf{\alpha} \cdot A \mathbf{n} $$
+
+Where $\mathbf{\alpha}$ is the Nye dislocation density tensor. 

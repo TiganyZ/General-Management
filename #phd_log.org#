@@ -1,0 +1,537 @@
+#+TITLE: PhD Log
+#+AUTHOR: Tigany Zarrouk
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage{physics}
+#+LATEX_HEADER: \usepackage{cases}
+#+LATEX_HEADER: \graphicspath{ {./} }
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+#+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
+#+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+#+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
+#+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
+
+
+
+
+* Tasks
+
+** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
+** TODO Calculate solution enthalpy of oxygen in titanium. 
+- The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
+  $$ E_{\text{sol} = E( \text{Ti}_n \text{O} ) - E( \text{Ti}_n ) - E(O) $$
+  $$ \Delta V = V( \text{Ti}_n \text{O} ) - V( \text{Ti}_n ) $$
+- $E( \text{Ti}_n \text{O} )$ is the excess energ of the bulk supercell with n
+  Ti atoms and one impurity atom. $E( \text{Ti}_n )$ is the energy of the pure
+  cells.
+- Influence of cell sizes and solution enthalpy needs to be considered.
+
+** TODO Has anyone investigated the stacking faults of Omega phase?
+   - Maybe as Omega phase doesn't occur that often, perhaps it has not been
+     studied in detail.
+   - I should look further into thsi
+** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
+*** Checking the convergence criteria
+      - Now checking the convergence criteria.
+
+**** How the lattice parameters change with the fineness of the k mesh
+     - Maybe with a less fine k mesh the lattice parameters become
+       worse. 
+     - SOLUTION: The lattice parameters do not change that much under
+     differences with the k mesh. [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/get_hom_shear_bc_gs.py::lattice_parameters_vs_k_mesh(%20tbe_command,%20minimiserf%3D'Nelder-Mead',%20plot%3DTrue,%20data%3Ddata)][File with change of the lattice
+     parameters with k mesh. ]]
+     [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk.png][a vs nk]]
+     [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk.png][c_vs_nk]]
+     [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png][e_vs_nk]]
+
+***** What if rmaxh is smaller or larger?
+      - If rmaxh is is smaller (say rmaxh = 6.7 bohr) then we get the same
+        results. 
+   #+CAPTION: Variation of energy with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_small_rmaxh.png
+      file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_small_rmaxh_better_format.png
+   #+CAPTION: Variation of a hcp with k mesh.
+   #+NAME:   fig:a hcp_vs_nk_small_rmaxh.png
+      file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_small_rmaxh_better_format.png
+   #+CAPTION: Variation of c hcp with k mesh.
+   #+NAME:   fig:c_hcp_vs_nk_small_rmaxh.png
+      file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_small_rmaxh_better_format.png]]
+	- Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_small.pkl][a_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_small.pkl][c_hcp small rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_small.pkl][e_hcp small rmaxh]]. 
+      - If rmaxh is larger ( rmaxh = 20 bohr ), all possible interactions must
+        be included then. And so we get the same results. 
+   #+CAPTION: Variation of energy with k mesh.
+   #+NAME:   fig:e_hcp_vs_nk_large_rmaxh.png
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_large_rmaxh.png]]
+   #+CAPTION: Variation of a hcp with k mesh.
+   #+NAME:   fig:a_hcp_vs_nk_large_rmaxh.png
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_large_rmaxh.png]]
+   #+CAPTION: Variation of c hcp with k mesh.
+   #+NAME:   fig:c_hcp_vs_nk_large_rmaxh.png
+	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png]]
+      - Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl][a_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl][c_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl][e_hcp large rmaxh]]
+      
+**** How does rmaxh change the lattice parameters?
+
+***** How does rmaxh change the energy of a supercell
+      - How does the number of neighbours change and what is the relation
+	between rmaxh and larger cell sizes.
+*** Notes on the model.
+    It seems that there is a lot of charge moving around when doing the
+    relaxations. 
+    I think that this may be due to the fact that there is no Hubbard U
+    interactions, a parameter for the coulomb interaction, which stops the
+    charges from moving freely. 
+    - TBE control file is currently set to this:
+     #+BEGIN_SRC bash
+TBE: nbas = 128 nspec = 1 verb 31 
+TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
+bz: metal
+     #+END_SRC
+    
+
+     
+*** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
+    CLOSED: [2018-11-19 Mon 12:08]
+** TODO Write first paragraph of Literature review
+*** TODO Summarise Stacking Faults and write review
+*** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
+*** TODO Summarise dislocations and Oxygen interactions (review)
+** TODO Titanium Optimisation
+#+BEGIN_SRC bash
+START: OBJECTIVE FUNCTION
+
+ti_obj_weights.py 
+ starting..
+   ext = ti ,
+   file = fmin.val ,
+   vals =  fdd=0.1174466123 qdds=0.3974516540 qddp=0.3909616843 qddd=0.4513787662 b0=12.4201609898 p0=1.1030807403 ndt=2.0279590685 cr1=-6.2099122560 cr2=3.942308298
+6 r1=1.0308550249 rc=1.2000213349 cr3=-1.0000000000 rmaxh=1.2120215483 b1=0.0000000000 p1=0.0000000000 npar=11  
+   binaries in /opt/lmto/bld7.13.0/openmpi/3.1.0/intel/14.0.1/o
+
+
+
+Obtaining Bandwidth and optimising c and a 
+
+    Bandwidth Scaling routine 
+
+nbands = 18, ef = 0.02977, ncol = 2
+Bandwidth at Gamma:
+   TBE:    5.916 eV
+   DFT:    5.900 eV
+
+
+Getting hcp c/a 
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.684831
+         Iterations: 28
+         Function evaluations: 64
+Got a, c : a=5.4161008400, c=8.8279655592 c/a=1.6299485220. Volume per atom=112.1333377662
+Targets  : a=5.5767896900, c=8.8521008200 c/a=1.5873112152. Volume per atom=119.2107777334
+
+Getting hcp shear constants ...
+
+ C_11 =    122.335 GPa
+
+ C_33 =    124.303 GPa
+
+ C_44 =     42.309 GPa
+
+ C_66 =     44.277 GPa
+
+ C_12 =     33.618 GPa
+
+ C_13 =     33.782 GPa
+
+shear constants: c_11=122.3, c_33=124.3, c_44= 42.3, c_12= 33.6, c_13= 33.8, c_66=  44.3, S= 64.4, R=134.7, H=133.5 
+         target: c_11=176.1, c_33=190.5, c_44= 50.8, c_12= 86.9, c_13= 68.3, c_66=  44.6, S= 73.1, R=185.4, H=146.7 
+
+   bulk modulus: 63; target: 110 
+
+Obtaining frequencies for M and H points in hcp Brillouin zone
+
+M frequencies tbe (THz) =  2.5331326195  2.5331326290  2.5331326290  2.5331326386  3.8256959262  3.8256959262 
+M frequencies LDA (THz) =  2.8585871860  2.8585871860  2.8585871860  2.8585871860  5.6670604683  5.6670604683 
+
+H frequencies tbe (THz) =  1.5399197708  1.5399197708  1.8398976627  1.8398976627  3.9669737038  3.9669737038 
+H frequencies LDA (THz) =  4.8064342322  5.5801002486  5.6531673769  6.3665184154  6.4005018626  7.6408237318 
+
+Obtaining bcc Ti quantities
+
+  trial bcc output from pfit = 0.0
+  VF = 0.825226
+  Epp bcc = 3.71884
+Get hcp - fcc energy difference ..
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -0.336410
+         Iterations: 14
+         Function evaluations: 30
+ fcc minimum lattice parameter
+  a_fcc = 7.676507,  a_fcc_exp = 7.886770 
+E_fcc - E_hcp = 6.006mRy per atom 
+
+Getting omega phase lattice constants and internal parameter ...
+Using Nelder-Mead
+
+Optimization terminated successfully.
+         Current function value: -1.029450
+         Iterations: 27
+         Function evaluations: 58
+
+Got omega : a=8.4761, c=5.4016 c/a=0.6373, using u=1.0000. Volume per atom=112.0287
+Targets   : a=8.7325, c=5.3234 c/a=0.6096, using u=1.0000. Volume per atom=117.1878
+bcc:     a=  5.82, K=378 Volume per atom=98
+target:  a=  6.18, K=118,                     
+        E_bcc - E_hcp = 82.515mRy per atom 
+
+
+ Build Objective Function
+     ... With Elastic Net Regularisation
+parameter names       fdd     qdds     qddp     qddd       b0       p0      ndt      cr1      cr2       r1       rc 
+parameter values    0.117    0.397    0.391    0.451   12.420    1.103    2.028   -6.210    3.942    1.031    1.200 
+          p_norm    0.509    1.722    1.694    1.955   53.802    4.778    8.785   26.900   17.078    4.466    0.000 
+
+Total p_norm = 121.68857
+
+
+ Quantity      predicted    target     norm_pred   norm_tar    sq diff.      weight    objective * 100^2 
+------------------------------------------------------------------------------------------------------------------------
+ a_hcp   :   5.41610084   5.57678969   5.41610084   5.57678969   0.02582091 1000.00000000    258209.07
+ c_hcp   :   8.82796556   8.85210082   8.82796556   8.85210082   0.00058251 1000.00000000      5825.11
+ c_11    : 122.33537796 176.10000000   1.86500000   2.85408495   0.97828904   1.00000000      9782.89
+ c_33    : 124.30323926 190.50000000   1.89500000   3.08746839   1.42198086   1.00000000     14219.81
+ c_44    :  42.30901811  50.80000000   0.64500000   0.82332490   0.03179977   1.00000000       318.00
+ c_12    :  33.61763067  86.90000000   0.51250000   1.40840422   0.80264436   1.00000000      8026.44
+ c_13    :  33.78161911  68.30000000   0.51500000   1.10695061   0.35040552   1.00000000      3504.06
+ a_omega :   8.47612090   8.73254342   8.47612090   8.73254342   0.06575251  10.00000000      6575.25
+ c_omega :   5.40164179   5.32343103   5.40164179   5.32343103   0.00611692  10.00000000       611.69
+ DE(o,h) :  -0.73462833  -0.73475386  -0.73462833  -0.73475386   0.00000002  10.00000000         0.00
+ DE(f,h) :   6.00578500   6.60015000   6.00578500   6.60015000   0.35326975  10.00000000     35326.98
+ a_bcc   :   5.81618924   6.17948863   5.81618924   6.17948863   0.13198645   5.00000000      6599.32
+ M_freq_0:   2.53313262   2.85858719   2.53313262   2.85858719   0.10592067   0.10000000       105.92
+ M_freq_1:   2.53313263   2.85858719   2.53313263   2.85858719   0.10592067   0.10000000       105.92
+ M_freq_2:   2.53313263   2.85858719   2.53313263   2.85858719   0.10592067   0.10000000       105.92
+ M_freq_3:   2.53313264   2.85858719   2.53313264   2.85858719   0.10592066   0.10000000       105.92
+ M_freq_4:   3.82569593   5.66706047   3.82569593   5.66706047   3.39062338   0.10000000      3390.62
+ M_freq_5:   3.82569593   5.66706047   3.82569593   5.66706047   3.39062338   0.10000000      3390.62
+ H_freq_0:   1.53991977   4.80643423   1.53991977   4.80643423  10.67011673   0.10000000     10670.12
+ H_freq_1:   1.53991977   5.58010025   1.53991977   5.58010025  16.32305829   0.10000000     16323.06
+ H_freq_2:   1.83989766   5.65316738   1.83989766   5.65316738  14.54102591   0.10000000     14541.03
+ H_freq_3:   1.83989766   6.36651842   1.83989766   6.36651842  20.49029544   0.10000000     20490.30
+ H_freq_4:   3.96697370   6.40050186   3.96697370   6.40050186   5.92205930   0.10000000      5922.06
+ H_freq_5:   3.96697370   7.64082373   3.96697370   7.64082373  13.49717403   0.10000000     13497.17
+ a_fcc   :   7.67650748   7.88677000   7.67650748   7.88677000   0.04421033   5.00000000      2210.52
+ bw at G :   5.91588880   5.89956160   5.91588880   5.89956160   0.00026658 100.00000000       266.58
+
+Objective function: 1657010
+
+#+END_SRC
+** TODO Rolls-Royce Meeting 9th April 
+DEADLINE: <2019-04-09 Tue>
+
+Presentation: 
+*** Free energies of Vibration for alpha, beta and omega phases
+*** Dislocations
+- Prismatic plane
+  - Get the Peierls stress
+  - Oxygen and Hydrogen interstitials in Tetrahedral and Octahedral sites
+*** Gamma surfaces for all the phases.
+*** Movies
+**** Notes on making movies
+One has installed vmd. So one can just change some lines in the format such
+that it can be used by vmd and ovito. 
+
+- To get movies in tbe one can use the commands
+  - " --md "
+    - " --xbs "
+    - " --movmv=10" Records every 10 frames
+  - "-xyz=N" to get the xyz format.
+*** Relaxations
+**** O in octahedral site
+In a 128 atom cell (4 x 4 x 4) one finds that the relaxed energy is 
+
+ Tr[rho]                 :      259.70933133
+ band structure energy   :      -66.75903118
+ pair potential energy   :       19.41990494
+ reference energy        :       -8.82960000
+ total energy            :      -38.50952624
+ free energy             :      -38.50967238
+ 3PV              pair   :      164.20155423
+                 bands   :     -161.49827180
+                 charges :        0.00000000
+                 total   :        2.70328243
+
+
+** TODO Gamma lines for bop 
+Seems that the gamma lines for bop are not symmetric at the moment 
+
+[[file:Images/gamma_line_bop_2019-03-14.png]]
+
+One can see that it is not perfectly symmetric upon relaxation. This could be
+due to the lack of periodic boundaries. One must investigate why the number of
+neighbours is so high when it is periodic. 
+
+
+* Completed Tasks                                                   :ARCHIVE:
+** Investigate why rmaxh changes energy
+   - Variation of rmaxh does not change the energy
+   - Obviously the number of neighbours changes with rmaxh.
+   - Conclusion: rmaxh only determines what atoms are its neighbours. 
+   - This is the file which investigates this:
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/check_rmaxh_energy_neighbours.py][check_rmaxh_energy_number_neighbours]]
+   - Here is the data:
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/energy_for_energy_vs_rmaxh.pkl][Energy data for energy vs rmaxh]]
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/rmaxh_for_energy_or_n_neighbours_vs_rmaxh.pkl][rmaxh data for energy/n_neighbours vs rmaxh]]
+     [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_for_n_neighbours_vs_rmaxh.pkl][n_neighbours for n_neighbours vs rmaxh]]
+   - The output pictures are this:
+   #+CAPTION: Variation of energy with change in rmaxh
+   #+NAME:   fig:Energy_vs_rmaxh.png
+   [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/Energy_vs_rmaxh.png]]
+   #+CAPTION: Variation of number of neighbours with change in rmaxh
+   #+NAME:   fig:n_neighbours_vs_rmaxh.png
+   [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
+   
+** Show supercell of BOP working 
+
+** Check Stability Criteria
+   - Check if the matrix is complex
+   - Check if it is positive definite. 
+*** Results 
+    - Without changing anything, the total energy of hcp in Tony's newest
+      model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
+    - I thought perhaps that the lattice parameters and the elastic constants
+      that way might produce a different result.
+    - Minimising the lattice parameters gives an energy of  $E_{\text{tot
+      hcp}} = -0.572351 \text{Ryd}$ with lattice parameters of
+     $a_{\text{hcp}} = 5.4908 \text{bohr}$, $c_{\text{hcp}} = 8.8353 \text{bohr}$ giving $c/a_{\text{hcp}} = 1.6091 \text{bohr}$
+    - Elastic constants, in GPa are \[ C_{11}=185.4, C_{33}=191.8, C_{44}= 39.7, C_{12}= 56.5, C_{13}= 56.1\]
+    - The stability criteria are still satisfied. 
+#+BEGIN_SRC bash
+Checking Stability for tbe elastic constants. 
+ is C_ij matrix positive definite?: True
+
+Criteria for stability:
+
+C_11 - C_12 > 0 
+  True
+
+C_11 + C_12 + C_33 > 0 
+  True
+
+( C_11 + C_12 ) * C_33 - 2 * C_13**2 > 0 
+  True
+
+C_44 > 0 
+  True
+
+(C_11 - C_12) > 0
+  True
+
+( C_11 + C_12 )*C_33 > 0 
+  True
+
+C_11 + C_12 > 0
+  True
+
+C_33 > 0
+  True
+
+C_11 > 0
+  True
+
+#+END_SRC
+** Build force constant matrix for hcp 
+   - If the force constant matrix is positive definite then there shan't be
+     any soft modes.
+*** Results
+    - File used is [[file:~/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py][check_ec_pos_definite.py]]
+    - Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
+      derivatives, one can find the $6\times6$ force constant matrix.
+      \begin{align}
+        \frac{1}{144 h^2} (     &  8.  (  f_{ 1,-2} +  f_{ 2,-1} + f_{-2, 1} + f_{-1, 2} )\\
+                               &-  8.  (  f_{-1,-2} +  f_{-2,-1} + f_{ 1, 2} + f_{ 2, 1} )\\
+                               &-  1.  (  f_{ 2,-2} +  f_{-2, 2} - f_{-2,-2} - f_{ 2, 2} )\\
+                               &+  64. (  f_{-1,-1} +  f_{ 1, 1} - f_{ 1,-1} - f_{-1, 1} )  )
+      \end{align}
+
+      #+BEGIN_SRC bash
+Eigenvalues
+[-0.3173  0.3173  2.5963 -0.3185  0.3185 -2.5963]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 7.7099e-13  2.3901e-11 -2.3901e-11 -3.1729e-01  2.3901e-11 -2.3901e-11]
+ [-7.7099e-13  0.0000e+00  0.0000e+00 -7.7099e-13 -3.1847e-01  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  0.0000e+00  7.7099e-13  0.0000e+00  2.5963e+00]
+ [-3.1729e-01 -2.5443e-11  2.5443e-11  2.5443e-11 -2.5443e-11  2.5443e-11]
+ [-7.7099e-13 -3.1847e-01  0.0000e+00 -7.7099e-13  0.0000e+00  0.0000e+00]
+ [ 7.7099e-13  0.0000e+00  2.5963e+00  7.7099e-13  0.0000e+00  0.0000e+00]]
+      #+END_SRC
+
+    - This matrix is not positive definite and so the structure is not
+      stable.
+
+    - Using second order formula one obtains
+      #+BEGIN_SRC bash
+Eigenvalues
+[ 0.32  -0.32   2.545 -2.545  0.32  -0.32 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[ 0.     0.     0.    -0.32   0.     0.   ]
+ [ 0.     0.     0.     0.    -0.32   0.   ]
+ [ 0.     0.     0.     0.     0.     2.545]
+ [-0.32   0.     0.     0.     0.     0.   ]
+ [ 0.    -0.32   0.     0.     0.     0.   ]
+ [ 0.     0.     2.545  0.     0.     0.   ]]
+
+     #+END_SRC
+
+    - Using another model we get another matrix that is not positive
+      definite. 
+      #+BEGIN_SRC bash
+tbe ti -vhcp=1  -vfddtt=0.4668418806546737 -vqddstt=0.6660968695540497 -vb0tt=94.4011791926749 
+-vp0tt=1.1902574670213237 -vb1tt=-26.704816810939302 -vp1tt=0.9999600888309667 
+-vcr1=-6.158653986495596 -vcr2=3.9496749559495172 -vcr3=-1.0282840982939534 
+-vndt=1.992406298332605 -vahcp=5.5274  -vqq=1.5997394796830335 -vrmaxh=8.51 -vnk=30 
+Eigenvalues
+[ 1.8512 -1.8512  0.2823 -0.2823 -0.281   0.281 ]
+
+ Is force constant matrix positive definite? False
+Force Constant Matrix
+[[-2.4672e-13 -4.8572e-13 -5.0114e-13 -2.8232e-01  0.0000e+00  1.0618e-03]
+ [-4.8572e-13  0.0000e+00  0.0000e+00  0.0000e+00 -2.8103e-01  0.0000e+00]
+ [-5.0114e-13  0.0000e+00  0.0000e+00  1.0618e-03  0.0000e+00  1.8512e+00]
+ [-2.8232e-01  0.0000e+00  1.0618e-03 -2.5443e-13  0.0000e+00 -1.0618e-03]
+ [ 0.0000e+00 -2.8103e-01  2.4672e-13  0.0000e+00  0.0000e+00  0.0000e+00]
+ [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
+      #+END_SRC
+
+** Make dislocations go through centre of triangle of atoms 
+
+** Investigate why the gamma surface minima are not along the lines joining the vectors. 
+
+** Change the lattice vectors to make the dislocation displacement fields periodic
+
+** Why is the displacement in the x direction in the graphs of create cells?
+
+** Make sure that the displacements are periodic 
+
+** Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+
+** Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
+** Python script: remove include statements  -->  One file.  
+
+
+
+
+
+** DONE Could one see how to use Ising model SFEs and Fourier Interpolation?
+CLOSED: [2019-03-13 Wed 19:37]
+- Maybe one can do this for the Prismatic stacking fault.
+  - The calculation only depends of periodicity perpendicular to the plane
+    that one wants the stacking fault on.
+  - This means that one can have a stacking that is probably ABCD or something
+    Must investigate this further. 
+** DONE Periodic dislocation arrays
+CLOSED: [2019-03-13 Wed 20:21]
+*** Clouet vs Cai S and O configuration
+Using an array like this
+
+[[file:Images/prismatic_quadrupole_wrong.png][Dipole to make quadrupolar array: before]]
+
+
+Gives a variation of sx and sy, the vector that corrects for the spurious
+linear term in the periodic solution like
+[[file:Images/variation_of_sx_sy.png][Variation of sx and sy]] which should be approximately constant over the whole
+of the cell. 
+
+Makes cell like this 
+[[file:Images/quadrupole_dislocations_periodic_wrong.png][Dipole to make quadrupolar array: after]]
+
+
+With higher truncation limit for z we have:
+
+[[file:Images/variationofsxsyhighertrunc.png][Variation of sx and sy with higher truncation (5,30)]]
+
+Have come to the conclusion that Bulatov and Cai's work is reproducible, but
+the statement by Emmanuel Clouet, that he took into effect the periodicity of
+the lattice, seems dubious, at least from the standpoint of a periodic
+displacement field. 
+
+This is because, in Cai's work, one finds a linear correction 
+$\mathbf{s}\cdot\mathbf{r}$ to the displacement modified by the periodic
+images, $u_{\text{sum}}$.
+When the dislocation dipole is in the same glide plane, as in Cai's work, 
+the linear correction vector $\mathbf{s}$ (this is a tensor in general but it is just a
+vector for one component of the displacement field), should be a constant. And
+it is indeed a constant that varies only slightly depending on where one
+measures it. 
+
+Following the S or the O configuration like Clouet, one finds that there are
+/distinct/ solutions for this $\mathbf{s}$ correction term depending the
+position of measurement: there is one solution on the outer edges of the cut
+planes and then another distinct solution inside. 
+
+If one goes through and adds in the contribution from periodic dipoles one
+does not find a periodic field, and even more troubling, is the fact that
+atoms are displaced by a very large amount from the original position in the
+unit cell ($\approx 100$ a.u.). 
+*** Periodic dislocation dipoles Prismatic plane
+*** Results
+<2019-03-12 Tue 10:20>
+**** Prismatic quadrupole cell size 12 x 12 x 1
+***** Intro
+Following the prescription set out by Tarrat, Clouet and Cai, one made a
+supercell that is in the S configuration with a dislocation dipole that obeys
+periodic displacements with an additional strain applied to the cell such that
+the plastic strain that is introduced into the cell from the dislocation
+dipole is cancelled. 
+***** Results
+With this cell size one found that there was weird behaviour with the
+dislocations. 
+This cell used 576 atoms. Upon relaxation, it seemed that the dislocations
+were attracted to each other. One of the dislocations, only the one in the
+lower left quadrant, dissociated into three partials:
+- a $1/3[ 1 -1 0 0 ]$ dislocation which
+  had it's core, according to ovito, displaced from the original position by
+  roughly c/2 downwards and 2a to the right
+- a $1/18[-4 0 4 3]$ dislocation which was situated approximately c/2 down and
+  1/2a to the left
+- and a $1/18[4 -6 2 -3]$ partial situated c upwards and 1/2a across.
+***** Discussion
+It seems that a larger cell size is necessary, even though in Clouet they used
+cell sizes of 100 and 256 atoms in the S configuration. 
+
+This implies that simply something is wrong with the implementation. 
+
+The cell really is periodic in displacement so that should not be an issue. 
+
+The model is certainly not perfect with the elastic constants being quite
+wrong. 
+
+The addition of strain to the lattice follows the paper by Clouet. 
+Perhaps a calculation by hand is necessary for validation of this methods. 
+
+The dislocation displacements are calculated using anisotropic elasticty
+theory, perhaps the transformation that is being used to transform from the
+Cartesian coordinate system of the elastic constants to that of the
+dislocation reference frame is not perfect. 
+
+***** TODO Check the transformation of the elastic constants is correct
+
+***** TODO Validate the formula used to add strain to the lattice vectors 
+
+***** TODO Find out what is the interaction energy of these dislocations and see if this has a bearing on the simulation
+
+* Bibliography 
+<<bibliography link>>
+
+bibliographystyle:unsrt
+bibliography:./bibliography/org-refs.bib
+
+# \bibliographystyle{plain}
+# \bibliography{org-refs.bib}
