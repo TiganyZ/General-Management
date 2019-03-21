@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Corrosion and Plasticity in Ti-O systems</title>
+<meta name="author" content="(Tigany Zarrouk)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/solarized.css" id="theme"/>
+
+<link rel="stylesheet" href="./extra.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Corrosion and Plasticity in Ti-O systems</h1><h2 class="author">Tigany Zarrouk</h2><h2 class="email"><a href="mailto:tigany.zarrouk@kcl.ac.uk">tigany.zarrouk@kcl.ac.uk</a></h2><h2 class="date">09.04.2019</h2><p class="date">Created: 2019-03-21 Thu 22:30</p>
+</section>
+
+
+<section>
+<section id="slide-org07b192d">
+<h2 id="org07b192d">Motivation</h2>
+<ul>
+<li>Titanium alloys are used in highly demanding circumstances</li>
+<li>Brittle oxide layer can crack.</li>
+<li>Solutes affect dislocation mobility and hardening.</li>
+<li>Interaction between oxygen and dislocation cores are not clear.</li>
+<li>Need for atomistic modelling.</li>
+<li>Exploration of Ti/oxide scale interface will give insights into oxygen
+diffusion, oxygen induces brittlness and stress corrosion cracking in Ti
+alloys.</li>
+
+</ul>
+<aside class="notes">
+<ul>
+<li>Corrosion resistance, high strength to weight ratio.</li>
+<li>Ti is used in commercial jet airliners</li>
+
+</ul>
+
+</aside>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org741ac42">
+<h2 id="org741ac42">Quantum Methods</h2>
+<ul>
+<li>Density Functional Theory is not feasible.</li>
+<li>System size is limited due to computational cost.</li>
+<li>Boundaries of cell affect relaxation of core more.</li>
+<li>Semi-empirical method is more computationally efficient.</li>
+
+</ul>
+
+</section>
+<section id="slide-org31a16fa">
+<h3 id="org31a16fa">Tight Binding</h3>
+<ul>
+<li>Tight binding is an approximation to DFT.</li>
+<li>Overlaps between atomic orbitals are key parameters.</li>
+<li>Parameters can be fitted to experimental data</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb18509a">
+<h3 id="orgb18509a">BOP</h3>
+<ul>
+<li>BOP is a faster but less accurate \(\mathcal{O}(N)\) method of interatomic
+force calculation within tight binding.</li>
+<li>One builds a local density of states from moments, giving detailed
+electronic structure information.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org2557fcf">
+<h2 id="org2557fcf">Parameter Optimisation</h2>
+<ul>
+<li>Optimisation of the parameter set has been achieved under two evolutionary
+algorithms: genetic and particle swarm.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgbb13e75">
+<h3 id="orgbb13e75">Results of optimisation.</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Quantity</th>
+<th scope="col" class="org-left">Predicted</th>
+<th scope="col" class="org-left">target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(a_{\alpha}\)</td>
+<td class="org-left">5.42    bohr</td>
+<td class="org-left">5.57    bohr</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{\alpha}\)</td>
+<td class="org-left">8.72   bohr</td>
+<td class="org-left">8.85    bohr</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{11}\)</td>
+<td class="org-left">221.8 GPa</td>
+<td class="org-left">176.1 GPa</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{33}\)</td>
+<td class="org-left">194.2 GPa</td>
+<td class="org-left">190.5 GPa</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{44}\)</td>
+<td class="org-left">58.6  GPa</td>
+<td class="org-left">50.8  GPa</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{12}\)</td>
+<td class="org-left">71.4  GPa</td>
+<td class="org-left">86.9  GPa</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{13}\)</td>
+<td class="org-left">60.0  GPa</td>
+<td class="org-left">68.3  GPa</td>
+</tr>
+
+<tr>
+<td class="org-left">\(a_{\omega}\)</td>
+<td class="org-left">8.50   bohr</td>
+<td class="org-left">8.73   bohr</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{\omega}\)</td>
+<td class="org-left">5.27   bohr</td>
+<td class="org-left">5.32   bohr</td>
+</tr>
+
+<tr>
+<td class="org-left">\(a_{\beta}\)</td>
+<td class="org-left">5.92   bohr</td>
+<td class="org-left">6.17   bohr</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\Delta E(\omega-\alpha)\)</td>
+<td class="org-left">5.16   Ryd</td>
+<td class="org-left">-0.73  Ryd</td>
+</tr>
+
+<tr>
+<td class="org-left">bandwidth</td>
+<td class="org-left">0.41   Ryd</td>
+<td class="org-left">0.42   Ryd</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc998cc3">
+<h2 id="orgc998cc3">Phonon Spectra</h2>
+<ul>
+<li>Phonon spectra were completed for \(\alpha\), \(\omega\) and \(\beta\) phases with
+the new model.</li>
+
+</ul>
+
+</section>
+<section id="slide-org279bd97">
+<h3 id="org279bd97">\(\alpha\) phase</h3>
+<img width="450" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
+<img width="400" src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png">
+
+
+</section>
+<section id="slide-org1c115dc">
+<h3 id="org1c115dc">\(\omega\) phase</h3>
+
+<div id="org84a1dbf" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png" alt="omega-band_dos_2019-03-21-1.png" width="90%" />
+</p>
+</div>
+
+
+
+</section>
+<section id="slide-orgf71ba0f">
+<h3 id="orgf71ba0f">\(\beta\) phase</h3>
+
+<div id="orga67ab21" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/bcc-band_dos_2019-03-21-1.png" alt="bcc-band_dos_2019-03-21-1.png" width="90%" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org8d6c7d0">
+<h2 id="org8d6c7d0">Free Energies</h2>
+<div class="outline-text-2" id="text-org8d6c7d0">
+</div>
+</section>
+<section id="slide-orgb06f5bb">
+<h3 id="orgb06f5bb">Vibrational Free Energy</h3>
+
+<div id="org4648183" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/vibrational_free_energy_2019-03-21.png" alt="vibrational_free_energy_2019-03-21.png" width="80%" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgedebdbd">
+<h3 id="orgedebdbd">Total Free Energy</h3>
+
+<div id="org8133f4f" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_2019-03-21.png" alt="enthalpy_and_vibrational_Rydberg_2019-03-21.png" width="80%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+Due to the phonon modes being soft then the contribution to the free energy
+for the bcc phase is not as much. 
+</p>
+
+<p>
+This is why the bcc phase has a higher total free energy than the other
+phases. 
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org3052356">
+<h2 id="org3052356">Gamma Surfaces</h2>
+<ul>
+<li>\(\gamma\) -surfaces are plots of the excess energies with the movement of
+atoms on a fault plane.</li>
+<li>Stable stacking faults and dissociations can be seen from the local minima.</li>
+
+</ul>
+
+
+</section>
+<section id="slide-orgaab353e">
+<h3 id="orgaab353e">Basal gamma surface</h3>
+
+<div id="org26cf7d6" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/basal_gamma_surface_tbe_2019-03-21_format.png" alt="basal_gamma_surface_tbe_2019-03-21_format.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>\(\gamma\) surfaces for the basal plane.</p>
+</div>
+
+
+
+
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7ab5f20">
+<h2 id="org7ab5f20">Core structures</h2>
+<ul>
+<li>Dislocation cores are sensitive to boundary conditions.</li>
+<li>Sufficient resolution of core structure is necessary ascertain how
+dislocation glide is modified.</li>
+
+</ul>
+
+</section>
+<section id="slide-org8e70a62">
+<h3 id="org8e70a62">Periodic Cell</h3>
+
+</section>
+<section id="slide-org84c9ced">
+<h3 id="org84c9ced">Hexagonal Cell</h3>
+
+<div id="orgc954ab8" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/hexagonal_cell_inert_prismatic_screw_core.png" alt="hexagonal_cell_inert_prismatic_screw_core.png" />
+</p>
+<p><span class="figure-number">Figure 6: </span>\(\langle 11 \bar{2} 0 \rangle\) prismatic screw dislocation in hexagonal prism cell.</p>
+</div>
+
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org13fb6e6">
+<h2 id="org13fb6e6">Vacancy formation energies</h2>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'h/v',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+margin: 0.01,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

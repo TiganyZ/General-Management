@@ -1,0 +1,159 @@
+#+ATTR_HTML: font-size: 1.2em
+#+TITLE: Corrosion and Plasticity in Ti-O systems
+#+Author: Tigany Zarrouk 
+#+Date: 09.04.2019
+#+Email: tigany.zarrouk@kcl.ac.uk
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+OPTIONS: author:t date:t email:t 
+#+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
+#+REVEAL_EXTRA_CSS: ./extra.css
+#+REVEAL_THEME: solarized
+#+REVEAL_TRANS: linear 
+
+
+* Motivation 
+- Titanium alloys are used in highly demanding circumstances
+- Brittle oxide layer can crack.
+- Solutes affect dislocation mobility and hardening.
+- Interaction between oxygen and dislocation cores are not clear.
+- Need for atomistic modelling.
+- Exploration of Ti/oxide scale interface will give insights into oxygen
+  diffusion, oxygen induces brittlness and stress corrosion cracking in Ti
+  alloys. 
+#+BEGIN_NOTES
+- Corrosion resistance, high strength to weight ratio.
+- Ti is used in commercial jet airliners
+#+END_NOTES
+
+
+* Quantum Methods
+- Density Functional Theory is not feasible.
+- System size is limited due to computational cost.
+- Boundaries of cell affect relaxation of core more.
+- Semi-empirical method is more computationally efficient.
+
+** Tight Binding
+- Tight binding is an approximation to DFT.
+- Overlaps between atomic orbitals are key parameters.
+- Parameters can be fitted to experimental data
+
+** BOP
+- BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
+  force calculation within tight binding.
+- One builds a local density of states from moments, giving detailed
+  electronic structure information. 
+
+* Parameter Optimisation
+- Optimisation of the parameter set has been achieved under two evolutionary
+  algorithms: genetic and particle swarm.
+
+** Results of optimisation. 
+
+#+ATTR_HTML: :width 100%
+| Quantity                  | Predicted    | target       |
+|---------------------------+--------------+--------------|
+| $a_{\alpha}$              | 5.42    bohr | 5.57    bohr |
+| $c_{\alpha}$              | 8.72   bohr  | 8.85    bohr |
+| $c_{11}$                  | 221.8 GPa    | 176.1 GPa    |
+| $c_{33}$                  | 194.2 GPa    | 190.5 GPa    |
+| $c_{44}$                  | 58.6  GPa    | 50.8  GPa    |
+| $c_{12}$                  | 71.4  GPa    | 86.9  GPa    |
+| $c_{13}$                  | 60.0  GPa    | 68.3  GPa    |
+| $a_{\omega}$              | 8.50   bohr  | 8.73   bohr  |
+| $c_{\omega}$              | 5.27   bohr  | 5.32   bohr  |
+| $a_{\beta}$               | 5.92   bohr  | 6.17   bohr  |
+| $\Delta E(\omega-\alpha)$ | 5.16   Ryd   | -0.73  Ryd   |
+| bandwidth                 | 0.41   Ryd   | 0.42   Ryd   |
+
+
+
+* Phonon Spectra
+- Phonon spectra were completed for $\alpha$, $\omega$ and $\beta$ phases with
+  the new model. 
+
+** $\alpha$ phase
+:PROPERTIES:
+:END:
+#+REVEAL_HTML:  <img width="450" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png">
+
+
+** $\omega$ phase
+#+NAME: omega_phonon_band_spectrum
+#+ATTR_HTML: :width 90%
+[[file:~/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png]]
+
+
+
+** $\beta$ phase
+#+NAME: bcc_phonon_band_spectrum
+#+ATTR_HTML: :width 90%
+[[file:~/Documents/docs/Management/Images/bcc-band_dos_2019-03-21-1.png]]
+
+* Free Energies
+
+** Vibrational Free Energy
+#+NAME: Vibrational free energy
+#+ATTR_HTML: :width 80%
+[[file:~/Documents/docs/Management/Images/vibrational_free_energy_2019-03-21.png]]
+
+** Total Free Energy
+#+NAME: Total Free energy 
+#+ATTR_HTML: :width 80%
+[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_2019-03-21.png]]
+
+#+BEGIN_NOTES
+
+Due to the phonon modes being soft then the contribution to the free energy
+for the bcc phase is not as much. 
+
+This is why the bcc phase has a higher total free energy than the other
+phases. 
+
+#+END_NOTES
+
+* Gamma Surfaces
+- $\gamma$ -surfaces are plots of the excess energies with the movement of
+  atoms on a fault plane.
+- Stable stacking faults and dissociations can be seen from the local minima.
+
+
+** Basal gamma surface
+#+CAPTION: $\gamma$ surfaces for the basal plane. 
+#+NAME: basal_gamma_surface_tbe
+[[file:~/Documents/docs/Management/Images/basal_gamma_surface_tbe_2019-03-21_format.png]]
+
+# Should I put in a comparison of the gamma lines and how tbe compares? 
+
+
+
+
+
+
+
+
+* Core structures
+- Dislocation cores are sensitive to boundary conditions.
+- Sufficient resolution of core structure is necessary ascertain how
+  dislocation glide is modified. 
+
+** Periodic Cell 
+# :PROPERTIES:
+# :reveal_background: ../Images/hexagonal_cell_inert_prismatic_screw_core.png
+# :reveal_background_size: 700px
+# :reveal_background_trans: slide
+# :END:
+
+** Hexagonal Cell 
+
+#+CAPTION: $\langle 11 \bar{2} 0 \rangle$ prismatic screw dislocation in hexagonal prism cell. 
+#+NAME: hex_prismatic_screw
+[[file:~/Documents/docs/Management/Images/hexagonal_cell_inert_prismatic_screw_core.png]]
+
+
+
+
+
+* Vacancy formation energies
+
+

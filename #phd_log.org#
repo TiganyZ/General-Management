@@ -16,6 +16,7 @@
 
 * Tasks
 
+
 ** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
 ** TODO Calculate solution enthalpy of oxygen in titanium. 
 - The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
@@ -233,38 +234,18 @@ Objective function: 1657010
 DEADLINE: <2019-04-09 Tue>
 
 Presentation: 
-*** Free energies of Vibration for alpha, beta and omega phases
-*** Dislocations
-- Prismatic plane
-  - Get the Peierls stress
-  - Oxygen and Hydrogen interstitials in Tetrahedral and Octahedral sites
-*** Gamma surfaces for all the phases.
-*** Movies
-**** Notes on making movies
-One has installed vmd. So one can just change some lines in the format such
-that it can be used by vmd and ovito. 
-
-- To get movies in tbe one can use the commands
-  - " --md "
-    - " --xbs "
-    - " --movmv=10" Records every 10 frames
-  - "-xyz=N" to get the xyz format.
-*** Relaxations
-**** O in octahedral site
-In a 128 atom cell (4 x 4 x 4) one finds that the relaxed energy is 
-
- Tr[rho]                 :      259.70933133
- band structure energy   :      -66.75903118
- pair potential energy   :       19.41990494
- reference energy        :       -8.82960000
- total energy            :      -38.50952624
- free energy             :      -38.50967238
- 3PV              pair   :      164.20155423
-                 bands   :     -161.49827180
-                 charges :        0.00000000
-                 total   :        2.70328243
-
-
+  1. Free energies of Vibration for alpha, beta and omega phases
+  2. Dislocations
+     - Prismatic plane
+       - Get the Peierls stress
+       - Oxygen and Hydrogen interstitials in Tetrahedral and Octahedral sites
+  3. Gamma surfaces for all the phases.
+  4. Movies
+     - To get movies in tbe one can use the commands
+       - " --md "
+         - " --xbs "
+         - " --movmv=10" Records every 10 frames
+       - "-xyz=N" to get the xyz format. 
 ** TODO Gamma lines for bop 
 Seems that the gamma lines for bop are not symmetric at the moment 
 
@@ -273,8 +254,6 @@ Seems that the gamma lines for bop are not symmetric at the moment
 One can see that it is not perfectly symmetric upon relaxation. This could be
 due to the lack of periodic boundaries. One must investigate why the number of
 neighbours is so high when it is periodic. 
-
-
 * Completed Tasks                                                   :ARCHIVE:
 ** Investigate why rmaxh changes energy
    - Variation of rmaxh does not change the energy
@@ -535,3 +514,24 @@ bibliography:./bibliography/org-refs.bib
 
 # \bibliographystyle{plain}
 # \bibliography{org-refs.bib}
+
+* Current Papers
+
+** Omega phase transformation – morphologies and mechanisms. 
+Banerjee, S., Tewari, R., & Dey, G. K. (2006). 
+International Journal of Materials Research, 97(7),
+963–977. doi:10.3139/146.101327 
+cite:Banerjee_2006
+
+
+Omega is found in both trigonal and perfect (hexagonal) forms. 
+#
+Positions are:
+A: 0. 0. 0. 
+B: 2/3 1/3 (1/2-z); 1/3 2/3 (1/2+z)
+
+Where z = 1/6 is cubic symmetry. 
+
+The two atomic sites in the omega unit cell are not equivalent.  B-type atomic
+sites are more closely packed as compare to the A-type atomic site.
+

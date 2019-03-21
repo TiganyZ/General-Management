@@ -1182,7 +1182,7 @@ where $\varepsilon_{\mathbf{q} + G + G'}^0$ are non-interactng single-particle
 energies and $f_{\mathbf{k}}^0$ are the associated occupation numbers. 
 
 The point is that Brillouin zone sampling is effective with a small number of
-$\mathbf{q}$-vectors only if the funciton bein sampled is smooth in
+$\mathbf{q}$ -vectors only if the funciton bein sampled is smooth in
 /reciprocal/ space. But because of the occupation numbers, the response
 function actually becomes far from smooth and is in fact discontinuous at zero
 temperature. 
@@ -1259,7 +1259,7 @@ electrons as
 #+BEGIN_LaTeX
 \begin{align}
 \Phi_{\alpha}(T) &= 2 \text{Tr}\{ f(\hat{x}) \hat{H} - (1 - \alpha) k_{\text{B}} T s( f( \hat{x} ) )  \}\\
-\mathbf{F}^{(\alpha)}_{i} &= -2 \text{Tr}\Big\{ \rho_{\text{eff}}^{(\alpha)} \frac{\partial \hat{H}}{\partial \mathbf{r}_i}\Big } 
+\mathbf{F}^{(\alpha)}_{i} &= -2 \text{Tr}\Big\{ \rho_{\text{eff}}^{(\alpha)} \frac{\partial \hat{H} }{ \partial \mathbf{r}_{i} } \Big\} 
 \end{align}
 #+END_LaTeX
 
@@ -1281,6 +1281,21 @@ ground-state density matrix.
 
 This works well if the electron temperature is less than $10\%$ of the
 bandwidth. 
+
+***** Fetter and Walacker
+
+Essentially the density matrix causes an exponential damping of Fridel
+oscillations 
+of the form $\text{exp}^{-\alpha /( \text{k}_{\text{B}} T ) }$. So then it
+means that one can converge faster. 
+
+Another way of thinking of this is the fact that at the fermi level in
+k-space, one has to fourier transform to go back into real space. As the
+energies are functions of $k$ due to Bloch's theorem, one has to fourier
+transform them back in to real space to see to true contribution. As there are
+finite occupancies this means that essentially at the fermi level there are
+'blocky parts' like a histogram which mean that transforming back, one has
+waves in real space (Fridel oscillations). 
 
 
 *** Theses

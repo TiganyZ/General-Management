@@ -26,7 +26,6 @@
   cells.
 - Influence of cell sizes and solution enthalpy needs to be considered.
 
-** TODO Use python voronoi around a surface to find triangles through which dislocations will pass
 ** TODO Has anyone investigated the stacking faults of Omega phase?
    - Maybe as Omega phase doesn't occur that often, perhaps it has not been
      studied in detail.
@@ -256,8 +255,8 @@ due to the lack of periodic boundaries. One must investigate why the number of
 neighbours is so high when it is periodic. 
 
 
-** Completed Tasks                                                 :ARCHIVE:
-*** Investigate why rmaxh changes energy
+* Completed Tasks                                                   :ARCHIVE:
+** Investigate why rmaxh changes energy
    - Variation of rmaxh does not change the energy
    - Obviously the number of neighbours changes with rmaxh.
    - Conclusion: rmaxh only determines what atoms are its neighbours. 
@@ -275,12 +274,12 @@ neighbours is so high when it is periodic.
    #+NAME:   fig:n_neighbours_vs_rmaxh.png
    [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
    
-*** Show supercell of BOP working 
+** Show supercell of BOP working 
 
-*** Check Stability Criteria
+** Check Stability Criteria
    - Check if the matrix is complex
    - Check if it is positive definite. 
-**** Results 
+*** Results 
     - Without changing anything, the total energy of hcp in Tony's newest
       model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
     - I thought perhaps that the lattice parameters and the elastic constants
@@ -324,10 +323,10 @@ C_11 > 0
   True
 
 #+END_SRC
-*** Build force constant matrix for hcp 
+** Build force constant matrix for hcp 
    - If the force constant matrix is positive definite then there shan't be
      any soft modes.
-**** Results
+*** Results
     - File used is [[file:~/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py][check_ec_pos_definite.py]]
     - Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
       derivatives, one can find the $6\times6$ force constant matrix.
@@ -391,35 +390,35 @@ Force Constant Matrix
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
       #+END_SRC
 
-*** Make dislocations go through centre of triangle of atoms 
+** Make dislocations go through centre of triangle of atoms 
 
-*** Investigate why the gamma surface minima are not along the lines joining the vectors. 
+** Investigate why the gamma surface minima are not along the lines joining the vectors. 
 
-*** Change the lattice vectors to make the dislocation displacement fields periodic
+** Change the lattice vectors to make the dislocation displacement fields periodic
 
-*** Why is the displacement in the x direction in the graphs of create cells?
+** Why is the displacement in the x direction in the graphs of create cells?
 
-*** Make sure that the displacements are periodic 
+** Make sure that the displacements are periodic 
 
-*** Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
+** Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
 
-*** Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
-*** Python script: remove include statements  -->  One file.  
-
-
+** Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
+** Python script: remove include statements  -->  One file.  
 
 
 
-*** DONE Could one see how to use Ising model SFEs and Fourier Interpolation?
+
+
+** DONE Could one see how to use Ising model SFEs and Fourier Interpolation?
 CLOSED: [2019-03-13 Wed 19:37]
 - Maybe one can do this for the Prismatic stacking fault.
   - The calculation only depends of periodicity perpendicular to the plane
     that one wants the stacking fault on.
   - This means that one can have a stacking that is probably ABCD or something
     Must investigate this further. 
-*** DONE Periodic dislocation arrays
+** DONE Periodic dislocation arrays
 CLOSED: [2019-03-13 Wed 20:21]
-**** Clouet vs Cai S and O configuration
+*** Clouet vs Cai S and O configuration
 Using an array like this
 
 [[file:Images/prismatic_quadrupole_wrong.png][Dipole to make quadrupolar array: before]]
@@ -461,17 +460,17 @@ If one goes through and adds in the contribution from periodic dipoles one
 does not find a periodic field, and even more troubling, is the fact that
 atoms are displaced by a very large amount from the original position in the
 unit cell ($\approx 100$ a.u.). 
-**** Periodic dislocation dipoles Prismatic plane
-**** Results
+*** Periodic dislocation dipoles Prismatic plane
+*** Results
 <2019-03-12 Tue 10:20>
-***** Prismatic quadrupole cell size 12 x 12 x 1
-****** Intro
+**** Prismatic quadrupole cell size 12 x 12 x 1
+***** Intro
 Following the prescription set out by Tarrat, Clouet and Cai, one made a
 supercell that is in the S configuration with a dislocation dipole that obeys
 periodic displacements with an additional strain applied to the cell such that
 the plastic strain that is introduced into the cell from the dislocation
 dipole is cancelled. 
-****** Results
+***** Results
 With this cell size one found that there was weird behaviour with the
 dislocations. 
 This cell used 576 atoms. Upon relaxation, it seemed that the dislocations
@@ -483,7 +482,7 @@ lower left quadrant, dissociated into three partials:
 - a $1/18[-4 0 4 3]$ dislocation which was situated approximately c/2 down and
   1/2a to the left
 - and a $1/18[4 -6 2 -3]$ partial situated c upwards and 1/2a across.
-****** Discussion
+***** Discussion
 It seems that a larger cell size is necessary, even though in Clouet they used
 cell sizes of 100 and 256 atoms in the S configuration. 
 
@@ -502,11 +501,11 @@ theory, perhaps the transformation that is being used to transform from the
 Cartesian coordinate system of the elastic constants to that of the
 dislocation reference frame is not perfect. 
 
-****** TODO Check the transformation of the elastic constants is correct
+***** TODO Check the transformation of the elastic constants is correct
 
-****** TODO Validate the formula used to add strain to the lattice vectors 
+***** TODO Validate the formula used to add strain to the lattice vectors 
 
-****** TODO Find out what is the interaction energy of these dislocations and see if this has a bearing on the simulation
+***** TODO Find out what is the interaction energy of these dislocations and see if this has a bearing on the simulation
 
 * Bibliography 
 <<bibliography link>>
