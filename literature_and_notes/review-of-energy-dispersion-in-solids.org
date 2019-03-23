@@ -1,0 +1,46 @@
+#+TITLE: Notes: A Review of Energy Dispersion in Solids
+#+Author: Tigany Zarrouk 
+
+* Landau Fermi Liquid
+ 
+We start with the Fermi gas.  This is a system of /non-interacting/ fermions. This system is
+used to describe electrons in metals at low temperatures and the Landau fermi liquid theory was
+used to describe liquid Helium 3. One finds that the description of the interacting liquid is
+the same as the description of the Fermi gas, just that the excitations of the liquid are
+renormalised with a mass. This is a quasiparticle.
+
+From this system of non-interacting fermions they have a spin and a spatial dependence. The
+goal here is to describe a solution to the many body problem. We can separate the wavefunctions
+into a product state and enforce the antisymmetry condition by a slater determinant.
+
+One can define a Fermi energy from this configuration of electrons.
+
+The Landau Fermi Liquid is when there is a potential that is "switched on" adiabatically
+(slowly such that the states don't really change). It can be seen that small excitations near
+the Fermi surface can be described by using the same description of energies of excitation of a
+free electron gas, but just that the mass has been "renormalised".
+
+So turning on interactions just means that the "particles" that one can use to describe the
+system are fermions with different masses.
+
+* A review of the band structure theory of solids
+
+We start out with a general crystal structure that has some lattice vectors for its unit
+cell. One can define reciprocal lattice vectors in the k-space of this lattice.
+
+In a crystal there is a periodic potential. One can use Bloch's theorem such that the potential
+can be described by a fourier series along. This is essentially an expansion of plane waves.
+
+Using this one can find the band energies (how energies vary with k vector/ crystal
+momentum). Due to the periodicity enforced, one finds that one only needs to consider the first
+brillouin zone of the reciprocal lattice to get these energies.
+
+In the nearly free electron model one finds that there is a repulsion between the bands at the
+brillouin zone boundary. This corresponds to standing waves in the solid from Bragg
+scattering. This means that waves interfere constructively at that particular wavevector, they are essentially periodic like the potential. 
+
+*Does this mean that these standing waves create a repulsive potential?*
+
+The Fermi energy is the energy that is the energy below which all electrons in a solid at zero temperature are occupied. Within a periodic material, there are parts of the Fermi sphere that extend past the first brillouin zone. These other parts get folded in. 
+
+Due to the nearly free electron model, there are band gaps at the edges of the brillouin zone. This means that the Fermi surface is distorted near these points. 

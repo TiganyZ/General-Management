@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Corrosion and Plasticity in Ti-O systems</title>
-<meta name="author" content="(Tigany Zarrouk)"/>
+<meta name="author" content="Tigany Zarrouk"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
@@ -28,13 +28,14 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Corrosion and Plasticity in Ti-O systems</h1><h2 class="author">Tigany Zarrouk</h2><h2 class="email"><a href="mailto:tigany.zarrouk@kcl.ac.uk">tigany.zarrouk@kcl.ac.uk</a></h2><h2 class="date">09.04.2019</h2><p class="date">Created: 2019-03-21 Thu 22:29</p>
+<section id="sec-title-slide">
+<h1 class="title">Corrosion and Plasticity in Ti-O systems</h1><h2 class="author">Tigany Zarrouk</h2><h2 class="email"><a href="mailto:tigany.zarrouk@kcl.ac.uk">tigany.zarrouk@kcl.ac.uk</a></h2><h2 class="date">09.04.2019</h2><p class="date">Created: 2019-03-22 Fri 17:51</p>
 </section>
 
 
 <section>
-<section id="slide-org604304a">
-<h2 id="org604304a">Motivation</h2>
+<section id="slide-org5b2cd76">
+<h2 id="org5b2cd76">Motivation</h2>
 <ul>
 <li>Titanium alloys are used in highly demanding circumstances</li>
 <li>Brittle oxide layer can crack.</li>
@@ -59,8 +60,8 @@ alloys.</li>
 </section>
 </section>
 <section>
-<section id="slide-org5249ace">
-<h2 id="org5249ace">Quantum Methods</h2>
+<section id="slide-orgfebe16b">
+<h2 id="orgfebe16b">Quantum Methods</h2>
 <ul>
 <li>Density Functional Theory is not feasible.</li>
 <li>System size is limited due to computational cost.</li>
@@ -70,8 +71,8 @@ alloys.</li>
 </ul>
 
 </section>
-<section id="slide-org603a8b4">
-<h3 id="org603a8b4">Tight Binding</h3>
+<section id="slide-orgf798afb">
+<h3 id="orgf798afb">Tight Binding</h3>
 <ul>
 <li>Tight binding is an approximation to DFT.</li>
 <li>Overlaps between atomic orbitals are key parameters.</li>
@@ -80,8 +81,8 @@ alloys.</li>
 </ul>
 
 </section>
-<section id="slide-org016de90">
-<h3 id="org016de90">BOP</h3>
+<section id="slide-org6a340b1">
+<h3 id="org6a340b1">BOP</h3>
 <ul>
 <li>BOP is a faster but less accurate \(\mathcal{O}(N)\) method of interatomic
 force calculation within tight binding.</li>
@@ -93,8 +94,8 @@ electronic structure information.</li>
 </section>
 </section>
 <section>
-<section id="slide-org0b389ac">
-<h2 id="org0b389ac">Parameter Optimisation</h2>
+<section id="slide-org9465318">
+<h2 id="org9465318">Parameter Optimisation</h2>
 <ul>
 <li>Optimisation of the parameter set has been achieved under two evolutionary
 algorithms: genetic and particle swarm.</li>
@@ -102,8 +103,8 @@ algorithms: genetic and particle swarm.</li>
 </ul>
 
 </section>
-<section id="slide-org9e8ad84">
-<h3 id="org9e8ad84">Results of optimisation.</h3>
+<section id="slide-org114a88f">
+<h3 id="org114a88f">Results of optimisation.</h3>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
 
 
@@ -201,8 +202,8 @@ algorithms: genetic and particle swarm.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgd0f5ed7">
-<h2 id="orgd0f5ed7">Phonon Spectra</h2>
+<section id="slide-org22a0196">
+<h2 id="org22a0196">Phonon Spectra</h2>
 <ul>
 <li>Phonon spectra were completed for \(\alpha\), \(\omega\) and \(\beta\) phases with
 the new model.</li>
@@ -210,20 +211,17 @@ the new model.</li>
 </ul>
 
 </section>
-<section id="slide-org0c1bda0">
-<h3 id="org0c1bda0">\(\alpha\) phase</h3>
-<p>
-#+
-</p>
+<section id="slide-org7104e55">
+<h3 id="org7104e55">\(\alpha\) phase</h3>
 <img width="450" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
 <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png">
 
 
 </section>
-<section id="slide-org4b06d5e">
-<h3 id="org4b06d5e">\(\omega\) phase</h3>
+<section id="slide-orga3f56e0">
+<h3 id="orga3f56e0">\(\omega\) phase</h3>
 
-<div id="org258aafa" class="figure">
+<div id="org142e986" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png" alt="omega-band_dos_2019-03-21-1.png" width="90%" />
 </p>
 </div>
@@ -231,10 +229,10 @@ the new model.</li>
 
 
 </section>
-<section id="slide-orgf461749">
-<h3 id="orgf461749">\(\beta\) phase</h3>
+<section id="slide-orgc08683d">
+<h3 id="orgc08683d">\(\beta\) phase</h3>
 
-<div id="org88ef84e" class="figure">
+<div id="org4048439" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/bcc-band_dos_2019-03-21-1.png" alt="bcc-band_dos_2019-03-21-1.png" width="90%" />
 </p>
 </div>
@@ -242,24 +240,24 @@ the new model.</li>
 </section>
 </section>
 <section>
-<section id="slide-org9a1cbcc">
-<h2 id="org9a1cbcc">Free Energies</h2>
-<div class="outline-text-2" id="text-org9a1cbcc">
+<section id="slide-org2476f75">
+<h2 id="org2476f75">Free Energies</h2>
+<div class="outline-text-2" id="text-org2476f75">
 </div>
 </section>
-<section id="slide-orgcbe9867">
-<h3 id="orgcbe9867">Vibrational Free Energy</h3>
+<section id="slide-org87ff205">
+<h3 id="org87ff205">Vibrational Free Energy</h3>
 
-<div id="orgecdf39b" class="figure">
+<div id="org8d47059" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/vibrational_free_energy_2019-03-21.png" alt="vibrational_free_energy_2019-03-21.png" width="80%" />
 </p>
 </div>
 
 </section>
-<section id="slide-orgbb78827">
-<h3 id="orgbb78827">Total Free Energy</h3>
+<section id="slide-org2fc600c">
+<h3 id="org2fc600c">Total Free Energy</h3>
 
-<div id="org13200ae" class="figure">
+<div id="org2dd53ca" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_2019-03-21.png" alt="enthalpy_and_vibrational_Rydberg_2019-03-21.png" width="80%" />
 </p>
 </div>
@@ -284,8 +282,8 @@ phases.
 </section>
 </section>
 <section>
-<section id="slide-org041633e">
-<h2 id="org041633e">Gamma Surfaces</h2>
+<section id="slide-org1e2f92d">
+<h2 id="org1e2f92d">Gamma Surfaces</h2>
 <ul>
 <li>\(\gamma\) -surfaces are plots of the excess energies with the movement of
 atoms on a fault plane.</li>
@@ -295,10 +293,10 @@ atoms on a fault plane.</li>
 
 
 </section>
-<section id="slide-org94249a4">
-<h3 id="org94249a4">Basal gamma surface</h3>
+<section id="slide-org9a9db9a">
+<h3 id="org9a9db9a">Basal gamma surface</h3>
 
-<div id="org5faa95f" class="figure">
+<div id="org3dfb751" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/basal_gamma_surface_tbe_2019-03-21_format.png" alt="basal_gamma_surface_tbe_2019-03-21_format.png" />
 </p>
 <p><span class="figure-number">Figure 5: </span>\(\gamma\) surfaces for the basal plane.</p>
@@ -314,8 +312,8 @@ atoms on a fault plane.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgfb6f9d8">
-<h2 id="orgfb6f9d8">Core structures</h2>
+<section id="slide-org0f23dbc">
+<h2 id="org0f23dbc">Core structures</h2>
 <ul>
 <li>Dislocation cores are sensitive to boundary conditions.</li>
 <li>Sufficient resolution of core structure is necessary ascertain how
@@ -323,15 +321,17 @@ dislocation glide is modified.</li>
 
 </ul>
 
-</section>
-<section id="slide-org785e952">
-<h3 id="org785e952">Periodic Cell</h3>
+
 
 </section>
-<section id="slide-orgb1f5b0f">
-<h3 id="orgb1f5b0f">Hexagonal Cell</h3>
+<section id="slide-org49e4e95">
+<h3 id="org49e4e95">Periodic Cell</h3>
 
-<div id="org9f43bf6" class="figure">
+</section>
+<section id="slide-org2e4adb8">
+<h3 id="org2e4adb8">Hexagonal Cell</h3>
+
+<div id="org1d12d37" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/hexagonal_cell_inert_prismatic_screw_core.png" alt="hexagonal_cell_inert_prismatic_screw_core.png" />
 </p>
 <p><span class="figure-number">Figure 6: </span>\(\langle 11 \bar{2} 0 \rangle\) prismatic screw dislocation in hexagonal prism cell.</p>
@@ -339,20 +339,119 @@ dislocation glide is modified.</li>
 
 
 
-
+</section>
+<section id="slide-orgf4c69c7">
+<h3 id="orgf4c69c7">Relaxation</h3>
 
 </section>
 </section>
 <section>
-<section id="slide-org4a1aae7">
-<h2 id="org4a1aae7">Vacancy formation energies</h2>
+<section id="slide-orgcd3dfb3">
+<h2 id="orgcd3dfb3">Formation and Dissolution energies</h2>
+<div class="outline-text-2" id="text-orgcd3dfb3">
+</div>
+</section>
+<section id="slide-org773d9d9">
+<h3 id="org773d9d9">Vacancy formation energies</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Model</th>
+<th scope="col" class="org-right">\(\Delta E_{\text{formation}}^{\text{vacancy}}\)[eV]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">This work</td>
+<td class="org-right">1.01</td>
+</tr>
+
+<tr>
+<td class="org-left">GGA-PAW Angsten (2013)</td>
+<td class="org-right">1.95</td>
+</tr>
+
+<tr>
+<td class="org-left">Experiment, Hashimoto (1984)</td>
+<td class="org-right">1.27</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>The vacancy formation energy matches quite well with experiment.</li>
+
+</ul>
+
+
+</section>
+<section id="slide-orgea1bcb4">
+<h3 id="orgea1bcb4">Hydrogen Dissolution Energies</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Oxygen Dissolution Energy:</th>
+<th scope="col" class="org-left">Tetrahedral</th>
+<th scope="col" class="org-left">Octahedral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Unrelaxed:</td>
+<td class="org-left">1.4895530 eV</td>
+<td class="org-left">1.2162884 eV</td>
+</tr>
+
+<tr>
+<td class="org-left">Relaxed:</td>
+<td class="org-left">1.0107764 eV</td>
+<td class="org-left">1.0107764 eV</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">-4.800   eV</td>
+<td class="org-left">-6.030 eV Kwasniak  (2013)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">---</td>
+<td class="org-left">-5.592 eV Aksyonov  (2016)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section>
+<section id="slide-orgad9a8ea">
+<h3 id="orgad9a8ea">Oxygen Dissolution Energies</h3>
+</section>
+<section id="slide-orge9dad21">
+<h3 id="orge9dad21">Molecular Dynamics</h3>
 </section>
 </section>
 </div>
 </div>
 <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
 <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
-
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
@@ -365,6 +464,10 @@ center: true,
 slideNumber: 'h/v',
 rollingLinks: false,
 keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+pdfSeparateFragments: true,
+
 overview: true,
 
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme

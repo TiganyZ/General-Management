@@ -4,6 +4,7 @@
 #+Date: 09.04.2019
 #+Email: tigany.zarrouk@kcl.ac.uk
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+org-re-reveal-title-slide: "<\%t><\%a><\%e><\%d>"
 #+OPTIONS: author:t date:t email:t 
 #+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
 #+REVEAL_EXTRA_CSS: ./extra.css
@@ -50,20 +51,22 @@
 ** Results of optimisation. 
 
 #+ATTR_HTML: :width 100%
+|---------------------------+--------------+--------------|
 | Quantity                  | Predicted    | target       |
 |---------------------------+--------------+--------------|
 | $a_{\alpha}$              | 5.42    bohr | 5.57    bohr |
 | $c_{\alpha}$              | 8.72   bohr  | 8.85    bohr |
-| $c_{11}$                  | 221.8 GPa    | 176.1 GPa    |
-| $c_{33}$                  | 194.2 GPa    | 190.5 GPa    |
-| $c_{44}$                  | 58.6  GPa    | 50.8  GPa    |
-| $c_{12}$                  | 71.4  GPa    | 86.9  GPa    |
-| $c_{13}$                  | 60.0  GPa    | 68.3  GPa    |
+| $C_{11}$                  | 221.8 GPa    | 176.1 GPa    |
+| $C_{33}$                  | 194.2 GPa    | 190.5 GPa    |
+| $C_{44}$                  | 58.6  GPa    | 50.8  GPa    |
+| $C_{12}$                  | 71.4  GPa    | 86.9  GPa    |
+| $C_{13}$                  | 60.0  GPa    | 68.3  GPa    |
 | $a_{\omega}$              | 8.50   bohr  | 8.73   bohr  |
 | $c_{\omega}$              | 5.27   bohr  | 5.32   bohr  |
 | $a_{\beta}$               | 5.92   bohr  | 6.17   bohr  |
 | $\Delta E(\omega-\alpha)$ | 5.16   Ryd   | -0.73  Ryd   |
 | bandwidth                 | 0.41   Ryd   | 0.42   Ryd   |
+|---------------------------+--------------+--------------|
 
 
 
@@ -137,12 +140,11 @@ phases.
 - Sufficient resolution of core structure is necessary ascertain how
   dislocation glide is modified. 
 
+
+
 ** Periodic Cell 
-# :PROPERTIES:
-# :reveal_background: ../Images/hexagonal_cell_inert_prismatic_screw_core.png
-# :reveal_background_size: 700px
-# :reveal_background_trans: slide
-# :END:
+
+#+CAPTION: Molecular dynamics simulation of O in an octahedral site
 
 ** Hexagonal Cell 
 
@@ -152,8 +154,40 @@ phases.
 
 
 
+** Relaxation 
+
+#+ATTR_HTML:<video autoplay="true" loop="true" muted="true" width="640"><source src="./relax_o_octahedral_2019-03-15.mp4" type="video/mp4"> </video>
+
+#+ATTR_HTML:@@<video controls width="400" height="300" src="https://archive.org/download/LinusTorvaldsOnGittechTalk/LinusTorvaldsOnGittechTalk.ogv#t=460"></video>@@
+
+* Formation and Dissolution energies
+
+** Vacancy formation energies
 
 
-* Vacancy formation energies
+| Model                         | $\Delta E_{\text{formation}}^{\text{vacancy}}$[eV] |
+|-------------------------------+----------------------------------------------------|
+| This work                     |                                               1.01 |
+| Experiment: Hashimoto (1984)  |                                               1.27 |
+| (DFT) GGA-PAW: Angsten (2013) |                                               1.95 |
+|-------------------------------+----------------------------------------------------|
 
+- The vacancy formation energy matches quite well with experiment. 
+
+
+** Hydrogen Dissolution Energies
+
+| Oxygen Dissolution Energy: | Tetrahedral  | Octahedral                 |
+|----------------------------+--------------+----------------------------|
+| Unrelaxed:                 | 1.4895530 eV | 1.2162884 eV               |
+| Relaxed:                   | 1.0107764 eV | 1.0107764 eV               |
+|                            | -4.800   eV  | -6.030 eV Kwasniak  (2013) |
+|                            | ---          | -5.592 eV Aksyonov  (2016) |
+|----------------------------+--------------+----------------------------|
+
+
+
+** Oxygen Dissolution Energies
+** Molecular Dynamics  
+#+CAPTION: Molecular dynamics simulation of O in an octahedral site
 

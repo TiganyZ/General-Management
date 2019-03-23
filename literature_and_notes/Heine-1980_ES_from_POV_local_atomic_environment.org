@@ -1,0 +1,19 @@
+#+TITLE: Notes: Electronic Structure from the Point of View of the Local Atomic Environment 
+#+AUTHOR: Tigany Zarrouk
+
+* Fundamental Ideas
+  
+  Using k-space fails when the simulations that we want to do are not periodic. 
+  
+  So the fundamental quantity that one should be using is the /local density of states/.  This
+  is a very important quantity for a few reasons:
+
+  1. It is /invariant/ to the boundary conditions imposed (almost, within a few atomic lengths)
+  2. in reality one only has to consider particular
+     elements of the Green's function to calculate it.
+  3. It forgos the use of Bloch's theorem of which has problems where one change will change
+     the eigenstates of the whole crystal when really locally, it should only be affected.
+
+  This is very useful for such things as surfaces. 
+
+  Local density of states is defined as: 
