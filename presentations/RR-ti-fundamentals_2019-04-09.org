@@ -177,6 +177,13 @@ phases.
 
 ** Hydrogen Dissolution Energies
 
+
+# For oxygen in tetrahedral site I actually get
+# E_tet - E_perfect - 0.5 * E_diatomic = -27.14417 eV
+# For Octahedral I get E_f^Octahedral I get the same so oxygen must go into
+# the octahedral site upon relaxation. 
+# UNRELAXED: E_OCT = -24.3479 eV
+# RELAXED  :       = -27.14417
 | Oxygen Dissolution Energy: | Tetrahedral  | Octahedral                 |
 |----------------------------+--------------+----------------------------|
 | Unrelaxed:                 | 1.4895530 eV | 1.2162884 eV               |
@@ -188,6 +195,10 @@ phases.
 
 
 ** Oxygen Dissolution Energies
+
+
+
+
 ** Molecular Dynamics  
 #+CAPTION: Molecular dynamics simulation of O in an octahedral site
 
