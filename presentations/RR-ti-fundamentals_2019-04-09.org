@@ -7,6 +7,7 @@
 #+org-re-reveal-title-slide: "<\%t><\%a><\%e><\%d>"
 #+OPTIONS: author:t date:t email:t 
 #+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
+#+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
 #+REVEAL_EXTRA_CSS: ./extra.css
 #+REVEAL_THEME: solarized
 #+REVEAL_TRANS: linear 
@@ -34,15 +35,38 @@
 - Semi-empirical method is more computationally efficient.
 
 ** Tight Binding
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
 - Tight binding is an approximation to DFT.
 - Overlaps between atomic orbitals are key parameters.
 - Parameters can be fitted to experimental data
+- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
 
 ** BOP
 - BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
-  force calculation within tight binding.
+  force calculation within tight-binding.
 - One builds a local density of states from moments, giving detailed
   electronic structure information. 
+
+** Embedding 
+- Idea is to combine speed of BOP ($\mathcal{O}(N)$) with accuracy of
+  tight-binding $\mathcal{O}(N^3)$.
+- Increasing the number of atoms gives freedom to:
+  - Investigate isolated dislocations. 
+  - Include solutes at more realistic concentrations. 
+  - More realistic calculation of interfaces near a surface (e.g. TiO$_2$ and
+    bulk Ti)
+#+BEGIN_NOTES
+Invariance theorem
+#+END_NOTES
+
 
 * Parameter Optimisation
 - Optimisation of the parameter set has been achieved under two evolutionary
@@ -77,7 +101,7 @@
 ** $\alpha$ phase
 :PROPERTIES:
 :END:
-#+REVEAL_HTML:  <img width="450" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
+#+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
 #+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png">
 
 
@@ -154,11 +178,7 @@ phases.
 
 
 
-** Relaxation 
 
-#+ATTR_HTML:<video autoplay="true" loop="true" muted="true" width="640"><source src="./relax_o_octahedral_2019-03-15.mp4" type="video/mp4"> </video>
-
-#+ATTR_HTML:@@<video controls width="400" height="300" src="https://archive.org/download/LinusTorvaldsOnGittechTalk/LinusTorvaldsOnGittechTalk.ogv#t=460"></video>@@
 
 * Formation and Dissolution energies
 
@@ -178,27 +198,42 @@ phases.
 ** Hydrogen Dissolution Energies
 
 
-# For oxygen in tetrahedral site I actually get
-# E_tet - E_perfect - 0.5 * E_diatomic = -27.14417 eV
-# For Octahedral I get E_f^Octahedral I get the same so oxygen must go into
-# the octahedral site upon relaxation. 
-# UNRELAXED: E_OCT = -24.3479 eV
-# RELAXED  :       = -27.14417
-| Oxygen Dissolution Energy: | Tetrahedral  | Octahedral                 |
-|----------------------------+--------------+----------------------------|
-| Unrelaxed:                 | 1.4895530 eV | 1.2162884 eV               |
-| Relaxed:                   | 1.0107764 eV | 1.0107764 eV               |
-|                            | -4.800   eV  | -6.030 eV Kwasniak  (2013) |
-|                            | ---          | -5.592 eV Aksyonov  (2016) |
-|----------------------------+--------------+----------------------------|
-
-
+| Hydrogen Dissolution Energy: | Tetrahedral  | Octahedral                 |
+|------------------------------+--------------+----------------------------|
+| Unrelaxed:                   | 1.4895530 eV | 1.2162884 eV               |
+| Relaxed:                     | 1.0107764 eV | 1.0107764 eV               |
+|                              | -4.800   eV  | -6.030 eV Kwasniak  (2013) |
+|                              | ---          | -5.592 eV Aksyonov  (2016) |
+|------------------------------+--------------+----------------------------|
 
 ** Oxygen Dissolution Energies
 
+#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/oxygen_octahedral_relax_perspective.ogv" ></video>
 
+*** Oxygen Dissolution Energies
 
+| Oxygen Dissolution Energy: | Tetrahedral | Octahedral                 |
+|----------------------------+-------------+----------------------------|
+| Unrelaxed:                 | -14.509 eV  | -18.227 eV                 |
+| Relaxed:                   | -21.024 eV  | -21.024  eV                |
+|                            | -4.800   eV | -6.030 eV Kwasniak  (2013) |
+|                            | ---         | -5.592 eV Aksyonov  (2016) |
+|----------------------------+-------------+----------------------------|
 
 ** Molecular Dynamics  
 #+CAPTION: Molecular dynamics simulation of O in an octahedral site
+#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
+
+
+* Future Work 
+- Obtain a model of Ti that more closely matches empirical quantities.  
+- Finish development of k-space integration within embedding.
+- Calculate the Peierls barrier on the prismatic plane.
+- Calculate secondary Peierls barrier for kink migration with and without
+  oxygen. 
+- Add rutile layer and see how dislocations and oxygen interact to cause
+  cracking.
+- Find segregation of energy of O from bulk Ti to TiO$_2$ to elucidate oxide
+  growth. 
+
 
