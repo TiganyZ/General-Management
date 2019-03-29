@@ -9,7 +9,7 @@
 #+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
 #+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
 #+REVEAL_EXTRA_CSS: ./extra.css
-#+REVEAL_THEME: solarized
+#+REVEAL_THEME: moon 
 #+REVEAL_TRANS: linear 
 
 
@@ -46,14 +46,23 @@
 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
 #+REVEAL_HTML: </div>
 
 ** BOP
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
 - BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
   force calculation within tight-binding.
 - One builds a local density of states from moments, giving detailed
   electronic structure information. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
+
 
 ** Embedding 
 - Idea is to combine speed of BOP ($\mathcal{O}(N)$) with accuracy of
@@ -61,7 +70,7 @@
 - Increasing the number of atoms gives freedom to:
   - Investigate isolated dislocations. 
   - Include solutes at more realistic concentrations. 
-  - More realistic calculation of interfaces near a surface (e.g. TiO$_2$ and
+  - Simulate interfaces near a surface (e.g. TiO$_2$ and
     bulk Ti)
 #+BEGIN_NOTES
 Invariance theorem
@@ -75,23 +84,23 @@ Invariance theorem
 ** Results of optimisation. 
 
 #+ATTR_HTML: :width 100%
-|---------------------------+--------------+--------------|
-| Quantity                  | Predicted    | target       |
-|---------------------------+--------------+--------------|
-| $a_{\alpha}$              | 5.42    bohr | 5.57    bohr |
-| $c_{\alpha}$              | 8.72   bohr  | 8.85    bohr |
-| $C_{11}$                  | 221.8 GPa    | 176.1 GPa    |
-| $C_{33}$                  | 194.2 GPa    | 190.5 GPa    |
-| $C_{44}$                  | 58.6  GPa    | 50.8  GPa    |
-| $C_{12}$                  | 71.4  GPa    | 86.9  GPa    |
-| $C_{13}$                  | 60.0  GPa    | 68.3  GPa    |
-| $a_{\omega}$              | 8.50   bohr  | 8.73   bohr  |
-| $c_{\omega}$              | 5.27   bohr  | 5.32   bohr  |
-| $a_{\beta}$               | 5.92   bohr  | 6.17   bohr  |
-| $\Delta E(\omega-\alpha)$ | 5.16   Ryd   | -0.73  Ryd   |
-| bandwidth                 | 0.41   Ryd   | 0.42   Ryd   |
-|---------------------------+--------------+--------------|
-
+#+ATTR_HTML: :height 90%
+|--------------------------------+-------+-------+--------|
+| Quantity                       |    TB |   BOP | target |
+|--------------------------------+-------+-------+--------|
+| $a_{\alpha}$              bohr |  5.42 |  5.20 |   5.57 |
+| $c_{\alpha}$              bohr |  8.72 |  9.12 |   8.85 |
+| $C_{11}$                  GPa  | 221.8 | 244.1 |  176.1 |
+| $C_{33}$                  GPa  | 194.2 | 307.5 |  190.5 |
+| $C_{44}$                  GPa  |  58.6 | -17.6 |   50.8 |
+| $C_{12}$                  GPa  |  71.4 | 106.8 |   86.9 |
+| $C_{13}$                  GPa  |  60.0 |  67.4 |   68.3 |
+| $a_{\omega}$              bohr |  8.50 |  8.33 |   8.73 |
+| $c_{\omega}$              bohr |  5.27 |  5.30 |   5.32 |
+| $a_{\beta}$               bohr |  5.92 |    -- |   6.17 |
+| $\Delta E(\omega-\alpha)$ Ryd  |  5.16 | -0.18 |  -0.73 |
+| bandwidth                 Ryd  |  0.41 |    -- |   0.42 |
+|--------------------------------+-------+-------+--------|
 
 
 * Phonon Spectra
@@ -101,9 +110,13 @@ Invariance theorem
 ** $\alpha$ phase
 :PROPERTIES:
 :END:
-#+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
-#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png">
 
+#+REVEAL_HTML: <div class="column" style="float:right; width: 55%">
+#+REVEAL_HTML:  <img width="1000" src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png">
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+#+REVEAL_HTML:  <img width="700" src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png">
+#+REVEAL_HTML: </div>
 
 ** $\omega$ phase
 #+NAME: omega_phonon_band_spectrum
@@ -140,23 +153,68 @@ phases.
 #+END_NOTES
 
 * Gamma Surfaces
-- $\gamma$ -surfaces are plots of the excess energies with the movement of
+- Ease to shear along a plane is characterised by the generalised stacking
+  fault energy ($\gamma$-surfaces).
+- These are plots of the excess energies with the movement of
   atoms on a fault plane.
-- Stable stacking faults and dissociations can be seen from the local minima.
+- Stable stacking faults can be seen from the local minima.
+- This provides insight into dislocation dissociation mechanics.
 
 
-** Basal gamma surface
-#+CAPTION: $\gamma$ surfaces for the basal plane. 
+
+
+** Basal gamma surfaces
+
+
+#+CAPTION: $\gamma$ surfaces for the basal plane in tight-binding. 
 #+NAME: basal_gamma_surface_tbe
-[[file:~/Documents/docs/Management/Images/basal_gamma_surface_tbe_2019-03-21_format.png]]
-
-# Should I put in a comparison of the gamma lines and how tbe compares? 
+[[file:~/Documents/docs/Management/Images/basal_gamma_surface_tbe_2019-03-21_format_2.png]]
 
 
 
 
+** Prismatic gamma surfaces
+
+#+CAPTION: $\gamma$ surface for the prismatic plane in tight-binding. 
+#+NAME: prismatic_gamma_surface_tbe
+[[file:~/Documents/docs/Management/Images/prismatic_gamma_surface_2019-12-28_tbe.png]]
+
+** Pyramidal gamma surfaces
+
+#+REVEAL_HTML:  <img width="900" src="file:///home/tigany/Documents/docs/Management/Images/pyramidal_gamma_surface_2019-03-27_mapped.png">
+
+#+REVEAL: split
+#+REVEAL_HTML:  <img width="600" src="file:///home/tigany/Documents/docs/Management/Images/pyramidal_gamma_surface_ready_data_both.png" class="rotate90" >
+
+** Results
+
+| Plane     | Fault                        | This work [$mJm^{-2}$] | Literature [$mJm^{-2}$] |
+|-----------+------------------------------+------------------------+-------------------------|
+| Prismatic | $\gamma_{P\text{, easy}}$    |                    299 |     250.0 [1], 233 [2]            |
+|           |                              |                        |                         |
+| Pyramidal | $I_{1}$                      |                    288 | 288 [3]                |
+|           | $I_{2}$                      |                    671 | 788 [3]                |
+|           | $E_{\text{sf}}^{\text{max}}$ |                   1779 | $\sim 1050$ [4] $\sim 1000$ [4] |
 
 
+- [1] Benoit (2012)
+- [2] Ackland (1992)
+- [3] Ready (2019)
+- [4] Chaari (2014)
+
+#+BEGIN_NOTES
+Pyramidal plane large minima at 0.5, 0.5, 0.0. 
+
+For I_1 fault I get 288
+For the other fault, I get 671 mJm^-2
+
+Smaller minima is at 0.7, 0.5, 288 mJm^-2
+
+In pseudopotential one gets 288 as well! 
+
+
+
+#+END_NOTES
 
 
 * Core structures
@@ -184,41 +242,62 @@ phases.
 
 ** Vacancy formation energies
 
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/vacancy_relaxation_26-03-19.ogv" ></video>
 
-| Model                         | $\Delta E_{\text{formation}}^{\text{vacancy}}$[eV] |
+| Model                         | $\Delta E_{\text{formation}}^{\text{vacancy}}$ [eV] |
 |-------------------------------+----------------------------------------------------|
 | This work                     |                                               1.01 |
-| Experiment: Hashimoto (1984)  |                                               1.27 |
+| (Exp.) Hashimoto (1984)       |                                               1.27 |
 | (DFT) GGA-PAW: Angsten (2013) |                                               1.95 |
 |-------------------------------+----------------------------------------------------|
 
-- The vacancy formation energy matches quite well with experiment. 
 
+#+REVEAL: split
+
+| Energy                                          | This work [eV] | Literature [eV]      |
+|-------------------------------------------------+----------------+----------------------|
+| $\Delta H_{\text{formation}}^{\text{vacancy}}$  |           1.01 | 1.27 [1],  1.95[2]   |
+| $\Delta H_{\text{solution}}^{\text{O}}$  Tetra. |        -20.940 | -4.8 [3]             |
+| $\Delta H_{\text{solution}}^{\text{O}}$  Octa.  |        -21.024 | -6.03 [3], -5.59 [4] |
+| $\Delta H_{\text{solution}}^{\text{H}}$  Tetra. |         -8.757 | -4.8 [3]             |
+| $\Delta H_{\text{solution}}^{\text{H}}$  Octa.  |          -8.86 | -6.03 [3], -5.59 [4] |
+| $E_{\text{cohesion}}$                           |           3.90 | 4.74 [5],  4.85 [6]  |
+
+
+- [1] (Exp.) Hashimoto (1984)
+- [2] (DFT) GGA-PAW: Angsten (2013)
+- [3] DFT Kwasniak  (2013)
+- [4] DFT Aksyonov  (2016)
+- [5] DFT Connetable (2011)
+- [6] Exp. Kittel (1996)
 
 ** Hydrogen Dissolution Energies
 
-
-| Hydrogen Dissolution Energy: | Tetrahedral  | Octahedral                 |
-|------------------------------+--------------+----------------------------|
-| Unrelaxed:                   | 1.4895530 eV | 1.2162884 eV               |
-| Relaxed:                     | 1.0107764 eV | 1.0107764 eV               |
-|                              | -4.800   eV  | -6.030 eV Kwasniak  (2013) |
-|                              | ---          | -5.592 eV Aksyonov  (2016) |
-|------------------------------+--------------+----------------------------|
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/hydrogen_tetrahedral_relax_perspective.ogv" ></video>
+| $\Delta H_{\text{solution}}^{\text{H}}$: | Tetrahedral | Octahedral                |
+|------------------------------------------+-------------+---------------------------|
+| Unrelaxed:                               | 1.48 eV     | 1.22 eV                   |
+| Relaxed:                                 | -8.757 eV         | -8.861 eV                       |
+|                                          | -4.8 eV     | -6.03 eV Kwasniak  (2013) |
+|                                          | ---         | -5.59 eV Aksyonov  (2016) |
+|------------------------------------------+-------------+---------------------------|
 
 ** Oxygen Dissolution Energies
 
-#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/oxygen_octahedral_relax_perspective.ogv" ></video>
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/oxygen_octahedral_relax_perspective.ogv" ></video>
 
-*** Oxygen Dissolution Energies
+| $\Delta H_{\text{solution}}^{\text{O}}$: | Tetrahedral [eV] | Octahedral [eV]            |
+|------------------------------------------+------------------+----------------------------|
+| Unrelaxed:                               |          -11.840 | -18.227                    |
+| Relaxed:                                 |          -20.940 | -21.024                    |
+|                                          |           -4.800 | -6.030  Kwasniak  (2013)   |
+|                                          |              --- | -5.592 eV Aksyonov  (2016) |
+|------------------------------------------+------------------+----------------------------|
 
-| Oxygen Dissolution Energy: | Tetrahedral | Octahedral                 |
-|----------------------------+-------------+----------------------------|
-| Unrelaxed:                 | -14.509 eV  | -18.227 eV                 |
-| Relaxed:                   | -21.024 eV  | -21.024  eV                |
-|                            | -4.800   eV | -6.030 eV Kwasniak  (2013) |
-|                            | ---         | -5.592 eV Aksyonov  (2016) |
-|----------------------------+-------------+----------------------------|
+
+
+| $E_{\text{cohesion}}$ | 3.90 eV (This work) | 4.74 eV Connetable (2011) |   |
+
 
 ** Molecular Dynamics  
 #+CAPTION: Molecular dynamics simulation of O in an octahedral site

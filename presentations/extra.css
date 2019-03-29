@@ -14,7 +14,7 @@
     padding: 0.1em 0.5em 0.1em 0.5em; /*top right bottom left */
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
-    line-height: 10px;
+    line-height: 14px;
     font-size     : 1em;
 }
 
@@ -22,9 +22,9 @@
     margin: auto;
     border-collapse: collapse;
     border: ;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-spacing: 0;
+    border-top: 8px solid;
+    border-bottom: 8px solid;
+    border-spacing: 2px;
     font-size     : 0.85em;
 }
 
@@ -49,3 +49,21 @@
 	margin-left: 0;
     }
 }
+
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
