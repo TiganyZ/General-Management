@@ -21,7 +21,7 @@
 .reveal table {
     margin: auto;
     border-collapse: collapse;
-    border: ;
+    border: auto;
     border-top: 8px solid;
     border-bottom: 8px solid;
     border-spacing: 2px;
@@ -30,6 +30,14 @@
 
 .reveal tr { line-height: 14px;}
 /*font-size     : 2em;}*/
+
+.reveal.reveal img
+{
+    border: none;
+    box-shadow: none;
+    max-height: calc(66vh);
+    max-width: calc(66vw);
+}
 
 .reveal video {
     display: block; 
@@ -67,3 +75,9 @@
     transform: rotate(270deg);
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
