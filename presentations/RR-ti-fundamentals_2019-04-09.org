@@ -14,13 +14,13 @@
 
 
 * Motivation 
-- Titanium alloys are used in highly demanding circumstances
+- Titanium alloys are used in highly demanding circumstances.
 - Brittle oxide layer can crack.
-- Solutes affect dislocation mobility and hardening.
+- Solutes affect dislocation mobility, causing hardening.
 - Interaction between oxygen and dislocation cores are not clear.
 - Need for atomistic modelling.
 - Exploration of Ti/oxide scale interface will give insights into oxygen
-  diffusion, oxygen induces brittlness and stress corrosion cracking in Ti
+  diffusion, oxygen induces brittleness and stress corrosion cracking in Ti
   alloys. 
 #+BEGIN_NOTES
 - Corrosion resistance, high strength to weight ratio.
@@ -60,7 +60,7 @@
 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_2.png" >
+#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
 #+REVEAL_HTML: </div>
 
 
@@ -144,9 +144,12 @@ All frequencies are in THz
 
 ** $\omega$ phase
 #+NAME: omega_phonon_band_spectrum
-#+ATTR_HTML: :width 90%
+#+ATTR_HTML: :width 90% :style position:relative;top:50px;left:-200px;z_index:1;
 [[file:~/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png]]
 
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 32% :style position:absolute;top:285px;left:450px;z_index:2;
+[[file:~/Documents/docs/Management/Images/omega_phonons_trinkle.png]]
 
 
 ** $\beta$ phase
@@ -161,33 +164,52 @@ All frequencies are in THz
 [[file:~/Documents/docs/Management/Images/bcc_phonons_trinkle.png]]
 * Free Energies
 
+
 ** Vibrational Free Energy
 #+NAME: Vibrational free energy
 #+ATTR_HTML: :width 80%
 [[file:~/Documents/docs/Management/Images/vibrational_free_energy_2019-03-21.png]]
 
+
+
 ** Total Free Energy
 #+NAME: Total Free energy 
 #+ATTR_HTML: :width 80%
-[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_2019-03-21.png]]
+[[file:~/Documents/docs/Management/Images/free_energies_zoom_multiplot.png]]
+
+
 
 #+BEGIN_NOTES
 
-Due to the phonon modes being soft then the contribution to the free energy
-for the bcc phase is not as much. 
 
-This is why the bcc phase has a higher total free energy than the other
-phases. 
+Free energy contribution from soft phonon modes don't contribute alot to the
+free energy, hence why at the larger temperatures the bcc phase does not
+dominate. 
+
+bcc is not favoured and then at around 55-80K it is favoured marginally compared
+to the hcp structure. 
+After this the hcp structure is favoured with bcc again becoming the one least
+favourable. 
+
+hcp is always more stable than omega in this temperature range. 
 
 #+END_NOTES
 
 * Gamma Surfaces
-- Ease to shear along a plane is characterised by the generalised stacking
-  fault energy ($\gamma$ -surfaces).
-- These are plots of the excess energies with the movement of
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- $\gamma$ -surfaces are plots of excess energy with the movement of
   atoms on a fault plane.
-- Stable stacking faults can be seen from the local minima.
-- This provides insight into dislocation dissociation mechanics.
+- Stable stacking faults correspond to local minima.
+- This provides insight into possible dislocation dissociations.
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/gamma_surface_video.ogv" ></video>
+#+REVEAL_HTML: </div>
 
 ** Basal gamma surfaces
 
@@ -205,25 +227,27 @@ phases.
 #+ATTR_HTML: :width 65% :style position:absolute;top:200px;left:540px;z_index:3;
 [[file:~/Documents/docs/Management/Images/rodney_basal_ti_gamma_surface.png]]
 
-Expected splitting: $\frac{1}{3}[1\bar{2}10] = \frac{1}{3}[1\bar{1}00] +  \frac{1}{3}[0\bar{1}10]$
+Expected splitting (all models): $\frac{1}{3}[1\bar{2}10] = \frac{1}{3}[1\bar{1}00] +  \frac{1}{3}[0\bar{1}10]$
 
 ** Prismatic gamma surfaces
 
-#+ATTR_HTML: :width 600 :style position:relative;top:10px;left:-350px;z_index:1;
+#+ATTR_HTML: :width 50% :style position:relative;top:10px;left:-350px;z_index:1;
 [[file:~/Documents/docs/Management/Images/prismatic_gamma_surface_2019-12-28_tbe.png]]
 
 
 #+ATTR_REVEAL: :frag fade-in
-#+ATTR_HTML: :width 65% :style position:absolute;top:100px;left:-170px;z_index:2;
+#+ATTR_HTML: :width 50% :style position:absolute;top:120px;left:-100px;z_index:2;
 [[file:~/Documents/docs/Management/Images/prismatic_gamma_surface_2019-12-28_bop.png]]
 
 
 
-#+ATTR_HTML: :width 650 :style position:absolute;top:170px;left:450px;z_index:3;
+#+ATTR_HTML: :width 50% :style position:absolute;top:170px;left:450px;z_index:3;
 [[file:~/Documents/docs/Management/Images/rodney_prismatic_ti_gamma_surface.png]]
 
 
-Expected splitting: $\frac{1}{3}[1\bar{2}10] = \frac{1}{6}[1\bar{2}10] + \frac{1}{6}[1\bar{2}10]$
+- Theoretical splitting: $\frac{1}{3}[1\bar{2}10] = \frac{1}{6}[1\bar{2}10] + \frac{1}{6}[1\bar{2}10]$ 
+- Expected splitting (TB): $\frac{1}{3}[1\bar{2}10] = ( \frac{1}{6}[1\bar{2}10] + 0.15[0001]) + ( \frac{1}{6}[1\bar{2}10] - 0.15[0001] )$
+- Expected splitting (BOP): None. 
 
 #+BEGIN_NOTES
 
@@ -242,9 +266,9 @@ that of DFT.
 #+ATTR_HTML: :width 900 :style position:absolute;top:100px;left:50px;z_index:1;
 [[file:~/Documents/docs/Management/Images/pyramidal_gamma_surface_2019-03-27_mapped.png]]
 
+#+REVEAL_HTML:  <img class="fragment fade-out" src="file:///home/tigany/Documents/docs/Management/Images/chaari_zr_first_order_pyramidal.png" width="830" style="position:absolute;top:400px;left:60px;z_index:2;" >
 
-#+REVEAL_HTML:  <img src="file:///home/tigany/Documents/docs/Management/Images/pyramidal_gamma_surface_ready_data_4eIPP.png" width="830" style="position:absolute;top:400px;left:60px;z_index:2;" >
-
+#+REVEAL_HTML:  <img src="file:///home/tigany/Documents/docs/Management/Images/pyramidal_gamma_surface_ready_data_4eIPP.png" width="830"  class="fragment fade-in" style="position:absolute;top:400px;left:60px;z_index:3;" >
 
 
 #+begin_notes
@@ -305,7 +329,7 @@ results.
 #+REVEAL_HTML: <video controls width="650" height="450" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/S_dipole_relaxation_array.ogv" ></video>
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-#+ATTR_HTML: :width 150%
+#+ATTR_HTML: :width 150% :frag grow
 [[file:~/Documents/docs/Management/Images/core_relax_initial.gif]]
 #+REVEAL_HTML: </div>
 
@@ -355,26 +379,6 @@ results.
 
 
 
-
-
-
-** Results
-
-| Energy                                         | This work [eV] | Literature [eV]                |
-|------------------------------------------------+----------------+--------------------------------|
-| $\Delta H_{\text{formation}}^{\text{vacancy}}$ |           1.01 | 1.27 $^{[1]}$,  1.95$^{[2]}$   |
-| $\Delta H_{\text{solution}}^{\text{O tet}}$    |         -20.94 | -4.8 $^{[3]}$                  |
-| $\Delta H_{\text{solution}}^{\text{O oct}}$    |         -21.02 | -6.03 $^{[3]}$, -5.59 $^{[4]}$ |
-| $\Delta H_{\text{solution}}^{\text{H tet}}$    |          -8.76 | -4.8 $^{[3]}$                  |
-| $\Delta H_{\text{solution}}^{\text{H oct}}$    |          -8.86 | -6.03 $^{[3]}$, -5.59 $^{[4]}$ |
-| $E_{\text{cohesion}}$                          |           3.90 | 4.74 $^{[5]}$,  4.85 $^{[6]}$  |
-
-
-- $^{[1]}$ (Exp.) Hashimoto (1984), $^{[2]}$ (DFT) GGA-PAW: Angsten (2013), $^{[3]}$ DFT
-  Kwasniak (2013), $^{[4]}$ DFT Aksyonov (2016), $^{[5]}$ DFT Connetable (2011), $^{[6]}$
-  Exp. Kittel (1996)
-
-
 ** Molecular Dynamics  
 #+CAPTION: Molecular dynamics simulation of O in an octahedral site
 #+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
@@ -382,13 +386,12 @@ results.
 
 
 * Future Work 
-- Obtain a model of Ti that more closely matches empirical quantities.  
-- Finish development of k-space integration within embedding.
-- Calculate the Peierls barrier on the prismatic plane.
+- Obtain a model of Ti that more closely matches empirical quantities.
+- See how core structure changes with O content. 
+- Calculate the Peierls barrier on prism, and $\pi$ planes. 
 - Calculate secondary Peierls barrier for kink migration with and without
-  oxygen. 
-- Add rutile layer and see how dislocations and oxygen interact to cause
-  cracking.
+  oxygen.
+- Add rutile layer; see how dislocations and oxygen interact with structure.
 - Find segregation energy of O from bulk Ti to TiO$_2$ to elucidate oxide
   growth. 
 
