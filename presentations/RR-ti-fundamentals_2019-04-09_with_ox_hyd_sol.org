@@ -133,11 +133,11 @@ conditions.
 :END:
 
 #+NAME: hcp_phonon_band_spectrum
-#+ATTR_HTML: :width 90% :style position:relative;top:50px;left:-350px;z_index:1;
+#+ATTR_HTML: :width 90% :style position:relative;top:50px;left:-200px;z_index:1;
 [[file:~/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png]]
 
 #+ATTR_REVEAL: :frag fade-in
-#+ATTR_HTML: :width 65% :style position:absolute;top:150px;left:550px;z_index:2;
+#+ATTR_HTML: :width 65% :style position:absolute;top:150px;left:284px;z_index:2;
 [[file:~/Documents/docs/Management/Images/experimental_hcp_phonons.png]]
 
 #+begin_notes
@@ -173,8 +173,8 @@ All frequencies are in THz
 [[file:~/Documents/docs/Management/Images/vibrational_free_energy_2019-04-04.png]]
 
 #+ATTR_REVEAL: :frag fade-in
-#+ATTR_HTML: :width 77% :style position:absolute;top:110px;left:470px;z_index:2;
-[[file:~/Documents/docs/Management/Images/vibrational_free_energy_lda.png]]
+#+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
+[[file:~/Documents/docs/Management/Images/vibrational.png]]
 
 ** Total Free Energy
 #+NAME: Total Free energy 
@@ -183,8 +183,8 @@ All frequencies are in THz
 
 
 #+ATTR_REVEAL: :frag fade-in
-#+ATTR_HTML: :width 77% :style position:absolute;top:105px;left:450px;z_index:2;
-[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_lda_thick.png]]
+#+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
+[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_lda_zoom.png]]
 
 
 #+BEGIN_NOTES
@@ -357,8 +357,9 @@ results.
 #+REVEAL_HTML: <video controls width="600" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_core_quad.ogv" ></video>
 
 
+* Formation and Dissolution energies
 
-* Vacancy formation energy
+** Vacancy formation energies
 
 #+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/vacancy_relaxation_26-03-19.ogv" ></video>
 
@@ -370,8 +371,33 @@ results.
 |----------------------------------------+------|
 
 
+** Hydrogen Dissolution Energies
 
-* Molecular Dynamics  
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/hydrogen_tetrahedral_relax_perspective.ogv" ></video>
+| /                                       |           < |          > |
+| $\Delta H_{\text{solution}}^{\text{H}}$ |        [eV] |            |
+|                                         | Tetrahedral | Octahedral |
+|-----------------------------------------+-------------+------------|
+| Unrelaxed:                              |        1.48 |       1.22 |
+| Relaxed:                                |       -8.76 |      -8.86 |
+| Connetable (2011)                       |       -0.35 |      -0.47 |
+|-----------------------------------------+-------------+------------|
+
+** Oxygen Dissolution Energies
+
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/oxygen_octahedral_relax_perspective.ogv" ></video>
+
+|                  | $\Delta H_{\text{solution}}^{\text{O}}$   [eV] |            |
+|                  |                                    Tetrahedral | Octahedral |
+|------------------+------------------------------------------------+------------|
+| Unrelaxed:       |                                         -11.84 |     -18.23 |
+| Relaxed:         |                                         -20.94 |     -21.02 |
+| Kwasniak  (2013) |                                          -4.80 |      -6.03 |
+|------------------+------------------------------------------------+------------|
+
+
+
+** Molecular Dynamics  
 #+CAPTION: Molecular dynamics simulation of O in an octahedral site
 #+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
 
