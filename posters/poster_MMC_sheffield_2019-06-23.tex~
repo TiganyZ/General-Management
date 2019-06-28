@@ -1,0 +1,30 @@
+* Introduction
+* Main question 
+- How does oxygen play a role in solution hardening in Ti alloys?
+- Dislocations are defects that have an atomistic origin. They are line
+  defects. 
+- How does atomic oxygen interfere with dislocations which in turn changes how
+  the plasticity of titanium as a whole?
+- Screw dislocations are the most important as they have the least mobility in
+  hcp.
+
+* Method
+- Need quantum mechanical method such that we can describe the directionality
+  of the bonding sufficiently and obtain accurate forces in the core of the
+  dislocation (which determines how the dislocation moves).
+- Also this means that the energy orderng of the polymorphs of Ti are
+  reproduced. 
+- Use TB as quicker than DFT
+- Can simulate extended defects due to larger cells, thus mitigating finite
+  size effects of simulation due to insufficent relaxation of the dislocation
+  core. 
+- Built model with optimisation algorithm
+- 
+* What are the results
+- Want to show how model reproduces core dislocation structure.
+- Maybe show how well model fits certain quantities in the fitting? 
+- Agrees well with DFT
+- Gamma surfaces look reasonable (morphologically speaking: just pretty and
+  nothing else really) 
+- Going to extend model to add oxygen. 
+* What are the implications

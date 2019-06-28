@@ -1,0 +1,205 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/TeX Live for SUSE Linux) (preloaded format=pdftex 2018.8.13)  17 JUN 2019 17:26
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**poster_MMC_sheffield_2019-06-23.tex
+(./poster_MMC_sheffield_2019-06-23.tex
+./poster_MMC_sheffield_2019-06-23.tex:1: Undefined control sequence.
+l.1 \documentclass
+                  [25pt, a1paper, portrait]{tikzposter}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:2: Undefined control sequence.
+l.2 \usepackage
+               [utf8]{inputenc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:4: Undefined control sequence.
+l.4 \title
+          {Atomistic Simulation of Oxygen-Dislocation interaction in Ti allo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:5: Undefined control sequence.
+l.5 \author
+           {Tigany Zarrouk}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:6: Undefined control sequence.
+l.6 \date
+         {\today}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:6: Undefined control sequence.
+l.6 \date{\today
+                }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:7: Undefined control sequence.
+l.7 \institute
+              {King's College London}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:9: Undefined control sequence.
+l.9 \usepackage
+               {comment}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:11: Undefined control sequence.
+l.11 \usetheme
+              {Board}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:13: Undefined control sequence.
+l.13 \begin
+           {document}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:15: Undefined control sequence.
+l.15 \maketitle
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:17: Undefined control sequence.
+l.17 \block
+           {~}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:22: Undefined control sequence.
+l.22 \begin
+           {columns}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:23: Undefined control sequence.
+l.23     \column
+                {0.4}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:24: Undefined control sequence.
+l.24     \block
+               {* Main question }{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:35: Undefined control sequence.
+l.35     \column
+                {0.6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:36: Undefined control sequence.
+l.36     \block
+               {* Method}{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:49: Undefined control sequence.
+l.49 \vspace
+            {4cm}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:50: Undefined control sequence.
+l.50     \note
+              [
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:53: Undefined control sequence.
+l.53         width=0.5\linewidth
+                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./poster_MMC_sheffield_2019-06-23.tex:55: Undefined control sequence.
+l.55         {e-mail \texttt
+                            {tigany.zarrouk@kcl.ac.uk}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] )</usr/share/texmf/fonts
+/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on poster_MMC_sheffield_2019-06-23.pdf (1 page, 24369 bytes).
+PDF statistics:
+ 12 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

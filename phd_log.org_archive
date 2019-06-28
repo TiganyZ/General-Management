@@ -1,0 +1,72 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/tigany/Documents/docs/Management/phd_log.org
+
+
+* DONE Add oxygen to dislocation dipole simulations
+  CLOSED: [2019-04-15 Mon 17:07]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2019-04-15 Mon 17:07
+  :ARCHIVE_FILE: ~/Documents/docs/Management/phd_log.org
+  :ARCHIVE_OLPATH: Tasks
+  :ARCHIVE_CATEGORY: phd_log
+  :ARCHIVE_TODO: DONE
+  :END:
+Need to increase layer size in the z direction such that there isn't much
+interaction between oxygen and oxygen. Or infact just remove oxytgen oxygen
+interaction. 
+
+Then it should be kinda simple to:
+1. Put oxygen into octahedral site near dislocation core (preferably in the
+   same plane)
+2. Relax the structure to see where oxygen goes. 
+3. Maybe relax oxygen in the structure first and then put dislocation in? 
+
+
+Archived entries from file /home/tigany/Documents/docs/Management/phd_log.org
+
+
+* DONE Gamma lines for bop 
+  CLOSED: [2019-04-15 Mon 17:07]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2019-04-15 Mon 17:07
+  :ARCHIVE_FILE: ~/Documents/docs/Management/phd_log.org
+  :ARCHIVE_OLPATH: Tasks
+  :ARCHIVE_CATEGORY: phd_log
+  :ARCHIVE_TODO: DONE
+  :END:
+Seems that the gamma lines for bop are not symmetric at the moment 
+
+[[file:Images/gamma_line_bop_2019-03-14.png]]
+
+One can see that it is not perfectly symmetric upon relaxation. This could be
+due to the lack of periodic boundaries. One must investigate why the number of
+neighbours is so high when it is periodic. 
+
+Archived entries from file /home/tigany/Documents/docs/Management/phd_log.org
+
+
+* DONE Rolls-Royce Meeting 9th April 
+  CLOSED: [2019-04-15 Mon 17:07] DEADLINE: <2019-04-09 Tue>
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2019-04-15 Mon 17:07
+  :ARCHIVE_FILE: ~/Documents/docs/Management/phd_log.org
+  :ARCHIVE_OLPATH: Tasks
+  :ARCHIVE_CATEGORY: phd_log
+  :ARCHIVE_TODO: DONE
+  :END:
+
+Presentation: 
+  1. Free energies of Vibration for alpha, beta and omega phases
+  2. Dislocations
+     - Prismatic plane
+       - Get the Peierls stress
+       - Oxygen and Hydrogen interstitials in Tetrahedral and Octahedral sites
+  3. Gamma surfaces for all the phases.
+  4. Movies
+     - To get movies in tbe one can use the commands
+       - " --md "
+         - " --xbs "
+         - " --movmv=10" Records every 10 frames
+       - "-xyz=N" to get the xyz format. 

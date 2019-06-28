@@ -1,0 +1,105 @@
+#+TITLE: PhD Log
+#+AUTHOR: Tigany Zarrouk
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage{physics}
+#+LATEX_HEADER: \usepackage{cases}
+#+LATEX_HEADER: \graphicspath{ {./} }
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+#+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
+#+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+#+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
+#+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
+
+PLAN 
+
+- Start with the theory of DFT with the HK theorem and KS equations to solve
+  for the density.
+- Talk a bit about the approximations that are made. 
+- Alloy theory and the structure of Ti3Al
+- Look at literature to do with all of this. Go through why solutes are
+  incredibly important and why it is necessary do to this research.
+- How can solutes lead to failure and why is oxygen in particular bad for the alloy.
+- Is it wavy or planar slip
+- Go into the calculations and what I have done for them
+- Cite the research about the Fe and C vacancy concentration and what the
+  implications are for alloy research
+- What can I add to the research. 
+
+* Introduction 
+
+Since the discovery that quanta may accurately describe the phenomena of black body radiation,
+it has been known that atoms are governed by a different physical paradigm to that of matter on
+the macroscopic scale: quantum mechanics. To model the behaviour of atoms in a solid, we can
+use quantum mechanics.
+
+The first postulate of of quantum mechanics states that a quantum mechanical system can be
+described by a wavefunction, a function of the positions of the quantum mechanical entities,
+and time, which satisfies the Schr\:odinger equation. Bonding in materials is heavily dependent
+on how electrons arrange themselves upon the assembly of the solid. By the first postulate we
+would expect upon assembly, the state of a the system can be fully described by a /many body
+wavefunction/: a wavefunction which is a function of the positions of each of the electrons and
+nuclei in the system.
+
+Quite often, the state we would most like to find is the lowest energy state (/ground state/)
+of the system, as this is the fundamental state from which other mechanisms return to or start
+from. This necessarily occurs at zero kelvin by the third law of thermodynamics. To find this
+state for the full system, one must minimise the many-body wavefunction state that satisfies
+the Schr\:odinger equation with respect to energy. This quickly leads to a problem of
+computation. Each electron and nucleus each have three spatial coordinates, so even given a
+collection of a few atoms, we would struggle in being able to accurately determine the ground
+state. So we can make a few approximations. 
+
+** Born-Oppenheimer Approximation
+
+The first approximation that we make is the Born-Oppenheimer approximation. One must first make
+the assumption that the wavefunction which describes the system is a product state between the
+nuclear and electronic portions of the system.
+
+\[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
+where $\psi_{\mathbf{R}}(\mathbf{r})$ is the electronic wavefunction and $\Phi(\mathbf{R})$ is
+the nuclear portion of the wavefunction.
+
+ Due to the large disparity in the masses of the
+electron compared to the nucleus ($\sim 2000 m_e$) we can neglect the contribution to the
+hamiltonian that comes from the nuclear kinetic energy operator acting on the electronic
+wavefunction, as it is far smaller than the electronic kinetic energy operator acting on the
+electronic wavefunction.  
+
+\[
+T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I = 1}^{M} 
+                                                      - \frac{1}{2M_{I}}
+                                                        \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})  
+\]
+
+
+\[
+T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i = 1}^{M} 
+                                                      - \frac{1}{2m_{i}}
+                                                        \nabla^{2}_{\mathbf{r}_{i}} \psi_{\mathbf{R}}(\mathbf{r})  
+\]
+
+Due to this, we can say that the motion of the electrons is instantaneous with regard to the
+motion of the ions in the system. Hence, for a given configuration of ions, we can solve for
+the electronic part of the wavefunction and then solve for the nuclear wavefunction, to get the
+total energy. 
+
+\[
+\Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),
+\]
+
+where $E_{\mathbf{R}}$ contains all of the information of the configuration of the electrons in
+the system. This is a potential energy hypersurface. 
+
+** Self-Consistent Mean-Field Theory
+
+** Density Functional Theory
+
+* Defects in Materials
+
+** Vacancies and Solutes
+
+** Ti3Al Solutes and their effects. 
+
+** Current research: Vacancy-Solute Complexes. 
+
