@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{Finnis1997}
+M.~W. Finnis, A.~T. Paxton, M.~Methfesselt, and M~van Schilfgaarde.
+\newblock Self-consistent tight-binding approximation including polarisable
+  ions.
+\newblock {\em {MRS} Proceedings}, 491, jan 1997.
+
+\bibitem{hohenburg64_inhomog_electron_gas}
+P.~Hohenberg and W.~Kohn.
+\newblock Inhomogeneous electron gas.
+\newblock {\em Phys. Rev.}, 136:B864--B871, Nov 1964.
+
+\bibitem{kohn65_self_cons_eq}
+W.~Kohn and L.~J. Sham.
+\newblock Self-consistent equations including exchange and correlation effects.
+\newblock {\em Phys. Rev.}, 140:A1133--A1138, Nov 1965.
+
+\end{thebibliography}

@@ -1,0 +1,46 @@
+#+TITLE: PhD Log
+#+AUTHOR: Tigany Zarrouk
+
+
+* Plan 
+
+PLAN 
+
+- Start with the theory of DFT with the HK theorem and KS equations to solve
+  for the density.
+- Talk a bit about the approximations that are made. 
+- Alloy theory and the structure of Ti3Al
+- Look at literature to do with all of this. Go through why solutes are
+  incredibly important and why it is necessary do to this research.
+- How can solutes lead to failure and why is oxygen in particular bad for the alloy.
+- Is it wavy or planar slip
+- Go into the calculations and what I have done for them
+- Cite the research about the Fe and C vacancy concentration and what the
+  implications are for alloy research
+- What can I add to the research
+
+* Introduction 
+
+Since the discovery that quanta may accurately describe the phenomena of black body radiation,
+it has been known that atoms are governed by a different physical paradigm to that of matter on
+the macroscopic scale: quantum mechanics. To model the behaviour of atoms in a solid, we can
+use quantum mechanics.
+
+The first postulate of of quantum mechanics states that a quantum mechanical system can be
+described by a wavefunction, a function of the positions of the quantum mechanical entities,
+and time, which satisfies the Schr\:odinger equation. Bonding in materials is heavily dependent
+on how electrons arrange themselves upon the assembly of atoms to make solid. By the first postulate we
+would expect upon assembly, the state of a the system can be fully described by a /many body
+wavefunction/: a wavefunction which is a function of the positions of each of the electrons and
+nuclei in the system.
+
+Assuming that we have non-relativistic electrons, the Schr\:odinger equation one must solve is then 
+
+\[\Big( 
+   \sum_{i} -\frac{1}{2} \nabla_{i}^{2} 
+   + \frac{1}{2} \sum_i\sum_j    \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}
+   +             \sum_i\sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |}
+\Big) \mathbf{ \Psi ) = E \mathbf{ \Psi ), \]
+
+where we have used Hartree units ( $e = m = \hslash = 4\pi\epsilon_0 = 1$ ). 
+

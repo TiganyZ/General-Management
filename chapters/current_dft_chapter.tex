@@ -1,0 +1,241 @@
+% Created 2019-07-10 Wed 19:25
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[hyperref,x11names]{xcolor}
+\usepackage{physics}
+\usepackage{cases}
+\graphicspath{ {./} }
+\usepackage{tikz}
+\usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+\usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
+\newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+\usepackage[nottoc]{tocbibind}
+\author{Tigany Zarrouk}
+\date{\today}
+\title{DFT Theory and Application to Defect Cluster Concentration}
+\hypersetup{
+ pdfauthor={Tigany Zarrouk},
+ pdftitle={DFT Theory and Application to Defect Cluster Concentration},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.2.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+PLAN 
+
+\begin{itemize}
+\item Start with the theory of DFT with the HK theorem and KS equations to solve
+for the density.
+\item Talk a bit about the approximations that are made.
+\item Alloy theory and the structure of Ti3Al
+\item Look at literature to do with all of this. Go through why solutes are
+incredibly important and why it is necessary do to this research.
+\item How can solutes lead to failure and why is oxygen in particular bad for the alloy.
+\item Is it wavy or planar slip
+\item Go into the calculations and what I have done for them
+\item Cite the research about the Fe and C vacancy concentration and what the
+implications are for alloy research
+\item What can I add to the research.
+\end{itemize}
+
+\section{Introduction}
+\label{sec:org38be255}
+
+Since the discovery that quanta may accurately describe the phenomena of black body radiation,
+it has been known that atoms are governed by a different physical paradigm to that of matter on
+the macroscopic scale: quantum mechanics. To model the behaviour of atoms in a solid, we can
+use quantum mechanics.
+
+The first postulate of of quantum mechanics states that a quantum mechanical system can be
+described by a wavefunction, a function of the positions of the quantum mechanical entities,
+and time, which satisfies the Schr$\backslash$:odinger equation. Bonding in materials is heavily dependent
+on how electrons arrange themselves upon the assembly of atoms to make solid. By the first postulate we
+would expect upon assembly, the state of a the system can be fully described by a \emph{many body
+wavefunction}: a wavefunction which is a function of the positions of each of the electrons and
+nuclei in the system.
+
+Assuming that we have non-relativistic electrons, the Schr$\backslash$:odinger equation one must solve is then 
+
+
+\[\Big( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i\sum_j    \frac{1}{|
+\mathbf{r}_i - \mathbf{r}_j |}+ \sum_i\sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |} \Big)
+\mathbf{ \Psi }(\{\mathbf{r}\}; t) = E \mathbf{ \Psi }(\{\mathbf{r}\}; t),\]
+
+
+where \(\mathbf{ \Psi }(\{\mathbf{r}\}; t)\) is an eigenstate and Hartree units have been used( \(e = m = \hslash = 4\pi\epsilon_0 = 1\) ).
+
+A time-independent observable is the expectation value of a given operator, 
+
+\[ \expval{\hat{O}} = \frac{\expval{\hat{O}}{\mathbf{ \Psi }} }{ \bra{\mathbf{ \Psi}}\ket{\mathbf{ \Psi }} }, \]
+this is an integral over all of the coordinates. 
+
+The electronic density operator is defined as 
+
+\[ \hat{n}(\mathbf{r}) = \sum_{i=1}^{N} \delta ( \mathbf{r} - \mathbf{r}_{i} ) \]
+
+\[ n(\mathbf{r}) = \frac{\expval{\hat{n}(\mathbf{r})}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} }. \]
+
+The total energy is the expectation value of the Hamiltonian:
+
+\begin{align}
+ E &= \frac{\expval{\hat{H}}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }}}\\
+   &= \expval{\hat{T}} + \expval{\hat{V}_{\text{int}}} + \int \text{d}^3 V_{\text{ext}} n(\mathbf{r}) + E_{II}, 
+\label{eq:totalenergy}
+\end{align}
+
+where \(V_\text{ext}\) is the external potential due to the coulomb interaction acting on the electrons
+from the nuclei---the expectation value has been explicitly written as an integral over the
+local electron density, \(E_{II}\) is the classical electrostatic nucleus-nucleus interaction
+energy, \(V_{\text{int}}\) is the electron-electron interaction energy and \(\expval{\hat{T}}\) is
+the expectation value of the electronic kinetic energy. 
+
+Stationary points in the total energy correspond to eigenstates of the many-body Hamiltonian. One can
+vary the ratio in \eqref{eq:totalenergy}, or vary the numerator in \eqref{eq:totalenergy} subject
+to the constraint of orthonormality (\(\bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} = 1\)), which is
+possible with the use of Lagrange multipliers. One finds that upon variation of the bra
+\(\bra{\mathbf{\Psi}}\) that the ket must satisfy the time-independent Schr$\backslash$:odinger equation:
+
+\[ \hat{H}\ket{\mathbf{\Psi}_m} = E \ket{\mathbf{\Psi}}, \]
+where \(\ket{\mathbf{\Psi}_m}\) is an eigenstate.
+
+Quite often, the state we would most like to find is the lowest energy state (\emph{ground state})
+of the system, as this is the fundamental state from which other mechanisms return to or start
+from. This necessarily occurs at zero kelvin by the third law of thermodynamics. To find this
+state for the full system, one must minimise the energy with respect to the parameters of the
+many-body wavefunction that satisfies the Schr$\backslash$:odinger equation and appropriate symmetry
+constraints (e.g. for electrons, \(\mathbf{\Psi}\) must be antisymmetric). This quickly leads to
+a problem of computation: each electron has four degrees of freedom (the quantum numbers \(n, m,
+l\) and \(s\)), and each nucleus will have \(n^d_I\) degrees of freedom; given a collection of
+just \(M\) atoms, we would have \(4M + Mn^d_I\) variables to minimise with respect to energy. To
+make the problem tractable, we must make a few approximations.
+
+\subsection{Born-Oppenheimer Approximation}
+\label{sec:org5aeeb92}
+
+The first approximation that we make is the Born-Oppenheimer approximation, which allows us to
+separate nuclear and electronic motion. One must first make the assumption that the
+wavefunction which describes the system is a product state between the nuclear and electronic
+portions of the system.
+
+\[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
+where \(\psi_{\mathbf{R}}(\mathbf{r})\) is the electronic wavefunction and \(\Phi(\mathbf{R})\) is
+the nuclear portion of the wavefunction.
+
+ Due to the large disparity in mass between an electron and the nucleus (\(M_\text{Nuc} \sim
+2000 m_e\)) we can neglect the contribution to the Hamiltonian that comes from the nuclear
+kinetic energy operator acting on the electronic wavefunction, as the resulting term is far
+smaller than the electronic kinetic energy operator acting on the electronic wavefunction.
+
+\[T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
+1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})\]
+
+
+\[T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i =
+1}^{M} - \frac{1}{2m_{i}} \nabla^{2}_{\mathbf{r}_{i}}
+\psi_{\mathbf{R}}(\mathbf{r}) \]
+
+Due to this, we can say that the motion of the electrons is instantaneous with regard to the
+motion of the ions in the system and that the electrons relax into their ground state with
+respect to any configuration of the ions. This results in the total energy being a function of
+only the nuclear coordinates \cite{Finnis1997}. 
+
+To obtain the total energy, we can solve for the electronic part of the wavefunction and then
+solve for the nuclear wavefunction,
+
+\[ \Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),\]
+
+where \(E_{\mathbf{R}}\) contains all of the information of the configuration of the electrons in
+the system. 
+
+\subsection{Self-Consistent Mean-Field Theory}
+\label{sec:org8e7d3a5}
+
+\subsection{Density Functional Theory}
+\label{sec:orgffba967}
+
+\subsubsection{Theory}
+\label{sec:org48fb056}
+
+Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
+find the ground-state solution for a given configuration of ions. A computationally tractable
+way of doing this for a many-body solid describing all of the electrons is via the \emph{Density
+Functional Theory}.
+
+The main tenet of Density Functional Theory is: given a system that consists of \(N\) electrons,
+there exists an energy functional of the local electron density \(E[\rho(\mathbf{r})]\), which
+corresponds to an antisymmetric wavefunction \(\ket{\Psi}\); upon minimising the energy with
+respect the changes in the electron density, subject to the constraint that the number of
+electrons is conserved, \[ \int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting
+density is unique and the value of the functional is the ground-state energy.
+
+Assuming \(\rho(\mathbf{r})\) is the exact ground state density, and similarly that \(\ket{\Psi}\)
+is the ground-state, by the variational principle we can write, 
+
+\[ \bra{\Psi} \mathcal{\hat{T}} + \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i -
+\mathbf{r}_j |}  \ket{\Psi} + \int \rho(\mathbf{r}) V_{\text{ext}}(\mathbf{r})
+\text{d}\mathbf{r} \geq E_0 \]
+
+A functional is an entity that maps a function to a value, similar as how a function maps a
+variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
+electron density which has the correct ground state energy upon minimising the energy with respect to
+the electron density \cite{hohenburg64_inhomog_electron_gas}. Thus all the information of the
+system is contained in the electron density, which reduces the minimisation
+problem fron \(4M\) variables to one of just 3 for any number of electrons in the system. 
+
+To actually find this density, one can use the Kohn-Sham equations to find a self-consistent
+solution for the electron density \cite{kohn65_self_cons_eq}. 
+
+The process by which this happens are as follows: one solves for the Hartree potential first with a
+given input density (the solution of Poisson's equation), then one finds the total effective potential
+for the system which is the sum of the Hartree potential, the potential from the nuclei
+(\(V_{\text{ext}}\)) and the exchange-correlation potential \(V_{\text{xc}}\). The Schr$\backslash$:odinger
+equation is subsequently solved, and a new electron density is found. This density can be
+
+
+
+
+
+\subsubsection{Practical steps towards accurate calculations}
+\label{sec:org58bae94}
+
+
+
+\section{Defects in Materials}
+\label{sec:orgf603535}
+
+\subsection{Vacancies and Solutes}
+\label{sec:org11a0976}
+
+\subsection{Ti3Al Solutes and their effects.}
+\label{sec:org60f75e5}
+
+\subsection{Current research: Vacancy-Solute Complexes.}
+\label{sec:orgcd49375}
+
+
+\section{Bibliography}
+\label{sec:org273b36d}
+\label{orgb3d1329}
+
+\bibliographystyle{unsrt}
+\bibliography{../bibliography/org-refs}
+\end{document}

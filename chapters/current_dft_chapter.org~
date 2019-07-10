@@ -10,9 +10,6 @@
 #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
 #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
 
-
-* Plan 
-
 PLAN 
 
 - Start with the theory of DFT with the HK theorem and KS equations to solve
@@ -35,7 +32,7 @@ it has been known that atoms are governed by a different physical paradigm to th
 the macroscopic scale: quantum mechanics. To model the behaviour of atoms in a solid, we can
 use quantum mechanics.
 
-xThe first postulate of of quantum mechanics states that a quantum mechanical system can be
+The first postulate of of quantum mechanics states that a quantum mechanical system can be
 described by a wavefunction, a function of the positions of the quantum mechanical entities,
 and time, which satisfies the Schr\:odinger equation. Bonding in materials is heavily dependent
 on how electrons arrange themselves upon the assembly of atoms to make solid. By the first postulate we
@@ -45,14 +42,11 @@ nuclei in the system.
 
 Assuming that we have non-relativistic electrons, the Schr\:odinger equation one must solve is then 
 
-\[\Big( 
-   \sum_{i} -\frac{1}{2} \nabla_{i}^{2} 
-   + \frac{1}{2} \sum_i\sum_j    \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}
-   +             \sum_i\sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |}
-\Big) \mathbf{ \Psi ) = E \mathbf{ \Psi ), \]
+
+\[( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i\sum_j    \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}+ \sum_i\sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |} ) \mathbf{ \Psi } = E \mathbf{ \Psi },\]
+
 
 where we have used Hartree units ( $e = m = \hslash = 4\pi\epsilon_0 = 1$ ). 
-
 
 Quite often, the state we would most like to find is the lowest energy state (/ground state/)
 of the system, as this is the fundamental state from which other mechanisms return to or start
@@ -80,16 +74,13 @@ Hamiltonian that comes from the nuclear kinetic energy operator acting on the el
 wavefunction, as the resulting term is far smaller than the electronic kinetic energy operator acting on the
 electronic wavefunction.
 
-\[ T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I = 1}^{M} 
-                                                      - \frac{1}{2M_{I}}
-                                                        \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})  \]
+\[T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
+1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})\]
 
 
-\[
-T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i = 1}^{M} 
-                                                      - \frac{1}{2m_{i}}
-                                                        \nabla^{2}_{\mathbf{r}_{i}} \psi_{\mathbf{R}}(\mathbf{r})  
-\]
+\[T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i =
+1}^{M} - \frac{1}{2m_{i}} \nabla^{2}_{\mathbf{r}_{i}}
+\psi_{\mathbf{R}}(\mathbf{r}) \]
 
 Due to this, we can say that the motion of the electrons is instantaneous with regard to the
 motion of the ions in the system and that the electrons relax into their ground state with
@@ -99,15 +90,12 @@ only the nuclear coordinates cite:Finnis1997.
 To obtain the total energy, we can solve for the electronic part of the wavefunction and then
 solve for the nuclear wavefunction,
 
-\[
-\Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),
-\]
+\[ \Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),\]
 
 where $E_{\mathbf{R}}$ contains all of the information of the configuration of the electrons in
 the system. 
 
 ** Self-Consistent Mean-Field Theory
-
 
 ** Density Functional Theory
 

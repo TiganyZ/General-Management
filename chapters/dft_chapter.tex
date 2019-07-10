@@ -1,0 +1,212 @@
+% Created 2019-07-09 Tue 15:01
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[hyperref,x11names]{xcolor}
+\usepackage{physics}
+\usepackage{cases}
+\graphicspath{ {./} }
+\usepackage{tikz}
+\usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+\usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
+\newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+\usepackage[nottoc]{tocbibind}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.2.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+
+
+\section{Plan}
+\label{sec:orgebfada5}
+
+PLAN 
+
+\begin{itemize}
+\item Start with the theory of DFT with the HK theorem and KS equations to solve
+for the density.
+\item Talk a bit about the approximations that are made.
+\item Alloy theory and the structure of Ti3Al
+\item Look at literature to do with all of this. Go through why solutes are
+incredibly important and why it is necessary do to this research.
+\item How can solutes lead to failure and why is oxygen in particular bad for the alloy.
+\item Is it wavy or planar slip
+\item Go into the calculations and what I have done for them
+\item Cite the research about the Fe and C vacancy concentration and what the
+implications are for alloy research
+\item What can I add to the research.
+\end{itemize}
+
+\section{Introduction}
+\label{sec:orge62c585}
+
+Since the discovery that quanta may accurately describe the phenomena of black body radiation,
+it has been known that atoms are governed by a different physical paradigm to that of matter on
+the macroscopic scale: quantum mechanics. To model the behaviour of atoms in a solid, we can
+use quantum mechanics.
+
+xThe first postulate of of quantum mechanics states that a quantum mechanical system can be
+described by a wavefunction, a function of the positions of the quantum mechanical entities,
+and time, which satisfies the Schr$\backslash$:odinger equation. Bonding in materials is heavily dependent
+on how electrons arrange themselves upon the assembly of atoms to make solid. By the first postulate we
+would expect upon assembly, the state of a the system can be fully described by a \emph{many body
+wavefunction}: a wavefunction which is a function of the positions of each of the electrons and
+nuclei in the system.
+
+Assuming that we have non-relativistic electrons, the Schr$\backslash$:odinger equation one must solve is then 
+
+\$\$\Big( 
+   \(\sum\)\textsubscript{i} -\frac{1}{2} \(\nabla\)\textsubscript{i}\textsuperscript{2} 
+\begin{itemize}
+\item \frac{1}{2} \(\sum\)\textsubscript{i\(\sum\)}\textsubscript{j}    \frac{1}\{| \mathbf{r}\textsubscript{i} - \mathbf{r}\textsubscript{j} |\}
+\item \(\sum\)\textsubscript{i\(\sum\)}\textsubscript{I} \frac{-Z_I}\{| \mathbf{r}\textsubscript{i} - \mathbf{R}\textsubscript{I} |\}
+\end{itemize}
+\Big) \mathbf\{ \(\Psi\) ) = E \mathbf\{ \(\Psi\) ), \$\$
+
+where we have used Hartree units ( \(e = m = \hslash = 4\pi\epsilon_0 = 1\) ). 
+
+
+Quite often, the state we would most like to find is the lowest energy state (\emph{ground state})
+of the system, as this is the fundamental state from which other mechanisms return to or start
+from. This necessarily occurs at zero kelvin by the third law of thermodynamics. To find this
+state for the full system, one must minimise the many-body wavefunction state that satisfies
+the Schr$\backslash$:odinger equation with respect to energy. This quickly leads to a problem of
+computation. Each electron and nucleus each have three spatial coordinates, so even given a
+collection of a few atoms, we would struggle in being able to accurately determine the ground
+state. So we can make a few approximations. 
+
+\subsection{Born-Oppenheimer Approximation}
+\label{sec:orgdde7de6}
+
+The first approximation that we make is the Born-Oppenheimer approximation, which allows us to
+separate nuclear and electronic motion. One must first make the assumption that the
+wavefunction which describes the system is a product state between the nuclear and electronic
+portions of the system.
+
+$$ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), $$
+where \(\psi_{\mathbf{R}}(\mathbf{r})\) is the electronic wavefunction and \(\Phi(\mathbf{R})\) is
+the nuclear portion of the wavefunction.
+
+ Due to the large disparity in the masses of the
+electron compared to the nucleus (\(\sim 2000 m_e\)) we can neglect the contribution to the
+Hamiltonian that comes from the nuclear kinetic energy operator acting on the electronic
+wavefunction, as the resulting term is far smaller than the electronic kinetic energy operator acting on the
+electronic wavefunction.
+
+\$\$ T\textsubscript{\text{Nuclear}}(\mathbf{R}) \(\psi\)\textsubscript{\mathbf{R}}(\mathbf{r}) = \(\sum\)\textsubscript{I = 1}\textsuperscript{M} 
+\begin{itemize}
+\item \frac{1}\{2M\textsubscript{I}\}
+\(\nabla\)\textsuperscript{2}\textsubscript{\mathbf{R}\textsubscript{I}} \(\psi\)\textsubscript{\mathbf{R}}(\mathbf{r})  \$\$
+\end{itemize}
+
+
+\$\$
+T\textsubscript{\text{Electronic}}(\mathbf{r}) \(\psi\)\textsubscript{\mathbf{R}}(\mathbf{r}) = \(\sum\)\textsubscript{i = 1}\textsuperscript{M} 
+\begin{itemize}
+\item \frac{1}\{2m\textsubscript{i}\}
+\(\nabla\)\textsuperscript{2}\textsubscript{\mathbf{r}\textsubscript{i}} \(\psi\)\textsubscript{\mathbf{R}}(\mathbf{r})
+\end{itemize}
+\$\$
+
+Due to this, we can say that the motion of the electrons is instantaneous with regard to the
+motion of the ions in the system and that the electrons relax into their ground state with
+respect to any configuration of the ions. This means that the total energy is a function of
+only the nuclear coordinates \cite{Finnis1997}. 
+
+To obtain the total energy, we can solve for the electronic part of the wavefunction and then
+solve for the nuclear wavefunction,
+
+$$
+\Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),
+$$
+
+where \(E_{\mathbf{R}}\) contains all of the information of the configuration of the electrons in
+the system. 
+
+\subsection{Self-Consistent Mean-Field Theory}
+\label{sec:org3296044}
+
+
+\subsection{Density Functional Theory}
+\label{sec:org492279f}
+
+\subsubsection{Theory}
+\label{sec:orga91dfbb}
+
+Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
+find the ground-state solution for a given configuration of ions. A computationally tractable
+way of doing this for a many-body solid is via the \emph{Density Functional Theory}. 
+
+The main tenet of Density Functional Theory is: given a system that consists of \(N\) electrons,
+there exists an energy functional \(E[\rho(\mathbf{r})]\), which is a functional of a local
+electron density \(\rho(\mathbf{r})\); upon minimising the energy with respect the changes in the
+electron density, subject to the constraint that the number of electrons is conserved, $$
+\int_{\text{all space}} \rho(\mathbf{r}) = N, $$ the resulting density is unique and
+corresponds to the ground-state energy.
+
+A functional is an entity that maps a function to a value, similar as how a function maps a
+variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
+electron density which has the correct ground state energy upon minimising with respect to
+energy \cite{hohenburg64_inhomog_electron_gas}. 
+
+To actually find this density, one can use the Kohn-Sham equations to find a self-consistent
+solution for the electron density \cite{kohn65_self_cons_eq}. 
+
+The process by which this happens are as follows: one solves for the Hartree potential first with a
+given input density (the solution of Poisson's equation), then one finds the total effective potential
+for the system which is the sum of the Hartree potential, the potential from the nuclei
+(\(V_{\text{ext}}\)) and the exchange-correlation potential \(V_{\text{xc}}\). The Schr$\backslash$:odinger
+equation is subsequently solved, and a new electron density is found. This density can be
+
+
+
+
+
+\subsubsection{Practical steps towards accurate calculations}
+\label{sec:org69d277b}
+
+
+
+\section{Defects in Materials}
+\label{sec:orgfa6b262}
+
+\subsection{Vacancies and Solutes}
+\label{sec:org10eb499}
+
+\subsection{Ti3Al Solutes and their effects.}
+\label{sec:org8c3609a}
+
+\subsection{Current research: Vacancy-Solute Complexes.}
+\label{sec:org4ead74f}
+
+
+\section{Bibliography}
+\label{sec:org6f8ce3a}
+\label{org4f39abb}
+
+\bibliographystyle{unsrt}
+\bibliography{../bibliography/org-refs}
+\end{document}
