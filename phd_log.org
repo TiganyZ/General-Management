@@ -30,11 +30,7 @@
 - Cite the research about the Fe and C vacancy concentration and what the
   implications are for alloy research
 - What can I add to the research. 
-** TODO Write first section of Literature review
-*** TODO Summarise Stacking Faults and write review
-*** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
-*** TODO Summarise dislocations and Oxygen interactions (review)
-** TODO Ti3Al DFT oxygen interstitial/vacancy binding energy 
+** TODO Ti/Ti3Al DFT oxygen interstitial/vacancy binding energy 
 Want to find the vacancy formation energy, and the dissolution energy of
 oxygen interstitials at different sites in the Ti3Al lattice. 
 
@@ -413,8 +409,8 @@ The configurational entropy of the model system is
 \[ S = Nmk ( c_{aa} \text{log} c_{aa} + c_{ba} \text{log} c_{ba} + c_{va} \text{log} c_{va} ) 
      - Nnk ( c_{bb} \text{log} c_{bb} + c_{ab} \text{log} c_{ab} + c_{vb} \text{log} c_{vb} ) \]
 
-
-
+** TODO Write up fitting and optimisation 
+** TODO Gamma Surfaces for New Model 
 ** TODO Titanium Optimisation
 *** Not great parameter sets but ones to minimise
 **** Amazing c/a and alat
@@ -1012,6 +1008,10 @@ structure may actually be lower in energy than that of the hcp structure. It
 is hoped that this will be like the ANNI model in the fact that the number of
 structures in the fitting will give correct stacking fault energies due to the
 Ising-like interaction between the atomic planes of the atoms. 
+** TODO Write first section of Literature review
+*** TODO Summarise Stacking Faults and write review
+*** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
+*** TODO Summarise dislocations and Oxygen interactions (review)
 ** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
 ** TODO Calculate solution enthalpy of oxygen in titanium. 
 - The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
