@@ -150,11 +150,11 @@ way of doing this for a many-body solid describing all of the electrons is via t
 Functional Theory/. 
 
 Hohenburg and Kohn's seminal paper in 1964 proved that there exists an energy functional of the
-electron density which can provide the exact ground-state energy and density upon
-minimisation. This reduces the number of variables from $3N$ to that of only 3 for any number
-of electrons $N$ in the system of interest.
+electron density which can provide the exact ground-state energy upon minimisation with respect
+to the density cite:hohenburg64_inhomog_electron_gas. This reduces the number of variables from
+$3N$ to that of only 3 for any number of electrons $N$ in the system of interest.
 
-In 1965, Kohn and Sham then developed a formalism to practically calculate this ground-state density via
+In 1965, Kohn and Sham then developed a formalism to calculate this ground-state density via
 a set of self-consistent equations: the Kohn-Sham equations. 
 
 The main tenet of Density Functional Theory is: given a system that consists of $N$ electrons,

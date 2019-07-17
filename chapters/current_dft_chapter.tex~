@@ -1,4 +1,4 @@
-% Created 2019-07-10 Wed 14:44
+% Created 2019-07-10 Wed 19:25
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -58,7 +58,7 @@ implications are for alloy research
 \end{itemize}
 
 \section{Introduction}
-\label{sec:org6fa0434}
+\label{sec:org38be255}
 
 Since the discovery that quanta may accurately describe the phenomena of black body radiation,
 it has been known that atoms are governed by a different physical paradigm to that of matter on
@@ -120,14 +120,16 @@ where \(\ket{\mathbf{\Psi}_m}\) is an eigenstate.
 Quite often, the state we would most like to find is the lowest energy state (\emph{ground state})
 of the system, as this is the fundamental state from which other mechanisms return to or start
 from. This necessarily occurs at zero kelvin by the third law of thermodynamics. To find this
-state for the full system, one must minimise the many-body wavefunction that satisfies the
-Schr$\backslash$:odinger equation with respect to energy. This quickly leads to a problem of
-computation. Just considering electrons, each electron has four degrees of freedom (the quantum
-numbers \(n, m, l\) and \(s\)), so with a collection of just \(M\) atoms, we would have \(4M\)
-variables to minimise. To make the problem tractable, we must make a few approximations.
+state for the full system, one must minimise the energy with respect to the parameters of the
+many-body wavefunction that satisfies the Schr$\backslash$:odinger equation and appropriate symmetry
+constraints (e.g. for electrons, \(\mathbf{\Psi}\) must be antisymmetric). This quickly leads to
+a problem of computation: each electron has four degrees of freedom (the quantum numbers \(n, m,
+l\) and \(s\)), and each nucleus will have \(n^d_I\) degrees of freedom; given a collection of
+just \(M\) atoms, we would have \(4M + Mn^d_I\) variables to minimise with respect to energy. To
+make the problem tractable, we must make a few approximations.
 
 \subsection{Born-Oppenheimer Approximation}
-\label{sec:orge229635}
+\label{sec:org5aeeb92}
 
 The first approximation that we make is the Born-Oppenheimer approximation, which allows us to
 separate nuclear and electronic motion. One must first make the assumption that the
@@ -138,11 +140,10 @@ portions of the system.
 where \(\psi_{\mathbf{R}}(\mathbf{r})\) is the electronic wavefunction and \(\Phi(\mathbf{R})\) is
 the nuclear portion of the wavefunction.
 
- Due to the large disparity in the masses of the
-electron compared to the nucleus (\(\sim 2000 m_e\)) we can neglect the contribution to the
-Hamiltonian that comes from the nuclear kinetic energy operator acting on the electronic
-wavefunction, as the resulting term is far smaller than the electronic kinetic energy operator acting on the
-electronic wavefunction.
+ Due to the large disparity in mass between an electron and the nucleus (\(M_\text{Nuc} \sim
+2000 m_e\)) we can neglect the contribution to the Hamiltonian that comes from the nuclear
+kinetic energy operator acting on the electronic wavefunction, as the resulting term is far
+smaller than the electronic kinetic energy operator acting on the electronic wavefunction.
 
 \[T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
 1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})\]
@@ -154,7 +155,7 @@ electronic wavefunction.
 
 Due to this, we can say that the motion of the electrons is instantaneous with regard to the
 motion of the ions in the system and that the electrons relax into their ground state with
-respect to any configuration of the ions. This means that the total energy is a function of
+respect to any configuration of the ions. This results in the total energy being a function of
 only the nuclear coordinates \cite{Finnis1997}. 
 
 To obtain the total energy, we can solve for the electronic part of the wavefunction and then
@@ -166,29 +167,39 @@ where \(E_{\mathbf{R}}\) contains all of the information of the configuration of
 the system. 
 
 \subsection{Self-Consistent Mean-Field Theory}
-\label{sec:org894acbc}
+\label{sec:org8e7d3a5}
 
 \subsection{Density Functional Theory}
-\label{sec:orgfe761a3}
+\label{sec:orgffba967}
 
 \subsubsection{Theory}
-\label{sec:org68c6804}
+\label{sec:org48fb056}
 
 Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
 find the ground-state solution for a given configuration of ions. A computationally tractable
-way of doing this for a many-body solid is via the \emph{Density Functional Theory}. 
+way of doing this for a many-body solid describing all of the electrons is via the \emph{Density
+Functional Theory}.
 
 The main tenet of Density Functional Theory is: given a system that consists of \(N\) electrons,
-there exists an energy functional \(E[\rho(\mathbf{r})]\), which is a functional of a local
-electron density \(\rho(\mathbf{r})\); upon minimising the energy with respect the changes in the
-electron density, subject to the constraint that the number of electrons is conserved, \[
-\int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting density is unique and the
-functional corresponds to the ground-state energy.
+there exists an energy functional of the local electron density \(E[\rho(\mathbf{r})]\), which
+corresponds to an antisymmetric wavefunction \(\ket{\Psi}\); upon minimising the energy with
+respect the changes in the electron density, subject to the constraint that the number of
+electrons is conserved, \[ \int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting
+density is unique and the value of the functional is the ground-state energy.
+
+Assuming \(\rho(\mathbf{r})\) is the exact ground state density, and similarly that \(\ket{\Psi}\)
+is the ground-state, by the variational principle we can write, 
+
+\[ \bra{\Psi} \mathcal{\hat{T}} + \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i -
+\mathbf{r}_j |}  \ket{\Psi} + \int \rho(\mathbf{r}) V_{\text{ext}}(\mathbf{r})
+\text{d}\mathbf{r} \geq E_0 \]
 
 A functional is an entity that maps a function to a value, similar as how a function maps a
 variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
 electron density which has the correct ground state energy upon minimising the energy with respect to
-the electron density \cite{hohenburg64_inhomog_electron_gas}. 
+the electron density \cite{hohenburg64_inhomog_electron_gas}. Thus all the information of the
+system is contained in the electron density, which reduces the minimisation
+problem fron \(4M\) variables to one of just 3 for any number of electrons in the system. 
 
 To actually find this density, one can use the Kohn-Sham equations to find a self-consistent
 solution for the electron density \cite{kohn65_self_cons_eq}. 
@@ -204,26 +215,26 @@ equation is subsequently solved, and a new electron density is found. This densi
 
 
 \subsubsection{Practical steps towards accurate calculations}
-\label{sec:orgfc6cac3}
+\label{sec:org58bae94}
 
 
 
 \section{Defects in Materials}
-\label{sec:org5eb70a6}
+\label{sec:orgf603535}
 
 \subsection{Vacancies and Solutes}
-\label{sec:orgb17dd7e}
+\label{sec:org11a0976}
 
 \subsection{Ti3Al Solutes and their effects.}
-\label{sec:orgb339130}
+\label{sec:org60f75e5}
 
 \subsection{Current research: Vacancy-Solute Complexes.}
-\label{sec:org08f748e}
+\label{sec:orgcd49375}
 
 
 \section{Bibliography}
-\label{sec:orgb53bc4b}
-\label{org29d83ed}
+\label{sec:org273b36d}
+\label{orgb3d1329}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}

@@ -45,11 +45,11 @@ nuclei in the system.
 
 Assuming that we have non-relativistic electrons, the Schr\:odinger equation one must solve is then 
 
-\[\Big( 
+$$\Big( 
    \sum_{i} -\frac{1}{2} \nabla_{i}^{2} 
    + \frac{1}{2} \sum_i\sum_j    \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}
    +             \sum_i\sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |}
-\Big) \mathbf{ \Psi ) = E \mathbf{ \Psi ), \]
+\Big) \mathbf{ \Psi ) = E \mathbf{ \Psi ), $$
 
 where we have used Hartree units ( $e = m = \hslash = 4\pi\epsilon_0 = 1$ ). 
 
@@ -70,7 +70,7 @@ separate nuclear and electronic motion. One must first make the assumption that 
 wavefunction which describes the system is a product state between the nuclear and electronic
 portions of the system.
 
-\[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
+$$ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), $$
 where $\psi_{\mathbf{R}}(\mathbf{r})$ is the electronic wavefunction and $\Phi(\mathbf{R})$ is
 the nuclear portion of the wavefunction.
 
@@ -80,16 +80,16 @@ Hamiltonian that comes from the nuclear kinetic energy operator acting on the el
 wavefunction, as the resulting term is far smaller than the electronic kinetic energy operator acting on the
 electronic wavefunction.
 
-\[ T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I = 1}^{M} 
+$$ T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I = 1}^{M} 
                                                       - \frac{1}{2M_{I}}
-                                                        \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})  \]
+                                                        \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})  $$
 
 
-\[
+$$
 T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i = 1}^{M} 
                                                       - \frac{1}{2m_{i}}
                                                         \nabla^{2}_{\mathbf{r}_{i}} \psi_{\mathbf{R}}(\mathbf{r})  
-\]
+$$
 
 Due to this, we can say that the motion of the electrons is instantaneous with regard to the
 motion of the ions in the system and that the electrons relax into their ground state with
@@ -99,9 +99,9 @@ only the nuclear coordinates cite:Finnis1997.
 To obtain the total energy, we can solve for the electronic part of the wavefunction and then
 solve for the nuclear wavefunction,
 
-\[
+$$
 \Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),
-\]
+$$
 
 where $E_{\mathbf{R}}$ contains all of the information of the configuration of the electrons in
 the system. 
@@ -117,12 +117,13 @@ Now that the electronic motion has been decoupled from that of the nucleus, we c
 find the ground-state solution for a given configuration of ions. A computationally tractable
 way of doing this for a many-body solid is via the /Density Functional Theory/. 
 
-The main tenet of Density Functional Theory is: given a system that consists of $N$ electrons,
-there exists an energy functional $E[\rho(\mathbf{r})]$, which is a functional of a local
-electron density $\rho(\mathbf{r})$; upon minimising the energy with respect the changes in the
-electron density, subject to the constraint that the number of electrons is conserved, \[
-\int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting density is unique and
-corresponds to the ground-state energy.
+The main tenet of Density Functional Theory is: given a system that consists
+of $N$ electrons, there exists an energy functional $E[\rho(\mathbf{r})]$,
+which is a functional of a local electron density $\rho(\mathbf{r})$; upon
+minimising the energy with respect the changes in the electron density,
+subject to the constraint that the number of electrons is conserved,
+\[\int_{\text{all space}} \rho(\mathbf{r}) = N,\] the resulting density is
+unique and corresponds to the ground-state energy.
 
 A functional is an entity that maps a function to a value, similar as how a function maps a
 variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
