@@ -1,4 +1,4 @@
-% Created 2019-07-10 Wed 19:25
+% Created 2019-07-15 Mon 11:45
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -58,7 +58,7 @@ implications are for alloy research
 \end{itemize}
 
 \section{Introduction}
-\label{sec:org38be255}
+\label{sec:orgbdb62f4}
 
 Since the discovery that quanta may accurately describe the phenomena of black body radiation,
 it has been known that atoms are governed by a different physical paradigm to that of matter on
@@ -68,8 +68,8 @@ use quantum mechanics.
 The first postulate of of quantum mechanics states that a quantum mechanical system can be
 described by a wavefunction, a function of the positions of the quantum mechanical entities,
 and time, which satisfies the Schr$\backslash$:odinger equation. Bonding in materials is heavily dependent
-on how electrons arrange themselves upon the assembly of atoms to make solid. By the first postulate we
-would expect upon assembly, the state of a the system can be fully described by a \emph{many body
+on how electrons arrange themselves upon the assembly of atoms to make a solid. By the first postulate, we
+would expect upon assembly, that the state of the system can be fully described by a \emph{many body
 wavefunction}: a wavefunction which is a function of the positions of each of the electrons and
 nuclei in the system.
 
@@ -90,26 +90,30 @@ this is an integral over all of the coordinates.
 
 The electronic density operator is defined as 
 
-\[ \hat{n}(\mathbf{r}) = \sum_{i=1}^{N} \delta ( \mathbf{r} - \mathbf{r}_{i} ) \]
+\[ \hat{\rho}(\mathbf{r}) = \sum_{i=1}^{N} \delta ( \mathbf{r} - \mathbf{r}_{i} ) \]
 
-\[ n(\mathbf{r}) = \frac{\expval{\hat{n}(\mathbf{r})}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} }. \]
+\[ \rho(\mathbf{r}) = \frac{\expval{\hat{n}(\mathbf{r})}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} }. \]
 
 The total energy is the expectation value of the Hamiltonian:
 
 \begin{align}
  E &= \frac{\expval{\hat{H}}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }}}\\
-   &= \expval{\hat{T}} + \expval{\hat{V}_{\text{int}}} + \int \text{d}^3 V_{\text{ext}} n(\mathbf{r}) + E_{II}, 
+   &= \expval{\hat{T}} + \expval{\hat{V}_{\text{int}}} + \int \text{d}^3 V_{\text{ext}} \rho(\mathbf{r}) + E_{II}, 
 \label{eq:totalenergy}
 \end{align}
 
-where \(V_\text{ext}\) is the external potential due to the coulomb interaction acting on the electrons
+where 
+
+\[ V_\text{ext}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$\] 
+
+is the external potential due to the coulomb interaction acting on the electrons
 from the nuclei---the expectation value has been explicitly written as an integral over the
 local electron density, \(E_{II}\) is the classical electrostatic nucleus-nucleus interaction
 energy, \(V_{\text{int}}\) is the electron-electron interaction energy and \(\expval{\hat{T}}\) is
 the expectation value of the electronic kinetic energy. 
 
 Stationary points in the total energy correspond to eigenstates of the many-body Hamiltonian. One can
-vary the ratio in \eqref{eq:totalenergy}, or vary the numerator in \eqref{eq:totalenergy} subject
+vary the ratio, or the numerator, in \eqref{eq:totalenergy}. The latter must be subjected
 to the constraint of orthonormality (\(\bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} = 1\)), which is
 possible with the use of Lagrange multipliers. One finds that upon variation of the bra
 \(\bra{\mathbf{\Psi}}\) that the ket must satisfy the time-independent Schr$\backslash$:odinger equation:
@@ -129,18 +133,19 @@ just \(M\) atoms, we would have \(4M + Mn^d_I\) variables to minimise with respe
 make the problem tractable, we must make a few approximations.
 
 \subsection{Born-Oppenheimer Approximation}
-\label{sec:org5aeeb92}
+\label{sec:orge2bd6f0}
 
-The first approximation that we make is the Born-Oppenheimer approximation, which allows us to
-separate nuclear and electronic motion. One must first make the assumption that the
+The first approximation that we make allows us to separate nuclear and electronic motion: this is the
+Born-Oppenheimer approximation. One must first make the assumption that the
 wavefunction which describes the system is a product state between the nuclear and electronic
 portions of the system.
 
 \[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
+
 where \(\psi_{\mathbf{R}}(\mathbf{r})\) is the electronic wavefunction and \(\Phi(\mathbf{R})\) is
 the nuclear portion of the wavefunction.
 
- Due to the large disparity in mass between an electron and the nucleus (\(M_\text{Nuc} \sim
+Due to the large disparity in mass between an electron and the nucleus of an atom (\(M_\text{Nuc} \sim
 2000 m_e\)) we can neglect the contribution to the Hamiltonian that comes from the nuclear
 kinetic energy operator acting on the electronic wavefunction, as the resulting term is far
 smaller than the electronic kinetic energy operator acting on the electronic wavefunction.
@@ -153,7 +158,7 @@ smaller than the electronic kinetic energy operator acting on the electronic wav
 1}^{M} - \frac{1}{2m_{i}} \nabla^{2}_{\mathbf{r}_{i}}
 \psi_{\mathbf{R}}(\mathbf{r}) \]
 
-Due to this, we can say that the motion of the electrons is instantaneous with regard to the
+This results in the motion of the electrons being instantaneous with regard to the
 motion of the ions in the system and that the electrons relax into their ground state with
 respect to any configuration of the ions. This results in the total energy being a function of
 only the nuclear coordinates \cite{Finnis1997}. 
@@ -167,32 +172,70 @@ where \(E_{\mathbf{R}}\) contains all of the information of the configuration of
 the system. 
 
 \subsection{Self-Consistent Mean-Field Theory}
-\label{sec:org8e7d3a5}
+\label{sec:org222993f}
 
 \subsection{Density Functional Theory}
-\label{sec:orgffba967}
+\label{sec:orgd48a9a2}
 
 \subsubsection{Theory}
-\label{sec:org48fb056}
+\label{sec:org83bcfd2}
 
 Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
 find the ground-state solution for a given configuration of ions. A computationally tractable
 way of doing this for a many-body solid describing all of the electrons is via the \emph{Density
-Functional Theory}.
+Functional Theory}. 
+
+Hohenburg and Kohn's seminal paper in 1964 proved that there exists an energy functional of the
+electron density which can provide the exact ground-state energy and density upon
+minimisation. This reduces the number of variables from \(3N\) to that of only 3 for any number
+of electrons \(N\) in the system of interest.
+
+In 1965, Kohn and Sham then developed a formalism to practically calculate this ground-state density via
+a set of self-consistent equations: the Kohn-Sham equations. 
 
 The main tenet of Density Functional Theory is: given a system that consists of \(N\) electrons,
 there exists an energy functional of the local electron density \(E[\rho(\mathbf{r})]\), which
-corresponds to an antisymmetric wavefunction \(\ket{\Psi}\); upon minimising the energy with
-respect the changes in the electron density, subject to the constraint that the number of
-electrons is conserved, \[ \int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting
-density is unique and the value of the functional is the ground-state energy.
+corresponds to an antisymmetric wavefunction \(\ket{\Psi}\); upon minimisiation by
+variation of the electron density, subject to the constraint that the number of electrons is
+conserved, \[ \int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting density is unique
+and the value of the functional is the ground-state energy. To obtain this result we can go
+through the following theory.
 
-Assuming \(\rho(\mathbf{r})\) is the exact ground state density, and similarly that \(\ket{\Psi}\)
+Assuming \(\rho(\mathbf{r})\) is the exact ground state density, and \(\ket{\Psi}\)
 is the ground-state, by the variational principle we can write, 
 
 \[ \bra{\Psi} \mathcal{\hat{T}} + \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i -
 \mathbf{r}_j |}  \ket{\Psi} + \int \rho(\mathbf{r}) V_{\text{ext}}(\mathbf{r})
-\text{d}\mathbf{r} \geq E_0 \]
+\text{d}\mathbf{r} \geq E_0. 
+\label{eq:dftvarprinciple} \]
+
+The state \(\bra{\Psi}\) may not be unique. To make it so, one can subject equation \ref{eq:dftvarprinciple}
+to the constraints that the number of electrons is conserved and that \(\rho\) is constant. 
+
+This defines the functional: 
+
+\[ F[\rho] = \underset{\text{min}}{\Psi \rightarrow \rho} \bra{\Psi} \mathcal{\hat{T}} +
+\frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}  \ket{\Psi} = T[\rho] +
+E_{ee}[\rho],   \]
+
+where the notation \(\Psi \rightarrow \rho\) is to show that the minimisation is with respect to
+all \(\Psi\) that can make the density \(\rho\). 
+
+One can see the functional with the minimum value as the ground-state energy is then 
+
+\[ E[\rho] = F[\rho] + E_{\text{ext}}[\rho], \]
+
+where \[ E_{\text{ext}}[\rho] = E_{\text{ext}}[\rho(\mathbf{r})] =  \int \rho(\mathbf{r})
+V_{\text{\text{ext}}}(\mathbf{r}), \]
+of which its functional derivative is \(V_{\text{ext}}\).
+
+By the Euler-Lagrange equations, one finds that the ground state must satisfy 
+
+\[ \frac{\delta F[\rho]}{\delta \rho(\mathbf{r}) } + V_{\text{ext}}= \mu. \]
+
+
+
+The Hohenburg-Kohn-Sham functional 
 
 A functional is an entity that maps a function to a value, similar as how a function maps a
 variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
@@ -211,30 +254,31 @@ for the system which is the sum of the Hartree potential, the potential from the
 equation is subsequently solved, and a new electron density is found. This density can be
 
 
-
+\subsubsection{Kohn-Sham Equations and Self-Consistency}
+\label{sec:org1718ece}
 
 
 \subsubsection{Practical steps towards accurate calculations}
-\label{sec:org58bae94}
+\label{sec:org1e28192}
 
 
 
 \section{Defects in Materials}
-\label{sec:orgf603535}
+\label{sec:org5ce0c38}
 
 \subsection{Vacancies and Solutes}
-\label{sec:org11a0976}
+\label{sec:org902b141}
 
 \subsection{Ti3Al Solutes and their effects.}
-\label{sec:org60f75e5}
+\label{sec:org3b3b3eb}
 
 \subsection{Current research: Vacancy-Solute Complexes.}
-\label{sec:orgcd49375}
+\label{sec:orge713c5f}
 
 
 \section{Bibliography}
-\label{sec:org273b36d}
-\label{orgb3d1329}
+\label{sec:org9b79d7b}
+\label{org059e6ef}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}

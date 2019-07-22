@@ -1,4 +1,4 @@
-% Created 2019-07-15 Mon 11:45
+% Created 2019-07-22 Mon 09:37
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -58,7 +58,7 @@ implications are for alloy research
 \end{itemize}
 
 \section{Introduction}
-\label{sec:orgbdb62f4}
+\label{sec:org2541f29}
 
 Since the discovery that quanta may accurately describe the phenomena of black body radiation,
 it has been known that atoms are governed by a different physical paradigm to that of matter on
@@ -133,7 +133,7 @@ just \(M\) atoms, we would have \(4M + Mn^d_I\) variables to minimise with respe
 make the problem tractable, we must make a few approximations.
 
 \subsection{Born-Oppenheimer Approximation}
-\label{sec:orge2bd6f0}
+\label{sec:org8f6526e}
 
 The first approximation that we make allows us to separate nuclear and electronic motion: this is the
 Born-Oppenheimer approximation. One must first make the assumption that the
@@ -172,13 +172,13 @@ where \(E_{\mathbf{R}}\) contains all of the information of the configuration of
 the system. 
 
 \subsection{Self-Consistent Mean-Field Theory}
-\label{sec:org222993f}
+\label{sec:orga817c17}
 
 \subsection{Density Functional Theory}
-\label{sec:orgd48a9a2}
+\label{sec:orgad6ec01}
 
 \subsubsection{Theory}
-\label{sec:org83bcfd2}
+\label{sec:org3cb8a06}
 
 Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
 find the ground-state solution for a given configuration of ions. A computationally tractable
@@ -214,7 +214,7 @@ to the constraints that the number of electrons is conserved and that \(\rho\) i
 
 This defines the functional: 
 
-\[ F[\rho] = \underset{\text{min}}{\Psi \rightarrow \rho} \bra{\Psi} \mathcal{\hat{T}} +
+\[ F[\rho] = \underset{\Psi \rightarrow \rho}{\text{min}} \bra{\Psi} \mathcal{\hat{T}} +
 \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}  \ket{\Psi} = T[\rho] +
 E_{ee}[\rho],   \]
 
@@ -233,10 +233,6 @@ By the Euler-Lagrange equations, one finds that the ground state must satisfy
 
 \[ \frac{\delta F[\rho]}{\delta \rho(\mathbf{r}) } + V_{\text{ext}}= \mu. \]
 
-
-
-The Hohenburg-Kohn-Sham functional 
-
 A functional is an entity that maps a function to a value, similar as how a function maps a
 variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
 electron density which has the correct ground state energy upon minimising the energy with respect to
@@ -247,38 +243,86 @@ problem fron \(4M\) variables to one of just 3 for any number of electrons in th
 To actually find this density, one can use the Kohn-Sham equations to find a self-consistent
 solution for the electron density \cite{kohn65_self_cons_eq}. 
 
-The process by which this happens are as follows: one solves for the Hartree potential first with a
-given input density (the solution of Poisson's equation), then one finds the total effective potential
-for the system which is the sum of the Hartree potential, the potential from the nuclei
-(\(V_{\text{ext}}\)) and the exchange-correlation potential \(V_{\text{xc}}\). The Schr$\backslash$:odinger
-equation is subsequently solved, and a new electron density is found. This density can be
+
+
+
+To actually find the eigenvalues, one can replace the problem of solving a fully-interacting
+electronic system with a given electronic density with an auxiliary non-interacting electronic
+system which has the same electronic density. The resulting eigenvalues can be used to find the
+expectation value of the kinetic energy functional, \(T_s[\rho(\mathbf{r})]\).
+
+The Hohenburg-Kohn-Sham functional can be defined as
+
+\[
+E^{\text{HKS}}[\rho] = T_{\text{s}}[\rho] + E_{\text{H}}[\rho] + E_{\text{xc}}[\rho] + E_{\text{ext}}[\rho] + E_{\text{ZZ}},
+\]
+
+where \(T_{\text{s}}[\rho]\) is the kinetic energy of the fictitious non-interacting auxiliary system
+acting in the same effective potential \(V_{\text{eff}}[\rho]\). The assumption made here is that the
+ground state density of the non-interacting, auxiliary system is equal to that of the system with
+full electronic interactions. 
+
+This definition of the functional redefines the exchange-correlation functional: the difference
+between the true kinetic energy and that of the non-interacting system is added to it. Such that the
+true exchange-correlation functional has the form of
+
+\[
+E_{\text{xc}}[\rho] = ( \expval{\hat{T}} - T_{\text{s}}[\rho] ) + ( \expval{\hat{V}_{\text{int}}} - E_{\text{H}}[\rho])
+\]
+
+where we can interpret the first term as being the increase in kinetic energy from electronic
+correlation in a fully interacting system, compared to a non-interacting one---correlations cause
+electrons to move to more energetically favourable areas of the potential---and the second term is
+the change in the potential of a fully interacting system, with exchange and correlation included,
+and an electron density acting through the
+
+The difference between the true kinetic energy \(\Delta T = T - T_{\text{s}}\) is now approximated by
+the exchange-correlation functional \(E_{\text{xc}}[\rho]\). This is a reasonable
+approximation. Separating the kinetic energy from the long-range coulomb interactions means that the
+exchange-correlation potential can be approximated by an approximately local functional. Is this due
+the the fact that correlations basically lead to a screening of the coulomb potential?
+
+
+The process by which this happens are as follows: one solves for the Hartree potential
+first with a given input density (the solution of Poisson's equation), then one finds the
+total effective potential for the system which is the sum of the Hartree potential, the
+potential from the nuclei (\(V_{\text{ext}}\)) and the exchange-correlation potential
+\(V_{\text{xc}}\). The Schr$\backslash$:odinger equation is subsequently solved, and a new electron
+density is found. This density can be put back into the Poisson's equation to find the
+hartree potential and start the cycle again. These equations must be solved
+self-consistently as the electron density that one puts into Poisson's equation is the
+quantity that one solves for. Once the input and output densities are within some
+tolerance of each other, then one can say that the \(\rho^{\text{out}}(\mathbf{r}) = \rho^{\text{exact}}(\mathbf{r})\),
+and the resulting Kohn-Sham eigenvalues are the ground state energies. 
+
+The Kohn-Sham eigenvalues are not strictly correct. 
 
 
 \subsubsection{Kohn-Sham Equations and Self-Consistency}
-\label{sec:org1718ece}
+\label{sec:orgca19915}
 
 
 \subsubsection{Practical steps towards accurate calculations}
-\label{sec:org1e28192}
+\label{sec:org197c46a}
 
 
 
 \section{Defects in Materials}
-\label{sec:org5ce0c38}
+\label{sec:org8207af3}
 
 \subsection{Vacancies and Solutes}
-\label{sec:org902b141}
+\label{sec:org77dbb0f}
 
 \subsection{Ti3Al Solutes and their effects.}
-\label{sec:org3b3b3eb}
+\label{sec:orgf10c21b}
 
 \subsection{Current research: Vacancy-Solute Complexes.}
-\label{sec:orge713c5f}
+\label{sec:org7f7b8a7}
 
 
 \section{Bibliography}
-\label{sec:org9b79d7b}
-\label{org059e6ef}
+\label{sec:org8f96ad0}
+\label{org5fc5d83}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}

@@ -231,14 +231,14 @@ between the true kinetic energy and that of the non-interacting system is added 
 true exchange-correlation functional has the form of
 
 \[
-E_{\text{xc}}[\rho] = ( \expval{\hat{T}} - T_{\text{s}}[\rho] ) + ( \expval{\hat{V}_{\text{int}}} - E_{\text{H}}[\rho])
+E_{\text{xc}}[\rho] = \Big( \expval{\hat{T}} - T_{\text{s}}[\rho] \Big) + \Big( \expval{\hat{V}_{\text{int}}} - E_{\text{H}}[\rho]\Big)
 \]
 
 where we can interpret the first term as being the increase in kinetic energy from electronic
 correlation in a fully interacting system, compared to a non-interacting one---correlations cause
-electrons to move to more energetically favourable areas of the potential---and the second term is
-the change in the potential of a fully interacting system, with exchange and correlation included,
-and an electron density acting through the
+electrons to move to more energetically favourable areas of the potential, thus increasing the
+kinetic energy---and the second term is the change in the potential of a fully interacting system,
+with exchange and correlation included, and an electron density acting through the
 
 The difference between the true kinetic energy $\Delta T = T - T_{\text{s}}$ is now approximated by
 the exchange-correlation functional $E_{\text{xc}}[\rho]$. This is a reasonable
