@@ -28,16 +28,12 @@ PLAN
 
 * Introduction 
 
-Since the discovery that quanta may accurately describe the phenomena of black body radiation,
-it has been known that atoms are governed by a different physical paradigm to that of matter on
-the macroscopic scale: quantum mechanics. To model the behaviour of atoms in a solid, we can
-use quantum mechanics.
-
-The first postulate of of quantum mechanics states that a quantum mechanical system can be
-described by a wavefunction, a function of the positions of the quantum mechanical entities,
-and time, which satisfies the Schr\:odinger equation. Bonding in materials is heavily dependent
-on how electrons arrange themselves upon the assembly of atoms to make a solid. By the first postulate, we
-would expect upon assembly, that the state of the system can be fully described by a /many body
+To accurately model the behaviour of atoms in a solid, we must use quantum mechanics. The first
+postulate of of quantum mechanics states that a quantum mechanical system can be described by a
+wavefunction, a function of the positions of the quantum mechanical entities, and time, which
+satisfies the Schr\:odinger equation. Bonding in materials is heavily dependent on how electrons
+arrange themselves upon the assembly of atoms to make a solid. By the first postulate, we would
+expect upon assembly, that the state of the system can be fully described by a /many body
 wavefunction/: a wavefunction which is a function of the positions of each of the electrons and
 nuclei in the system.
 
@@ -74,11 +70,11 @@ where
 
 \[ V_\text{ext}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$\] 
 
-is the external potential due to the coulomb interaction acting on the electrons
-from the nuclei---the expectation value has been explicitly written as an integral over the
-local electron density, $E_{II}$ is the classical electrostatic nucleus-nucleus interaction
-energy, $V_{\text{int}}$ is the electron-electron interaction energy and $\expval{\hat{T}}$ is
-the expectation value of the electronic kinetic energy. 
+is the external potential due to the coulomb interaction between the electrons and the nuclei---the
+expectation value has been explicitly written as an integral over the local electron density,
+$E_{II}$ is the classical electrostatic nucleus-nucleus interaction energy, $V_{\text{int}}$ is the
+electron-electron interaction energy and $\expval{\hat{T}}$ is the expectation value of the
+electronic kinetic energy.
  
 Stationary points in the total energy correspond to eigenstates of the many-body Hamiltonian. One can
 vary the ratio, or the numerator, in eqref:eq:totalenergy. The latter must be subjected
@@ -210,10 +206,11 @@ solution for the electron density cite:kohn65_self_cons_eq.
 
 
 
-To actually find the eigenvalues, one can replace the problem of solving a fully-interacting
-electronic system with a given electronic density with an auxiliary non-interacting electronic
-system which has the same electronic density. The resulting eigenvalues can be used to find the
-expectation value of the kinetic energy functional, $T_s[\rho(\mathbf{r})]$.
+To find the eigenvalues, one can replace the problem of solving a fully-interacting electronic
+system, with a given electronic density, by an auxiliary non-interacting electronic system which has
+the same electronic density. The resulting eigenvalues can be used to find the expectation value of
+the kinetic energy functional, $T_s[\rho(\mathbf{r})]$, which corresponds to the kinetic energy of the
+non-interacting system.
 
 The Hohenburg-Kohn-Sham functional can be defined as
 
