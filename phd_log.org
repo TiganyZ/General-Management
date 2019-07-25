@@ -563,7 +563,7 @@ E_fcc - E_hcp = 3.549mRy per atom
  tbe       E_fcc - E_hcp =  3.549305 mRy per atom 
  PBE       E_fcc - E_hcp =  4.518800 mRy per atom 
 
-
+fdd=0.2343565620 qdds=0.4954242781 qddp=0.4455975043 qddd=0.6750000000 b0=12.2068770816 p0=0.9654012330 b1=0.0000000000 p1=0.7120803248 b2=-1.0938737176 p2=0.4048326178 ndt=2.0053725146 cr1=-5.1359221167 cr2=3.5099392035 r1dd=5.8556291745 rcdd=9.0734368256 cr3=-1.0000000000 rmaxhm=9.1641711939 
 
 Getting omega phase lattice constants and internal parameter ...
 
