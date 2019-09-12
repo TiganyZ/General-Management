@@ -1,0 +1,232 @@
+
+This file contains notes for the linux sysadmin of the PaxtonKCL group. 
+
+* Notes and Protocol
+
+** How to login as root
+
+su - 
+
+pass: forevernopercentrbigisevenec(4erno%rI7ec)
+
+** Every Two Weeks
+
+*** zypper -up
+Updates the packages from the repositories. 
+
+*** zypper -lr
+Lists the repositories. 
+
+repos and config files stored in /etc/zypp
+
+Only the listed repositories are checked for updates and subsequently updated.
+
+*** zypper ref -f
+Forces a refresh of the links that are used to update the repositories. 
+
+It basically checks if the repositories work. 
+
+*** zypper se {}
+
+This searches for a particular package 
+
+e.g. 
+zypper se vlc
+
+This gives output 
+
+Loading repository data...
+Reading installed packages...
+
+S  | Name                          | Summary                                           | Type      
+---+-------------------------------+---------------------------------------------------+-----------
+   | libvlc-gtk0                   | Freetuxtv library vlc-gtk                         | package   
+   | libvlc-gtk0-debuginfo         | Debug information for package libvlc-gtk0         | package   
+i+ | libvlc5                       | Shared code for the VLC media player program      | package  
+
+zypper se -s vlc
+Loading repository data...
+Reading installed packages...
+
+S  | Name                          | Type       | Version                           | Arch   | Repository               
+---+-------------------------------+------------+-----------------------------------+--------+--------------------------
+   | libvlc-gtk0                   | package    | 0.6.8.20160609.6575c25-lp150.2.18 | x86_64 | Packman Repository       
+   | libvlc-gtk0-debuginfo         | package    | 0.6.8.20160609.6575c25-lp150.2.18 | x86_64 | Packman Repository       
+i+ | libvlc5                       | package    | 3.0.2-lp150.7.5                   | x86_64 | Packman Repository       
+
+*** To update specific package
+e.g. vlc
+
+zypper rm vlc
+zypper in vlc {Version}
+
+Can get version of particular package using 
+zypper se -s {package}
+
+** To see repositories 
+
+ls /etc/zypp/
+
+repos.d have the repos in. 
+
+Repo files have names and priorities. 
+
+1 is the highest priority, 99 is the lowest priority.
+
+It means some packages are installed over others. 
+
+** Backups
+
+Backup package (backups) are stored in /adm/backer
+
+backup.conf is the configuration file for the backups. 
+
+Backups are stored from certain machines to others. 
+
+Certain users are only backed up to certain machines as can be seen in the
+file. 
+
+backer.create.sh created a new backer file 
+Found in /mnt/backer
+
+**** Storage of backups
+
+Found in /mnt/backer
+
+This is where the backups are stored 
+
+/mnt/l/backups
+
+Backups are generally done with successive rdiff (incremental diffs) commands by the computer
+
+**** How to restore 
+To restore data of computer, one can just rsync the whole folder from
+/mnt/l/backups/{name_of_profile} into the the computer 
+
+For more complex restorations, one can just use the rdiff commands
+themselves. 
+
+rdiff -backup-data in backup profile in /mnt/l/backups
+
+** systemctl
+systemctl is one of the main commands in the linux arsenal. 
+
+Can go into /sysadmin/backer and can control it
+
+e.g. systemctl status backer 
+
+One finds the output 
+backer.timer backer.service
+
+backer.timer is a small process that calls backer.service when the time is
+right. 
+
+e.g.
+systemctl start   networkmanager
+          stop
+          enable
+          disable
+
+Enable will make sure that the process runs on startup. 
+
+To check slurm do
+
+systemctl status slurmd
+
+** pssh and prsync
+pssh is parallel ssh. This means that we can run a command of all computers
+from a given list (say allpc, which is a file which just contains names of the
+computers on all files). 
+
+e.g. 
+
+pssh -h allpc -i whoami
+
+-i flag prints output and if they have succeeded or not
+whoami shows what the computer is. 
+
+
+pssh -h allpc -i systemctl daemon-reload
+
+This updates all of the config files for all of the computers. 
+
+prsync is similar except for syncing directories. 
+
+e.g.
+
+prsync -X -h -au allpc /etc/hosts /etc/
+
+This updates (-u) all the computers hosts file and keeps them the same. 
+
+** Kernels 
+uname -a
+
+This shows the current kernel. 
+
+ls /boot/
+This lists the kernels
+
+It keeps the last two that were installed just incase. 
+
+** Checking disk space 
+
+pssh -h allpc -i df -h 
+
+If any are >19% investigate and solve.
+
+
+** Printers
+
+Print systems are in /etc/cups
+
+This contains all of the config files. 
+
+/etc/cups/ppd contains all of the printer drivers. 
+
+*** How to make changes to printers
+
+To change the printing configuration (after a change of kcl password etc) one
+must first stop cups from running, change printers.conf and then enable and
+start
+
+systemctl status cups 
+
+systemctl stop cups 
+
+{Edit printers.conf with new password, respect privacy}
+
+systemctl enable --now cups 
+
+OR 
+
+systemctl enable cups 
+systemctl start cups
+
+
+*** To print
+lpr -q {name-of_file}
+
+** YaST
+
+This is a useful way to look at the configuration of the systems. 
+
+e.g. updates, printer configurations, addition/removal of users
+
+Use tab and the arrow keys to move, then use the function keys to enact
+changes. 
+
+There are tickboxes which show what is active and what isn't. 
+
+With the printers one of the tickboxes may be inactive, so untick it.
+
+** New IPs 2019-09-05
+
+10.101.17.99     gherkin
+10.101.17.100    coal
+10.101.17.158    beryl
+10.101.17.152    tar
+10.101.17.95     onyx
+137.73.5.17 172.17.0.1 opal
+10.101.140.248   char
+10.101.157.59    coke
+10.101.140.123   soot

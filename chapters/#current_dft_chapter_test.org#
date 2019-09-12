@@ -244,22 +244,20 @@ exchange-correlation potential can be approximated by an approximately local fun
 the the fact that correlations basically lead to a screening of the coulomb potential?
 
 
-The process by which this happens are as follows: one solves the Poisson
-equation for the Hartree potential, given an initial input density which on
-the first iteration is a sum of atom-centred charges, one finds the total
-effective potential for the system which is the sum of the Hartree potential,
-the potential from the nuclei ($V_{\text{ext}}$) and the exchange-correlation
-potential $V_{\text{xc}}$. The Schr\:odinger equation is subsequently solved,
-and a new electron density is found. This density can be put back into the
-Poisson's equation to find the hartree potential and start the cycle
-again. These equations must be solved self-consistently as the electron
-density that one puts into Poisson's equation is the quantity that one solves
-for. Once the input and output densities are within some tolerance of each
-other, then one can say that the $\rho^{\text{out}}(\mathbf{r}) =
-\rho^{\text{exact}}(\mathbf{r})$, and the resulting Kohn-Sham eigenvalues are
-the ground state energies.
+The process by which this happens are as follows: one solves for the Hartree potential
+first with a given input density (the solution of Poisson's equation), then one finds the
+total effective potential for the system which is the sum of the Hartree potential, the
+potential from the nuclei ($V_{\text{ext}}$) and the exchange-correlation potential
+$V_{\text{xc}}$. The Schr\:odinger equation is subsequently solved, and a new electron
+density is found. This density can be put back into the Poisson's equation to find the
+hartree potential and start the cycle again. These equations must be solved
+self-consistently as the electron density that one puts into Poisson's equation is the
+quantity that one solves for. Once the input and output densities are within some
+tolerance of each other, then one can say that the $\rho^{\text{out}}(\mathbf{r}) = \rho^{\text{exact}}(\mathbf{r})$,
+and the resulting Kohn-Sham eigenvalues are the ground state energies. 
 
 The Kohn-Sham eigenvalues are not strictly correct. 
+
 
 
 *** Kohn-Sham Equations and Self-Consistency
