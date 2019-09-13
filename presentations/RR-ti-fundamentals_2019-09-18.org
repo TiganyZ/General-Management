@@ -101,22 +101,28 @@ conditions.
 |-----------------------------------+-------+-------+--------|
 | Quantity                          |    TB |   BOP | target |
 |-----------------------------------+-------+-------+--------|
-| $a_{\alpha}$              [bohr]  |  5.56 |  5.20 |   5.57 |
-| $c/a_{\alpha}$            [bohr]  |  1.59 |  9.15 |   1.58 |
-| $C_{11}$                  [GPa ]  | 180.7 | 218.1 |  176.1 |
-| $C_{33}$                  [GPa ]  | 206.1 | 263.4 |  190.5 |
-| $C_{44}$                  [GPa ]  |  48.3 |  -8.5 |   50.8 |
-| $C_{12}$                  [GPa ]  |  95.2 |  93.6 |   86.9 |
-| $C_{13}$                  [GPa ]  |  66.5 |  54.4 |   68.3 |
-| $a_{\omega}$              [bohr]  |  8.84 |  8.34 |   8.73 |
-| $c_{\omega}$              [bohr]  |  5.38 |  5.30 |   5.32 |
+| $a_{\alpha}$              [bohr]  |  5.56 |  5.54 |   5.57 |
+| $c/a_{\alpha}$            [bohr]  |  1.61 |  1.62 |   1.58 |
+| $C_{11}$                  [GPa ]  | 180.7 | 199.8 |  176.1 |
+| $C_{33}$                  [GPa ]  | 206.1 | 206.9 |  190.5 |
+| $C_{44}$                  [GPa ]  |  48.3 |  37.7 |   50.8 |
+| $C_{12}$                  [GPa ]  |  95.2 |  80.7 |   86.9 |
+| $C_{13}$                  [GPa ]  |  66.5 |  59.6 |   68.3 |
+| $a_{\omega}$              [bohr]  |  8.84 |  8.85 |   8.73 |
+| $c_{\omega}$              [bohr]  |  5.38 |  5.37 |   5.32 |
 | $a_{\beta}$               [bohr]  |  6.26 |    -- |   6.17 |
-| $\Delta E(\omega-\alpha)$ [mRyd ] | -1.10 | 14.34 |  -0.73 |
+| $\Delta E(\omega-\alpha)$ [mRyd ] | -1.10 | -2.06 |  -0.73 |
 | bandwidth                 [Ryd ]  |  0.42 |    -- |   0.42 |
 |-----------------------------------+-------+-------+--------|
 
 
 #+begin_notes
+====================  Minimization complete  ====================
+
+    a_omega =  4.684778 AA
+    c_omega =  2.842485 AA
+    u_omega =  2.842485 
+ Etot_omega = -32.320179 eV
 
 - BOP difference is probably due to the fact that bond integrals are not
   exactly the same due to approximate methods.
@@ -169,7 +175,7 @@ All frequencies are in THz
 ** Total Free Energy
 #+NAME: Total Free energy 
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;
-[[file:~/Documents/docs/Management/Images/gibbs_free-energies_per_atom_2019-09-12.png]]
+[[file:~/Documents/docs/Management/Images/gibbs_free-energies_rydperatom_2019-09-12.png]]
 
 
 #+ATTR_REVEAL: :frag fade-in
@@ -328,7 +334,7 @@ results.
 
 
 ** Calculation Details
-- Först$^{[6]}$ calculated energetics of defect complexes with associated local
+- Först /et al./ $[6]$ calculated energetics of defect complexes with associated local
   force-constant matrix.
 - Alloys need to be treated as non-equilibrium.
 - Partial thermodynamic equilibrium imposed (thermal equilibrium for one species and not the other). 
@@ -356,10 +362,10 @@ al/, Phys. Rev. Lett. 96, 2006
 
 
 * Future Work 
-- Finish Ti$_3$Al defect cluster calculations in DFT. 
+- Finish Ti and Ti$_3$Al defect cluster calculations in DFT. 
 - Maybe extend Ti with Al distributed randomly. 
-- Validate Ti defect cluster results in DFT
-- See how core structure changes with O content. 
+- Validate Ti defect cluster results in DFT.
+- Finish embedding calculations to see how core structure changes with O content. 
 - Calculate the Peierls barrier on prism, and $\pi$ planes. 
 - Calculate secondary Peierls barrier for kink migration with and without
   oxygen.
