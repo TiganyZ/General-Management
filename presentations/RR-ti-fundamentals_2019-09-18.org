@@ -90,10 +90,8 @@ conditions.
 
 * Parameter Optimisation
 - Parameter set for TB model optimised by two evolutionary algorithms: genetic
-  and particle swarm.
-- More optimisation necessary. Interim model used for simulations.
-- Similar tests can improve the optimisation procedure such
-  that parameters are not overfit to training data.
+  and covariance matrix evolution.
+- Fitting targets were a mix of experimental and DFT data. 
 
 ** Results of optimisation. 
 #+ATTR_HTML: :width 100%
@@ -114,6 +112,20 @@ conditions.
 | $\Delta E(\omega-\alpha)$ [mRyd ] | -1.10 | -2.06 |  -0.73 |
 | bandwidth                 [Ryd ]  |  0.42 |    -- |   0.42 |
 |-----------------------------------+-------+-------+--------|
+
+*** Energy Splittings
+
+#+ATTR_HTML: :width 100%
+#+ATTR_HTML: :height 90%
+|---------------------------------------+-------+--------|
+| Quantity                              |    TB | target |
+|---------------------------------------+-------+--------|
+| $\Delta E(\omega-\alpha)$     [mRyd ] | -1.10 |  -0.73 |
+| $\Delta E(\text{4H}-\alpha)$  [mRyd ] |  1.98 |   3.17 |
+| $\Delta E(\text{6H}-\alpha)$  [mRyd ] |  2.98 |   3.72 |
+| $\Delta E(\text{fcc}-\alpha)$ [mRyd ] |  4.49 |   4.52 |
+| $\Delta E(\beta-\alpha)$      [mRyd ] |  9.83 |   7.64 |
+|---------------------------------------+-------+--------|
 
 
 #+begin_notes
@@ -194,7 +206,7 @@ All frequencies are in THz
 
 
 #+BEGIN_NOTES
-
+Quasiharmonic scheme is used.
 
 Free energy contribution from soft phonon modes don't contribute alot to the
 free energy, hence why at the larger temperatures the bcc phase does not
@@ -213,11 +225,8 @@ hcp is always more stable than omega in this temperature range.
 
 
 #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-
-- $\gamma$ -surfaces are plots of excess energy with the movement of
-  atoms on a fault plane.
-- Stable stacking faults correspond to local minima.
-- This provides insight into possible dislocation dissociations.
+- Excess energy of sheared slab. 
+- Stable stacking faults provides insight into possible dislocation dissociations.
 
 #+REVEAL_HTML: </div>
 
@@ -228,13 +237,12 @@ hcp is always more stable than omega in this temperature range.
 
 ** Results
 #+ATTR_HTML: :width 100%
-| Plane     | Fault                |  TB | [DFT]              | [TB]         |
-|-----------+----------------------+-----+--------------------+--------------|
-| Basal     | $I_{1}$ (AB\vert CB) | 198 | 148 $^{[1]}$       | --           |
-|           | $I_{2}$ (AB\vert CA) | 242 | 260 $^{[1]}$       | 290 $^{[2]}$ |
-|-----------+----------------------+-----+--------------------+--------------|
-| Prismatic | $\gamma_{P}$         |  45 | 250/233 $^{[1,4]}$ | 110$^{[5]}$  |
-|-----------+----------------------+-----+--------------------+--------------|
+| Plane     | Fault        |  TB | [DFT]              | [TB]         |
+|-----------+--------------+-----+--------------------+--------------|
+| Basal     | $I_{1}$      | 198 | 148 $^{[1]}$       | --           |
+|           | $I_{2}$      | 242 | 260 $^{[1]}$       | 290 $^{[2]}$ |
+| Prismatic | $\gamma_{P}$ |  45 | 250/233 $^{[1,4]}$ | 110$^{[5]}$  |
+|-----------+--------------+-----+--------------------+--------------|
 
 
 - Units are in $mJm^{-2}$. Square brackets denote method from literature. 
@@ -289,10 +297,6 @@ results.
 #+ATTR_HTML: :width 30% :style position:absolute;top:180px;left:-150px;z_index:2;
 [[file:~/Documents/docs/Management/Images/coordinate_prismatic_plane.png]]
 
-
-** Oxygen-core quadrupole 
-
-#+REVEAL_HTML: <video controls width="600" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_core_quad.ogv" ></video>
 
 
 * Formation and Dissolution energies
@@ -353,18 +357,21 @@ al/, Phys. Rev. Lett. 96, 2006
 #+ATTR_HTML: :width 70% :style position:relative;top:-525px;left:0px;z_index:2;
 [[file:~/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png]]
 
+** Ti_3Al Cells
 
+#+NAME: Ti3al VTi
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/ti3al_vti_o.png]]
 
-** Ti_3Al
-- Both Al and Ti vacancies. 
-- Affinity varies. 
+** Ti Cells
 
+#+CAPTION: Ti 6V
+#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
 
 
 * Future Work 
-- Finish Ti and Ti$_3$Al defect cluster calculations in DFT. 
-- Maybe extend Ti with Al distributed randomly. 
-- Validate Ti defect cluster results in DFT.
+- Finish Ti and Ti_3Al defect cluster calculations in DFT. 
+- Maybe extend to Ti with Al distributed randomly. 
 - Finish embedding calculations to see how core structure changes with O content. 
 - Calculate the Peierls barrier on prism, and $\pi$ planes. 
 - Calculate secondary Peierls barrier for kink migration with and without
