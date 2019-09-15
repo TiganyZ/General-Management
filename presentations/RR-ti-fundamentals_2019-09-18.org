@@ -177,8 +177,6 @@ All frequencies are in THz
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;
 [[file:~/Documents/docs/Management/Images/bcc-band_dos-0-1.png]]
 
-
-
 #+ATTR_REVEAL: :frag fade-in
 #+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
 [[file:~/Documents/docs/Management/Images/bcc-band_dos_dft-1.png]]
@@ -192,7 +190,7 @@ All frequencies are in THz
 
 #+ATTR_REVEAL: :frag fade-in
 #+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
-[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_lda_zoom.png]]
+[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_lda_thick.png]]
 
 ** Thermal Expansion
 #+NAME: Thermal Expansion
@@ -327,14 +325,18 @@ results.
 #+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
 
 
-* Defect Clusters 
-- Vacancies and solutes can form complexes which lower their energy (defactant
-  model).
-- This can cause more defects in material at given temperature than otherwise expected.
-- More defects can result in increased number of precipitates due to more nucleation sites.
-- This defect mediated mechanism may be behind Felicity's results of increased
-  $\alpha_2$ precipitation. 
+** Pure Ti: Next steps
+- Analyse embedding calculations
+- Calculate Peierls barriers. 
 
+* Defect Clusters 
+
+- Increase in oxygen content in Ti-7wt%Al causes more $\alpha_2$ precipitates
+  upon annealing (Felicity's results). 
+- Oxygen acting as a defactant might stabilise defect complexes (Ti_v + $n$O).
+- This can cause more defects resulting in an increased number of precipitates due to more nucleation sites.
+- First starting out with pure Ti and $\alpha_2$. Extension to Ti-7wt%Al may
+  be possible. 
 
 
 ** Calculation Details
@@ -370,9 +372,9 @@ al/, Phys. Rev. Lett. 96, 2006
 
 
 * Future Work 
-- Finish Ti and Ti_3Al defect cluster calculations in DFT. 
-- Maybe extend to Ti with Al distributed randomly. 
-- Finish embedding calculations to see how core structure changes with O content. 
+- Finish Ti and $\text{Ti}_{3}\text{Al}$ defect cluster calculations in DFT. 
+- Extend to Ti-7wt%Al with SQS structures. 
+- Analyse embedding calculations to see how core structure changes with O content. 
 - Calculate the Peierls barrier on prism, and $\pi$ planes. 
 - Calculate secondary Peierls barrier for kink migration with and without
   oxygen.
