@@ -326,17 +326,18 @@ results.
 
 
 ** Pure Ti: Next steps
-- Analyse embedding calculations
-- Calculate Peierls barriers. 
-
+- Analyse embedding calculations to see how core structure changes with O content. 
+- Calculate the Peierls barrier on prism, and $\pi$ planes. 
+- Calculate secondary Peierls barrier for kink migration with and without
+  oxygen.
+- Add rutile layer; see how dislocations and oxygen interact with structure.
 * Defect Clusters 
 
-- Increase in oxygen content in Ti-7wt%Al causes more $\alpha_2$ precipitates
-  upon annealing (Felicity's results). 
-- Oxygen acting as a defactant might stabilise defect complexes (Ti_v + $n$O).
-- This can cause more defects resulting in an increased number of precipitates due to more nucleation sites.
-- First starting out with pure Ti and $\alpha_2$. Extension to Ti-7wt%Al may
-  be possible. 
+- Increase in oxygen content in Ti-7wt%Al causes higher number density of $\alpha_2$ precipitates
+  at 550\deg C (Felicity's results). 
+- Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
+- This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
+- First starting out with pure Ti and $\alpha_2$. Still working on extension to Ti-7wt%Al.
 
 
 ** Calculation Details
@@ -360,13 +361,11 @@ al/, Phys. Rev. Lett. 96, 2006
 [[file:~/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png]]
 
 ** Ti_3Al Cells
-
 #+NAME: Ti3al VTi
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
 [[file:~/Documents/docs/Management/Images/ti3al_vti_o.png]]
 
 ** Ti Cells
-
 #+CAPTION: Ti 6V
 #+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
 
