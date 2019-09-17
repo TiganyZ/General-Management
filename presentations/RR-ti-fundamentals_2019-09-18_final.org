@@ -368,5 +368,18 @@ al/, Phys. Rev. Lett. 96, 2006
 ** Defect Clusters: Future Work 
 - Finish Ti and $\text{Ti}_{3}\text{Al}$ defect cluster calculations in DFT. 
 - Possibly extend to Ti-7wt%Al with SQS structures.
-- See how much of an effect anharmonicity has on predictions. 
+- See how much of an effect anharmonicity has on predictions.
+
+
+* Summary
+- Successfully made TB model of Ti which reproduces DFT results with only
+  d-orbitals.
+- Transferable:
+  - Correct energetic ordering for study of different phases. 
+  - Correct elastic properties and good scaling for defect simulations.
+  - Integer number of electrons for charge transfer models (electrochemistry).
+- BOP formulation produces similar results with only linear scaling.
+- Embedding calculations should resolve single dislocation core ground-state
+  at realistic O concentrations.
+- To do: Embed O-disl. interaction, $\text{Ti-TiO}_2$ interface, defect clusters.
 
