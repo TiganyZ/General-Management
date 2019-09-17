@@ -182,15 +182,23 @@ All frequencies are in THz
 [[file:~/Documents/docs/Management/Images/bcc-band_dos_dft-1.png]]
 * Free Energies
 
-** Total Free Energy
+** Vibrational Free Energy
 #+NAME: Total Free energy 
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;
-[[file:~/Documents/docs/Management/Images/gibbs_free-energies_rydperatom_2019-09-12.png]]
+[[file:~/Documents/docs/Management/Images/free_energy_tbe_bcc_hcp_2019-09-17.png]]
 
 
 #+ATTR_REVEAL: :frag fade-in
 #+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
-[[file:~/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_lda_thick.png]]
+[[file:~/Documents/docs/Management/Images/free_energy_dft_old_band_conf.png]]
+
+** Gibbs Free Energy 
+#+NAME: Total Free energy 
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/gibbs_free-energies_rydperatom_2019-09-12.png]]
+
+
+
 
 ** Thermal Expansion
 #+NAME: Thermal Expansion
@@ -273,17 +281,9 @@ results.
 
  
 
-** Quadrupolar Cell $\frac{1}{3}\langle11\bar{2}0\rangle$ screw
-
-
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-#+REVEAL_HTML: <video controls width="650" height="450" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/S_dipole_relaxation_array.ogv" ></video>
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-#+ATTR_HTML: :width 150% :frag grow
-[[file:~/Documents/docs/Management/Images/core_relax_initial.gif]]
-#+REVEAL_HTML: </div>
-
+** $\frac{1}{3}\langle11\bar{2}0\rangle$ screw
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/bop_dislocation_relaxation_prismatic_partials_larger.png]]
 #+REVEAL: split
 
 #+ATTR_HTML: :width 600 :style position:relative;top:-150px;left:50px;z_index:1;
@@ -326,18 +326,22 @@ results.
 
 
 ** Pure Ti: Next steps
-- Analyse embedding calculations to see how core structure changes with O content. 
+- Finish and analyse embedding calculations to see how core structure changes
+  with O content.
 - Calculate the Peierls barrier on prism, and $\pi$ planes. 
 - Calculate secondary Peierls barrier for kink migration with and without
   oxygen.
 - Add rutile layer; see how dislocations and oxygen interact with structure.
+
 * Defect Clusters 
 
-- Increase in oxygen content in Ti-7wt%Al causes higher number density of $\alpha_2$ precipitates
-  at 550\deg C (Felicity's results). 
+- Increase in oxygen content in Ti-7wt.%Al causes higher number density of
+  $\alpha_2$ precipitates at 550\deg C (Felicity's results).
 - Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
 - This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
-- First starting out with pure Ti and $\alpha_2$. Still working on extension to Ti-7wt%Al.
+- First starting out with pure Ti and $\alpha_2$. Still working on extension to Ti-7wt.%Al.
+
+
 
 
 ** Calculation Details
@@ -350,6 +354,7 @@ results.
 $[6]$ /Point Defect Concentrations in Metastable Fe-C Alloys/, Först /et
 al/, Phys. Rev. Lett. 96, 2006
 
+
 ** Plots in Fe-C
 #+NAME: Forst calculation
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
@@ -360,10 +365,10 @@ al/, Phys. Rev. Lett. 96, 2006
 #+ATTR_HTML: :width 70% :style position:relative;top:-525px;left:0px;z_index:2;
 [[file:~/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png]]
 
-** Ti_3Al Cells
+** $\text{Ti}_{3}\text{Al}$  Cells
 #+NAME: Ti3al VTi
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
-[[file:~/Documents/docs/Management/Images/ti3al_vti_o.png]]
+[[file:~/Documents/docs/Management/Images/ti3al_val_o.png]]
 
 ** Ti Cells
 #+CAPTION: Ti 6V

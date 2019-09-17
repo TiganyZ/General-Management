@@ -413,6 +413,10 @@ The configurational entropy of the model system is
 
 ** TODO Write up fitting and optimisation 
 ** TODO Gamma Surfaces for New Model 
+*** BOP
+
+Remember that on opal there is BOP compilation siwht forces from x and wy
+removes so relaxation is only along z! 
 ** TODO Titanium Optimisation
 *** Not great parameter sets but ones to minimise
 **** Amazing c/a and alat
