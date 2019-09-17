@@ -381,5 +381,5 @@ al/, Phys. Rev. Lett. 96, 2006
 - BOP formulation produces similar results with only linear scaling.
 - Embedding calculations should resolve single dislocation core ground-state
   at realistic O concentrations.
-- To do: Embed O-disl. interaction, $\text{Ti-TiO}_2$ interface, defect clusters.
+- To do: Embed O-disl, $\text{Ti/TiO}_2$ interface, defect clusters.
 
