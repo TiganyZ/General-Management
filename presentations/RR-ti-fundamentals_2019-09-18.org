@@ -325,13 +325,15 @@ results.
 #+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
 
 
-** Pure Ti: Next steps
+** Pure Ti: Future Work
 - Finish and analyse embedding calculations to see how core structure changes
   with O content.
 - Calculate the Peierls barrier on prism, and $\pi$ planes. 
 - Calculate secondary Peierls barrier for kink migration with and without
   oxygen.
 - Add rutile layer; see how dislocations and oxygen interact with structure.
+
+
 
 * Defect Clusters 
 
@@ -347,12 +349,15 @@ results.
 ** Calculation Details
 - Först /et al./ $[6]$ calculated energetics of defect complexes with associated local
   force-constant matrix.
-- Alloys need to be treated as non-equilibrium.
 - Partial thermodynamic equilibrium imposed (thermal equilibrium for one species and not the other). 
-- Defect concentration plotted as a function of carbon/vacancy concentration.
+- Defect concentration plotted as a function of carbon/vacancy concentration
+  only at 160\deg C.
+- Extension: apply the quasiharmonic approximation/thermodynamic integration
+  for better accuracy at higher temperatures (550\deg C - 950\deg C). 
 
 $[6]$ /Point Defect Concentrations in Metastable Fe-C Alloys/, Först /et
 al/, Phys. Rev. Lett. 96, 2006
+
 
 
 ** Plots in Fe-C
@@ -375,14 +380,10 @@ al/, Phys. Rev. Lett. 96, 2006
 #+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
 
 
-* Future Work 
+** Defect Clusters: Future Work 
 - Finish Ti and $\text{Ti}_{3}\text{Al}$ defect cluster calculations in DFT. 
-- Extend to Ti-7wt%Al with SQS structures. 
-- Analyse embedding calculations to see how core structure changes with O content. 
-- Calculate the Peierls barrier on prism, and $\pi$ planes. 
-- Calculate secondary Peierls barrier for kink migration with and without
-  oxygen.
-- Add rutile layer; see how dislocations and oxygen interact with structure.
+- Possibly extend to Ti-7wt%Al with SQS structures.
+- See if quasiharmonic model can 
 
 
 * Additional references
