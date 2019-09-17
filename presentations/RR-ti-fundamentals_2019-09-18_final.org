@@ -284,17 +284,6 @@ results.
 ** $\frac{1}{3}\langle11\bar{2}0\rangle$ screw
 #+ATTR_HTML: :width 80% :style position:relative;top:0px;left:0px;z_index:1;
 [[file:~/Documents/docs/Management/Images/bop_dislocation_relaxation_prismatic_partials_larger.png]]
-#+REVEAL: split
-
-#+ATTR_HTML: :width 600 :style position:relative;top:-150px;left:50px;z_index:1;
-[[file:~/Documents/docs/Management/Images/zoom_core_look.png]]
-
-#+ATTR_HTML: :width 80% :style position:absolute;top:280px;left:150px;z_index:2;
-[[file:~/Documents/docs/Management/Images/ghazisaiedi_trinkle_3_core.png]]
-
-#+ATTR_HTML: :width 30% :style position:absolute;top:180px;left:-150px;z_index:2;
-[[file:~/Documents/docs/Management/Images/coordinate_prismatic_plane.png]]
-
 
 
 * Formation and Dissolution energies
