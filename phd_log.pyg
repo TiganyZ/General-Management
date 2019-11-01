@@ -1,0 +1,3 @@
+TBE: nbas = 128 nspec = 1 verb 31
+TB: rmaxh = 20, m-stat: F-P rlx-vol, rho
+bz: metal
