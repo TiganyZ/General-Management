@@ -3750,7 +3750,26 @@ Figures from DFT for comparison
  
 **** Directory of the results
 [[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
-[[file:~/Documents/ti/final_model_2019-11-12/]]
+[[file:~/Documents/ti/final_model_2019-11-
+
+** Higher Quality DFT energies
+
+Energies were calculated at 26x26x26 grid of k points.
+
+It was a double kappa basis set. 
+
+{'Structure': 'hcp', 'a': 5.573445955631, 'c': 8.814165906273, 'Energy (Ry/atom)': -1707.61941055}
+{'Structure': 'omega', 'a': 8.7038058379, 'c': 5.35245317114, 'Energy (Ry/atom)': -1707.6197605999998}
+{'Structure': 'bcc', 'a': 6.177301070027708, 'c': 6.177301070027708, 'Energy (Ry/atom)': -1707.6111003}
+{'Structure': 'fcc', 'a': 7.799738260742188, 'c': 7.799738260742188, 'Energy (Ry/atom)': -1707.6148392}
+
+
+E(omega - hcp)  = -0.350 mRyd per atom
+E(fcc - hcp)    =  4.571 mRyd per atom
+E(bcc - hcp)    =  8.310 mRyd per atom
+
+
+
 
 ** Trends I've noticed during the fitting
 
