@@ -1,0 +1,4113 @@
+<!DOCTYPE html>
+<html lang="en" class="pb-page"  data-request-id="dc7ceaae-ef85-4d55-b493-150c4bfcf22d"  
+><head data-pb-dropzone="head"><meta name="pbContext" content=";article:article:10.1063/1.4945106;page:string:Article/Chapter View;website:website:aip-site;journal:journal:jap;subPage:string:Access Denial;issue:issue:10.1063/jap.2016.119.issue-12;wgroup:string:Publication Websites;pageGroup:string:Publication Pages"/><meta data-pb-head="head-widgets-start"/>
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+
+
+
+
+
+
+
+        <meta name="robots" content="noarchive,noindex,nofollow"/>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=0"/>
+
+
+
+
+
+
+
+<title>Experimental and first-principles studies on the elastic properties of α-hafnium metal under pressure: Journal of Applied Physics: Vol 119, No 12</title>
+
+
+
+
+<meta data-pb-head="head-widgets-end"/>
+<link rel="stylesheet" type="text/css" href="/wro/product.css"><link rel="stylesheet" type="text/css" href="/pb/css/t1520943700000-v1520943700000/default.css" id="pb-css" data-pb-css-id="t1520943700000-v1520943700000/default.css"/>
+
+
+<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+</script>
+<script type="text/javascript" src="/wro/product.js"></script>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+<script type="text/javascript">
+	var oas_tag = oas_tag || {};
+	oas_tag.url = 'oascentral.scitation.org';
+	oas_tag.sizes = function () { //size is required [width, height]
+		oas_tag.definePos('Top', [728,90]);
+		oas_tag.definePos('Right', [300,250]);
+		oas_tag.definePos('Right1', [120,600]);
+		oas_tag.definePos('Bottom', [728,90]);
+	oas_tag.definePos('Bottom1', [728,90]);
+	};
+	oas_tag.site_page = 'aip.scitation.org';
+	oas_tag.query = 'site=aip-site&journal=jap&volume=119&issue=12&doi=10.1063/1.4945106';
+	oas_tag.analytics = true;
+	(function() {
+		oas_tag.version ='1';
+		oas_tag.loadAd = oas_tag.loadAd || function(){};
+		var oas = document.createElement('script'),
+			protocol = 'https:' == document.location.protocol?'https://':'http://',
+			node = document.getElementsByTagName('script')[0];
+		oas.type = 'text/javascript';
+		oas.async = true;
+		oas.src = protocol + oas_tag.url + '/om/' + oas_tag.version + '.js';
+		node.parentNode.insertBefore(oas, node);
+	})();
+</script>
+
+<script>
+  dataLayer = [{
+	'site': 'aip-site',
+	'journal': 'jap',
+	'volume': '119',
+	'issue': '12',
+	'doi': '10.1063/1.4945106'
+  }];
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#accept-cookie-policy').on('click',function(){
+			$('#cookiePolicy').css('display','none');
+		});
+	});
+/* LIT-187035 */
+
+//    var modal = document.getElementById("cookiePolicy");
+//    var btn = document.getElementById("accept-cookie-policy");
+//    if(btn != null)
+//        btn.onClick = function() {
+//            modal.style.display = "none";
+//        }
+</script>
+
+
+<!-- link rel="stylesheet" type="text/css" href="/pb-assets/css/temp.css"/ -->
+<style>
+.error {
+	color: rgb(239, 70, 35);
+}
+
+/* move this style to the pb-ad div that's rendered if/when there's an ad to display */
+.header-ad-container {
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: inherit;
+}
+.header-ad-container .pb-ad {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+/* so the sign up for alerts link and journal title don't turn blue */
+.main-menu-container .sign-up-for-alerts a {
+	color: #111111;
+}
+.header-journal-section .header-journal-title a {
+	color: #111111;
+}
+
+/* title is too close to log e.g. see http://aip.scitation.org.aip-prod.literatumonline.com/ */
+.header-journal-info .header-journal-title {
+	margin-left: 10px;
+}
+
+
+/* Updates to the footer */
+.desktop-footer .footer-left {
+	width: 75%;
+	border-right: 1px solid gray;
+}
+
+.desktop-footer h4 {
+	font-size: 20px;
+	font-weight: normal;
+	color: white;
+}
+
+.site-footer {
+	background-color: #111111;
+	padding-top: 0px;
+	padding-bottom: 40px;
+	margin-top: 60px;
+}
+
+.site-footer .footer-sections {
+	margin-bottom: 30px;
+	background-color: #222222;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.inline-icon a {
+  display:inline;
+  padding-right: 10px;
+}
+
+/* -- Rich Text Widget -- */
+.pb-rich-text ul {
+	padding-left: 16px;
+	list-style-type: disc;
+	list-style-position: inside;
+	text-indent: -32px;
+	margin-left: 16px;
+}
+
+/* --- Journal Home --- */
+.recentIssuesCover {
+	font-size: 14px;
+	color: #111;
+}
+
+/* --- Browse Journals Page --- */
+
+.browseJournals .media {
+	max-width: 100%;
+	width: 100%;
+}
+
+.browseJournals .recentIssuesCover {
+	clear: both;
+	height: 170px;
+	margin-top: 25px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+}
+
+.browseJournals .most-read .latest-articles-container .latest-article {
+	padding-bottom: 10px;
+	border-top: 0;
+}
+
+/* .browseJournals .recentIssuesCover .coverImage img {
+	box-shadow: 3px 3px 4px #ccc;
+} */
+
+
+.publicationCoverImage img {
+	box-shadow: 3px 3px 5px #aaa;
+}
+
+@media (min-width: 960px) {
+	.rightSidebar {
+		margin-left: 20px;
+	}
+	.borderLeft {
+		padding-left: 20px;
+		border-left: 1px solid #ccd;
+	}
+}
+
+@media (max-width: 719px) {
+	.recentIssuesCover {
+		display: block;
+	}
+	.latest-jobs .PT-content  .all-jobs {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+/* --- TOC page --- */
+
+.sub-section .ads {
+	display: none;
+}
+
+.volumes.expandable li > a:hover {
+	color: #111111;
+}
+
+.issue-item > a:hover {
+	color: #777777;
+}
+
+.toc-content {
+	width: 100%;
+}
+
+/* LIT-159590
+.toc-content .pagenation {
+	margin-bottom: 40px;
+	margin-right: 15px;
+}
+*/
+
+.toc-content .journal-img img {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toc-content a {
+	color: #111111;
+}
+
+/* removing per LIT-149819
+.toc-content a:hover {
+	color: #777777;
+}
+*/
+
+/* Hiding the FULL TEXT link on TOC because not enough room w/ CHORUS link (LIT-140205)
+.toc-content a.ref.nowrap.full {
+	display: none;
+}
+*/
+
+.figureViewer-overlay a {
+	color: white;
+}
+
+@media (max-width: 960px) {
+	.toc-content .article-tabs .show-pdf {
+		border-right: none;
+	}
+}
+
+/* removed per LIT-144690
+.conference-details {
+	color: #777777;
+}
+
+@media (min-width: 720px) {
+	.conference-details {
+			margin-top: -35px;
+	}
+}
+*/
+
+.conference-editors .contrib {
+	display: inline;
+}
+
+/* --- temporary while LIT-140648 is being updated --- */
+.apc .conference-name,
+.pma .conference-date:last-child,
+.pma .conference-volume,
+.pma .conference-editors,
+.pma .conference-isbn {
+	display: none;
+}
+
+.pma .issue-header {
+	box-shadow: none;
+}
+
+/* --- Article Page --- */
+/* LIT-182924
+.NLM_paragraph {
+	margin-bottom: 1.5em;
+}
+*/
+
+/* LIT-195184 added "position" below */
+.articleMetaDrop.publicationContentDropZone.advertisement {
+	float: right;
+	position: absolute;
+}
+
+.references td.refnumber {
+	vertical-align: top;
+	padding-right: .5em;
+}
+
+.references td {
+	padding-bottom: .75em;
+}
+
+table.listgroup td:first-child {
+	padding-right: 10px;
+}
+
+.crossmark-logo {
+	float: right;
+	width: 35px!important;
+}
+.cross-mark {
+	text-align: right;
+}
+
+a.showMoreAuthors {
+	font-size: 14px;
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+
+/* --- Physics Today Article Page --- */
+
+.date-download-container .pull-right {
+	border: 1px solid #c8544b;
+	border-radius: 3px;
+}
+
+.pt-submit-btn {
+	border: 0;
+}
+
+.author-images img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+}
+
+.PT-header .topic-list a {
+	background: #c8544b;
+	color: #ffffff;
+	margin: 0 10px 10px 0;
+	padding: 0px 20px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	line-height: 30px;
+	display: inline-block;
+}
+
+.PT-article-section .ReviewedArticle {
+	background: #eee;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+.PT-article-section .ReviewedArticle .source b {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+}
+
+/* --- Topic Browse Page --- */
+
+.topicalIndex {
+	width: auto;
+	margin: auto;
+	box-shadow: none;
+}
+
+/* --- Special topic pages, e.g. MMM and JASA-EL --- * 
+   removed by LIT-194620
+.topic-results {
+	margin-top: 45px;
+}
+
+.topic-results .search-results-header {
+	display: none;
+}
+*/
+
+/* --- Denial Page --- */
+
+.denial .textInput {
+	padding-left: 10px;
+	height: 35px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+}
+
+.denial .addOffer .defButton {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.ecommDeep a {
+	background-color: #00aeef;
+	color: #ffffff;
+	border: 1px solid #00aeef;
+	border-radius: 3px;
+	padding: 5px 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.ecommDeep {
+	margin-top: 25px;
+}
+
+/* --- Physics Today Header --- */
+
+.header-journal-img-pt {
+	max-width: 485px;
+}
+
+/* --- Shibboleth (/action/ssostart) --- */
+@media (min-width: 960px) {
+  section.shibboleth {
+	  width: 58%;
+	  margin-left: 20%;
+	}
+}
+section.shibboleth {
+	padding: 20px 25px;
+	border: 3px solid #00aeef;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	margin-top: 20px;
+}
+
+.shibboleth .header {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.shibboleth .content {
+	padding-left: 0;
+}
+
+.shibboleth .federation .name {
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+}
+.shibboleth .federation .name a {
+  color: #333;
+}
+
+.shibboleth .institutions .header {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  color: #00aeef;
+  font-size: 28px;
+}
+
+.shibboleth li a {
+  color: #00aeef;
+}
+
+.shibboleth .input-group,
+.shibboleth .content {
+	margin-left: 25px;
+}
+
+.shibboleth .institutions .input-group input {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.shibboleth .federation {
+	padding-bottom: 0;
+}
+
+.shibboleth .federation ul,
+.shibboleth ul {
+	margin-left: 25px;
+}
+
+/* --- Alerts Page --- */
+
+.customPanel-showMore:after,
+.publicationPanel-showMore:after {
+	font-family: 'icomoon';
+	font-size: 8px;
+	margin-left: 5px;
+	content: '\e61c';
+	vertical-align: middle;
+}
+
+.customPanel-hideMore:after,
+.publicationPanel-hideMore:after {
+	font-family: 'icomoon';
+	font-size: 8px;
+	margin-left: 5px;
+	content: '\e61d';
+	vertical-align: middle;
+}
+
+.alertSubmitButton {
+	margin-top: 40px;
+}
+
+.profile-widget-content .manageAlertsWidget .showHideButton {
+	color: #757575;
+}
+
+/* --- INSTITUTION ADMIN --- */
+.ip-ranges-table tr.row:last-child {
+	display: none;
+}
+
+.literatumProfileMainWidget .ip-ranges-table {
+	margin-bottom: 20px;
+}
+
+.activateInst input[type="text"] {
+	margin-bottom: 20px;
+}
+
+/* --- DISQUS --- */
+.feedback-container .number a {
+	color: #c8544b;
+}
+
+/* --- MOST COMMENTED --- */
+.most-commented .title,
+.most-commented .titleHR {
+	display: none;
+}
+
+.most-commented a {
+	color: #111;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 0px;
+	display: inline-block;
+}
+
+.most-commented li {
+	padding: 20px 0;
+	border-top: 1px solid #e0e0e0;
+}
+
+/* --- PHYSICS JOBS RSS FEED READER --- */
+.general-rss-feed-reader a.title {
+	display: none;
+}
+
+/* --- ADD THIS --- */
+
+.addthis_inline_share_toolbox {
+	display: inline-block;
+}
+
+.at4-count {
+	font-family: 'Montserrat', sans-serif!important;
+	line-height: 24px!important;
+	font-weight: bold!important;
+	color: #c8544b!important;
+}
+
+.at4-jumboshare .at4-count-container {
+	min-width: 0!important;
+	border-right: none!important;
+	padding-right: 0!important;
+  }
+
+.at4-jumboshare .at4-count {
+	font-size: 42px!important;
+	line-height: 21px!important;
+}
+
+.addthis_inline_share_toolbox_ac0y {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.PT-header .addthis_inline_share_toolbox{
+  margin-top: 16px;
+  vertical-align: top;
+}
+.PT-header .at4-jumboshare .at4-share-container {
+  padding-top: 5px;
+}
+.PT-header .at4-jumboshare .at4-title {
+  color: black!important;
+  font-size: 12px;
+  line-height: 18px;
+}
+/* --- LOGIN PAGES --- */
+@media (min-width: 720px) {
+  .registration-pages-container .container,
+  .login-page-wrapper {
+	  position: relative;
+	  width: 450px;
+	  margin: auto;
+  }
+}
+
+.loginWidget {
+	margin-top: 20px;
+}
+
+/* --- REGISTRATION --- */
+a.cancel {
+	text-transform: capitalize;
+	margin-left: 5px;
+}
+
+.literatumProfileMainWidget .input-group input, .changePasswordPopup .input-group input, .registration .input-group input {
+	padding: 0 10px;
+}
+
+.password-eye-icon {
+	top: 32px;
+	right: 3px;
+}
+
+.pass-strength-popup {
+	display: none;
+}
+
+.textZone.normal-txt {
+	float: right;
+	width: 92%;
+	padding-bottom: 15px;
+}
+
+/* --- SAVED SEARCH --- */
+
+@media (max-width: 600px) {
+  th.search-heading:nth-child(2), th.search-heading:nth-child(3) {
+	  display: none;
+  }
+
+  td.search-alert, td.search-alert, td.search-date, td.search-last-run {
+	  display: none;
+  }
+
+  th.search-heading:nth-child(4) a {
+	  display: none!important;
+  }
+}
+
+/* --- DEPARTMENT PAGE --- */
+
+/* removing per LIT-145011 comment#1
+.PT-header .daily-edition-image {
+	width: auto;
+	padding: 0;
+	background: none;
+}
+*/
+
+/* lshabi removed this to fix LIT-143348 
+.PT-header .daily-edition-image img {
+	width: 160px;
+}
+*/
+/* lshabi added to remove margin from boxes */
+.PT-header .daily-edition .thumbnail-container {
+	margin-bottom: 0px;
+}
+.PT-header .daily-edition-text {
+	margin-bottom: 20px;
+	min-height: 160px;
+	display: block;
+}
+
+.department-page .follow-results-container {
+	margin: 0 0 15px 67px;
+}
+
+.department-page .search-result-row.search-results-header {
+	display: none;
+}
+
+.department-page h1 {
+	color: #c8544b;
+	font-size: 32px;
+	margin: 0 65px;
+	text-transform: uppercase;
+	line-height: 65px;
+}
+
+.department-page h1 {
+	color: #c8544b;
+	font-size: 32px;
+	margin: 5px 65px;
+	text-transform: uppercase;
+}
+
+.department-page .facetHeader strong {
+	color: #c8544b;
+}
+
+.department-page .queryFilters .rmFilters {
+	color: #c8544b;
+}
+
+.queryFilters .resetFilter {
+	border: 1px solid #c8544b;
+}
+
+.PT-header .recommended-articles {
+	margin-bottom: 0;
+}
+
+.PT-header h3 {
+	margin-bottom: 0;
+}
+
+.PT-header .recommended-articles {
+	margin-bottom: 0;
+	margin-top: 25px;
+}
+
+.PT-header .article-description {
+	padding-bottom: 0;
+}
+
+/* --- DAILY EDITION DO PAGE --- */
+
+.magazinepostimage {
+	float: left;
+	margin: 10px 20px 10px 0;
+}
+
+.PT-header .latest-article {
+	border-bottom: 1px solid #e0e0e0;
+	padding: 20px 0;
+}
+
+.PT-header .latest-articles-container .title a {
+	font-family: 'Lora', serif;
+	margin: 10px 0 15px 0;
+	font-size: 20px;
+	line-height: 28px;
+	display: block;
+	color: black;
+	font-weight: bold;
+	margin-block-start: 1.67em;
+	margin-block-end: 1.67em;
+}
+
+.PT-header .PT-article-container {
+	padding-top: 10px;
+}
+
+.PT-header .date-download-container {
+	padding: 10px 0px 10px;
+}
+
+.PT-header .entryAuthor p {
+	padding-left: 0;
+}
+
+/* --- PT HOME PAGE --- */
+.PT-content .tabs-widget .tab-nav li a {
+	padding: 10px 27px;
+}
+
+
+/* --- PROFILE PAGES --- */
+
+.literatumProfileMainWidget .access-widget .tab-pane-content .access-row .access-cell {
+	padding: 5px;
+	text-align: left;
+}
+
+/* --- PUBLICATION PAGE --- */
+
+	/* -- Begin AIP-414: Temporarily remove Views until we can update logic */ 
+	.share-view-menu {
+		min-width: 14%;
+		width: 14%;
+	}
+	.share-view-menu .feedback-container {
+			display: none;
+	}
+	/* -- End AIP-414 */
+
+div#StandAloneMedia {
+	font-family: 'Montserrat', sans-serif;
+	margin: 74px 0 96px 0;
+}
+
+div#StandAloneMedia .captionLabel {
+	display: block;
+	margin-bottom: 5px;
+	color: #999999;
+}
+
+/* --- HELP FORM --- */
+.custom-form input[type="text"] {
+	display: block;
+	height: 40px;
+	border: 1px solid #cccccc;
+	color: #212121;
+	padding-left: 10px;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+/* removing per LIT-145021 comment#3
+.custom-form input[type="submit"] {
+	background-color: #00aeef;
+	color: #ffffff;
+	border: 1px solid #00aeef;
+	margin: 0;
+	height: 40px;
+	padding: 0 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+*/
+
+.custom-form input[type="submit"]:hover {
+	background-color: #06b8fa;
+	border: 1px solid #06b8fa;
+}
+
+/* --- REFERENCES SECTION --- */
+
+.article-paragraphs ol li {
+	font-size: 20px;
+}
+
+.article-paragraphs a {
+	font-size: 20px;
+}
+
+.article-paragraphs .sectionInfo h4 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* --- OAS AD TAGS --- */
+
+div#oas_Bottom1,
+div#oas_Bottom,
+div#oas_Right {
+	margin: 15px 0;
+	text-align: center;
+}
+
+/* --- On TOC pages (http://physicstoday.scitation.org/toc/pto/current) there's a gap between the footer and the content, which is messing up the effect with the gray background --- */
+
+.site-footer.loi-toc-footer {
+	margin-top: 0px;
+}
+
+/* --- AIP-525: Temporarily disable display of view and citation counts --- */
+span.view-count /* LIT-163836 ,
+span.citation-count */ {
+	/* LIT-167388 display: none; */
+}
+
+/* --- LIT-140796 need to be moved to less files --- */
+/* --- .journals-scitation .pupular-articles when we add recent widget this will be change it's own class --- */
+.latest-articles-container .access-text-state{
+  font-size: 12px;
+  text-transform: uppercase;
+}
+@media (max-width: 719px){
+  .journals-scitation .left-side{
+	  padding-right: 0px;
+  }
+  .journals-scitation .pupular-articles {
+	border-bottom: 0px solid #e0e0e0;
+  }
+}
+@media (min-width: 1279px){
+  .share-section-scitation .social-media-container .addthis-wrapper{
+		padding-right: 3%;
+  }
+}
+
+/* --- PHYSICS TODAY HOME PAGE --- */
+
+.PT-content .boxes-publication .page-heading h4 {
+	border-bottom: 10px solid #c8544b;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	margin-top: 50px;
+	text-transform: uppercase;
+}
+
+.PT-content .boxes-publication .latest-article {
+	margin-top: 0;
+}
+
+.PT-content .boxes-publication .latest-articles-container .latest-article, 
+.PT-content .featured-article .latest-articles-container .latest-article, 
+.PT-content .most-read .latest-articles-container .latest-article {
+	border-top: none;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 20px;
+}
+
+.PT-content .latest-articles-container .published-date {
+	text-transform: uppercase;
+	color: #c8544b;
+}
+
+/* lshabi recommended removal in LIT-143691
+ .PT-content a.more {
+	color: #333;
+	float: right;
+	margin-top: 60px;
+}
+*/
+
+/* LIT-151273
+.subscibe-container .pt-subscribe-newsletter {
+	margin-bottom: 40px;
+}
+*/
+
+.PT-content .recentIssuesCover {
+	margin-top: 20px;
+}
+/* lshabi added to make toolbar for pt article page LIT-142011 */
+/* lshabi added .follow-journal .icon-Rss to fix this LIT-143291 */
+@media (max-width: 719px){
+	/* LIT-159594
+	.PT-header .PT-article-section .pt-submit-btn {
+		display: inline-block;
+		z-index: 1;
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		color: #fff;
+		background: #c8544b;
+		width: 49.99%;
+		padding: 10px 0px;
+		border-radius: 0px;
+	}
+	.PT-header .PT-article-section .pt-submit-btn:nth-child(2) {
+		right: 0px;
+		left: auto;
+		border-left: 1px solid #fff;
+	}
+	*/
+	.follow-journal .icon-Rss {
+		font-size: 14px;
+		background-color: #fff;
+		border-radius: 50%;
+		color: #24323d;
+		padding: 3.5px;
+		margin: 0px 20px;
+	}
+}
+/* --- to fix LIT-143548  --- */
+.boxes-publication .graphical-abstract img , .two-columns img {
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+/* LIT-154679 (initially LIT-142820 )
+@media (min-width: 960px) {
+  .trending-article .slider-bottons {
+	display: none;
+  }
+}
+*/
+
+/* Scilights LIT-161950 - removing per LIT-164281
+.scilight-journal .figure-image-content .holder .thumbnail {
+	width: 95%;
+}
+
+.scilight-journal img {
+	width: inherit;
+}
+*/
+
+/* LIT-169920 */
+.PT-header .pt-subscribe-newsletter, .subscibe-container .pt-subscribe-newsletter {
+	margin-top: 0px;
+}
+.list-unstyled .contents {
+	padding-bottom: 25px;
+}
+
+/* LIT-187035 */
+.cookie-Policy {
+	z-index: 3; 
+	position: fixed; 
+	bottom: 40px; 
+	overflow: hidden; 
+	box-sizing: border-box; 
+	display: flex; 
+	flex-wrap: nowrap; 
+	/*flex-direction: row; */
+	align-items: center; 
+	font-size: 0.75em;
+}
+
+.cookie-Policy-content {
+	background: white; 
+	opacity: 1;
+	border: 3px dashed black;
+	width: 80%; 
+	margin-left: 30px;
+	padding: 10px;
+}
+
+.cookie-Policy a {
+	display: inline;
+	color: blue;
+}
+
+.cookie-Policy h5 {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+/* LIT-197693 */
+.article-cont .article-arrows {
+	width: inherit;
+}
+@media (max-width: 719px)
+{
+	.article-cont .article-arrows {
+		width: 80%;
+	}
+}
+
+/* LIT-157374 */
+.journals-scitation {
+	margin-top: 60px;
+}
+.scitation-boxes {
+	margin-top: 0px;
+}
+.right-side h1, .right-side h2, .right-side h3, .right-side h4, .right-side h5 {
+	margin-top: 0px;
+}
+@media (max-width: 719px) {
+	.journals-scitation .journal-info {
+		display: inherit;
+	}
+	.journals-scitation .journal-list > h6,
+	.journals-scitation .journal-list .topic-list {
+		display: inherit;
+	}
+}
+.journals-scitation .journal-info .journal-logo {
+	width: 100%;
+	height: 100%;
+}
+
+/* LIT-200968 */
+.PT-header input.issue.smallTextInput.enable {
+	display: inline-block;
+}
+input.issue.smallTextInput.enable {
+	display: none;
+}
+
+/* LIT-204471 */
+.PT-header ul.tools-sub-menu li a:hover {
+    border-bottom-color: #c8544b;
+}
+.PT-header .sticky-header .header .share-section-container .addthis-button a:hover {
+    border-bottom-color: #c8544b;
+}
+
+</style>
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+</head>
+<body class="pb-ui">
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P4TNS3');</script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4TNS3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->
+
+    <div id="pb-page-content" data-ng-non-bindable>
+        <div data-pb-dropzone="main" data-pb-dropzone-name="Main">
+
+
+
+
+        <div data-widget-def="pageHeader" data-widget-id="62175478-b98a-43d5-90f2-1f2045ac1a7e">
+            <header class="page-header">
+    <div data-pb-dropzone="main">
+    
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="54bdc76a-e6af-4e67-82e1-528de4e4c737"
+             
+             class="top-header">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-xs  ">
+        
+            <div class="col-xs-1-6 top-menu-column">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="3f7c87bd-832d-4f3e-87ff-cfbe5219f893">
+            <div class="top-header-menu-btn" id="top-header-menu-btn">
+    <span class="icon-grid"></span>
+    <span class="menu-label">MENU</span>
+</div>
+
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-xs-5-6 user-info-column">
+                <div class="contents" data-pb-dropzone="contents1">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="a88a04ba-4368-4c68-8ae6-3c4f5d7dd5f3">
+            <div class="top-header-log-in">
+    <div class="loginBar">
+        <a href="#">SIGN IN</a>
+    </div>
+</div>
+
+
+        </div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="71a82bf4-1aba-4a34-afb5-2202cbb8910e"
+             
+             class="header-user-info">
+            
+
+
+
+
+        
+    
+<div class="container-fluid">
+    <div class="row row-sm  ">
+        
+            <div class="col-sm-1-1 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="literatumInstitutionBanner" data-widget-id="56f47787-2960-4548-8b11-ff940b040b3d"
+             
+             class="access-provider">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="welcome">
+    
+    
+    
+        
+    
+</div></div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="literatumNavigationLoginBar" data-widget-id="7df7bc7a-a596-471c-b3b6-6acfa97a0d17"
+             
+             class="login-widget">
+            
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="loginBar login-open">
+    <a href="/action/showLogin?uri=%2Fdoi%2Fpdf%2F10.1063%2F1.4945106" class="show-login">
+        <span class="icon-profile_empty"></span>
+        <span class="sign-in-label">Sign in/Register</span>
+    </a>
+</div>
+
+
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="responsiveQuickSearchWidget" data-widget-id="e22cf250-4a1f-422d-892a-a381d4a2d799"
+             
+             class="responsiveQuickSearchWidget page-header-quick-search">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="quickSearchFormContainer">
+    
+        <a class="icon-search mini-search mini-search" href="#">
+            <label class="sr-only">Enter words / phrases / DOI / ISBN / authors / keywords / etc.</label>
+        </a>
+    
+
+    
+
+
+    <form action="/action/doSearch" name="quickSearch" class="quickSearchForm search-open resQuickSearchForm" title="Quick Search" method="get"><div class="container">
+            <div class="searchNav-tabs">
+                <ul class="search-tabs-nav" role="tablist">
+                    <li id="search-tab" role="presentation" aria-selected="true" aria-controls="search-panel"
+                        data-tab-panel="search-panel">
+                        <a aria-selected="true" tabindex="0" role="tab">SEARCH</a>
+                    </li>
+                    
+                        <li id="citation-search-tab" role="presentation" aria-selected="false" aria-controls="citation-search-panel" data-tab-panel="citation-search-panel">
+                            <a aria-hidden="false" tabindex="0" role="tab">CITATION SEARCH</a>
+                        </li>
+                    
+                    <li id="advance-search-tab" role="presentation" aria-selected="false">
+                        <a aria-hidden="false" tabindex="0" role="tab" href="/search/advanced">ADVANCED SEARCH</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content"> <!-- tab-content open -->
+        
+        
+                
+                    <div id="search-panel" class="tab-pane active" role="tabpanel" aria-labelledby="search-tab" aria-hidden="false">
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<span class="searchDropDownDivLeft">
+    
+    
+            
+        
+    <label for="searchInSelector" class="visuallyhidden">Search in:</label>
+    
+    <select  id="searchInSelector" name="SeriesKey" class="custom-dropdown js__searchInSelector">
+
+
+        
+
+        
+            
+                    
+                    
+                        <option value="jap" id="thisJournal" data-search-in="thisJournal">
+                            This Publication
+                        </option>
+                    
+                
+        
+
+        
+            <option value="false" data-search-in="default">Anywhere</option>
+        
+
+        
+            <option value="" data-search-in="thisPublisher">This Publisher/Society</option>
+        
+
+        
+
+
+        
+
+        
+
+        
+
+        
+
+        
+
+    </select>
+
+
+</span>
+                    </div>
+                
+        
+
+        
+        
+
+        
+                <div id="citation-search-panel" aria-hidden="true" class="tab-pane clear hidden" role="tabpanel" aria-labelledby="citation-search-tab" aria-hidden="true">
+                    <div class="quicksearch-container">
+                        
+                            
+
+
+
+
+
+
+
+
+
+
+    
+
+<span class="citationSearchBoxContainer hidden">
+    <input name="quickLinkJournal"
+           class="journalName mediumTextInput textIndent autocomplete"
+           value="Journal of Applied Physics"
+           type="search"
+           title="Journal"
+           placeholder="Journal"
+           autoComplete="off"
+           autoPopulate="true"
+           data-history-items-conf="3"
+           data-publication-titles-conf="3"
+           data-topics-conf="3"
+           data-contributors-conf="3"
+           data-auto-complete-target="title-auto-complete"/>
+
+        
+
+    <input type="hidden" name="quickLink" value="true" />
+    <input class="year smallTextInput" title="Year" type="search" name="quickLinkYear" value="" autocomplete="false" placeholder="Year"pattern="([0-9]){1,4}$" />
+    <input class="volume smallTextInput" title="Volume" type="search" name="quickLinkVolume" value="" autocomplete="false" placeholder="Volume" />
+    <input class="issue smallTextInput enable" title="Issue" type="search" name="quickLinkIssue" value="" autocomplete="false" placeholder="Issue" />
+    <input class="page smallTextInput" title="Page" type="search" name="quickLinkPage" value="" autocomplete="false" placeholder="Page" />
+</span>
+
+                            <span class="citationSearchBoxContainer hidden">
+                                <button class="citation-mainSearchButton">
+                                    <span class="icon-search"></span>
+                                </button>
+                            </span>
+                        
+                    </div>
+                </div>
+            </div> <!-- tab-content Close -->
+
+                <div class="quicksearch-container">
+                    <div class="simpleSearchBoxContainer">
+                            <input name="AllField"
+               class="searchText magicsuggest main-search-field textIndent autocomplete"
+               value=""
+               type="search" id="searchText"
+               title="Type search term here"
+               placeholder="Enter words / phrases / DOI / ISBN / authors / keywords / etc." autocomplete="off"
+               data-history-items-conf="3"
+               data-publication-titles-conf="3"
+               data-topics-conf="3"
+               data-contributors-conf="3"
+               data-auto-complete-target="auto-complete"/>
+                            <button class="mainSearchButton">
+                                <label class="sr-only">search</label>
+                                <span class="icon-search icon-search-btn"></span>
+                            </button>
+                    </div>
+
+                    <div class="quicksearch-actions">
+                        <a class="responsiveAdvanceSearch" href="/search/advanced" title="Advanced">
+                            <span class="visible-sm visible-xs">
+                                Advanced
+                            </span>
+                            <span class="hidden-xs hidden-sm icon-advanced_search"></span>
+                        </a>
+                    </div>
+                </div>
+            
+
+        
+            
+        
+
+        <div class="cluetips">
+            
+                <a  class="citationHelp cluetips fancy-tooltip hidden" title="This option allows users to search by Publication, Volume and Page" class="tooltip">This option allows users to search by Publication, Volume and Page</a>
+                <a  class="journalHelp cluetips fancy-tooltip" title="Selecting this option will search the current publication in context."  class="tooltip">Selecting this option will search the current publication in context.</a>
+                <a  class="anywhereHelp cluetips fancy-tooltip hidden" title="Selecting this option will search all publications across the Scitation platform"  class="tooltip">Selecting this option will search all publications across the Scitation platform</a>
+                <a  class="thisPublisherHelp cluetips fancy-tooltip hidden" title="Selecting this option will search all publications for the Publisher/Society in context"  class="tooltip">Selecting this option will search all publications for the Publisher/Society in context</a>
+            
+        </div>
+
+        
+            </div></form>
+</div>
+
+
+    <div class="search-bg overlay-fixed"></div>
+
+
+
+<div class="advancedSearchLinkDropZone" data-pb-dropzone="advancedSearchLinkDropZone">
+    
+</div></div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="3c821a75-29b6-4dcf-9ad7-9b92dae6e2e6"
+             
+             class="top-menu">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-sm  ">
+        
+            <div class="col-sm-1-4 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="dbbbb381-d04a-4fae-a8fa-e70f51e3e921"
+             
+             class="top-menu-section">
+            <ul class="main-section right-section">
+    <li><a href="http://www.scitation.org#publishersdd">Publishers</a></li>
+    <li><a href="http://aip.scitation.org/journal/sci">Scilight</a></li>
+    <li><a href="http://aip.scitation.org/journal/apc">Conference Proceedings</a></li>
+    <li><a href="https://publishing.aip.org/authors" target="_blank">Author Resources</a></li>
+    <li><a href="https://publishing.aip.org/librarians" target="_blank">Librarian Resources</a></li>
+    <li><a href="http://www.scitation.org/advertising" target="_blank">Advertiser</a></li>
+    <li><a href="http://www.scitation.org/contact">Contact Us</a></li>
+    <li><a href="http://www.scitation.org/faqs">FAQ</a></li>
+    <li><a href="http://www.scitation.org/help">Help</a></li>
+</ul>
+
+</div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="54e08018-0515-4954-9449-51ac0f9c6888"
+             
+             class="top-menu-section">
+            <ul class="main-section right-section">
+    <li><a href="http://www.scitation.org"><img src="/pb-assets/images/publishers/scitation.jpg" alt="Scitation Home"></a></li>
+    </ul>
+
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-sm-3-8 ">
+                <div class="contents" data-pb-dropzone="contents1">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="c6c15f86-3b58-42d1-810c-5b86a06b7b3f"
+             
+             class="top-menu-section">
+            <ul class="main-section">
+    <li class="has-items">
+        <a class="visible-lg visible-md visible-sm" href="http://www.scitation.org/publications">Publications</a>
+        <a class="visible-xs">View All Publications<span class="icon icon-arrow_d_n"></span></a>
+        <ul class="sub-section">
+            <li><a href="/journal/apl">Applied Physics Letters</a></li>
+            <li><a href="/journal/jap">Journal of Applied Physics</a></li>
+            <li><a href="/journal/jcp">The Journal of Chemical Physics</a></li>
+            <li><a href="/journal/pto">Physics Today</a></li>
+            <li><a href="/journal/jas">The Journal of the Acoustical Society of America</a></li>
+            <li><a href="/journal/rsi">Review of Scientific Instruments</a></li>
+            <li><a href="/journal/ajp">American Journal of Physics</a></li>
+            <li><a href="/journal/phf">Physics of Fluids</a></li>
+            <li><a href="/journal/php">Physics of Plasmas</a></li>
+            <li><a href="/journal/adv">AIP Advances</a></li>
+            <li class="more"><a href="http://www.scitation.org/publications">More</a></li>
+        </ul>
+    </li>
+</ul>
+
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-sm-3-8 ">
+                <div class="contents" data-pb-dropzone="contents2">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="56117610-d1c2-4614-8cc2-3ed8163dddd9"
+             
+             class="top-menu-section">
+            <ul class="main-section">
+    <li class="has-items">
+        <a class="visible-lg visible-md visible-sm" href="http://www.scitation.org/topics">Topics</a>
+        <a class="visible-xs section-title">View All Topics<span class="icon icon-arrow_d_n"></span></a>
+        <ul class="sub-section">
+            <li><a href="/topic/107">Acoustics</a></li>
+            <li><a href="/topic/604">Biological Physics</a></li>
+            <li><a href="/topic/1156">Condensed Matter Physics</a></li>
+            <li><a href="/topic/1890">Energy</a></li>
+            <li><a href="/topic/3820">Materials Science</a></li>
+            <li><a href="/topic/3832">Mathematical Physics</a></li>
+            <li><a href="/topic/4803">Optics and Optical Physics</a></li>
+            <li><a href="/topic/5111">Physical Chemistry</a></li>
+            <li><a href="/topic/5255">Plasma Physics</a></li>
+            <li><a href="/topic/5851">Rheology and Fluid Dynamics</a></li>
+            <li class="more"><a href="/topics">More</a></li>
+        </ul>
+    </li>
+</ul>
+
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+
+
+
+
+        <div data-widget-def="literatumAd" data-widget-id="eda81f15-961b-48b5-9579-250e825ae84b"
+             
+             class="header-ad-container container adv-container">
+            
+
+
+        <div class="pb-ad">
+            <div id="oas_Top"></div>
+<script type="text/javascript">
+
+var aipthesaurus = '1438,1686,1696,246,2597,2701,6298,7103,7443';
+var termlist = aipthesaurus.split(",");
+
+for(i=0; i<termlist.length; i++) {
+   oas_tag.query+="&aiterm=" + termlist[i];
+}
+oas_tag.loadAd("Top");
+</script>
+        </div>
+    
+</div>
+    
+
+
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="c154727a-e903-4d29-a8bb-c20ad9b982bf"
+             
+             class="header-journal-section">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-md  ">
+        
+            <div class="col-md-1-2 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="ef2909c7-0d49-4247-902b-336400f8ced4">
+            <div class="header-journal-info">
+    <div class="header-journal-img"><a href="/" title="Publisher Home"><img src="/pb-assets/images/publishers/aip-site.jpg" alt="Publisher Logo"></a></div>
+    <div class="header-journal-title"><a href="/journal/jap" title="Journal Home">Journal of Applied Physics</a></div>
+</div>
+
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-md-1-2 ">
+                <div class="contents" data-pb-dropzone="contents1">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html-asset" data-widget-id="c7c7ecf4-607b-456b-b324-28e63ec89eea"
+             
+             class="header-share-section clearfix">
+                <span class="follow-the-journal">like and follow us </span>
+    <div class="share-section">
+        <a href="https://www.facebook.com/JournalofAppliedPhysics/" target="_blank"><span class="icon-facebook"></span><label class="visuallyhidden">facebook </label></a>
+        <!--a href="#"><span class="icon-twitter"></span><label class="visuallyhidden">twitter </label></a-->
+		<!--a href="#"><span class="icon-linkedin"></span><label class="visuallyhidden">linkedin </label></a-->
+        <a href="/action/showFeed?type=etoc&feed=rss&jc=jap"><span class="icon-Rss"></span><label class="visuallyhidden">Rss </label></a>
+    </div>
+    <div class="submit-article">
+		<a href="http://jap.peerx-press.org/" target="_blank" class="submit-article-btn medium-btn other-submit-button">SUBMIT YOUR ARTICLE</a>
+    </div></div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="74ea4bc4-8a71-46e7-ae9e-9820cbdf00d6"
+             
+             class="main-menu-container">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-sm  ">
+        
+            <div class="col-sm-2-3 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html-asset" data-widget-id="00f9cd6f-8349-4248-b635-1f5a014c18d8">
+            <nav class="main-menu">
+    <ul class="lvl-0">
+        <li class="desktop-mobile-item"><a href="/journal/jap">HOME</a></li>
+
+	<!-- mobile menu -->
+        <li class="mobile-item"><a href="/toc/jap/current">BROWSE</a></li>
+        <li class="mobile-item has-items">
+            <a href="#">MORE<span class="icon icon-triangle-down"></span></a>
+            <ul class="sub-menu lvl-1">
+                <li class="has-items">
+                    <a href="#">INFO <span class="icon icon-arrow_d_n"></span></a>
+                    <ul class="sub-menu lvl-2">
+                        <li><a href="/jap/info/about">Overview</a></li>
+                        <li><a href="/jap/info/board">Editorial Board</a></li>
+                        <li><a href="/jap/info/news">News</a></li>
+                    </ul>
+		</li>
+                <li class="has-items">
+                    <a href="#">FOR AUTHORS<span class="icon icon-arrow_d_n"></span></a>
+                    <ul class="sub-menu lvl-2">
+                        <li><a href="/jap/authors/manuscript">Preparing Your Manuscript</a></li>
+                        <li><a href="/jap/authors/charges">Publication Charges</a></li>
+			            <li><a href="https://publishing.aip.org/authors" target="_blank">Author Resources</a></li>
+						<li><a href="https://authorservices.aip.org/" target="_blank">AIP Author Services</a></li>
+					    <li><a href="http://jap.peerx-press.org/" target="_blank">Submit</a></li>
+                    </ul>
+                </li>
+	            <li class="has-items">
+           			<a href="#">COLLECTIONS</a>
+            		<ul class="sub-menu lvl-1">
+            		    <li><a href="http://aip.scitation.org/topic/collections/editors-pick?SeriesKey=jap">Editor's Picks</a></li>
+            		    <li><a href="http://aip.scitation.org/topic/collections/featured?SeriesKey=jap">Featured</a></li>
+            		    <li><a href="http://aip.scitation.org/toc/sci/current?startPage=&RefSeriesKey=jap">Scilights</a></li>					
+            		</ul>
+        		</li>
+            </ul>
+        </li>
+
+	<!-- desktop menu -->
+        <li><a href="/toc/jap/current">BROWSE</a></li>
+        <li class="has-items">
+            <a href="#">INFO</a>
+            <ul class="sub-menu lvl-1">
+                <li><a href="/jap/info/about">Overview</a></li>
+                <li><a href="/jap/info/board">Editorial Board</a></li>
+                <li><a href="/jap/info/news">News</a></li>
+            </ul>
+        </li>
+        <li class="has-items">
+            <a href="#">FOR AUTHORS</a>
+            <ul class="sub-menu lvl-1">
+                <li><a href="/jap/authors/manuscript">Preparing Your Manuscript</a></li>
+                <li><a href="/jap/authors/charges">Publication Charges</a></li>
+	            <li><a href="https://publishing.aip.org/authors" target="_blank">Author Resources</a></li>
+				<li><a href="https://authorservices.aip.org/" target="_blank">AIP Author Services</a></li>
+			    <li><a href="http://jap.peerx-press.org/" target="_blank">Submit</a></li>
+            </ul>
+        </li>
+		<li class="has-items">
+            <a href="#">COLLECTIONS</a>
+            <ul class="sub-menu lvl-1">
+                <ul class="sub-menu lvl-1">
+            		    <li><a href="http://aip.scitation.org/topic/collections/editors-pick?SeriesKey=jap">Editor's Picks</a></li>
+            		    <li><a href="http://aip.scitation.org/topic/collections/featured?SeriesKey=jap">Featured</a></li>
+            		    <li><a href="http://aip.scitation.org/toc/sci/current?startPage=&RefSeriesKey=jap">Scilights</a></li>		
+				</ul>
+		</li>
+    </ul>
+</nav>
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-sm-1-3 ">
+                <div class="contents" data-pb-dropzone="contents1">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="1075ce67-eb85-4289-8dc0-3943767c40f9">
+            <div class="sign-up-for-alerts">
+    <a href="/action/showPreferences?menuTab=Alerts&amp;jcode=jap" title="Sign Up For Alerts">
+        <span class="icon-add-alert"></span>
+        <span class="sign-up-for-alerts-label">SIGN UP FOR ALERTS</span>
+    </a>
+</div>
+
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+    </div>
+</header>
+
+        </div>
+    
+
+
+
+
+
+        <div data-widget-def="general-html" data-widget-id="0697e53e-e8b0-475a-b7bf-90b3512859b0">
+            <script type="text/javascript">
+window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);
+;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"0ff5f658a0",applicationID:"21286033",sa:1}
+</script>
+
+
+        </div>
+    
+
+
+
+
+
+        <div data-widget-def="pageBody" data-widget-id="72100436-7a82-49fc-933b-c6c9d8c42914"
+             
+             class="access-denial-page-container">
+            <!--begin pagefulltext-->
+<div class="page-body pagefulltext">
+    <div data-pb-dropzone="main">
+    
+
+
+
+        <div data-widget-def="fragment-navigation" data-widget-id="9fc50bb7-620a-44e3-8597-fa21f4a26662">
+            
+
+
+
+
+
+
+<div class="fragmentNavigationContent" data-pb-class-name="sectionHeading">
+
+</div>
+        </div>
+    
+
+
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="efa2ef1c-83fd-4aee-a171-332349626ce0">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-md gutterless ">
+        
+            <div class="col-md-1-1 article-cont">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="3fcc4546-7b38-4f0b-996b-c655b895e7e5"
+             
+             class="padded-content">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-md gutterless ">
+        
+            <div class="col-md-3-4 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="literatumBreadcrumbs" data-widget-id="4bd49a67-9153-44e8-9919-ef7a314ed96f">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Service: showPdf -->
+
+
+
+
+
+
+
+
+    
+    
+        
+        
+                
+
+
+            
+    
+
+
+
+    
+    
+
+
+        
+    
+
+    
+    
+
+    
+    
+    
+            
+
+
+        
+        
+    
+
+            
+        
+
+    
+    
+
+    
+    
+
+
+
+
+        
+        
+                
+            
+
+    
+    
+
+
+
+
+
+
+
+
+<nav>
+    <ul class="breadcrumbs">
+        
+        
+            
+                <li class="">
+                    
+                            <a href="/">
+                                Home
+                            </a>
+                            
+                                <span class="divider">&gt;</span>
+                            
+                        
+                </li>
+            
+        
+            
+                <li class="">
+                    
+                            <a href="/journal/jap">
+                                Journal of Applied Physics
+                            </a>
+                            
+                                <span class="divider">&gt;</span>
+                            
+                        
+                </li>
+            
+        
+            
+        
+            
+                <li class="">
+                    
+                            <a href="/toc/jap/119/12">
+                                Volume 119, Issue 12
+                            </a>
+                            
+                                <span class="divider">&gt;</span>
+                            
+                        
+                </li>
+            
+        
+            
+                <li class="">
+                    
+                            
+                            10.1063/1.4945106
+                </li>
+            
+        
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+        
+    
+
+
+
+        </div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="layout-inline-content" data-widget-id="50a13812-c8f4-4b71-a1a0-035048de7f0d">
+            <div class="inline-dropzone" data-pb-dropzone="content">
+    </div>
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-md-1-4 arrows-alignment">
+                <div class="contents" data-pb-dropzone="contents1">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="a24fd9af-26f7-4829-b444-933d0beabd63"
+             
+             class="cross-mark">
+            <a id="crossMark" data-doi="10.1063/1.4945106" data-target="crossmark"><img src="https://crossmark-cdn.crossref.org/widget/v2.0/logos/CROSSMARK_Color_square.svg" height="32" class="cross-mark-img"/></a> 
+
+</div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="literatumBookIssueNavigation" data-widget-id="6f2a03b2-f070-483a-bf2d-faca1e1c78d3"
+             
+             class="article-arrows">
+            
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="pager issueBookNavPager tooltip">
+    <span class="journalNavLeftTd">
+        
+            <span class="prev placedLeft">
+                
+                        <a href="/doi/10.1063/1.4944883">
+                            <span class="icon-arrow_l"></span>
+                            <span class="arrows-text">Prev</span>
+                        </a>
+                    
+            </span>
+        
+    </span>
+    
+    <span class="journalNavRightTd">
+        
+
+
+
+
+   <span class="next">
+       
+               <a href="/doi/10.1063/1.4945031">
+                   <span class="arrows-text">Next</span>
+                   <span class="icon-arrow_r"></span>
+               </a>
+           
+   </span>
+
+    </span>
+</div>
+    
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="literatumPublicationContentWidget" data-widget-id="0c3ec682-6f88-4409-b5eb-572e3dff1c35">
+            
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!-- // hide it from old browsers
+
+var anyDbId = -1;
+var sideParts = {
+    citation: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a><\/td><\/tr>",
+    citingIsi: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\">Search for citing articles in:<br/>&nbsp;<a href=\"javascript:newWindow('/servlet/linkout?suffix=s0&dbid=128&doi={$doi}&url={$urlEnc}')\">ISI Web of Science<\/a> ({$citNum} or more)<\/a><\/td><\/tr>",
+    citingCrossref: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"{$url}\">Citing articles in Crossref<\/a><\/td><\/tr>",
+    quicksearch: "<option value=\"{$value}\">{$display}<\/option>",
+    related: ", <a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a>"
+};
+
+function genSide(part, dbid, linkoutUrl, display, doi, url, citNum, value) {
+    if (dbid != anyDbId && (140737488355327 & dbid) == 0) return;
+    var content = sideParts[part];
+    if (linkoutUrl) { content = content.replace(/{\$linkoutUrl}/g, linkoutUrl); }
+    if (display) { content = content.replace(/{\$display}/g, display); }
+    if (doi) { content = content.replace(/{\$doi}/g, doi); }
+    if (url) {
+        content = content.replace(/{\$url}/g, url);
+        content = content.replace(/{\$urlEnc}/g, encodeURIComponent(encodeURIComponent(url)));
+    }
+    if (citNum) { content = content.replace(/{\$citNum}/g, citNum); }
+    if (value) { content = content.replace(/{\$value}/g, value); }
+    document.write(content);
+}
+
+function hasSfxLinks() {
+	return false;
+}
+
+
+function genSfxLinks(id, url, doi) {
+    if (! doi) { doi = ""; }
+
+}
+function popSfxLink(prefix, id, url, doi) {
+    if (doi) {
+        url += "&id=doi:"+doi;
+    } else {
+        doi = "10.1063%2F1.4945106";
+    }
+    var redirect = prefix + encodeURIComponent("?sid=aip&genre=article"+url);
+    var href = "/servlet/linkout?suffix="+id+"&dbid=16384&doi="+doi+"&url=" + encodeURIComponent(redirect);
+    return newWindow(href);
+}
+
+var sfxRefDisplay = {
+64:"ADS",
+32:"CAS",
+8192:"CIS",
+256:"CSA",
+16:"Crossref",
+128:"ISI",
+4096:"JSTOR",
+8:"Medline",
+1099511627776: "Ichushi",
+17592186044416: "Medical Online",
+8796093022208: "J-Stage",
+2199023255552: "Medical Finder",
+4398046511104: "Pier Online"
+};
+
+window.onload=disableRefLinkWrite ;
+
+function genRefLink(dbid, id, key, textOfLink) {
+    if (140737488355327 & dbid != 0) {
+        if (typeof textOfLink === "undefined") {
+            if (sfxRefDisplay[dbid].substring(0,1) == "[") {
+                textOfLink = sfxRefDisplay[dbid];
+            } else {
+                textOfLink = "["+sfxRefDisplay[dbid]+"]";
+            }
+            // ToDo: move '[' and ']' to sfxRefDisplay (UPDATE: finish changing sfxRefDisplays and remove this branch)
+        }
+        else{ textOfLink = unescape(textOfLink)};
+
+        if(document.disableRefLinkWrite == null){
+            document.write("<a class='ref' href=\"javascript:popRefLink("+dbid+",'"+id+"','"+key+"')\">"+textOfLink+"<\/a>");
+        }
+    }
+}
+
+function disableRefLinkWrite () {
+    document.disableRefLinkWrite = true;
+}
+
+function popRefLink(dbid, id, key) {
+    var redirect = "/servlet/linkout?suffix=" + id + "&dbid=" + dbid + "&doi=10.1063%2F1.4945106&key=" + key;
+    return newWindow(redirect);
+}
+function popRefFull(rid, citart, ptype, area) {
+    return popRefImplFull(rid, citart, ptype, area, 600, 500);
+}
+function popRefImplFull(rid, citart, ptype, area, width, height) {
+    var doi = "10.1063%2F1.4945106";
+    if (! ptype) { ptype = ""; }
+    var pt = rid.charAt(0) + "14945106" + ptype;
+    return popupFull(rid, doi, pt, area, width, height);
+}
+function popRef(rid, citart, ptype, area) {
+    return popRefImpl(rid, citart, ptype, area, 600, 500);
+}
+function popRef2(rid, citart, ptype, area) {
+    return popRefImpl(rid, citart, ptype, area, 400, 100);
+}
+function popRefImpl(rid, citart, ptype, area, width, height) {
+    var doi = "10.1063%2F1.4945106";
+    if (! citart) { citart = "citart1"; }
+    if (! ptype) { ptype = ""; }
+    var pt = rid.charAt(0) + "14945106" + ptype;
+    return popupRef(citart, rid, doi, pt, area, width, height);
+}
+
+
+
+function genCitingCrossref() {
+}
+
+var citLinkDisplay = {
+    
+    0:"SYSTEM",
+4:"SYSTEM",
+20:"SYSTEM",
+64:"ADS",
+32:"CAS",
+8192:"CIS",
+256:"CSA",
+16:"Crossref",
+128:"ISI",
+4096:"JSTOR",
+8:"MEDLINE"
+};
+var feeBasedMask = 4480;
+
+function genCitLink(dbid, suffix, key) {
+    if (dbid != anyDbId && (feeBasedMask & dbid) != 0 && (140737488355327 & dbid) == 0) return;
+
+    var param = "/servlet/linkout?suffix=" + suffix + "&dbid=" + dbid + "&doi=10.1063%2F1.4945106&key=" + key;
+    var display = citLinkDisplay[dbid];
+    var img = "/templates/jsp/_style2/_aip/images/" + display + "_btn.gif";
+
+
+
+    document.write("<a class='ref' href='javascript:newWindow(\"" + param + "\")'>");
+    document.write("<" + "img src='"+img+"' width='85' height='20' align='BOTTOM' alt='"+display+" Abstract' border='0'/>");
+    document.write("<\/a>");
+}
+// stop hiding -->
+</script>
+<script type="text/javascript" src="/swfobject.js"></script>
+<script type="text/javascript">
+function addFlashMovie(id, flv) {
+    var flashvars = {file: flv ,type: 'flv'};
+    var params = {allowfullscreen :true};
+    var attributes = {};
+    swfobject.embedSWF('/flvplayer.swf', id, "352", "288", "7.0.0", false, flashvars, params, attributes);
+}
+
+function addFlashMovie(id, flv, image) {
+    var flashvars = {file: flv ,type: 'flv', image: image};
+    var params = {allowfullscreen :true};
+    var attributes = {};
+    swfobject.embedSWF('/flvplayer.swf', id, "352", "288", "7.0.0", false, flashvars, params, attributes);
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+    window.MathJax = {
+        AuthorInit: function () {
+            $.getScript('/templates/jsp/_style2/_aip/pb2/widgets/pageBuilderLiteratum/contentDisplay/publicationContent/mathJaxConfig.js');
+        }
+    };
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="publication-dates-con padded-content">
+    
+        <span></span>
+    
+    
+    
+        <div class="publicationContentEpubDate dates">
+            Published Online: March 2016
+        </div>
+    
+    
+        <div class="publicationContentAcceptedDate dates">
+            
+                
+
+
+
+
+
+
+Accepted: March 2016</div>
+    
+    
+</div>
+
+
+
+<div class="hlFld-Title articleMeta padded-content"> 
+    <header class="publicationContentTitle">
+        
+
+
+
+
+        
+        <h3>
+            Experimental and first-principles studies on the elastic properties of &#x3b1;-hafnium metal under pressure
+                <span class=" tagsDropZone pb-dropzone ui-sortable" data-pb-dropzone="atagsDropZone">
+                    
+                </span>
+            <!-- Scilight relation icon -->
+                
+                
+                
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                    
+                
+        </h3>
+    </header>
+
+    
+    
+</div>
+
+
+
+<div class="articleMetaDrop publicationContentDropZone" data-pb-dropzone="articleMetaDropZone">
+    
+</div>
+
+
+    <div class="publicationContentCitation">
+        Journal of Applied Physics <b>119</b>, 125109 (2016);
+        <a href="https://doi.org/10.1063/1.4945106">https://doi.org/10.1063/1.4945106</a>
+    </div>
+
+
+
+<div class="publicationContentAuthors padded-content">
+        <div class="hlFld-ContribAuthor"><div class="entryAuthor" aria-label="authors"><span class="contrib-author"> <a href="http://orcid.org/0000-0003-1498-6029"><img src="/templates/jsp/images/orcid.png" /></a><a href="/author/Qi%2C+Xintong"> Xintong Qi</a><sup>1</sup><sup>, </sup><sup>a)</sup><i class="pubContent-comma">, </i></span><span class="contrib-author"><a href="/author/Wang%2C+Xuebing"> Xuebing Wang</a><sup>1</sup><i class="pubContent-comma">, </i></span><span class="contrib-author"><a href="/author/Chen%2C+Ting"> Ting Chen</a><sup>1</sup><i class="pubContent-comma">, and </i></span><span class="contrib-author"><a href="/author/Li%2C+Baosheng"> Baosheng Li</a><sup>2</sup></span></div><a href="#" class="showMoreAuthors authorsHidden"> more...</a><a href="#" class="affiliations">View Affiliations</a><div class="affiliations-list list-unstyled hide"><ul><li class="author-affiliation">
+<sup>1</sup>Department of Geosciences, <a class="institution" href="/action/doSearch?field1=Affiliation&amp;text1=Stony Brook University&amp;field2=AllField&amp;text2=&amp;Ppub=&amp;Ppub=&amp;AfterYear=&amp;BeforeYear=&amp;access=">Stony Brook University</a>, Stony Brook, New York 11794, <span class="country">USA</span></li><li class="author-affiliation">
+<sup>2</sup>Mineral Physics Institute, <a class="institution" href="/action/doSearch?field1=Affiliation&amp;text1=Stony Brook University&amp;field2=AllField&amp;text2=&amp;Ppub=&amp;Ppub=&amp;AfterYear=&amp;BeforeYear=&amp;access=">Stony Brook University</a>, Stony Brook, New York 11794, <span class="country">USA</span></li><li><p class="first last"><sup>a)</sup>Author to whom correspondence should be addressed. Electronic mail: <a class="email" href="mailto:xintong.qi@stonybrook.edu">xintong.qi@stonybrook.edu</a></p></li></ul></div></div>
+</div>
+
+<div class="articleMetaDrop affiliationsDropZone pb-dropzone ui-sortable"
+     data-pb-dropzone="affiliationsDropZone">
+    <pb:renderDropzone widget="Widget type: literatumPublicationContentWidget, #0c3ec682-6f88-4409-b5eb-572e3dff1c35" dropzone="affiliationsDropZone"/>
+</div>
+
+
+    <div class="articleMetaDrop publicationContentDropZone publicationContentDropZone1" data-pb-dropzone="articleMetaDropZone1">
+        
+    </div>
+
+
+
+
+<div>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+<div class="article-menu">
+    <div class="download-pdf ">
+        
+            
+                    
+                
+            <a href="http://aip.scitation.org/doi/pdf/10.1063/1.4945106" target="_self">
+                <span class="icon-download-file"></span>
+                
+                        PDF
+                    
+            </a>
+        
+        
+            <span class="pdf-separator">&nbsp;&nbsp;|</span>
+            
+                    
+                
+            <div style="display: inline-block;" id="chorus">
+                <a href="/doi/am-pdf/10.1063/1.4945106" target="_self">
+                    CHORUS
+                </a>
+            </div>
+        
+    </div>
+    <div class="publication-tabs publication-tabs-dropdown">
+        <nav class="tabs tabs-widget">
+            <ul class="tab-nav" role="tablist">
+                
+                    <li role="tab">
+                        <a href="/doi/abs/10.1063/1.4945106" class="show-abstract">
+                            
+                            <span class="icon-abstract-publication visible-xs visible-sm"></span>
+                            <span class="visible-md visible-lg">
+                                
+                                        
+                                                Abstract
+                                            
+                                    
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li role="tab">
+                        <a href="/doi/full/10.1063/1.4945106" class="show-full">
+                            
+                            <span class="icon-article visible-xs visible-sm"></span>
+                            <span class="visible-md visible-lg">
+                                
+                                        Full Text
+                                    
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+
+
+
+    <li role="tab">
+        <a href="/doi/figure/10.1063/1.4945106">
+            <span class="icon-figures-tables visible-xs visible-sm"></span>
+            <span class="visible-md visible-lg">
+                
+                        Figures
+                    
+            </span>
+        </a>
+    </li>
+
+
+
+                
+                
+                
+
+                
+                
+
+                
+
+                
+
+
+<li role="tab" aria-selected="false">
+    <a href="#" class="tools tools-tabs">
+        <span class="icon-tools visible-xs visible-sm"></span>
+        <span class="visible-md visible-lg">Tools</span>
+    </a>
+    <ul class="tools-sub-menu">
+        <li>
+            <a href="/action/showCitFormats?type=show&amp;doi=10.1063%2F1.4945106">Download Citation</a>
+        </li>
+        <li>
+            <a href="/personalize/addFavoritePublication?doi=10.1063%2F1.4945106">Add to Favorites</a>
+        </li>
+        
+            <li>
+                <a href="/servlet/linkout?type=rightslink&url=startPage%3D1%26pageCount%3D7%26author%3DXintong%2BQi%252C%2BXuebing%2BWang%252C%2BTing%2BChen%252C%2Bet%2Bal%26orderBeanReset%3Dtrue%26imprint%3DAmerican%2BInstitute%2Bof%2BPhysics%26volumeNum%3D119%26issueNum%3D12%26contentID%3D10.1063%252F1.4945106%26title%3DExperimental%2Band%2Bfirst-principles%2Bstudies%2Bon%2Bthe%2Belastic%2Bproperties%2Bof%2B%25CE%25B1-hafnium%2Bmetal%2Bunder%2Bpressure%26pa%3D%26issn%3D0021-8979%26publisherName%3Daip%26publication%3DJAPIAU%26rpt%3Dn%26endPage%3D7%26publicationDate%3D03%252F28%252F2016" target="_blank" title="Rights Link">Reprints and Permissions</a>
+            </li>
+        
+    </ul>
+
+</li>
+
+
+                
+
+
+
+
+
+
+
+<li role="tab" class=" share-section-container visible-xs visible-sm ">
+    <a href="#" class="share-menu-btn social-share share-tabs">
+        <span class="icon-share-article"></span>
+    </a>
+    <div class="addthis-wrapper">
+        <div class="addthis-button">
+            <a href="/action/showMailPage?doi=10.1063/1.4945106" target="_blank" class="addthis_button_email"><span>E-mail</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://aip.scitation.org/doi/10.1063/1.4945106" target="_blank" class="addthis_button_facebook"><span>Facebook</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aip.scitation.org/doi/10.1063/1.4945106&amp;title=Experimental+and+first-principles+studies+on+the+elastic+properties+of+%26%23x3b1%3B-hafnium+metal+under+pressure&amp;summary=&amp;source=" target="_blank" class="addthis_button_linkedin"><span>Linkedin</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://twitter.com/intent/tweet?text=https://aip.scitation.org/doi/10.1063/1.4945106&source=webclient" target="_blank" class="addthis_button_twitter"><span>Twitter</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="http://www.reddit.com/submit?url=https://aip.scitation.org/doi/10.1063/1.4945106&title=Experimental+and+first-principles+studies+on+the+elastic+properties+of+%26%23x3b1%3B-hafnium+metal+under+pressure" target="_blank" class="addthis_button_reddit">Reddit</a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://www.mendeley.com/import/?doi=10.1063/1.4945106&amp;url=https://aip.scitation.org/doi/10.1063/1.4945106&amp;title=Experimental+and+first-principles+studies+on+the+elastic+properties+of+%26%23x3b1%3B-hafnium+metal+under+pressure" target="_blank" title="Add this article to your Mendeley library">Mendeley</a>
+        </div>
+        <div class="addthis-button">
+            <a href="/action/recommendation?doi=10.1063/1.4945106" target="_blank" class="addthis_button_recommended"><span>Recommended To Librarians</span></a>
+        </div>
+    </div>
+</li>
+
+<li role="tab" class="metrics-mobile visible-xs visible-sm">
+    <a href="#" class="show-metrics">
+        <span class="icon-metrics"></span>
+    </a>
+</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="share-view-menu">
+        
+
+
+
+<!--TODO: We should find a way to merge both this jsp and publciationContent_smallIcons.jsp where its purpose is to appear only in small view-->
+
+
+
+
+
+
+<div class="share-section-container">
+    <a href="#" class="share-menu-btn social-share share-tabs">Share</a>
+    <div class="addthis-wrapper">
+        <div class="addthis-button">
+            <a href="/action/showMailPage?doi=10.1063/1.4945106" target="_blank" class="addthis-button_email"><span>E-mail</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://aip.scitation.org/doi/10.1063/1.4945106" target="_blank" class="addthis_button_facebook"><span>Facebook</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://aip.scitation.org/doi/10.1063/1.4945106&amp;title=Experimental+and+first-principles+studies+on+the+elastic+properties+of+%26%23x3b1%3B-hafnium+metal+under+pressure&amp;summary=&amp;source=" target="_blank" class="addthis_button_linkedin"><span>Linkedin</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://twitter.com/intent/tweet?text=https://aip.scitation.org/doi/10.1063/1.4945106&source=webclient" target="_blank" class="addthis_button_twitter"><span>Twitter</span></a>
+        </div>
+        <div class="addthis-button">
+            <a href="http://www.reddit.com/submit?url=https://aip.scitation.org/doi/10.1063/1.4945106&title=Experimental+and+first-principles+studies+on+the+elastic+properties+of+%26%23x3b1%3B-hafnium+metal+under+pressure" target="_blank" class="addthis_button_reddit">Reddit</a>
+        </div>
+        <div class="addthis-button">
+            <a href="https://www.mendeley.com/import/?doi=10.1063/1.4945106&amp;url=https://aip.scitation.org/doi/10.1063/1.4945106&amp;title=Experimental+and+first-principles+studies+on+the+elastic+properties+of+%26%23x3b1%3B-hafnium+metal+under+pressure" target="_blank" title="Add this article to your Mendeley library">Mendeley</a>
+        </div>
+        <div class="addthis-button">
+            <a href="/action/recommendation?doi=10.1063/1.4945106" target="_blank" class="addthis_button_recommended"><span>Recommended To Librarians</span></a>
+        </div>
+    </div>
+</div>
+        
+<div class="metric"><a href="#Metrics-content" class="show-metrics">metrics</a></div>
+        
+
+
+
+    
+    <div class="feedback-container">
+        <h3 class="number">
+            
+                    86
+                
+        </h3>
+        <label class="text">Views</label>
+    </div>
+
+    </div>
+</div>
+    
+    
+        
+        
+    <section class="topicList">
+        <div class="publicationContent_tabDrop publicationContent_tabDropZone publicationContent_tabDropZone1" data-pb-dropzone="publicationContent_tabDropZone1">
+            
+                
+                
+
+
+
+        <div data-widget-def="publicationTopicWidget" data-widget-id="ca556d67-c6a2-4474-9487-278c0a64ad5c"
+             
+             class="topic-menu">
+            
+
+
+
+
+
+
+
+
+
+<ul class="topics lvl-0">
+    <li class="has-items mobile-item">
+        <a href="#"><span class="keywords visible-vs">Topics</span><span class="icon icon-triangle-down"></span></a>
+        <ul class='topicGroup sub-menu lvl-1 hide-vs'>
+            <li class='has-items group'><a href="#"><span class="keywords">Topics</span><span class="icon icon-arrow_d_n"></span></a><ul class='sub-menu lvl-2'><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/3807'>Materials</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/3447'>Linear acoustics</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/6298'>Sound pressure</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/1203'>Continuum mechanics</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/3940'>Metals</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/1157'>Condensed matter properties</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/3817'>Materials properties</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/7104'>Ultrasonics</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/2701'>High pressure</a></li><li class='topicTags'><a href='https://aip.scitation.org/topic/aipthesaurus/3938'>Metallurgy</a></li></ul></li>
+        </ul>
+    </li>
+</ul>
+</div>
+    
+
+
+            
+        </div>
+    </section>
+
+    
+    
+
+
+<script type="text/javascript">
+    var addthis_share = {
+        url: "https://aip.scitation.org/doi/10.1063/1.4945106"
+    };
+    var addthis_config = {
+        services_exclude: "linkedin"
+    };
+</script>
+
+        </div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="combinedRecommendationsWidget" data-widget-id="f14bf159-b5bb-43af-9d58-c7cd3ccf4a8d"
+             
+             class="related-articles sticky-content">
+            
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+<div class="related-articles sticky-content slider-featured">
+    <div class="related-header">
+        <header class="related-article-headers">
+            <h3>related </h3>
+            <a href="#" class="icon-close-btn" target="_self"></a>
+            <h3>articles</h3>
+        </header>
+    </div>
+    
+            <div class="latest-articles-container article-list-boxes">
+                <!-- If in debug view, show the recommendation source-->
+                <div class="first-row">
+                
+                    
+                    <div class="latest-article article-box-container">
+                        <div class="article-box">
+                            
+                                <a href="/doi/10.1063/1.4829926" class="article-title">First principle study of elastic and thermodynamic properties of FeB<sub>4</sub> under high pressure</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">Xinyu Zhang</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Jiaqian Qin</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Jinliang Ning</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Xiaowei Sun</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Xinting Li</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Mingzhen Ma</span><span class="comma hide">, and </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Riping Liu</span><a href="#" class="showMoreAuthors authorsHidden"> more...</a></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Nov 2013</span></div>
+                            
+                        </div>
+                    </div>
+                
+                    
+                    <div class="latest-article article-box-container">
+                        <div class="article-box">
+                            
+                                <a href="/doi/10.1063/1.4867221" class="article-title">First principle study of elastic and thermodynamic properties of ZrZn<sub>2</sub> and HfZn<sub>2</sub> under high pressure</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">Na Sun</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Xinyu Zhang</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Jiaqian Qin</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Jinliang Ning</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Suhong Zhang</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Shunxing Liang</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Mingzhen Ma</span><span class="comma hide">, and </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Riping Liu</span><a href="#" class="showMoreAuthors authorsHidden"> more...</a></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Feb 2014</span></div>
+                            
+                        </div>
+                    </div>
+                
+                    
+                    <div class="latest-article article-box-container">
+                        <div class="article-box">
+                            
+                                <a href="/doi/10.1063/1.4884436" class="article-title">Reinvestigation of high pressure polymorphism in hafnium metal</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">K. K. Pandey</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Jyoti Gyanchandani</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">M. Somayazulu</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">G. K. Dey</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Surinder M. Sharma</span><span class="comma hide">, and </span><span class="entryAuthor normal hlFld-ContribAuthor hide">S. K. Sikka</span><a href="#" class="showMoreAuthors authorsHidden"> more...</a></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Jun 2014</span></div>
+                            
+                        </div>
+                    </div>
+                
+                    
+                    <div class="latest-article article-box-container">
+                        <div class="article-box">
+                            
+                                <a href="/doi/10.1063/1.4928208" class="article-title">A first-principles study of cementite (Fe<sub>3</sub>C) and its alloyed counterparts: Elastic constants, elastic anisotropies, and isotropic elastic moduli</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">G. Ghosh</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Aug 2015</span></div>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.4917584" class="article-title">Structural, electronic, elastic and magnetic properties of RuFe<sub>3</sub>N and OsFe<sub>3</sub>N: A first principle study</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">S. Puvaneswari</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">G. Sudha Priyanga</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">R. Rajeswarapalanichamy</span><span class="comma">, and </span><span class="entryAuthor normal hlFld-ContribAuthor">M. Santhosh</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Jun 2015</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.2838345" class="article-title">First-principles study of structural, elastic, and electronic properties of chromium carbides</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">Chao Jiang</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Jan 2008</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.4726211" class="article-title">High P-T phase transitions and P-V-T equation of state of hafnium</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">Rostislav Hrubiak</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Vadym Drozd</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Ali Karbasi</span><span class="comma">, and </span><span class="entryAuthor normal hlFld-ContribAuthor">Surendra K. Saxena</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Jun 2012</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.4872513" class="article-title">Structural phase transition and elastic properties of hafnium dihydride: A first principles study</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">M. Santhosh</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">R. Rajeswarapalanichamy</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">S. Kanagaprabha</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">G. Sudhapriyanga</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">A. Murugan</span><span class="comma hide">, </span><span class="entryAuthor normal hlFld-ContribAuthor hide">A. Jemmy Chinthia</span><span class="comma hide">, and </span><span class="entryAuthor normal hlFld-ContribAuthor hide">K. Iyakutti</span><a href="#" class="showMoreAuthors authorsHidden"> more...</a></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Apr 2014</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.3556753" class="article-title">First-principles calculations of phase transition, elastic modulus, and superconductivity under pressure for zirconium</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">Bao-Tian Wang</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Peng Zhang</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Han-Yu Liu</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">Wei-Dong Li</span><span class="comma hide">, and </span><span class="entryAuthor normal hlFld-ContribAuthor hide">Ping Zhang</span><a href="#" class="showMoreAuthors authorsHidden"> more...</a></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Mar 2011</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.4927144" class="article-title">Synergistic effect of alloying elements doping and external pressure on the elastic property of Ni<sub>3</sub>Al: A first-principles study</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">C. Li</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">J. Shang</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">L. Kou</span><span class="comma">, and </span><span class="entryAuthor normal hlFld-ContribAuthor">Z. Yue</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Jul 2015</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1063/1.4914256" class="article-title">Pressure effects on the elastic and lattice dynamics properties of AlP from first-principles calculations</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">S. Lakel</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">F. Okbi</span><span class="comma">, </span><span class="entryAuthor normal hlFld-ContribAuthor">M. Ibrir</span><span class="comma">, and </span><span class="entryAuthor normal hlFld-ContribAuthor">K. Almi</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Mar 2015</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            
+                            <div class="latest-article article-box-container">
+                                <div class="article-box">
+                                    
+                                        <a href="/doi/10.1119/1.2341427" class="article-title">Elasticity</a><span class="entryAuthor-sticky"><label class="tocAuthors author-list "><div class="articleEntryAuthor all"><span class="articleEntryAuthorsLinks"><span class="entryAuthor normal hlFld-ContribAuthor">R. D. Edge</span></span></div></label></span><div class="PT-recommended-item"><span class="icon-clock"></span><span class="recommended-item-date">Dec 1983</span></div>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            <div class="slider-bottons">
+                    <div class="next" tabindex="0"><span class="icon-arrow-left"></span></div>
+                    <div class="prev" tabindex="0"><span class="icon-arrow-right"></span></div>
+                </div>
+            </div>
+        
+</div>
+    
+</div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="accessDenialWidget" data-widget-id="4dab1faf-24f8-4e32-83b0-1de4f5b0cee3"
+             
+             class="denial">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!-- // hide it from old browsers
+
+var anyDbId = -1;
+var sideParts = {
+    citation: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a><\/td><\/tr>",
+    citingIsi: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\">Search for citing articles in:<br/>&nbsp;<a href=\"javascript:newWindow('/servlet/linkout?suffix=s0&dbid=128&doi={$doi}&url={$urlEnc}')\">ISI Web of Science<\/a> ({$citNum} or more)<\/a><\/td><\/tr>",
+    citingCrossref: "<tr><td class=\"black9pt\" width=\"15\" valign=\"top\">&nbsp;&bull;&nbsp;<\/td><td class=\"black9pt\" valign=\"top\"><a href=\"{$url}\">Citing articles in Crossref<\/a><\/td><\/tr>",
+    quicksearch: "<option value=\"{$value}\">{$display}<\/option>",
+    related: ", <a href=\"javascript:newWindow('{$linkoutUrl}')\">{$display}<\/a>"
+};
+
+function genSide(part, dbid, linkoutUrl, display, doi, url, citNum, value) {
+    if (dbid != anyDbId && (140737488355327 & dbid) == 0) return;
+    var content = sideParts[part];
+    if (linkoutUrl) { content = content.replace(/{\$linkoutUrl}/g, linkoutUrl); }
+    if (display) { content = content.replace(/{\$display}/g, display); }
+    if (doi) { content = content.replace(/{\$doi}/g, doi); }
+    if (url) {
+        content = content.replace(/{\$url}/g, url);
+        content = content.replace(/{\$urlEnc}/g, encodeURIComponent(encodeURIComponent(url)));
+    }
+    if (citNum) { content = content.replace(/{\$citNum}/g, citNum); }
+    if (value) { content = content.replace(/{\$value}/g, value); }
+    document.write(content);
+}
+
+function hasSfxLinks() {
+	return false;
+}
+
+
+function genSfxLinks(id, url, doi) {
+    if (! doi) { doi = ""; }
+
+}
+function popSfxLink(prefix, id, url, doi) {
+    if (doi) {
+        url += "&id=doi:"+doi;
+    } else {
+        doi = "10.1063%2F1.4945106";
+    }
+    var redirect = prefix + encodeURIComponent("?sid=aip&genre=article"+url);
+    var href = "/servlet/linkout?suffix="+id+"&dbid=16384&doi="+doi+"&url=" + encodeURIComponent(redirect);
+    return newWindow(href);
+}
+
+var sfxRefDisplay = {
+64:"ADS",
+32:"CAS",
+8192:"CIS",
+256:"CSA",
+16:"Crossref",
+128:"ISI",
+4096:"JSTOR",
+8:"Medline",
+1099511627776: "Ichushi",
+17592186044416: "Medical Online",
+8796093022208: "J-Stage",
+2199023255552: "Medical Finder",
+4398046511104: "Pier Online"
+};
+
+window.onload=disableRefLinkWrite ;
+
+function genRefLink(dbid, id, key, textOfLink) {
+    if (140737488355327 & dbid != 0) {
+        if (typeof textOfLink === "undefined") {
+            if (sfxRefDisplay[dbid].substring(0,1) == "[") {
+                textOfLink = sfxRefDisplay[dbid];
+            } else {
+                textOfLink = "["+sfxRefDisplay[dbid]+"]";
+            }
+            // ToDo: move '[' and ']' to sfxRefDisplay (UPDATE: finish changing sfxRefDisplays and remove this branch)
+        }
+        else{ textOfLink = unescape(textOfLink)};
+
+        if(document.disableRefLinkWrite == null){
+            document.write("<a class='ref' href=\"javascript:popRefLink("+dbid+",'"+id+"','"+key+"')\">"+textOfLink+"<\/a>");
+        }
+    }
+}
+
+function disableRefLinkWrite () {
+    document.disableRefLinkWrite = true;
+}
+
+function popRefLink(dbid, id, key) {
+    var redirect = "/servlet/linkout?suffix=" + id + "&dbid=" + dbid + "&doi=10.1063%2F1.4945106&key=" + key;
+    return newWindow(redirect);
+}
+function popRefFull(rid, citart, ptype, area) {
+    return popRefImplFull(rid, citart, ptype, area, 600, 500);
+}
+function popRefImplFull(rid, citart, ptype, area, width, height) {
+    var doi = "10.1063%2F1.4945106";
+    if (! ptype) { ptype = ""; }
+    var pt = rid.charAt(0) + "14945106" + ptype;
+    return popupFull(rid, doi, pt, area, width, height);
+}
+function popRef(rid, citart, ptype, area) {
+    return popRefImpl(rid, citart, ptype, area, 600, 500);
+}
+function popRef2(rid, citart, ptype, area) {
+    return popRefImpl(rid, citart, ptype, area, 400, 100);
+}
+function popRefImpl(rid, citart, ptype, area, width, height) {
+    var doi = "10.1063%2F1.4945106";
+    if (! citart) { citart = "citart1"; }
+    if (! ptype) { ptype = ""; }
+    var pt = rid.charAt(0) + "14945106" + ptype;
+    return popupRef(citart, rid, doi, pt, area, width, height);
+}
+
+
+
+function genCitingCrossref() {
+}
+
+var citLinkDisplay = {
+    
+    0:"SYSTEM",
+4:"SYSTEM",
+20:"SYSTEM",
+64:"ADS",
+32:"CAS",
+8192:"CIS",
+256:"CSA",
+16:"Crossref",
+128:"ISI",
+4096:"JSTOR",
+8:"MEDLINE"
+};
+var feeBasedMask = 4480;
+
+function genCitLink(dbid, suffix, key) {
+    if (dbid != anyDbId && (feeBasedMask & dbid) != 0 && (140737488355327 & dbid) == 0) return;
+
+    var param = "/servlet/linkout?suffix=" + suffix + "&dbid=" + dbid + "&doi=10.1063%2F1.4945106&key=" + key;
+    var display = citLinkDisplay[dbid];
+    var img = "/templates/jsp/_style2/_aip/images/" + display + "_btn.gif";
+
+
+
+    document.write("<a class='ref' href='javascript:newWindow(\"" + param + "\")'>");
+    document.write("<" + "img src='"+img+"' width='85' height='20' align='BOTTOM' alt='"+display+" Abstract' border='0'/>");
+    document.write("<\/a>");
+}
+// stop hiding -->
+</script>
+
+    <script type="text/javascript" src="/swfobject.js"></script>
+<script type="text/javascript">
+function addFlashMovie(id, flv) {
+    var flashvars = {file: flv ,type: 'flv'};
+    var params = {allowfullscreen :true};
+    var attributes = {};
+    swfobject.embedSWF('/flvplayer.swf', id, "352", "288", "7.0.0", false, flashvars, params, attributes);
+}
+
+function addFlashMovie(id, flv, image) {
+    var flashvars = {file: flv ,type: 'flv', image: image};
+    var params = {allowfullscreen :true};
+    var attributes = {};
+    swfobject.embedSWF('/flvplayer.swf', id, "352", "288", "7.0.0", false, flashvars, params, attributes);
+}
+</script>
+
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<div class="padded-content">
+    <div class="tab-content article-content publication-tabs">
+        <div class="tab tab-pane active">
+            <article class="article">
+                
+
+
+
+
+
+                        <!-- abstract content --><div class="hlFld-Abstract"><a name="abstract"></a><div class="sectionInfo abstractSectionHeading"><div class="sectionHeading">Abstract</div></div><div class="NLM_paragraph">Compressional and shear <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.6">wave</named-content> <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.9">velocities</named-content> of the α phase of <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.7">hafnium</named-content> have been measured up to 10.4 GPa at room temperature using <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.9">ultrasonic</named-content> interferometry in a multi-anvil apparatus. A finite strain equation of state analysis yielded <span class="equationTd inline-formula"><math display="inline" overflow="scroll" altimg="eq-00001.gif"><mrow><msub><mrow><mo> </mo><mi mathvariant="normal">K</mi></mrow><mrow><mi mathvariant="normal">s</mi><mn>0</mn></mrow></msub><mo>=</mo><mn>110.4</mn><mo> </mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mo> </mo><mtext>GPa</mtext><mo>,</mo><msub><mrow><mo> </mo><mi mathvariant="normal">G</mi></mrow><mrow><mn>0</mn><mo> </mo></mrow></msub><mo>=</mo><mn>54.7</mn><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo><mo> </mo><mtext>GPa</mtext><mo>,</mo><msubsup><mrow><mo> </mo><mi mathvariant="normal">K</mi></mrow><mrow><mi mathvariant="normal">s</mi><mn>0</mn></mrow><mo>′</mo></msubsup><mo>=</mo><mn>3.7</mn><mo>,</mo><msubsup><mrow><mo> </mo><mtext>and</mtext><mo> </mo><mi mathvariant="normal">G</mi></mrow><mn>0</mn><mo>′</mo></msubsup><mo>=</mo><mn>0.6</mn></mrow></math></span><span class="formulaLabel"></span> for the elastic bulk and shear <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.1">moduli</named-content> and their <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.2 kwd1.3">pressure</named-content> derivatives at ambient conditions. Complementary to the experimental data, the single crystal elastic constants, the elastic <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.5">anisotropy,</named-content> and the unit cell axial ratio <i>c/a</i> of α-hafnium at <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.2">high pressures</named-content> were investigated by <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.4">Density Functional Theory</named-content> <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.4">(DFT)</named-content> based first principles calculations. A <i>c/a</i> value of 1.605 is predicted for α-Hf at 40 GPa, which is in excellent agreement with previous experimental results. The low-pressure derivative of the <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.1">shear modulus</named-content> observed in our experimental data up to 10 GPa was found to originate from the elastic constant C<sub>44</sub>, which exhibits negligible <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.2 kwd1.3">pressure</named-content> dependence within the current experimental <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.2 kwd1.3">pressure</named-content> range. At <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.2">higher pressures</named-content> (&gt;10 GPa), C<sub>44</sub> was predicted to soften and the shear <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.6">wave</named-content> <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.9">velocity</named-content> ν<sub>S</sub> trended to decrease with <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.2 kwd1.3">pressure,</named-content> which can be interpreted as a precursor to the α-ω transition similar to that observed in other group IV elements (titanium and <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.8">zirconium).</named-content> The acoustic <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.9">velocities,</named-content> the bulk and shear <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.1">moduli,</named-content> and the acoustic Debye temperature (<span class="equationTd inline-formula"><math display="inline" overflow="scroll" altimg="eq-00002.gif"><mrow><msub><mrow><mo>θ</mo></mrow><mrow><mi>D</mi></mrow></msub><mo>=</mo><mn>240.1</mn><mo> </mo><mi mathvariant="normal">K</mi></mrow></math></span><span class="formulaLabel"></span>) determined from the current experiments were all compared well with those predicted by our theoretical <named-content xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table" content-type="sem:AIPTh1.2" rid="kwd1.4">DFT</named-content> calculations.</div></div><!-- /abstract content --><div class="accessed"><div class="article-paragraphs"><div class="sectionInfo"><h4 class="refHeading">
+                            References
+                        </h4></div><ol><li><span class="ref-num">1.</span><span class="ref-text"> 
+J. S. Gyanchandani, 
+S. Gupta, 
+S. Sikka, and 
+R. Chidambaram, J. Phys. Condens. Matter <b>2</b>, 301 (1990). <a href="https://doi.org/10.1088/0953-8984/2/2/006">https://doi.org/10.1088/0953-8984/2/2/006</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1990&pages=301&author=J.+S.+Gyanchandaniauthor=S.+Guptaauthor=S.+Sikkaauthor=R.+Chidambaram&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c1&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1088%2F0953-8984%2F2%2F2%2F006" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c1&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK3cXkt12lsrc%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">2.</span><span class="ref-text"> 
+R. Ahuja, 
+J. M. Wills, 
+B. Johansson, and 
+O. Eriksson, Phys. Rev. B <b>48</b>, 16269–<span class="NLM_lpage">16279</span> (1993). <a href="https://doi.org/10.1103/PhysRevB.48.16269">https://doi.org/10.1103/PhysRevB.48.16269</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1993&pages=16269-16279&author=R.+Ahujaauthor=J.+M.+Willsauthor=B.+Johanssonauthor=O.+Eriksson&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c2&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.48.16269" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c2&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK2cXptFaksA%253D%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">3.</span><span class="ref-text"> 
+S. A. Ostanin and 
+V. Y. Trubitsin, Comput. Mater. Sci. <b>17</b>, 174–<span class="NLM_lpage">177</span> (2000). <a href="https://doi.org/10.1016/S0927-0256(00)00018-5">https://doi.org/10.1016/S0927-0256(00)00018-5</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2000&pages=174-177&author=S.+A.+Ostaninauthor=V.+Y.+Trubitsin&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c3&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2FS0927-0256%2800%2900018-5" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c3&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD3cXjslOqtLc%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">4.</span><span class="ref-text"> 
+H. Fang, 
+M. Gu, 
+B. Liu, 
+X. Liu, 
+S. Huang, 
+C. Ni, 
+Z. Li, and 
+R. Wang, Physica B <b>406</b>, 1744–<span class="NLM_lpage">1748</span> (2011). <a href="https://doi.org/10.1016/j.physb.2011.02.019">https://doi.org/10.1016/j.physb.2011.02.019</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2011&pages=1744-1748&author=H.+Fangauthor=M.+Guauthor=B.+Liuauthor=X.+Liuauthor=S.+Huangauthor=C.+Niauthor=Z.+Liauthor=R.+Wang&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c4&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.physb.2011.02.019" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c4&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BC3MXksFWgsro%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">5.</span><span class="ref-text"> 
+Y. Hao, 
+J. Zhu, 
+L. Zhang, 
+H. Ren, and 
+J. Qu, Philos. Mag. Lett. <b>91</b>, 61–<span class="NLM_lpage">69</span> (2011). <a href="https://doi.org/10.1080/09500839.2010.529087">https://doi.org/10.1080/09500839.2010.529087</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2011&pages=61-69&author=Y.+Haoauthor=J.+Zhuauthor=L.+Zhangauthor=H.+Renauthor=J.+Qu&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c5&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1080%2F09500839.2010.529087" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c5&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BC3cXhtl2lt7vF" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">6.</span><span class="ref-text"> 
+K. K. Pandey, 
+J. Gyanchandani, 
+M. Somayazulu, 
+G. K. Dey, 
+S. M. Sharma, and 
+S. Sikka, J. Appl. Phys. <b>115</b>, 233513 (2014). <a href="https://doi.org/10.1063/1.4884436">https://doi.org/10.1063/1.4884436</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2014&pages=233513&author=K.+K.+Pandeyauthor=J.+Gyanchandaniauthor=M.+Somayazuluauthor=G.+K.+Deyauthor=S.+M.+Sharmaauthor=S.+Sikka&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.4884436" onclick="newWindow(this.href);return false">Scitation</a></b></span></span></li><li><span class="ref-num">7.</span><span class="ref-text"> 
+G. Jomard, 
+L. Magaud, and 
+A. Pasturel, Philos. Mag. B <b>77</b>, 67–<span class="NLM_lpage">74</span> (1998). <a href="https://doi.org/10.1080/13642819808206383">https://doi.org/10.1080/13642819808206383</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1998&pages=67-74&author=G.+Jomardauthor=L.+Magaudauthor=A.+Pasturel&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c7&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1080%2F13642819808206383" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c7&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK1cXhslSgtbs%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">8.</span><span class="ref-text"> 
+F. P. Bundy, General Electric Research Laboratory Report No. 63-rl-3481 c (1963). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1963&pages=67-74&author=F.+P.+Bundy&title=General+Electric+Research+Laboratory+Report+No.+63-rl-3481+c&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">9.</span><span class="ref-text"> 
+V. Zilbershtein, 
+N. Chistotina, 
+A. Zharov, 
+N. Grishina, and 
+E. Estrin, Fiz. Met. Metalloved. <b>39</b>, 445–<span class="NLM_lpage">447</span> (1975). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1975&pages=445-447&author=V.+Zilbershteinauthor=N.+Chistotinaauthor=A.+Zharovauthor=N.+Grishinaauthor=E.+Estrin&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c9&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaE2MXks1CgsLs%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">10.</span><span class="ref-text"> 
+L. C. Ming, 
+M. Manghnani, and 
+K. Katahara, Acta Metall. <b>29</b>, 479–<span class="NLM_lpage">485</span> (1981). <a href="https://doi.org/10.1016/0001-6160(81)90071-7">https://doi.org/10.1016/0001-6160(81)90071-7</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1981&pages=479-485&author=L.+C.+Mingauthor=M.+Manghnaniauthor=K.+Katahara&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c10&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2F0001-6160%2881%2990071-7" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c10&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaL3MXhs1Sqtbw%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">11.</span><span class="ref-text"> 
+H. Xia, 
+G. Parthasarathy, 
+H. Luo, 
+Y. K. Vohra, and 
+A. L. Ruoff, Phys. Rev. B <b>42</b>, 6736 (1990). <a href="https://doi.org/10.1103/PhysRevB.42.6736">https://doi.org/10.1103/PhysRevB.42.6736</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1990&pages=6736&author=H.+Xiaauthor=G.+Parthasarathyauthor=H.+Luoauthor=Y.+K.+Vohraauthor=A.+L.+Ruoff&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c11&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.42.6736" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c11&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK3cXmt1Wkt7o%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">12.</span><span class="ref-text"> 
+R. Ahuja, 
+L. Dubrovinsky, 
+N. Dubrovinskaia, 
+J. O. Guillen, 
+M. Mattesini, 
+B. Johansson, and 
+T. Le Bihan, Phys. Rev. B <b>69</b>, 184102 (2004). <a href="https://doi.org/10.1103/PhysRevB.69.184102">https://doi.org/10.1103/PhysRevB.69.184102</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2004&pages=184102&author=R.+Ahujaauthor=L.+Dubrovinskyauthor=N.+Dubrovinskaiaauthor=J.+O.+Guillenauthor=M.+Mattesiniauthor=B.+Johanssonauthor=T.+Le+Bihan&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c12&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.69.184102" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">13.</span><span class="ref-text"> 
+J. Zhang, 
+Y. Zhao, 
+R. S. Hixson, 
+G. T. Gray, 
+L. Wang, 
+W. Utsumi, 
+S. Hiroyuki, and 
+H. Takanori, J. Phys. Chem. Solids <b>69</b>, 2559–<span class="NLM_lpage">2563</span> (2008). <a href="https://doi.org/10.1016/j.jpcs.2008.05.016">https://doi.org/10.1016/j.jpcs.2008.05.016</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2008&pages=2559-2563&author=J.+Zhangauthor=Y.+Zhaoauthor=R.+S.+Hixsonauthor=G.+T.+Grayauthor=L.+Wangauthor=W.+Utsumiauthor=S.+Hiroyukiauthor=H.+Takanori&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c13&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.jpcs.2008.05.016" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c13&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD1cXhtFWntbfJ" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">14.</span><span class="ref-text"> 
+H. Xia, 
+S. J. Duclos, 
+A. L. Ruoff, and 
+Y. K. Vohra, Phys. Rev. Lett. <b>64</b>, 204 (1990). <a href="https://doi.org/10.1103/PhysRevLett.64.204">https://doi.org/10.1103/PhysRevLett.64.204</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1990&pages=204&author=H.+Xiaauthor=S.+J.+Duclosauthor=A.+L.+Ruoffauthor=Y.+K.+Vohra&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c14&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevLett.64.204" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c14&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK3cXht12ms7k%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">15.</span><span class="ref-text"> 
+Y. Zhao, 
+J. Zhang, 
+C. Pantea, 
+J. Qian, 
+L. L. Daemen, 
+P. A. Rigg, 
+R. S. Hixson, 
+G. T. Gray III, 
+Y. Yang, and 
+L. Wang, Phys. Rev. B <b>71</b>, 184119 (2005). <a href="https://doi.org/10.1103/PhysRevB.71.184119">https://doi.org/10.1103/PhysRevB.71.184119</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2005&pages=184119&author=Y.+Zhaoauthor=J.+Zhangauthor=C.+Panteaauthor=J.+Qianauthor=L.+L.+Daemenauthor=P.+A.+Riggauthor=R.+S.+Hixsonauthor=G.+T.+Grayauthor=Y.+Yangauthor=L.+Wang&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c15&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.71.184119" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">16.</span><span class="ref-text"> 
+C. Greeff, Modell. Simul. Mater. Sci. Eng. <b>13</b>, 1015 (2005). <a href="https://doi.org/10.1088/0965-0393/13/7/001">https://doi.org/10.1088/0965-0393/13/7/001</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2005&pages=1015&author=C.+Greeff&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c16&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1088%2F0965-0393%2F13%2F7%2F001" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c16&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD2MXhtlamsrfN" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">17.</span><span class="ref-text"> 
+J. Zhang, 
+Y. Zhao, 
+C. Pantea, 
+J. Qian, 
+L. L. Daemen, 
+P. A. Rigg, 
+R. S. Hixson, 
+C. W. Greeff, 
+G. T. Gray, and 
+Y. Yang, J. Phys. Chem. Solids <b>66</b>, 1213–<span class="NLM_lpage">1219</span> (2005). <a href="https://doi.org/10.1016/j.jpcs.2005.03.004">https://doi.org/10.1016/j.jpcs.2005.03.004</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2005&pages=1213-1219&author=J.+Zhangauthor=Y.+Zhaoauthor=C.+Panteaauthor=J.+Qianauthor=L.+L.+Daemenauthor=P.+A.+Riggauthor=R.+S.+Hixsonauthor=C.+W.+Greeffauthor=G.+T.+Grayauthor=Y.+Yang&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c17&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.jpcs.2005.03.004" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c17&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD2MXot1Cgt78%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">18.</span><span class="ref-text"> 
+W. Liu, 
+B. Li, 
+L. Wang, 
+J. Zhang, and 
+Y. Zhao, J. Appl. Phys. <b>104</b>, 076102 (2008). <a href="https://doi.org/10.1063/1.2987001">https://doi.org/10.1063/1.2987001</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2008&pages=076102&author=W.+Liuauthor=B.+Liauthor=L.+Wangauthor=J.+Zhangauthor=Y.+Zhao&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.2987001" onclick="newWindow(this.href);return false">Scitation</a></b></span></span></li><li><span class="ref-num">19.</span><span class="ref-text"> 
+D. Errandonea, 
+Y. Meng, 
+M. Somayazulu, and 
+D. Häusermann, Physica B <b>355</b>, 116–<span class="NLM_lpage">125</span> (2005). <a href="https://doi.org/10.1016/j.physb.2004.10.030">https://doi.org/10.1016/j.physb.2004.10.030</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2005&pages=116-125&author=D.+Errandoneaauthor=Y.+Mengauthor=M.+Somayazuluauthor=D.+H%C3%A4usermann&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c19&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.physb.2004.10.030" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c19&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD2MXktFyntw%253D%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">20.</span><span class="ref-text"> 
+J. Zhang, 
+Y. Zhao, 
+P. A. Rigg, 
+R. S. Hixson, and 
+G. T. Gray, J. Phys. Chem. Solids <b>68</b>, 2297–<span class="NLM_lpage">2302</span> (2007). <a href="https://doi.org/10.1016/j.jpcs.2007.06.016">https://doi.org/10.1016/j.jpcs.2007.06.016</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2007&pages=2297-2302&author=J.+Zhangauthor=Y.+Zhaoauthor=P.+A.+Riggauthor=R.+S.+Hixsonauthor=G.+T.+Gray&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c20&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.jpcs.2007.06.016" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c20&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD2sXhtlClsb3P" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">21.</span><span class="ref-text"> 
+Y. Hao, 
+J. Zhu, 
+L. Zhang, 
+J. Qu, and 
+H. Ren, Solid State Sci. <b>12</b>, 1473–<span class="NLM_lpage">1479</span> (2010). <a href="https://doi.org/10.1016/j.solidstatesciences.2010.06.010">https://doi.org/10.1016/j.solidstatesciences.2010.06.010</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2010&pages=1473-1479&author=Y.+Haoauthor=J.+Zhuauthor=L.+Zhangauthor=J.+Quauthor=H.+Ren&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c21&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.solidstatesciences.2010.06.010" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c21&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BC3cXpt1altr8%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">22.</span><span class="ref-text"> 
+C. E. Hu, 
+Z. Y. Zeng, 
+L. Zhang, 
+X. R. Chen, 
+L. C. Cai, and 
+D. Alfè, J. Appl. Phys. <b>107</b>, 093509 (2010). <a href="https://doi.org/10.1063/1.3407560">https://doi.org/10.1063/1.3407560</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2010&pages=093509&author=C.+E.+Huauthor=Z.+Y.+Zengauthor=L.+Zhangauthor=X.+R.+Chenauthor=L.+C.+Caiauthor=D.+Alf%C3%A8&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.3407560" onclick="newWindow(this.href);return false">Scitation</a></b></span></span></li><li><span class="ref-num">23.</span><span class="ref-text"> 
+B. T. Wang, 
+P. Zhang, 
+H. Y. Liu, 
+W. D. Li, and 
+P. Zhang, J. Appl. Phys. <b>109</b>, 063514 (2011). <a href="https://doi.org/10.1063/1.3556753">https://doi.org/10.1063/1.3556753</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2011&pages=063514&author=B.+T.+Wangauthor=P.+Zhangauthor=H.+Y.+Liuauthor=W.+D.+Liauthor=P.+Zhang&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.3556753" onclick="newWindow(this.href);return false">Scitation</a></b></span></span></li><li><span class="ref-num">24.</span><span class="ref-text"> 
+S. Zhang, 
+X. Zhang, 
+Y. Zhu, 
+S. Zhang, 
+L. Qi, and 
+R. Liu, Comput. Mater. Sci. <b>61</b>, 42–<span class="NLM_lpage">49</span> (2012). <a href="https://doi.org/10.1016/j.commatsci.2012.03.057">https://doi.org/10.1016/j.commatsci.2012.03.057</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2012&pages=42-49&author=S.+Zhangauthor=X.+Zhangauthor=Y.+Zhuauthor=S.+Zhangauthor=L.+Qiauthor=R.+Liu&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c24&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.commatsci.2012.03.057" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">25.</span><span class="ref-text"> 
+J. S. Gyanchandani, 
+S. C. Gupta, 
+S. K. Sikka, and 
+R. Chidambaram, in Shock Compression of Condensed Matter, edited by S. C. Schmidt , J. N. Johnson , and L. W. Davidson (
+<span class="NLM_publisher-name">Elsevier</span>, 
+<span class="NLM_publisher-loc">New York</span>, 1990). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1990&author=J.+S.+Gyanchandaniauthor=S.+C.+Guptaauthor=S.+K.+Sikkaauthor=R.+Chidambaramauthor=S.+C.+Schmidt&author=J.+N.+Johnson&author=L.+W.+Davidson&title=Shock+Compression+of+Condensed+Matter&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">26.</span><span class="ref-text"> 
+S. Sikka, 
+Y. Vohra, and 
+R. Chidambaram, Prog. Mater. Sci. <b>27</b>, 245–<span class="NLM_lpage">310</span> (1982). <a href="https://doi.org/10.1016/0079-6425(82)90002-0">https://doi.org/10.1016/0079-6425(82)90002-0</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1982&pages=245-310&author=S.+Sikkaauthor=Y.+Vohraauthor=R.+Chidambaram&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c26&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2F0079-6425%2882%2990002-0" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c26&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaL38Xls1Ogs7c%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">27.</span><span class="ref-text"> 
+R. Hrubiak, 
+V. Drozd, 
+A. Karbasi, and 
+S. K. Saxena, J. Appl. Phys. <b>111</b>, 112612 (2012). <a href="https://doi.org/10.1063/1.4726211">https://doi.org/10.1063/1.4726211</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2012&pages=112612&author=R.+Hrubiakauthor=V.+Drozdauthor=A.+Karbasiauthor=S.+K.+Saxena&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.4726211" onclick="newWindow(this.href);return false">Scitation</a></b></span></span></li><li><span class="ref-num">28.</span><span class="ref-text"> 
+A. Kutsar, Fiz. Met. Metalloved. <b>40</b>, 787–<span class="NLM_lpage">793</span> (1975). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1975&pages=787-793&author=A.+Kutsar&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c28&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaE28XhsFChs7s%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">29.</span><span class="ref-text"> 
+G. Duvall and 
+R. Graham, Rev. Mod. Phys. <b>49</b>, 523 (1977). <a href="https://doi.org/10.1103/RevModPhys.49.523">https://doi.org/10.1103/RevModPhys.49.523</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1977&pages=523&author=G.+Duvallauthor=R.+Graham&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c29&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FRevModPhys.49.523" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c29&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaE2sXlt1artL0%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">30.</span><span class="ref-text"> 
+C. Stassis, 
+D. Arch, 
+O. McMasters, and 
+B. Harmon, Phys. Rev. B <b>24</b>, 730 (1981). <a href="https://doi.org/10.1103/PhysRevB.24.730">https://doi.org/10.1103/PhysRevB.24.730</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1981&pages=730&author=C.+Stassisauthor=D.+Archauthor=O.+McMastersauthor=B.+Harmon&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c30&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.24.730" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c30&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaL3MXlt1Cgt7c%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">31.</span><span class="ref-text"> 
+H. L. Skriver, Phys. Rev. B <b>31</b>, 1909 (1985). <a href="https://doi.org/10.1103/PhysRevB.31.1909">https://doi.org/10.1103/PhysRevB.31.1909</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1985&pages=1909&author=H.+L.+Skriver&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c31&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.31.1909" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c31&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaL2MXhsVWgsr0%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">32.</span><span class="ref-text"> 
+H. Olijnyk and 
+A. Jephcoat, Solid State Commun. <b>115</b>, 335–<span class="NLM_lpage">339</span> (2000). <a href="https://doi.org/10.1016/S0038-1098(00)00207-6">https://doi.org/10.1016/S0038-1098(00)00207-6</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2000&pages=335-339&author=H.+Olijnykauthor=A.+Jephcoat&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c32&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2FS0038-1098%2800%2900207-6" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c32&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD3cXks12jsbs%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">33.</span><span class="ref-text"> 
+R. W. G. Wyckoff, Crystal Structures, <span class="NLM_edition">2nd ed.</span> (
+<span class="NLM_publisher-name">Interscience Publishers</span>, 
+<span class="NLM_publisher-loc">New York</span>, 1963), Vol. 
+1, pp. 7–<span class="NLM_lpage">83</span>. <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1963&pages=7-83&author=R.+W.+G.+Wyckoff&title=Crystal+Structures&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">34.</span><span class="ref-text"> 
+B. Li, 
+I. Jackson, 
+T. Gasparik, and 
+R. C. Liebermann, Phys. Earth Planet. Inter. <b>98</b>, 79–<span class="NLM_lpage">91</span> (1996). <a href="https://doi.org/10.1016/S0031-9201(96)03173-1">https://doi.org/10.1016/S0031-9201(96)03173-1</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1996&pages=79-91&author=B.+Liauthor=I.+Jacksonauthor=T.+Gasparikauthor=R.+C.+Liebermann&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c34&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2FS0031-9201%2896%2903173-1" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c34&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK28XnsFWht7s%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">35.</span><span class="ref-text"> 
+B. Li, 
+J. Kung, and 
+R. C. Liebermann, Phys. Earth Planet. Inter. <b>143</b>, 559–<span class="NLM_lpage">574</span> (2004) <a href="https://doi.org/10.1016/j.pepi.2003.09.020">https://doi.org/10.1016/j.pepi.2003.09.020</a>. <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2004&pages=559-574&author=B.+Liauthor=J.+Kungauthor=R.+C.+Liebermann&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c35&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.pepi.2003.09.020" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">36.</span><span class="ref-text"> 
+H. Niesler and 
+I. Jackson, J. Acoust. Soc. Am. <b>86</b>, 1573–<span class="NLM_lpage">1585</span> (1989). <a href="https://doi.org/10.1121/1.398717">https://doi.org/10.1121/1.398717</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1989&pages=1573-1585&author=H.+Nieslerauthor=I.+Jackson&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c36&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1121%2F1.398717" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c36&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK3cXotVegtw%253D%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">37.</span><span class="ref-text"> 
+E. P. Papadakis, J. Acoust. Soc. Am. <b>42</b>, 1045–<span class="NLM_lpage">1051</span> (1967). <a href="https://doi.org/10.1121/1.1910688">https://doi.org/10.1121/1.1910688</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1967&pages=1045-1051&author=E.+P.+Papadakis&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c37&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1121%2F1.1910688" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">38.</span><span class="ref-text"> 
+B. Li, 
+K. Chen, 
+J. Kung, 
+R. C. Liebermann, and 
+D. J. Weidner, J. Phys. Condens. Matter <b>14</b>, 11337 (2002). <a href="https://doi.org/10.1088/0953-8984/14/44/478">https://doi.org/10.1088/0953-8984/14/44/478</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2002&pages=11337&author=B.+Liauthor=K.+Chenauthor=J.+Kungauthor=R.+C.+Liebermannauthor=D.+J.+Weidner&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c38&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1088%2F0953-8984%2F14%2F44%2F478" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c38&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADC%252BD38Xptl2nsbg%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">39.</span><span class="ref-text"> 
+X. Wang, 
+T. Chen, 
+X. Qi, 
+Y. Zou, 
+J. Kung, 
+T. Yu, 
+Y. Wang, 
+R. C. Liebermann, and 
+B. Li, J. Appl. Phys. <b>118</b>, 065901 (2015). <a href="https://doi.org/10.1063/1.4928147">https://doi.org/10.1063/1.4928147</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2015&pages=065901&author=X.+Wangauthor=T.+Chenauthor=X.+Qiauthor=Y.+Zouauthor=J.+Kungauthor=T.+Yuauthor=Y.+Wangauthor=R.+C.+Liebermannauthor=B.+Li&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.4928147" onclick="newWindow(this.href);return false">Scitation</a></b></span></span></li><li><span class="ref-num">40.</span><span class="ref-text"> 
+G. Kresse and 
+J. Furthmüller, Phys. Rev. B <b>54</b>, 11169–<span class="NLM_lpage">11186</span> (1996). <a href="https://doi.org/10.1103/PhysRevB.54.11169">https://doi.org/10.1103/PhysRevB.54.11169</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1996&pages=11169-11186&author=G.+Kresseauthor=J.+Furthm%C3%BCller&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c40&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.54.11169" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c40&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK28Xms1Whu7Y%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">41.</span><span class="ref-text"> 
+P. E. Blöchl, Phys. Rev. B <b>50</b>, 17953–<span class="NLM_lpage">17979</span> (1994). <a href="https://doi.org/10.1103/PhysRevB.50.17953">https://doi.org/10.1103/PhysRevB.50.17953</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1994&pages=17953-17979&author=P.+E.+Bl%C3%B6chl&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c41&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.50.17953" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c41&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ASTN%3A280%3ADC%252BC2sfjslSntA%253D%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">42.</span><span class="ref-text"> 
+J. P. Perdew, 
+K. Burke, and 
+M. Ernzerhof, Phys. Rev. Lett. <b>77</b>, 3865–<span class="NLM_lpage">3868</span> (1996). <a href="https://doi.org/10.1103/PhysRevLett.77.3865">https://doi.org/10.1103/PhysRevLett.77.3865</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1996&pages=3865-3868&author=J.+P.+Perdewauthor=K.+Burkeauthor=M.+Ernzerhof&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c42&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevLett.77.3865" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c42&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK28XmsVCgsbs%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">43.</span><span class="ref-text"> 
+B. Karki, 
+G. Ackland, and 
+J. Crain, J. Phys. Condens. Matter <b>9</b>, 8579 (1997). <a href="https://doi.org/10.1088/0953-8984/9/41/005">https://doi.org/10.1088/0953-8984/9/41/005</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1997&pages=8579&author=B.+Karkiauthor=G.+Acklandauthor=J.+Crain&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c43&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1088%2F0953-8984%2F9%2F41%2F005" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c43&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK2sXnsVehurc%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">44.</span><span class="ref-text"> 
+R. K. Cook, J. Acoust. Soc. Am. <b>29</b>, 445–<span class="NLM_lpage">449</span> (1957). <a href="https://doi.org/10.1121/1.1908922">https://doi.org/10.1121/1.1908922</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1957&pages=445-449&author=R.+K.+Cook&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c44&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1121%2F1.1908922" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">45.</span><span class="ref-text"> 
+G. Davies and 
+A. Dziewonski, Phys. Earth Planet. Inter. <b>10</b>, 336–<span class="NLM_lpage">343</span> (1975). <a href="https://doi.org/10.1016/0031-9201(75)90060-6">https://doi.org/10.1016/0031-9201(75)90060-6</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1975&pages=336-343&author=G.+Daviesauthor=A.+Dziewonski&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c45&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2F0031-9201%2875%2990060-6" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c45&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaE28Xmt1Kqsw%253D%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">46.</span><span class="ref-text"> 
+B. Li and 
+R. C. Liebermann, Phys. Earth Planet. Inter. <b>233</b>, 135–<span class="NLM_lpage">153</span> (2014). <a href="https://doi.org/10.1016/j.pepi.2014.05.006">https://doi.org/10.1016/j.pepi.2014.05.006</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2014&pages=135-153&author=B.+Liauthor=R.+C.+Liebermann&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c46&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1016%2Fj.pepi.2014.05.006" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">47.</span><span class="ref-text"> 
+C. R. Bina and 
+G. R. Helffrich, Annu. Rev. Earth Planet. Sci. <b>20</b>, 527 (1992). <a href="https://doi.org/10.1146/annurev.ea.20.050192.002523">https://doi.org/10.1146/annurev.ea.20.050192.002523</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1992&pages=527&author=C.+R.+Binaauthor=G.+R.+Helffrich&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c47&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1146%2Fannurev.ea.20.050192.002523" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">48.</span><span class="ref-text"> 
+W. Voigt, Lehrbuch der Kristallphysik (
+<span class="NLM_publisher-name">Teubner</span>, 
+<span class="NLM_publisher-loc">Leipzig</span>, 1928). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1928&author=W.+Voigt&title=Lehrbuch+der+Kristallphysik&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">49.</span><span class="ref-text"> 
+A. Reuss, Z. Angew. Math. Mech. <b>9</b>, 49–<span class="NLM_lpage">58</span> (1929). <a href="https://doi.org/10.1002/zamm.19290090104">https://doi.org/10.1002/zamm.19290090104</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1929&pages=49-58&author=A.+Reuss&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c49&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1002%2Fzamm.19290090104" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c49&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaA3cXit1Wrug%253D%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">50.</span><span class="ref-text"> 
+R. Hill, Proc. Phys. Soc. London, Sect. A <b>65</b>, 349 (1952). <a href="https://doi.org/10.1088/0370-1298/65/5/307">https://doi.org/10.1088/0370-1298/65/5/307</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1952&pages=349&author=R.+Hill&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c50&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1088%2F0370-1298%2F65%2F5%2F307" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li><span class="ref-num">51.</span><span class="ref-text"> 
+Y. E. Kim, 
+J. W. Park, and 
+J. Cleveland, Thermophysical Properties Database of Materials for Light Water Reactors and Heavy Water Reactors (
+<span class="NLM_publisher-name">IAEA</span>, 
+<span class="NLM_publisher-loc">Vienna</span>, 2006). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=2006&author=Y.+E.+Kimauthor=J.+W.+Parkauthor=J.+Cleveland&title=Thermophysical+Properties+Database+of+Materials+for+Light+Water+Reactors+and+Heavy+Water+Reactors&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">52.</span><span class="ref-text"> 
+E. Fisher and 
+C. Renken, Phys. Rev. <b>135</b>, A482 (1964). <a href="https://doi.org/10.1103/PhysRev.135.A482">https://doi.org/10.1103/PhysRev.135.A482</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1964&pages=A482&author=E.+Fisherauthor=C.+Renken&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c52&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRev.135.A482" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c52&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaF2cXkt1yqs78%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">53.</span><span class="ref-text"> 
+E. Fisher, 
+M. Manghnani, and 
+T. Sokolowski, J. Appl. Phys. <b>41</b>, 2991–<span class="NLM_lpage">2998</span> (1970). <a href="https://doi.org/10.1063/1.1659351">https://doi.org/10.1063/1.1659351</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1970&pages=2991-2998&author=E.+Fisherauthor=M.+Manghnaniauthor=T.+Sokolowski&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/doi/10.1063/1.1659351" onclick="newWindow(this.href);return false">Scitation</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c53&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaE3cXksV2nur0%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">54.</span><span class="ref-text"> 
+M. Born and 
+K. Huang, Dynamical Theory of Crystal Lattices (
+<span class="NLM_publisher-name">Clarendon Press</span>, 1954). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1954&author=M.+Bornauthor=K.+Huang&title=Dynamical+Theory+of+Crystal+Lattices&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">55.</span><span class="ref-text"> 
+H. Olijnyk and 
+A. Jephcoat, Phys. Rev. B <b>56</b>, 10751 (1997). <a href="https://doi.org/10.1103/PhysRevB.56.10751">https://doi.org/10.1103/PhysRevB.56.10751</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1997&pages=10751&author=H.+Olijnykauthor=A.+Jephcoat&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c55&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.56.10751" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c55&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK2sXntFOhsbg%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">56.</span><span class="ref-text"> 
+J. Upadhyaya, 
+D. Sharma, 
+D. Prakash, and 
+S. Upadhyaya, Can. J. Phys. <b>72</b>, 61–<span class="NLM_lpage">72</span> (1994). <a href="https://doi.org/10.1139/p94-011">https://doi.org/10.1139/p94-011</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1994&pages=61-72&author=J.+Upadhyayaauthor=D.+Sharmaauthor=D.+Prakashauthor=S.+Upadhyaya&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c56&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1139%2Fp94-011" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c56&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK2cXivVGmsbY%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">57.</span><span class="ref-text"> 
+J. F. Nye, Physical Properties of Crystals (
+<span class="NLM_publisher-name">Oxford University Press</span>, 1957). <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1957&author=J.+F.+Nye&title=Physical+Properties+of+Crystals&"><b>Google Scholar</b></a></span></li><li><span class="ref-num">58.</span><span class="ref-text"> 
+G. Steinle-Neumann, 
+L. Stixrude, and 
+R. E. Cohen, Phys. Rev. B <b>60</b>, 791 (1999). <a href="https://doi.org/10.1103/PhysRevB.60.791">https://doi.org/10.1103/PhysRevB.60.791</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1999&pages=791&author=G.+Steinle-Neumannauthor=L.+Stixrudeauthor=R.+E.+Cohen&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c58&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.60.791" onclick="newWindow(this.href);return false">Crossref</a></b></span>, <span class="sfxlink"><b><a href="/servlet/linkout?suffix=c58&amp;dbid=32&amp;doi=10.1063%2F1.4945106&amp;key=1%3ACAS%3A528%3ADyaK1MXktlaitL4%253D" onclick="newWindow(this.href);return false">CAS</a></b></span></span></li><li><span class="ref-num">59.</span><span class="ref-text"> 
+E. Collings and 
+J. Ho, Phys. Rev. B <b>4</b>, 349 (1971). <a href="https://doi.org/10.1103/PhysRevB.4.349">https://doi.org/10.1103/PhysRevB.4.349</a>, <a class="google-scholar" href="http://scholar.google.com/scholar_lookup?hl=en&publication_year=1971&pages=349&author=E.+Collingsauthor=J.+Ho&"><b>Google Scholar</b></a><span class="sfxlink"><b><a href="/servlet/linkout?suffix=c59&amp;dbid=16&amp;doi=10.1063%2F1.4945106&amp;key=10.1103%2FPhysRevB.4.349" onclick="newWindow(this.href);return false">Crossref</a></b></span></span></li><li>© 2016 AIP Publishing LLC.</li></ol></div></div><span id="showCrossMarkEpub" style="display:none;">true</span><div class="response"><div class="sub-article-title"></div></div>
+                
+            </article>
+        </div>
+
+        
+
+
+
+
+
+
+<div class="tab tab-pane" id="metrics-content">
+    <div class="articleMetaDrop publicationContentDropZone publicationContentDropZoneMetrics" data-pb-dropzone="publicationContentDropZoneMetrics">
+        
+    </div>
+</div>
+    </div>
+
+    <div class="articleMetaDrop publicationContentDropZone advertisement" data-pb-dropzone="advertisement">
+        <div class="ad-tower-image">
+            
+                
+
+
+
+        <div data-widget-def="literatumAd" data-widget-id="91640b46-d3f5-4852-b3f7-510802adc36f">
+            
+
+
+        <div class="pb-ad">
+            <div id="oas_Right1"></div>
+<script type="text/javascript">oas_tag.loadAd("Right1");</script>
+        </div>
+    
+
+        </div>
+    
+
+
+            
+        </div>
+
+    </div>
+</div>
+
+<div id="accessDenialWidget">
+    <div class="ecommDenial">
+        <div class="accessMessage grey-line">
+            <h3>
+                
+                        Select Your Access
+                    
+            </h3>
+        </div>
+
+            
+
+
+
+
+
+
+<div class="login">
+
+    
+
+
+
+
+
+
+
+
+
+
+
+        
+        <div class="loginForm">
+            
+                    
+                
+            
+
+            <h4 class="accessDenialLoginHeader">Individual Access</h4>
+            <p class="note">If you have an individual subscription, a subscription provided by one of AIP's Member Societies, have claimed access to a Conference Proceeding, or have made an individual purchase, sign in below.</p>
+            
+                
+
+
+<form action="/action/doLogin" name="frmLogin" class="note denialLogin" method="post"><input type="hidden" name="loginUri" value="/doi/pdf/10.1063/1.4945106" />
+    <input type="hidden" name="redirectUri" value="/doi/pdf/10.1063/1.4945106" />
+    
+
+
+
+
+
+
+    
+
+<div class="individual-access-login">
+    <div class="individual-access-input-group">
+        <div class="individual-access-input">
+            <div class="input-group">
+                <div class="label">
+                    <label for="login">Username:</label>
+                </div>
+                <input id="login" class="textInput" type="text" name="login" value="" size="15" />
+            </div>
+        </div>
+    </div>
+    <div class="individual-access-input-group">
+        <div class="individual-access-input">
+            <div class="input-group">
+                <div class="label">
+                    <label for="password">Password:</label>
+                </div>
+                <input id="password" class="textInput" type="password" name="password" value="" autocomplete="off" />
+                <span class="password-eye-icon icon-eye hidden"></span>
+            </div>
+        </div>
+    </div>
+    <div class="ecommLoginButtonsTd">
+        <input id="savePassword" type="checkbox" name="savePassword" value="1" /><label for="savePassword">Remember me</label>
+        <input class="ecommLoginSigninButton defButton other-submit-button small-btn" type="submit" name="submit" value="Log In" />
+    </div>
+</div></form>
+            
+        </div>
+    
+
+    <div>
+        
+    </div>
+    
+            
+
+
+
+
+
+
+
+<div class="options-links">
+    
+        <span class="passwordReminder">
+            <a href="/action/requestResetPassword?redirectUri=%2Fdoi%2Fpdf%2F10.1063%2F1.4945106">Forgot password?</a>
+        </span>
+    
+    
+</div>
+        
+
+    <div class="options-links">
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+<h4>Institutional Access</h4>
+
+        
+        
+            <div id="openAthensSignIn">
+                <a href="/action/ssostart?idp=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&amp;redirectUri=https%3A%2F%2Faip.scitation.org%2Fdoi%2Fpdf%2F10.1063%2F1.4945106">
+                    
+                    
+                            
+                            
+                        
+                    Log in via Open Athens
+                </a>
+            </div>
+        
+        
+            <span id="institutionLogin">
+                <a href="/action/ssostart?redirectUri=%2Fdoi%2Fpdf%2F10.1063%2F1.4945106">
+                    Log in via Shibboleth
+                </a>
+            </span>
+        
+    
+        
+
+        
+
+        <div id ="deepDyveContainer" class="deepDyve">
+            
+            
+            
+        </div>
+
+    </div>
+</div>
+
+        <!--TODO: Purchase Access needs to be implemented-->
+        
+
+        
+
+
+
+
+
+
+<div class="accessOptions">
+    
+
+
+
+
+
+
+
+    <hr>
+    <div class="offersList">
+        <h4 class="accessDenialPurchaseHeader">Purchase</h4>
+        <div class="accessDenialPurchaseNote"></div>
+        <form action="/action/ecommerce" id="ecommerceForm" method="get"><div>
+        <input id="548" type="radio" name="offerId" value="54,10.1063/1.4945106" checked="checked" />
+        <b>
+                7 days access for $30.00
+        </b>
+    </div>
+
+            <br/>
+            
+
+
+
+<div class="addOffer">
+   <input type="submit" name="addToCart" value="Add to cart"class="defButton" />
+   <input type="hidden" name="backUri" value="/doi/pdf/10.1063/1.4945106" />
+</div></form>
+    </div>
+
+    
+    
+        
+
+
+
+
+
+
+
+    
+
+    
+</div>
+    </div>
+
+    <div class="accessDenialDropZone" data-pb-dropzone="accessDenialDropZone">
+    
+    </div>
+</div></div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div>
+        </div>
+    
+
+
+
+
+
+        <div data-widget-def="general-html" data-widget-id="128d0105-191f-4cb8-8ee3-1008a449f9a0">
+            <!-- Bot analytics test -->
+<script src="https://api.b2c.com/api/init-260u9k3l7hxtcferh76.js" data-cfasync="false" async></script>
+<noscript><img src="https://api.b2c.com/api/noscript-260u9k3l7hxtcferh76.gif"></noscript>
+
+
+
+        </div>
+    
+
+    </div>
+</div><!--end pagefulltext--></div>
+    
+
+
+
+
+
+        <div data-widget-def="pageFooter" data-widget-id="38e4b213-1be6-4c89-84c1-0cc5ce4cfd7b"
+             
+             class="site-footer">
+            <footer class="page-footer">
+    <div data-pb-dropzone="main">
+    
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="7ec5c84f-97a7-4143-841f-4d0492e6002f"
+             
+             class="footer-sections">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-sm  ">
+        
+            <div class="col-sm-1-4 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="019a6239-2b08-4873-a40e-05b1864ad59d"
+             
+             class="footer-left">
+            <h4 class="footer-section-title">Resources</h4>
+<ul>
+    <li><a href="https://publishing.aip.org/authors" target="_blank">AUTHOR</a></li>
+    <li><a href="https://publishing.aip.org/librarians" target="_blank">LIBRARIAN</a></li>
+    <li><a href="http://www.scitation.org/advertising">ADVERTISER</a></li>
+</ul>
+
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-sm-1-3 ">
+                <div class="contents" data-pb-dropzone="contents1">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="2cdb02b9-4a80-49ce-a918-2484c742e48f">
+            <h4 class="footer-section-title">General Information</h4>
+<ul>
+    <li><a href="http://www.scitation.org/about">ABOUT</a></li>
+    <li><a href="http://www.scitation.org/contact">CONTACT</a></li>
+    <li><a href="http://www.scitation.org/help">HELP</a></li>
+</ul>
+
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+            <div class="col-sm-5-12 ">
+                <div class="contents" data-pb-dropzone="contents2">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="76259b72-8e49-4ec8-8d45-d5688ba558b2"
+             
+             class="footer-right">
+            <h4 class="footer-section-title">&nbsp;</h4>
+<ul>
+    <li><a href="http://www.scitation.org/privacy">PRIVACY POLICY</a></li>
+    <li><a href="http://www.scitation.org/terms">TERMS OF USE</a></li>
+    <li class="inline-icon">
+        <a href="http://www.scitation.org">FOLLOW AIP PUBLISHING:</a>
+        <a href="https://www.facebook.com/AIPPublishing/"><span class="icon icon-facebook-square"></span></a>
+        <a href="https://twitter.com/AIP_Publishing"><span class="icon icon-twitter-square"></span></a>
+        <a href="https://www.linkedin.com/company/10306347"><span class="icon icon-linkedin-square"></span></a>
+    </li>
+</ul>
+
+</div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+
+
+
+
+        <div data-widget-def="responsive-layout" data-widget-id="88b458c3-4098-4fa5-85a0-72c2845ffba3"
+             
+             class="footer-copyright-wrapper">
+            
+
+
+
+
+        
+    
+<div class="container">
+    <div class="row row-md  ">
+        
+            <div class="col-md-1-1 ">
+                <div class="contents" data-pb-dropzone="contents0">
+                    
+                    
+                        
+                            
+
+
+
+        <div data-widget-def="general-html-asset" data-widget-id="e3833212-4fc4-420a-a080-c4ca84ac3ed6">
+            <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0011/5927.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+        </div>
+    
+
+
+                        
+                            
+
+
+
+        <div data-widget-def="general-html" data-widget-id="4a153430-619e-48ee-a7f9-df4133694aa5">
+            <div class="footer-copyright">Website &copy; 2018 AIP Publishing LLC. Article copyright remains as specified within the article.</div>
+<div style="position:absolute; bottom: 0; right: 0;"><img src="/pb-assets/images/scitation_logo-type_gray_small.png" alt="Scitation logo"></div>
+<script>var _prum=[["id","585086341e2072335c1001f2"],["mark","firstbyte",(new Date).getTime()]];!function(){var a=document.getElementsByTagName("script")[0],b=document.createElement("script");b.async="async",b.src="//rum-static.pingdom.net/prum.min.js",a.parentNode.insertBefore(b,a)}()</script>
+<!-- LIT-161505 RedLink -->
+<script src="//hermes-src.redlink.com/agent/hermes.js?userRHKey=QIeMK7xCDs" type="text/javascript" async></script>
+
+
+        </div>
+    
+
+
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+</div></div>
+    
+
+    </div>
+</footer></div>
+    
+
+        </div>
+    </div>
+
+</body>
+</html>

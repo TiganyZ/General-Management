@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0023/2529.js" async="async"></script>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Negative Cauchy Pressure within the Tight-Binding Approximation | MRS Online Proceedings Library (OPL) | Cambridge Core</title>
+
+<link rel="stylesheet" href="/core/mrs-bulletin/public/css/mrs-header.css" />
+<link rel="stylesheet" href="//dtd.cambridge.org/temp/css/latest/cup-academic-core-JATS-NLM.css" />
+
+<link rel="icon" href="/core/cambridge-core/public/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/core/cambridge-core/public/images/favicon.ico" type="image/x-icon" />
+<link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<!--[if (gte IE 10)|!(IE)]><!-->
+<link rel="stylesheet" href="/core/cambridge-core/public/css/app.css" />
+<link rel="dns-prefetch" href="https://usage.prod.aop.cambridge.org/v1/events">
+<link rel="stylesheet" href="/core/cambridge-core/public/bower_components/font-awesome/css/font-awesome.min.css" />
+<script src="/core/cambridge-core/public/bower_components/jquery/dist/jquery.min.js"></script>
+<!--<![endif]-->
+
+
+
+<!--[if lt IE 10]>
+    <link rel="stylesheet" href="/core/cambridge-core/public/css/ie-8-9.css" />
+    <script src="/core/cambridge-core/public/js/ie8-head.min.js"></script>
+    <script src="/core/cambridge-core/public/js/jquery-1.11.2.min.js"></script>
+    <![endif]-->
+<script src="/core/cambridge-core/public/bower_components/modernizr/modernizr.js"></script>
+<meta property="og:site_name" content="Cambridge Core" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359" />
+<meta property="og:title" content="Negative Cauchy Pressure within the Tight-Binding Approximation | MRS Online Proceedings Library (OPL) | Cambridge Core" />
+<meta property="og:description" content="Negative Cauchy Pressure within the Tight-Binding Approximation - Volume 491 - D. Nguyen-Maxh, D. G. Pettifor, S. Znam, V. Vitek" />
+<meta property="og:image" content="" />
+<meta name="description" content="Negative Cauchy Pressure within the Tight-Binding Approximation - Volume 491 - D. Nguyen-Maxh, D. G. Pettifor, S. Znam, V. Vitek">
+<link rel="canonical" href="https://www.cambridge.org/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359">
+<meta name="dc.identifier" content="doi:10.1557/PROC-491-353">
+<meta name="citation_journal_title" content="MRS Online Proceedings Library Archive">
+<meta name="citation_publisher" content="Cambridge University Press">
+<meta name="citation_title" content="Negative Cauchy Pressure within the Tight-Binding Approximation">
+<meta name="citation_author" content="D. Nguyen-Maxh">
+<meta name="citation_author_institution" content="University of Oxford">
+<meta name="citation_author" content="D. G. Pettifor">
+<meta name="citation_author_institution" content="University of Oxford">
+<meta name="citation_author" content="S. Znam">
+<meta name="citation_author_institution" content="University of Pennsylvania">
+<meta name="citation_author" content="V. Vitek">
+<meta name="citation_author_institution" content="University of Pennsylvania">
+<meta name="citation_publication_date" content="1997/ed">
+<meta name="citation_online_date" content="2011/02/10">
+<meta name="citation_volume" content="491">
+<meta name="citation_issn" content="1946-4274">
+<meta name="citation_issn" content="0272-9172">
+<meta name="citation_doi" content="10.1557/PROC-491-353">
+<meta name="citation_pdf_url" content="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CFC9D679DE79126DA38D966721CC3359/S1946427400215224a.pdf/div-class-title-negative-cauchy-pressure-within-the-tight-binding-approximation-div.pdf">
+<meta name="citation_reference" content="citation_title=See Intermetallic compounds; citation_author=Westbrook, J.H.; citation_author=Fleischer, R.L.; citation_publication_date=1996">
+<meta name="citation_reference" content="citation_author=Finnis, M.; citation_publication_date=1991">
+<meta name="citation_reference" content="citation_author=Harris, J.; citation_publication_date=1985; citation_journal_title=Phys. Rev. B; citation_volume=31; citation_firstpage=1770; citation_doi=10.1103/PhysRevB.31.1770">
+<meta name="citation_reference" content="citation_title=Stability of Materials; citation_author=Sob, M.; citation_author=Vitek, V.; citation_author=Gonis, A.; citation_author=Turchi, P.E.A.; citation_author=Kudrnovsky, J.; citation_publication_date=1996">
+<meta name="citation_reference" content="citation_author=Tan, K.E.; citation_author=Bratkovsky, A.M.; citation_author=Harris, R.M.; citation_author=Horsfield, A.P.; citation_author=Nguyen-Manh, D.; citation_author=Sutton, A.P.; citation_author=Pettifor, D.G.; citation_publication_date=1997; citation_journal_title=Modelling Simul. Mater. Sci. Eng.; citation_volume=5; citation_firstpage=199; citation_doi=10.1088/0965-0393/5/3/001">
+<meta name="citation_reference" content="citation_author=Pettifor, D.G.; citation_publication_date=1977; citation_journal_title=J. Phys. F; citation_volume=8; citation_firstpage=219; citation_doi=10.1088/0305-4608/8/2/008">
+<meta name="citation_reference" content="citation_author=Pettifor, D.G.; citation_publication_date=1989; citation_journal_title=Phys. Rev. Lett.; citation_volume=63; citation_firstpage=2480; citation_doi=10.1103/PhysRevLett.63.2480">
+<meta name="citation_reference" content="citation_author=Skinner, A.J.; citation_author=Pettifor, D.G.; citation_publication_date=1991; citation_journal_title=J. Phys.: Condens. Matter; citation_volume=3; citation_firstpage=2029">
+<meta name="citation_reference" content="citation_author=Foulkes, W.M.C.; citation_author=Haydock, R.; citation_publication_date=1989; citation_journal_title=Phys. Rev. B; citation_volume=39; citation_firstpage=12520; citation_doi=10.1103/PhysRevB.39.12520">
+<meta name="citation_reference" content="citation_author=Jacobsen, K.W.; citation_publication_date=1988; citation_journal_title=Comments Cond. Mat. Phys.; citation_volume=14; citation_firstpage=129">
+<meta name="citation_reference" content="citation_author=Bernstein, N.; citation_author=Kaxiras, E.; citation_publication_date=1997">
+<meta name="citation_reference" content="citation_author=Daw, M.S.; citation_author=Baskes, M.T.; citation_publication_date=1984; citation_journal_title=Phys. Rev. B.; citation_volume=29; citation_firstpage=6443; citation_doi=10.1103/PhysRevB.29.6443">
+<meta name="citation_reference" content="citation_author=Nguyen-Manh, D.; citation_author=Bratkovsky, A.; citation_author=Pettifor, D.G.; citation_publication_date=1995; citation_journal_title=Phil. Trans. Royal Society of London; citation_volume=351; citation_firstpage=529; citation_doi=10.1098/rsta.1995.0051">
+<meta name="citation_reference" content="citation_author=Sutton, A.P.; citation_author=Finnis, M.W.; citation_author=Pettifor, D.G.; citation_author=Ohta, Y.; citation_publication_date=1988; citation_journal_title=J. Phys. C; citation_volume=21; citation_firstpage=35; citation_doi=10.1088/0022-3719/21/1/007">
+<meta name="citation_reference" content="citation_author=Tang, M.S.; citation_author=Wang, C.Z.; citation_author=Chan, C.T.; citation_author=Ho, K.M.; citation_publication_date=1996; citation_journal_title=Phys. Rev. B; citation_volume=53; citation_firstpage=979; citation_doi=10.1103/PhysRevB.53.979">
+<meta name="citation_reference" content="citation_author=Pettifor, D.G.; citation_publication_date=1976; citation_journal_title=Commun. Phys.; citation_volume=1; citation_firstpage=141">
+<meta name="citation_reference" content="citation_title=Proc. European Conf. Advanced Materials; citation_author=Cottrel, A.H.; citation_publication_date=1991">
+<meta name="citation_reference" content="citation_title=Electronic Band Structure and its Application; citation_author=Andersen, O.K; citation_author=Jepsen, O.; citation_author=Sob, M.; citation_author=Yussouff, M.; citation_publication_date=1987">
+<meta name="citation_reference" content="citation_author=Hass, H.; citation_author=Wang, C.Z.; citation_author=Fahnle, M.; citation_author=Elsasser, C.; citation_author=Ho, K.M.; citation_publication_date=1997">
+<meta name="citation_reference" content="citation_author=Methfessel, M.; citation_publication_date=1988; citation_journal_title=Phys. Rev. B; citation_volume=38; citation_firstpage=1537; citation_doi=10.1103/PhysRevB.38.1537">
+<link rel="alternate" href="/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359" hreflang="en" /> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() { (i[r].q=i[r].q||[]).push(arguments)} ,i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-86516288-1', 'auto'); ga('send', 'pageview'); </script>
+<script>
+    var AOP = AOP || {};
+    AOP.uiLanguage = 'en' || 'en';
+    AOP.uiLanguageSuggested = '';
+    AOP.leaveTranslationSuggested = '';
+    AOP.isMultilanguageEnabled = 'true';
+    AOP.clientSideMultilingualString = '%5B%7B%22_id%22%3A%225a7c10d5ab0af516063ac94b%22%2C%22name%22%3A%22Copy%20and%20paste%20a%20formatted%20citation%20or%20use%20one%20of%20the%20options%20to%20export%20in%20your%20chosen%20format%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22text%22%2C%22en%22%3A%22Copy%20and%20paste%20a%20formatted%20citation%20or%20use%20one%20of%20the%20options%20to%20export%20in%20your%20chosen%20format%22%2C%22fr%22%3A%22Copiez-collez%20la%20citation%20ou%20utilisez%20une%20des%20options%20ci-dessous%20pour%20l&#x27;exporter%20dans%20le%20format%20de%20votre%20choix%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac94c%22%2C%22name%22%3A%22Selected%20format%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Selected%20format%22%2C%22fr%22%3A%22Format%20s%C3%A9lectionn%C3%A9%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac94d%22%2C%22name%22%3A%22Change%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Change%22%2C%22fr%22%3A%22Modifier%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac94f%22%2C%22name%22%3A%22Download%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Download%22%2C%22fr%22%3A%22T%C3%A9l%C3%A9charger%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac950%22%2C%22name%22%3A%22Export%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Export%22%2C%22fr%22%3A%22Exporter%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac94e%22%2C%22name%22%3A%22Copy%20to%20clipboard%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Copy%20to%20clipboard%22%2C%22fr%22%3A%22Copier%20dans%20le%20presse-papier%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9c5%22%2C%22name%22%3A%22Collapse%20list%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22Collapse%20list%22%2C%22fr%22%3A%22Replier%20la%20liste%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9c6%22%2C%22name%22%3A%22Expand%20full%20list%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22Expand%20full%20list%22%2C%22fr%22%3A%22D%C3%A9plier%20la%20liste%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9c7%22%2C%22name%22%3A%22View%20all%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22View%20All%22%2C%22fr%22%3A%22Voir%20tout%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9c8%22%2C%22name%22%3A%22Hide%20all%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22Hide%20All%22%2C%22fr%22%3A%22Dissimuler%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9c9%22%2C%22name%22%3A%22language%20prompt%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22%3Cp%3EWe%20notice%20that%20%3Clang%3E%20is%20the%20default%20language%20in%20your%20browser%20settings.%20Would%20you%20like%20to%20view%20this%20site%20in%20%3Clang%3E%3F%3C%2Fp%3E%22%2C%22fr%22%3A%22%3Cp%3EVotre%20navigateur%20indique%20le%20fran%C3%A7ais%20comme%20langue%20par%20defaut.%20Souhaitez%20vous%20consulter%20le%20site%20en%20fran%C3%A7ais%3F%3C%2Fp%3E%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9ca%22%2C%22name%22%3A%22leaving%20language%20prompt%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22%3Cp%3EThe%20%3Clang%3E%20version%20of%20Cambridge%20Core%20is%20not%20currently%20available%20through%20the%20entire%20site.%20The%20page%20you%20are%20visiting%20is%20not%20available%20in%20%3Clang%3E%20and%20will%20be%20displayed%20in%20English.%3C%2Fp%3E%22%2C%22fr%22%3A%22%3Cp%3ELa%20version%20fran%C3%A7aise%20de%20Cambridge%20Core%20n&#x27;est%20actuellement%20pas%20disponible%20%C3%A0%20travers%20l&#x27;int%C3%A9gralit%C3%A9%20du%20site.%20La%20page%20vers%20laquelle%20vous%20vous%20rendez%20n&#x27;est%20pas%20disponible%20en%20fran%C3%A7ais%20et%20sera%20affich%C3%A9e%20en%20anglais.%3C%2Fp%3E%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9cb%22%2C%22name%22%3A%22close%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22Close%22%2C%22fr%22%3A%22Fermer%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9cc%22%2C%22name%22%3A%22accept%20option%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22Yes%2C%20please%20switch%20to%20%3Clang%3E%22%2C%22fr%22%3A%22Oui%2C%20voir%20le%20site%20en%20fran%C3%A7ais%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9cd%22%2C%22name%22%3A%22decline%20option%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22%22%2C%22category%22%3A%22%22%2C%22en%22%3A%22No%20thanks%22%2C%22fr%22%3A%22Non%20merci%20(view%20site%20in%20English)%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9ce%22%2C%22name%22%3A%22Jan%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Jan%22%2C%22fr%22%3A%22Jan%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9cf%22%2C%22name%22%3A%22Feb%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Feb%22%2C%22fr%22%3A%22F%C3%A9v.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d0%22%2C%22name%22%3A%22Mar%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Mar%22%2C%22fr%22%3A%22Mars%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d1%22%2C%22name%22%3A%22Apr%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Apr%22%2C%22fr%22%3A%22Avr.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d2%22%2C%22name%22%3A%22May%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22May%22%2C%22fr%22%3A%22Mai%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d3%22%2C%22name%22%3A%22Jun%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Jun%22%2C%22fr%22%3A%22Juin%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d4%22%2C%22name%22%3A%22Jul%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Jul%22%2C%22fr%22%3A%22Juil.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d5%22%2C%22name%22%3A%22Aug%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Aug%22%2C%22fr%22%3A%22Ao%C3%BBt%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d6%22%2C%22name%22%3A%22Sep%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Sep%22%2C%22fr%22%3A%22Sep.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d7%22%2C%22name%22%3A%22Oct%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Oct%22%2C%22fr%22%3A%22Oct.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d8%22%2C%22name%22%3A%22Nov%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Nov%22%2C%22fr%22%3A%22Nov.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9d9%22%2C%22name%22%3A%22Dec%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Metrics%20tab%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Dec%22%2C%22fr%22%3A%22D%C3%A9c.%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9da%22%2C%22name%22%3A%22Show%20more%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Refine%20listing%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Show%20more%22%2C%22fr%22%3A%22Afficher%20plus%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9db%22%2C%22name%22%3A%22Show%20fewer%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Refine%20listing%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Show%20fewer%22%2C%22fr%22%3A%22Afficher%20moins%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9dc%22%2C%22name%22%3A%22Sorted%20by%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Sorted%20by%22%2C%22fr%22%3A%22Tri%C3%A9%20par%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9dd%22%2C%22name%22%3A%22Page%2FArticle%20number%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Page%2FArticle%20number%22%2C%22fr%22%3A%22Page%2Fnum%C3%A9ro%20de%20l&#x27;article%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9de%22%2C%22name%22%3A%22Title%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Title%22%2C%22fr%22%3A%22Titre%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9df%22%2C%22name%22%3A%22Type%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Type%22%2C%22fr%22%3A%22Type%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e0%22%2C%22name%22%3A%22Online%20publication%20date%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Online%20publication%20date%22%2C%22fr%22%3A%22Date%20de%20publication%20en%20ligne%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e1%22%2C%22name%22%3A%22Publication%20date%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Publication%20date%22%2C%22fr%22%3A%22Date%20de%20publication%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e2%22%2C%22name%22%3A%22View%20Altmetric%20attention%20score%20details%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20entry%22%2C%22category%22%3A%22alt%20text%22%2C%22en%22%3A%22View%20Altmetric%20attention%20score%20details%22%2C%22fr%22%3A%22Voir%20le%20d%C3%A9tail%20du%20score%20d&#x27;attention%20Altmetric%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e3%22%2C%22name%22%3A%22Citation%20Tools%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Export%20citation%20modal%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Citation%20Tools%22%2C%22fr%22%3A%22Outils%20bibliographiques%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e4%22%2C%22name%22%3A%22View%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20entry%22%2C%22category%22%3A%22label%20with%20hyperlink%22%2C%22en%22%3A%22View%22%2C%22fr%22%3A%22Voir%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e5%22%2C%22name%22%3A%22Hide%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20entry%22%2C%22category%22%3A%22label%20with%20hyperlink%22%2C%22en%22%3A%22Hide%22%2C%22fr%22%3A%22Dissimuler%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e6%22%2C%22name%22%3A%22Search%20journal%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22contextual%20search%22%2C%22category%22%3A%22searchbox%20placeholder%20text%22%2C%22en%22%3A%22Search%20%3CJnlTitle%3E%22%2C%22fr%22%3A%22Chercher%20dans%20%3CJnlTitle%3E%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e7%22%2C%22name%22%3A%22Search%20society%20content%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22contextual%20search%22%2C%22category%22%3A%22searchbox%20placeholder%20text%22%2C%22en%22%3A%22Search%20%3CSocietyName%3E%20content%22%2C%22fr%22%3A%22Chercher%20le%20contenu%20de%20%3CSocietyName%3E%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e8%22%2C%22name%22%3A%22Relevance%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Sorting%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Relevance%22%2C%22fr%22%3A%22Pertinence%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9e9%22%2C%22name%22%3A%22Delete%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Recommend%20to%20librarian%20modal%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Delete%22%2C%22fr%22%3A%22Supprimer%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9ea%22%2C%22name%22%3A%22Access%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Refine%20listing%20options%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Access%22%2C%22fr%22%3A%22Acc%C3%A8s%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9f1%22%2C%22name%22%3A%22Show%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20eLetters%20tab%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Show%22%2C%22fr%22%3A%22Afficher%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9f5%22%2C%22name%22%3A%22replies%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20eLetters%20tab%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22replies%22%2C%22fr%22%3A%22r%C3%A9ponses%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9f6%22%2C%22name%22%3A%22reply%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20eLetters%20tab%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22reply%22%2C%22fr%22%3A%22r%C3%A9ponse%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063ac9f8%22%2C%22name%22%3A%22Hide%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Article%20eLetters%20tab%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Hide%22%2C%22fr%22%3A%22Dissimuler%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca29%22%2C%22name%22%3A%22Share%20content%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Share%20content%22%2C%22fr%22%3A%22Partager%20cet%20article%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca2b%22%2C%22name%22%3A%22Anyone%20you%20share%20the%20following%20link%20with%20will%20be%20able%20to%20freely%20read%20this%20content.%20For%20more%20information%2C%20please%20view%20the%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22text%22%2C%22en%22%3A%22Anyone%20you%20share%20the%20following%20link%20with%20will%20be%20able%20to%20freely%20read%20this%20content.%20For%20more%20information%2C%20please%20view%20the%22%2C%22fr%22%3A%22Tous%20ceux%20avec%20qui%20vous%20partagez%20ce%20lien%20obtiendront%20un%20acc%C3%A8s%20gratuit%20%C3%A0%20cet%20article.%20Pour%20plus%20d&#x27;information%2C%20veuillez%20svp%20consulter%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca2d%22%2C%22name%22%3A%22OR%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22OR%22%2C%22fr%22%3A%22OU%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca30%22%2C%22name%22%3A%22The%20content%20link%20has%20been%20copied%20to%20your%20clipboard%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20view%22%2C%22category%22%3A%22text%22%2C%22en%22%3A%22The%20content%20link%20has%20been%20copied%20to%20your%20clipboard%22%2C%22fr%22%3A%22Le%20lien%20a%20%C3%A9t%C3%A9%20copi%C3%A9%20dans%20votre%20presse-papier%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca2e%22%2C%22name%22%3A%22Share%20via%20email%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22label%22%2C%22en%22%3A%22Share%20via%20email%22%2C%22fr%22%3A%22Partager%20par%20e-mail%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca2c%22%2C%22name%22%3A%22Cambridge%20University%20Press%20content%20sharing%20policy%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22text%22%2C%22en%22%3A%22Cambridge%20University%20Press%20content%20sharing%20policy.%22%2C%22fr%22%3A%22la%20politique%20de%20Cambridge%20University%20Press%20sur%20le%20partage%20(en%20anglais).%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca2a%22%2C%22name%22%3A%22Copy%20and%20paste%20the%20content%20link%20or%20use%20the%20option%20below%20to%20share%20it%20via%20email%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22text%22%2C%22en%22%3A%22Copy%20and%20paste%20the%20content%20link%20or%20use%20the%20option%20below%20to%20share%20it%20via%20email%22%2C%22fr%22%3A%22Copiez-collez%20ce%20lien%20ou%20cliquez%20le%20bouton%20ci-dessous%20pour%20envoyer%20un%20email%20contenant%20le%20lien%22%7D%2C%7B%22_id%22%3A%225a7c10d5ab0af516063aca2f%22%2C%22name%22%3A%22Cancel%22%2C%22area%22%3A%22Client%20side%22%2C%22element%22%3A%22Share%20modal%22%2C%22category%22%3A%22button%20label%22%2C%22en%22%3A%22Cancel%22%2C%22fr%22%3A%22Annuler%22%7D%5D';
+  </script>
+</head>
+<body class="mrs-bulletin">
+<a id="skiptocontent" href="#maincontent">Skip to main content</a>
+<div class="cookie-message">
+<div class="row">
+<div class="small-11 columns">
+<p>We use cookies to distinguish you from other users and to provide you with a better experience on our websites. Close this message to accept cookies or find out how to <a href="http://www.cambridge.org/about-us/legal-notices/cookies-policy/" target="_blank">manage your cookie settings</a>.</p>
+</div>
+<div class="small-1 columns">
+<a href="#" onclick="closeMessage();" class="cookie-close">
+<!--[if IE 8 ]>
+                  <img alt = "Close cookie message" title = "Close cookie message" src = "/core/cambridge-core/public/images/icn_circle__btn_close_white.png">
+                  <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<img alt="Close cookie message" title="Close cookie message" src="/core/cambridge-core/public/images/icn_circle__btn_close_white.svg">
+<!--<![endif]-->
+</a>
+</div>
+</div>
+</div>
+<script>
+  var cookieMessage = $('.cookie-message');
+  var cookieName = 'EULAW';
+  var closeMessage = function () {
+      $.cookie(cookieName, true, {expires: 365, path:'/'});
+      cookieMessage.slideUp().promise().done(function () {
+          cookieMessage.remove();
+      });
+  };
+  $(document).ready(function () {
+      if ($.cookie(cookieName) !== 'true') {
+          cookieMessage.slideDown();
+      }
+  });
+  </script>
+<div id="login-modal" class="reveal-modal small" data-reveal>
+<div class="wrapper large-margin-top-for-small-only">
+<div class="row margin-top">
+<div class="large-12 columns">
+<div class="panel callout message"></div>
+</div>
+</div>
+<div class="row margin-top">
+<div class="small-6 large-6 columns"><a href="#" onclick="$('#login-modal').foundation('reveal', 'close');return false;" class="right small button radius transparent cancel">Cancel</a></div>
+<div class="small-6 large-6 columns">
+<a href="/core/login?ref=%2Fcore%2Fjournals%2Fmrs-online-proceedings-library-archive%2Farticle%2Fnegative-cauchy-pressure-within-the-tightbinding-approximation%2FCFC9D679DE79126DA38D966721CC3359" class="left small radius button blue confirm login">Log in</a>
+</div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+</div>
+<div id="multilingual-suggestion-modal" class="reveal-modal small" data-reveal>
+<div class="wrapper large-margin-top-for-small-only">
+<div class="row margin-top">
+<div class="large-12 columns">
+<div id="multilingual-suggestion-modal-message" class="panel callout message"></div>
+</div>
+</div>
+<div class="row margin-top">
+<div class="small-6 large-6 columns"><a id="multilingual-suggestion-modal-decline-option" href="#" class="right small button radius transparent cancel"></a></div>
+<div class="small-6 large-6 columns">
+<a id="multilingual-suggestion-modal-accept-option" href="#" class="left small radius button blue confirm login"></a>
+</div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+</div>
+<header>
+</header>
+<div class="off-canvas-wrap desktop overflow-visible">
+<div class="inner-wrap">
+</div>
+</div>
+<div class="row print-only">
+<div class="small-12 columns">
+<img src="/core/cambridge-core/public/images/logo_core.png" class="core-logo" alt="" />
+</div>
+</div>
+<section class="sub-header slide-up">
+<div class="row">
+<div class="column">
+<a href="/core/">
+<div class="logo-core "><span class="show-for-sr">Home</span></div>
+</a>
+<form class="subject-search search-form prevent-empty-search no-margin-right" action="/core/search" method="GET">
+<div class="row">
+<div class="row collapse postfix-radius">
+<div class="submit-in-field js-outglow-parent clearfix">
+<div class="small-10 columns">
+<input type="text" name="q" value="" autocomplete="off" class=" js-outglow prefix-radius" placeholder="Search all journal & book content
+                              " aria-label="Search all journal & book content
+                              ">
+</div>
+<div class="small-2 columns">
+<input type="submit" value="Submit search" class="button postfix">
+</div>
+</div>
+
+<label class="accessible"><input type="checkbox" name="checkbox" value="value">Only search content I have access to</label>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<section class="menu secondary">
+<div class="row wrapper">
+<div class="column">
+<ul>
+<li><a href="#" class="menu-icon" aria-label="open site navigation"></a></li>
+<li class="logo-core show-for-small-only "><span class="show-for-sr">Home</span></li>
+</ul>
+<ul class="sub-nav  dropdown-menu-mobile" role="menu">
+<li class="show-for-small"><a href="/core/login?ref=">Log in</a></li>
+<li class="show-for-small"><a href="/core/register">Register</a></li>
+
+<li><a href="/core/browse-subjects" class="no-padding-left-for-large">Browse subjects</a></li>
+<li><a href="/core/what-we-publish">What we publish</a></li>
+<li><a href="/core/services">Services</a></li>
+<li><a href="/core/about">About Cambridge Core</a></li>
+<li class="show-for-small"><a href="/core/cart">
+<span class="icon"></span>
+<span>Cart</span>
+<span class="no-of-items kkPopupCartTilePlaceholder"></span>
+</a>
+</li>
+</ul>
+<div class="right">
+<ul class="show-for-small-only profile-mobile">
+<li>
+<a href="#" class="menu-icon account menu account-loggedin identities no-logo"><img src="" /></a>
+</li>
+<li><a href="#" class="button transparent radius search-small" aria-label="open site search"><span class="icon mobile-search grey"></span></a></li>
+
+</ul>
+<ul class="sub-nav dropdown-menu-mobile profile" role="menu">
+<li class="hide-for-personal institution-name access-provided-by">
+<a href="#" class="name hide-for-small" id="institution-current">Access provided by</a>
+<ul id="institutions-dropdown" class="f-dropdown hide-for-small" aria-hidden="true" tabindex="-1">
+<li class="institution">
+<span><img src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482e6ce4b043671f284360.gif" alt="King's College London" /></span>
+<a class="display-name-8a94032b5413b5e7015413e25a63109c" href="http://www.kcl.ac.uk/library/index.aspx" target="_blank">King&#x27;s College London
+</a>
+</li>
+<li><a class="button small blue radius" href="/core/login#institution-login">Manage institution login</a></li>
+</ul>
+<ul class="show-for-small hide-for-personal institutions">
+<li><a href="#">Logged in as:</a></li>
+<li class="institution">
+<span><img src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482e6ce4b043671f284360.gif" alt="King's College London" /></span>
+<a class="display-name-8a94032b5413b5e7015413e25a63109c" href="http://www.kcl.ac.uk/library/index.aspx" target="_blank">King&#x27;s College London
+</a>
+</li>
+<li><a class="button small blue radius" href="/core/login#institution-login">Manage institution login</a></li>
+</ul>
+</li>
+<li class="hide-for-personal hide-for-small institution-primary-logo" style="display:none">
+<a href="#"></a>
+</li>
+<li class="divider"></li>
+<li class="hide-for-small register">
+<a href="/core/register?ref=%2Fcore%2Fjournals%2Fmrs-online-proceedings-library-archive%2Farticle%2Fnegative-cauchy-pressure-within-the-tightbinding-approximation%2FCFC9D679DE79126DA38D966721CC3359" class="button small radius transparent">Register</a>
+</li>
+<li class="hide-for-identities hide-for-medium-up">
+<a href="/core/register?ref=%2Fcore%2Fjournals%2Fmrs-online-proceedings-library-archive%2Farticle%2Fnegative-cauchy-pressure-within-the-tightbinding-approximation%2FCFC9D679DE79126DA38D966721CC3359">Register</a>
+</li>
+<li class="hide-for-identities">
+<a href="/core/login?ref=%2Fcore%2Fjournals%2Fmrs-online-proceedings-library-archive%2Farticle%2Fnegative-cauchy-pressure-within-the-tightbinding-approximation%2FCFC9D679DE79126DA38D966721CC3359" class="button small radius blue">Log in</a>
+</li>
+<li class="divider"></li>
+<li class="hide-for-small cart"><a href="/core/cart">
+<span class="icon"></span>
+<span>Cart</span>
+<span class="no-of-items kkPopupCartTilePlaceholder"></span>
+</a>
+</li>
+</div>
+</div>
+</div>
+</section>
+<section class="breadcrumbs-wrapper smaller">
+<div class="row">
+<ul class="large-2 column backToSearch hide">
+<li>
+<a href="#">&lt; Back to search results</a>
+</li>
+</ul>
+<script type="text/javascript">
+        var searchResultKey = 'fromSearch';
+        var $backToSearch = $('.backToSearch');
+        var fromSearch = localStorage.getItem(searchResultKey);
+    
+        if (fromSearch) {
+          $backToSearch.find('li a').attr('href', fromSearch);
+          $backToSearch.removeClass('hide');
+          localStorage.removeItem(searchResultKey);
+        }
+    </script>
+<ul class="large-8 medium-7 small-8 column breadcrumbs">
+<li><a href="/core/">Home</a></li><li><a href="/core/what-we-publish/journals">Journals</a></li><li><a href="/core/journals/mrs-online-proceedings-library-archive">MRS Online Proceedings Library (OPL)</a></li><li><a href="/core/journals/mrs-online-proceedings-library-archive/volume/711AD62740F140E1BEC438A0E701C0D7">Volume 491: symposium r – tight binding approach to computat...</a></li><li class="current"><a href="#">Negative Cauchy Pressure within...</a></li>
+</ul>
+<ul class="large-2 medium-2 column right multi-language-select-wrapper">
+<li class=" multi-language-select">
+<a href="#" onclick="switchLanguage('en')" class="active">English</a>
+<span>|</span>
+<a href="#" onclick="switchLanguage('fr')" class="">Français</a>
+</li>
+</ul>
+</div>
+</section>
+<div class="flash-message-container">
+<div class="flash-message">
+<div data-alert class="alert-box alert">
+<div class="alert alert-danger">Unfortunately you do not have access to this content, please use the <strong>Get access</strong> link below for information on how to access this content.</div>
+<a href="#" class="close">&times;</a>
+</div>
+<div id="ajaxMessages" class="ajaxMessages"></div>
+</div>
+</div>
+<div class="article-wrapper">
+<section class="banner article small logo-exists society-logo-exists" style="background-image: url(/core/services/aop-file-manager/file/575ad013d9d085462c71cf37)">
+<div class="content">
+<div class="center-all-container">
+<div class="center-all">
+<div class="row">
+<div class="large-6 medium-6 small-12 column banner-title">
+<div class="title title-left journal-logo" style="background-image: url('/core/services/aop-file-manager/file/575ace60aacaf65b2c79463f')">&nbsp;</div>
+</div>
+<div class="large-2 medium-2 small-12 column society-logo">
+<a title="Published on behalf of Materials Research Society" href=" http://core-cms.prod.aop.cambridge.org/societies/materials-research-society" target="_blank">
+<img title="Published on behalf of Materials Research Society" src="/core/services/aop-file-manager/file/573c47da6e9e199e675c8ff4" alt="MRS Logo white" />
+</a>
+</div>
+<div class="large-4 medium-4 small-12 column hide-for-print">
+<form action="/core/journals/mrs-online-proceedings-library-archive/listing" method="GET" class="search-form">
+<div class="row">
+<div class=" columns ">
+<div class="row collapse postfix-radius search-input js-outglow-parent">
+<div class="small-10 columns">
+<input type="text" name="q" value="" autocomplete="off" class=" js-outglow prefix-radius" placeholder="      Search MRS Online Proceedings Library (OPL)
+                                              " aria-label="      Search MRS Online Proceedings Library (OPL)
+                                              ">
+<input type="hidden" name="searchWithinIds" id="searchWithinIds" value="41F8F6A801C7A0DF043FA3805D3E8B4D" />
+</div>
+<div class="small-2 columns">
+<input type="submit" value="Submit search" class="button postfix">
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="column large-12 page-tabs">
+<div class="row">
+<div class="tab-title current-mobile hide-for-large-up">
+<a href="">Article</a>
+<div class="blue-square"><a href="" class="icon arrow"></a></div>
+</div>
+<ul class="tabs" data-tab data-options="deep_linking:true; scroll_to_content:false">
+<li class="tab-title active"><a href="#information">Article</a></li>
+<li class="tab-title"><a href="#metrics">Metrics</a></li>
+</ul>
+<ul class="social white right hide-for-small hide-for-medium">
+<li>
+<a href="#" data-prod-id="CFC9D679DE79126DA38D966721CC3359" onclick="return false;" data-hasqtip="Bookmark added. Go to My account to manage bookmarked content." aria-describedby="qtip-text" class="icon is-bookmarked bookmark active" style="display:none"></a>
+<a href="#" data-hasqtip="Add bookmark" aria-describedby="qtip-text" data-prod-id="CFC9D679DE79126DA38D966721CC3359" data-prod-type="JOURNAL_ARTICLE" data-bookmark class="icon not-bookmarked bookmark requires-login"></a>
+<input type="hidden" name="_csrf" value="d77GDfAA-swB5EapxpKS2UZ4dDYfyIBpmRUs">
+</li>
+<li>
+<a href="/core/my-core/personal/alerts" data-hasqtip="Alert added. Go to My account to manage alert preferences." aria-describedby="qtip-text" data-prod-id="41F8F6A801C7A0DF043FA3805D3E8B4D" class="icon alert alert-stored active" style="display:none"></a>
+<a href="#" data-content-alert data-hasqtip="Add alert" aria-describedby="qtip-text" data-prod-id="41F8F6A801C7A0DF043FA3805D3E8B4D" data-prod-type="JOURNAL" data-prod-mnemonic="OPL" data-prod-title="MRS Online Proceedings Library Archive" class="icon alert alert-not-stored"></a>
+</li>
+<li class="share-container">
+<a href="#" class="icon share" data-hasqtip="Share" aria-describedby="qtip-text" aria-label="Share"></a>
+<ul style="display: none" class="social-share-options ">
+<li class="addthis-core-wrapper addthis_inline_share_toolbox"></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="tabs-content" id="maincontent">
+<div class="content active" id="information">
+<section class="row">
+<div class="large-12 columns">
+<div class="split-panel opposite-cols">
+<div class="wrapper">
+<div class="page-operatives enable-full-width margin-top-for-small margin-top-for-medium">
+<div class="small-12 large-9 column main-column">
+</div>
+<div class="small-12 large-3 large-offset-9 narrow-column hide-for-medium hide-for-small">
+<ul class="text-resizer-controls left">
+<li>
+<ul id="text-resizer-controls" class="textresizer ">
+<li>
+<a href="#" class="standard-text textresizer-active" aria-label="decrease text size">Aa</a>
+</li>
+<li>
+<a href="#" class="large-text" aria-label="increase text size">Aa</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="right">
+<li>
+<a href="#" class="icon toggle close" aria-label="toggle visibility of right side bar"></a>
+</li>
+</ul>
+</div>
+</div>
+<div class="panel large-9 small-12 column main-column article-page left">
+<ul class="social white left hide-for-large-up">
+<li>
+<a href="#" data-prod-id="CFC9D679DE79126DA38D966721CC3359" onclick="return false;" class="icon is-bookmarked bookmark active" style="display:none"></a>
+<a href="#" data-prod-id="CFC9D679DE79126DA38D966721CC3359" data-prod-type="JOURNAL_ARTICLE" data-bookmark class="icon not-bookmarked bookmark requires-login"></a>
+</li>
+<li>
+<a href="/core/my-core/personal/alerts" data-prod-id="41F8F6A801C7A0DF043FA3805D3E8B4D" class="icon alert alert-stored active" style="display:none"></a>
+<a href="#" data-content-alert data-prod-id="41F8F6A801C7A0DF043FA3805D3E8B4D" data-prod-type="JOURNAL" data-prod-mnemonic="OPL" data-prod-title="MRS Online Proceedings Library Archive" class="icon alert alert-not-stored"></a>
+</li>
+<li class="share-container">
+<a href="#" class="icon share" data-hasqtip="Share" aria-describedby="qtip-text" aria-label="Share"></a>
+<ul style="display: none" class="social-share-options ">
+<li class="addthis-core-wrapper addthis_inline_share_toolbox"></li>
+</ul>
+</li>
+</ul>
+<div class="article-meta overview">
+<ul class="access">
+<li class="citation"></span>Cited by <a href="#" data-reveal-id="productCitations"><span class="number">11</span></a></li>
+<li>
+<div id="productCitations" class="reveal-modal medium" data-reveal>
+<div class="header">
+<div class="heading_07 margin-bottom">Cited by</div>
+</div>
+<div class="row collapse header margin-top productCitations-content">
+<ul class="small-12 small-centered columns citations">
+<li class="fade-in section-container active">
+<a href="#" class="section-button" data-id="article-home-crossref-citations">
+<div class="circular medium citation">
+<img src="https://assets.crossref.org/logo/crossref-logo-100.png" alt="Crossref logo">
+
+<span class="citation-count">11</span>
+</div>
+</a>
+</li>
+<li class="fade-in section-container">
+<a href="#" class="section-button" data-id="article-home-scholar-citations">
+<div class="circular medium citation">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Scholar_logo_2015.PNG" alt="Google Scholar logo">
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="row wrapper no-padding-top section-content">
+<div class="small-10 small-centered columns">
+<section class="content" id="article-home-crossref-citations">
+<div class="large-12 columns">
+<div class="panel margin-top-small citation-container">
+<div class="row">
+<div class="medium-12 columns">
+<div class="print-only print-heading margin-bottom-large">Crossref Citations</div>
+<div class="row margin-bottom">
+<div class="small-1 columns">
+<a href="http://www.crossref.org/citedby/index.html" target="_blank">
+<img src="http://assets.crossref.org/logo/crossref-logo-100.png" alt="Crossref logo">
+</a>
+</div>
+<div class="small-11 columns">
+<h5 class="heading_10">This article has been cited by the following publications. This list is generated based on data provided by <a href="http://www.crossref.org/citedby/index.html" target="_blank">CrossRef</a>.</h5>
+</div>
+</div>
+<hr />
+
+<p class="reference-display">
+Čák, M
+Hammerschmidt, T
+Rogal, J
+Vitek, V
+and
+Drautz, R
+2014.
+Analytic bond-order potentials for the bcc refractory metals Nb, Ta, Mo and W.
+<i>Journal of Physics: Condensed Matter</i>,
+Vol. 26,
+Issue. 19,
+p.
+195501.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1088/0953-8984/26/19/195501" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Čák%20%20M&amp;date=2014&amp;spage=195501&amp;doi=10.1088/0953-8984/26/19/195501&amp;sid=www.cambridge.org&amp;title=Journal%20of%20Physics:%20Condensed%20Matter&amp;atitle=Analytic%20bond-order%20potentials%20for%20the%20bcc%20refractory%20metals%20Nb%20%20Ta%20%20Mo%20and%20W&amp;jtitle=Journal%20of%20Physics:%20Condensed%20Matter&amp;volume=26&amp;issue=19" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Analytic+bond-order+potentials+for+the+bcc+refractory+metals+Nb+Ta+Mo+and+W&amp;author=Čák+M&amp;author=Hammerschmidt+T&amp;author=Rogal+J&amp;author=Vitek+V&amp;author=Drautz+R&amp;publication_year=2014" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Čák, M
+Hammerschmidt, T
+and
+Drautz, R
+2013.
+Comparison of analytic and numerical bond-order potentials for W and Mo.
+<i>Journal of Physics: Condensed Matter</i>,
+Vol. 25,
+Issue. 26,
+p.
+265002.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1088/0953-8984/25/26/265002" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Čák%20%20M&amp;date=2013&amp;spage=265002&amp;doi=10.1088/0953-8984/25/26/265002&amp;sid=www.cambridge.org&amp;title=Journal%20of%20Physics:%20Condensed%20Matter&amp;atitle=Comparison%20of%20analytic%20and%20numerical%20bond-order%20potentials%20for%20W%20and%20Mo&amp;jtitle=Journal%20of%20Physics:%20Condensed%20Matter&amp;volume=25&amp;issue=26" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Comparison+of+analytic+and+numerical+bond-order+potentials+for+W+and+Mo&amp;author=Čák+M&amp;author=Hammerschmidt+T&amp;author=Drautz+R&amp;publication_year=2013" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Kocak, B.
+Ciftci, Y.O.
+Colakoglu, K.
+and
+Deligoz, E.
+2012.
+A first-principle study of the structural, elastic, lattice dynamical and thermodynamic properties of PrX (X=P, As).
+<i>Physica B: Condensed Matter</i>,
+Vol. 407,
+Issue. 3,
+p.
+316.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1016/j.physb.2011.10.038" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Kocak%20%20B.&amp;date=2012&amp;spage=316&amp;doi=10.1016/j.physb.2011.10.038&amp;sid=www.cambridge.org&amp;title=Physica%20B:%20Condensed%20Matter&amp;atitle=A%20first-principle%20study%20of%20the%20structural%20%20elastic%20%20lattice%20dynamical%20and%20thermodynamic%20properties%20of%20PrX%20(X=P%20%20As)&amp;jtitle=Physica%20B:%20Condensed%20Matter&amp;volume=407&amp;issue=3" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=A+first-principle+study+of+the+structural+elastic+lattice+dynamical+and+thermodynamic+properties+of+PrX+(X=P+As)&amp;author=Kocak+B.&amp;author=Ciftci+Y.O.&amp;author=Colakoglu+K.&amp;author=Deligoz+E.&amp;publication_year=2012" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Çoban, C.
+Çolakoğlu, K.
+and
+Çiftçi, Y.Ö.
+2011.
+The first principles study on the TmSb compound.
+<i>Solid State Sciences</i>,
+Vol. 13,
+Issue. 6,
+p.
+1291.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1016/j.solidstatesciences.2011.03.024" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Çoban%20%20C.&amp;date=2011&amp;spage=1291&amp;doi=10.1016/j.solidstatesciences.2011.03.024&amp;sid=www.cambridge.org&amp;title=Solid%20State%20Sciences&amp;atitle=The%20first%20principles%20study%20on%20the%20TmSb%20compound&amp;jtitle=Solid%20State%20Sciences&amp;volume=13&amp;issue=6" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=The+first+principles+study+on+the+TmSb+compound&amp;author=Çoban+C.&amp;author=Çolakoğlu+K.&amp;author=Çiftçi+Y.Ö.&amp;publication_year=2011" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Margine, E. R.
+Kolmogorov, A. N.
+Reese, M.
+Mrovec, M.
+Elsässer, C.
+Meyer, B.
+Drautz, R.
+and
+Pettifor, D. G.
+2011.
+Development of orthogonal tight-binding models for Ti-C and Ti-N systems.
+<i>Physical Review B</i>,
+Vol. 84,
+Issue. 15,
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1103/PhysRevB.84.155120" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Margine%20%20E.%20R.&amp;date=2011&amp;doi=10.1103/PhysRevB.84.155120&amp;sid=www.cambridge.org&amp;title=Physical%20Review%20B&amp;atitle=Development%20of%20orthogonal%20tight-binding%20models%20for%20Ti-C%20and%20Ti-N%20systems&amp;jtitle=Physical%20Review%20B&amp;volume=84&amp;issue=15" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Development+of+orthogonal+tight-binding+models+for+Ti-C+and+Ti-N+systems&amp;author=Margine+E.+R.&amp;author=Kolmogorov+A.+N.&amp;author=Reese+M.&amp;author=Mrovec+M.&amp;author=Elsässer+C.&amp;author=Meyer+B.&amp;author=Drautz+R.&amp;author=Pettifor+D.+G.&amp;publication_year=2011" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Nguyen-Manh, D.
+Cawkwell, M.J.
+Gröger, R.
+Mrovec, M.
+Porizek, R.
+Pettifor, D.G.
+and
+Vitek, V.
+2005.
+Dislocations in materials with mixed covalent and metallic bonding.
+<i>Materials Science and Engineering: A</i>,
+Vol. 400-401,
+p.
+68.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1016/j.msea.2005.03.081" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Nguyen-Manh%20%20D.&amp;date=2005&amp;spage=68&amp;doi=10.1016/j.msea.2005.03.081&amp;sid=www.cambridge.org&amp;title=Materials%20Science%20and%20Engineering:%20A&amp;atitle=Dislocations%20in%20materials%20with%20mixed%20covalent%20and%20metallic%20bonding&amp;jtitle=Materials%20Science%20and%20Engineering:%20A&amp;volume=400-401" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Dislocations+in+materials+with+mixed+covalent+and+metallic+bonding&amp;author=Nguyen-Manh+D.&amp;author=Cawkwell+M.J.&amp;author=Gröger+R.&amp;author=Mrovec+M.&amp;author=Porizek+R.&amp;author=Pettifor+D.G.&amp;author=Vitek+V.&amp;publication_year=2005" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Cawkwell, Marc J.
+Mrovec, Matous
+Nguyen-Manh, Duc
+Pettifor, David G.
+and
+Vitek, Vaclav
+2004.
+A Bond-Order Potential Incorporating Analytic Screening Functions for the Molybdenum Silicides.
+<i>MRS Proceedings</i>,
+Vol. 842,
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1557/PROC-842-S2.8" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Cawkwell%20%20Marc%20J.&amp;date=2004&amp;doi=10.1557/PROC-842-S2.8&amp;sid=www.cambridge.org&amp;title=MRS%20Proceedings&amp;atitle=A%20Bond-Order%20Potential%20Incorporating%20Analytic%20Screening%20Functions%20for%20the%20Molybdenum%20Silicides&amp;jtitle=MRS%20Proceedings&amp;volume=842" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=A+Bond-Order+Potential+Incorporating+Analytic+Screening+Functions+for+the+Molybdenum+Silicides&amp;author=Cawkwell+Marc+J.&amp;author=Mrovec+Matous&amp;author=Nguyen-Manh+Duc&amp;author=Pettifor+David+G.&amp;author=Vitek+Vaclav&amp;publication_year=2004" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Pettifor, D.G
+Finnis, M.W
+Nguyen-Manh, D
+Murdick, D.A
+Zhou, X.W
+and
+Wadley, H.N.G
+2004.
+Analytic bond-order potentials for multicomponent systems.
+<i>Materials Science and Engineering: A</i>,
+Vol. 365,
+Issue. 1-2,
+p.
+2.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1016/j.msea.2003.09.001" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Pettifor%20%20D.G&amp;date=2004&amp;spage=2&amp;doi=10.1016/j.msea.2003.09.001&amp;sid=www.cambridge.org&amp;title=Materials%20Science%20and%20Engineering:%20A&amp;atitle=Analytic%20bond-order%20potentials%20for%20multicomponent%20systems&amp;jtitle=Materials%20Science%20and%20Engineering:%20A&amp;volume=365&amp;issue=1-2" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Analytic+bond-order+potentials+for+multicomponent+systems&amp;author=Pettifor+D.G&amp;author=Finnis+M.W&amp;author=Nguyen-Manh+D&amp;author=Murdick+D.A&amp;author=Zhou+X.W&amp;author=Wadley+H.N.G&amp;publication_year=2004" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Nguyen-Manh, D.
+Pettifor, D. G.
+and
+Vitek, V.
+2000.
+Analytic Environment-Dependent Tight-Binding Bond Integrals: Application toMoSi2.
+<i>Physical Review Letters</i>,
+Vol. 85,
+Issue. 19,
+p.
+4136.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1103/PhysRevLett.85.4136" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Nguyen-Manh%20%20D.&amp;date=2000&amp;spage=4136&amp;doi=10.1103/PhysRevLett.85.4136&amp;sid=www.cambridge.org&amp;title=Physical%20Review%20Letters&amp;atitle=Analytic%20Environment-Dependent%20Tight-Binding%20Bond%20Integrals:%20Application%20toMoSi2&amp;jtitle=Physical%20Review%20Letters&amp;volume=85&amp;issue=19" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Analytic+Environment-Dependent+Tight-Binding+Bond+Integrals:+Application+toMoSi2&amp;author=Nguyen-Manh+D.&amp;author=Pettifor+D.+G.&amp;author=Vitek+V.&amp;publication_year=2000" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Nakamura, H
+Nguyen-Manh, D
+and
+Pettifor, D.G
+2000.
+Environmental dependence of screened tight-binding parameters in La2Ni10H14.
+<i>Journal of Alloys and Compounds</i>,
+Vol. 306,
+Issue. 1-2,
+p.
+113.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1016/S0925-8388(00)00731-3" target="_blank">CrossRef</a></li>
+<li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Nakamura%20%20H&amp;date=2000&amp;spage=113&amp;doi=10.1016/S0925-8388(00)00731-3&amp;sid=www.cambridge.org&amp;title=Journal%20of%20Alloys%20and%20Compounds&amp;atitle=Environmental%20dependence%20of%20screened%20tight-binding%20parameters%20in%20La2Ni10H14&amp;jtitle=Journal%20of%20Alloys%20and%20Compounds&amp;volume=306&amp;issue=1-2" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Environmental+dependence+of+screened+tight-binding+parameters+in+La2Ni10H14&amp;author=Nakamura+H&amp;author=Nguyen-Manh+D&amp;author=Pettifor+D.G&amp;publication_year=2000" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+
+<p class="reference-display">
+Kim, S.
+Nguyen-Manh, D.
+Smith, G. D. W.
+and
+Pettifor, D. G.
+2000.
+Site preference of Ru and Pd additions to γ-based TiAl intermetallics.
+<i>Philosophical Magazine A</i>,
+Vol. 80,
+Issue. 11,
+p.
+2489.
+</p>
+<ul class="reference-list">
+<li><a href="https://doi.org/10.1080/01418610008216487" target="_blank">CrossRef</a></li>
+ <li>
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;au=Kim%20%20S.&amp;date=2000&amp;spage=2489&amp;doi=10.1080/01418610008216487&amp;sid=www.cambridge.org&amp;title=Philosophical%20Magazine%20A&amp;atitle=Site%20preference%20of%20Ru%20and%20Pd%20additions%20to%20γ-based%20TiAl%20intermetallics&amp;jtitle=Philosophical%20Magazine%20A&amp;volume=80&amp;issue=11" target="_blank" alt="Find at King&#x27;s College London" title="Find at King&#x27;s College London">
+<img class="openurl-image" src="//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif" alt="Find at King&#x27;s College London" />
+</a>
+</li>
+<li><a href="https://scholar.google.com/scholar_lookup?title=Site+preference+of+Ru+and+Pd+additions+to+γ-based+TiAl+intermetallics&amp;author=Kim+S.&amp;author=Nguyen-Manh+D.&amp;author=Smith+G.+D.+W.&amp;author=Pettifor+D.+G.&amp;publication_year=2000" target="_blank">Google Scholar</a></li>
+</ul>
+<hr />
+</div>
+</div>
+</div>
+</div>
+</section>
+<section style="display:none" class="content" id="article-home-scholar-citations">
+<div class="large-12 columns">
+<div class="panel margin-top-small citation-container">
+<div class="row">
+<div class="medium-12 columns">
+<div class="print-only print-heading margin-bottom-large">Google Scholar Citations</div>
+<p>View all <a href="https://scholar.google.com/scholar?hl=en&lr=&cites=https://www.cambridge.org/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359" target="_blank">Google Scholar citations</a> for this article.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section style="display:none" class="content" id="article-home-scopus-citations">
+<div class="large-12 columns">
+<div class="panel margin-top-small citation-container">
+<div class="row">
+<div class="medium-12 columns">
+<div class="print-only print-heading margin-bottom-large">Scopus Citations</div>
+<p><a href="" target="_blank">View all citations for
+this article on Scopus</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<a class="close-reveal-modal">×</a>
+</div>
+<script>
+                                      $(document).ready(function () {
+                                        $('#productCitations .section-button').on('click', function (e) {
+                                          e.preventDefault();
+                                          var id = $(this).attr('data-id');
+                                          $('.section-content section').hide();
+                                          $('.section-container').removeClass('active');
+                                          $(this).parent('.section-container').addClass('active');
+                                          $('#' + id).show();
+                                        });
+                                      });
+                                    </script>
+<style>
+                                      .productCitations-content li {
+                                    
+                                      }
+                                    </style>
+</li>
+<div class="access-modal">
+<li class="status get">
+<a href="#" class="get hasTooltipCustom-top" data-qtip-event="click">Get access</a>
+<div class="custom-tooltip custom-tooltip--buttons">
+<div class="row tooltip-row margin-bottom">
+<div class="column small-12 text-center">
+<div class="row tooltip-row">
+<div class="column small-12 text-center  ecommerce-actions">
+<span class="alignment-container">
+<a href="#" class="button small radius transparent add-to-basket" data-product-sku="article_opl_ind_pur" data-product-id="CFC9D679DE79126DA38D966721CC3359" data-kk-action="addToCart">
+Add to cart <span class="price">&#163;25.00</span></a>
+<span data-product-id="" class="inBasket" style="display: none;">
+<span class="icon access addedToCart"></span> Added
+</span>
+<span data-product-id="" class="errorAdding red" style="display: none;">
+An error has occurred, <br />please try again later.
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grey-bg">
+<div class="row">
+<div class="column small-12 text-center tooltip-row">Check if you have access via personal or institutional login</div>
+</div>
+<div class="tooltip-row row text-center padding-bottom">
+<a href="/core/login?ref=%2Fcore%2Fjournals%2Fmrs-online-proceedings-library-archive%2Farticle%2Fnegative-cauchy-pressure-within-the-tightbinding-approximation%2FCFC9D679DE79126DA38D966721CC3359" class="button small radius blue ">Log in</a>
+<a href="/core/register?ref=%2Fcore%2Fjournals%2Fmrs-online-proceedings-library-archive%2Farticle%2Fnegative-cauchy-pressure-within-the-tightbinding-approximation%2FCFC9D679DE79126DA38D966721CC3359" class="button small radius blue ">Register</a>
+<a href="#" data-prod-id="CFC9D679DE79126DA38D966721CC3359" class="button small radius blue margin-top-small recommend-product parent-product" data-cup-event='{"eventCode":"TA-EX","eventContext":"/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359","usedIdentities":[],"referringURL":"https://www.cambridge.org/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359","eventType":"REC","searchScope":"PRODUCT","productId":"CFC9D679DE79126DA38D966721CC3359"}'>
+Recommend to librarian
+</a>
+<div class="row access-open-url">
+<a href="http://sfx.kcl.ac.uk/kings?genre=article&amp;atitle=Negative%20Cauchy%20Pressure%20within%20the%20Tight-Binding%20Approximation&amp;jtitle=MRS%20Proceedings&amp;title=MRS%20Proceedings&amp;volume=491&amp;artnum=353&amp;aufirst=D.&amp;aulast=Nguyen-Maxh&amp;doi=10.1557%2FPROC-491-353&amp;sid=https%3A%2F%2Fwww.cambridge.org%2Fcore" target="_blank" class="button small radius blue margin-top-small" aria-label="Check if you have access via your library catalogue (OpenURL)">Check library catalogue</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+</div>
+</ul>
+<ul class="title-volume-issue">
+<li class="title ">
+<a class="force-inline" title="Volume 491 (Symposium R – Tight Binding Approach to Computational Materials Science)" href="/core/journals/mrs-online-proceedings-library-archive/volume/symposium-r-tight-binding-approach-to-computational-materials-science/711AD62740F140E1BEC438A0E701C0D7">Volume 491 (Symposium R – Tight Binding Approach to Computational Materials Science)</a> </li>
+<li class="published">
+<span class="date"> 1997</span>
+<span class="date">, 353</span>
+</li>
+</ul>
+</div>
+<div id="Top" class="reading-width">
+<div class="article-page">
+<div class="overview no-margin-bottom">
+<div class="divider print-only margin-top-large"></div>
+<h1 class="article-title">Negative Cauchy Pressure within the Tight-Binding Approximation</h1>
+<ul class="details no-padding-bottom">
+<li id="author-91db71bf20a7ee30a3fe384ad4f01f89" class="author">
+<a href="/core/search?filters%5BauthorTerms%5D=D. Nguyen-Maxh&eventCode=SE-AU" class="more-by-this-author ">D. Nguyen-Maxh</a> <sup data-affiliation-id="a1" class="">(a1)</sup><span class="separator ">, </span><a href="/core/search?filters%5BauthorTerms%5D=D. G. Pettifor&eventCode=SE-AU" class="more-by-this-author ">D. G. Pettifor</a> <sup data-affiliation-id="a1" class="">(a1)</sup><span class="separator ">, </span><a href="/core/search?filters%5BauthorTerms%5D=S. Znam&eventCode=SE-AU" class="more-by-this-author ">S. Znam</a> <sup data-affiliation-id="a2" class="">(a2)</sup><span class="separator "> and </span><a href="/core/search?filters%5BauthorTerms%5D=V. Vitek&eventCode=SE-AU" class="more-by-this-author ">V. Vitek</a> <sup data-affiliation-id="a2" class="">(a2)</sup>
+<i class="icon open-drawer small toggle-affiliations" aria-label="View all author information"></i>
+</li>
+<div id="author-affiliations-91db71bf20a7ee30a3fe384ad4f01f89" style="display:none" class="margin-bottom margin-top">
+<ul class="full-contributor-listing">
+<li id="a1" class="contributor-affiliation"><strong><sup>(a1)</sup></strong> <div><div class="aff"><addrLine>Department of Materials</addrLine>, <institution type='simple'>University of Oxford</institution>, <addrLine>Parks Road</addrLine>, <addrLine>Oxford 0X1 3PH</addrLine>, <country>U.K.</country></div></div></li><li id="a2" class="contributor-affiliation"><strong><sup>(a2)</sup></strong> <div><div class="aff"><addrLine>Department of Materials Science and Engineering</addrLine>, <institution type='simple'>University of Pennsylvania</institution>, <addrLine>Philadelphia</addrLine>, <addrLine>Pennsylvania</addrLine>, <addrLine>19104–6272</addrLine>, <country>U.S.A.</country></div></div></li>
+</ul>
+</div>
+<script>
+                                              $('#author-91db71bf20a7ee30a3fe384ad4f01f89 i').on('click', function (e) {
+                                                e.preventDefault();
+                                                var $authorAffiliations = $('#author-affiliations-91db71bf20a7ee30a3fe384ad4f01f89');
+                                                var $authorList = $('#author-91db71bf20a7ee30a3fe384ad4f01f89');
+                                                var $hiddenAuthors = $authorList.find('.hidden-author');
+                                                var $button = $(this);
+                                                $authorAffiliations.toggle();
+                                                $button.toggleClass('close');
+                                                $hiddenAuthors.toggleClass('hide');
+                                                if ($authorAffiliations.is(':visible')) {
+                                                  $button.attr('aria-label', 'Hide all author information');
+                                                } else {
+                                                  $button.attr('aria-label', 'View all author information');
+                                                }
+                                              });
+                                            </script>
+<li>
+<ul class="article-components">
+<li class="source"><a href="https://doi.org/10.1557/PROC-491-353" target="_blank" class="url doi">https://doi.org/10.1557/PROC-491-353</a></li>
+<li class="published">Published online: <span class="date"> 10 February 2011</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="overview article-overview">
+<div class="abstract-text">
+<div class="divider less-space"> </div>
+<div class="row">
+<div class="large-2 medium-2 small-12 columns abstract-title-wrapper">
+<div id="abstract" class="summary-title">Abstract</div>
+</div>
+<div class="large-10 medium-10 small-12 columns">
+<div class="description">
+<div class="abstract" data-abstract-type="normal"><title>ABSTRACT</title><p>It is well-known that the Embedded Atom Method (EAM) predicts positive Cauchy pressures for cubic metals if physically-motivated embedding functions are used. Supris-ingly, even if the angular character of the covalent bonding is included within an orthorgonal or non-orthorgonal Tight-Binding (TB) description, the Cauchy pressure for most elemental and binary metallic systems remains positive. We describe the results of a detailed breakdown of the different contributions to the Cauchy pressure within the Harris-Foulkes approximation (HFA) to density functional theory. We show that negative values of the Cauchy pressure for both elemental transition metals such as Ir and binary intermetallics such as Ti<span class='sub'>3</span>Al, TiAl and TiAl<span class='sub'>3</span> are well reproduced by the HFA. We argue that the negative Cauchy pressure (NCP) arises namely from the environment dependence of the local TB orbitals which leads to both environment-dependent bonding integrals and overlap repulsion. We discuss a particular functional form for overlap repulsion which leads to NCP and compare it with different fitting schemes proposed recently in TB theory.</p></div>
+</div>
+</div>
+</div>
+<div class="divider less-space"> </div>
+<div class="article-actions">
+<div>
+<ul class="other-actions col-1">
+<a href="#" class="button small radius blue export-citation-product" data-prod-id="CFC9D679DE79126DA38D966721CC3359">Export citation</a>
+<a href="https://s100.copyright.com/AppDispatchServlet?publisherName=CUP&amp;publication=OPL&amp;title=Negative%20Cauchy%20Pressure%20within%20the%20Tight-Binding%20Approximation&amp;publicationDate=2011-02-10&amp;author=D.%20Nguyen-Maxh,%20D.%20G.%20Pettifor,%20S.%20Znam,%20V.%20Vitek&amp;copyright=COPYRIGHT:%20%C2%A9%20Materials%20Research%20Society%201998&amp;contentID=10.1557/PROC-491-353&amp;startPage=353&amp;endPage=undefined&amp;orderBeanReset=True&amp;volumeNum=491&amp;issueNum=undefined" target="_blank" class="button small transparent radius" aria-label="Request permission">Request permission</a>
+</ul>
+<ul class="other-actions col-2">
+</ul>
+</div>
+</div>
+<div class="divider"> </div>
+</div>
+<div class="overview article-overview">
+<div id="author" class="summary-title">Copyright</div>
+<div class="description">
+<div class="copyright">COPYRIGHT: © Materials Research Society 1998</div>
+</div>
+</div>
+<div class="divider"> </div>
+<div class="overview article-overview">
+<div class="summary-title summary-title-reveal">References</div>
+<dl class="accordion accordian-article" data-accordion>
+<dd class="accordion-navigation active">
+<a href="#references" class="right">
+<div class="icon open-drawer small">
+<span class="toggle-text" data-view-all="true">Hide All</span>
+</div>
+</a>
+<div id="references" class="description content active">
+<div id="contentContainer">
+<div class="backmatter"><div class="back"><div class="ref-list"><div class="ref"><span class="citation simple book" data-magellan-destination="ref001" id="ref001"><span class="label">1.</span> <span class="source">See Intermetallic compounds</span>, vol. <span class="volume">1</span> &amp; 2, eds. <span class="name"><span class="surname">Westbrook</span> <span class="given-names">J.H.</span></span> and <span class="name"><span class="surname">Fleischer</span> <span class="given-names">R.L.</span></span>, <span class="publisher-name">John Willey &amp; Son</span>, (<span class="year">1996</span>).</span></div><div class="ref"><span class="citation simple book" data-magellan-destination="ref002" id="ref002"><span class="label">2.</span> <span class="name"><span class="surname">Cottrel</span> <span class="given-names">A.H.</span></span>, in <span class="source">Proc. European Conf. Advanced Materials</span>, p. <span class="fpage">2</span>, <span class="publisher-loc">Cambridge</span>, (<span class="year">1991</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref003" id="ref003"><span class="label">3.</span> <span class="name"><span class="surname">Daw</span> <span class="given-names">M.S.</span></span> and <span class="name"><span class="surname">Baskes</span> <span class="given-names">M.T.</span></span>, <span class="source">Phys. Rev. B.</span>, <span class="volume">29</span>, <span class="fpage">6443</span>, (<span class="year">1984</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref004" id="ref004"><span class="label">4.</span> <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span>, <span class="source">Phys. Rev. Lett.</span>, <span class="volume">63</span>, <span class="fpage">2480</span>, (<span class="year">1989</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref005" id="ref005"><span class="label">5.</span> <span class="name"><span class="surname">Tan</span> <span class="given-names">K.E.</span></span>, <span class="name"><span class="surname">Bratkovsky</span> <span class="given-names">A.M.</span></span>, <span class="name"><span class="surname">Harris</span> <span class="given-names">R.M.</span></span>, <span class="name"><span class="surname">Horsfield</span> <span class="given-names">A.P.</span></span>, <span class="name"><span class="surname">Nguyen-Manh</span> <span class="given-names">D.</span></span>, <span class="name"><span class="surname">Sutton</span> <span class="given-names">A.P.</span></span> and <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span>, <span class="source">Modelling Simul. Mater. Sci. Eng.</span>, <span class="volume">5</span>, <span class="fpage">199</span>, (<span class="year">1997</span>).</span></div><div class="ref"><span class="citation simple book" data-magellan-destination="ref006" id="ref006"><span class="label">6.</span> <span class="name"><span class="surname">Andersen</span> <span class="given-names">O.K</span></span>, <span class="name"><span class="surname">Jepsen</span> <span class="given-names">O.</span></span> and <span class="name"><span class="surname">Sob</span> <span class="given-names">M.</span></span>, in <span class="source">Electronic Band Structure and its Application</span>, ed. by <span class="name"><span class="surname">Yussouff</span> <span class="given-names">M.</span></span>, p. <span class="fpage">1</span>, <span class="publisher-name">Springer-Verlag</span>, <span class="publisher-loc">Heidelberg-New York</span>, (<span class="year">1987</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref007" id="ref007"><span class="label">7.</span> <span class="name"><span class="surname">Nguyen-Manh</span> <span class="given-names">D.</span></span>, <span class="name"><span class="surname">Bratkovsky</span> <span class="given-names">A.</span></span> and <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span>, <span class="source">Phil. Trans. Royal Society of London</span>, <span class="volume">351</span>, <span class="fpage">529</span>, (<span class="year">1995</span>). D. Nguyen-Manh, unpublished (1997).</span></div><div class="ref"><span class="citation simple other" data-magellan-destination="ref008" id="ref008"><span class="label">8.</span> <span class="name"><span class="surname">Bernstein</span> <span class="given-names">N.</span></span> and <span class="name"><span class="surname">Kaxiras</span> <span class="given-names">E.</span></span>, to be published (<span class="year">1997</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref009" id="ref009"><span class="label">9.</span> <span class="name"><span class="surname">Sutton</span> <span class="given-names">A.P.</span></span>, <span class="name"><span class="surname">Finnis</span> <span class="given-names">M.W.</span></span>, <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span> and <span class="name"><span class="surname">Ohta</span> <span class="given-names">Y.</span></span>, <span class="source">J. Phys. C</span>, <span class="volume">21</span>, <span class="fpage">35</span>, (<span class="year">1988</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref010" id="ref010"><span class="label">10.</span> <span class="name"><span class="surname">Harris</span> <span class="given-names">J.</span></span>, <span class="source">Phys. Rev. B</span>, <span class="volume">31</span>, <span class="fpage">1770</span>, (<span class="year">1985</span>);</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref011" id="ref011"><span class="name"><span class="surname">Foulkes</span> <span class="given-names">W.M.C.</span></span> and <span class="name"><span class="surname">Haydock</span> <span class="given-names">R.</span></span>, <span class="source">Phys. Rev. B</span>, <span class="volume">39</span>, <span class="fpage">12520</span>, (<span class="year">1989</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref012" id="ref012"><span class="label">11.</span> <span class="name"><span class="surname">Methfessel</span> <span class="given-names">M.</span></span>, <span class="source">Phys. Rev. B</span>, <span class="volume">38</span>, <span class="fpage">1537</span>, (<span class="year">1988</span>)</span></div><div class="ref"><span class="citation simple other" data-magellan-destination="ref013" id="ref013"><span class="label">12.</span> <span class="name"><span class="surname">Finnis</span> <span class="given-names">M.</span></span>, J. Phys.: Condens. Matter (<span class="year">1991</span>)</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref014" id="ref014"><span class="label">13.</span> <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span>, <span class="source">Commun. Phys.</span> <span class="volume">1</span>, <span class="fpage">141</span>, (<span class="year">1976</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref015" id="ref015"><span class="label">14.</span> <span class="name"><span class="surname">Skinner</span> <span class="given-names">A.J.</span></span> and <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span>, <span class="source">J. Phys.: Condens. Matter</span>, <span class="volume">3</span>, <span class="fpage">2029</span>, (<span class="year">1991</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref016" id="ref016"><span class="label">15.</span> <span class="name"><span class="surname">Tang</span> <span class="given-names">M.S.</span></span>, <span class="name"><span class="surname">Wang</span> <span class="given-names">C.Z.</span></span>, <span class="name"><span class="surname">Chan</span> <span class="given-names">C.T.</span></span> and <span class="name"><span class="surname">Ho</span> <span class="given-names">K.M.</span></span>, <span class="source">Phys. Rev. B</span>, <span class="volume">53</span>, <span class="fpage">979</span>, (<span class="year">1996</span>);</span></div><div class="ref"><span class="citation simple other" data-magellan-destination="ref017" id="ref017"><span class="name"><span class="surname">Hass</span> <span class="given-names">H.</span></span>, <span class="name"><span class="surname">Wang</span> <span class="given-names">C.Z.</span></span>, <span class="name"><span class="surname">Fahnle</span> <span class="given-names">M.</span></span>, <span class="name"><span class="surname">Elsasser</span> <span class="given-names">C.</span></span> and <span class="name"><span class="surname">Ho</span> <span class="given-names">K.M.</span></span>, to be published (<span class="year">1997</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref018" id="ref018"><span class="label">16.</span> <span class="name"><span class="surname">Pettifor</span> <span class="given-names">D.G.</span></span>, <span class="source">J. Phys. F</span>, <span class="volume">8</span>, <span class="fpage">219</span>, (<span class="year">1977</span>).</span></div><div class="ref"><span class="citation simple journal" data-magellan-destination="ref019" id="ref019"><span class="label">17.</span> <span class="name"><span class="surname">Jacobsen</span> <span class="given-names">K.W.</span></span>, <span class="source">Comments Cond. Mat. Phys.</span>, <span class="volume">14</span>, <span class="fpage">129</span>, (<span class="year">1988</span>);</span></div><div class="ref"><span class="citation simple book" data-magellan-destination="ref020" id="ref020"><span class="name"><span class="surname">Sob</span> <span class="given-names">M.</span></span> and <span class="name"><span class="surname">Vitek</span> <span class="given-names">V.</span></span>, in <span class="source">Stability of Materials</span>, eds. by <span class="name"><span class="surname">Gonis</span> <span class="given-names">A.</span></span>, <span class="name"><span class="surname">Turchi</span> <span class="given-names">P.E.A.</span></span> and <span class="name"><span class="surname">Kudrnovsky</span> <span class="given-names">J.</span></span>, p. <span class="fpage">449</span>, <span class="publisher-loc">New York</span>, <span class="publisher-name">Plenum Press</span>, (<span class="year">1996</span>).</span></div></div></div></div>
+</div>
+<script type="text/javascript" language="javascript">
+                                                            var openResolverInformation = [{"orgName":"King's College London","resolverImage":{"imageFilename":"identity_58482fbbe4b043671f284362.gif","imageId":"58482fbbe4b043671f284362","imageName":"OpenURL Image","imageDescription":"OpenURL Image","imageUrl":"//s3-eu-west-1.amazonaws.com/static.idm.prod-a.aop.cambridge.org/identity_58482fbbe4b043671f284362.gif","imageTags":["OpenURL"],"imageType":"OPEN_URL_IMAGE"},"resolverLink":"http://sfx.kcl.ac.uk/kings","resolverCustomText":""}];
+                                                            var openResolverFullReferences = [{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"book","content":""}],"m:first-page":null,"m:authors":[{"type":"","content":"Westbrook, J.H."},{"type":"","content":"Fleischer, R.L."}],"m:referenceId":[],"m:pub-year":"1996","m:pub-date":"1996-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Westbrook","m:title":"See Intermetallic compounds","m:display":"1. See Intermetallic compounds, vol. 1 & 2, eds. Westbrook J.H. and Fleischer R.L. , John Willey & Son, (1996).","m:referenceText":"1. See Intermetallic compounds, vol. 1 & 2, eds. Westbrook J.H. and Fleischer R.L. , John Willey & Son, (1996).","m:isbn":null,"m:publicationType":"book","m:journal-issue":null,"m:reference-id":"ref001","m:journal-volume":"1"},"openUrl":"?genre=book&date=1996&sid=www.cambridge.org&title=See%20Intermetallic%20compounds&btitle=See%20Intermetallic%20compounds"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"other","content":""}],"m:first-page":null,"m:authors":[{"type":"","content":"Finnis, M."}],"m:referenceId":[],"m:pub-year":"1991","m:pub-date":"1991-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Finnis","m:title":null,"m:display":"12. Finnis M. , J. Phys.: Condens. Matter (1991)","m:referenceText":"12. Finnis M. , J. Phys.: Condens. Matter (1991)","m:isbn":null,"m:publicationType":"other","m:journal-issue":null,"m:reference-id":"ref013","m:journal-volume":null},"openUrl":"?genre=unknown&date=1991&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1103/PhysRevB.31.1770"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1103/PhysRevB.31.1770"}],"m:first-page":"1770","m:authors":[{"type":"","content":"Harris, J."}],"m:referenceId":[],"m:pub-year":"1985","m:pub-date":"1985-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phys. Rev. B","m:crossref-status":"published","m:cite-to-doi":"10.1103/PhysRevB.31.1770","m:first-author-surname":"Harris","m:title":null,"m:display":"10. Harris J. , Phys. Rev. B, 31, 1770, (1985);","m:referenceText":"10. Harris J. , Phys. Rev. B, 31, 1770, (1985);","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref010","m:journal-volume":"31"},"openUrl":"?genre=unknown&date=1985&spage=1770&doi=10.1103/PhysRevB.31.1770&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1007/978-1-4613-0385-5_39"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"book","content":"10.1007/978-1-4613-0385-5_39"}],"m:first-page":"449","m:authors":[{"type":"","content":"Sob, M."},{"type":"","content":"Vitek, V."},{"type":"","content":"Gonis, A."},{"type":"","content":"Turchi, P.E.A."},{"type":"","content":"Kudrnovsky, J."}],"m:referenceId":[],"m:pub-year":"1996","m:pub-date":"1996-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":"10.1007/978-1-4613-0385-5_39","m:first-author-surname":"Sob","m:title":"Stability of Materials","m:display":"Sob M. and Vitek V. , in Stability of Materials, eds. by Gonis A. , Turchi P.E.A. and Kudrnovsky J. , p. 449, New York, Plenum Press, (1996).","m:referenceText":"Sob M. and Vitek V. , in Stability of Materials, eds. by Gonis A. , Turchi P.E.A. and Kudrnovsky J. , p. 449, New York, Plenum Press, (1996).","m:isbn":null,"m:publicationType":"book","m:journal-issue":null,"m:reference-id":"ref020","m:journal-volume":null},"openUrl":"?genre=book&date=1996&spage=449&doi=10.1007/978-1-4613-0385-5%2039&sid=www.cambridge.org&title=Stability%20of%20Materials&btitle=Stability%20of%20Materials"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1088/0965-0393/5/3/001"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1088/0965-0393/5/3/001"}],"m:first-page":"199","m:authors":[{"type":"","content":"Tan, K.E."},{"type":"","content":"Bratkovsky, A.M."},{"type":"","content":"Harris, R.M."},{"type":"","content":"Horsfield, A.P."},{"type":"","content":"Nguyen-Manh, D."},{"type":"","content":"Sutton, A.P."},{"type":"","content":"Pettifor, D.G."}],"m:referenceId":[],"m:pub-year":"1997","m:pub-date":"1997-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Modelling Simul. Mater. Sci. Eng.","m:crossref-status":"published","m:cite-to-doi":"10.1088/0965-0393/5/3/001","m:first-author-surname":"Tan","m:title":null,"m:display":"5. Tan K.E. , Bratkovsky A.M. , Harris R.M. , Horsfield A.P. , Nguyen-Manh D. , Sutton A.P. and Pettifor D.G. , Modelling Simul. Mater. Sci. Eng., 5, 199, (1997).","m:referenceText":"5. Tan K.E. , Bratkovsky A.M. , Harris R.M. , Horsfield A.P. , Nguyen-Manh D. , Sutton A.P. and Pettifor D.G. , Modelling Simul. Mater. Sci. Eng., 5, 199, (1997).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref005","m:journal-volume":"5"},"openUrl":"?genre=unknown&date=1997&spage=199&doi=10.1088/0965-0393/5/3/001&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1088/0305-4608/8/2/008"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1088/0305-4608/8/2/008"}],"m:first-page":"219","m:authors":[{"type":"","content":"Pettifor, D.G."}],"m:referenceId":[],"m:pub-year":"1977","m:pub-date":"1977-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"J. Phys. F","m:crossref-status":"published","m:cite-to-doi":"10.1088/0305-4608/8/2/008","m:first-author-surname":"Pettifor","m:title":null,"m:display":"16. Pettifor D.G. , J. Phys. F, 8, 219, (1977).","m:referenceText":"16. Pettifor D.G. , J. Phys. F, 8, 219, (1977).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref018","m:journal-volume":"8"},"openUrl":"?genre=unknown&date=1977&spage=219&doi=10.1088/0305-4608/8/2/008&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1103/PhysRevLett.63.2480"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1103/PhysRevLett.63.2480"}],"m:first-page":"2480","m:authors":[{"type":"","content":"Pettifor, D.G."}],"m:referenceId":[],"m:pub-year":"1989","m:pub-date":"1989-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phys. Rev. Lett.","m:crossref-status":"published","m:cite-to-doi":"10.1103/PhysRevLett.63.2480","m:first-author-surname":"Pettifor","m:title":null,"m:display":"4. Pettifor D.G. , Phys. Rev. Lett., 63, 2480, (1989).","m:referenceText":"4. Pettifor D.G. , Phys. Rev. Lett., 63, 2480, (1989).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref004","m:journal-volume":"63"},"openUrl":"?genre=unknown&date=1989&spage=2480&doi=10.1103/PhysRevLett.63.2480&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"journal","content":""}],"m:first-page":"2029","m:authors":[{"type":"","content":"Skinner, A.J."},{"type":"","content":"Pettifor, D.G."}],"m:referenceId":[],"m:pub-year":"1991","m:pub-date":"1991-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"J. Phys.: Condens. Matter","m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Skinner","m:title":null,"m:display":"14. Skinner A.J. and Pettifor D.G. , J. Phys.: Condens. Matter, 3, 2029, (1991).","m:referenceText":"14. Skinner A.J. and Pettifor D.G. , J. Phys.: Condens. Matter, 3, 2029, (1991).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref015","m:journal-volume":"3"},"openUrl":"?genre=unknown&date=1991&spage=2029&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1103/PhysRevB.39.12520"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1103/PhysRevB.39.12520"}],"m:first-page":"12520","m:authors":[{"type":"","content":"Foulkes, W.M.C."},{"type":"","content":"Haydock, R."}],"m:referenceId":[],"m:pub-year":"1989","m:pub-date":"1989-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phys. Rev. B","m:crossref-status":"published","m:cite-to-doi":"10.1103/PhysRevB.39.12520","m:first-author-surname":"Foulkes","m:title":null,"m:display":"Foulkes W.M.C. and Haydock R. , Phys. Rev. B, 39, 12520, (1989).","m:referenceText":"Foulkes W.M.C. and Haydock R. , Phys. Rev. B, 39, 12520, (1989).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref011","m:journal-volume":"39"},"openUrl":"?genre=unknown&date=1989&spage=12520&doi=10.1103/PhysRevB.39.12520&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"journal","content":""}],"m:first-page":"129","m:authors":[{"type":"","content":"Jacobsen, K.W."}],"m:referenceId":[],"m:pub-year":"1988","m:pub-date":"1988-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Comments Cond. Mat. Phys.","m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Jacobsen","m:title":null,"m:display":"17. Jacobsen K.W. , Comments Cond. Mat. Phys., 14, 129, (1988);","m:referenceText":"17. Jacobsen K.W. , Comments Cond. Mat. Phys., 14, 129, (1988);","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref019","m:journal-volume":"14"},"openUrl":"?genre=unknown&date=1988&spage=129&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"other","content":""}],"m:first-page":null,"m:authors":[{"type":"","content":"Bernstein, N."},{"type":"","content":"Kaxiras, E."}],"m:referenceId":[],"m:pub-year":"1997","m:pub-date":"1997-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Bernstein","m:title":null,"m:display":"8. Bernstein N. and Kaxiras E. , to be published (1997).","m:referenceText":"8. Bernstein N. and Kaxiras E. , to be published (1997).","m:isbn":null,"m:publicationType":"other","m:journal-issue":null,"m:reference-id":"ref008","m:journal-volume":null},"openUrl":"?genre=unknown&date=1997&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1103/PhysRevB.29.6443"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1103/PhysRevB.29.6443"}],"m:first-page":"6443","m:authors":[{"type":"","content":"Daw, M.S."},{"type":"","content":"Baskes, M.T."}],"m:referenceId":[],"m:pub-year":"1984","m:pub-date":"1984-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phys. Rev. B.","m:crossref-status":"published","m:cite-to-doi":"10.1103/PhysRevB.29.6443","m:first-author-surname":"Daw","m:title":null,"m:display":"3. Daw M.S. and Baskes M.T. , Phys. Rev. B., 29, 6443, (1984).","m:referenceText":"3. Daw M.S. and Baskes M.T. , Phys. Rev. B., 29, 6443, (1984).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref003","m:journal-volume":"29"},"openUrl":"?genre=unknown&date=1984&spage=6443&doi=10.1103/PhysRevB.29.6443&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1098/rsta.1995.0051"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1098/rsta.1995.0051"}],"m:first-page":"529","m:authors":[{"type":"","content":"Nguyen-Manh, D."},{"type":"","content":"Bratkovsky, A."},{"type":"","content":"Pettifor, D.G."}],"m:referenceId":[],"m:pub-year":"1995","m:pub-date":"1995-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phil. Trans. Royal Society of London","m:crossref-status":"published","m:cite-to-doi":"10.1098/rsta.1995.0051","m:first-author-surname":"Nguyen-Manh","m:title":null,"m:display":"7. Nguyen-Manh D. , Bratkovsky A. and Pettifor D.G. , Phil. Trans. Royal Society of London, 351, 529, (1995). D. Nguyen-Manh, unpublished (1997).","m:referenceText":"7. Nguyen-Manh D. , Bratkovsky A. and Pettifor D.G. , Phil. Trans. Royal Society of London, 351, 529, (1995). D. Nguyen-Manh, unpublished (1997).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref007","m:journal-volume":"351"},"openUrl":"?genre=unknown&date=1995&spage=529&doi=10.1098/rsta.1995.0051&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1088/0022-3719/21/1/007"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1088/0022-3719/21/1/007"}],"m:first-page":"35","m:authors":[{"type":"","content":"Sutton, A.P."},{"type":"","content":"Finnis, M.W."},{"type":"","content":"Pettifor, D.G."},{"type":"","content":"Ohta, Y."}],"m:referenceId":[],"m:pub-year":"1988","m:pub-date":"1988-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"J. Phys. C","m:crossref-status":"published","m:cite-to-doi":"10.1088/0022-3719/21/1/007","m:first-author-surname":"Sutton","m:title":null,"m:display":"9. Sutton A.P. , Finnis M.W. , Pettifor D.G. and Ohta Y. , J. Phys. C, 21, 35, (1988).","m:referenceText":"9. Sutton A.P. , Finnis M.W. , Pettifor D.G. and Ohta Y. , J. Phys. C, 21, 35, (1988).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref009","m:journal-volume":"21"},"openUrl":"?genre=unknown&date=1988&spage=35&doi=10.1088/0022-3719/21/1/007&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1103/PhysRevB.53.979"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1103/PhysRevB.53.979"}],"m:first-page":"979","m:authors":[{"type":"","content":"Tang, M.S."},{"type":"","content":"Wang, C.Z."},{"type":"","content":"Chan, C.T."},{"type":"","content":"Ho, K.M."}],"m:referenceId":[],"m:pub-year":"1996","m:pub-date":"1996-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phys. Rev. B","m:crossref-status":"published","m:cite-to-doi":"10.1103/PhysRevB.53.979","m:first-author-surname":"Tang","m:title":null,"m:display":"15. Tang M.S. , Wang C.Z. , Chan C.T. and Ho K.M. , Phys. Rev. B, 53, 979, (1996);","m:referenceText":"15. Tang M.S. , Wang C.Z. , Chan C.T. and Ho K.M. , Phys. Rev. B, 53, 979, (1996);","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref016","m:journal-volume":"53"},"openUrl":"?genre=unknown&date=1996&spage=979&doi=10.1103/PhysRevB.53.979&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"journal","content":""}],"m:first-page":"141","m:authors":[{"type":"","content":"Pettifor, D.G."}],"m:referenceId":[],"m:pub-year":"1976","m:pub-date":"1976-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Commun. Phys.","m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Pettifor","m:title":null,"m:display":"13. Pettifor D.G. , Commun. Phys. 1, 141, (1976).","m:referenceText":"13. Pettifor D.G. , Commun. Phys. 1, 141, (1976).","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref014","m:journal-volume":"1"},"openUrl":"?genre=unknown&date=1976&spage=141&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"book","content":""}],"m:first-page":"2","m:authors":[{"type":"","content":"Cottrel, A.H."}],"m:referenceId":[],"m:pub-year":"1991","m:pub-date":"1991-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Cottrel","m:title":"Proc. European Conf. Advanced Materials","m:display":"2. Cottrel A.H. , in Proc. European Conf. Advanced Materials, p. 2, Cambridge, (1991).","m:referenceText":"2. Cottrel A.H. , in Proc. European Conf. Advanced Materials, p. 2, Cambridge, (1991).","m:isbn":null,"m:publicationType":"book","m:journal-issue":null,"m:reference-id":"ref002","m:journal-volume":null},"openUrl":"?genre=book&date=1991&spage=2&sid=www.cambridge.org&title=Proc.%20European%20Conf.%20Advanced%20Materials&btitle=Proc.%20European%20Conf.%20Advanced%20Materials"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"book","content":""}],"m:first-page":"1","m:authors":[{"type":"","content":"Andersen, O.K"},{"type":"","content":"Jepsen, O."},{"type":"","content":"Sob, M."},{"type":"","content":"Yussouff, M."}],"m:referenceId":[],"m:pub-year":"1987","m:pub-date":"1987-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Andersen","m:title":"Electronic Band Structure and its Application","m:display":"6. Andersen O.K , Jepsen O. and Sob M. , in Electronic Band Structure and its Application, ed. by Yussouff M. , p. 1, Springer-Verlag, Heidelberg-New York, (1987).","m:referenceText":"6. Andersen O.K , Jepsen O. and Sob M. , in Electronic Band Structure and its Application, ed. by Yussouff M. , p. 1, Springer-Verlag, Heidelberg-New York, (1987).","m:isbn":null,"m:publicationType":"book","m:journal-issue":null,"m:reference-id":"ref006","m:journal-volume":null},"openUrl":"?genre=book&date=1987&spage=1&sid=www.cambridge.org&title=Electronic%20Band%20Structure%20and%20its%20Application&btitle=Electronic%20Band%20Structure%20and%20its%20Application"},{"atom:content":{"m:cite-to-ids":[],"m:cite-from-ids":[],"m:dois":[{"isPrimary":true,"type":"other","content":""}],"m:first-page":null,"m:authors":[{"type":"","content":"Hass, H."},{"type":"","content":"Wang, C.Z."},{"type":"","content":"Fahnle, M."},{"type":"","content":"Elsasser, C."},{"type":"","content":"Ho, K.M."}],"m:referenceId":[],"m:pub-year":"1997","m:pub-date":"1997-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":null,"m:crossref-status":"published","m:cite-to-doi":null,"m:first-author-surname":"Hass","m:title":null,"m:display":"Hass H. , Wang C.Z. , Fahnle M. , Elsasser C. and Ho K.M. , to be published (1997).","m:referenceText":"Hass H. , Wang C.Z. , Fahnle M. , Elsasser C. and Ho K.M. , to be published (1997).","m:isbn":null,"m:publicationType":"other","m:journal-issue":null,"m:reference-id":"ref017","m:journal-volume":null},"openUrl":"?genre=unknown&date=1997&sid=www.cambridge.org"},{"atom:content":{"m:cite-to-ids":[{"id-source":"crossref","content":"10.1103/PhysRevB.38.1537"}],"m:cite-from-ids":[{"id-source":"crossref","content":"10.1557/PROC-491-353"}],"m:dois":[{"isPrimary":true,"type":"journal","content":"10.1103/PhysRevB.38.1537"}],"m:first-page":"1537","m:authors":[{"type":"","content":"Methfessel, M."}],"m:referenceId":[],"m:pub-year":"1988","m:pub-date":"1988-01-01","m:cite-from-doi":"10.1557/PROC-491-353","m:journal-title":"Phys. Rev. B","m:crossref-status":"published","m:cite-to-doi":"10.1103/PhysRevB.38.1537","m:first-author-surname":"Methfessel","m:title":null,"m:display":"11. Methfessel M. , Phys. Rev. B, 38, 1537, (1988)","m:referenceText":"11. Methfessel M. , Phys. Rev. B, 38, 1537, (1988)","m:isbn":null,"m:publicationType":"journal","m:journal-issue":null,"m:reference-id":"ref012","m:journal-volume":"38"},"openUrl":"?genre=unknown&date=1988&spage=1537&doi=10.1103/PhysRevB.38.1537&sid=www.cambridge.org"}];
+                                                          </script>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="recommendProduct" class="reveal-modal large" data-reveal>
+<div id="type-display">
+<div class="header">
+<div class="heading_07">Recommend this journal</div>
+<p>Email your librarian or administrator to recommend adding this journal to your organisation&#x27;s collection.</p>
+</div>
+<div class="row book-title">
+<div class="small-12 columns">
+<div class="heading_08">MRS Online Proceedings Library (OPL)</div>
+</div>
+</div>
+<div class="row book-details book-overview">
+<div class="small-12 columns">
+<ul>
+<li class="meta-info issn">ISSN: -<li>
+<li class="meta-info eissn">EISSN: 1946-4274<li>
+<li class="meta-info url">URL: /core/journals/mrs-online-proceedings-library-archive<li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row wrapper no-padding-top">
+<div class="small-12 columns">
+<div class="flash-message-container">
+<div class="flash-message">
+<div data-alert class="alert-box alert">
+<div class="alert alert-danger">Unfortunately you do not have access to this content, please use the <strong>Get access</strong> link below for information on how to access this content.</div>
+<a href="#" class="close">&times;</a>
+</div>
+<div id="ajaxMessages" class="ajaxMessages"></div>
+</div>
+</div>
+<div class="row margin-top">
+<div class="large-12 columns">
+<form id="recommend" action="/core/services/aop-cambridge-core/recommend/send" method="post" data-abide="ajax">
+<input type="hidden" name="_csrf" value="d77GDfAA-swB5EapxpKS2UZ4dDYfyIBpmRUs">
+<div id="inputs">
+<input type="hidden" name="productType" value="journal">
+<input type="hidden" name="productLink" value="">
+<input type="hidden" name="productID" value="41F8F6A801C7A0DF043FA3805D3E8B4D">
+<input type="hidden" name="productTitle" value="MRS Online Proceedings Library Archive">
+<input type="hidden" name="productIssn" value="">
+<input type="hidden" name="productEissn" value="19464274">
+</div>
+<input type="hidden" name="yourNamePrefill" value="">
+<input type="hidden" name="yourEmailPrefill" value="">
+<div class="row">
+<div class="large-6 medium-12 small-12 columns">
+<div class="row">
+<div class="small-12 columns">
+<label>
+Your name *
+<input name="yourName" id="yourName" type="text" required="required" maxlength="100" placeholder="Enter your name" />
+</label>
+<small class="error">Please enter your name</small>
+</div>
+</div>
+</div>
+<div class="large-6 medium-12 small-12 columns">
+<div class="row">
+<div class="small-12 columns">
+<label>
+Your email address *
+<input name="yourEmail" id="yourEmail" type="text" required="required" pattern="email" maxlength="100" placeholder="Enter your email address" />
+</label>
+<small class="error">Please enter a valid email address</small>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="small-12 large-12 columns">
+<fieldset>
+<legend>Who would you like to send this to? *</legend>
+<div class="row">
+<div class="small-12 large-6 columns">
+<label class="organisation-option">Select organisation <a href="#" data-dropdown="selectOrganisationInfo" aria-controls="selectOrganisationInfo" aria-expanded="false" class="icon info tooltip-icon" role="tooltip" aria-label="help"></a></label><div id="selectOrganisationInfo" data-dropdown-content class="f-dropdown content medium" aria-hidden="true" tabindex="-1"><p class="text-left">A recommendation email will be sent to the administrator(s) of the selected organisation(s)</p></div>
+<div class="yourOrganisations margin-top margin-left no-margin-left-for-small no-margin-left-for-medium">
+<ul>
+<li>
+<label>
+<input type="checkbox" name="yourOrganisations" value="8a94032b5413b5e7015413e25a63109c">King&#x27;s College London
+ </label>
+</li>
+</ul>
+</div>
+</div>
+<div class="small-12 large-6 columns no-padding-left margin-top-for-medium margin-top-for-small">
+<div id="administrator-email" class="small-12 columns">
+<label class="organisation-option" for="administratorEmail"><span>Or enter your administrator's email <a href="#" data-dropdown="administratorEmailInfo" aria-controls="administratorEmailInfo" aria-expanded="false" class="icon info tooltip-icon" role="tooltip" aria-label="help"></a></span><div id="administratorEmailInfo" data-dropdown-content class="f-dropdown content medium" aria-hidden="true" tabindex="-1"><p class="text-left">You can enter one or more administrator email addresses</p></div></label>
+<div class="row collapse postfix-radius">
+<div class="large-10 small-10 columns">
+<input type="hidden" id="selected-values" name="selectedAdministratorEmails" value="" />
+<input id="administratorEmail" name="administratorEmail" type="text" placeholder="Enter an email address" autocomplete="off" />
+<span id="emailaddress-invalid" class="error" style="display:none">Please enter a valid email address</span>
+<span id="emailaddress-added" class="error" style="display:none">Email already added</span>
+</div>
+<div class="large-2 small-2 columns">
+<input type="submit" value="Add" id="add-administrator" class="button radius postfix" aria-label="Add administrator email">
+</div>
+</div>
+<div class="row">
+<div class="small-12 large-12 columns">
+<div id="selected-administrator-emails" class="margin-top" style="display:none"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+<div class="row">
+<div class="small-12 medium-6 columns">
+<div class="small-12 medium-12 large-6 columns">
+<label>Optional message
+<textarea name="message" id="message" rows="3" maxlength="250" placeholder="Enter a message for your librarian or administrator"></textarea>
+</label>
+</div>
+</div>
+<div class="small-12 medium-6 columns">
+<link rel="stylesheet" href="/core/captcha/public/bower_components/visualcaptcha.jquery/visualcaptcha.src.css" />
+<link rel="stylesheet" href="/core/captcha/public/captcha.css" />
+<div class="wrap">
+<div class="pre-captcha-wrapper">
+<div class="captcha-wrapper">
+<h2>CAPTCHA *</h2>
+<a id="captcha-skip-to-audio" href="#captcha-audio-challenge" aria-hidden="false">Skip to the audio challenge</a>
+<div id="sample-captcha"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+<div class="row margin-top">
+<div class="small-6 large-6 columns">
+<button href="#" onclick="$('[id=recommendProduct]').foundation('reveal', 'close');return false;" class="button radius transparent right">Cancel</button>
+</div>
+<div class="small-6 large-6 columns">
+<button type="submit" onclick="$('form#recommend').submit();" id="recommend-submit" class="button blue radius left">Send</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="close-reveal-modal">×</a>
+</div>
+<script>
+                                  $('.icon.toggle.close').on('click', function () {
+                                      $('.article-meta').toggleClass('reading-width');
+                                  });
+                              </script>
+</div>
+<div class="panel large-3 small-12 narrow-column article-page chapter right">
+<script>
+                                  $(document).ready(function () {
+                                    $('texmath, .tex-math, .mathJaxTex').hide();
+                                  });
+                                </script>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="content" id="contents">
+</div>
+<div class="content" id="references">
+</div>
+<div class="content" id="metrics">
+<script type="text/javascript">
+            $(document).ready(function () {
+          
+              var fullTextViews = {
+                total: '4',
+                data: [],
+                containerId: 'article-months-chart-fulltext-views'
+              };
+                fullTextViews.data.push([
+                  {v: 'Sep 2016'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Oct 2016'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Nov 2016'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Dec 2016'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Jan 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Feb 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Mar 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Apr 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'May 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Jun 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Jul 2017'},
+                  1
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Aug 2017'},
+                  2
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Sep 2017'},
+                  2
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Oct 2017'},
+                  3
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Nov 2017'},
+                  3
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Dec 2017'},
+                  3
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Jan 2018'},
+                  4
+                ]);
+                fullTextViews.data.push([
+                  {v: 'Feb 2018'},
+                  4
+                ]);
+          
+              var abstractViews = {
+                total: '152',
+                data: [],
+                containerId: 'article-months-chart-abstract-views'
+              };
+                abstractViews.data.push([
+                  {v: 'Sep 2016'},
+                  11
+                ]);
+                abstractViews.data.push([
+                  {v: 'Oct 2016'},
+                  18
+                ]);
+                abstractViews.data.push([
+                  {v: 'Nov 2016'},
+                  28
+                ]);
+                abstractViews.data.push([
+                  {v: 'Dec 2016'},
+                  36
+                ]);
+                abstractViews.data.push([
+                  {v: 'Jan 2017'},
+                  49
+                ]);
+                abstractViews.data.push([
+                  {v: 'Feb 2017'},
+                  54
+                ]);
+                abstractViews.data.push([
+                  {v: 'Mar 2017'},
+                  63
+                ]);
+                abstractViews.data.push([
+                  {v: 'Apr 2017'},
+                  69
+                ]);
+                abstractViews.data.push([
+                  {v: 'May 2017'},
+                  78
+                ]);
+                abstractViews.data.push([
+                  {v: 'Jun 2017'},
+                  81
+                ]);
+                abstractViews.data.push([
+                  {v: 'Jul 2017'},
+                  98
+                ]);
+                abstractViews.data.push([
+                  {v: 'Aug 2017'},
+                  103
+                ]);
+                abstractViews.data.push([
+                  {v: 'Sep 2017'},
+                  114
+                ]);
+                abstractViews.data.push([
+                  {v: 'Oct 2017'},
+                  120
+                ]);
+                abstractViews.data.push([
+                  {v: 'Nov 2017'},
+                  135
+                ]);
+                abstractViews.data.push([
+                  {v: 'Dec 2017'},
+                  142
+                ]);
+                abstractViews.data.push([
+                  {v: 'Jan 2018'},
+                  149
+                ]);
+                abstractViews.data.push([
+                  {v: 'Feb 2018'},
+                  152
+                ]);
+          
+              var chartsToRender = [
+                {
+                  containerId: fullTextViews.containerId,
+                  chartType: 'LineChart',
+                  data: fullTextViews.data,
+                  total: fullTextViews.total,
+                  columns: [
+                    ['string', 'Month'],
+                    ['number', 'Full text views']
+                  ],
+                  chartOptions: {
+                    hAxis: {
+                      title: 'Months'
+                    },
+                    vAxis: {
+                      title: 'Cumulative views',
+                      format: 0
+                    },
+                    legend: 'none',
+                    lineWidth: 3,
+                    pointSize: 5
+                  }
+                },
+                {
+                  containerId: abstractViews.containerId,
+                  data: abstractViews.data,
+                  total: abstractViews.total,
+                  chartType: 'LineChart',
+                  columns: [
+                    ['string', 'Month'],
+                    ['number', 'Abstract views']
+                  ],
+                  chartOptions: {
+                    hAxis: {
+                      title: 'Months'
+                    },
+                    vAxis: {
+                      title: 'Cumulative views',
+                      format: 0
+                    },
+                    legend: 'none',
+                    lineWidth: 3,
+                    pointSize: 5
+                  }
+                }
+              ];
+          
+              AOP.metrics.init({
+                chartsToRender: chartsToRender,
+                limitSingleChartWidth: true
+              });
+          
+            });
+          
+          </script>
+<section class="row metrics">
+<div class="large-12 columns">
+<div class="split-panel opposite-cols">
+<div class="wrapper">
+<div class="panel small-12 column main-column">
+<div class="reading-width">
+<h2 class="heading_03">Metrics</h2>
+<div class="divider"></div>
+<div class="metrics-section full-text-views mrs-bulletin">
+<h2 class="heading_06">Full text views<span> <a href="#" data-dropdown="full-text-view-info" aria-controls="full-text-view-info" aria-expanded="false" class="icon info tooltip-icon" role="tooltip" aria-label="help"></a></span><div id="full-text-view-info" data-dropdown-content class="f-dropdown content medium" aria-hidden="true" tabindex="-1"><p class="text-left">Full text views reflects the number of PDF downloads, PDFs sent to Google Drive, Dropbox and Kindle and HTML full text views.</p></div></h2>
+<div class="summary">
+<div>Total number of HTML views: <span>0</span></div>
+<div>Total number of PDF views: <span>4</span> *</div>
+</div>
+<div class="clear"></div>
+<div class="chart">
+<div class="loader">
+ <div>
+<img src="/core/system/public/img/ajax_loader_gray_256.gif" alt=""><span>Loading metrics...</span>
+</div>
+</div>
+<div class="row">
+<div class="large-12 columns">
+<div id="article-months-chart-fulltext-views"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="metrics-section abstract-views mrs-bulletin">
+<h2 class="heading_06">Abstract views<span> <a href="#" data-dropdown="abstract-view-info" aria-controls="abstract-view-info" aria-expanded="false" class="icon info tooltip-icon" role="tooltip" aria-label="help"></a></span><div id="abstract-view-info" data-dropdown-content class="f-dropdown content medium" aria-hidden="true" tabindex="-1"><p class="text-left">Abstract views reflect the number of visits to the article landing page.</p></div></h2>
+<div class="summary">
+<div>
+Total abstract views: <span>152</span> *
+</div>
+</div>
+<div class="clear"></div>
+<div class="chart">
+<div class="loader">
+<div>
+<img src="/core/system/public/img/ajax_loader_gray_256.gif" alt=""><span>Loading metrics...</span>
+</div>
+</div>
+<div class="row">
+<div class="large-12 columns">
+<div id="article-months-chart-abstract-views"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="margin-top"><p>* Views captured on Cambridge Core between September 2016 - 8th February 2018. This data will be updated every 24 hours.</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="content" id="corrections">
+<section class="row">
+<div class="large-12 columns">
+<div class="split-panel opposite-cols">
+<div class="wrapper">
+<div class="panel small-12 column main-column">
+<div class="reading-width">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="content" id="retractions">
+<section class="row">
+<div class="large-12 columns">
+<div class="split-panel opposite-cols">
+<div class="wrapper">
+<div class="panel small-12 column main-column">
+<div class="reading-width">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="content" id="addenda">
+<section class="row">
+<div class="large-12 columns">
+<div class="split-panel opposite-cols">
+<div class="wrapper">
+<div class="panel small-12 column main-column">
+<div class="reading-width">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-554b7ca6217c131b"></script>
+<script>
+        var addthis_config = addthis_config || {};
+        var addthis_share = addthis_share || {};
+      
+            addthis_share.email_vars = {
+                product_title: "Negative Cauchy Pressure within the Tight-Binding Approximation",
+              cover_url: "https://static.cambridge.org/covers/OPL_0_0_0/mrs_online proceedings library archive.jpg"
+            };
+            addthis_share.email_template =  "product_template";
+              addthis_share.title = "Negative Cauchy Pressure within the Tight-Binding Approximation";
+      
+        addthis_share.url_transforms = {
+          shorten: {
+            twitter: 'bitly'
+          }
+        };
+        addthis_share.shorteners = {
+          bitly : {}
+        };
+        $(document).ready(function () {
+          $('.icon.share').on('click', function (e) {
+            e.preventDefault();
+            var $toolbox = $('.social-share-options');
+            $toolbox.toggle();
+          });
+        });
+      </script>
+<footer>
+<div class="top menu centered">
+<div id="services" class="content">
+<ul class="tabs">
+<li class="tab-title"><a href="/core/services/librarians">Librarians</a></li>
+<li class="tab-title"><a href="/core/services/authors">Authors</a></li>
+<li class="tab-title"><a href="/core/services/publishing-partners">Publishing partners</a></li>
+<li class="tab-title"><a href="/core/services/agents">Agents</a></li>
+<li class="tab-title"><a href="/core/services/corporates">Corporates</a></li>
+</ul>
+</div>
+</div>
+<div class="mid">
+<div class="row">
+<ul class="accordion" data-accordion>
+<li class="accordion-navigation">
+<a href="#additional" class="accordion-expander">Additional Information<span class="icon tablet open-drawer"></span></a>
+<div id="additional" class="content">
+<div class="large-9 column menu">
+<ul class="sub-nav site-map margin-top">
+<li><a href="/core/accessibility">Accessibility</a></li>
+<li><a href="http://blog.journals.cambridge.org/" target="_blank">Our blog</a></li>
+<li><a href="/core/news">News</a></li>
+<li><a href="/core/help/FAQs">Contact and help</a></li>
+<li><a href="/core/legal-notices/terms">Cambridge Core legal notices</a></li>
+<li><a href="http://www.cambridge.org/about-us/feedback">Feedback</a></li>
+<li><a href="/core/sitemap">Sitemap</a></li>
+</ul>
+</div>
+<div class="large-3 column">
+<div class="social-container">
+<div class="title">Join us online</div>
+<ul class="social">
+<li><a href="https://www.facebook.com/CambridgeCore" target="_blank" class="icon fb" aria-label="Cambridge Core Facebook"></a></li>
+<li><a href="https://twitter.com/CambridgeCore" target="_blank" class="icon tw" aria-label="Cambridge Core Twitter feed"></a></li>
+<li><a href="https://plus.google.com/114953848908220702663/posts" target="_blank" class="icon gp" aria-label="Cambridge Core Google Plus"></a></li>
+<li><a href="https://www.youtube.com/user/CambridgeJournals" target="_blank" class="icon yt" aria-label="Cambridge Core YouTube"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="bottom">
+<div class="row menu">
+<ul class="column accordion" data-accordion>
+<li class="accordion-navigation">
+<a href="#legal" class="accordion-expander">Legal Information<span class="icon tablet open-drawer"></span></a>
+<div id="legal" class="content">
+<ul class="title-area">
+<li class="logo">
+<div itemscope itemtype="http://schema.org/Organization">
+<a itemprop="url" href="http://www.cambridge.org">
+<img itemprop="logo" src="/core/cambridge-core/public/images/cambridge_logo.png" alt="Cambridge University Press">
+</a>
+</div>
+</li>
+</ul>
+<ul class="sub-nav">
+<li><a href="http://www.cambridge.org/about-us/rights-permissions/">Rights &amp; Permissions</a></li>
+<li><a href="http://www.cambridge.org/about-us/legal-notices/copyright/">Copyright</a></li>
+<li><a href="http://www.cambridge.org/about-us/legal-notices/privacy-policy/">Privacy policy</a></li>
+<li><a href="http://www.cambridge.org/about-us/legal-notices/terms-use">Terms of use</a></li>
+<li><a href="http://www.cambridge.org/about-us/legal-notices/cookies-policy/">Cookies Policy</a></li>
+<li class="copyright hide-for-medium hide-for-small">
+<a href="#">&#169; Cambridge University Press 2018</a>
+</li>
+<li class="back-to-top hide-for-large-up"><a href="#">Back to top</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="mid hide-for-large-up">
+<div class="row">
+<ul class="tablet-footer-actions clearfix">
+<li class="copyright">
+<a href="#">&#169; Cambridge University Press 2018</a>
+</li>
+<li class="back-to-top right"><a href="#">Back to top</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script src="/core/cambridge-core/public/bower_components/foundation/js/foundation.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/jquery.autocomplete.min.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/slick.min.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/jquery.qtip.min.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/foggy.min.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/jquery.cookie.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/jquery.textresizer.min.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/chosen.jquery.min.js"></script>
+<script src="/core/cambridge-core/public/js/plugins/jquery.sticky.js"></script>
+<script type="text/javascript">
+        var AOP = AOP || {};
+    </script>
+
+
+<script type="text/javascript" language="javascript">
+      window.AOP = window.AOP || {};
+      window.AOP.pageId = '';
+      window.AOP.baseUrl = '/core';
+      window.AOP.env = 'prod';
+      window.AOP.webTrendsFpcdom = '.www.cambridge.org';
+      window.AOP.webtrendsSourceId = 'dcs2229lnlwr3lqf1qfic2m50_4k5s';
+      window.AOP.shouldUseCitationTool = true;
+      ;
+    </script>
+<script src="/core/system/public/js/foundationUtils.js" language="javascript" type="text/javascript"></script>
+<script src="/core/system/public/js/confirmModal.js" language="javascript" type="text/javascript"></script>
+<script src="/core/system/public/js/trimWhitespace.js" language="javascript" type="text/javascript"></script>
+<script src="/core/system/public/js/loadScript.js" language="javascript" type="text/javascript"></script>
+<script src="/core/aop-shared-components/public/isArray.js"></script>
+<script src="/core/aop-shared-components/public/parseQuerystring.js"></script>
+<script src="/core/aop-shared-components/public/createAlertBox.js"></script>
+<script src="/core/aop-shared-components/public/webtrends.load.js"></script>
+<div id="confirmModalWrapper">
+<div id="confirm-modal" class="reveal-modal small" data-reveal>
+<div class="wrapper">
+<div class="title"></div>
+<div class="row">
+<div class="large-12 columns">
+<div class="panel callout message">
+</div>
+</div>
+</div>
+<div class="row margin-top">
+<div class="small-6 large-6 columns"><a href="#" class="right small button radius transparent cancel">Cancel</a></div>
+<div class="small-6 large-6 columns"><a href="#" class="left small radius button blue confirm">Confirm</a></div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>
+</div>
+</div>
+
+<script src="/core/cambridge-core/public/js/ecommerce/add-to-basket.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/validation.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/selected-actions.js" language="javascript"></script>
+<script src="/core/easybib/public/js/app.js" language="javascript"></script>
+<script src="https://www.gstatic.com/charts/loader.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/charts.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/metrics.js" language="javascript"></script>
+<script src="/core/platform-share-content/public/js/create.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/recommend.js" language="javascript"></script>
+<script src="/core/captcha/public/bower_components/visualcaptcha.jquery/visualcaptcha.jquery.js" language="javascript"></script>
+<script src="/core/captcha/public/captcha.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/bookmark.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/content-alert.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/journals/journals.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/comments.js" language="javascript"></script>
+<script src="/core/cambridge-core/public/js/references-resolver-enrichment.js" language="javascript"></script>
+<script src="/core/system/public/js/validation.js" language="javascript" type="text/javascript"></script>
+
+<script src="/core/cambridge-core/public/js/jquery-extend.js"></script>
+<script src="/core/cambridge-core/public/js/additional.js"></script>
+<!--[if lt IE 9]>
+        <script src="/core/cambridge-core/public/js/plugins/rem.min.js"></script>
+    <![endif]-->
+<script src="/core/cambridge-core/public/js/multilingual.js"></script>
+<script src="/core/cambridge-core/public/js/app.js"></script>
+<script src="/core/cambridge-core/public/js/accessibility.js"></script>
+<script src="/core/cambridge-core/public/js/analytics/events.js"></script>
+<script src="/core/cambridge-core/public/js/analytics/listeners/counter.js"></script>
+<script language="javascript" type="text/javascript">
+        $(document).cupEvent();
+
+        AOP.initCounterReporter({
+            apiKey: 'qzD90fb0r257ZKVtGSFnG3UucyyMdgvu8u250Fa0',
+            apiUrl: 'https://usage.prod.aop.cambridge.org/v1/events',
+            applicationId: '8a94020952a738f80152b223c992000b',
+            identities: ["8a94033854e8862b01552a5944eb3854","8a94033854e8862b01552f163b914aae","8a94033854e8862b01552a5ba3a73cea","8a94033854e8862b01552a5b59773c8e","8a94042c54e8892501552a5ab9612e26","8a94032b5413b5e7015413e25a63109c","8a9402095411075601541391403508f7","8a94033854e8862b01552a5a2ec03a40"],
+            sessionId: 'oYupZE-SuOFWyaREge8qR4LdynlAtkYz',
+            eventContext: '/core/journals/mrs-online-proceedings-library-archive/article/negative-cauchy-pressure-within-the-tightbinding-approximation/CFC9D679DE79126DA38D966721CC3359'
+        })
+    </script>
+<script type="text/javascript">
+    </script>
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+</body>
+</html>

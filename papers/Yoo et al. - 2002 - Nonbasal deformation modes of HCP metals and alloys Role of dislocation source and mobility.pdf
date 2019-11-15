@@ -1,0 +1,1296 @@
+<!DOCTYPE HTML>
+<html lang="en-gb" class="no-js">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+    <meta name="citation_publisher" content="Springer-Verlag"/>
+    <meta name="citation_title" content="Nonbasal deformation modes of HCP metals and alloys: Role of dislocation source and mobility"/>
+    <meta name="citation_doi" content="10.1007/s11661-002-1013-5"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_abstract_html_url" content="https://link.springer.com/article/10.1007/s11661-002-1013-5"/>
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/article/10.1007/s11661-002-1013-5"/>
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007%2Fs11661-002-1013-5.pdf"/>
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/s11661-002-1013-5&amp;api_key="/>
+    <meta name="citation_firstpage" content="813"/>
+    <meta name="citation_lastpage" content="822"/>
+    <meta name="citation_author" content="M. H. Yoo"/>
+    <meta name="citation_author_institution" content="Oak Ridge National Laboratory"/>
+    <meta name="citation_author" content="J. R. Morris"/>
+    <meta name="citation_author_institution" content="Iowa State University"/>
+    <meta name="citation_author" content="K. M. Ho"/>
+    <meta name="citation_author_institution" content="Iowa State University"/>
+    <meta name="citation_author" content="S. R. Agnew"/>
+    <meta name="citation_author_institution" content="University of Virginia"/>
+    <meta name="dc.identifier" content="10.1007/s11661-002-1013-5"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="A review is presented on the role of dislocation cores and planar faults in activating the nonbasal deformation modes, < c + a> pyramidal slip and deformation twinning, in hcp metals and alloys and..."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Nonbasal deformation modes of HCP metals and alloys: Role of dislocati"/>
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/journal/11661/33/13.jpg"/>
+    <meta name="twitter:image:alt" content="Content cover image"/>
+    <meta name="twitter:site" content="SpringerLink"/>
+    <meta name="twitter:description" content="A review is presented on the role of dislocation cores and planar faults in activating the nonbasal deformation modes, < c + a> pyramidal slip and deformation twinning, in hcp metals and alloys and..."/>
+    <meta name="citation_journal_title" content="Metallurgical and Materials Transactions A"/>
+    <meta name="citation_journal_abbrev" content="Metall and Mat Trans A"/>
+    <meta name="citation_volume" content="33"/>
+    <meta name="citation_issue" content="13"/>
+    <meta name="citation_issn" content="1073-5623"/>
+    <meta name="citation_issn" content="1543-1940"/>
+    <meta name="citation_cover_date" content="2002/03/01"/>
+    <meta name="citation_article_type" content="Article"/>
+    <meta property="og:title" content="Nonbasal deformation modes of HCP metals and alloys: Role of dislocation source and mobility"/>
+    <meta property="og:type" content="Article"/>
+    <meta property="og:url" content="https://link.springer.com/article/10.1007/s11661-002-1013-5"/>
+    <meta property="og:image" content="https://static-content.springer.com/cover/journal/11661/33/13.jpg"/>
+    <meta property="og:site_name" content="SpringerLink"/>
+    <meta property="og:description" content="A review is presented on the role of dislocation cores and planar faults in activating the nonbasal deformation modes, < c + a> pyramidal slip and deformation twinning, in hcp metals and alloys and..."/>
+
+        <title>Nonbasal deformation modes of HCP metals and alloys: Role of dislocation source and mobility | SpringerLink</title>
+        <link rel="canonical" href="https://link.springer.com/article/10.1007/s11661-002-1013-5"/>
+        <link rel="shortcut icon" href="/springerlink-static/1287432902/images/favicon/favicon.ico" />
+<link rel="icon" sizes="16x16 32x32 48x48" href="/springerlink-static/1287432902/images/favicon/favicon.ico">
+<link rel="icon" sizes="16x16" type="image/png" href="/springerlink-static/1287432902/images/favicon/favicon-16x16.png">
+<link rel="icon" sizes="32x32" type="image/png" href="/springerlink-static/1287432902/images/favicon/favicon-32x32.png">
+<link rel="icon" sizes="48x48" type="image/png" href="/springerlink-static/1287432902/images/favicon/favicon-48x48.png">
+<link rel="apple-touch-icon" href="/springerlink-static/1287432902/images/favicon/app-icon-iphone@3x.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/springerlink-static/1287432902/images/favicon/ic_launcher_hdpi.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/springerlink-static/1287432902/images/favicon/app-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/springerlink-static/1287432902/images/favicon/app-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/springerlink-static/1287432902/images/favicon/app-icon-iphone@2x.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/springerlink-static/1287432902/images/favicon/ic_launcher_xxhdpi.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/springerlink-static/1287432902/images/favicon/app-icon-ipad@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/springerlink-static/1287432902/images/favicon/app-icon-iphone@3x.png" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/springerlink-static/1287432902/images/favicon/ic_launcher_xxhdpi.png">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//www.googletagservices.com" />
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//static-content.springer.com" />
+        <link rel="stylesheet" href="/springerlink-static/1287432902/css/basic.css" media="screen">
+<link rel="stylesheet" href="/springerlink-static/1287432902/css/styles.css" class="js-ctm" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+<link rel="stylesheet" href="/springerlink-static/1287432902/css/print.css" media="print">
+
+
+            <script>
+        var dataLayer = [{
+                'GA Key':'UA-26408784-1',
+                'Features':["leaderboardadverts","abtesting","reprintsandpermissionsabtest"],
+                'Event Category':'Article',
+                'Open Access':'N',
+                'Labs':'Y',
+                'DOI':'10.1007\/s11661-002-1013-5',
+                'VG Wort Identifier':'pw-vgzm.415900-10.1007-s11661-002-1013-5',
+                'HasAccess':'N',
+                'Full HTML':'N',
+                'Has Body':'N',
+                'Static Hash':'1287432902',
+                'Has Preview':'Y',
+                'user':{'license': {'businessPartnerID': [], 'businessPartnerIDString': ''}},
+                'content':{'type': 'article', 'category': {'pmc': {'primarySubject': 'Chemistry', 'primarySubjectCode': 'C', 'secondarySubjects': {'4': 'Physical Chemistry', '5': 'Ceramics, Glass, Composites, Natural Methods', '1': 'Materials Science', '2': 'Metallic Materials', '3': 'Structural Materials'}, 'secondarySubjectCodes': {'4': 'C21001', '5': 'C32080', '1': 'C32000', '2': 'C32060', '3': 'C32010'}}}},
+                'Access Type':'noaccess',
+                'Page':'article',
+                'Bpids':'',
+                'Bpnames':'',
+                'SubjectCodes':'C, C32000, C32060, C32010, C21001, C32080',
+                'Country':'GB',
+                'Journal Id':'11661',
+                'Journal Title':'Metallurgical and Materials Transactions A',
+        }];
+    </script>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?cache-busting=' + new Date().getTime() + '&id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCF9Z9');</script>
+
+    </head>
+    <body>
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="skip-to">
+    <a class="skip-to__link skip-to__link--article" href="#main-content">Skip to main content</a>
+</nav>
+        <div class="page-wrapper">
+            <noscript>
+    <div class="nojs-banner u-interface">
+        <p>This service is more advanced with JavaScript available, learn more at <a
+                href="http://activatejavascript.org" target="_blank" rel="noopener">http://activatejavascript.org</a>
+        </p>
+    </div>
+</noscript>
+                    <div id="leaderboard" class="leaderboard u-hide" data-component="SpringerLink.GoogleAds" data-namespace="leaderboard"></div>
+
+                <header id="header" class="header u-interface" role="banner">
+        <div class="header__content">
+            <div class="header__menu-container">
+                    <a id="logo" class="site-logo" href="/" title="Go to homepage">
+                <div class="u-screenreader-only">SpringerLink</div>
+    <svg class="site-logo__springer" width="148" height="30" role="img" aria-label="SpringerLink Logo">
+        <image width="148" height="30" alt="SpringerLink Logo" src="/springerlink-static/1287432902/images/png/springerlink.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/springerlink-static/1287432902/images/svg/springerlink.svg"></image>
+    </svg>
+
+    </a>
+
+
+                    <nav id="search-container" class="u-inline-block">
+                        <div class="search">
+                            <div class="search__content">
+                                <form class="u-form-single-input" action="/search" method="get" role="search">
+    <input aria-label="Search SpringerLink" name="query" type="text" autocomplete="off" value="" placeholder="Search SpringerLink">
+    <input class="u-hide-text" type="submit" value="Submit" title="Submit">
+    <svg class="u-vertical-align-absolute" width="13" height="13" viewBox="222 151 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M227 159C228.7 159 230 157.7 230 156 230 154.3 228.7 153 227 153 225.3 153 224 154.3 224 156 224 157.7 225.3 159 227 159L227 159 227 159 227 159ZM230 160.1L231.1 159 233.9 161.7C234.2 162.1 234.2 162.6 233.9 162.9 233.6 163.2 233.1 163.2 232.7 162.9L230 160.1 230 160.1 230 160.1 230 160.1ZM227 161L227 161C224.2 161 222 158.8 222 156 222 153.2 224.2 151 227 151 229.8 151 232 153.2 232 156 232 158.8 229.8 161 227 161L227 161 227 161 227 161 227 161Z" stroke="none" fill-rule="evenodd"/>
+    </svg>
+</form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="nav-container u-interface">
+    <div class="global-nav__wrapper">
+        <div class="search-button">
+            <a class="search-button__label" href="#search-container">
+                <span class="search-button__title">Search</span><svg width="12" height="12" viewBox="222 151 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M227 159C228.7 159 230 157.7 230 156 230 154.3 228.7 153 227 153 225.3 153 224 154.3 224 156 224 157.7 225.3 159 227 159L227 159 227 159 227 159ZM230 160.1L231.1 159 233.9 161.7C234.2 162.1 234.2 162.6 233.9 162.9 233.6 163.2 233.1 163.2 232.7 162.9L230 160.1 230 160.1 230 160.1 230 160.1ZM227 161L227 161C224.2 161 222 158.8 222 156 222 153.2 224.2 151 227 151 229.8 151 232 153.2 232 156 232 158.8 229.8 161 227 161L227 161 227 161 227 161 227 161Z" stroke="none" fill-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+
+        <ul class="global-nav" data-component="SpringerLink.Menu" data-title="Navigation menu" data-text="Menu">
+            <li>
+                <a href="/">
+                    <span class="u-overflow-ellipsis">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contactus">
+                    <span class="u-overflow-ellipsis">Contact us</span>
+                </a>
+            </li>
+
+                <li class="global-nav__logged-out">
+                    <a class="test-login-link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%252Fs11661-002-1013-5">
+                        <span class="u-overflow-ellipsis">Log in</span>
+                    </a>
+                </li>
+
+        </ul>
+    </div> 
+</nav> 
+            </div>
+
+        </div>
+    </header>
+
+            
+
+            <main id="main-content" class="main-wrapper">
+                <div class="main-container uptodate-recommendations-off">
+                    <aside class="main-sidebar-left">
+                        <div class="main-sidebar-left__content">
+                            <div class="test-cover cover-image" itemscope>
+        <a class="test-cover-link" href="/journal/11661" title="Metallurgical and Materials Transactions A">
+            <img class="test-cover-image" src="https://static-content.springer.com/cover/journal/11661/33/13.jpg" alt="Metallurgical and Materials Transactions A" itemprop="image"/>
+        </a>
+
+</div>
+                        </div>
+                    </aside>
+                    <div class="main-body" data-role="NavigationContainer">
+                        
+
+
+                        <article class="main-body__content">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="FulltextWrapper"><div class="ArticleHeader main-context"><div id="enumeration" class="enumeration"><p><a href="/journal/11661" title="Metallurgical and Materials Transactions A"><span class="JournalTitle">Metallurgical and Materials Transactions A</span></a></p><p class="icon--meta-keyline-before"><span class="ArticleCitation_Year"><time datetime="2002-03">March 2002</time>, </span><span class="ArticleCitation_Volume">Volume 33, </span><a class="ArticleCitation_Issue" href="/journal/11661/33/13/page/1">Issue 13</a>,
+                       <span class="ArticleCitation_Pages"> pp 813–822</span><span class="u-inline-block u-ml-4"> | <a class="gtm-cite-link" href="#citeas">Cite as</a></span></p></div><div class="MainTitleSection"><h1 class="ArticleTitle" lang="en">Nonbasal deformation modes of HCP metals and alloys: Role of dislocation source and mobility</h1></div><div class="authors u-clearfix" data-component="SpringerLink.Authors"><ul class="u-interface u-inline-list authors__title" data-role="AuthorsNavigation"><li><span>Authors</span></li><li><a href="#authorsandaffiliations" class="gtm-tab-authorsandaffiliations">Authors and affiliations</a></li></ul><div class="authors__list" data-role="AuthorsList"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">M. H. Yoo</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">J. R. Morris</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">K. M. Ho</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">S. R. Agnew</span></li></ul></div></div><div class="main-context__container" data-component="SpringerLink.ArticleMetrics"><div class="main-context__column"><span><span class="test-render-category">Article</span></span><div class="article-dates" data-component="SpringerLink.ArticleDates"><div class="article-dates__history"></div></div></div><div class="main-context__column">    <ul id="book-metrics" class="article-metrics u-sansSerif">
+            <li class="article-metrics__item">
+                     <span class="article-metrics__views">453</span>
+                     <span class="article-metrics__label">Downloads</span>
+            </li>
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-citations-count" href="https://citations.springer.com/item?doi&#x3D;10.1007/s11661-002-1013-5" target="_blank" rel="noopener"
+                       title="Visit Springer Citations for full citation details" id="citations-link">
+                       <span id="citations-count-number" class="test-metric-count c-button-circle gtm-citations-count">92</span>
+                       <span class="test-metric-name article-metrics__label gtm-citations-count">Citations</span>
+                    </a>
+            </li>
+    </ul>
+</div></div></div><section class="Abstract" id="Abs1" tabindex="-1" lang="en"><h2 class="Heading">Abstract</h2><p class="Para">A review is presented on the role of dislocation cores and planar faults in activating the nonbasal deformation modes, &lt;<strong class="EmphasisTypeBold ">c</strong> + <strong class="EmphasisTypeBold ">a</strong>&gt; pyramidal slip and deformation twinning, in hcp metals and alloys and in D0<sub>19</sub> intermetallic compounds. Material-specific mechanical behavior arises from a competition between alternate defect structures that determine the deformation modes. We emphasize the importance of accurate atomistic modeling of these defects, going beyond simple interatomic energy models. Recent results from both experiments and theory are summarized by discussing specific examples of Ti and Mg single crystals; Ti-, Zr-, and Mg-base alloys; and Ti<sub>3</sub>Al ordered alloys. Remaining key issues and directions for future research are also discussed.</p></section><div class="HeaderArticleNotes"><aside class="ArticleNote ArticleNoteMisc"><p class="SimplePara">This article is based on a presentation made in the symposium entitled “Defect Properties and Mechanical Behavior of HCP Metals and Alloys” at the TMS Annual Meeting, February 11–15, 2001, in New Orleans Louisiana, under the auspices of the following ASM and TMS committees: Materials Science Critical Technology Sector, Structural Materials Division, Electronic, Magnetic &amp; Photonic Materials Division, Chemistry &amp; Physics of Materials Committee, Joint Nuclear Materials Committee, and Titanium Committee.</p></aside></div><div class="note test-pdf-link" id="cobranding-and-download-availability-text"><div id="article_no_access_banner">This is a preview of subscription content, <a id="test-login-banner-link" href="/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%252Fs11661-002-1013-5">log in</a> to check access</div></div><div class="article-actions--inline" id="article-actions--inline" data-component="article-actions--inline"></div><section id="Sample" class="pdf-preview"><h2 class="Heading">Preview</h2><object id="test-pdf-preview" class="pdf-preview__embed pdf-preview__embed--height" data="//page-one.live.cf.public.springer.com/pdf/preview/10.1007/s11661-002-1013-5" type="application/pdf" width="100%" data-component="SpringerLink.PdfPreview"><p class="u-interface" data-fallback-text="true">Unable to display preview.&nbsp;<a href="//page-one.live.cf.public.springer.com/pdf/preview/10.1007/s11661-002-1013-5" target="_blank" rel="noopener">Download preview PDF.</a></p></object><p class="pdf-preview__info u-interface">Unable to display preview.&nbsp;<a href="//page-one.live.cf.public.springer.com/pdf/preview/10.1007/s11661-002-1013-5" target="_blank" rel="noopener">Download preview PDF.</a></p></section><section class="Section1 RenderAsSection1" id="Bib1" tabindex="-1"><h2 class="Heading">References</h2><div class="content"><ol class="BibliographyWrapper"><li class="Citation"><div class="CitationNumber">1.</div><div class="CitationContent" id="CR1">P.G. Patridge: <em class="EmphasisTypeItalic ">Met. Rev.</em>, 1967, vol. 12, pp. 169–94.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=P.G..%20Patridge&amp;journal=Met.%20Rev.&amp;volume=12&amp;pages=169-94&amp;publication_year=1967"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">2.</div><div class="CitationContent" id="CR2">M.H. Yoo: <em class="EmphasisTypeItalic ">Metall. Trans. A</em>, 1981, vol. 12A, pp. 409–18.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;journal=Metall.%20Trans.%20A&amp;volume=12A&amp;pages=409-18&amp;publication_year=1981"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">3.</div><div class="CitationContent" id="CR3">D.J. Bacon and V. Vitek: <em class="EmphasisTypeItalic ">Metall. Mater. Trans. A</em>, 2002, vol. 33A, pp. 721–33.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.J..%20Bacon&amp;author=V..%20Vitek&amp;journal=Metall.%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=721-33&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">4.</div><div class="CitationContent" id="CR4">N.E. Paton and W.A. Backofen: <em class="EmphasisTypeItalic ">Metall. Trans.</em>, 1970, vol. 1, pp. 2839–47.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=N.E..%20Paton&amp;author=W.A..%20Backofen&amp;journal=Metall.%20Trans.&amp;volume=1&amp;pages=2839-47&amp;publication_year=1970"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">5.</div><div class="CitationContent" id="CR5">J.C. Williams, R.G. Baggerly, and N.E. Paton: <em class="EmphasisTypeItalic ">Metall. Mater. Trans. A</em>, 2002, vol. 33A, pp. 837–50.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.C..%20Williams&amp;author=R.G..%20Baggerly&amp;author=N.E..%20Paton&amp;journal=Metall.%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=837-50&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">6.</div><div class="CitationContent" id="CR6">A. Akhtar: <em class="EmphasisTypeItalic ">J. Nucl. Mater.</em>, 1973, vol. 47, pp. 79–86.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0022-3115(73)90189-X"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Akhtar&amp;journal=J.%20Nucl.%20Mater.&amp;volume=47&amp;pages=79-86&amp;publication_year=1973"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">7.</div><div class="CitationContent" id="CR7">H. Yoshinaga and R. Horiuchi: <em class="EmphasisTypeItalic ">Trans. JIM</em>, 1963, vol. 4, pp. 1–8.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Yoshinaga&amp;author=R..%20Horiuchi&amp;journal=Trans.%20JIM&amp;volume=4&amp;pages=1-8&amp;publication_year=1963"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">8.</div><div class="CitationContent" id="CR8">J.F. Stohr and J.P. Poirier: <em class="EmphasisTypeItalic ">Phil. Mag.</em>, 1972, vol. 25, pp. 1313–29.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/14786437208223856"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.F..%20Stohr&amp;author=J.P..%20Poirier&amp;journal=Phil.%20Mag.&amp;volume=25&amp;pages=1313-29&amp;publication_year=1972"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">9.</div><div class="CitationContent" id="CR9">T. Obara, H. Yoshinga and S. Morozumi: <em class="EmphasisTypeItalic ">Acta Metall.</em>, 1973, vol. 21, pp. 845–53.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0001-6160(73)90141-7"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=T..%20Obara&amp;author=H..%20Yoshinga&amp;author=S..%20Morozumi&amp;journal=Acta%20Metall.&amp;volume=21&amp;pages=845-53&amp;publication_year=1973"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">10.</div><div class="CitationContent" id="CR10">S. Ando and H. Tonda: <em class="EmphasisTypeItalic ">Mater. Trans. JIM</em>, 2000, vol. 41, pp. 1188–91.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Ando&amp;author=H..%20Tonda&amp;journal=Mater.%20Trans.%20JIM&amp;volume=41&amp;pages=1188-91&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">11.</div><div class="CitationContent" id="CR11">G.L. London, V.V. Damiano, and H. Conrad: <em class="EmphasisTypeItalic ">Trans. AIME</em>, 1968, vol. 242, pp. 979–86.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G.L..%20London&amp;author=V.V..%20Damiano&amp;author=H..%20Conrad&amp;journal=Trans.%20AIME&amp;volume=242&amp;pages=979-86&amp;publication_year=1968"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">12.</div><div class="CitationContent" id="CR12">S.E. Ion, F.J. Humphreys, and S.H. White: <em class="EmphasisTypeItalic ">Acta Metall.</em>, 1982, vol. 30, pp. 1909–19.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0001-6160(82)90031-1"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S.E..%20Ion&amp;author=F.J..%20Humphreys&amp;author=S.H..%20White&amp;journal=Acta%20Metall.&amp;volume=30&amp;pages=1909-19&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">13.</div><div class="CitationContent" id="CR13">A. Galiyev, R. Kaibyshev, and G. Gottstein: <em class="EmphasisTypeItalic ">Acta Mater.</em>, 2001, vol. 49, pp. 1199–1207.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/S1359-6454(01)00020-9"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Galiyev&amp;author=R..%20Kaibyshev&amp;author=G..%20Gottstein&amp;journal=Acta%20Mater.&amp;volume=49&amp;pages=1199-1207&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">14.</div><div class="CitationContent" id="CR14">U.F. Kocks and D.G. Westlake: <em class="EmphasisTypeItalic ">Trans. TMS-AIME</em>, 1967, vol. 239, pp. 1107–09<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=U.F..%20Kocks&amp;author=D.G..%20Westlake&amp;journal=Trans.%20TMS-AIME&amp;volume=239&amp;pages=1107-09&amp;publication_year=1967"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">15.</div><div class="CitationContent" id="CR15">Y. Minonishi, S. Ishioka, M. Koiwa, S. Morozumi, and M. Yamaguchi: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1981, vol. 43, pp. 1017–26.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618108239508"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Ishioka&amp;author=M..%20Koiwa&amp;author=S..%20Morozumi&amp;author=M..%20Yamaguchi&amp;journal=Phil.%20Mag.%20A&amp;volume=43&amp;pages=1017-26&amp;publication_year=1981"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">16.</div><div class="CitationContent" id="CR16">Y. Minonishi, S. Ishioka, M. Koiwa, S. Morozumi, and M. Yamaguchi: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1982, vol. 44, pp. 1225–37.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618108235805"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Ishioka&amp;author=M..%20Koiwa&amp;author=S..%20Morozumi&amp;author=M..%20Yamaguchi&amp;journal=Phil.%20Mag.%20A&amp;volume=44&amp;pages=1225-37&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">17.</div><div class="CitationContent" id="CR17">Y. Minonishi, S. Ishioka, M. Koiwa, S. Morozumi, and M. Yamaguchi: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1982, vol. 45, pp. 835–50.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618208239906"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Ishioka&amp;author=M..%20Koiwa&amp;author=S..%20Morozumi&amp;author=M..%20Yamaguchi&amp;journal=Phil.%20Mag.%20A&amp;volume=45&amp;pages=835-50&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">18.</div><div class="CitationContent" id="CR18">Y. Minonishi, S. Ishioka, M. Koiwa, and S. Morozumi: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1982, vol. 46, pp. 761–70.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618208236929"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Ishioka&amp;author=M..%20Koiwa&amp;author=S..%20Morozumi&amp;journal=Phil.%20Mag.%20A&amp;volume=46&amp;pages=761-70&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">19.</div><div class="CitationContent" id="CR19">D.J. Bacon and M.H. Liang: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1986, vol. 53, pp. 163–79.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618608242819"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.J..%20Bacon&amp;author=M.H..%20Liang&amp;journal=Phil.%20Mag.%20A&amp;volume=53&amp;pages=163-79&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">20.</div><div class="CitationContent" id="CR20">M.H. Liang and D.J. Bacon: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1986, vol. 53, pp. 181–204.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618608242820"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Liang&amp;author=D.J..%20Bacon&amp;journal=Phil.%20Mag.%20A&amp;volume=53&amp;pages=181-204&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">21.</div><div class="CitationContent" id="CR21">M.H. Liang and D.J. Bacon: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1986, vol. 53, pp. 205–20.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618608242821"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Liang&amp;author=D.J..%20Bacon&amp;journal=Phil.%20Mag.%20A&amp;volume=53&amp;pages=205-20&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">22.</div><div class="CitationContent" id="CR22">H. Numakura, Y. Minonishi, and M. Koiwa: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1990, vol. 62, pp. 525–43.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619008244917"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Numakura&amp;author=Y..%20Minonishi&amp;author=M..%20Koiwa&amp;journal=Phil.%20Mag.%20A&amp;volume=62&amp;pages=525-43&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">23.</div><div class="CitationContent" id="CR23">H. Numakura, Y. Minonishi, and M. Koiwa: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1990, vol. 62, pp. 545–56.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619008244918"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Numakura&amp;author=Y..%20Minonishi&amp;author=M..%20Koiwa&amp;journal=Phil.%20Mag.%20A&amp;volume=62&amp;pages=545-56&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">24.</div><div class="CitationContent" id="CR24">S. Ando, K. Takashima, and H. Tonda: <em class="EmphasisTypeItalic ">Mater. Trans. JIM</em>, 1996, vol. 37, pp. 319–22.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Ando&amp;author=K..%20Takashima&amp;author=H..%20Tonda&amp;journal=Mater.%20Trans.%20JIM&amp;volume=37&amp;pages=319-22&amp;publication_year=1996"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">25.</div><div class="CitationContent" id="CR25">J.R. Morris, K.M. Ho, K.Y. Chen, G. Rengarajan and M.H. Yoo: <em class="EmphasisTypeItalic ">Model. Simul. Mater. Sci. Eng.</em>, 2000, vol. 8, pp. 25–35.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1088/0965-0393/8/1/303"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.R..%20Morris&amp;author=K.M..%20Ho&amp;author=K.Y..%20Chen&amp;author=G..%20Rengarajan&amp;author=M.H..%20Yoo&amp;journal=Model.%20Simul.%20Mater.%20Sci.%20Eng.&amp;volume=8&amp;pages=25-35&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">26.</div><div class="CitationContent" id="CR26">S. Ando, T. Gotoh, and H. Tonda: <em class="EmphasisTypeItalic ">Metall. Mater. Trans. A</em>, 2002, vol. 33A, pp. 823–29.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Ando&amp;author=T..%20Gotoh&amp;author=H..%20Tonda&amp;journal=Metall.%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=823-29&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">27.</div><div class="CitationContent" id="CR27">M.H. Yoo, S.R. Agnew, J.R. Morris, and K.M. Ho: <em class="EmphasisTypeItalic ">Mater. Sci. Eng. A</em>, 2001, vol. 319–321, pp. 87–92.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;author=S.R..%20Agnew&amp;author=J.R..%20Morris&amp;author=K.M..%20Ho&amp;journal=Mater.%20Sci.%20Eng.%20A&amp;volume=319%E2%80%93321&amp;pages=87-92&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">28.</div><div class="CitationContent" id="CR28">B.C. Wonsiewicz and W.A. Backofen: <em class="EmphasisTypeItalic ">Trans. TMS-AIME</em>, 1967, vol. 239, pp. 1422–31.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=B.C..%20Wonsiewicz&amp;author=W.A..%20Backofen&amp;journal=Trans.%20TMS-AIME&amp;volume=239&amp;pages=1422-31&amp;publication_year=1967"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">29.</div><div class="CitationContent" id="CR29">S.R. Agnew, J.A. Horton, and M.H. Yoo: <em class="EmphasisTypeItalic ">Metall Mater. Trans. A</em>, 2002, vol. 33A, pp. 851–58.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S.R..%20Agnew&amp;author=J.A..%20Horton&amp;author=M.H..%20Yoo&amp;journal=Metall%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=851-58&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">30.</div><div class="CitationContent" id="CR30">S.R. Agnew, M.H. Yoo, and C.N. Tome: <em class="EmphasisTypeItalic ">Acta Mater.</em>, 2001, vol. 49, pp. 4077–89.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/S1359-6454(01)00297-X"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S.R..%20Agnew&amp;author=M.H..%20Yoo&amp;author=C.N..%20Tome&amp;journal=Acta%20Mater.&amp;volume=49&amp;pages=4077-89&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">31.</div><div class="CitationContent" id="CR31">B. Legrand: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1985, vol. 63, pp. 83–97.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618508237608"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=B..%20Legrand&amp;journal=Phil.%20Mag.%20A&amp;volume=63&amp;pages=83-97&amp;publication_year=1985"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">32.</div><div class="CitationContent" id="CR32">A. Girshick, D. Pettifor, and V. Vitek: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1998, vol. 77, pp. 999–1012.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619808221224"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Girshick&amp;author=D..%20Pettifor&amp;author=V..%20Vitek&amp;journal=Phil.%20Mag.%20A&amp;volume=77&amp;pages=999-1012&amp;publication_year=1998"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">33.</div><div class="CitationContent" id="CR33">Y. Minonishi, S. Ishioka, K. Koiwa, and S. Morozumi: <em class="EmphasisTypeItalic ">Phys. Status Solidi (a)</em>, 1982, vol. 71, pp. 253–58.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1002/pssa.2210710130"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Ishioka&amp;author=K..%20Koiwa&amp;author=S..%20Morozumi&amp;journal=Phys.%20Status%20Solidi%20%28a%29&amp;volume=71&amp;pages=253-58&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">34.</div><div class="CitationContent" id="CR34">A. Serra and D.J. Bacon: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1986, vol. 54, pp. 793–804.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418618608244438"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=D.J..%20Bacon&amp;journal=Phil.%20Mag.%20A&amp;volume=54&amp;pages=793-804&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">35.</div><div class="CitationContent" id="CR35">M.H. Yoo and J.K. Lee: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1991, vol. 63, pp. 987–1000.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619108213931"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;author=J.K..%20Lee&amp;journal=Phil.%20Mag.%20A&amp;volume=63&amp;pages=987-1000&amp;publication_year=1991"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">36.</div><div class="CitationContent" id="CR36">A. Serra, R.C. Pond, and D.J. Bacon: <em class="EmphasisTypeItalic ">Acta Metall. Mater.</em>, 1991, vol. 19, pp. 1469–80.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=R.C..%20Pond&amp;author=D.J..%20Bacon&amp;journal=Acta%20Metall.%20Mater.&amp;volume=19&amp;pages=1469-80&amp;publication_year=1991"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">37.</div><div class="CitationContent" id="CR37">A. Serra and D.J. Bacon: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1991, vol. 63, pp. 1001–12.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619108213932"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=D.J..%20Bacon&amp;journal=Phil.%20Mag.%20A&amp;volume=63&amp;pages=1001-12&amp;publication_year=1991"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">38.</div><div class="CitationContent" id="CR38">D.J. Bacon and A. Serra: in <em class="EmphasisTypeItalic ">Structure and Properties of Interfaces in Materials</em>, W.A.T. Clark, U. Dahmen, and C.L. Briant, eds., Materials Research Society Symposia Proceedings, Materials Research Society, Pittsburgh, PA, 1992, vol. 238, pp. 73–78.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=D.J.%20Bacon%20and%20A.%20Serra%3A%20in%20Structure%20and%20Properties%20of%20Interfaces%20in%20Materials%2C%20W.A.T.%20Clark%2C%20U.%20Dahmen%2C%20and%20C.L.%20Briant%2C%20eds.%2C%20Materials%20Research%20Society%20Symposia%20Proceedings%2C%20Materials%20Research%20Society%2C%20Pittsburgh%2C%20PA%2C%201992%2C%20vol.%20238%2C%20pp.%2073%E2%80%9378."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">39.</div><div class="CitationContent" id="CR39">A. Serra and D.J. Bacon: <em class="EmphasisTypeItalic ">Mater. Sci. Forum</em>, 1993, vols. 126–128, pp. 269–72.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=D.J..%20Bacon&amp;journal=Mater.%20Sci.%20Forum&amp;volume=126%E2%80%93128&amp;pages=269-72&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">40.</div><div class="CitationContent" id="CR40">J.R. Morris, Y.Y. Ye, K.M. Ho, C.T. Chan, and M.H. Yoo: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1994, vol. 69, pp. 189–95.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/09500839408241591"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.R..%20Morris&amp;author=Y.Y..%20Ye&amp;author=K.M..%20Ho&amp;author=C.T..%20Chan&amp;author=M.H..%20Yoo&amp;journal=Phil.%20Mag.%20A&amp;volume=69&amp;pages=189-95&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">41.</div><div class="CitationContent" id="CR41">J.R. Morris, Y.Y. Ye, K.M. Ho, C.T. Chan, and M.H. Yoo: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1995, vol. 72, pp. 751–63.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619508243798"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.R..%20Morris&amp;author=Y.Y..%20Ye&amp;author=K.M..%20Ho&amp;author=C.T..%20Chan&amp;author=M.H..%20Yoo&amp;journal=Phil.%20Mag.%20A&amp;volume=72&amp;pages=751-63&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">42.</div><div class="CitationContent" id="CR42">J.R. Morris, J. Scharff, K.M. Ho, Y.Y. Ye, and M.H. Yoo: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1997, vol. 76, pp. 1065–77.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619708200015"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.R..%20Morris&amp;author=J..%20Scharff&amp;author=K.M..%20Ho&amp;author=Y.Y..%20Ye&amp;author=M.H..%20Yoo&amp;journal=Phil.%20Mag.%20A&amp;volume=76&amp;pages=1065-77&amp;publication_year=1997"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">43.</div><div class="CitationContent" id="CR43">Y.C. Wang, D.H. Ping, D.X. Li, and H.Q. Ye: <em class="EmphasisTypeItalic ">Phil. Mag. Lett.</em>, 1995, vol. 74, pp. 367–73.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/095008396180100"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y.C..%20Wang&amp;author=D.H..%20Ping&amp;author=D.X..%20Li&amp;author=H.Q..%20Ye&amp;journal=Phil.%20Mag.%20Lett.&amp;volume=74&amp;pages=367-73&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">44.</div><div class="CitationContent" id="CR44">J.R. Morris, Y.Y. Ye, and M.H. Yoo: unpublished work at Ames Laboratory.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=J.R.%20Morris%2C%20Y.Y.%20Ye%2C%20and%20M.H.%20Yoo%3A%20unpublished%20work%20at%20Ames%20Laboratory."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">45.</div><div class="CitationContent" id="CR45">S. Hegege, M. Mori, and Y. Ishida: <em class="EmphasisTypeItalic ">J. Phys.</em>, 1990, vol. 51, pp. C1-C161.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Hegege&amp;author=M..%20Mori&amp;author=Y..%20Ishida&amp;journal=J.%20Phys.&amp;volume=51&amp;pages=C1-C161&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">46.</div><div class="CitationContent" id="CR46">T. Baisaz, P. Ruterana, B. Lebouvier, and G. Nouet: <em class="EmphasisTypeItalic ">Phys. Status Solidi (b)</em>, 1995, vol. 191, pp. 267–81.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1002/pssb.2221910204"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=T..%20Baisaz&amp;author=P..%20Ruterana&amp;author=B..%20Lebouvier&amp;author=G..%20Nouet&amp;journal=Phys.%20Status%20Solidi%20%28b%29&amp;volume=191&amp;pages=267-81&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">47.</div><div class="CitationContent" id="CR47">U. Pilchowski, V. Dhandapani, K.J. Leonard, and V.K. Vasudevan: <em class="EmphasisTypeItalic ">JOM</em>, 2001, vol. 52, p. 135, and private communication.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=U..%20Pilchowski&amp;author=V..%20Dhandapani&amp;author=K.J..%20Leonard&amp;author=V.K..%20Vasudevan&amp;journal=JOM&amp;volume=52&amp;pages=135-135&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">48.</div><div class="CitationContent" id="CR48">U. Pinsook and G.J. Ackland: <em class="EmphasisTypeItalic ">Phys. Rev. B</em>, 2000, vol. 62, pp. 5427–34.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevB.62.5427"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=U..%20Pinsook&amp;author=G.J..%20Ackland&amp;journal=Phys.%20Rev.%20B&amp;volume=62&amp;pages=5427-34&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">49.</div><div class="CitationContent" id="CR49">J.R. Morris and K.M. Ho: <em class="EmphasisTypeItalic ">Phys. Rev. B</em>, 2001, vol. 63, MS224116.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevB.63.224116"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.R..%20Morris&amp;author=K.M..%20Ho&amp;journal=Phys.%20Rev.%20B&amp;volume=63&amp;pages=MS224116-MS224116&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">50.</div><div class="CitationContent" id="CR50">S. Mahajan and D.F. Williams: <em class="EmphasisTypeItalic ">Int. Met. Rev.</em>, 1973, vol. 18, pp. 43–61.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Mahajan&amp;author=D.F..%20Williams&amp;journal=Int.%20Met.%20Rev.&amp;volume=18&amp;pages=43-61&amp;publication_year=1973"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">51.</div><div class="CitationContent" id="CR51">G.T. Gray III: <em class="EmphasisTypeItalic ">Encyclopedia of Materials Science and Engineering</em>, Pergamon Press, Oxford, United Kingdom 1990, Suppl. vol. 2, pp. 859–66.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Encyclopedia%20of%20Materials%20Science%20and%20Engineering&amp;author=G.T..%20Gray&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">52.</div><div class="CitationContent" id="CR52">J.W. Christian and S. Mahajan, <em class="EmphasisTypeItalic ">Progr. Mater. Sci.</em>, 1995, vol. 39, pp. 1–157.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0079-6425(94)00007-7"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.W..%20Christian&amp;author=S..%20Mahajan&amp;journal=Progr.%20Mater.%20Sci.&amp;volume=39&amp;pages=1-157&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">53.</div><div class="CitationContent" id="CR53">T.M. Holden, R.A. Holt, and J.W.L. Pang: <em class="EmphasisTypeItalic ">Metall. Mater. Trans. A</em>, 2002, vol. 33A, pp. 749–55.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=T.M..%20Holden&amp;author=R.A..%20Holt&amp;author=J.W.L..%20Pang&amp;journal=Metall.%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=749-55&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">54.</div><div class="CitationContent" id="CR54">E. Orowan: <em class="EmphasisTypeItalic ">Dislocations in Metals</em>, AIME, New York, NY, 1954, p. 116.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Dislocations%20in%20Metals&amp;author=E..%20Orowan&amp;publication_year=1954"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">55.</div><div class="CitationContent" id="CR55">P.B. Price: <em class="EmphasisTypeItalic ">Phil. Mag.</em>, 1960, vol. 5, pp. 873–86.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/14786436008238307"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=P.B..%20Price&amp;journal=Phil.%20Mag.&amp;volume=5&amp;pages=873-86&amp;publication_year=1960"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">56.</div><div class="CitationContent" id="CR56">R.L. Bell and R.W. Cahn: <em class="EmphasisTypeItalic ">Proc. R. Soc.</em>, 1957, vol. 239, pp. 494–521.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1098/rspa.1957.0058"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=R.L..%20Bell&amp;author=R.W..%20Cahn&amp;journal=Proc.%20R.%20Soc.&amp;volume=239&amp;pages=494-521&amp;publication_year=1957"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">57.</div><div class="CitationContent" id="CR57">S. Mendelson, <em class="EmphasisTypeItalic ">J. Appl. Phys.</em>, 1970, vol. 41, pp. 1893–1910.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.1659139"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Mendelson&amp;journal=J.%20Appl.%20Phys.&amp;volume=41&amp;pages=1893-1910&amp;publication_year=1970"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">58.</div><div class="CitationContent" id="CR58">J.W. Christian and A.G. Crocker: in <em class="EmphasisTypeItalic ">Dislocations in Solids</em>, F.R.N. Nabarro, ed., North-Holland, Amsterdam, 1980, vol. 8, pp. 221–35.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.W..%20Christian&amp;author=A.G..%20Crocker&amp;pages=221-35&amp;publication_year=1980"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">59.</div><div class="CitationContent" id="CR59">J.P. Hirth and J. Lothe, <em class="EmphasisTypeItalic ">Theory of Dislocations</em>, 2nd ed., John Wiley &amp; Sons, New York, NY, 1982, pp. 365 and 821.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Theory%20of%20Dislocations&amp;author=J.P..%20Hirth&amp;author=J..%20Lothe&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">60.</div><div class="CitationContent" id="CR60">M.H. Yoo and B.T.M. Loh: <em class="EmphasisTypeItalic ">Fundamental Aspects of Dislocation Theory</em>, NBS Special Publication No. 317, J.A. Simmons, R. deWit, and R. Bullough, eds., NBS, Gaithersburg, MD, 1970, vol. 1, pp. 479–93.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;author=B.T.M..%20Loh&amp;pages=479-93&amp;publication_year=1970"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">61.</div><div class="CitationContent" id="CR61">N. Thomson and D.J. Millard: <em class="EmphasisTypeItalic ">Phil. Mag.</em>, 1952, vol. 43, p. 421.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=N..%20Thomson&amp;author=D.J..%20Millard&amp;journal=Phil.%20Mag.&amp;volume=43&amp;pages=421-421&amp;publication_year=1952"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">62.</div><div class="CitationContent" id="CR62">M.H. Yoo: <em class="EmphasisTypeItalic ">Trans. TMS-AIME</em>, 1969, vol. 245, pp. 2051–60.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;journal=Trans.%20TMS-AIME&amp;volume=245&amp;pages=2051-60&amp;publication_year=1969"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">63.</div><div class="CitationContent" id="CR63">D.J. Bacon and A. Serra: in <em class="EmphasisTypeItalic ">Twinning in Advanced Materials</em>, M.H. Yoo and M. Wuttig, eds., TMS, Warrendale, PA, 1994, pp. 83–95.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.J..%20Bacon&amp;author=A..%20Serra&amp;pages=83-95&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">64.</div><div class="CitationContent" id="CR64">A. Serra and D.J. Bacon: <em class="EmphasisTypeItalic ">Acta Metall. Mater.</em>, 1995, vol. 43, pp. 4465–81.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0956-7151(95)00128-I"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=D.J..%20Bacon&amp;journal=Acta%20Metall.%20Mater.&amp;volume=43&amp;pages=4465-81&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">65.</div><div class="CitationContent" id="CR65">A. Serra, D.J. Bacon, and R.C. Pond: <em class="EmphasisTypeItalic ">Acta Metall.</em>, 1988, vol. 12, pp. 3183–3203.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=D.J..%20Bacon&amp;author=R.C..%20Pond&amp;journal=Acta%20Metall.&amp;volume=12&amp;pages=3183-3203&amp;publication_year=1988"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">66.</div><div class="CitationContent" id="CR66">A. Serra, D.J. Bacon, and R.C. Pond: <em class="EmphasisTypeItalic ">Metall. Mater: Trans. A</em>, 2002, vol. 33A, pp. 809–12.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Serra&amp;author=D.J..%20Bacon&amp;author=R.C..%20Pond&amp;journal=Metall.%20Mater%3A%20Trans.%20A&amp;volume=33A&amp;pages=809-12&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">67.</div><div class="CitationContent" id="CR67">Y. Kasukabe, Y. Yamada, P.J. Lin, and L.A. Bursill: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1993, vol. 68, pp. 587–98.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619308213983"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Kasukabe&amp;author=Y..%20Yamada&amp;author=P.J..%20Lin&amp;author=L.A..%20Bursill&amp;journal=Phil.%20Mag.%20A&amp;volume=68&amp;pages=587-98&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">68.</div><div class="CitationContent" id="CR68">Y. Kasukabe, Y. Yamada, P.J. Lin, and L.A. Bursill: <em class="EmphasisTypeItalic ">Phil. Mag. Lett.</em>, 1993, vol. 67, pp. 361–68.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/09500839308240944"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Kasukabe&amp;author=Y..%20Yamada&amp;author=P.J..%20Lin&amp;author=L.A..%20Bursill&amp;journal=Phil.%20Mag.%20Lett.&amp;volume=67&amp;pages=361-68&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">69.</div><div class="CitationContent" id="CR69">L.A. Bursill, J.L. Peng, X.D. Fan, Y. Kasukabe, and Y. Yamada: <em class="EmphasisTypeItalic ">Phil. Mag. Lett.</em>, 1995, vol. 71, pp. 269–73.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/09500839508240520"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=L.A..%20Bursill&amp;author=J.L..%20Peng&amp;author=X.D..%20Fan&amp;author=Y..%20Kasukabe&amp;author=Y..%20Yamada&amp;journal=Phil.%20Mag.%20Lett.&amp;volume=71&amp;pages=269-73&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">70.</div><div class="CitationContent" id="CR70">R.C. Pond, D.J. Bacon, and A. Serra: <em class="EmphasisTypeItalic ">Phil. Mag. Lett.</em>, 1995, vol. 71, pp. 275–84.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/09500839508240521"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=R.C..%20Pond&amp;author=D.J..%20Bacon&amp;author=A..%20Serra&amp;journal=Phil.%20Mag.%20Lett.&amp;volume=71&amp;pages=275-84&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">71.</div><div class="CitationContent" id="CR71">H. Numakura and M. Koiwa: <em class="EmphasisTypeItalic ">Metall. Sci. Technol.</em>, 1998, vol. 16, pp. 4–19.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Numakura&amp;author=M..%20Koiwa&amp;journal=Metall.%20Sci.%20Technol.&amp;volume=16&amp;pages=4-19&amp;publication_year=1998"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">72.</div><div class="CitationContent" id="CR72">M.H. Yoo, F. Appel, R. Wagner, and H. Mecking: <em class="EmphasisTypeItalic ">Deformation and Fracture of Ordered Intermetallic Materials III</em>, W.O. Soboyejo, R.S. Srivatsan, and H.L. Fraser, eds., TMS, Warrendale, PA, 1996, pp. 3–16.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;author=F..%20Appel&amp;author=R..%20Wagner&amp;author=H..%20Mecking&amp;pages=3-16&amp;publication_year=1996"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">73.</div><div class="CitationContent" id="CR73">P. Veyssiere and J. Douin: <em class="EmphasisTypeItalic ">Intermetallic Compounds: vol. 1, Principles</em>, J.H. Westbrook and R.L. Fleischer, eds., John Wiley &amp; Sons, New York, NY, 1994, pp. 519–58.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=P..%20Veyssiere&amp;author=J..%20Douin&amp;pages=519-58&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">74.</div><div class="CitationContent" id="CR74">H. Numakura, Y. Minonishi, and M. Koiwa: <em class="EmphasisTypeItalic ">Scripta Metall.</em>, 1986, vol. 20, pp. 1581–86.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0036-9748(86)90399-6"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Numakura&amp;author=Y..%20Minonishi&amp;author=M..%20Koiwa&amp;journal=Scripta%20Metall.&amp;volume=20&amp;pages=1581-86&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">75.</div><div class="CitationContent" id="CR75">D.I. Tomsett and M. Bevis: <em class="EmphasisTypeItalic ">Phil. Mag.</em>, 1969, vol. 19, pp. 120–40.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.I..%20Tomsett&amp;author=M..%20Bevis&amp;journal=Phil.%20Mag.&amp;volume=19&amp;pages=120-40&amp;publication_year=1969"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">76.</div><div class="CitationContent" id="CR76">S. Morozumi, M. Kikuchi, and H. Yoshinaga, <em class="EmphasisTypeItalic ">Trans. JIM</em>, 1976, vol. 17, pp. 158–64.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Morozumi&amp;author=M..%20Kikuchi&amp;author=H..%20Yoshinaga&amp;journal=Trans.%20JIM&amp;volume=17&amp;pages=158-64&amp;publication_year=1976"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">77.</div><div class="CitationContent" id="CR77">Y. Minonishi, S. Morozumi, and H. Yoshinaga, <em class="EmphasisTypeItalic ">Scripta Metall.</em>, 1982, vol. 16, pp. 427–30.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0036-9748(82)90166-1"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Morozumi&amp;author=H..%20Yoshinaga&amp;journal=Scripta%20Metall.&amp;volume=16&amp;pages=427-30&amp;publication_year=1982"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">78.</div><div class="CitationContent" id="CR78">Y. Minonishi, S. Morozumi, and H. Yoshinaga: <em class="EmphasisTypeItalic ">Scripta Metall.</em>, 1985, vol. 19, pp. 1241–45.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0036-9748(85)90246-7"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=S..%20Morozumi&amp;author=H..%20Yoshinaga&amp;journal=Scripta%20Metall.&amp;volume=19&amp;pages=1241-45&amp;publication_year=1985"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">79.</div><div class="CitationContent" id="CR79">M.H. Yoo: <em class="EmphasisTypeItalic ">Scripta Metall.</em>, 1968, vol. 2, pp. 537–40.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0036-9748(68)90103-8"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;journal=Scripta%20Metall.&amp;volume=2&amp;pages=537-40&amp;publication_year=1968"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">80.</div><div class="CitationContent" id="CR80">L.J. Teutonico: in <em class="EmphasisTypeItalic ">Titanium Science and Technology</em>, R.J. Jaffe and H.M. Burte, eds, Plenum Press, New York, NY, 1973, vol. 2, pp. 1009–19.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=L.J..%20Teutonico&amp;pages=1009-19&amp;publication_year=1973"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">81.</div><div class="CitationContent" id="CR81">H. Numakura, M. Koiwa, T. Ando, and M.H. Yoo: <em class="EmphasisTypeItalic ">Mater. Trans. JIM</em>, 1992, vol. 33, pp. 1130–37.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Numakura&amp;author=M..%20Koiwa&amp;author=T..%20Ando&amp;author=M.H..%20Yoo&amp;journal=Mater.%20Trans.%20JIM&amp;volume=33&amp;pages=1130-37&amp;publication_year=1992"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">82.</div><div class="CitationContent" id="CR82">F. Aldinger: in <em class="EmphasisTypeItalic ">Beryllium Science and Technology</em>, D. Webster and G.L. London, Plenum Press, New York, NY, 1979, pp. 7–109.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=F..%20Aldinger&amp;pages=7-109&amp;publication_year=1979"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">83.</div><div class="CitationContent" id="CR83">H.S. Rosenbaum: in <em class="EmphasisTypeItalic ">Deformation Twinning</em>, R.E. Reed-Hill, J.P. Hirth, and H.C. Rogers, Gordon &amp; Breach, New York, NY, 1964, pp. 43–76.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H.S..%20Rosenbaum&amp;pages=43-76&amp;publication_year=1964"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">84.</div><div class="CitationContent" id="CR84">V.V. Damiano, G.L. London, and H. Conrad: <em class="EmphasisTypeItalic ">Trans. TMS-AIME</em>, 1968, vol. 242, pp. 987–94.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=V.V..%20Damiano&amp;author=G.L..%20London&amp;author=H..%20Conrad&amp;journal=Trans.%20TMS-AIME&amp;volume=242&amp;pages=987-94&amp;publication_year=1968"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">85.</div><div class="CitationContent" id="CR85">G.T. Gray III: in <em class="EmphasisTypeItalic ">Modeling the Deformation of Crystalline Solids</em>, T.C. Lowe, A.D. Rollett, P.S. Follansbee, and G.S. Daehn, eds., TMS, Warrendale, PA, 1991, pp. 145–48.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G.T..%20Gray&amp;author=G.S..%20Daehn&amp;pages=145-48&amp;publication_year=1991"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">86.</div><div class="CitationContent" id="CR86">K.T. Ramesh: <em class="EmphasisTypeItalic ">Metall. Mater. Trans. A</em>, 2002, vol. 33A, pp. 927–35.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=K.T..%20Ramesh&amp;journal=Metall.%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=927-35&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">87.</div><div class="CitationContent" id="CR87">K. Maruyama, M. Suzuki, and H. Sato: <em class="EmphasisTypeItalic ">Metall. Mater. Trans. A</em>, 2002, vol. 33A, pp. 875–82.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=K..%20Maruyama&amp;author=M..%20Suzuki&amp;author=H..%20Sato&amp;journal=Metall.%20Mater.%20Trans.%20A&amp;volume=33A&amp;pages=875-82&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">88.</div><div class="CitationContent" id="CR88">M.A. Gharghouri, G.C. Weatherly, and J.D. Embury: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1998, vol. 78, pp. 1137–49.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619808239980"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.A..%20Gharghouri&amp;author=G.C..%20Weatherly&amp;author=J.D..%20Embury&amp;journal=Phil.%20Mag.%20A&amp;volume=78&amp;pages=1137-49&amp;publication_year=1998"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">89.</div><div class="CitationContent" id="CR89">C.S. Roberts: <em class="EmphasisTypeItalic ">Magnesium and Its Alloys</em>, John Wiley &amp; Sons, New York, NY, 1960, pp. 88–92.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Magnesium%20and%20Its%20Alloys&amp;author=C.S..%20Roberts&amp;publication_year=1960"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">90.</div><div class="CitationContent" id="CR90">N.E. Paton, J.C. Williams, and G.P. Rauscher: in <em class="EmphasisTypeItalic ">Titanium Science and Technology</em>, R.J. Jaffe and H.M. Burte, eds., Plenum Press, New York, NY, 1973, pp. 1049–69.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=N.E..%20Paton&amp;author=J.C..%20Williams&amp;author=G.P..%20Rauscher&amp;pages=1049-69&amp;publication_year=1973"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">91.</div><div class="CitationContent" id="CR91">H. Conrad: <em class="EmphasisTypeItalic ">Progr: Mater. Sci.</em>, 1981, vol. 26, pp. 123–403.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0079-6425(81)90001-3"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Conrad&amp;journal=Progr%3A%20Mater.%20Sci.&amp;volume=26&amp;pages=123-403&amp;publication_year=1981"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">92.</div><div class="CitationContent" id="CR92">G.C. Kaschner and G.T. Gray III: <em class="EmphasisTypeItalic ">Metall. Mater: Trans. A</em>, 2000, vol. 31A, pp. 1997–2003.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1007/s11661-000-0227-7"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G.C..%20Kaschner&amp;author=G.T..%20Gray&amp;journal=Metall.%20Mater%3A%20Trans.%20A&amp;volume=31A&amp;pages=1997-2003&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">93.</div><div class="CitationContent" id="CR93">J.J. Fundenberger, M.J. Philippe, and C. Esling: <em class="EmphasisTypeItalic ">Scripta Metall.</em>, 1990, vol. 24, pp. 1215–20.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0956-716X(90)90330-J"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.J..%20Fundenberger&amp;author=M.J..%20Philippe&amp;author=C..%20Esling&amp;journal=Scripta%20Metall.&amp;volume=24&amp;pages=1215-20&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">94.</div><div class="CitationContent" id="CR94">M.P. Biget and G. Saada: <em class="EmphasisTypeItalic ">J. Phys. III</em>, 1995, vol. 5, pp. 1833–40.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1051/jp3%3A1995219"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.P..%20Biget&amp;author=G..%20Saada&amp;journal=J.%20Phys.%20III&amp;volume=5&amp;pages=1833-40&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">95.</div><div class="CitationContent" id="CR95">S.R. Agnew, J.A. Horton, and M.H. Yoo: <em class="EmphasisTypeItalic ">4th Pacific Rim Int. Conf. on Advanced Materials and Processing (PRICM4)</em>, JIM, Sendai, Japan, 2001, pp. 1139–42.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=S.R.%20Agnew%2C%20J.A.%20Horton%2C%20and%20M.H.%20Yoo%3A%204th%20Pacific%20Rim%20Int.%20Conf.%20on%20Advanced%20Materials%20and%20Processing%20%28PRICM4%29%2C%20JIM%2C%20Sendai%2C%20Japan%2C%202001%2C%20pp.%201139%E2%80%9342."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">96.</div><div class="CitationContent" id="CR96">Y. Minonishi and M.H. Yoo: <em class="EmphasisTypeItalic ">Phil Mag. Lett.</em>, 1990, vol. 61, pp. 203–08.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/09500839008202359"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=Y..%20Minonishi&amp;author=M.H..%20Yoo&amp;journal=Phil%20Mag.%20Lett.&amp;volume=61&amp;pages=203-08&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">97.</div><div class="CitationContent" id="CR97">M. Legros, Y. Minonishi, and D. Caillard: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1997, vol. 76, pp. 995–1011.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619708200011"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M..%20Legros&amp;author=Y..%20Minonishi&amp;author=D..%20Caillard&amp;journal=Phil.%20Mag.%20A&amp;volume=76&amp;pages=995-1011&amp;publication_year=1997"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">98.</div><div class="CitationContent" id="CR98">M. Legros, Y. Minonishi, and D. Caillard: <em class="EmphasisTypeItalic ">Phil. Mag. A</em>, 1997, vol. 76, pp. 1013–32.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1080/01418619708200012"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M..%20Legros&amp;author=Y..%20Minonishi&amp;author=D..%20Caillard&amp;journal=Phil.%20Mag.%20A&amp;volume=76&amp;pages=1013-32&amp;publication_year=1997"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">99.</div><div class="CitationContent" id="CR99">A. Couret, M. Legros, and D. Caillard: <em class="EmphasisTypeItalic ">JOM</em>, 2001, vol. 52, p. 74, and private communication.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Couret&amp;author=M..%20Legros&amp;author=D..%20Caillard&amp;journal=JOM&amp;volume=52&amp;pages=74-74&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">100.</div><div class="CitationContent" id="CR100">M.H. Yoo: in <em class="EmphasisTypeItalic ">Intermetallic Compounds—Principles and Practice</em>, vol. 3, <em class="EmphasisTypeItalic ">Progress</em>, J.H. Westbrook and R.L. Fleischer, eds., John Wiley &amp; Sons, New York, NY, 2002, pp. 403–36.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1002/0470845856.ch21"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;pages=403-36&amp;publication_year=2002"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">101.</div><div class="CitationContent" id="CR101">J.W. Christian and D.E. Laughlin: <em class="EmphasisTypeItalic ">Acta Metall.</em>, 1988, vol. 36, pp. 1617–42.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0001-6160(88)90230-1"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.W..%20Christian&amp;author=D.E..%20Laughlin&amp;journal=Acta%20Metall.&amp;volume=36&amp;pages=1617-42&amp;publication_year=1988"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">102.</div><div class="CitationContent" id="CR102">M.H. Yoo, C.L. Fu, and J.K. Lee: <em class="EmphasisTypeItalic ">J. Phys. III</em>, 1991, vol. 1, pp. 1065–84.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1051/jp3%3A1991172"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;author=C.L..%20Fu&amp;author=J.K..%20Lee&amp;journal=J.%20Phys.%20III&amp;volume=1&amp;pages=1065-84&amp;publication_year=1991"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">103.</div><div class="CitationContent" id="CR103">A. Nerc-Partaix and A. Mennand: <em class="EmphasisTypeItalic ">Titanium</em>, 8th Word, Congress, Institute of Metals, London, 1996, p. 121.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=A.%20Nerc-Partaix%20and%20A.%20Mennand%3A%20Titanium%2C%208th%20Word%2C%20Congress%2C%20Institute%20of%20Metals%2C%20London%2C%201996%2C%20p.%20121."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">104.</div><div class="CitationContent" id="CR104">J.W. Lee, S. Hanada, and M.H. Yoo: <em class="EmphasisTypeItalic ">Scripta Metall. Mater.</em>, 1995, vol. 33, pp. 509–14.<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0956-716X(95)00260-3"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.W..%20Lee&amp;author=S..%20Hanada&amp;author=M.H..%20Yoo&amp;journal=Scripta%20Metall.%20Mater.&amp;volume=33&amp;pages=509-14&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">105.</div><div class="CitationContent" id="CR105">M.H. Yoo and M. Yamaguchi: <em class="EmphasisTypeItalic ">Microstructure and Properties of Materials</em>, J.C.M. Li, ed., World Science, Singapore, 2001, vol. 2, pp. 79–138.<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.H..%20Yoo&amp;author=M..%20Yamaguchi&amp;pages=79-138&amp;publication_year=2001"><span><span>Google Scholar</span></span></a></span></span></div></li></ol></div></section><section class="Section1 RenderAsSection1"><h2 class="Heading" id="copyrightInformation">Copyright information</h2><div class="ArticleCopyright content"><div class="ArticleCopyright">© ASM International &amp; TMS-The Minerals Metals and Materials Society 2002</div></div></section><section id="authorsandaffiliations" class="Section1 RenderAsSection1"><h2 class="Heading">Authors and Affiliations</h2><div class="content authors-affiliations u-interface"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">M. H. Yoo</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">J. R. Morris</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-2">2</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">K. M. Ho</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-2">2</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">S. R. Agnew</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-3">3</li></ul></li></ul><ol class="test-affiliations"><li class="affiliation" data-test="affiliation-1" data-affiliation-highlight="affiliation-1" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">1.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">Metals and Ceramics Division</span><span itemprop="name" class="affiliation__name">Oak Ridge National Laboratory</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressRegion" class="affiliation__city">Oak Ridge</span></span></span></li><li class="affiliation" data-test="affiliation-2" data-affiliation-highlight="affiliation-2" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">2.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">Ames Laboratory</span><span itemprop="name" class="affiliation__name">Iowa State University</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressRegion" class="affiliation__city">Ames</span></span></span></li><li class="affiliation" data-test="affiliation-3" data-affiliation-highlight="affiliation-3" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">3.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">Department of Materials Science and Engineering</span><span itemprop="name" class="affiliation__name">University of Virginia</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressRegion" class="affiliation__city">Charlottesville</span></span></span></li></ol></div></section></div>
+                        </article>
+                        <aside class="section section--collapsible" id="AboutThisContent">
+    <h2 class="section__heading" id="aboutcontent">About this article</h2>
+    <div class="section__content bibliographic-information">
+        
+        <div class="crossmark__adjacent">
+            <dl class="citation-info u-highlight-target u-mb-16" id="citeas">
+    <dt class="test-cite-heading">
+        Cite this article as:
+    </dt>
+    <dd id="citethis-text">Yoo, M.H., Morris, J.R., Ho, K.M. et al. Metall and Mat Trans A (2002) 33: 813. https://doi.org/10.1007/s11661-002-1013-5</dd>
+</dl>
+                <ul class="bibliographic-information__list bibliographic-information__list--inline">
+        <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title"><abbr title="Digital Object Identifier">DOI</abbr></span>
+            <span class="bibliographic-information__value u-overflow-wrap" id="doi-url">https://doi.org/10.1007/s11661-002-1013-5</span>
+        </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Publisher Name</span>
+                <span class="bibliographic-information__value" id="publisher-name">Springer-Verlag</span>
+            </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Print ISSN</span>
+                <span class="bibliographic-information__value" id="print-issn">1073-5623</span>
+            </li>
+            <li class="bibliographic-information__item ">
+                <span class="bibliographic-information__title">Online ISSN</span>
+                <span class="bibliographic-information__value" id="electronic-issn">1543-1940</span>
+            </li>
+
+        
+    </ul>
+
+            <ul class="bibliographic-information__list">
+        <li class="bibliographic-information__item">
+            <a id="about-journal" class="bibliographic-information__misc-links gtm-about-this"
+               title="Visit Springer.com for information about this article&#39;s journal"
+               href="//www.springer.com/journal/11661/about">About this journal</a>
+        </li>
+                    <li class="bibliographic-information__item">
+                        <a id="reprintsandpermissions-link" class="u-external" target="_blank" rel="noopener" href="https://s100.copyright.com/AppDispatchServlet?publisherName&#x3D;SpringerNature&amp;orderBeanReset&#x3D;true&amp;orderSource&#x3D;SpringerLink&amp;author&#x3D;M.+H.+Yoo%2C+J.+R.+Morris%2C+K.+M.+Ho+et+al&amp;issueNum&#x3D;13&amp;contentID&#x3D;10.1007%2Fs11661-002-1013-5&amp;openAccess&#x3D;false&amp;endPage&#x3D;822&amp;publicationDate&#x3D;2002&amp;startPage&#x3D;813&amp;volumeNum&#x3D;33&amp;title&#x3D;Nonbasal+deformation+modes+of+HCP+metals+and+alloys%3A+Role+of+dislocation+source+and+mobility&amp;imprint&#x3D;ASM+International+%26+TMS-The+Minerals+Metals+and+Materials+Society&amp;publication&#x3D;1073-5623" title="Visit RightsLink for information about reusing this article">Reprints and Permissions</a>
+                    </li>
+</ul>
+
+        </div>
+      
+      
+          
+    </div>
+</aside>
+
+                        <div class="section section--collapsible uptodate-recommendations gtm-recommendations">
+    <h2 class="uptodate-recommendations__title section__heading gtm-recommendations__title" id="uptodaterecommendations">Personalised recommendations</h2>
+    <div class="section__content">
+        <div class="uptodate-recommendations__container">
+             <link rel="uptodate-inline" href="/springerlink-static/1287432902/css/recommendations.css"/>
+        </div>
+    </div>
+</div>
+                        
+
+    <div class="sticky-banner sticky-banner--buybox u-interface u-js-screenreader-only" aria-hidden="true" data-component="SpringerLink.StickyBanner" data-namespace="hasLink">
+        <div class="sticky-banner__container">
+                <div class="citations" data-component="SV.Dropdown" data-namespace="citationsSticky">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">article</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" class="gtm-cite-dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/s11661-002-1013-5?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this article&#39;s citation as a .RIS file" class="gtm-export-citation" data-gtmlabel="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/s11661-002-1013-5?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this article&#39;s citation as a .ENW file" class="gtm-export-citation" data-gtmlabel="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/s11661-002-1013-5?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this article&#39;s citation as a .BIB file" class="gtm-export-citation" data-gtmlabel="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                
+
+
+
+                <div class="sticky-banner__buybox-link sticky-banner__buybox-link--sticky">
+        <a href="#buy" class="gtm-buybox-anchor">
+            Buy options
+        </a>
+    </div>
+
+        </div>
+    </div>
+
+
+                    </div>
+                    <aside class="main-sidebar-right u-interface">
+                        <div data-role="sticky-wrapper">
+                            <div class="main-sidebar-right__content u-composite-layer" data-component="SpringerLink.StickySidebar">
+                                <div class="article-actions" id="article-actions">
+                                    <h2 class="u-screenreader-only">Actions</h2>
+
+                                        <div id="buy">
+                                            
+
+<style type="text/css">
+    .buybox {
+        margin: 16px 0 0;
+        position: relative;
+    }
+    .buybox {
+        font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+    .buybox {
+        zoom: 1;
+    }
+    .buybox:after,
+    .buybox:before {
+        content: '';
+        display: table;
+    }
+    .buybox:after {
+        clear: both;
+    }
+    /*---------------------------------*/
+    .buybox .buybox__header {
+        border: 1px solid #b3b3b3;
+        border-bottom: 0;
+        padding: 8px;
+        position: relative;
+        background-color: #f2f2f2;
+    }
+    .buybox__header .buybox__login {
+        font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        letter-spacing: .017em;
+        display: inline-block;
+        line-height: 1.2;
+        padding: 0;
+    }
+    .buybox__header .buybox__login:before {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: perspective(1px) translateY(-50%);
+        transform: perspective(1px) translateY(-50%);
+        content: '\A';
+        width: 34px;
+        height: 34px;
+        left: 10px;
+    }
+    /*---------------------------------*/
+    .buybox .buybox__body {
+        padding: 0;
+        padding-bottom: 16px;
+        position: relative;
+        text-align: center;
+        background-color: #fcfcfc;
+        border: 1px solid #b3b3b3;
+    }
+    /******/
+    .buybox__body .buybox__section {
+        padding: 16px 12px 0 12px;
+        text-align: left;
+    }
+    .buybox__section .buybox__buttons {
+        text-align: center;
+        width: 100%;
+    }
+    /********** mycopy buybox specific **********/
+    .buybox.mycopy__buybox .buybox__body {
+        background-color: transparent;
+    }
+    .buybox.mycopy__buybox .buybox__section .buybox__buttons {
+        border-top: 0;
+        padding-top: 0;
+    }
+    /******/
+    .buybox__section:nth-child(2) .buybox__buttons {
+        border-top: 1px solid #b3b3b3;
+        padding-top: 20px;
+    }
+    .buybox__buttons .buybox__buy-button {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 5px;
+        padding: 6px 12px;
+        max-width: 180px
+    }
+    .buybox__buttons .buybox__price {
+        white-space: nowrap;
+        text-align: center;
+        font-size: larger;
+        padding-top: 6px;
+    }
+    .buybox__section .buybox__meta {
+        letter-spacing: 0;
+        padding-top: 12px;
+    }
+    .buybox__section .buybox__meta:only-of-type {
+        padding-top: 0;
+        position: relative;
+        bottom: 6px;
+    }
+    /********** mycopy buybox specific **********/
+    .buybox.mycopy__buybox .buybox__section .buybox__meta {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    /******/
+    .buybox__meta .buybox__product-title {
+        display: inline;
+        font-weight: bold;
+    }
+    .buybox__meta .buybox__list {
+        line-height: 1.3;
+    }
+    .buybox__meta .buybox__list li {
+        position: relative;
+        padding-left: 1em;
+        list-style: none;
+        margin-bottom: 5px;
+    }
+    .buybox__meta .buybox__list li:before {
+        font-size: 1em;
+        content: '\2022';
+        float: left;
+        position: relative;
+        top: .1em;
+        font-family: serif;
+        font-weight: 600;
+        text-align: center;
+        line-height: inherit;
+        color: #666;
+        width: auto;
+        margin-left: -1em;
+    }
+    .buybox__meta .buybox__list li:last-child {
+        margin-bottom: 0;
+    }
+    /********** chapter buybox specific **********/
+    .buybox.chapter__buybox .buybox__section .buybox__meta {
+        border-top: 1px solid #d3d3d3;
+        padding-top: 12px;
+    }
+    .buybox.chapter__buybox .buybox__section .buybox__buy-ebook {
+        margin-bottom: 12px;
+    }
+    /******/
+    /*---------------------------------*/
+    .buybox .buybox__footer {
+        border: 1px solid #b3b3b3;
+        border-top: 0;
+        padding: 8px;
+        position: relative;
+        border-style: dashed;
+        line-height: 1.3;
+    }
+    .buybox .deepdyve {
+        display: none;
+        text-align: left;
+        margin: 8px 12px 0 12px;
+        padding-top: 5px;
+        border-top: 1px solid #d3d3d3;
+    }
+    /*-----------------------------------------------------------------*/
+    @media screen and (min-width: 460px) and (max-width: 1074px) {
+        .buybox__body .buybox__section {
+            display: inline-block;
+            vertical-align: top;
+            padding: 12px 12px;
+            padding-bottom: 0;
+            text-align: left;
+            width: 48%;
+        }
+        .buybox__body .buybox__section {
+            padding-top: 16px;
+            padding-left: 0;
+        }
+        .buybox__section:nth-of-type(2) .buybox__meta {
+            border-left: 1px solid #d3d3d3;
+            padding-left: 28px;
+        }
+        .buybox__section:nth-of-type(2) .buybox__buttons {
+            border-top: 0;
+            padding-top: 0;
+            padding-left: 16px ;
+        }
+        .buybox__buttons .buybox__buy-button {
+        }
+        /********** article buybox specific **********/
+        .buybox.article__buybox .buybox__section:nth-of-type(2) {
+            margin-top: 16px;
+            padding-top: 0;
+        }
+        .buybox.article__buybox .buybox__section:nth-of-type(2) .buybox__meta {
+            margin-top: 40px;
+            padding-top: 0;
+            padding-bottom: 45px;
+        }
+        .buybox.article__buybox .buybox__section:nth-of-type(2) .buybox__meta:only-of-type {
+            margin-top: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        /********** mycopy buybox specific **********/
+        .buybox.mycopy__buybox .buybox__section:first-child {
+            width: 69%;
+            padding-left: 12px ;
+        }
+        .buybox.mycopy__buybox .buybox__section:last-child {
+            width: 29%;
+        }
+        /********** chapter buybox specific **********/
+        .buybox.chapter__buybox .buybox__body {
+            display: flex;
+            align-items: stretch;
+            padding-left: 12px;
+            padding-top: 12px;
+        }
+        .buybox.chapter__buybox .buybox__section .buybox__meta {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-top: 0;
+            padding-top: 0;
+        }
+        /******/
+    }
+    /*-----------------------------------------------------------------*/
+    @media screen and (max-width: 459px) {
+        /********** mycopy buybox specific **********/
+        .buybox.mycopy__buybox .buybox__body {
+            padding-bottom: 5px;
+        }
+        .buybox.mycopy__buybox .buybox__section:last-child {
+            text-align: center;
+            width: 100%;
+        }
+        .buybox.mycopy__buybox .buybox__buttons {
+            display: inline-block;
+            width: 150px ;
+        }
+        /******/
+    }
+    /*-----------------------------------------------------------------*/
+</style>
+
+<div class="buybox article__buybox" data-webtrekkTrackId="196033507532344" data-webtrekkContentId="SL-article">
+    <div class="buybox__header">
+        <span class="buybox__login">Log in to check access</span>
+    </div>
+    <div class="buybox__body">
+        <div class="buybox__section">
+            <div class="buybox__buttons">
+                <form class="buybox__form" action="https://checkout.springer.com/checkout/add?wt_mc=ThirdParty.SpringerLink.3.EPR653.AbstractPage_Article-new" method="POST">
+                    
+                        <input type="hidden" name="type" value="article"/>
+                    
+                        <input type="hidden" name="doi" value="10.1007/s11661-002-1013-5"/>
+                    
+                        <input type="hidden" name="isxn" value="1543-1940"/>
+                    
+                        <input type="hidden" name="contenttitle" value="Nonbasal deformation modes of HCP metals and alloys: Role of dislocation source and mobility"/>
+                    
+                        <input type="hidden" name="copyrightyear" value="2002"/>
+                    
+                        <input type="hidden" name="year" value=""/>
+                    
+                        <input type="hidden" name="authors" value="M. H. Yoo, et al."/>
+                    
+                        <input type="hidden" name="title" value="Metallurgical and Materials Transactions A"/>
+                    
+                        <input type="hidden" name="mac" value="d9793e3bb5f74b16a4b0ea0aa1bee116"/>
+                    
+                        <input type="hidden" name="returnurl" value="http://link.springer.com/article/10.1007/s11661-002-1013-5"/>
+                    
+                    <button
+                        class="buybox__buy-button c-button c-button--blue"
+                        data-product-id="10.1007/s11661-002-1013-5_Nonbasal deformation modes of HCP "
+                        data-tracking-category="ppv"
+                        data-eCommerceParam_11="article-page"
+                        data-gtm="buybox__buy-button">
+                        <span class="buybox__buy" data-gtm="buybox__buy-button">Buy (PDF)</span>
+                    </button>
+                    <div class="buybox__price" data-gtm="buybox__buy-button">
+                        GBP&nbsp;35.94
+                    </div>
+                </form>
+            </div>
+        
+            <div class="buybox__meta">
+                <ul class="buybox__list">
+                    <li>Unlimited access to the full article</li>
+                    <li>Instant download</li>
+                    <li>Include local sales tax if applicable</li>
+                </ul>
+            </div>
+        </div>
+        
+            <div class="buybox__section">
+                <div class="buybox__buttons">
+                    <a
+                    href="http://www.springer.com/11661?wt_mc=ThirdParty.SpringerLink.3.EPR653.ArticlePage_journal"
+                    class="buybox__buy-button c-button c-button--blue"
+                    data-gtm="buybox__buy-button-subscription">
+                        <span class="buybox__buy" data-gtm="buybox__buy-button">Subscribe to Journal</span>
+                    </a>
+                </div>
+                <div class="buybox__meta">
+                    Get Access to
+                    <div class="buybox__product-title">Metallurgical and Materials Transactions A</div>
+                    for the whole of 2018
+                </div>
+            </div>
+        
+        
+<div id="deepdyve" class="deepdyve">
+    <a id="deepdyve-link" href="#" target="deepdyve">Rent this article via DeepDyve</a>
+</div>
+<script type="text/javascript">
+    function deepDyveResponse(data) {
+        if(data.status === "ok") {
+            document.getElementById("deepdyve").style.display = "inline-block";
+            document.getElementById("deepdyve-link").setAttribute("href", data.url);
+        }
+    }
+    var script = document.createElement('script');
+    script.src = "//www.deepdyve.com/rental-link?docId=10.1007/s11661-002-1013-5&journal=1543-1940&fieldName=journal_doi&affiliateId=springer&format=jsonp&callback=deepDyveResponse";
+    document.body.appendChild(script);
+</script>
+    </div>
+    <div class="buybox__footer">
+        <a class="js-buybox__inst-sub-link" data-gtm="buybox__inst-sub-link" href="http://www.springer.com/gp/shop/subscriptions?wt_mc=ThirdParty.SpringerLink.3.EPR653.ArticlePage_Institutional-customers">
+            Learn about institutional subscriptions</a>
+    </div>
+</div>
+
+<script>
+(function () {
+    var forEach = function (array, callback, scope) {
+        for (var i = 0; i < array.length; i++) {
+            callback.call(scope, i, array[i]);
+        }
+    };
+
+    var trackDomain = 'springergmbh01.webtrekk.net';
+    var domain = 'link.springer.com';
+    var loadEventSent = false;
+
+    var buyboxRoot = document.getElementsByClassName('buybox')[0];
+    var webtrekkTrackId = buyboxRoot.getAttribute('data-webtrekkTrackId');
+    var webtrekkContentId = buyboxRoot.getAttribute('data-webtrekkContentId');
+
+    function LinkTrack(webtrekkTrackId) {
+        if (!webtrekkTrackId) return;
+
+        var data = {
+            trackDomain: trackDomain,
+            trackId: webtrekkTrackId,
+            domain: domain,
+            contentId: 'springer_com.buybox',
+            customSessionParameter: {
+                2: getBusinessPartnerIds()
+            }
+        };
+
+        if (!window.webtrekkV3 && console) {
+            console.log('No webtrekk found.', data);
+            return;
+        }
+
+        return new webtrekkV3(data);
+    }
+
+    function Track(product, webtrekkTrackId, eCommerceParam_11, action) {
+        if (!product) return;
+
+        var data = {
+            trackDomain: trackDomain,
+            trackId: webtrekkTrackId,
+            domain: domain,
+            contentId: webtrekkContentId,
+            product: product.id,
+            productStatus: action,
+            productCategory: {
+                1: product.trackingCategory
+            },
+            customEcommerceParameter: {
+                9: domain,
+                11: eCommerceParam_11
+            },
+            customSessionParameter: {
+                2: getBusinessPartnerIds()
+            }
+        };
+
+        if (!window.webtrekkV3 && console) {
+            console.log('No webtrekk found.', data);
+            return;
+        }
+
+        return new webtrekkV3(data);
+    }
+
+    function track(trackingConfig) {
+        return function(payload) {
+            if (!trackingConfig) return
+            if (payload) {
+                trackingConfig.sendinfo(payload)
+            } else {
+                trackingConfig.sendinfo()
+            }
+            return true
+        }
+    }
+
+    function trackAddToCart(trackingConfig) {
+        return track(trackingConfig)()
+    }
+
+    function trackOnLoad(trackingConfig) {
+        if (loadEventSent) return;
+        loadEventSent = true;
+        return track(trackingConfig)()
+    }
+
+    function trackSubscription(trackingConfig) {
+        return track(trackingConfig)({linkId: 'inst. subscription info'})
+    }
+
+    function trackDeepDyve(trackingConfig) {
+        return track(trackingConfig)({linkId: 'Rent Article'})
+    }
+
+    function getBusinessPartnerIds() {
+        var businessPartnerIDs = [];
+        try {
+            var ids = window.dataLayer[0]["user"]["license"]["businessPartnerID"];
+            if(ids && ids.length) businessPartnerIDs = ids;
+        } catch(e) {}
+        return businessPartnerIDs.join(";");
+    }
+
+    var bindClickLinkHandle = function (link) {
+        if (!link) return;
+
+        link.addEventListener('click', function (event) {
+            trackSubscription(LinkTrack(webtrekkTrackId));
+        });
+    };
+
+    var bindLoadButtonHandle = function (button) {
+        if (!button) return;
+
+        var productId = button.getAttribute('data-product-id');
+        var trackingCategory = button.getAttribute('data-tracking-category');
+        var eCommerceParam_11 = button.getAttribute('data-eCommerceParam_11');
+
+        window.addEventListener('load', function (event) {
+            trackOnLoad(Track({
+                id: productId,
+                trackingCategory: trackingCategory
+            }, webtrekkTrackId, eCommerceParam_11, 'view'));
+        });
+    };
+
+    var bindClickButtonHandle = function (button) {
+        if (!button) return;
+
+        var productId = button.getAttribute('data-product-id');
+        var trackingCategory = button.getAttribute('data-tracking-category');
+        var eCommerceParam_11 = button.getAttribute('data-eCommerceParam_11');
+
+        button.addEventListener('click', function (event) {
+            trackAddToCart(Track({
+                id: productId,
+                trackingCategory: trackingCategory
+            }, webtrekkTrackId, eCommerceParam_11, 'add'));
+        });
+    };
+
+    var buyButtons = document.getElementsByClassName('buybox__buy-button');
+    forEach(buyButtons, function (index, button) {
+        bindLoadButtonHandle(button);
+        bindClickButtonHandle(button);
+    });
+
+    var sublinks = document.getElementsByClassName('js-buybox__inst-sub-link');
+    forEach(sublinks, function (index, link) {
+        bindClickLinkHandle(link);
+    });
+
+    var bindDeepDyveClickHandle = function (link) {
+        if (!link) return
+
+        link.addEventListener('click', function (event) {
+            trackDeepDyve(LinkTrack(webtrekkTrackId))
+        })
+    }
+
+    var deepDyveLink = document.getElementById('deepdyve-link')
+    bindDeepDyveClickHandle(deepDyveLink)
+})();
+</script>
+
+                                        </div>
+
+                                    <div class="u-js-hide u-js-show-two-col">
+                                        
+
+
+
+                                            <div class="citations" data-component="SV.Dropdown" data-namespace="citations">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">article</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" class="gtm-cite-dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/s11661-002-1013-5?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this article&#39;s citation as a .RIS file" class="gtm-export-citation" data-gtmlabel="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/s11661-002-1013-5?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this article&#39;s citation as a .ENW file" class="gtm-export-citation" data-gtmlabel="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/s11661-002-1013-5?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this article&#39;s citation as a .BIB file" class="gtm-export-citation" data-gtmlabel="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                                            
+
+
+
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                                <div class="skyscraper-ad u-hide" data-component="SpringerLink.GoogleAds" data-namespace="skyscraper"></div>
+
+                        </div>
+                    </aside>
+                </div>
+            </main>
+            <section class="banner banner--cookies-policy u-js-hide u-composite-layer" data-component="SpringerLink.CookiePolicy">
+    <div class="banner__content u-interface">
+        <h2 class="u-screenreader-only">Cookies</h2>
+        <span class="banner__cookie-text">We use cookies to improve your experience with our site.</span>
+        <a class="banner__link banner__link--cookie" href="/termsandconditions#cookies">More information</a>
+
+        <form class="banner__form" action="/acceptcookies" method="POST">
+            <button class="u-link-like banner__right-ui">Accept</button>
+        </form>
+    </div>
+</section>
+
+                <footer class="footer u-interface">
+        <div class="footer__aside-wrapper">
+            <div class="footer__content">
+                <div class="footer__aside">
+                    <p class="footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                                <div class="footer__edition" data-component="SpringerLink.EditionSwitcher">
+                                    <h3 class="u-hide" data-role="button-dropdown__title" data-btn-text="Switch between Academic &#38; Corporate Edition">Switch Edition</h3>
+                                    <ul data-role="button-dropdown__content">
+                                        <li class="selected"><a href="/siteEdition/link" id="siteedition-academic-link">Academic Edition</a></li>
+                                        <li><a href="/siteEdition/rd" id="siteedition-corporate-link">Corporate Edition</a></li>
+                                    </ul>
+                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <ul class="footer__nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/impressum">Impressum</a>
+                </li>
+                <li>
+                    <a href="/termsandconditions">Legal information</a>
+                </li>
+                <li>
+                    <a href="/accessibility" class="gtm-footer-accessibility">Accessibility</a>
+                </li>
+                <li>
+                    <a id="contactus-footer-link" href="/contactus">Contact us</a>
+                </li>
+            </ul>
+            <a class="parent-logo"
+               target="_blank" rel="noopener"
+               href="//www.springernature.com"
+               title="Go to Springer Nature">
+                <span class="u-screenreader-only">Springer Nature</span>
+                <svg width="125" height="12">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src="/springerlink-static/1287432902/images/png/springernature.png"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href="/springerlink-static/1287432902/images/svg/springernature.svg">
+                    </image>
+                </svg>
+            </a>
+
+            <p class="footer__copyright">&copy; 2017 Springer International Publishing AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+
+                <p class="footer__user-access-info">
+                    <span>Not logged in</span>
+                    <span>Not affiliated</span>
+                    <span>5.71.125.68</span>
+                </p>
+        </div>
+    </footer>
+
+        </div>
+        
+<script type="text/javascript">
+    (function() {
+        var linkEl = document.querySelector('.js-ctm');
+        var scriptsList = [];
+        var polyfillFeatures = '';
+
+        if (window.matchMedia && window.matchMedia(linkEl.media)) {
+            (function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement);
+            
+            window.SpringerLink = window.SpringerLink || {};
+            window.SpringerLink.staticLocation = '/springerlink-static/1287432902';
+            
+            polyfillFeatures = 'default,fetch,Promise,Object.setPrototypeOf,Object.entries,Number.isInteger,MutationObserver';
+            
+            scriptsList = [
+                window.SpringerLink.staticLocation + '/js/jquery-3.2.1.min.js',
+                window.SpringerLink.staticLocation + '/js/mustache-2.3.0.min.js',
+                'https://cdn.polyfill.io/v2/polyfill.js?features=' + polyfillFeatures,
+                window.SpringerLink.staticLocation + '/js/main.js'
+            ];
+
+            scriptsList.forEach(function(script) {
+                var tag = document.createElement('script');
+                
+                tag.async = false;
+                tag.src = script;
+
+                document.body.appendChild(tag);
+            });
+        }
+    })();
+</script>
+
+<script>
+
+   function viewport() {
+        if (document.documentElement.clientWidth < 620) {
+            size = 'small';
+        }
+        else if(document.documentElement.clientWidth < 1075 ) {
+            size = 'medium';
+        }
+        else {
+            size = 'wide';
+        }
+        return size;
+    };
+
+    function reportForMouseEvents(linkCssSelectors, nolardUrl, experiment, abgroup) {
+        var counter = 0;
+        linkCssSelectors.forEach(function(cssSelector) {
+            $('body').delegate(cssSelector, 'click', function() {
+                if(counter == 0) {
+                    reportConversion(nolardUrl, experiment, abgroup);
+                    counter++;
+                }
+            });
+        });
+    };
+
+    function reportConversion(nolardUrl, experiment, abgroup) {
+        $.ajax({ url: nolardUrl + '/convert/' + experiment + '/' + abgroup });
+    };
+
+    function reportForMouseEvent(linkCssSelector, nolardUrl, experiment, abgroup) {
+        var counter = 0;
+        var elem = document.querySelector(linkCssSelector)
+
+        if (elem.addEventListener) {
+            elem.addEventListener("click", function(e) {
+                if(counter == 0) {
+                    reportConversion(nolardUrl, experiment, abgroup);
+                    counter++;
+                }
+            });
+        } else  {
+            elem.attachEvent("click", function(e) {
+                if(counter == 0) {
+                    reportConversion(nolardUrl, experiment, abgroup);
+                    counter++;
+                }
+            });
+        }
+    };
+
+    function reportParticipation(nolardUrl, experiment, abgroup, participations) {
+        if (participations)
+            participations.push(experiment + '/' + abgroup)
+
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', nolardUrl + '/participate/' + experiment + '/' + abgroup);
+        xhr.send();
+    };
+
+        function recordCurrentExperiment() {
+            var participations = [];
+            if (document.querySelector('#reprintsandpermissions-bottom-link') !== null) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureoff', participations);
+                reportForMouseEvent('#reprintsandpermissions-bottom-link', 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureoff');
+            } else if(document.querySelector('#reprintsandpermissions-top-link') !== null) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureon', participations);
+                reportForMouseEvent('#reprintsandpermissions-top-link', 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureon');
+            }
+            return participations;
+        };
+
+</script>
+
+<script>
+    window.onload = function() {
+    var linkEl = document.querySelector('.js-ctm');
+
+
+        if (window.matchMedia && window.matchMedia(linkEl.media)) {
+          var bookProductType = dataLayer[0].content && dataLayer[0].content.book && dataLayer[0].content.book.bookProductType
+          var hasBody = dataLayer[0]['Has Body'] == 'Y';
+          var userHasAccess = dataLayer[0]['HasAccess'] == 'Y';
+          var liveOrStatic = dataLayer[0].content && dataLayer[0].content.version
+
+          // Baseline reference work page
+          var isReferenceWork = window.location.pathname.startsWith('/referencework/');
+          var isReferenceWorkEntry = window.location.pathname.startsWith('/referenceworkentry/');
+          var isEncOrDict = bookProductType == 'Encyclop(a)edia' || bookProductType == 'Dictionary';
+
+          // Baseline static reference work entry page pdf download
+          if (isReferenceWorkEntry && isEncOrDict && $('.test-rwepdf-link').length) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-pdf-download', 'baseline');
+            reportForMouseEvents(['.test-rwepdf-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-pdf-download', 'baseline');
+          }
+          if (isReferenceWorkEntry && !isEncOrDict && $('.gtm-pdf-link').length) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-pdf-download', 'baseline');
+            reportForMouseEvents(['.gtm-pdf-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-pdf-download', 'baseline');
+
+            if (($('.test-bookpdf-link').length || $('.test-bookepub-link').length)) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+                reportForMouseEvents(['.test-bookpdf-link', 'test-bookepub-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+            }
+          }
+
+          // Baseline static reference work page pdf download
+          if (isReferenceWork && isEncOrDict && ($('.test-bookpdf-link').length || $('.test-bookepub-link').length)) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-enc-book-download', 'baseline');
+              reportForMouseEvents(['.test-bookpdf-link', 'test-bookepub-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-enc-book-download', 'baseline');
+          }
+
+          if (isReferenceWork && !isEncOrDict) {
+            if (($('.test-bookpdf-link').length || $('.test-bookepub-link').length)) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+                reportForMouseEvents(['.test-bookpdf-link', 'test-bookepub-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+            }
+
+            if ($('.test-book-toc-download-link').length) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-pdf-download', 'baseline');
+                reportForMouseEvents(['.test-book-toc-download-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-pdf-download', 'baseline');
+            }
+          }
+
+          // Baseline static rwe page fulltext html view with access
+          if (isReferenceWorkEntry && isEncOrDict && hasBody) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-html-download', 'baseline');
+            if (userHasAccess)
+                reportConversion('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-html-download', 'baseline');
+          }
+          if (isReferenceWorkEntry && !isEncOrDict && hasBody) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-html-download', 'baseline');
+            if (userHasAccess)
+                reportConversion('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-html-download', 'baseline');
+          }
+      }
+
+            if (window.matchMedia && window.matchMedia(linkEl.media)) {
+                recordCurrentExperiment()
+            }
+   };
+
+</script>
+
+<script class="kxct" data-id="KDqyaFZ_" data-timing="async" data-version="3.0" type="text/javascript">
+ window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+ (function(){
+   var k=document.createElement('script');k.type='text/javascript';k.async=true;
+   k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/KDqyaFZ_.js';
+   var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+ }());
+</script>
+
+<script>
+    window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+    (function(){
+        function retrieve(n){
+            var m, k='kx'+n;
+            if (window.localStorage) {
+                return window.localStorage[k] || "";
+            } else if (navigator.cookieEnabled) {
+                m = document.cookie.match(k+'=([^;]*)');
+                return (m && unescape(m[1])) || "";
+            } else {
+                return '';
+            }
+        }
+        Krux.user = retrieve('user');
+        Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+    })();
+</script>
+
+    <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                    '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script type="text/javascript" id="googletag-push">
+        
+            var adSlot = '270604982/springerlink/11661/article';
+        
+
+        var definedSlots = [
+                {slot: [728, 90], containerName: 'doubleclick-leaderboard-ad'},
+                {slot: [160, 600], containerName: 'doubleclick-ad'},
+        ];
+
+        googletag.cmd.push(function() {
+                googletag.pubads().setTargeting("doi","10.1007-s11661-002-1013-5");
+                googletag.pubads().setTargeting("pmc",["C","C32000","C32060","C32010","C21001","C32080"]);
+                googletag.pubads().setTargeting("BPID",["1"]);
+                googletag.pubads().setTargeting("edition","academic");
+                googletag.pubads().setTargeting("eissn","1543-1940");
+                googletag.pubads().setTargeting("pissn","1073-5623");
+                googletag.pubads().setTargeting("ksg",Krux.segments);
+                googletag.pubads().setTargeting("kuid",Krux.uid);
+                googletag.pubads().setTargeting("logged","N");
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableAsyncRendering();
+            googletag.enableServices();
+        });
+    </script>
+
+
+        
+        <span id="chat-widget" class="u-hide"></span>
+        
+    </body>
+</html>

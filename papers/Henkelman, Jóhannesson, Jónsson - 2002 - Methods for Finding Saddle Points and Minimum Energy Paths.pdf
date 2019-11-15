@@ -1,0 +1,1365 @@
+<!DOCTYPE HTML>
+<html lang="en-gb" class="no-js">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+    <meta name="citation_publisher" content="Springer, Dordrecht"/>
+    <meta name="citation_title" content="Methods for Finding Saddle Points and Minimum Energy Paths"/>
+    <meta name="citation_doi" content="10.1007/0-306-46949-9_10"/>
+    <meta name="citation_language" content="en"/>
+    <meta name="citation_abstract_html_url" content="https://link.springer.com/chapter/10.1007/0-306-46949-9_10"/>
+    <meta name="citation_fulltext_html_url" content="https://link.springer.com/chapter/10.1007/0-306-46949-9_10"/>
+    <meta name="citation_pdf_url" content="https://link.springer.com/content/pdf/10.1007%2F0-306-46949-9_10.pdf"/>
+    <meta name="citation_springer_api_url" content="http://api.springer.com/metadata/pam?q=doi:10.1007/0-306-46949-9_10&amp;api_key="/>
+    <meta name="citation_firstpage" content="269"/>
+    <meta name="citation_lastpage" content="302"/>
+    <meta name="citation_author" content="Graeme Henkelman"/>
+    <meta name="citation_author_institution" content="University of Washington"/>
+    <meta name="citation_author" content="Gísli Jóhannesson"/>
+    <meta name="citation_author_institution" content="University of Washington"/>
+    <meta name="citation_author" content="Hannes Jónsson"/>
+    <meta name="citation_author_institution" content="University of Washington"/>
+    <meta name="dc.identifier" content="10.1007/0-306-46949-9_10"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="The problem of finding minimum energy paths and, in particular, saddle points on high dimensional potential energy surfaces is discussed. Several different methods are reviewed and their efficiency..."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Methods for Finding Saddle Points and Minimum Energy Paths"/>
+    <meta name="twitter:image" content="https://static-content.springer.com/cover/book/978-0-306-46949-7.jpg"/>
+    <meta name="twitter:image:alt" content="Content cover image"/>
+    <meta name="twitter:site" content="SpringerLink"/>
+    <meta name="twitter:description" content="The problem of finding minimum energy paths and, in particular, saddle points on high dimensional potential energy surfaces is discussed. Several different methods are reviewed and their efficiency..."/>
+    <meta name="citation_inbook_title" content="Theoretical Methods in Condensed Phase Chemistry"/>
+    <meta name="citation_publication_date" content="2002"/>
+    <meta property="og:title" content="Methods for Finding Saddle Points and Minimum Energy Paths"/>
+    <meta property="og:type" content="Paper"/>
+    <meta property="og:url" content="https://link.springer.com/chapter/10.1007/0-306-46949-9_10"/>
+    <meta property="og:image" content="https://static-content.springer.com/cover/book/978-0-306-46949-7.jpg"/>
+    <meta property="og:site_name" content="SpringerLink"/>
+    <meta property="og:description" content="The problem of finding minimum energy paths and, in particular, saddle points on high dimensional potential energy surfaces is discussed. Several different methods are reviewed and their efficiency..."/>
+
+        <title>Methods for Finding Saddle Points and Minimum Energy Paths | SpringerLink</title>
+        <link rel="canonical" href="https://link.springer.com/chapter/10.1007/0-306-46949-9_10"/>
+        <link rel="shortcut icon" href="/springerlink-static/1294705540/images/favicon/favicon.ico" />
+<link rel="icon" sizes="16x16 32x32 48x48" href="/springerlink-static/1294705540/images/favicon/favicon.ico">
+<link rel="icon" sizes="16x16" type="image/png" href="/springerlink-static/1294705540/images/favicon/favicon-16x16.png">
+<link rel="icon" sizes="32x32" type="image/png" href="/springerlink-static/1294705540/images/favicon/favicon-32x32.png">
+<link rel="icon" sizes="48x48" type="image/png" href="/springerlink-static/1294705540/images/favicon/favicon-48x48.png">
+<link rel="apple-touch-icon" href="/springerlink-static/1294705540/images/favicon/app-icon-iphone@3x.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/springerlink-static/1294705540/images/favicon/ic_launcher_hdpi.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/springerlink-static/1294705540/images/favicon/app-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/springerlink-static/1294705540/images/favicon/app-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/springerlink-static/1294705540/images/favicon/app-icon-iphone@2x.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/springerlink-static/1294705540/images/favicon/ic_launcher_xxhdpi.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/springerlink-static/1294705540/images/favicon/app-icon-ipad@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/springerlink-static/1294705540/images/favicon/app-icon-iphone@3x.png" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/springerlink-static/1294705540/images/favicon/ic_launcher_xxhdpi.png">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//www.googletagservices.com" />
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//static-content.springer.com" />
+        <link rel="stylesheet" href="/springerlink-static/1294705540/css/basic.css" media="screen">
+<link rel="stylesheet" href="/springerlink-static/1294705540/css/styles.css" class="js-ctm" media="only screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0), (-ms-high-contrast: none), only all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm)">
+<link rel="stylesheet" href="/springerlink-static/1294705540/css/print.css" media="print">
+
+
+            <script>
+        var dataLayer = [{
+                'GA Key':'UA-26408784-1',
+                'Features':["leaderboardadverts","abtesting","reprintsandpermissionsabtest"],
+                'Event Category':'Chapter',
+                'Open Access':'N',
+                'Labs':'Y',
+                'DOI':'10.1007\/0-306-46949-9_10',
+                'VG Wort Identifier':'pw-vgzm.415900-10.1007-0-306-46949-9_10',
+                'HasAccess':'N',
+                'Full HTML':'N',
+                'Has Body':'N',
+                'Static Hash':'1294705540',
+                'Has Preview':'Y',
+                'user':{'license': {'businessPartnerID': ['2000578979', '3000130459', '3000179129', '3000251517', '3001139967', '3002011430', '3002114477', '3991330314'], 'businessPartnerIDString': '2000578979|3000130459|3000179129|3000251517|3001139967|3002011430|3002114477|3991330314'}},
+                'content':{'type': 'chapter', 'book': {'seriesTitle': 'Progress in Theoretical Chemistry and Physics', 'bookProductType': 'Contributed volume', 'eIsbn': '978-0-306-46949-7', 'seriesId': '6464', 'title': 'Theoretical Methods in Condensed Phase Chemistry', 'doi': '10.1007/0-306-46949-9'}, 'chapter': {'doi': '10.1007/0-306-46949-9_10'}, 'category': {'pmc': {'primarySubject': 'Chemistry', 'primarySubjectCode': 'C', 'secondarySubjects': {'1': 'Physical Chemistry', '2': 'Condensed Matter Physics'}, 'secondarySubjectCodes': {'1': 'C21001', '2': 'P25005'}}}},
+                'Access Type':'noaccess',
+                'Page':'chapter',
+                'Bpids':'2000578979, 3000130459, 3000179129, 3000251517, 3001139967, 3002011430, 3002114477, 3991330314',
+                'Bpnames':'Kings College London Collections & Research Support, NESLI UK, 1219 CHEST UK LNCS, JISC Collections Brettenham House South, University of Manchester JUSP only;MIMAS,Roscoe Bldg, JISC University of Durham, New JISC, JISC consortium',
+                'SubjectCodes':'SCC, SCC21001, SCP25005',
+                'Keywords':'Saddle Point, Spring Force, Transition State Theory, Minimum Energy Path, Force Evaluation',
+                'Country':'GB',
+        }];
+    </script>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?cache-busting=' + new Date().getTime() + '&id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCF9Z9');</script>
+
+    </head>
+    <body>
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WCF9Z9"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="skip-to">
+    <a class="skip-to__link skip-to__link--article" href="#main-content">Skip to main content</a>
+</nav>
+        <div class="page-wrapper">
+            <noscript>
+    <div class="nojs-banner u-interface">
+        <p>This service is more advanced with JavaScript available, learn more at <a
+                href="http://activatejavascript.org" target="_blank" rel="noopener">http://activatejavascript.org</a>
+        </p>
+    </div>
+</noscript>
+                    <div id="leaderboard" class="leaderboard u-hide" data-component="SpringerLink.GoogleAds" data-namespace="leaderboard"></div>
+
+                <header id="header" class="header u-interface" role="banner">
+        <div class="header__content">
+            <div class="header__menu-container">
+                    <a id="logo" class="site-logo" href="/" title="Go to homepage">
+                <div class="u-screenreader-only">SpringerLink</div>
+    <svg class="site-logo__springer" width="148" height="30" role="img" aria-label="SpringerLink Logo">
+        <image width="148" height="30" alt="SpringerLink Logo" src="/springerlink-static/1294705540/images/png/springerlink.png" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/springerlink-static/1294705540/images/svg/springerlink.svg"></image>
+    </svg>
+
+    </a>
+
+
+                    <nav id="search-container" class="u-inline-block">
+                        <div class="search">
+                            <div class="search__content">
+                                <form class="u-form-single-input" action="/search" method="get" role="search">
+    <input aria-label="Search SpringerLink" name="query" type="text" autocomplete="off" value="" placeholder="Search SpringerLink">
+    <input class="u-hide-text" type="submit" value="Submit" title="Submit">
+    <svg class="u-vertical-align-absolute" width="13" height="13" viewBox="222 151 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M227 159C228.7 159 230 157.7 230 156 230 154.3 228.7 153 227 153 225.3 153 224 154.3 224 156 224 157.7 225.3 159 227 159L227 159 227 159 227 159ZM230 160.1L231.1 159 233.9 161.7C234.2 162.1 234.2 162.6 233.9 162.9 233.6 163.2 233.1 163.2 232.7 162.9L230 160.1 230 160.1 230 160.1 230 160.1ZM227 161L227 161C224.2 161 222 158.8 222 156 222 153.2 224.2 151 227 151 229.8 151 232 153.2 232 156 232 158.8 229.8 161 227 161L227 161 227 161 227 161 227 161Z" stroke="none" fill-rule="evenodd"/>
+    </svg>
+</form>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <nav class="nav-container u-interface">
+    <div class="global-nav__wrapper">
+        <div class="search-button">
+            <a class="search-button__label" href="#search-container">
+                <span class="search-button__title">Search</span><svg width="12" height="12" viewBox="222 151 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M227 159C228.7 159 230 157.7 230 156 230 154.3 228.7 153 227 153 225.3 153 224 154.3 224 156 224 157.7 225.3 159 227 159L227 159 227 159 227 159ZM230 160.1L231.1 159 233.9 161.7C234.2 162.1 234.2 162.6 233.9 162.9 233.6 163.2 233.1 163.2 232.7 162.9L230 160.1 230 160.1 230 160.1 230 160.1ZM227 161L227 161C224.2 161 222 158.8 222 156 222 153.2 224.2 151 227 151 229.8 151 232 153.2 232 156 232 158.8 229.8 161 227 161L227 161 227 161 227 161 227 161Z" stroke="none" fill-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+
+        <ul class="global-nav" data-component="SpringerLink.Menu" data-title="Navigation menu" data-text="Menu">
+            <li>
+                <a href="/">
+                    <span class="u-overflow-ellipsis">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contactus">
+                    <span class="u-overflow-ellipsis">Contact us</span>
+                </a>
+            </li>
+
+                <li class="global-nav__logged-out">
+                    <a class="test-login-link" href="//link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%252F0-306-46949-9_10">
+                        <span class="u-overflow-ellipsis">Log in</span>
+                    </a>
+                </li>
+
+        </ul>
+    </div> 
+</nav> 
+            </div>
+
+        </div>
+    </header>
+
+            
+
+            <main id="main-content" class="main-wrapper">
+                <div class="main-container uptodate-recommendations-off">
+                    <aside class="main-sidebar-left">
+                        <div class="main-sidebar-left__content">
+                            <div class="test-cover cover-image" itemscope>
+        <a class="test-cover-link" href="/book/10.1007/0-306-46949-9" title="Theoretical Methods in Condensed Phase Chemistry">
+            <img class="test-cover-image" src="https://static-content.springer.com/cover/book/978-0-306-46949-7.jpg" alt="Theoretical Methods in Condensed Phase Chemistry" itemprop="image"/>
+        </a>
+
+</div>
+                        </div>
+                    </aside>
+                    <div class="main-body" data-role="NavigationContainer">
+                        
+
+
+
+                        <article class="main-body__content">
+                            <div xmlns="http://www.w3.org/1999/xhtml" class="FulltextWrapper"><div class="ArticleHeader main-context"><div id="enumeration" class="enumeration"><p class="test-LocationInConferenceProceeding"><span class="BookTitle"><a href="/book/10.1007/0-306-46949-9" class="gtm-book-link">Theoretical Methods in Condensed Phase Chemistry</a></span><span class="page-numbers-info">
+                pp 269-302</span><span class="u-inline-block u-ml-4"> |
+                <a class="gtm-cite-link" href="#citeas">Cite as</a></span></p></div><div class="MainTitleSection"><h1 class="ChapterTitle" lang="en">Methods for Finding Saddle Points and Minimum Energy Paths</h1></div><div class="authors u-clearfix" data-component="SpringerLink.Authors"><ul class="u-interface u-inline-list authors__title" data-role="AuthorsNavigation"><li><span>Authors</span></li><li><a href="#authorsandaffiliations" class="gtm-tab-authorsandaffiliations">Authors and affiliations</a></li></ul><div class="authors__list" data-role="AuthorsList"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">Graeme Henkelman</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">Gísli Jóhannesson</span></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors__name">Hannes Jónsson</span></li></ul></div></div><div class="main-context__container" data-component="SpringerLink.ArticleMetrics"><div class="main-context__column"><span><span class="test-render-category">Chapter</span></span><div class="article-dates" data-component="SpringerLink.ArticleDates"><div class="article-dates__history"></div></div></div><div class="main-context__column">    <ul id="book-metrics" class="article-metrics u-sansSerif">
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-chaptercitations-count" href="http://www.bookmetrix.com/detail/chapter/30948483-325a-4996-86c4-16dfb248b653#citations" target="_blank" rel="noopener"
+                       title="Visit Bookmetrix for full citation details" id="chaptercitations-link">
+                       <span id="chaptercitations-count-number" class="test-metric-count c-button-circle gtm-chaptercitations-count">35</span>
+                       <span class="test-metric-name article-metrics__label gtm-chaptercitations-count">Citations</span>
+                    </a>
+            </li>
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-chapterreaders-count" href="http://www.bookmetrix.com/detail/chapter/30948483-325a-4996-86c4-16dfb248b653#readers" target="_blank" rel="noopener"
+                       title="Visit Bookmetrix for full Mendeley reader details" id="chapterreaders-link">
+                       <span id="chapterreaders-count-number" class="test-metric-count c-button-circle gtm-chapterreaders-count">76</span>
+                       <span class="test-metric-name article-metrics__label gtm-chapterreaders-count">Readers</span>
+                    </a>
+            </li>
+            <li class="article-metrics__item">
+                    <a class="article-metrics__link gtm-chapterdownloads-count" href="http://www.bookmetrix.com/detail/chapter/30948483-325a-4996-86c4-16dfb248b653#downloads" target="_blank" rel="noopener"
+                       title="Visit Bookmetrix for full download details" id="chapterdownloads-link">
+                       <span id="chapterdownloads-count-number" class="test-metric-count c-button-circle gtm-chapterdownloads-count">405</span>
+                       <span class="test-metric-name article-metrics__label gtm-chapterdownloads-count">Downloads</span>
+                    </a>
+            </li>
+    </ul>
+</div></div><span id="test-SeriesTitle" class="vol-info">
+                Part of the
+                <a class="gtm-book-series-link" href="/bookseries/6464">Progress in Theoretical Chemistry and Physics</a>
+                book series (PTCP, volume 5)</span></div><section class="Abstract" id="Abs1" tabindex="-1" lang="en"><h2 class="Heading">Abstract</h2><p class="Para">The problem of finding minimum energy paths and, in particular, saddle points on high dimensional potential energy surfaces is discussed. Several different methods are reviewed and their efficiency compared on a test problem involving conformational transitions in an island of adatoms on a crystal surface. The focus is entirely on methods that only require the potential energy and its first derivative with respect to the atom coordinates. Such methods can be applied, for example, in plane wave based Density Functional Theory calculations, and the computational effort typically scales well with system size. When the final state of the transition is known, both the initial and final coordinates of the atoms can be used as boundary conditions in the search. Methods of this type include the Nudged Elastic Band, Ridge, Conjugate Peak Refinement, Drag method and the method of Dewar, Healy and Stewart. When only the initial state is known, the problem is more challenging and the search for the saddle point represents also a search for the optimal transition mechanism. We discuss a recently proposed method that can be used in such cases, the Dimer method.</p></section><div class="KeywordGroup" lang="en"><h2 class="Heading">Keywords</h2><span class="Keyword">Saddle Point </span><span class="Keyword">Spring Force </span><span class="Keyword">Transition State Theory </span><span class="Keyword">Minimum Energy Path </span><span class="Keyword">Force Evaluation </span><div id="test-keyword-message" class="u-interface u-italic">
+							These keywords were added by machine and not by the authors. This process is experimental and the keywords may be updated as the learning algorithm improves.
+						</div></div><div class="note test-pdf-link" id="cobranding-and-download-availability-text"><div id="chapter_no_access_banner">This is a preview of subscription content, <a id="test-login-banner-link" href="/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%252F0-306-46949-9_10">log in</a> to check access</div></div><div class="article-actions--inline" id="article-actions--inline" data-component="article-actions--inline"></div><section id="Sample" class="pdf-preview"><h2 class="Heading">Preview</h2><object id="test-pdf-preview" class="pdf-preview__embed pdf-preview__embed--height" data="//page-one.live.cf.public.springer.com/pdf/preview/10.1007/0-306-46949-9_10" type="application/pdf" width="100%" data-component="SpringerLink.PdfPreview"><p class="u-interface" data-fallback-text="true">Unable to display preview.&nbsp;<a href="//page-one.live.cf.public.springer.com/pdf/preview/10.1007/0-306-46949-9_10" target="_blank" rel="noopener">Download preview PDF.</a></p></object><p class="pdf-preview__info u-interface">Unable to display preview.&nbsp;<a href="//page-one.live.cf.public.springer.com/pdf/preview/10.1007/0-306-46949-9_10" target="_blank" rel="noopener">Download preview PDF.</a></p></section><section class="Section1 RenderAsSection1" id="Bib1" tabindex="-1"><h2 class="Heading">References</h2><div class="content"><ol class="BibliographyWrapper"><li class="Citation"><div class="CitationNumber">[1]</div><div class="CitationContent" id="CR1">H. Eyring, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">3</strong>, 107 (1935).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Eyring&amp;journal=J.%20Chem.%20Phys.&amp;volume=3&amp;pages=107&amp;publication_year=1935"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[2]</div><div class="CitationContent" id="CR2">E. Wigner, <em class="EmphasisTypeItalic ">Trans. Faraday Soc.</em>
+                        <strong class="EmphasisTypeBold ">34</strong>, 29 (1938).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=E..%20Wigner&amp;journal=Trans.%20Faraday%20Soc.&amp;volume=34&amp;pages=29&amp;publication_year=1938"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[3]</div><div class="CitationContent" id="CR3">J. C. Keck, <em class="EmphasisTypeItalic ">Adv. Chem.</em>
+                        <strong class="EmphasisTypeBold ">13</strong>, 85 (1967).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.%20C..%20Keck&amp;journal=Adv.%20Chem.&amp;volume=13&amp;pages=85&amp;publication_year=1967"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[4]</div><div class="CitationContent" id="CR4">P. Pechukas, in ‘Dynamics of Molecular Collisions’, part B, ed. W. H. Miller (Plenum Press, N.Y. 1976).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=P..%20Pechukas&amp;publication_year=1976"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[5]</div><div class="CitationContent" id="CR5">D. G. Truhlar, B. C. Garrett and S. J. Klippenstein, <em class="EmphasisTypeItalic ">J. Phys. Chem.</em>
+                        <strong class="EmphasisTypeBold ">100</strong>, 12771 (1996).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1021/jp953748q"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.%20G..%20Truhlar&amp;author=B.%20C..%20Garrett&amp;author=S.%20J..%20Klippenstein&amp;journal=J.%20Phys.%20Chem.&amp;volume=100&amp;pages=12771&amp;publication_year=1996"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[6]</div><div class="CitationContent" id="CR6">A. F. Voter and D. Doll, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">80</strong>, 5832 (1984).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A.%20F..%20Voter&amp;author=D..%20Doll&amp;journal=J.%20Chem.%20Phys.&amp;volume=80&amp;pages=5832&amp;publication_year=1984"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[7]</div><div class="CitationContent" id="CR7">D. G. Truhlar and B. C. Garrett, <em class="EmphasisTypeItalic ">Annu. Rev. Phys. Chem.</em>
+                        <strong class="EmphasisTypeBold ">35</strong>, 159 (1984).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1146/annurev.pc.35.100184.001111"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.%20G..%20Truhlar&amp;author=B.%20C..%20Garrett&amp;journal=Annu.%20Rev.%20Phys.%20Chem.&amp;volume=35&amp;pages=159&amp;publication_year=1984"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[8]</div><div class="CitationContent" id="CR8">J. B. Anderson, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">58</strong>, 4684 (1973).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.%20B..%20Anderson&amp;journal=J.%20Chem.%20Phys.&amp;volume=58&amp;pages=4684&amp;publication_year=1973"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[9]</div><div class="CitationContent" id="CR9">A. F. Voter and D. Doll, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">82</strong>, 80 (1985).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A.%20F..%20Voter&amp;author=D..%20Doll&amp;journal=J.%20Chem.%20Phys.&amp;volume=82&amp;pages=80&amp;publication_year=1985"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[10]</div><div class="CitationContent" id="CR10">C. Wert and C. Zener, <em class="EmphasisTypeItalic ">Phys. Rev.</em>
+                        <strong class="EmphasisTypeBold ">76</strong>, 1169 (1949).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRev.76.1169"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=C..%20Wert&amp;author=C..%20Zener&amp;journal=Phys.%20Rev.&amp;volume=76&amp;pages=1169&amp;publication_year=1949"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[11]</div><div class="CitationContent" id="CR11">G. H. Vineyard, <em class="EmphasisTypeItalic ">J. Phys. Chem. Solids</em>
+                        <strong class="EmphasisTypeBold ">3</strong> 121 (1957).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0022-3697(57)90059-8"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G.%20H..%20Vineyard&amp;journal=J.%20Phys.%20Chem.%20Solids&amp;volume=3&amp;pages=121&amp;publication_year=1957"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[12]</div><div class="CitationContent" id="CR12">R. Marcus, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">45</strong>, 4493 (1966).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=R..%20Marcus&amp;journal=J.%20Chem.%20Phys.&amp;volume=45&amp;pages=4493&amp;publication_year=1966"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[13]</div><div class="CitationContent" id="CR13">G. Mills, G. K. Schenter, D. Makarov and H. Jónsson <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">278</strong>, 91 (1997).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/S0009-2614(97)00886-5"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G..%20Mills&amp;author=G.%20K..%20Schenter&amp;author=D..%20Makarov&amp;author=H..%20J%C3%B3nsson&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=278&amp;pages=91&amp;publication_year=1997"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[14]</div><div class="CitationContent" id="CR14">G. Mills, G. K. Schenter, D. Makarov and H. Jónsson, ‘RAW Quantum Transition State Theory’, in ‘Classical and Quantum Dynamics in Condensed Phase Simulations’, ed. B. J. Berne, G. Ciccotti and D. F. Coker, page 405 (World Scientific, 1998).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=G.%20Mills%2C%20G.%20K.%20Schenter%2C%20D.%20Makarov%20and%20H.%20J%C3%B3nsson%2C%20%E2%80%98RAW%20Quantum%20Transition%20State%20Theory%E2%80%99%2C%20in%20%E2%80%98Classical%20and%20Quantum%20Dynamics%20in%20Condensed%20Phase%20Simulations%E2%80%99%2C%20ed.%20B.%20J.%20Berne%2C%20G.%20Ciccotti%20and%20D.%20F.%20Coker%2C%20page%20405%20%28World%20Scientific%2C%201998%29."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[15]</div><div class="CitationContent" id="CR15">R. P. Feynman and A. R. Hibbs, <em class="EmphasisTypeItalic ">Quantum Mechanics and Path Integrals</em>, (McGraw Hill, New York, 1965).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Quantum%20Mechanics%20and%20Path%20Integrals&amp;author=R.%20P..%20Feynman&amp;author=A.%20R..%20Hibbs&amp;publication_year=1965"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[16]</div><div class="CitationContent" id="CR16">W. H. Miller, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">62</strong>, 1899 (1975).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=W.%20H..%20Miller&amp;journal=J.%20Chem.%20Phys.&amp;volume=62&amp;pages=1899&amp;publication_year=1975"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[17]</div><div class="CitationContent" id="CR17">S. Coleman, in <em class="EmphasisTypeItalic ">The Whys of Subnuclear Physics</em>, ed. A. Zichichi (Plenum, N.Y., 1979).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Coleman&amp;publication_year=1979"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[18]</div><div class="CitationContent" id="CR18">V. A. Benderskii, D. E. Makarov and C. A. Wight, <em class="EmphasisTypeItalic ">Chemical Dynamics at Low Temperature</em> (Whiley, New York, 1994).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Chemical%20Dynamics%20at%20Low%20Temperature&amp;author=V.%20A..%20Benderskii&amp;author=D.%20E..%20Makarov&amp;author=C.%20A..%20Wight&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[19]</div><div class="CitationContent" id="CR19">M. L. McKee and M. Page, <em class="EmphasisTypeItalic ">Reviews in Computational Chemistry</em> Vol. IV, K. B. Lipkowitz and D. B. Boyd, Eds., (VCH Publishers Inc., New York, 1993).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.%20L..%20McKee&amp;author=M..%20Page&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[20]</div><div class="CitationContent" id="CR20">H. Jónsson, G. Mills and K. W. Jacobsen, ‘Nudged Elastic Band Method for Finding Minimum Energy Paths of Transitions’, in ‘Classical and Quantum Dynamics in Condensed Phase Simulations’, ed. B. J. Berne. G. Ciccotti and D. F. Coker, page 385 (World Scientific, 1998).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=H.%20J%C3%B3nsson%2C%20G.%20Mills%20and%20K.%20W.%20Jacobsen%2C%20%E2%80%98Nudged%20Elastic%20Band%20Method%20for%20Finding%20Minimum%20Energy%20Paths%20of%20Transitions%E2%80%99%2C%20in%20%E2%80%98Classical%20and%20Quantum%20Dynamics%20in%20Condensed%20Phase%20Simulations%E2%80%99%2C%20ed.%20B.%20J.%20Berne.%20G.%20Ciccotti%20and%20D.%20F.%20Coker%2C%20page%20385%20%28World%20Scientific%2C%201998%29."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[21]</div><div class="CitationContent" id="CR21">H. C. Andersen, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">72</strong>, 2384 (1980).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.439486"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H.%20C..%20Andersen&amp;journal=J.%20Chem.%20Phys.&amp;volume=72&amp;pages=2384&amp;publication_year=1980"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[22]</div><div class="CitationContent" id="CR22">T. A. Halgren and W. N. Lipscomb, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">49</strong>, 225 (1977).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(77)80574-5"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=T.%20A..%20Halgren&amp;author=W.%20N..%20Lipscomb&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=49&amp;pages=225&amp;publication_year=1977"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[23]</div><div class="CitationContent" id="CR23">M. J. Rothman and L. L. Lohr, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">70</strong>, 405 (1980).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(80)85361-9"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.%20J..%20Rothman&amp;author=L.%20L..%20Lohr&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=70&amp;pages=405&amp;publication_year=1980"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[24]</div><div class="CitationContent" id="CR24">G. Mills and H. Jónsson, <em class="EmphasisTypeItalic ">Phys. Rev. Lett.</em>
+                        <strong class="EmphasisTypeBold ">72</strong>, 1124 (1994).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevLett.72.1124"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G..%20Mills&amp;author=H..%20J%C3%B3nsson&amp;journal=Phys.%20Rev.%20Lett.&amp;volume=72&amp;pages=1124&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[25]</div><div class="CitationContent" id="CR25">G. Mills, H. Jónsson and G. K. Schenter, <em class="EmphasisTypeItalic ">Surf. Sci.</em>
+                        <strong class="EmphasisTypeBold ">324</strong>, 305 (1995).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0039-6028(94)00731-4"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G..%20Mills&amp;author=H..%20J%C3%B3nsson&amp;author=G.%20K..%20Schenter&amp;journal=Surf.%20Sci.&amp;volume=324&amp;pages=305&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[26]</div><div class="CitationContent" id="CR26">G. Henkelman and H. Jónsson, (submitted to <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=G.%20Henkelman%20and%20H.%20J%C3%B3nsson%2C%20%28submitted%20to%20J.%20Chem.%20Phys.%29."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[27]</div><div class="CitationContent" id="CR27">N. Mousseau and G. T. Barkema, <em class="EmphasisTypeItalic ">Phys. Rev. E</em>
+                        <strong class="EmphasisTypeBold ">57</strong>, 2419 (1998).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevE.57.2419"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=N..%20Mousseau&amp;author=G.%20T..%20Barkema&amp;journal=Phys.%20Rev.%20E&amp;volume=57&amp;pages=2419&amp;publication_year=1998"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[28]</div><div class="CitationContent" id="CR28">M. Villarba and H. Jónsson, <em class="EmphasisTypeItalic ">Surf. Sci.</em>
+                        <strong class="EmphasisTypeBold ">317</strong>, 15 (1994).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0039-6028(94)90249-6"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M..%20Villarba&amp;author=H..%20J%C3%B3nsson&amp;journal=Surf.%20Sci.&amp;volume=317&amp;pages=15&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[29]</div><div class="CitationContent" id="CR29">M. Villarba and H. Jónsson, <em class="EmphasisTypeItalic ">Surf. Sci.</em>
+                        <strong class="EmphasisTypeBold ">324</strong>, 35 (1995).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0039-6028(94)00631-8"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M..%20Villarba&amp;author=H..%20J%C3%B3nsson&amp;journal=Surf.%20Sci.&amp;volume=324&amp;pages=35&amp;publication_year=1995"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[30]</div><div class="CitationContent" id="CR30">E. Batista and H. Jónsson, <em class="EmphasisTypeItalic ">Computational Materials Science</em> (in press).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=E.%20Batista%20and%20H.%20J%C3%B3nsson%2C%20Computational%20Materials%20Science%20%28in%20press%29."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[31]</div><div class="CitationContent" id="CR31">M. R. Sørensen, K. W. Jacobsen and H. Jónsson, <em class="EmphasisTypeItalic ">Phys. Rev. Lett.</em>
+                        <strong class="EmphasisTypeBold ">77</strong>, 5067 (1996).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.%20R..%20S%C3%B8rensen&amp;author=K.%20W..%20Jacobsen&amp;author=H..%20J%C3%B3nsson&amp;journal=Phys.%20Rev.%20Lett.&amp;volume=77&amp;pages=5067&amp;publication_year=1996"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[32]</div><div class="CitationContent" id="CR32">T. Rasmussen, K. W. Jacobsen, T. Leffers, O. B. Pedersen, S. G. Srinivasan, and H. Jónsson, <em class="EmphasisTypeItalic ">Phys. Rev. Lett.</em>
+                        <strong class="EmphasisTypeBold ">79</strong>, 3676 (1997).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=T..%20Rasmussen&amp;author=K.%20W..%20Jacobsen&amp;author=T..%20Leffers&amp;author=O.%20B..%20Pedersen&amp;author=S.%20G..%20Srinivasan&amp;author=H..%20J%C3%B3nsson&amp;journal=Phys.%20Rev.%20Lett.&amp;volume=79&amp;pages=3676&amp;publication_year=1997"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[33]</div><div class="CitationContent" id="CR33">B. Uberuaga, M. Levskovar, A. P. Smith, H. Jónsson, and M. Olmstead, ‘Diffusion of Ge below the Si(100) surface: Theory and Experiment’, <em class="EmphasisTypeItalic ">Phys. Rev. Lett.</em>
+                        <strong class="EmphasisTypeBold ">84</strong>, 2441 (2000).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevLett.84.2441"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Diffusion%20of%20Ge%20below%20the%20Si%28100%29%20surface%3A%20Theory%20and%20Experiment&amp;author=B..%20Uberuaga&amp;author=M..%20Levskovar&amp;author=A.%20P..%20Smith&amp;author=H..%20J%C3%B3nsson&amp;author=M..%20Olmstead&amp;journal=Phys.%20Rev.%20Lett.&amp;volume=84&amp;pages=2441&amp;publication_year=2000"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[34]</div><div class="CitationContent" id="CR34">L. R. Pratt, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">85</strong>, 5045 (1986).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=L.%20R..%20Pratt&amp;journal=J.%20Chem.%20Phys.&amp;volume=85&amp;pages=5045&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[35]</div><div class="CitationContent" id="CR35">A. Kuki and P. G. Wolynes, <em class="EmphasisTypeItalic ">Science</em>
+                        <strong class="EmphasisTypeBold ">236</strong>, 1647 (1986).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Kuki&amp;author=P.%20G..%20Wolynes&amp;journal=Science&amp;volume=236&amp;pages=1647&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[36]</div><div class="CitationContent" id="CR36">R. Elber and M. Karplus, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">139</strong>, 375 (1987).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(87)80576-6"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=R..%20Elber&amp;author=M..%20Karplus&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=139&amp;pages=375&amp;publication_year=1987"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[37]</div><div class="CitationContent" id="CR37">R. Czerminski and R. Elber, <em class="EmphasisTypeItalic ">Int. J. Quantum Chem.</em>
+                        <strong class="EmphasisTypeBold ">24</strong>, 167 (1990); R. Czerminski and R. Elber, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">92</strong>, 5580 (1990).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=R..%20Czerminski&amp;author=R..%20Elber&amp;journal=Int.%20J.%20Quantum%20Chem.&amp;volume=24&amp;pages=167&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[38]</div><div class="CitationContent" id="CR38">A. Ulitsky and R. Elber, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">92</strong>, 1510 (1990).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.458112"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A..%20Ulitsky&amp;author=R..%20Elber&amp;journal=J.%20Chem.%20Phys.&amp;volume=92&amp;pages=1510&amp;publication_year=1990"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[39]</div><div class="CitationContent" id="CR39">C. Choi and R. Elber, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">94</strong>, 751 (1991).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=C..%20Choi&amp;author=R..%20Elber&amp;journal=J.%20Chem.%20Phys.&amp;volume=94&amp;pages=751&amp;publication_year=1991"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[40]</div><div class="CitationContent" id="CR40">E. M. Sevick, A. T. Bell and D. N. Theodorou, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">98</strong>, 3196 (1993).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.464093"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=E.%20M..%20Sevick&amp;author=A.%20T..%20Bell&amp;author=D.%20N..%20Theodorou&amp;journal=J.%20Chem.%20Phys.&amp;volume=98&amp;pages=3196&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[41]</div><div class="CitationContent" id="CR41">T. L. Beck, J. D. Doll and D. L. Freeman, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">90</strong>, 3183 (1989).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=T.%20L..%20Beck&amp;author=J.%20D..%20Doll&amp;author=D.%20L..%20Freeman&amp;journal=J.%20Chem.%20Phys.&amp;volume=90&amp;pages=3183&amp;publication_year=1989"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[42]</div><div class="CitationContent" id="CR42">R. E. Gillilan and K. R. Wilson, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">97</strong>, 1757 (1992).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.463163"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=R.%20E..%20Gillilan&amp;author=K.%20R..%20Wilson&amp;journal=J.%20Chem.%20Phys.&amp;volume=97&amp;pages=1757&amp;publication_year=1992"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[43]</div><div class="CitationContent" id="CR43">O. S. Smart, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">222</strong>, 503 (1994).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(94)00374-2"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=O.%20S..%20Smart&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=222&amp;pages=503&amp;publication_year=1994"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[44]</div><div class="CitationContent" id="CR44">G. Henkelman, B. Uberuaga and H. Jónsson, (submitted to <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=G.%20Henkelman%2C%20B.%20Uberuaga%20and%20H.%20J%C3%B3nsson%2C%20%28submitted%20to%20J.%20Chem.%20Phys.%29."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[45]</div><div class="CitationContent" id="CR45">S. Fischer and M. Karplus, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">194</strong>, 252 (1992).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(92)85543-J"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=S..%20Fischer&amp;author=M..%20Karplus&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=194&amp;pages=252&amp;publication_year=1992"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[46]</div><div class="CitationContent" id="CR46">Stefan Fischer, “<em class="EmphasisTypeItalic ">Curvilinear reaction-coordinates of conformal change in macromolecules: application to rotamase catalysis</em>,” Ph. D. Thesis, Harvard University, (1992).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="https://scholar.google.com/scholar?q=Stefan%20Fischer%2C%20%E2%80%9CCurvilinear%20reaction-coordinates%20of%20conformal%20change%20in%20macromolecules%3A%20application%20to%20rotamase%20catalysis%2C%E2%80%9D%20Ph.%20D.%20Thesis%2C%20Harvard%20University%2C%20%281992%29."><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[47]</div><div class="CitationContent" id="CR47">W. H. Press, B. P. Flannery, S. A. Teukolsky, and W. T. Vetterling, in <em class="EmphasisTypeItalic ">Numerical Recipies</em> (Cambridge University Press, New York, 1986).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?title=Numerical%20Recipies&amp;author=W.%20H..%20Press&amp;author=B.%20P..%20Flannery&amp;author=S.%20A..%20Teukolsky&amp;author=W.%20T..%20Vetterling&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[48]</div><div class="CitationContent" id="CR48">I. V. Ionova and E. A. Carter, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">98</strong>, 6377 (1993).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.465100"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=I.%20V..%20Ionova&amp;author=E.%20A..%20Carter&amp;journal=J.%20Chem.%20Phys.&amp;volume=98&amp;pages=6377&amp;publication_year=1993"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[49]</div><div class="CitationContent" id="CR49">M. J. S. Dewar, E. F. Healy, and J. J. P. Stewart, <em class="EmphasisTypeItalic ">J. Chem. Soc., Faraday Trans.</em>
+                        <strong class="EmphasisTypeBold ">280</strong>, 227 (1984).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=M.%20J.%20S..%20Dewar&amp;author=E.%20F..%20Healy&amp;author=J.%20J.%20P..%20Stewart&amp;journal=J.%20Chem.%20Soc.%2C%20Faraday%20Trans.&amp;volume=280&amp;pages=227&amp;publication_year=1984"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[50]</div><div class="CitationContent" id="CR50">C. J. Cerjan and W. H. Miller, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">75</strong>, 2800 (1981).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.442352"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=C.%20J..%20Cerjan&amp;author=W.%20H..%20Miller&amp;journal=J.%20Chem.%20Phys.&amp;volume=75&amp;pages=2800&amp;publication_year=1981"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[51]</div><div class="CitationContent" id="CR51">D. T. Nguyen and D. A. Case, <em class="EmphasisTypeItalic ">J. Phys. Chem.</em>
+                        <strong class="EmphasisTypeBold ">89</strong>, 4020 (1985).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1021/j100265a018"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.%20T..%20Nguyen&amp;author=D.%20A..%20Case&amp;journal=J.%20Phys.%20Chem.&amp;volume=89&amp;pages=4020&amp;publication_year=1985"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[52]</div><div class="CitationContent" id="CR52">W. Quapp, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">253</strong>, 286 (1996).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(96)00255-2"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=W..%20Quapp&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=253&amp;pages=286&amp;publication_year=1996"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[53]</div><div class="CitationContent" id="CR53">H. Taylor and J. Simons <em class="EmphasisTypeItalic ">J. Phys. Chem.</em>
+                        <strong class="EmphasisTypeBold ">89</strong>, 684 (1985).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1021/j100250a026"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=H..%20Taylor&amp;author=J..%20Simons&amp;journal=J.%20Phys.%20Chem.&amp;volume=89&amp;pages=684&amp;publication_year=1985"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[54]</div><div class="CitationContent" id="CR54">J. Baker, <em class="EmphasisTypeItalic ">J. Comput. Chem.</em>
+                        <strong class="EmphasisTypeBold ">7</strong>, 385 (1986).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J..%20Baker&amp;journal=J.%20Comput.%20Chem.&amp;volume=7&amp;pages=385&amp;publication_year=1986"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[55]</div><div class="CitationContent" id="CR55">D. J. Wales, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">91</strong>, 7002 (1989).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.%20J..%20Wales&amp;journal=J.%20Chem.%20Phys.&amp;volume=91&amp;pages=7002&amp;publication_year=1989"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[56]</div><div class="CitationContent" id="CR56">N. P. Kopsias and D. N. Theodorou, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">109</strong>, 8573 (1998).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.477522"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=N.%20P..%20Kopsias&amp;author=D.%20N..%20Theodorou&amp;journal=J.%20Chem.%20Phys.&amp;volume=109&amp;pages=8573&amp;publication_year=1998"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[57]</div><div class="CitationContent" id="CR57">J, D, Honeycutt and H. C. Andersen, <em class="EmphasisTypeItalic ">Chem. Phys. Lett.</em>
+                        <strong class="EmphasisTypeBold ">108</strong>, 535 (1984); <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">90</strong>, 1585 (1986).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0009-2614(84)85049-6"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=J.%20D..%20Honeycutt&amp;author=H.%20C..%20Andersen&amp;journal=Chem.%20Phys.%20Lett.&amp;volume=108&amp;pages=535&amp;publication_year=1984"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[58]</div><div class="CitationContent" id="CR58">G. Henkelman and H. Jónsson, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">111</strong>, 7010 (1999).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.480097"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G..%20Henkelman&amp;author=H..%20J%C3%B3nsson&amp;journal=J.%20Chem.%20Phys.&amp;volume=111&amp;pages=7010&amp;publication_year=1999"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[59]</div><div class="CitationContent" id="CR59">A. F. Voter, <em class="EmphasisTypeItalic ">Phys. Rev. Lett.</em>
+                        <strong class="EmphasisTypeBold ">78</strong>, 3908 (1997).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevLett.78.3908"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=A.%20F..%20Voter&amp;journal=Phys.%20Rev.%20Lett.&amp;volume=78&amp;pages=3908&amp;publication_year=1997"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[60]</div><div class="CitationContent" id="CR60">G. Mills, T. R. Mattsson, I. Mollnitz, and H. Metiu, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">111</strong>, 8639 (1999).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1063/1.480219"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G..%20Mills&amp;author=T.%20R..%20Mattsson&amp;author=I..%20Mollnitz&amp;author=H..%20Metiu&amp;journal=J.%20Chem.%20Phys.&amp;volume=111&amp;pages=8639&amp;publication_year=1999"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[61]</div><div class="CitationContent" id="CR61">D. W. Bassett and P. R. Webber, <em class="EmphasisTypeItalic ">Surf. Sci.</em>
+                        <strong class="EmphasisTypeBold ">70</strong>, 520 (1978).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1016/0039-6028(78)90429-6"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=D.%20W..%20Bassett&amp;author=P.%20R..%20Webber&amp;journal=Surf.%20Sci.&amp;volume=70&amp;pages=520&amp;publication_year=1978"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[62]</div><div class="CitationContent" id="CR62">G. T. Barkema and N. Mousseau, <em class="EmphasisTypeItalic ">Phys. Rev. Lett.</em>
+                        <strong class="EmphasisTypeBold ">77</strong>, 4358 (1996).<span class="Occurrences"><span class="Occurrence OccurrenceDOI"><a class="gtm-reference" data-reference-type="CrossRef" target="_blank" rel="noopener" href="https://doi.org/10.1103/PhysRevLett.77.4358"><span><span>CrossRef</span></span></a></span><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=G.%20T..%20Barkema&amp;author=N..%20Mousseau&amp;journal=Phys.%20Rev.%20Lett.&amp;volume=77&amp;pages=4358&amp;publication_year=1996"><span><span>Google Scholar</span></span></a></span></span></div></li><li class="Citation"><div class="CitationNumber">[63]</div><div class="CitationContent" id="CR63">Polanyi and Wong, <em class="EmphasisTypeItalic ">J. Chem. Phys.</em>
+                        <strong class="EmphasisTypeBold ">51</strong>, 1439 (1969).<span class="Occurrences"><span class="Occurrence OccurrenceGS"><a target="_blank" rel="noopener" class="google-scholar-link gtm-reference" data-reference-type="Google Scholar" href="http://scholar.google.com/scholar_lookup?&amp;author=.%20Polanyi&amp;author=.%20Wong&amp;journal=J.%20Chem.%20Phys.&amp;volume=51&amp;pages=1439&amp;publication_year=1969"><span><span>Google Scholar</span></span></a></span></span></div></li></ol></div></section><section class="Section1 RenderAsSection1"><h2 class="Heading" id="copyrightInformation">Copyright information</h2><div class="ArticleCopyright content"><div class="ChapterCopyright">© Kluwer Academic Publishers 2002</div></div></section><section id="authorsandaffiliations" class="Section1 RenderAsSection1"><h2 class="Heading">Authors and Affiliations</h2><div class="content authors-affiliations u-interface"><ul class="test-contributor-names"><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">Graeme Henkelman</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">Gísli Jóhannesson</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li><li itemscope="" itemtype="http://schema.org/Person" class="u-mb-2 u-pt-4 u-pb-4"><span itemprop="name" class="authors-affiliations__name">Hannes Jónsson</span><ul class="authors-affiliations__indexes u-inline-list" data-role="AuthorsIndexes"><li data-affiliation="affiliation-1">1</li></ul></li></ul><ol class="test-affiliations"><li class="affiliation" data-test="affiliation-1" data-affiliation-highlight="affiliation-1" itemscope="" itemtype="http://schema.org/Organization"><span class="affiliation__count">1.</span><span class="affiliation__item"><span itemprop="department" class="affiliation__department">Department of Chemistry 351700</span><span itemprop="name" class="affiliation__name">University of Washington</span><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="addressRegion" class="affiliation__city">Seattle</span></span></span></li></ol></div></section></div>
+                        </article>
+                        <aside class="section section--collapsible" id="AboutThisContent">
+    <h2 class="section__heading" id="aboutcontent">About this chapter</h2>
+    <div class="section__content bibliographic-information">
+        
+        <div class="crossmark__adjacent">
+            <dl class="citation-info u-highlight-target u-mb-16" id="citeas">
+    <dt class="test-cite-heading">
+        Cite this chapter as:
+    </dt>
+    <dd id="citethis-text">Henkelman G., Jóhannesson G., Jónsson H. (2002) Methods for Finding Saddle Points and Minimum Energy Paths. In: Schwartz S.D. (eds) Theoretical Methods in Condensed Phase Chemistry. Progress in Theoretical Chemistry and Physics, vol 5. Springer, Dordrecht</dd>
+</dl>
+                <ul class="bibliographic-information__list bibliographic-information__list--inline">
+        <li class="bibliographic-information__item">
+            <span class="bibliographic-information__title"><abbr title="Digital Object Identifier">DOI</abbr></span>
+            <span class="bibliographic-information__value u-overflow-wrap" id="doi-url">https://doi.org/10.1007/0-306-46949-9_10</span>
+        </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Publisher Name</span>
+                <span class="bibliographic-information__value" id="publisher-name">Springer, Dordrecht</span>
+            </li>
+            <li class="bibliographic-information__item">
+                <span class="bibliographic-information__title">Print ISBN</span>
+                <span class="bibliographic-information__value" id="print-isbn">978-0-7923-6687-4</span>
+            </li>
+            <li class="bibliographic-information__item ">
+                <span class="bibliographic-information__title">Online ISBN</span>
+                <span class="bibliographic-information__value" id="electronic-isbn">978-0-306-46949-7</span>
+            </li>
+
+            <li class="bibliographic-information__item">
+        <span class="bibliographic-information__title">eBook Packages</span>
+        <span class="bibliographic-information__value">
+            <a id="ebook-package" href="http://www.springer.com/gb/librarians/marc">Springer Book Archive</a>
+        </span>
+    </li>
+
+    </ul>
+
+            <ul class="bibliographic-information__list">
+            <li class="bibliographic-information__item">
+                <a id="about-book" href="//www.springer.com/978-0-7923-6687-4?wt_mc&#x3D;ThirdParty.SpringerLink.3.EPR653.About_eBook"
+                   class="gtm-about-this " >About this book</a>
+            </li>
+                    <li class="bibliographic-information__item">
+                        <a id="reprintsandpermissions-link" class="u-external" target="_blank" rel="noopener" href="https://s100.copyright.com/AppDispatchServlet?publisherName&#x3D;SpringerNature&amp;orderBeanReset&#x3D;true&amp;orderSource&#x3D;SpringerLink&amp;author&#x3D;Graeme+Henkelman%2C+G%C3%ADsli+J%C3%B3hannesson%2C+Hannes+J%C3%B3nsson&amp;contentID&#x3D;10.1007%2F0-306-46949-9_10&amp;openAccess&#x3D;false&amp;endPage&#x3D;302&amp;publicationDate&#x3D;2002&amp;startPage&#x3D;269&amp;title&#x3D;Methods+for+Finding+Saddle+Points+and+Minimum+Energy+Paths&amp;imprint&#x3D;Kluwer+Academic+Publishers&amp;publication&#x3D;eBook" title="Visit RightsLink for information about reusing this chapter">Reprints and Permissions</a>
+                    </li>
+</ul>
+
+        </div>
+      
+      
+          
+    </div>
+</aside>
+
+                        <div class="section section--collapsible uptodate-recommendations gtm-recommendations">
+    <h2 class="uptodate-recommendations__title section__heading gtm-recommendations__title" id="uptodaterecommendations">Personalised recommendations</h2>
+    <div class="section__content">
+        <div class="uptodate-recommendations__container">
+             <link rel="uptodate-inline" href="/springerlink-static/1294705540/css/recommendations.css"/>
+        </div>
+    </div>
+</div>
+                        
+
+
+
+    <div class="sticky-banner sticky-banner--buybox u-interface u-js-screenreader-only" aria-hidden="true" data-component="SpringerLink.StickyBanner" data-namespace="hasLink">
+        <div class="sticky-banner__container">
+                <div class="citations" data-component="SV.Dropdown" data-namespace="citationsSticky">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">chapter</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" class="gtm-cite-dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/0-306-46949-9_10?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this chapter&#39;s citation as a .RIS file" class="gtm-export-citation" data-gtmlabel="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/0-306-46949-9_10?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this chapter&#39;s citation as a .ENW file" class="gtm-export-citation" data-gtmlabel="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/0-306-46949-9_10?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this chapter&#39;s citation as a .BIB file" class="gtm-export-citation" data-gtmlabel="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                
+
+
+
+                <div class="sticky-banner__buybox-link sticky-banner__buybox-link--sticky">
+        <a href="#buy" class="gtm-buybox-anchor">
+            Buy options
+        </a>
+    </div>
+
+        </div>
+    </div>
+
+
+                    </div>
+                    <aside class="main-sidebar-right u-interface">
+                        <div data-role="sticky-wrapper">
+                            <div class="main-sidebar-right__content u-composite-layer" data-component="SpringerLink.StickySidebar">
+                                <div class="article-actions" id="article-actions">
+                                    <h2 class="u-screenreader-only">Actions</h2>
+
+                                        <div id="buy">
+                                            
+
+
+<style type="text/css">
+    .buybox {
+        margin: 16px 0 0;
+        position: relative;
+    }
+    .buybox {
+        font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+    .buybox {
+        zoom: 1;
+    }
+    .buybox:after,
+    .buybox:before {
+        content: '';
+        display: table;
+    }
+    .buybox:after {
+        clear: both;
+    }
+    /*---------------------------------*/
+    .buybox .buybox__header {
+        border: 1px solid #b3b3b3;
+        border-bottom: 0;
+        padding: 8px;
+        position: relative;
+        background-color: #f2f2f2;
+    }
+    .buybox__header .buybox__login {
+        font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        letter-spacing: .017em;
+        display: inline-block;
+        line-height: 1.2;
+        padding: 0;
+    }
+    .buybox__header .buybox__login:before {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: perspective(1px) translateY(-50%);
+        transform: perspective(1px) translateY(-50%);
+        content: '\A';
+        width: 34px;
+        height: 34px;
+        left: 10px;
+    }
+    /*---------------------------------*/
+    .buybox .buybox__body {
+        padding: 0;
+        padding-bottom: 16px;
+        position: relative;
+        text-align: center;
+        background-color: #fcfcfc;
+        border: 1px solid #b3b3b3;
+    }
+    /******/
+    .buybox__body .buybox__section {
+        padding: 16px 12px 0 12px;
+        text-align: left;
+    }
+    .buybox__section .buybox__buttons {
+        text-align: center;
+        width: 100%;
+    }
+    /********** mycopy buybox specific **********/
+    .buybox.mycopy__buybox .buybox__body {
+        background-color: transparent;
+    }
+    .buybox.mycopy__buybox .buybox__section .buybox__buttons {
+        border-top: 0;
+        padding-top: 0;
+    }
+    /******/
+    .buybox__section:nth-child(2) .buybox__buttons {
+        border-top: 1px solid #b3b3b3;
+        padding-top: 20px;
+    }
+    .buybox__buttons .buybox__buy-button {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 5px;
+        padding: 6px 12px;
+        max-width: 180px
+    }
+    .buybox__buttons .buybox__price {
+        white-space: nowrap;
+        text-align: center;
+        font-size: larger;
+        padding-top: 6px;
+    }
+    .buybox__section .buybox__meta {
+        letter-spacing: 0;
+        padding-top: 12px;
+    }
+    .buybox__section .buybox__meta:only-of-type {
+        padding-top: 0;
+        position: relative;
+        bottom: 6px;
+    }
+    /********** mycopy buybox specific **********/
+    .buybox.mycopy__buybox .buybox__section .buybox__meta {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    /******/
+    .buybox__meta .buybox__product-title {
+        display: inline;
+        font-weight: bold;
+    }
+    .buybox__meta .buybox__list {
+        line-height: 1.3;
+    }
+    .buybox__meta .buybox__list li {
+        position: relative;
+        padding-left: 1em;
+        list-style: none;
+        margin-bottom: 5px;
+    }
+    .buybox__meta .buybox__list li:before {
+        font-size: 1em;
+        content: '\2022';
+        float: left;
+        position: relative;
+        top: .1em;
+        font-family: serif;
+        font-weight: 600;
+        text-align: center;
+        line-height: inherit;
+        color: #666;
+        width: auto;
+        margin-left: -1em;
+    }
+    .buybox__meta .buybox__list li:last-child {
+        margin-bottom: 0;
+    }
+    /********** chapter buybox specific **********/
+    .buybox.chapter__buybox .buybox__section .buybox__meta {
+        border-top: 1px solid #d3d3d3;
+        padding-top: 12px;
+    }
+    .buybox.chapter__buybox .buybox__section .buybox__buy-ebook {
+        margin-bottom: 12px;
+    }
+    /******/
+    /*---------------------------------*/
+    .buybox .buybox__footer {
+        border: 1px solid #b3b3b3;
+        border-top: 0;
+        padding: 8px;
+        position: relative;
+        border-style: dashed;
+        line-height: 1.3;
+    }
+    .buybox .deepdyve {
+        display: none;
+        text-align: left;
+        margin: 8px 12px 0 12px;
+        padding-top: 5px;
+        border-top: 1px solid #d3d3d3;
+    }
+    /*-----------------------------------------------------------------*/
+    @media screen and (min-width: 460px) and (max-width: 1074px) {
+        .buybox__body .buybox__section {
+            display: inline-block;
+            vertical-align: top;
+            padding: 12px 12px;
+            padding-bottom: 0;
+            text-align: left;
+            width: 48%;
+        }
+        .buybox__body .buybox__section {
+            padding-top: 16px;
+            padding-left: 0;
+        }
+        .buybox__section:nth-of-type(2) .buybox__meta {
+            border-left: 1px solid #d3d3d3;
+            padding-left: 28px;
+        }
+        .buybox__section:nth-of-type(2) .buybox__buttons {
+            border-top: 0;
+            padding-top: 0;
+            padding-left: 16px ;
+        }
+        .buybox__buttons .buybox__buy-button {
+        }
+        /********** article buybox specific **********/
+        .buybox.article__buybox .buybox__section:nth-of-type(2) {
+            margin-top: 16px;
+            padding-top: 0;
+        }
+        .buybox.article__buybox .buybox__section:nth-of-type(2) .buybox__meta {
+            margin-top: 40px;
+            padding-top: 0;
+            padding-bottom: 45px;
+        }
+        .buybox.article__buybox .buybox__section:nth-of-type(2) .buybox__meta:only-of-type {
+            margin-top: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        /********** mycopy buybox specific **********/
+        .buybox.mycopy__buybox .buybox__section:first-child {
+            width: 69%;
+            padding-left: 12px ;
+        }
+        .buybox.mycopy__buybox .buybox__section:last-child {
+            width: 29%;
+        }
+        /********** chapter buybox specific **********/
+        .buybox.chapter__buybox .buybox__body {
+            display: flex;
+            align-items: stretch;
+            padding-left: 12px;
+            padding-top: 12px;
+        }
+        .buybox.chapter__buybox .buybox__section .buybox__meta {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-top: 0;
+            padding-top: 0;
+        }
+        /******/
+    }
+    /*-----------------------------------------------------------------*/
+    @media screen and (max-width: 459px) {
+        /********** mycopy buybox specific **********/
+        .buybox.mycopy__buybox .buybox__body {
+            padding-bottom: 5px;
+        }
+        .buybox.mycopy__buybox .buybox__section:last-child {
+            text-align: center;
+            width: 100%;
+        }
+        .buybox.mycopy__buybox .buybox__buttons {
+            display: inline-block;
+            width: 150px ;
+        }
+        /******/
+    }
+    /*-----------------------------------------------------------------*/
+</style>
+
+<div class="buybox chapter__buybox" data-webtrekkTrackId="196033507532344" data-webtrekkContentId="SL-chapter">
+    <div class="buybox__header">
+        <span class="buybox__login">Log in to check access</span>
+    </div>
+    <div class="buybox__body">
+        <div class="buybox__section">
+            <div class="buybox__buttons">
+            
+                <div class="buybox__buy-ebook">
+                    <a
+                        data-product-id="978-0-306-46949-7_Theoretical Methods in Condensed P"
+                        data-tracking-category="ebook"
+                        data-eCommerceParam_11="chapter-page"
+                        href="https://checkout.springer.com/checkout/add?wt_mc=ThirdParty.SpringerLink.3.EPR653.AbstractPage_EBook-new&isbn=978-0-306-46949-7"
+                        class="buybox__buy-button c-button c-button--blue"
+                        data-gtm="buybox__buy-button-ebook">
+                        <span class="buybox__buy" data-gtm="buybox__buy-button">Buy eBook</span>
+                    </a>
+                    <div class="buybox__price" data-gtm="buybox__buy-button">
+                        GBP&nbsp;71.50
+                    </div>
+                </div>
+            
+            
+                <form class="buybox__form" action="https://checkout.springer.com/checkout/add?wt_mc=ThirdParty.SpringerLink.3.EPR653.AbstractPage_Chapter-new" method="POST">
+                    
+                        <input type="hidden" name="type" value="chapter"/>
+                    
+                        <input type="hidden" name="doi" value="10.1007/0-306-46949-9_10"/>
+                    
+                        <input type="hidden" name="isxn" value="978-0-306-46949-7"/>
+                    
+                        <input type="hidden" name="contenttitle" value="Methods for Finding Saddle Points and Minimum Energy Paths"/>
+                    
+                        <input type="hidden" name="copyrightyear" value="2002"/>
+                    
+                        <input type="hidden" name="year" value=""/>
+                    
+                        <input type="hidden" name="authors" value="Graeme Henkelman, Gísli Jóhannesson, Hannes Jónsson"/>
+                    
+                        <input type="hidden" name="title" value="Theoretical Methods in Condensed Phase Chemistry"/>
+                    
+                        <input type="hidden" name="mac" value="572baff1c659a5ca3124f39e1febb6cb"/>
+                    
+                        <input type="hidden" name="returnurl" value="https://link.springer.com/chapter/10.1007%2F0-306-46949-9_10"/>
+                    
+                    <button
+                    data-product-id="10.1007/0-306-46949-9_10_Methods for Finding Saddle Points "
+                    data-tracking-category="ppv"
+                    data-eCommerceParam_11="chapter-page"
+                    type="submit"
+                    class="buybox__buy-button c-button c-button--blue"
+                    data-gtm="buybox__buy-button">
+                        <span class="buybox__buy" data-gtm="buybox__buy-button">Buy chapter (PDF)</span>
+                    </button>
+                    <div class="buybox__price" data-gtm="buybox__buy-button">
+                        GBP&nbsp;23.94
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div class="buybox__section">
+            <div class="buybox__meta">
+                <ul class="buybox__list">
+                    <li>Instant download</li>
+                    <li>Readable on all devices</li>
+                    <li>Own it forever</li>
+                    <li>Local sales tax included if applicable</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="buybox__footer">
+        <a class="js-buybox__inst-sub-link" data-gtm="buybox__inst-sub-link" href="http://www.springer.com/gp/shop/subscriptions?wt_mc=ThirdParty.SpringerLink.3.EPR653.ChapterPage_Institutional-customers">
+            Learn about institutional subscriptions</a>
+    </div>
+
+    
+
+</div>
+
+<script>
+(function () {
+    var forEach = function (array, callback, scope) {
+        for (var i = 0; i < array.length; i++) {
+            callback.call(scope, i, array[i]);
+        }
+    };
+
+    var trackDomain = 'springergmbh01.webtrekk.net';
+    var domain = 'link.springer.com';
+    var loadEventSent = false;
+
+    var buyboxRoot = document.getElementsByClassName('buybox')[0];
+    var webtrekkTrackId = buyboxRoot.getAttribute('data-webtrekkTrackId');
+    var webtrekkContentId = buyboxRoot.getAttribute('data-webtrekkContentId');
+
+    function LinkTrack(webtrekkTrackId) {
+        if (!webtrekkTrackId) return;
+
+        var data = {
+            trackDomain: trackDomain,
+            trackId: webtrekkTrackId,
+            domain: domain,
+            contentId: 'springer_com.buybox',
+            customSessionParameter: {
+                2: getBusinessPartnerIds()
+            }
+        };
+
+        if (!window.webtrekkV3 && console) {
+            console.log('No webtrekk found.', data);
+            return;
+        }
+
+        return new webtrekkV3(data);
+    }
+
+    function Track(product, webtrekkTrackId, eCommerceParam_11, action) {
+        if (!product) return;
+
+        var data = {
+            trackDomain: trackDomain,
+            trackId: webtrekkTrackId,
+            domain: domain,
+            contentId: webtrekkContentId,
+            product: product.id,
+            productStatus: action,
+            productCategory: {
+                1: product.trackingCategory
+            },
+            customEcommerceParameter: {
+                9: domain,
+                11: eCommerceParam_11
+            },
+            customSessionParameter: {
+                2: getBusinessPartnerIds()
+            }
+        };
+
+        if (!window.webtrekkV3 && console) {
+            console.log('No webtrekk found.', data);
+            return;
+        }
+
+        return new webtrekkV3(data);
+    }
+
+    function track(trackingConfig) {
+        return function(payload) {
+            if (!trackingConfig) return
+            if (payload) {
+                trackingConfig.sendinfo(payload)
+            } else {
+                trackingConfig.sendinfo()
+            }
+            return true
+        }
+    }
+
+    function trackAddToCart(trackingConfig) {
+        return track(trackingConfig)()
+    }
+
+    function trackOnLoad(trackingConfig) {
+        if (loadEventSent) return;
+        loadEventSent = true;
+        return track(trackingConfig)()
+    }
+
+    function trackSubscription(trackingConfig) {
+        return track(trackingConfig)({linkId: 'inst. subscription info'})
+    }
+
+    function trackDeepDyve(trackingConfig) {
+        return track(trackingConfig)({linkId: 'Rent Article'})
+    }
+
+    function getBusinessPartnerIds() {
+        var businessPartnerIDs = [];
+        try {
+            var ids = window.dataLayer[0]["user"]["license"]["businessPartnerID"];
+            if(ids && ids.length) businessPartnerIDs = ids;
+        } catch(e) {}
+        return businessPartnerIDs.join(";");
+    }
+
+    var bindClickLinkHandle = function (link) {
+        if (!link) return;
+
+        link.addEventListener('click', function (event) {
+            trackSubscription(LinkTrack(webtrekkTrackId));
+        });
+    };
+
+    var bindLoadButtonHandle = function (button) {
+        if (!button) return;
+
+        var productId = button.getAttribute('data-product-id');
+        var trackingCategory = button.getAttribute('data-tracking-category');
+        var eCommerceParam_11 = button.getAttribute('data-eCommerceParam_11');
+
+        window.addEventListener('load', function (event) {
+            trackOnLoad(Track({
+                id: productId,
+                trackingCategory: trackingCategory
+            }, webtrekkTrackId, eCommerceParam_11, 'view'));
+        });
+    };
+
+    var bindClickButtonHandle = function (button) {
+        if (!button) return;
+
+        var productId = button.getAttribute('data-product-id');
+        var trackingCategory = button.getAttribute('data-tracking-category');
+        var eCommerceParam_11 = button.getAttribute('data-eCommerceParam_11');
+
+        button.addEventListener('click', function (event) {
+            trackAddToCart(Track({
+                id: productId,
+                trackingCategory: trackingCategory
+            }, webtrekkTrackId, eCommerceParam_11, 'add'));
+        });
+    };
+
+    var buyButtons = document.getElementsByClassName('buybox__buy-button');
+    forEach(buyButtons, function (index, button) {
+        bindLoadButtonHandle(button);
+        bindClickButtonHandle(button);
+    });
+
+    var sublinks = document.getElementsByClassName('js-buybox__inst-sub-link');
+    forEach(sublinks, function (index, link) {
+        bindClickLinkHandle(link);
+    });
+
+    var bindDeepDyveClickHandle = function (link) {
+        if (!link) return
+
+        link.addEventListener('click', function (event) {
+            trackDeepDyve(LinkTrack(webtrekkTrackId))
+        })
+    }
+
+    var deepDyveLink = document.getElementById('deepdyve-link')
+    bindDeepDyveClickHandle(deepDyveLink)
+})();
+</script>
+
+                                        </div>
+
+                                    <div class="u-js-hide u-js-show-two-col">
+                                        
+        
+
+
+
+
+                                            <div class="citations" data-component="SV.Dropdown" data-namespace="citations">
+        <h3 class="u-h4" data-role="button-dropdown__title">
+    <span>Cite</span>
+    <span class="hide-text-small">chapter</span>
+</h3>
+<ul class="citations__content" data-role="button-dropdown__content">
+    <li>
+        <a href="#citeas" class="gtm-cite-dropdown">How to cite?</a>
+    </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/0-306-46949-9_10?format&#x3D;refman&amp;flavour&#x3D;citation"
+               title="Download this chapter&#39;s citation as a .RIS file" class="gtm-export-citation" data-gtmlabel="RIS">
+                <span class="citations__extension" data-gtmlabel="RIS">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .RIS
+                </span>
+                <span class="citations__types">
+                        <span>
+                            Papers
+                        </span>
+                        <span>
+                            Reference Manager
+                        </span>
+                        <span>
+                            RefWorks
+                        </span>
+                        <span>
+                            Zotero
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/0-306-46949-9_10?format&#x3D;endnote&amp;flavour&#x3D;citation"
+               title="Download this chapter&#39;s citation as a .ENW file" class="gtm-export-citation" data-gtmlabel="ENW">
+                <span class="citations__extension" data-gtmlabel="ENW">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .ENW
+                </span>
+                <span class="citations__types">
+                        <span>
+                            EndNote
+                        </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="//citation-needed.springer.com/v2/references/10.1007/0-306-46949-9_10?format&#x3D;bibtex&amp;flavour&#x3D;citation"
+               title="Download this chapter&#39;s citation as a .BIB file" class="gtm-export-citation" data-gtmlabel="BIB">
+                <span class="citations__extension" data-gtmlabel="BIB">
+                    <svg class="u-vertical-align-absolute" width="12" height="14" viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7.269v-6.271c0-.551-.448-.998-1-.998-.556 0-1 .447-1 .998v6.271l-1.5-1.547c-.375-.387-1.01-.397-1.401-.006l.016-.016c-.397.397-.391 1.025-.001 1.416l3.178 3.178c.392.392 1.024.391 1.415 0l3.178-3.178c.392-.392.391-1.025-.001-1.416l.016.016c-.397-.397-1.018-.388-1.401.006l-1.5 1.547zm-7 5.731c0-.552.456-1 1.002-1h9.995c.554 0 1.002.444 1.002 1 0 .552-.456 1-1.002 1h-9.995c-.554 0-1.002-.444-1.002-1z" fill="#0176C3"/></svg>
+                    .BIB
+                </span>
+                <span class="citations__types">
+                        <span>
+                            BibTeX
+                        </span>
+                        <span>
+                            JabRef
+                        </span>
+                        <span>
+                            Mendeley
+                        </span>
+                </span>
+            </a>
+        </li>
+</ul>
+    </div>
+
+                                            
+
+
+
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                                <div class="skyscraper-ad u-hide" data-component="SpringerLink.GoogleAds" data-namespace="skyscraper"></div>
+
+                        </div>
+                    </aside>
+                </div>
+            </main>
+            <section class="banner banner--cookies-policy u-js-hide u-composite-layer" data-component="SpringerLink.CookiePolicy">
+    <div class="banner__content u-interface">
+        <h2 class="u-screenreader-only">Cookies</h2>
+        <span class="banner__cookie-text">We use cookies to improve your experience with our site.</span>
+        <a class="banner__link banner__link--cookie" href="/termsandconditions#cookies">More information</a>
+
+        <form class="banner__form" action="/acceptcookies" method="POST">
+            <button class="u-link-like banner__right-ui">Accept</button>
+        </form>
+    </div>
+</section>
+
+                <footer class="footer u-interface">
+        <div class="footer__aside-wrapper">
+            <div class="footer__content">
+                <div class="footer__aside">
+                    <p class="footer__strapline">Over 10 million scientific documents at your fingertips</p>
+                                <div class="footer__edition" data-component="SpringerLink.EditionSwitcher">
+                                    <h3 class="u-hide" data-role="button-dropdown__title" data-btn-text="Switch between Academic &#38; Corporate Edition">Switch Edition</h3>
+                                    <ul data-role="button-dropdown__content">
+                                        <li class="selected"><a href="/siteEdition/link" id="siteedition-academic-link">Academic Edition</a></li>
+                                        <li><a href="/siteEdition/rd" id="siteedition-corporate-link">Corporate Edition</a></li>
+                                    </ul>
+                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__content">
+            <ul class="footer__nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/impressum">Impressum</a>
+                </li>
+                <li>
+                    <a href="/termsandconditions">Legal information</a>
+                </li>
+                <li>
+                    <a href="/accessibility" class="gtm-footer-accessibility">Accessibility</a>
+                </li>
+                <li>
+                    <a id="contactus-footer-link" href="/contactus">Contact us</a>
+                </li>
+            </ul>
+            <a class="parent-logo"
+               target="_blank" rel="noopener"
+               href="//www.springernature.com"
+               title="Go to Springer Nature">
+                <span class="u-screenreader-only">Springer Nature</span>
+                <svg width="125" height="12">
+                    <image width="125" height="12" alt="Springer Nature logo"
+                           src="/springerlink-static/1294705540/images/png/springernature.png"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           xlink:href="/springerlink-static/1294705540/images/svg/springernature.svg">
+                    </image>
+                </svg>
+            </a>
+
+            <p class="footer__copyright">&copy; 2017 Springer International Publishing AG. Part of <a target="_blank" rel="noopener" href="//www.springernature.com">Springer Nature</a>.</p>
+
+                <p class="footer__user-access-info">
+                    <span>Not logged in</span>
+                    <span>Kings College London Collections &amp; Research Support (2000578979) - NESLI UK (3000130459) - 1219 CHEST UK LNCS (3000179129) - JISC Collections Brettenham House South (3000251517) - University of Manchester JUSP only;MIMAS,Roscoe Bldg (3001139967) - JISC University of Durham (3002011430) - New JISC (3002114477) - JISC consortium (3991330314)</span>
+                    <span>159.92.238.8</span>
+                </p>
+        </div>
+    </footer>
+
+        </div>
+        
+<script type="text/javascript">
+    (function() {
+        var linkEl = document.querySelector('.js-ctm');
+        var scriptsList = [];
+        var polyfillFeatures = '';
+
+        if (window.matchMedia && window.matchMedia(linkEl.media)) {
+            (function(h){h.className = h.className.replace('no-js', 'js')})(document.documentElement);
+            
+            window.SpringerLink = window.SpringerLink || {};
+            window.SpringerLink.staticLocation = '/springerlink-static/1294705540';
+            
+            polyfillFeatures = 'default,fetch,Promise,Object.setPrototypeOf,Object.entries,Number.isInteger,MutationObserver,startsWith';
+            
+            scriptsList = [
+                'https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/1.0.7/client.min.js',
+                window.SpringerLink.staticLocation + '/js/jquery-3.2.1.min.js',
+                window.SpringerLink.staticLocation + '/js/mustache-2.3.0.min.js',
+                'https://cdn.polyfill.io/v2/polyfill.js?features=' + polyfillFeatures,
+                window.SpringerLink.staticLocation + '/js/main.js'
+            ];
+
+            scriptsList.forEach(function(script) {
+                var tag = document.createElement('script');
+                
+                tag.async = false;
+                tag.src = script;
+
+                document.body.appendChild(tag);
+            });
+        }
+    })();
+</script>
+
+<script>
+
+   function viewport() {
+        if (document.documentElement.clientWidth < 620) {
+            size = 'small';
+        }
+        else if(document.documentElement.clientWidth < 1075 ) {
+            size = 'medium';
+        }
+        else {
+            size = 'wide';
+        }
+        return size;
+    };
+
+    function reportForMouseEvents(linkCssSelectors, nolardUrl, experiment, abgroup) {
+        var counter = 0;
+        linkCssSelectors.forEach(function(cssSelector) {
+            $('body').delegate(cssSelector, 'click', function() {
+                if(counter == 0) {
+                    reportConversion(nolardUrl, experiment, abgroup);
+                    counter++;
+                }
+            });
+        });
+    };
+
+    function reportConversion(nolardUrl, experiment, abgroup) {
+        $.ajax({ url: nolardUrl + '/convert/' + experiment + '/' + abgroup });
+    };
+
+    function reportForMouseEvent(linkCssSelector, nolardUrl, experiment, abgroup) {
+        var counter = 0;
+        var elem = document.querySelector(linkCssSelector)
+
+        if (elem.addEventListener) {
+            elem.addEventListener("click", function(e) {
+                if(counter == 0) {
+                    reportConversion(nolardUrl, experiment, abgroup);
+                    counter++;
+                }
+            });
+        } else  {
+            elem.attachEvent("click", function(e) {
+                if(counter == 0) {
+                    reportConversion(nolardUrl, experiment, abgroup);
+                    counter++;
+                }
+            });
+        }
+    };
+
+    function reportParticipation(nolardUrl, experiment, abgroup, participations) {
+        if (participations)
+            participations.push(experiment + '/' + abgroup)
+
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', nolardUrl + '/participate/' + experiment + '/' + abgroup);
+        xhr.send();
+    };
+
+        function recordCurrentExperiment() {
+            var participations = [];
+            if (document.querySelector('#reprintsandpermissions-bottom-link') !== null) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureoff', participations);
+                reportForMouseEvent('#reprintsandpermissions-bottom-link', 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureoff');
+            } else if(document.querySelector('#reprintsandpermissions-top-link') !== null) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureon', participations);
+                reportForMouseEvent('#reprintsandpermissions-top-link', 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-article-reprints-permissions-location', 'featureon');
+            }
+            return participations;
+        };
+
+</script>
+
+<script>
+    window.onload = function() {
+    var linkEl = document.querySelector('.js-ctm');
+
+
+        if (window.matchMedia && window.matchMedia(linkEl.media)) {
+          var bookProductType = dataLayer[0].content && dataLayer[0].content.book && dataLayer[0].content.book.bookProductType
+          var hasBody = dataLayer[0]['Has Body'] == 'Y';
+          var userHasAccess = dataLayer[0]['HasAccess'] == 'Y';
+          var liveOrStatic = dataLayer[0].content && dataLayer[0].content.version
+
+          // Baseline reference work page
+          var isReferenceWork = window.location.pathname.startsWith('/referencework/');
+          var isReferenceWorkEntry = window.location.pathname.startsWith('/referenceworkentry/');
+          var isEncOrDict = bookProductType == 'Encyclop(a)edia' || bookProductType == 'Dictionary';
+
+          // Baseline static reference work entry page pdf download
+          if (isReferenceWorkEntry && isEncOrDict && $('.test-rwepdf-link').length) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-pdf-download', 'baseline');
+            reportForMouseEvents(['.test-rwepdf-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-pdf-download', 'baseline');
+          }
+          if (isReferenceWorkEntry && !isEncOrDict && $('.gtm-pdf-link').length) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-pdf-download', 'baseline');
+            reportForMouseEvents(['.gtm-pdf-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-pdf-download', 'baseline');
+
+            if (($('.test-bookpdf-link').length || $('.test-bookepub-link').length)) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+                reportForMouseEvents(['.test-bookpdf-link', 'test-bookepub-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+            }
+          }
+
+          // Baseline static reference work page pdf download
+          if (isReferenceWork && isEncOrDict && ($('.test-bookpdf-link').length || $('.test-bookepub-link').length)) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-enc-book-download', 'baseline');
+              reportForMouseEvents(['.test-bookpdf-link', 'test-bookepub-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-enc-book-download', 'baseline');
+          }
+
+          if (isReferenceWork && !isEncOrDict) {
+            if (($('.test-bookpdf-link').length || $('.test-bookepub-link').length)) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+                reportForMouseEvents(['.test-bookpdf-link', 'test-bookepub-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-book-download', 'baseline');
+            }
+
+            if ($('.test-book-toc-download-link').length) {
+                reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-pdf-download', 'baseline');
+                reportForMouseEvents(['.test-book-toc-download-link'], 'https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwpage-nonenc-pdf-download', 'baseline');
+            }
+          }
+
+          // Baseline static rwe page fulltext html view with access
+          if (isReferenceWorkEntry && isEncOrDict && hasBody) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-html-download', 'baseline');
+            if (userHasAccess)
+                reportConversion('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-enc-html-download', 'baseline');
+          }
+          if (isReferenceWorkEntry && !isEncOrDict && hasBody) {
+            reportParticipation('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-html-download', 'baseline');
+            if (userHasAccess)
+                reportConversion('https://ab-reporting.live.cf.public.springer.com', 'bunsen-'+liveOrStatic+'-rwepage-nonenc-html-download', 'baseline');
+          }
+      }
+
+            if (window.matchMedia && window.matchMedia(linkEl.media)) {
+                recordCurrentExperiment()
+            }
+   };
+
+</script>
+
+<script class="kxct" data-id="KDqyaFZ_" data-timing="async" data-version="3.0" type="text/javascript">
+ window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+ (function(){
+   var k=document.createElement('script');k.type='text/javascript';k.async=true;
+   k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/KDqyaFZ_.js';
+   var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+ }());
+</script>
+
+<script>
+    window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+    (function(){
+        function retrieve(n){
+            var m, k='kx'+n;
+            if (window.localStorage) {
+                return window.localStorage[k] || "";
+            } else if (navigator.cookieEnabled) {
+                m = document.cookie.match(k+'=([^;]*)');
+                return (m && unescape(m[1])) || "";
+            } else {
+                return '';
+            }
+        }
+        Krux.user = retrieve('user');
+        Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+    })();
+</script>
+
+    <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                    '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script type="text/javascript" id="googletag-push">
+        
+            var adSlot = '270604982/springerlink/book/chapter';
+        
+
+        var definedSlots = [
+                {slot: [728, 90], containerName: 'doubleclick-leaderboard-ad'},
+                {slot: [160, 600], containerName: 'doubleclick-ad'},
+        ];
+
+        googletag.cmd.push(function() {
+                googletag.pubads().setTargeting("doi","10.1007-0-306-46949-9_10");
+                googletag.pubads().setTargeting("kwrd",["Saddle_Point","Spring_Force","Transition_State_Theory","Minimum_Energy_Path","Force_Evaluation"]);
+                googletag.pubads().setTargeting("pmc",["C","C21001","P25005"]);
+                googletag.pubads().setTargeting("BPID",["2000578979","3000130459","3000179129","3000251517","3001139967","3002011430","3002114477","3991330314"]);
+                googletag.pubads().setTargeting("edition","academic");
+                googletag.pubads().setTargeting("sucode","SUCO11644");
+                googletag.pubads().setTargeting("eisbn","978-0-306-46949-7");
+                googletag.pubads().setTargeting("pisbn","978-0-7923-6687-4");
+                googletag.pubads().setTargeting("pissn","1567-7354");
+                googletag.pubads().setTargeting("ksg",Krux.segments);
+                googletag.pubads().setTargeting("kuid",Krux.uid);
+                googletag.pubads().setTargeting("logged","N");
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableAsyncRendering();
+            googletag.enableServices();
+        });
+    </script>
+
+
+        
+        <span id="chat-widget" class="u-hide"></span>
+        
+    </body>
+</html>
