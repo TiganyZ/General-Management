@@ -3789,6 +3789,11 @@ ______________________________________________________________
 
 ***** 5 recursion levels
 
+kbT = 0.1
+
+Incredibly slow. Probably better to not do. 
+
+
 
 
 
