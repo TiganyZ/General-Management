@@ -157,11 +157,59 @@
 
    - Superscript Z denotes ZPE correction to energy.
      * $E^z_s =  E_{s} + E_{z} - E_{zH2}/2$
-   - $E_{zH2} = 288 meV$ is the ZPE of a H$_2$ molecule. 
+   - $E_{zH2} = 288 meV$ is the ZPE of a H$_2$ molecule.
+
+
+   - Reference dislocation configuration repeated and 3 layers are
+     stacked in the z direction to isolate H from its images.
+
+   - 341 atoms in unfeasible in VASP but not all atoms necessary to
+     calculate solution energy
+     - Displacement of Fe atoms caused by hydrogen decays rapidly.
+     - Hexagonal region of atoms centred on H in center is clipped out
+       for calculation of binding energies.
+     - Outer Fe atoms fixed to reference configuration
+       * Because subjected to artificial forces from vaccuum region or
+         domain boundary.
+       * Domain boundary is more favourable as vaccuum region induces
+         a large amount of charge redistribution and surface effects.
+       * Domain boundary 3x3x8 k-points for high precision 1x1x8 elsewhere.
+       * Numerical errors are 5 and 30 meV for each k-point config
+         respectively.
+
+
+   - To calculate required system size for E with small finite-size
+     effects, $E_s$ calculated with 2$L^2$, with $L = 2,3,4$ with a H
+     atom placed in the t-site.
+   - Energies are close when unrelaxed, so /finite size effects come
+     from relaxation mainly./
+   - Finite size effects are inversely proportional to system size
+   - Accuracy of 20 meV in solution energy of 188 meV.
+
+
+   - 144 Fe atoms used in three layer calculation
+     - 36 in core are relaxed
+     - Rest are fixed in buffer region.
+     - Width of buffer region results in forces on domain boundary on
+       dynamic atoms to by 0.03 meV/A.
+   - Finite size effect of cell estimated from t-site solution energy
+     using same cell configuration.
+   - Error from finite size is 27 meV
+   - Total error from k-point sampling is 32 and 57 meV for the two
+     different meshes respectively.
+   - Errors from xc functional are not included and are around 85 meV
+     per H atom.
+
+
+   - Hydrogen binding to HCC expected to be larger than ECC.
+   - H density in calculations is large and /ECC should transform to HCC to lower total energy by having favourable hydrogen binding at the cost of a higher core energy/.
+   - To calculate H in dilute limit where the core structure is not affected by the high concentration of H:
+     - Core position is fixed at half the thickness of the system away in the Z direction from the H atom.
+     - Since core position related to Z displacement of three atoms surrounding the core, /core position at a certain layer can be fixed by prohibiting relaxation in Z/.
+     - Thus dislocation core remains in reference configuration and the dilute concentration limit of $E_s$ is obtained. 
+
 
      
-
-   
 
 
 
