@@ -1,0 +1,16 @@
+#+TITLE: Atomistic modelling of an Fe system with a small concentration of C
+#+AUTHOR: Tigany Zarrouk
+#+INTERLEAVE_PDF: ../papers/DomainBecquartEAM_Fe_C.pdf
+
+* Summary
+
+  - Study low concentrations of C in Fe with EAM potential. 
+  - Validation by:
+    - Simulation of C diffusion in $\alpha$-Fe
+    - Determining interaction of C with screw dislocation
+    - Evolution of lattice parameter with C content. 
+
+
+* Notes
+  
+* Questions

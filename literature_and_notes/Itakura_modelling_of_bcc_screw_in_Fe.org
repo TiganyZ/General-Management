@@ -1,0 +1,174 @@
+#+TITLE: The effect of hydrogen atoms on the screw dislocation mobility in bcc iron A first-principles study
+#+AUTHOR: Tigany Zarrouk
+#+INTERLEAVE_PDF: /home/tigany/Documents/docs/Management/papers/Itakura et al. - 2013 - The effect of hydrogen atoms on the screw dislocation mobility in bcc iron A first-principles study.pdf
+
+* Summary
+  
+  - Study mobility of screw dislocation in bcc Fe with DFT.
+  - Show that /increase/ of screw dislocation velocity with a given temperature range. 
+  - Interaction energy between hydrogen and screw core is calculated
+    at various positions around dislocation line.
+  - Results put into line tension model of curved dislocation to see
+    effect that H has on dislocation migration.
+  - /Softening/ effect of hydrogen caused by /reduction of kink nucleation enthalpy/.
+  - /Hardening/ effect of hydrogen caused by /kink trapping/.
+  - Transition between softening and hardening at lower critical temperature predicted.
+
+* Notes
+  
+** Introduction
+   - Solute softening sometimes occurs at low temperatures.
+   - Solute atoms either:
+     - Pin dislocations locally, hindering motion
+     - /Reduce/ Peierls barrier locally, which:
+       - Promotes /kink nucleation/
+       - Thus /enhances/ dislocation motion.
+   - Which effect is seen depends on core structure.
+
+   - Hydrogen Embrittlement (HE) where fracture toughness is reduced
+     with a lot of hydrogen, has mechanisms such as:
+     - Hydrogen enhanced decohesion
+     - Supression of dislocation emission by hydrogen
+     - Hydrogen-enhanced localized plasticity. 
+   /Which mechanism of hydrogen embrittlement is dominant under
+   engineering conditions?/
+   - H mechanism suggested due to:
+     - Reduced flow stress
+     - Increased screw dislocaton velocity with addition of H into bcc
+       matrix.
+   - H atoms concentrate in tensile regions.
+   - If concentrated H atoms induce local slips, this causes increases in:
+     - Local strain
+     - Dislocation density
+   - Mobility of dislocations is mediated in bcc metals by screw
+     component as it has:
+     - A large Peierls barrier
+     - Slow migration
+
+   - Edge dislocation strongly attracts H due to long ranged
+     hydrostatic strain fields.
+   - But due to already high mobility, the H atoms are more likely to /lower/
+     the mobility under most conditions.
+   - Mobility of the screw dislocation is mediated by the rate of
+     atomic-scale kink nucleation.
+   - A single H on a long screw dislocation segment can affect the
+     /nucleation rate/ by lowering the /nucleation energy/.
+     - This can explain friction measurements in iron. 
+    
+    
+   - Two different configurations of dislocation core structrure:
+     - Easy core (ECC) is most stable
+     - Hard core (HCC) is metastable.
+       - Larger free volume
+
+   - Movement of a screw dislocation in any direction necessitates the
+     alteration between ECC and HCC core structures.
+   - This results in a large Peierls barrier.
+
+   - As H atoms are attarcted to a free volume and lower the total
+     energy, the trapping of a H atom in the HCC configuration is
+     expected to be stronger than that for ECC.
+   - The Peierls barrier would be /lower/ with hydrogen.
+
+
+   - DFT calculations shwo that saddle point of migration path between
+     two ECCs is close, but different to HCC.
+   - Hard core and saddle point configuration (SPC) close to hard core energy.
+  
+   - Assumed here that the saddle point moves toward the HCC when a H
+     atom is in its core.
+
+   - H lowers Peierls barrier when H atom is just ahead of the screw
+     dislocation in its slip plane.
+
+   /Is average mobility of screw dislocation increased?/
+
+   - For increased average movility at lease one H atom must always be
+     close to adn ahead of a screw dislocation to promote kink-pair nucleation.
+   - H atom just behind the screw disloation line can slow/stop the
+     kink motion and /decrease/ dislocation mobility.
+
+   
+** DFT Calculation Details
+
+   - VASP GGS with 350 eV cutoff
+   - Relaxation tolerance 10meV/A
+   - Green's Function Flexible boundary conditions with concentric hexagons.
+     * Region 1 relaxed while region 2 fixed.
+     * Green's Function relaxation
+       + Each atom's displacement $\mathbf{u}_i$ relative to elastic
+         solution is calculated
+       + Large number of atoms added outside region 2, positions given
+         by elastic solution.
+       + Displacement fields in $\mathbf{u}_i$ in region 2 and outside
+         so forces calculated by Hessian matrix $\mathbf{f}_i =
+         \sum_{j \neq i} M_{ij}(\mathbf{u}_j-\mathbf{u}_i)$ are zero
+       + /Minimum image convention/ applied for difference of
+	 displacement to accound for periodicity of the lattice.
+       + Atoms in region 1 are fixed for this step.
+   - DFT and Greens function relaxation repeated until convergence.
+   
+   - Number of atoms in region 1 and 2 are 48 and 99 respectively.
+   - Cartesian coordinates are parallel to:
+     * X = $\langle \bar{2}11 \rangle$
+     * Y = $\langle 0\bar{1}1 \rangle$
+     * Z = $\langle 111 \rangle$
+   - Z cell vector length is equal to burgers vector.
+   
+   - Uniform Ferromagnetic state is reproduced by GGA
+   - Bulk properties calculated using 2 atom Fe cell.
+     * $a = 2.833 A$
+
+   - In dislocation simulations, initial magnetic moments are se to a
+     uniform ferromagnetic state.
+   - Initial magnetic moment of H is set to zero.
+     * This is so it converges to the right stare regardless fo teh
+       sign of the magnetic interaction between H and Fe.
+
+   - After reference state obtained, H atom is placed at each
+     tetrahedral site (t-site) near the core and the atomic
+     configurations are relaxed for each case. 
+
+   - Hydrogen solution energy:
+     * $E_{s} = E_{d + H} - E_{d} - E_{H2}/2$
+       + $E_{d + H}$: energy of dislocation and hydrogen. 
+       + $E_{d}$: energy of reference dislocation. 
+       + $E_{H2}$: energy of hydrogen molecule.
+   
+   - Binding energy $E_b$ is defined as difference in $E_s$ with
+     respect to the bulk t-site solution energy. It is positive when
+     $E_s$ is lower than that of the bulk t-site.
+
+   - The zero-point energy correction to the solution energy is
+     calculated from the Hessian matrix eigenvalues. (I assume the
+     force constant matrix eigenvalues)
+     * Assume that Fe atoms are heavy enough compared to H atoms that
+       the ZP can be approximated by the motion of a single H atom.
+
+     * Hessian calculated by displacing teh H atom in each of the $\pm
+       X$, $\pm Y$, $\pm Z$ directions by $\pm 0.015 A$ and seeing the
+       force calculated on the H atom.
+
+   - ZPE correction calculated by equation $$ E_z = \frac{1}{2} \sum_{i=1}^{3} \frac{\hslash}{2\pi} \sqrt{ k_i / m_H } $$
+     - $k_i$ are the three eigenvalues of the 3x3 Hessian matrix
+     - $m_H$ is the mass of a H atom.
+   
+   - Errors are on the order of a few meV and are negligible.
+
+   - Superscript Z denotes ZPE correction to energy.
+     * $E^z_s =  E_{s} + E_{z} - E_{zH2}/2$
+   - $E_{zH2} = 288 meV$ is the ZPE of a H$_2$ molecule. 
+
+     
+
+   
+
+
+
+
+ 
+
+* Questions
+
+  - Why would H be likely to /lower/ the mobility of edge dislocations?
+    
