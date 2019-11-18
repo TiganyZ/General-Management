@@ -210,6 +210,19 @@
 
 
      
+** Results
+   
+   - Both strong and weak binding sites for both hard and easy core.
+   - ECC
+     * $E_b^z = 256 \pm 32 meV$ for E2 site, E1 site is slightly lower
+       in energy at 249 meV.
+     * Strong sites E1 and E2 form basins of two of each in E2 E1 E1
+       E2 structure near core.
+     * Fe atoms around basin form slanted triangular prism.
+     * Broad basin predicted by EAM calculations as well. 
+   - HCC
+     * 
+
 
 
 
