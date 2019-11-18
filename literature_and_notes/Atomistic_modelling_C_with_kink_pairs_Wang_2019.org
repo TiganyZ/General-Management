@@ -1,0 +1,30 @@
+#+TITLE: Atomistic modelling of C effect on kink-pair with Domain Becquart EAM
+#+AUTHOR: Tigany Zarrouk
+#+INTERLEAVE_PDF: ../papers/Wang2019_Article_AtomisticSimulationsOfCarbonEf.pdf
+
+
+* Summary
+
+* Notes
+  
+** Introduction
+   
+   
+
+** Methods
+
+   - NEB calculations performed using LAMMPS ( 85 A x 85 A x 642 A)
+   - Dislocation introduced into the middle of the system and relaxed to give reference.
+   - Other dislocation for last image of EAM is one step from initial in [112] direction.
+   - Kink formation energy barrier is 11 meV/b larger than the process with a middle structure.
+   - Middle image consists of half the length of the dislocation line of the initial and final states, which is a kink-pair created manually.
+   - Influences of instability of the hard configuration core energy predicted by the potential on the kink formation and motion energies are eliminated as a consequence. 
+
+
+   - Binding energy of the carbon in the different sites are given in the Domain-Becquart paper. 
+
+** Results
+   
+   
+
+* Questions

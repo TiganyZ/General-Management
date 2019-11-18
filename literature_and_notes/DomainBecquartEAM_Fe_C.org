@@ -6,11 +6,44 @@
 
   - Study low concentrations of C in Fe with EAM potential. 
   - Validation by:
-    - Simulation of C diffusion in $\alpha$-Fe
-    - Determining interaction of C with screw dislocation
-    - Evolution of lattice parameter with C content. 
-
+    * Simulation of C diffusion in $\alpha$-Fe
+    * Determining interaction of C with screw dislocation
+    * Evolution of lattice parameter with C content. 
+      
+ 
 
 * Notes
   
+  - Interaction of C with dislocations/substitutional atoms changes the yield stress.
+  - Previous models use interatomic potentials that are insufficient to model the metal-metal interaction.
+    - Furthermore no C-C interaction was included.
+  - Fe-C interaction potential was constructed such that one could reproduce:
+    - Experimental carbon migration energy
+    - Activation volume
+    - Binding energy of carbon vacancy dipole
+  - Rosato did second moment tight-binding model which gave better elastic properties and agreement with experimental data.
+    - bcc and fcc had second-moment and Rosato-Guillope-Legrand model.
+    - No C-C interaction. 
+
+      
+  - Most of these potentials /do not/ predict the correct core structure of the screw dislocation core and the relative stability of self interstitials. 
+
+    
+  - DFT calculations in FeC ferritic system were done by Domain to determine interaction between:
+    - C atoms with one vacancy
+    - a C atom a self-interstitial atom (SIA)
+    - C-C atoms
+  - Strong interactions of C with one vacancy were found.
+  - No significant interaction with self-interstitials
+
+
+  
+* Methods 
+  
+  - Calculations performed in VASP with GGA and Vanderbilt-type USPP to describe the electron-ion interaction.
+    - Pseudopotentials are good as they eliminate the need to include atomic core states and the hard potentials for binding them
+    - Also allow finite number of plane waves (which means that they are used all of the time?)
+  
+  - 
+
 * Questions
