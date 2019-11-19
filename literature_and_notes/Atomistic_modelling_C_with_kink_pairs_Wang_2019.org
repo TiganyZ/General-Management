@@ -26,7 +26,6 @@
 
 
 ** Results
-   
    - Fe screw dislocation with no carbon produced a double-kink formation mechanism during gliding.
    - Without carbon, the two leading kinks LA and LB nucleated.
      - Kink gliding along positive $[111]$ direction is labeled as A, with the negative one as B.
@@ -39,7 +38,58 @@
    
 ***  Effect of carbon on kink-pair nucleation
 
-    
+    - Carbon placed at site at one fourth the length of the dislocation line.
+    - Dislocation in all carbon positions kink at the carbon atom from the initial to the final state.
+    - A2, B3 and C3 sites outside the second neighbour shell did not influence nucleation.
+    - B1, B2, C1, C2, inside second neighbour shell, inhibited the generation of LB, but LA and TA formed initially.
+      - After propogation of TA and LA, LB and TB formed.
+    - A1 was unique as both the energies and the relative distances between carbon atoms and the screw dislocation remained the same at the initial and final states.
+      * LB and TB were generated before LA and TA.
+    - Double kink mechanism was not disturbed by carbon. 
+
+
+    - Along MEP binding of carbon stronger when the energy of the system was lower.
+    - A1 resulted in an increase in energy of the kink generaton barrier.
+    - A2 had no effect as carbon was outside the second neighbour shell.
+    - B1, B2 and B3 had a higher initial binding to carbon, so:
+      - kink-pair nucleation energies increased.
+      - So carbon increases the activation energy of kink-pair nucleation at a carbon atom when the carbon atom transits to a weaker binding site.
+    - C1, C2, C3 sites had weaker initial carbon binding energy
+      - C1, C2 prohibited LB and TB generation initially
+      - But kink-pair nucleation barriers decreased significantly.
+    - Carbon /decreased/ the kink-pair nucleation barriers when the carbon atom transits to a stronger binding site.
+    - /This causes the mobility of screw dislocations to increase/
+
+
+
+*** Carbon effect on kink-pair propagation process
+
+    - Carbon was placed at the midpoint of the length of the dislocatin line in different binding positions.
+    - Double-kink nucleation remained valid in A1, A2, B2, B3, C1 and C3 (see state 14).
+    - B1 and C2, only LB and TB generated and propagated. 
+      - Sited located on the side towards which the dislocation glides.
+      - Carbon became a strong obstacle
+      - LA and TA then generated in C2 and propagated toward LB and TB until end of dislocation glide.
+    - B1: TA and LA failed to nucleate at all. 
+    - All LA and TA kinks were inhibited by the carbon when migrating alongside it in positions A1, A2, B2, B3, C1 and C3.
+
+    - /Therefore carbon may considerably inhibit the propagation of a single kink, thereby modifying the kink-pair mechanism to that of a single kink./
+
+    - Influenced distance was greater than that of the nucleation process. 
+
+      
+
+    - Postponed propagation of LA and Ta results in a slight decrease in the kink propagaton barrier in A1 and A2.
+    - /This cant be regarded as carbon-enhanced mobility of a screw dislocation./
+      - This is because the terminated single-kink propagation may more negatively affect mobility, resulting in an uncertain competition between these two inverse effects.
+	- This may be discussed in a further study.
+    - B1, B2, B3, with strong initial carbon binding the kink-pair propagation energies decreased at B2 and B3, just like A1 and A2.
+    - B1 nucleation clearly decreased due to failed nucleation of TA and LA. 
+
+
 
 
 * Questions
+
+  - Why would a terminated single-kink negatively affect mobility?
+  - How large is the energy reduction in the 
