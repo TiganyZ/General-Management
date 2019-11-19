@@ -57,7 +57,7 @@
     - C1, C2, C3 sites had weaker initial carbon binding energy
       - C1, C2 prohibited LB and TB generation initially
       - But kink-pair nucleation barriers decreased significantly.
-    - Carbon /decreased/ the kink-pair nucleation barriers when the carbon atom /transits to a stronger binding site./
+    - Carbon /decreased/ the kink-pair nucleation barriers when the carbon atom transits to a stronger binding site.
     - /This causes the mobility of screw dislocations to increase/
 
 

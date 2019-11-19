@@ -1,0 +1,34 @@
+#+TITLE: SKF Internship: Things to do
+#+AUTHOR: Tigany Zarrouk
+
+
+* Tasks
+
+** TODO Determine Calculations
+   DEADLINE: <2019-11-21 Thu>
+   
+   - What needs to be calculated for the construction of a Kinetic Monte Carlo model? 
+
+** TODO Project outline
+   DEADLINE: <2019-11-22 Fri>
+   
+   Create Gantt chart for the project. 
+    
+** TODO Create Presentation 
+   DEADLINE: <2019-11-25 Mon>
+   
+   - Make outline of presentaton
+   - Tailor it for Eric Vegter and other members of group.
+   - Show why this project is important
+     - Put in things about how carbon migration is important
+     - Check the new proposal
+     - Fundamental interactions between C and dislocations. 
+
+** TODO Generate Cells for Calculations
+   SCHEDULED: <2019-11-25 Mon>
+    Once calculations necessary have been determined I can start generating files that generate dislocations. 
+    
+    
+    - Ask Luke if Hexagonal cells are generally better or not?
+    - How does he simulate kinks?
+    - Read Luke's Thesis
