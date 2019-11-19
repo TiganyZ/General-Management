@@ -46,4 +46,42 @@
   
   - 
 
+
+
+* Comparison of energies to Paxton Fe-C Model
+
+  All Values in eV
+  
+  | Parameters          | Paxton (TB) | DFT (Pax) | Dom/Bec (EAM) | DFT (D/B) | Exp.       |
+  |---------------------+-------------+-----------+---------------+-----------+------------|
+  | 1 Vac. 1 Carbon (1) | +0.35       | +0.47     |         +0.83 |     +0.47 | 0.41 - 1.1 |
+  | 1 Vac. 1 Carbon (2) |             |           |         -0.04 |     -0.01 | --         |
+  |---------------------+-------------+-----------+---------------+-----------+------------|
+  | 2 Vac. 1 Carbon (1) | --          | --        |         +1.06 |     +0.34 | --         |
+  | 2 Vac. 1 Carbon (2) | --          | --        |         +0.31 |     +0.47 | --         |
+  | 2 Vac. 1 Carbon (3) | --          | --        |         +0.90 |     +0.68 | --         |
+  |---------------------+-------------+-----------+---------------+-----------+------------|
+  | 0 Vac. 2 Carbon (d) | --          | --        |         -0.16 |     -0.09 | --         |
+  | 0 Vac. 2 Carbon (e) | --          | --        |         -0.50 |     -0.65 | --         |
+  | 0 Vac. 2 Carbon (f) | --          | --        |         -0.96 |     -1.67 | --         |
+  | 0 Vac. 2 Carbon (g) | --          | --        |         -0.11 |     -0.09 | --         |
+  | 0 Vac. 2 Carbon (h) | --          | --        |         -0.05 |     +0.13 | --         |
+  | 0 Vac. 2 Carbon (i) | --          | --        |         +0.05 |     +0.16 | --         |
+  |---------------------+-------------+-----------+---------------+-----------+------------|
+  | E Migration (T - O) | +0.81       | +0.87     |         +0.85 |     +0.90 | 0.81-0.88  |
+  |---------------------+-------------+-----------+---------------+-----------+------------|
+  | 1 Vac. 2 Carbon (j) | +1.10 (R2k) | +0.37     |         +1.12 |     +1.07 | --         |
+  | 1 Vac. 2 Carbon (k) | +1.55       | +1.50     |         +1.51 |     +1.50 | --         |
+
+
+  So the Paxton TB parameters get closer to DFT in the cases of 
+  - 1 Vac. 1 Carbon --> DFT but /further/ away from experiment than DB EAM
+  - EAM wins in other cases. 
+
+  What about in general? How do the models fare in their description of reality?
+
+  
+
+
+
 * Questions

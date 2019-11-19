@@ -53,11 +53,11 @@
     - A2 had no effect as carbon was outside the second neighbour shell.
     - B1, B2 and B3 had a higher initial binding to carbon, so:
       - kink-pair nucleation energies increased.
-      - So carbon increases the activation energy of kink-pair nucleation at a carbon atom when the carbon atom transits to a weaker binding site.
+      - So carbon /increases/ the activation energy of kink-pair nucleation at a carbon atom when the carbon atom /transits to a weaker binding site./
     - C1, C2, C3 sites had weaker initial carbon binding energy
       - C1, C2 prohibited LB and TB generation initially
       - But kink-pair nucleation barriers decreased significantly.
-    - Carbon /decreased/ the kink-pair nucleation barriers when the carbon atom transits to a stronger binding site.
+    - Carbon /decreased/ the kink-pair nucleation barriers when the carbon atom /transits to a stronger binding site./
     - /This causes the mobility of screw dislocations to increase/
 
 
@@ -84,9 +84,8 @@
       - This is because the terminated single-kink propagation may more negatively affect mobility, resulting in an uncertain competition between these two inverse effects.
 	- This may be discussed in a further study.
     - B1, B2, B3, with strong initial carbon binding the kink-pair propagation energies decreased at B2 and B3, just like A1 and A2.
-    - B1 nucleation clearly decreased due to failed nucleation of TA and LA. 
-
-
+    - B1 nucleation clearly decreased due to failed nucleation of TA and LA.
+    - 
 
 
 * Questions
