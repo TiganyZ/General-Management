@@ -213,21 +213,61 @@
 ** Results
    
    - Both strong and weak binding sites for both hard and easy core.
+
+*** ECC
    - ECC
-     * $E_b^z = 256 \pm 32 meV$ for E2 site, E1 site is slightly lower
-       in energy at 249 meV.
-     * Strong sites E1 and E2 form basins of two of each in E2 E1 E1
-       E2 structure near core.
-     * Fe atoms around basin form slanted triangular prism.
-     * Broad basin predicted by EAM calculations as well. 
-   - HCC
-     * 
+   - $E_b^z = 256 \pm 32 meV$ for E2 site, E1 site is slightly lower
+     in energy at 249 meV.
+   - Strong sites E1 and E2 form basins of two of each in E2 E1 E1
+     E2 structure near core.
+   - Fe atoms around basin form slanted triangular prism with larger volume than the regular crystal. 
+   - Broad basin predicted by EAM calculations as well. 
+
+   - Equilibrium hydrogen concentration $C_b$ with binding energy $E^z_b$ is calculated from McLean's equation:
+
+     \[ C_b = \frac{ C_0 \text{exp}( E^z_b / k_B T ) / 3 }{ 1 + \text{exp}( E^z_b / k_B T ) / 3 } \]
+
+   - $C_0$ is the bulk hydrogen concentration.
+   - Factor of 3 is for the three t-sites per Fe atom.
+
+*** Concentration with McLean's Equation   
+   - H-H interaction is neglected in quoted McLean's equation.
+     - When attractive, H atoms attracted to binding sites with neighbour site that is already occupied by a H tom
+     - The binding energy becomes larger than $E^z_b$.
+     - Therefore ignoring the H-H interaction /underestimates/ concentration $C_b$.
+   - When repulsive McLean's equation quoted is valid when $C_b < 0.5$
+     - This is because the interaction is usually only limited to the neighboring H atoms. So $C_b$ is a lower bound. 
+
+   
+   - Can find the temperature dependence of $C_b$ at the E1/E2 basin with $C_0=0.1$. 
+     
+*** HCC
+
+   - H0 at the center of the core is the strongest binding site at $390 \pm 32 meV$. 
+   - This is 130 meV stronger than the ECC case.
+   - /This indicates that a H atom can lower the Peierls barrier by about 130 meV/.
+   - This is consistent with DFT calculations on difference between ECC and SPC ($~100 meV$).
+   - Also implies that /ECC changes to HCC at expense of core energy./
+   - If ECC changes to HCC when three E1/E2 basins are occupied with the same concentration $C_b$, H atoms in the three basins en up in the H0 site and two in the H2 sites.
+   - Core energy increases by $40 meV/b$
+   - Total hydrogen trap energy changes by 0 meV/b on average.
+   - So the ECC will remain unchanged regardless of hydrogen concentration at the binding sites. 
+
+   - The DFT data of distance dependence of binding energy of H to core can be fitted by a Lorentzian.
+
+     \[ E_H(r) \frac{390}{1 + 2(r/r_0)^2} \text{meV} \]
+
+   - $r_0 = \sqrt{6}a_0/3$ is the distance between two neighbouring ECC positions.
+
+   - This Lorentzian agrees well with linear theory
+
+   - Core distance $R_0$ seems to be around 2.5b. 
 
 
 
-
-
- 
+*** Line tension model 
+    
+    
 
 * Questions
 
