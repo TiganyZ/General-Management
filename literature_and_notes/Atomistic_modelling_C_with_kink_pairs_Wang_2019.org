@@ -18,13 +18,28 @@
    - Other dislocation for last image of EAM is one step from initial in [112] direction.
    - Kink formation energy barrier is 11 meV/b larger than the process with a middle structure.
    - Middle image consists of half the length of the dislocation line of the initial and final states, which is a kink-pair created manually.
+   - This is a metastable state. (24th state in figure 1).
    - Influences of instability of the hard configuration core energy predicted by the potential on the kink formation and motion energies are eliminated as a consequence. 
 
 
    - Binding energy of the carbon in the different sites are given in the Domain-Becquart paper. 
 
+
 ** Results
    
+   - Fe screw dislocation with no carbon produced a double-kink formation mechanism during gliding.
+   - Without carbon, the two leading kinks LA and LB nucleated.
+     - Kink gliding along positive $[111]$ direction is labeled as A, with the negative one as B.
+   - Trailing kinks (TA, TB) were also formed.
+   - All kinks propagated continually.
+   - Width was $a\sqrt{6}/3$
+   - Barrier was 0.845 eV.
+
+     
    
+***  Effect of carbon on kink-pair nucleation
+
+    
+
 
 * Questions
