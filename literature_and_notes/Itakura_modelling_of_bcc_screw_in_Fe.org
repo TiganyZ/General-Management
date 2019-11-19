@@ -267,8 +267,21 @@
 
 *** Line tension model 
     
+    - To estimate the effect of H atoms on the kink-pair nucleation enthalpy and the kink nucleation rate, the interaction energy between the H atom and the screw dislocation is incorporated into a line tension model of a dislocation line.
+    - This is expressed as an enthalpy of a curved screw dislocation configuration specified by the core positions $\mathbf{P}_j$ at each atomic layer $j$ of thickness $b$. 
+
+      \[ E_{LT} = \frac{K}{2} \sum_j ( \mathbf{P}_j - \mathbf{P}_{j+1})^2 + \sum_j E_{\mathbf{P}_j}(\mathbf{P}_j) + \{ ( \sigma * \mathbf{b} ) \times \mathbf{l}\} \cdot \mathbf{P}_j - \sum_{j,k} E_H( | \mathbf{P}_j - \mathbf{P}_{j+1} | )   \]
+
+      - $K = 0.866 eV\AA^{-2}$ is a constant derived from the Hessian matrix of the ECC calculated from DFT (The other Itakura paper [[file:~/Documents/docs/Management/papers/itakura2012.pdf]])
     
 
+    
+
+* Ingredients for a KMC Model 
+
+  1) Line tension model
+     * 
+  
 * Questions
 
   - Why would H be likely to /lower/ the mobility of edge dislocations?
