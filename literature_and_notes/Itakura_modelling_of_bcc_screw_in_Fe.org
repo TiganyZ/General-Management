@@ -393,6 +393,12 @@
     - One can show that the kink formation energy is proportional to $\sqrt{KE_P}$,
       - So the uncertainty in $K$ only modestly affects the estimate of the kink formation energy. 
 
+	
+    - NOTE: Not sure if $K$ is the /compressibility/ or not.
+      - $K = - \Delta V / P = 1/B$
+	- $\Delta V = 1/3\text{Tr}(\varepsilon)$ is the dilatation
+	- $P = 1/3\text{Tr}(\sigma)$ is the pressure
+	- $B$ is the bulk modulus. 
 
 
 * Ingredients for a KMC Model 
