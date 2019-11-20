@@ -270,12 +270,102 @@
     - To estimate the effect of H atoms on the kink-pair nucleation enthalpy and the kink nucleation rate, the interaction energy between the H atom and the screw dislocation is incorporated into a line tension model of a dislocation line.
     - This is expressed as an enthalpy of a curved screw dislocation configuration specified by the core positions $\mathbf{P}_j$ at each atomic layer $j$ of thickness $b$. 
 
-      \[ E_{LT} = \frac{K}{2} \sum_j ( \mathbf{P}_j - \mathbf{P}_{j+1})^2 + \sum_j E_{\mathbf{P}_j}(\mathbf{P}_j) + \{ ( \sigma * \mathbf{b} ) \times \mathbf{l}\} \cdot \mathbf{P}_j - \sum_{j,k} E_H( | \mathbf{P}_j - \mathbf{P}_{j+1} | )   \]
+      \[ E_{LT} = \frac{K}{2} \sum_j ( \mathbf{P}_j - \mathbf{P}_{j+1})^2 + \sum_j E_{\mathbf{P}_j}(\mathbf{P}_j) + \{ ( \sigma \cdot \mathbf{b} ) \times \mathbf{l}\} \cdot \mathbf{P}_j - \sum_{j,k} E_H( | \mathbf{P}_j - \mathbf{P}_{j+1} | )   \]
 
       - $K = 0.866 eV\AA^{-2}$ is a constant derived from the Hessian matrix of the ECC calculated from DFT (The other Itakura paper [[file:~/Documents/docs/Management/papers/itakura2012.pdf]])
+
+	
+    - $\mathbf{P}_j$ is a two dimensional vector whose components are the X and Y coordinates of the dislocation core position.
+    - $E_P$ is the Peierls barrier per Burgers vectore $b$.
+    - $E_H$ is the interaction energy between the dislocation line and the  atoms.
+    - $\mathbf{P}_j^H$ is the position of the $k$th H atom in the XY plane.
+    - Third term is the contributio from the external stress.
+    - $\sigma \otimes b$ is the tensor-vector product of the stress and Burgers vector.
+    - $\mathbf{l} = \mathbf{P}_j - \mathbf{P}_{j-1}$ 
+
+    - Inclination of the dislocation line is given by $|= \mathbf{P}_j - \mathbf{P}_{j+1}|/b$ which is at most 1/30. 
+
+    - Assume that the interactio between the disocation and the H atoms is described well by the hydrogen binding energy of a straight screw dislocation
+      - This means the term $E_H$ is calculated only between a H atom and a representative dislocation segment which is closest to the H atom.
+      - Also assume that the position of the H atom, which is initially in and E1/E2 basin, remains unchanged in the kink nucleation/migration process.
+      - This is because the binding in this site is strong throughout the process. 
     
 
+
     
+
+* Itakura 2012 First principles calculations of a screw dislocation in bcc iron
+
+  
+** Notes
+
+   
+*** Lattice Stress
+
+    - Effect of applied stress is given by the Peach-Kohler term
+      \[  \{  ( \sigma \otimes \mathbf{b}  ) \times \mathbf{l} \}\]
+    - $\mathbf{l}$ is a vector parallel to the dislocation line and its length is equal to the length of the segment under consideration.
+    - $\mathbf{r}$ is the dislocation positon. 
+
+    - Additional effect on the shape of the Peierls energy $\delta E_P$ has been reported with applied stress. 
+
+    - With anti-parallel burgers vectors, there is no contribution from the Peach-Kohler term, so we need another method to observe it. 
+
+    - One can observe the forces on the two dislocatons $F_x$, $F_y$
+
+    - Compare this to the lattice stress $S_x = -F_x / b^2 \pm \sigma_{YZ}$, $S_y = -F_y / b^2$ for the different strain cases and see if the Peierls potential is affected. 
+
+      
+
+*** Line tension Model
+    
+    - Dislocation mobility is determined by the formation enthalpy of a dislocation kink, a defect where the dislocation line moves from one energy minimun in the Peierls energy to the next.
+    - The total dislocation enthalpy reaches a maximum when some part of the dislocation line overcomes the Peierls barrier.
+    - Then a fully formed kink-pair moves in opposite directions, lowering the total enthalpy as they separate so the whole dislocation line moves along into the next Peierls valley. 
+      [[file:~/Documents/docs/Management/Images/itakura_peierls_valley_kink_prop]]
+
+    - Using line tension model / MD to obtain the kink-pair formation enthalpy reproduces dislocation velocity well. 
+    - Screw dislocation has kink width of 10-20b
+    - Direct calculation needs many slabs of atoms. (Thousands)
+ 
+    
+    \[ E_{LT} = \frac{K}{2} \sum_j ( \mathbf{P}_j - \mathbf{P}_{j+1})^2 + \sum_j \Delta \mathbf{P}_j + \{ ( \sigma \otimes \mathbf{b} ) \times \mathbf{l}\} \cdot \mathbf{P}_j    \]
+    
+    - Where $K$ is a constant related to the elastic constants of the material.
+    - $j$ is an index of thin slabs with the thickness b parallel to the Z axis.
+    - $\mathbf{P}_j = (P^x_j, P^y_j)$ is the position of a dislocation core in slab j.
+    - $\Delta E_P$ is the Peierls barrier per Burgers vector b
+      obtained in the previous section. 
+    - the third term is the contribution from the external stress.
+
+
+    - The constant K can be calculated by comparing the quadratic expansion of the line tension equation above in $(P^x_j, P^y_j)$ with the expansion of $E_d(x^d + \delta)$, which is given as 
+
+      \[ E_d(x^d + \delta) - E_d(x^d) \approx -\sum_i \delta_i F_i + \frac{1}{2} \sum_{ij} H_{ij} \delta_i \delta_j    \]
+
+    - The matrix $H_ij$ can be calculated by 
+      \[ F_i(x^d + \delta) - F_i(x^d) = \sum_j H_{ij} \delta_j \]
+
+
+    - To calculate K can demonstrate using EAM potential. 
+      - Isolated easy core screw of 60$b$
+      - Outermost atoms fixed to linear elasticity solutions
+      - One atom in the innermost three atomic colums (I assume the triangle of the dislocation core) is displaced in the +Z direction by 0.01$\AA$.
+      - Forces on every atom are calculated
+      - Induced force on two atoms above and below are calculated to be $29 meV\AA^{-1}$ in Z direction.
+      - On displaced atom it is $-82 meV\AA^{-1}$
+      - Forces on other atoms are negligible.
+      - Therefore $H_ii = 8.2 eV\AA^{-2}$ for the diagonal elements
+      - $H_ij = -2.9 eV\AA^{-2}$ for the neighbouring pair on the same row
+      - If denote Z as the displacement of the three innermost atoms on the layer $j$ by $z_{j,1}$, $z_{j,2}$, $z_{j,3}$, the total energy can be expanded as:
+
+	\[ E_{\text{tot}} = \frac{1}{2}\sum_j\sum_{a=1,2,3} Az^2_{j,a} + K_0( z_{j,a} - z_{j-1,a} )^2  \]
+
+      - $A = 2.4 ev\AA^{-1}$, $K_0 = 2.9 ev\AA^{-1}$
+
+      - Using 
+
+
 
 * Ingredients for a KMC Model 
 

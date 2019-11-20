@@ -17,6 +17,112 @@
    DEADLINE: <2019-11-22 Fri>
    
    Create Gantt chart for the project. 
+
+
+    The open questions in terms of mechanisms are:
+
+    - Can dislocations carry carbon when they move?
+
+    - Do temper carbides dissolve with rolling contact fatigue? Or do they grow?
+
+*** TODO Details of the context of the project. 
+
+    - With a bearing on a raceway one can expect a /Hertzian/ distribution of the stress.
+    - This leads to a large degree of stress on the /subsurface/ of the raceway.
+    - It has been seen in cross sections of the bearing raceway, with an increase in the number of fatigue cycles, after etching, dark and light etched regions start to develop.
+    - The light regions correspond to the normal microstructure.
+    - Dark regions seem to correspond to regions of high /von Mises/ stress from the Hertzian distribution of the stress.
+      - These are called /Dark Etched Regions/ (DERs)
+    - Within the DERs there are /white etched bands./
+
+    - It is not clear what the microstructure of the dark regions are. Nor what the white etched bands are.
+
+    - It it thought that the development of these regions is due to carbon diffusion and migration.
+    - I am not sure how carbon diffusion causes a change in the color of the image.
+    - But basically there are a couple of theories into the carbon migration.
+
+**** Cambridge's theory
+
+     - The theory is that essentially there are grains of martensite.
+     - Within these grains there are carbide precipitates of different types.
+     - It is thought that dislocations move in a cotterel atmosphere of carbon and then they deposit it into the precipitates.
+     - They tried to validate this claim by looking at atom probe tomography of a portion of the sample.
+     - They see near regions of large amounts of carbon, there are regions of decreased carbon content.
+     - They try to relate these regions of a high carbon concentration to different forms of carbide but there is debate as to whether the resolution of the APT results to actually determine with certainty what the actual stochiometry of the precipitates are.
+
+       
+***** Qualms 
+
+      1) Is it valid to say that the dislocations actually deposit carbon into the carbides?
+	 * Is there a segregation energy from dislocations to these carbide regions?
+	 * Predrag is looking at this with some interatomic potentials.
+	 * Do temper carbides dissolve with rolling contact fatigue? 
+ 
+
+
+
+***** Notes from Predrag
+      
+      - Given a diffusion equation of the form 
+
+	\[ \frac{\partial c}{\partial t} = \nabla ( D \nabla c ) - \nabla \cdot (\mathbf{v}c) + R\]
+
+      - Where c is the variable of interest (say concentration)
+      - D is the diffusion coefficient (diffusivity)
+      - $\mathbf{v}$ is a velocity field that the quantity is moving with.
+	- e.g In /advection/ then $c$ is the concentration of salt in a river and $\mathbf{v}$ would be the velocity of the water as a function of time and location.
+	- This is a quantity that is /driving the diffusion/. 
+      - $R$ Describes sources and sinks of the quantity. 
+
+	
+      - In relation to diffusion of carbon, we can say that $c$ is the concentration of carbon.
+      - In general the diffusion term (the first term) will be quite small.
+      - The velocity term makes the larger contributions. 
+
+      /What is this velocity term composed of in terms of dislocations and carbon diffusion?/
+
+      - One can think of this velocity term as being decomposed into several parts.
+      - In a paper by Sadeghi? They relate this velocity term to something of the form 
+
+	\[ \mathvf{v} = \frac{D}{k_B T} W \]
+
+      - Where $W$ is the /work due to dissipation of plastic strain/ defined as (maybe):
+	\[ W = \int \sigma \varepsilon^p d^3r \]
+
+      - But one can also think about this in the case of a solute interacting with the strain field of a dislocation. 
+
+	\[ \mathvf{v} = \frac{D}{k_B T} \nabla ( P \Omega) \]
+
+      - Where $\Omega$ is the /misfit volume/.
+      - $P$ is the trace of the stress tensor
+
+
+
+***  Relevant Articles
+    Here is the article where the first model is described:
+    
+    http://dx.doi.org/10.1016/j.actamat.2017.08.005
+    [[file:papers/Strain-induced_Martensite_Decay_in_Bearing_Steels_under_Rolling_Contact_Fatigue_Modelling_and_Atomic-scale_Characterisation.pdf]]
+    
+    And here the second model:
+
+    http://www.tandfonline.com/doi/abs/10.1080/10402004.2012.754073
+
+    [[file:papers/warhadpande2013.pdf]]
+
+
+    http://www.tandfonline.com/doi/abs/10.1080/10402004.2013.847999
+
+    [[file:papers/warhadpande2013-1.pdf]]
+ 
+
+    The open questions in terms of mechanisms are:
+
+    - Can dislocations carry carbon when they move?
+
+    - Do temper carbides dissolve with rolling contact fatigue? or do they grow?
+
+ 
     
 ** TODO Create Presentation 
    DEADLINE: <2019-11-25 Mon>
