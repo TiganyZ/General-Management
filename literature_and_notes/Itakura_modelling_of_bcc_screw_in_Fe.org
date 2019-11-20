@@ -363,7 +363,35 @@
 
       - $A = 2.4 ev\AA^{-1}$, $K_0 = 2.9 ev\AA^{-1}$
 
-      - Using 
+      - Using equation line tension equation above and
+
+	\[ E_P(P^x_j, P^y_j) = E_d(x^d) = \min_{x^o} E_d(x^d, x^o) = E(x^d, \bar{x}^o(x^d))\]
+
+	- Where $x^d$ denotes a set of degrees of freedom that is related to the dislocation position and is determined by $(P^x_j, P^y_j)$.
+	- All other degrees of freedom are denoted by $x^o$.
+	  
+      - We can obtain $K = \frac{9}{32}K_0 = 0.816 ev\AA^{-2}$ for the Mendelev potential. 
+
+
+	
+    - The Peierls energy landscape of the same potential is calculated using a single layer isolated dislocation configuration and then fitted to the form of 
+
+    \begin{align}
+    E(\mathbf{r}) = 
+    & \sum_{\alpha} [ C_1 f_e(  x_{\alpha}) + C_2 f_o(  x_{\alpha}) ] \\
+    & \sum_{\alpha} [ C_3 f_e(2 x_{\alpha}) + C_4 f_o(2 x_{\alpha}) ] \\
+    & \sum_{\alpha}   C_5 [ f_e(x_1 - x_2) + f_e(x_2 - x_3) + f_e(x_3 - x_1) ] \\
+    \end{align}
+
+    - Where the $C_i$ coefficients are fitted. 
+
+
+    - Using this model a satisfactory shape of kinks is seen.
+    - Kink pair energy using the MD gives 0.78 eV, line tension model gives 0.69 eV.
+    - MD shows kink shape and energy is asymmetric between two types of kinks so there should be highre order terms of the gradient $( \mathbf{P}_j - \mathbf{P}_{j-1})$ in the energy
+    - Errors of the line tension model can be attributed to it.
+    - One can show that the kink formation energy is proportional to $\sqrt{KE_P}$,
+      - So the uncertainty in $K$ only modestly affects the estimate of the kink formation energy. 
 
 
 
