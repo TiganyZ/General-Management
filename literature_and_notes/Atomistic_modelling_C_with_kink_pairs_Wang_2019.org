@@ -19,6 +19,7 @@
    - Kink formation energy barrier is 11 meV/b larger than the process with a middle structure.
    - Middle image consists of half the length of the dislocation line of the initial and final states, which is a kink-pair created manually.
    - This is a metastable state. (24th state in figure 1).
+   - Without this state, one finds a /double humped/ Peierls potential. 
    - Influences of instability of the hard configuration core energy predicted by the potential on the kink formation and motion energies are eliminated as a consequence. 
 
 
@@ -64,10 +65,10 @@
 
 *** Carbon effect on kink-pair propagation process
 
-    - Carbon was placed at the midpoint of the length of the dislocatin line in different binding positions.
+    - Carbon was placed at the midpoint of the length of the dislocation line in different binding positions.
     - Double-kink nucleation remained valid in A1, A2, B2, B3, C1 and C3 (see state 14).
     - B1 and C2, only LB and TB generated and propagated. 
-      - Sited located on the side towards which the dislocation glides.
+      - Sites located on the side towards which the dislocation glides.
       - Carbon became a strong obstacle
       - LA and TA then generated in C2 and propagated toward LB and TB until end of dislocation glide.
     - B1: TA and LA failed to nucleate at all. 
@@ -79,7 +80,7 @@
 
       
 
-    - Postponed propagation of LA and Ta results in a slight decrease in the kink propagaton barrier in A1 and A2.
+    - Postponed propagation of LA and TA results in a slight decrease in the kink propagaton barrier in A1 and A2.
     - /This cant be regarded as carbon-enhanced mobility of a screw dislocation./
       - This is because the terminated single-kink propagation may more negatively affect mobility, resulting in an uncertain competition between these two inverse effects.
 	- This may be discussed in a further study.
@@ -91,4 +92,9 @@
 * Questions
 
   - Why would a terminated single-kink negatively affect mobility?
-  - How large is the energy reduction in the 
+  - How large is the energy reduction in these cases?
+  - Given that the middle image in the NEB simulations is a double kink created manually, why are there large steps in the middle?
+  - Would this happen in the tight binding formulation?
+  
+
+

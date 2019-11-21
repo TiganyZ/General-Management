@@ -1,0 +1,23 @@
+#+TITLE: Stress-dependent Peierls potential: Influence on kink-pair activation
+#+AUTHOR: Tigany Zarrouk
+#+INTERLEAVE_PDF: /home/tigany/Documents/docs/Management/papers/Rodney_2009_Stress-dependent_Peierls_Potential_Influence_on_Kink-pair_Activation.pdf
+* Notes
+  
+** Introduction
+
+   - Simplest model for dislocation glide that accounts for a Peierls stress is the Line Tension model.
+   - Dislocation viewed as an elastic string moving on a periodic substrate potential that corresponds to the Peierls potential $V_P$.
+   - Equilibrium shape of the dislocation line $y(x)$ is the solution of a 1D scalar field equation of Klein-Gordon type. 
+
+     \[ -V'_p[ y(x) ] \sigma_A b + T \frac{\partial^2y}{\partialx^2} = 0\]
+   - $b$ is the Burgers vector
+   - T is the line tension
+   - Depending on form of $V_P$ can be called
+     - $\phi^2-\phi^4$/Eschelby theory for fourth order polynomial potential
+
+     - Sine-Gordon (SG) / Frenkel-Kontorova (FK) theories for sinusoidal potentials. 
+
+   - Actual form of kink-pair activation enthalpy $H(\sigma_A)$ depends on the slape of te substrate potential, in which classical LT models, /remains invariant./
+
+     
+* Questions
