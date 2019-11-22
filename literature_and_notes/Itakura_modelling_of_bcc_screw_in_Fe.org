@@ -383,15 +383,20 @@
     & \sum_{\alpha}   C_5 [ f_e(x_1 - x_2) + f_e(x_2 - x_3) + f_e(x_3 - x_1) ] \\
     \end{align}
 
-    - Where the $C_i$ coefficients are fitted. 
-
+    - Where the $C_i$ coefficients are fitted.
+    - This is a /plane wave expansion/ of the *Peierls Energy* from [[file:~/Documents/docs/Management/papers/birnbaum1994.pdf]]
 
     - Using this model a satisfactory shape of kinks is seen.
-    - Kink pair energy using the MD gives 0.78 eV, line tension model gives 0.69 eV.
-    - MD shows kink shape and energy is asymmetric between two types of kinks so there should be highre order terms of the gradient $( \mathbf{P}_j - \mathbf{P}_{j-1})$ in the energy
+    - Kink pair energy using the MD gives 0.78 eV, line tension model
+      gives 0.69 eV.
+    - MD shows kink shape and energy is asymmetric between two types
+      of kinks so there should be highre order terms of the gradient
+      $( \mathbf{P}_j - \mathbf{P}_{j-1})$ in the energy
     - Errors of the line tension model can be attributed to it.
-    - One can show that the kink formation energy is proportional to $\sqrt{KE_P}$,
-      - So the uncertainty in $K$ only modestly affects the estimate of the kink formation energy. 
+    - One can show that the kink formation energy is proportional to
+      $\sqrt{KE_P}$,
+      - So the uncertainty in $K$ only modestly affects the estimate
+        of the kink formation energy.
 
 	
     - NOTE: Not sure if $K$ is the /compressibility/ or not.
@@ -403,6 +408,47 @@
 
 * Ingredients for a KMC Model 
 
+** Necessary Calculations
+    1) Kink-pair activation energy at various shear stresses
+       - With hydrogen $\Delta E_{kp},H$
+       - Without hydrogen $\Delta E_{kp}$
+       - (This can be done with/without line tension model, e.g. EAM or TB)
+    2) /Experimentally determined/ kink-pair activation energies.
+       - This was done in the case of hydrogen due to the fact there
+         are differences between the experimentally determined
+         enthalpy and the predicted one from DFT.
+       - Differences that may contribute are the zero-point energy and
+         dislocation pile ups?
+    3) Kink formation enthalpy *with* and *without*
+       carbon *at different stresses* to find the difference.
+       - This is to account the effect of carbon trapped in the core
+         ahead of the dislocation line. 
+       - Kink-nucleation enthalpy with hydrogen $E_{KH}$ and without
+         hydrogen $E_{K}$ was calculated for given shear stresses in
+         the $[111](1\bar{1}0)$ direction using *string method*.
+       - This was done for the dislocation migration path E2-H0-E2.
+       - The reduction in the enthalpies is $\Delta E_K = E_K - E_{KH}
+         = 110 meV$
+    4) Frequency prefactor $f_{kp}$ is determined by *comparing* the
+       *velocity* of the pure scew segment in $\alpha$-Fe calculated
+       *from the KMC* and the *experimentally determined velocity*.
+    5) Solution energies of carbon in different positions around the
+       dislocation line
+       - To account for changes in the solution enthalpy of the solute
+         as a kink sweeps past.
+    6) The change in these solution energies with applied stress to
+       find $E_t(\sigma)$.
+    
+
+    
+	 
+       
+   
+
+*** From Line Tension Model  
+    
+    
+
 ** Line tension Model 
    1) Interaction energy between a hydrogen interstitial and a screw dislocation.
    2) Kink-pair formation energy /as a function of carbon concentration/
@@ -410,6 +456,9 @@
    
    This data is used to fit the line tension model. 
    Kink-pair formation enthalpy was obtained from this. 
+
+
+   
 
 ** KMC
 
@@ -424,10 +473,14 @@
    - $f_{kp}$ is the pre-exponential "frequency" factor.
    - Local resolved stress is $\sigma_{\text{eff}} = \sigma_{\text{self}} + \sigma_{\text{solute}}$
    - $\sigma_{\text{self}}$ is the stress exerted on a dislocation segment by all other dislocation segments
-     - This can be calculated from the gradient of the self energy due to virtual displacement  [Hirth and Lothe]. 
+     - This can be calculated from the gradient of the self energy due to virtual displacement  [Hirth and Lothe].
+
+   - Nucleation rates of stable kink-pairs. 
+     
+
+   
 
        
-   
       
   
 * Questions
