@@ -409,17 +409,8 @@
 * Ingredients for a KMC Model 
 
 ** Necessary Calculations
-    1) Kink-pair activation energy at various shear stresses
-       - With hydrogen $\Delta E_{kp},H$
-       - Without hydrogen $\Delta E_{kp}$
-       - (This can be done with/without line tension model, e.g. EAM or TB)
-    2) /Experimentally determined/ kink-pair activation energies.
-       - This was done in the case of hydrogen due to the fact there
-         are differences between the experimentally determined
-         enthalpy and the predicted one from DFT.
-       - Differences that may contribute are the zero-point energy and
-         dislocation pile ups?
-    3) Kink formation enthalpy *with* and *without*
+
+    1) Kink-pair formation enthalpy *with* and *without*
        carbon *at different stresses* to find the difference.
        - This is to account the effect of carbon trapped in the core
          ahead of the dislocation line. 
@@ -429,25 +420,42 @@
        - This was done for the dislocation migration path E2-H0-E2.
        - The reduction in the enthalpies is $\Delta E_K = E_K - E_{KH}
          = 110 meV$
-    4) Frequency prefactor $f_{kp}$ is determined by *comparing* the
-       *velocity* of the pure scew segment in $\alpha$-Fe calculated
+    2) *Velocity* of the pure screw segment in $\alpha$-Fe calculated
        *from the KMC* and the *experimentally determined velocity*.
-    5) Solution energies of carbon in different positions around the
+       - This determines the Frequency prefactor $f_{kp}$ by *comparison*.
+    3) Solution energies of carbon in different positions around the
        dislocation line
        - To account for changes in the solution enthalpy of the solute
          as a kink sweeps past.
-    6) The change in these solution energies with applied stress to
+    4) The change in these solution energies with applied stress to
        find $E_t(\sigma)$.
-    
 
-    
-	 
-       
+
+** What has been done already 
+
    
+*** Kink-pair formation energies w/wo Carbon
+    
+    - Wang /et al/ have calculated the kink-pair formation energies
+      with and without carbon using NEB.
+    - They also looked at the kink-pair migration energies with and
+      without carbon. 
+    - They put carbon in different sites around the core, and used
+      NEB, with the middle image being a kink-pair created manually. 
 
-*** From Line Tension Model  
-    
-    
+****  Results
+     
+     - They have only looked at the actual energy barriers to form the
+       kinks in different configurations in carbon.
+     - They have *not* looked at the kink-pair formation energy at
+       different stresses whatsoever.
+   
+**** What needs to be done
+     
+     - Calculation of the kink-pair formation energy at different
+       stresses either using the EAM or using tight binding.
+     
+     
 
 ** Line tension Model 
    1) Interaction energy between a hydrogen interstitial and a screw dislocation.
@@ -477,7 +485,18 @@
 
    - Nucleation rates of stable kink-pairs. 
      
-
+   - Kink-pair activation energy at various shear stresses, here the
+     experimental one was used
+       - With hydrogen $\Delta E_{kp},H$
+       - Without hydrogen $\Delta E_{kp}$
+       - (This can be done with/without line tension model, e.g. EAM or TB)
+       - /Maybe Experimentally determined/ kink-pair activation energies.
+       - This was done in the case of hydrogen due to the fact there
+         are differences between the experimentally determined
+         enthalpy and the predicted one from DFT.
+       - Differences that may contribute are the zero-point energy and
+         dislocation pile ups?
+    
    
 
        
