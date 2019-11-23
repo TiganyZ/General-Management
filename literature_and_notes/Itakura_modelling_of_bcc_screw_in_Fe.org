@@ -487,8 +487,8 @@
      
    - Kink-pair activation energy at various shear stresses, here the
      experimental one was used
-       - With hydrogen $\Delta E_{kp},H$
-       - Without hydrogen $\Delta E_{kp}$
+       - With hydrogen $ΔE_{kp},H$
+       - Without hydrogen $ΔE_{kp}$
        - (This can be done with/without line tension model, e.g. EAM or TB)
        - /Maybe Experimentally determined/ kink-pair activation energies.
        - This was done in the case of hydrogen due to the fact there
