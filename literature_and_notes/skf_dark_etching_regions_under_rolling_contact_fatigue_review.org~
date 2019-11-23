@@ -1,0 +1,106 @@
+#+TITLE: Dark etching region sunder rolling contact fatigue: a review
+#+AUTHOR: Tigany Zarrouk
+
+
+* Summary 
+
+  
+* Notes
+
+** Introduction
+
+   - Rolling contact on the raceways of bearing generates cyclic
+     stresses that extend from the surface to the subsurafce.
+   - Maximum shear stress (deviatoric/Von mises stress) controls
+     material distortion and is responsible for onset of material
+     damage in terms of plasticity and fatigue. 
+   - Failure caused by accumulation of damage, called Rolling Contact
+     fatigue (RCF).
+
+   - Low lubrication can lead to metal-to-metal concact, leading to a
+     high surface deviatoric stress.
+   - Also high surface stress can be from excessive surface traction.
+   - Surface fatigue failure often manifests as micro pitting. 
+
+   - When the bearing is operating under good lubrication
+     conditions /the bearing may fail due to crack initiation and
+     propagation from the subsurface/.
+
+   - This is characterised by /isolated spalls/ on the raceway.
+   - Spall are flakes of a material that are broken off a larger
+     solid body and can be produced by a variety of mechanisms,
+     including as a result of projectile impact, corrosion,
+     weathering, cavitation, or excessive rolling pressure (as in
+     a ball bearing)
+  
+   - There are two types of fatigue damage that may develop in the
+     subsurface of a bearing.
+   - If the *contact stress exceeds* the /elastic shakedown limit/
+     the /subsurafce material undergoes gradual progressive
+     plastic flow/.
+     - Consequently, /large-scale microstructure alteration/ or
+       decay will develop in the form of *dark etching regions*
+       (DERs).
+     - This is followed by the development of *white etching bands*
+       (WEBs), which can by low/high angle (LABs/HABs) which have
+       approximate angles of 30/80 degrees respectively.
+     - This is classed as *global damage*. 
+   - At *contact stress below* the elastic shakedown limit,
+     localized damage can still develop in the form of material
+     defects/stress risers such as *inclusions*
+     - This is characterised by the so-called butterfly with
+       single or multiple cracks initiated from an inclusion or
+       pore.
+     - Growth of crack is accompanied by the development of
+       *white etching regions* (WERs).
+     - The subsurface crack with grow initially in a co-planar
+       manner and later kink or branch into multiple cracks
+       towards he raceway, leading to spalling.
+     - This is classed as *localised damage*.
+     - It is called DER as it seems to be more reactive to the
+       etchant that is typically used to reveal the microstructure
+       of steel. 
+   - Etching generally is just to reveal microstructural features
+   - Chemical etching degrades certain types of microstructural
+     features, similar to electrochemical etching
+     (electropolishing at a lower current). 
+
+** Characterisation of the altered microstructure
+
+   - There are 4 factors that promote the formation of DERs, the:
+     1) Susceptibility of the initial microstructure
+     2) Magnitute of contact pressure
+     3) Operating/test temperature.
+
+*** Inital microstructure
+
+   - Spheroidising heat treatment to soften initial steel for machining
+   - Heat treated to form a martensitic microstructure
+   - Tempered at low temperature
+   
+
+   - There are at least four different phases in the steel 
+     1) Dispersed residual cementite
+	* This is just Fe₃C (iron carbides)
+     2) Retained austenite (fcc/γ-iron).
+     3) Tempered Martensitic matrix
+     4) Tempered transition carbides and cementite (M₃C)
+	* M can by Cr / Mn /Fe. 
+
+   - Austenitisation occurs around 840-860°C
+   - During this process a fraction of the spheroidised cementite
+     dissolves and leads to a /carbon enrichment/ of austenite.
+   - Upon quenching in oil, martensite forms.
+   - After low temperature tempering 160-170°C transition
+     carbides and tempered cementite precipitate and 10-15% of
+     austenite is retained. 
+
+	
+     
+
+
+
+
+
+
+* Questions

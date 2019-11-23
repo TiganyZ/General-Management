@@ -95,12 +95,316 @@
      carbides and tempered cementite precipitate and 10-15% of
      austenite is retained. 
 
-	
      
 
+*** Development of DER
+
+    - Initiates in the region of maximum resolved shear stress
+      and then spreads outwards to the other stressed regions as
+      the number of cycles increases.
+    - Figures show that formation depends on the number of cycles
+      and the shear stress.
+    - High contact pressure is known to promote DER. 
+
+    - Development of the DER with the number of stress cycles
+      develops asymmetrically (more DER develops downwards than
+      towards the raceway) with the number of stress cycles. 
+
+    - DER formation manifests changes in the hardness.
+      - Fatigue hardening or softening can occur depending on the
+        contact pressure. 
+      - Micro hardness measurements show that in the DER region
+        there are hardness decreases at longer stress cycles.
+      - In other work high contact pressures increase the
+        hardness of the material
+      - Low contact pressures have unclear results.
+
+      - Other results show that while the hardness of DER
+        increases the FWHM of the (211) ferrite (bcc/α-Fe)
+        decreases. 
+      - This indicates a /reduction in dislocation density in
+        DERs/.
+    
+
+*** Temperature
+    
+    - Depending on the bearing design, heat may not be dissapated
+      instantaneously.
+    - High operating temperatures have been known to accelerate
+      formation of DERs. 
+
+    - There is conflict about what happens to DERs with
+      temperature.
+    - Lund found significant hardness decreases at 60°C operating
+      temperature.
+    - But Voskamp found at 70°C and stress cycles (10⁹) and
+      contact pressure of 3.3 GPa, the hardness /decreased/.
+    - But also showed an increase in hardness at 45°C and 55°C. 
+
+    - At 3.3 GPa and 70°C there was no change in hardness.
+    - At 3.8 GPa and 90°C the hardness /decreased/. 
 
 
 
+*** X-ray Diffraction 
+    
+    - Formation of DER accompanied by the development of
+      compressive residual stresses and changes in the FWHM.
+    - There is line broadening of the x-ray.
+    - With harder material (when the bearing is new) the peak is
+      broader.
+    - So sharper peaks indicate the formation of DER. 
 
+    - From this one can see the development of DER under the
+      raceway.
+    - Residual stress develops rapidly in the shake-down phase
+      and then stabilises near the surface.
+    - Residual stress seems to gradually increase from the
+      deficit attributed to DER. 
+
+
+
+** Microstructure behaviour and phenomena 
+   
+
+*** Groove formed on the raceway
+    - Groove formed on the raceway. 
+    - Below a critical sliding velocity there will be a mixed
+      regime of lubrication, where the thickness of the
+      lubrication film becomes smaller than the size of the
+      surface asperities. 
+    - Asperity means a region of roughness. (After polishing a
+      surface well there are still /asperities/).
+    - So the /real area/ of contact during rolling is the
+      asperities, which is much smaller than the apparent area
+      calculated by Hertz theory.
+    - This results in a very high localised stress at the contact
+      tips. Resulting in the breakage of asperities and
+      smoothening of the surface. 
+
+*** Microstructure of DER
+    - Formation of DERs is related to the Hertzian stress
+      distribution.
+    - Initial formation is affected by the orientation of the
+      martensite packet. 
+
+    - Optical microscopy shows the DER as darker but cannot
+      resolve any more details. 
+    - Darker as there is more scattering of light which typically
+      means that the region is rougher.
+    - This is generally due to *smaller grain sizes or multiple
+      phases / more interfaces*.
+    
+
+**** Ferrite Microbands
+
+    - Characterisation can be perfomed with SEM, focussed ion
+      beam (FIB) to allow production of position specific TEM
+      lamella.
+    - Detection starts with /formation of ferrite microbands/.
+      - Also called: slip motions, troosite/mechanical troosite,
+        tempered martensite, upper bainite/microslip/deformation
+        bands, needle-like structures, acicular structures and
+        elongated cells.
+    - Martensite decay term used when acutal product of
+      microstructural alteration is unclear. 
+
+    - Microbands extend across martensite plate boundaries.
+    - They are parallel to the surface when looking at transverse
+      cut.
+    - Microscopic lining up must be due to the applied stress.
+    - This implies their formation is caused by applied strain
+      during RCF.
+      - Not due to local heating effects from the release of
+        strain energy.
+
+    - Early DER shows patches of densely spaced microbands within
+      an unaltered matrix.
+    - Microbands are parallel to raceway on both sides of the
+      symmetry plane (looking down the raceway). In the centre
+      there is no preferential alignment.
+    - Multivariant ferrite microbands have been seen.
+    
+    - Later DER: regions of homogeneous nanocrystalline ferritic
+      structure can be observed.
+      - Other names include polycrystal cell, cell-like
+        structure, heavily deformed ferrite and globular
+        ferrite.
+    - Electron diffraction indicates presence of multiple grains
+      with random crystal orientations.
+    - Evidence suggests that 30° and 80° WEBs are composed of
+      nanocrystalline ferrite. 
+
+    - TEM shows evidence of *dislocation cell* formation in
+      fatigue-damaged microstructures.
+    - *Dislocation cells* can form in metals with a characteristic
+      size defined by three-dimensional tangles of dislocations
+      that serve as “walls” and less dense internal regions.
+    - In this imaged DER grain size is relatively large compared
+      to nano-poly-crysalline ferrite in WERs.
+    - The residual cementite is /not fully dissolved/ within the
+      80° bands.
+    - There seem to be misorientations of the ferrite bands
+      across cell walls.
+    - Both angles of WEBs are typically longer in length than the
+      austenite grains.
+    - Seem to form across many prior austenite grains with no
+      observable deviation. 
+
+**** Elongated Ferrite
+
+     **Fill in with material skipping to carbon redistribution**
+
+
+**** Decomposition of retained austenite
+
+     - Retained austenite alters the response of the material
+     - It transforms to martensite during the first stress cycles
+       causing an increase in the yield stress.
+     - Rapid shakedown during rolling contact also causes this.
+     - This *increases the dislocation density* within the
+       martensite.
+     - Decrease in retained austenite is at the beginning of the
+       test and there is no observable difference in the imaging.
+
+**** Dissolution/growth of residual carbides
+     - Residual cementite is harder than martensite matrix so
+       should resist plastic deformation.
+     - But both elongated ferrite and ferrite microbands are
+       observed to grow into the residual cementite causing it to
+       dissolve.
+     - Also soft edges to the cementite particles indicating
+       cementite dissolving during contact rolling fatigue 
+
+**** Lenticular Carbides
+
+     - Typically formed on the side and parallel to the large
+       WEBs.
+     - WEB is around 50-60μm in width.
+     - Lenticular carbide around 1μm.
+     - Appearence of WEBs accompanied by lenticular carbides.
+     - Formation and growth of lenticular carbides must be
+       related to the dissolution of tempered carbides and
+       residual cementite which increases the carbon content
+       within the DER.
+     - And the reduction of the solubility of carbon within the
+       WEBs.
+     - Formation of carbids is related to the partial dissolution
+       of the residual cementite (it does not need full
+       dissolution). 
+
+**** Carbon redistribution 
+
+     - Redistribution of carbon has been seen within APT.
+     - Fu claimed that carbon rich regions correspond to
+       cementite and other transistion carbides. 
+
+**** Dislocation density 
+
+     - XRD (X-ray powder diffraction) can assess the retained
+       austenite content, texture formation and residual stress
+       build-up after rolling contacty fatigue.
+     - Dislocation density can be determined by the analysis of
+       line broadening. 
+
+**** Hardness
+
+     - This can be seen to be dependent on where the cross
+       section is taken.
+     - Slight hardening seen in the cross section
+     - But softening seen in the parallel section.
+     
+
+** Mechanisms
+
+*** Jones 
+    - Suggests DERs are a structural change that appears in the
+      form of areas of ferrite microbands of lower hardness than
+      the original martensite.
+    - Hertzian stress and internal friction of the material
+      originate the transformation of som e of the inflicted
+      shear energy into heat.
+    - Accumulation of head generated due to cyclic stressing of
+      the material leads to decay of hard martensitic phase to
+      the formation of the ferrite microbands.
+    - Phase transformation is result of subsurface
+      tempering. (Shear strain energy theory). 
+
+
+
+**** Comments
+     - Necessitation of energy to transform into heat is
+       questionable.
+     - Differentiation of DER from tempered martensite
+
+
+
+*** Bush 
+    - DER is stress affected zone due to the fact it is initiated
+      in the region of maximum reversed orthogonal shear stress.
+    - Propose augmentation of the coverage of DER is a
+      consequence of the nucleation of additional transformed
+      areas.
+    - This is instead of a consequence of the growth of
+      previously formed dark areas.
+    - This is because there is a threshold stress for emergence
+      of DERs.
+    - Nucleation of DER is a result of yielding/plastic flow
+      instead of a thermal effect.
+    
+    - Don't agree with heat tempering theory.
+    - Propose transformation is governed by an exchange of
+      material between the carbides and the matrix.
+    - This is evidenced by the formation of intrusions/extrusions
+      within the microstructure.
+    - Intrusion is region of different microstructure within region
+    - Extrusion is on the surface instead of inside. 
+
+**** Comments
+      - Compare structure of DER to tempered martensite.
+      - In both cases there is a change in hardness.
+      
+*** Swahn 
+
+    - DER is a mixture of
+      1) ferritic phase with inhomogeneously distributed carbon
+      2) residual martensite from original microstructure. 
+
+    - Transformation mechanisms are a /result of carbon
+      redistribution/ present in solution of martensite.
+      - And the dissolution of carbides.
+
+    - Propose chronological order
+      1) *stress induced carbon diffusion* leads to *diffusion* of
+         carbon *from martensitic lattice* towards various *defects*
+         in the material *(dislocations)*
+      2) Then as plastic deformation accumulates the movement of
+         dislocations creates carbon rich grain boundary-type
+         interfaces. 
+
+
+
+**** Comments 
+     - Seems resonable but it did not incorporate the dissolution
+       of carbides.
+     - Not sure about the role of carbide dissolution in DERs,
+       What time scale?
+
+
+
+*** Voskamp
+    
 
 * Questions
+
+  - Does the deficit of residual stress in the DER region mean
+    movement of dislocations to dissapate the stress in this
+    region?
+  - It seems like something is happening to remove the residual
+    stress.
+  - *Look into potential mechanisms regarding dislocation motion*.
+
+
+  - What the role of carbides dissolution in the formation of
+    DERs is not clear. And also the time scale at which carbide
+    dissolution occurs is not clear. 
