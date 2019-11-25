@@ -416,7 +416,8 @@
          ahead of the dislocation line. 
        - Kink-nucleation enthalpy with hydrogen $E_{KH}$ and without
          hydrogen $E_{K}$ was calculated for given shear stresses in
-         the $[111](1\bar{1}0)$ direction using *string method*.
+         the $[111](1\bar{1}0)$ direction using *string method* on the
+         line tension model.
        - This was done for the dislocation migration path E2-H0-E2.
        - The reduction in the enthalpies is $\Delta E_K = E_K - E_{KH}
          = 110 meV$
@@ -455,10 +456,30 @@
      - Calculation of the kink-pair formation energy at different
        stresses either using the EAM or using tight binding.
      
-     
+       
 
+*** Velocity of screw segment
+    
+    - This has not been achieved yet. 
+
+
+*** Solution energies of carbon around core
+
+    - This has been done in DFT
+    - It has also been done in the Domain-Becquart EAM model. 
+    - It will have to be redone in the case of a tight binding model. 
+
+
+
+*** Stress dependence of solution energies
+    
+    - This has not been done yet either. 
+
+
+    
 ** Line tension Model 
-   1) Interaction energy between a hydrogen interstitial and a screw dislocation.
+   1) Interaction energy between a hydrogen interstitial and a screw
+      dislocation. 
    2) Kink-pair formation energy /as a function of carbon concentration/
    3) Kink-pair migration energy /as a function of carbon concentration/
    
@@ -471,17 +492,23 @@
 ** KMC
 
    - Kinetics completely determined by transition rates.
-   - TST expresses the rates of kink-pair nucleation and kink migration events in terms of their migration barriers. 
+   - TST expresses the rates of kink-pair nucleation and kink
+     migration events in terms of their migration barriers.  
 
-   - TST matrix provides a physically consistent description of the energetics and thermally activated formation of a double-kink:
+   - TST matrix provides a physically consistent description of the
+     energetics and thermally activated formation of a double-kink: 
 
      \[ J_{kp} (\sigma_{\text{eff}}) = f_{kp} \exp{ \Big(  -\frac{\Delta E_{kp} (\sigma_{\text{eff}})}{k_B T} \Big) } \]
 
-   - $\Delta E_{kp}(\sigma_{\text{eff}})$ is the stress dependent activation energy of kink-pair formation.
+   - $\Delta E_{kp}(\sigma_{\text{eff}})$ is the stress dependent
+     activation energy of kink-pair formation. 
    - $f_{kp}$ is the pre-exponential "frequency" factor.
-   - Local resolved stress is $\sigma_{\text{eff}} = \sigma_{\text{self}} + \sigma_{\text{solute}}$
-   - $\sigma_{\text{self}}$ is the stress exerted on a dislocation segment by all other dislocation segments
-     - This can be calculated from the gradient of the self energy due to virtual displacement  [Hirth and Lothe].
+   - Local resolved stress is $\sigma_{\text{eff}} =
+     \sigma_{\text{self}} + \sigma_{\text{solute}}$ 
+   - $\sigma_{\text{self}}$ is the stress exerted on a dislocation
+     segment by all other dislocation segments 
+     - This can be calculated from the gradient of the self energy due
+       to virtual displacement  [Hirth and Lothe]. 
 
    - Nucleation rates of stable kink-pairs. 
      
@@ -489,7 +516,8 @@
      experimental one was used
        - With hydrogen $ΔE_{kp},H$
        - Without hydrogen $ΔE_{kp}$
-       - (This can be done with/without line tension model, e.g. EAM or TB)
+       - (This can be done with/without line tension model, e.g. EAM
+         or TB) 
        - /Maybe Experimentally determined/ kink-pair activation energies.
        - This was done in the case of hydrogen due to the fact there
          are differences between the experimentally determined

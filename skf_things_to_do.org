@@ -13,6 +13,9 @@
    - What needs to be calculated for the construction of a Kinetic Monte Carlo model?
 
    - How have the calculations by Wang et al changed anything?
+
+
+*** TODO 
 ** TODO Project outline
    DEADLINE: <2019-11-22 Fri>
    
@@ -23,7 +26,10 @@
 
     - Can dislocations carry carbon when they move?
 
-    - Do temper carbides dissolve with rolling contact fatigue? Or do they grow?
+    - Do temper carbides dissolve with rolling contact fatigue? Or do
+      they grow?
+
+
 
 *** TODO Details of the context of the project. 
 

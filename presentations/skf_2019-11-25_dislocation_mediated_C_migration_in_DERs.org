@@ -1,0 +1,182 @@
+#+ATTR_HTML: font-size: 1em
+#+TITLE: Dislocation mediated C migration in Fe Dark Etching Regions
+#+Author: Tigany Zarrouk 
+#+Date: 25.11.2019
+#+Email: tigany.zarrouk@skf.com
+#+REVEAL_ROOT: file:///home/tigany/software/reveal.js
+
+
+#+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
+#+REVEAL_THEME: moon
+
+# Set up the title slide.
+#+REVEAL_TITLE_SLIDE: <h1>%t</h1><h2>%s</h2><h3>%A %a</h3><p>View online: <a href="%u">%u</a></p><p>This could be the file name in the <code>src</code> attribute of an <code>img</code> element for a QR code: %q
+
+
+# http://cdn.jsdelivr.net/reveal.js/3.0.0/
+
+#+OPTIONS: author:t email:t 
+#+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
+#+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
+#+REVEAL_EXTRA_CSS: ./extra.css
+
+#+REVEAL_THEME: solarized
+#+REVEAL_TRANS: linear 
+
+
+* Motivation 
+  - Rolling contact on bearing raceways generate maximal shear
+    stresses in subsurface.
+  - Degradation in subsurface microstructure observed due to
+    plasticity.
+  - This can lead to failure by Rolling Contact Fatigue (RCF).
+  - Degradation arises in form of Dark Etching Regions (DERs),
+    characterised by development of ferrite features with patches of
+    unaltered martensitic matrix.
+  - Carbon redistribution is thought to be a fundamental mechanism
+    behind DER formation.
+  - Dislocation-driven carbon migration has been suggested but hard to
+    experimentally verify.
+  - Atomistic modelling necessary to ascertain if dislocations move
+    carbon and the underlying mechanism. 
+
+* Aims
+  To answer the questions:
+  - Do dislocations move carbon?
+  - Do temper carbides dissolve/grow with rolling contact fatigue?
+    
+    
+
+* Objectives
+
+  - Build Kinetic Monte-Carlo model of dislocation motion. 
+  - Tight-binding used to obtain formation energies:
+    1) Kink-pair formation energies as a function of carbon content
+       and stress.
+    2) Dissolution energies of carbon near core of dislocation as a
+       function of stress. 
+
+
+* Methods
+  - Density Functional Theory is not feasible.
+  - Use tight-binding: rigorous approximation to DFT.
+  
+  - Boundaries of cell affect relaxation of core more.
+  - Semi-empirical method is more computationally efficient.
+
+
+
+** Tight Binding
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Tight binding is an approximation to DFT.
+- Overlaps between atomic orbitals are key parameters.
+- Parameters can be fitted to experimental data
+- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
+
+** BOP
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+- BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
+  force calculation within tight-binding.
+- One builds a local density of states from moments, giving detailed
+  electronic structure information. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
+#+REVEAL_HTML: </div>
+
+
+** Embedding 
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Idea is to combine speed of BOP ($\mathcal{O}(N)$) with accuracy of
+  tight-binding $\mathcal{O}(N^3)$.
+- Increasing the number of atoms gives freedom to:
+  - Investigate isolated dislocations. 
+  - Include solutes at more realistic concentrations. 
+  - Simulate interfaces near a surface (e.g. TiO$_2$ and
+    bulk Ti)
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+#+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hex_cell_embedding_crop_text.png" >
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+Invariance theorem with green's function approaches. So good with boundary
+conditions. 
+
+#+END_NOTES
+
+* Defect Clusters 
+
+- Increase in oxygen content in Ti-7wt.%Al causes higher number density of
+  $\alpha_2$ precipitates at 550\deg C (Felicity's results).
+- Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
+- This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
+- First starting out with pure Ti and $\alpha_2$. Still working on extension to Ti-7wt.%Al.
+
+
+** Calculation Details
+- Först /et al./ $[3]$ calculated energetics of defect complexes with associated local
+  force-constant matrix.
+- Partial thermodynamic equilibrium imposed (thermal equilibrium for one species and not the other). 
+- Defect concentration plotted as a function of carbon/vacancy concentration
+  only at 160\deg C.
+- Extension: apply the quasiharmonic approximation/do thermodynamic integration
+  for better accuracy at higher temperatures (550\deg C - 950\deg C). 
+
+$[3]$ /Point Defect Concentrations in Metastable Fe-C Alloys/, Först /et
+al/, Phys. Rev. Lett. 96, 2006
+
+
+
+** Plots in Fe-C
+#+NAME: Forst calculation
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/forst_defect_concentration_cementite.png]]
+
+#+NAME: Forst calculation 2
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 70% :style position:relative;top:-525px;left:0px;z_index:2;
+[[file:~/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png]]
+
+** $\text{Ti}_{3}\text{Al}$  Cells
+#+NAME: Ti3al VTi
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/ti3al_val_o.png]]
+
+** Ti Cells
+#+CAPTION: Ti 6V
+#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
+
+
+** Defect Clusters: Future Work 
+- Finish Ti and $\text{Ti}_{3}\text{Al}$ defect cluster calculations in DFT. 
+- Possibly extend to Ti-7wt%Al with SQS structures.
+- See how much of an effect anharmonicity has on predictions.
+
+
+* Summary
+- Successfully made TB model of Ti which reproduces DFT results with only
+  d-orbitals.
+- Transferable:
+  - Correct energetic ordering for study of different phases. 
+  - Correct elastic properties and good scaling for defect simulations.
+  - Integer number of electrons for charge transfer models (electrochemistry).
+- BOP formulation produces similar results with only linear scaling.
+- Embedding calculations should resolve single dislocation core ground-state
+  at realistic O concentrations.
+- To do: Embed O-disl, $\text{Ti/TiO}_2$ interface, defect clusters.
+

@@ -9,6 +9,12 @@
     font-size     : 1em;
 }
 
+.reveal title{
+    font-weight    : bold;
+    text-align     : center;
+    Text-Transform : capitalize;
+    font-size      : 20em
+}
 
 .reveal td {
     text-align: left;

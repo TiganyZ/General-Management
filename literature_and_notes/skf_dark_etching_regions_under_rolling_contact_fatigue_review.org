@@ -253,7 +253,22 @@
 
 **** Elongated Ferrite
 
-     **Fill in with material skipping to carbon redistribution**
+     - Elongated ferrite seen in DERs.
+     - Elongated ferrite also formed in martensitic matrix
+       structure during RCF, but appears as *individual
+       features*, not grouped (unlike ferrite microbands).
+     - Also called stringers
+     - Possible that ferrite microbands start from elongated
+       ferrite. 
+
+     - Elongated ferrite may grow to large ferrite grains
+       observed in 30° and 80° WEBs.
+     - Composed of thin ferrite plates and lies at 30°/60° to the
+       raceway surface as seen in parallel section.
+     - It is not polycrystalline. 
+
+     - Both 30° and 80° WEBs can be made up of polycrystalline
+       nano size ferrite and elongated ferrite. 
 
 
 **** Decomposition of retained austenite
@@ -502,7 +517,7 @@
       to escape their carbon-rich atomsphere.
     - *Free dislocations* behave now as places of stress
       concentration and *re-attract the carbon atoms* that composed
-      the cottrell atmosphere.
+      the Cottrell atmosphere.
     - Step-wise motion of dislocations and carbon generates a net
       carbon flux that ends when the carbon reaches a carbide
       precipitate. (Nano-sized temper carbides). 
@@ -554,6 +569,8 @@
 
 
 
+** Modelling Strategies
+   
 
 * Questions
 
@@ -564,6 +581,10 @@
     stress.
   - *Look into potential mechanisms regarding dislocation
     motion*.
+
+  - What types of structure are more susceptible to etchants?
+
+  - 
 
   - Why would incomplete dissolution of residual cementite lead
     to to no orientation relationship?
