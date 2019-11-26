@@ -9,10 +9,10 @@
     font-size     : 1em;
 }
 
-.reveal title{
+.reveal title {
     font-weight    : bold;
     text-align     : center;
-    Text-Transform : capitalize;
+    -text-transform : capitalize;
     font-size      : 20em
 }
 

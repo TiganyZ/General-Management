@@ -32,6 +32,15 @@
      including as a result of projectile impact, corrosion,
      weathering, cavitation, or excessive rolling pressure (as in
      a ball bearing)
+
+   - *Elastic shakedown* behavior is one in which plastic
+     deformation takes place during running in, while due to
+     residual stresses or strain hardening the steady state is
+     perfectly elastic.
+
+   - *Plastic shakedown* behavior is one in which the steady state
+     is a closed elastic-plastic loop, with no net accumulation
+     of plastic deformation.
   
    - There are two types of fatigue damage that may develop in the
      subsurface of a bearing.
@@ -64,6 +73,7 @@
    - Chemical etching degrades certain types of microstructural
      features, similar to electrochemical etching
      (electropolishing at a lower current). 
+
 
 ** Characterisation of the altered microstructure
 
@@ -270,7 +280,6 @@
      - Both 30° and 80° WEBs can be made up of polycrystalline
        nano size ferrite and elongated ferrite. 
 
-
 **** Decomposition of retained austenite
 
      - Retained austenite alters the response of the material
@@ -304,7 +313,7 @@
        within the DER.
      - And the reduction of the solubility of carbon within the
        WEBs.
-     - Formation of carbids is related to the partial dissolution
+     - Formation of carbides is related to the partial dissolution
        of the residual cementite (it does not need full
        dissolution). 
 
@@ -351,7 +360,6 @@
      - Necessitation of energy to transform into heat is
        questionable.
      - Differentiation of DER from tempered martensite
-
 
 
 *** Bush 
@@ -404,7 +412,6 @@
        of carbides.
      - Not sure about the role of carbide dissolution in DERs,
        What time scale?
-
 
 
 *** Voskamp
@@ -461,7 +468,7 @@
 
 **** Comments
      - Based on redistribution of carbon between carbides.
-     - Applicibility is limited as /dislocation glide is crusial
+     - Applicibility is limited as /dislocation glide is crucial
        in this model/.
      - Another limitation is that it should not work for contact
        pressures leading to stresses below the yield limit. 
@@ -472,8 +479,8 @@
       to above.
     - Strong in describing the groove formation.
     - Shakedown phase described by Ludwik power-law strain
-      hardneing relation.
-    - Espression for constant damage-driving cyclic shear stress
+      hardening relation.
+    - Expression for constant damage-driving cyclic shear stress
       used that can be used to calculate creep deformation.
       - Arrhenius term present with an activation term. 
     - Activation energy depends on carbon and nitrogen content in
@@ -483,7 +490,7 @@
       /vacancies/.
     - Dislocation glide is stopped at obstacle (vacancies) and
       then the obstacle is passed by dislocation climb.
-    - Thereby a slow and continus process is present that deforms
+    - Thereby a slow and continous process is present that deforms
       slowly the material under RCF.
     - Deformation is /time dependent/ not /cycle dependent/.
 
@@ -548,7 +555,7 @@
         alterations due to RCF.
     - Based on low misorientation between adjacent grains, the
       occurrence of high-angle grain boundaries and pronounced
-      γ-fibre tecture taht new ferritic grains ar ethe result of
+      γ-fibre texture that new ferritic grains are the result of
       recrystallisation processes
     - Maybe even dynamic recrystallisation. 
 
@@ -573,25 +580,125 @@
    
 
 * Questions
+  
+** Introductory
+  - What is the initial microstructure of the steel?
+  - What is the relative solubility of C in the phases?
+  - What two types of stress can initiate failure in a bearing?
+  - Where can failure initiate?
+  - What is the elastic shakedown limit?
+  - What is the Hertzian distribution of stress?
+  - What is the difference between maximum orthogonal shear
+    stress and other types?
+  - What happens if the contact stress is above or below the
+    elastic shakedown limit?
 
-  - Does the deficit of residual stress in the DER region mean
-    movement of dislocations to dissapate the stress in this
-    region?
-  - It seems like something is happening to remove the residual
-    stress.
-  - *Look into potential mechanisms regarding dislocation
-    motion*.
+** DER Formation
+  - What are all the different features present above and below
+    the elastic shakedown limit? 
 
-  - What types of structure are more susceptible to etchants?
+  - What are four factors that influence the formation of DERs?
+  - What are some general features about DER?
+  - What does X-ray diffraction tell us about DER?
+    
+** Features of/with DER
+  - Why is there a groove in the raceway?
+  - Why is it called DER?
 
-  - 
+  - What is the microstructure of DER?
+  - Why is it darker?
+  - What phases grow in other phases? 
 
-  - Why would incomplete dissolution of residual cementite lead
-    to to no orientation relationship?
+  - What happens to each of these phases through the development
+    of DER?
+  - Where are dislocations?
+  - What are dislocation cells?
+  - How does the density of dislocations change between normal
+    microstructure and DER?
 
-  - What the role of carbides dissolution in the formation of
-    DERs is not clear. And also the time scale at which carbide
-    dissolution occurs is not clear. 
+  - What types of Ferrite are seen in DER regions?
+  - What are the differences between these types of ferrite?
 
-  - Why does carbon in solution promote the formation of ferritic
-    microbands?
+
+  - What are the WEBs likely composed of?
+  - Which WEBs form first?
+
+  - What is retained austenite?
+  - What happens during first cycles of stress to austenite?
+  - How does this change dislocation density and yield stress?
+
+  - What happens to residual carbides?
+  - Are they associated with any other phases?
+  - What does dissolution have to do with them?
+
+  - Where are lenticular carbides found?
+  - How are they related to WEBs?
+  - What potential mechanism is at play?
+
+** Mechanisms
+   
+   - What is the the shear strain energy theory?
+   - Is there a threshold stress for DER?
+
+   - How might carbides interact with the matrix?
+   - How do intrusions/extrusions evidence this?
+   - Does DER grow from dark regions or does it grow with stress?
+
+   - How might carbon redistribution play a role?
+   - What role might dislocations play in this form of carbon
+     redistribution?
+   - How might this affect lenticular carbide formation?
+   - Are dislocations pinned? What might stop pinning?
+   - Is this affected by a heat increase or not? 
+
+   - Can growth of carbides show evidence of material
+     degradation?
+   - How might there be a redistribution of carbon between carbides?
+   - What is a fundamental mechanism that is necessary for this?
+
+   - How might creep play a role?
+   - How do vacancies affect creep?
+   - How does change in carbide structure change dislocation
+     movement over time. 
+
+   - What mechanisms necessitate Cottrell atmospheres of carbon?
+   - How might movement of dislocations create a carbon flux?
+   - Is there a segregation energy of carbon from dislocation to
+     carbide?
+   - Grain boundary segregation energy?
+   - What is the orientation relationship of carbides that form
+     from martensite?
+   - Why might this theory not work given that carbides have an
+     irregular shape?
+   - How could (incomplete) dissolution of residual cementite
+     give a different reason for carbide growth?
+
+   - When is elongated ferrite formed in RCF?
+   - What is dynamic recrystallisation?
+   - Why might ferrite form from recrystallisation?
+
+   - How does austenite decomposition affect?
+
+** Miscellaneous
+
+   - Does the deficit of residual stress in the DER region mean
+     movement of dislocations to dissapate the stress in this
+     region?
+   - It seems like something is happening to remove the residual
+     stress.
+   - *Look into potential mechanisms regarding dislocation
+     motion*.
+
+   - What types of structure are more susceptible to etchants?
+
+   - 
+
+   - Why would incomplete dissolution of residual cementite lead
+     to to no orientation relationship?
+
+   - What the role of carbides dissolution in the formation of
+     DERs is not clear. And also the time scale at which carbide
+     dissolution occurs is not clear. 
+
+   - Why does carbon in solution promote the formation of ferritic
+     microbands?
