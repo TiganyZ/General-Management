@@ -14,8 +14,63 @@
 
    - How have the calculations by Wang et al changed anything?
 
+*** Preliminary Calculations
 
-*** TODO 
+    It seems like the hard core configuration is stablised by C [[file:papers/2015_PRB%5BVentelon%20et%20al%20Fe-C%5D.pdf]] .
+    Is this the same for hydrogen?
+
+    - Shall I start off with the hard core configuration?
+    - What is the difference between the easy and the hard core?
+    
+    - Looking briefly at the Ventelon paper, it seems that 
+      - They found a low energy site for the C in the middle of the
+        hard dislocation core.  
+      - The stablilsation of the hard core is apparent for other
+        solutes such at N, O and C. 
+      - This low energy core configuration is provides a *strong
+        solute-dislocation interaction*
+      - This leads to dislocation core saturation for low bulk solute
+        concentration. 
+      - Important for solute segregation phenomena such as strain aging. 
+
+    - Interestingly, the Domain-Becquart EAM (nor the
+      Mendeleev-Ackland), could reproduce the transition of the easy
+      core into the hard core. 
+
+    - These potentials infact predict a core spreading. 
+    - Is this due to the directionality of the bonding in DFT, that it
+      is able to reproduce this result? 
+    - Potentially tight binding is the way forward with this model, as
+      it may be able to accurately obtain correct structure of the
+      dislocation core with Carbon. 
+
+
+*** Necessary Calculations
+
+     1) Kink-pair formation enthalpy *with* and *without*
+	carbon *at different stresses* to find the difference.
+	- This is to account the effect of carbon trapped in the core
+          ahead of the dislocation line. 
+	- Kink-nucleation enthalpy with hydrogen $E_{KH}$ and without
+          hydrogen $E_{K}$ was calculated for given shear stresses in
+          the $[111](1\bar{1}0)$ direction using *string method* on the
+          line tension model.
+	- This was done for the dislocation migration path E2-H0-E2.
+	- The reduction in the enthalpies is $\Delta E_K = E_K - E_{KH}
+          = 110 meV$
+     2) *Velocity* of the pure screw segment in $\alpha$-Fe calculated
+	*from the KMC* and the *experimentally determined velocity*.
+	- This determines the Frequency prefactor $f_{kp}$ by *comparison*.
+     3) Solution energies of carbon in different positions around the
+	dislocation line
+	- To account for changes in the solution enthalpy of the solute
+          as a kink sweeps past.
+     4) The change in these solution energies with applied stress to
+	find $E_t(\sigma)$.
+
+
+
+
 ** TODO Project outline
    DEADLINE: <2019-11-22 Fri>
    

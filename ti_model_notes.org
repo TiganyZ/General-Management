@@ -3750,7 +3750,7 @@ Figures from DFT for comparison
  
 **** Directory of the results
 [[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
-[[file:~/Documents/ti/final_model_2019-11-
+[[file:~/Documents/ti/final_model_2019-11]]
 
 
 **** BOP
@@ -3851,3 +3851,258 @@ fault energy, one finds some trends with the lowering of E(fcc - hcp):
 - One can find models with reasonable stacking faults but they are much lower than that of DFT. 
 
 
+
+** Narrowed Data for Sasha
+
+
+**** Objective Function
+     
+ 
+PARAMETERS
+  fdd=0.1958363809 qdds=0.5591275855 qddp=0.5690351902 qddd=0.7745947522 b0=58.0906936439 p0=1.2185323579 b1=-3.2299188646 p1=0.6862915307 b2=593519.1134129359 m2=-11.5000000000 p2=0.0000000000 ndt=2.0000000000 cr1=-6.0000000000 cr2=3.0474400934 cr3=-1.2317472193 r1dd=6.5000000000 rcdd=10.0000000000 rmaxhm=10.1000000000 npar=18 
+VARGS
+    -vfdd=0.1958363809 -vqdds=0.5591275855 -vqddp=0.5690351902 -vqddd=0.7745947522 -vb0=58.0906936439 -vp0=1.2185323579 -vb1=-3.2299188646 -vp1=0.6862915307 -vb2=593519.1134129359 -vm2=-11.5000000000 -vp2=0.0000000000 -vndt=2.0000000000 -vcr1=-6.0000000000 -vcr2=3.0474400934 -vcr3=-1.2317472193 -vr1dd=6.5000000000 -vrcdd=10.0000000000 -vrmaxhm=10.1000000000 
+
+
+
+| Quantity  |   From Model |       Target |
+|-----------+--------------+--------------|
+| a_hcp     |   5.58523112 |   5.57678969 |
+| c/a       |   1.58371266 |   1.58731122 |
+| a_omega   |   8.93475285 |   8.73254342 |
+| c_omega   |   5.38726911 |   5.32343103 |
+| a_4h      |   5.57584691 |   5.56325146 |
+| c_4h      |  18.09810672 |  17.75908031 |
+| a_6h      |   5.57365569 |   5.54639384 |
+| c_6h      |  27.18378460 |  26.77136353 |
+| a_bcc     |   6.20079768 |   6.17948863 |
+| a_fcc     |   7.87290654 |   7.88677000 |
+| DE(o,h)   |   0.58764167 |  -0.63343333 |
+| DE(4h,h)  |   1.58019500 |   3.17160000 |
+| DE(6h,h)  |   2.48264833 |   3.72005000 |
+| DE(b,h)   |   5.35128500 |   7.63520000 |
+| DE(f,h)   |   3.78088500 |   4.51880000 |
+| c_11      | 171.60928873 | 176.10000000 |
+| c_33      | 198.90063708 | 190.50000000 |
+| c_44      |  47.42549704 |  50.80000000 |
+| c_12      |  94.65941969 |  86.90000000 |
+| c_13      |  61.22624060 |  68.30000000 |
+| M_freq_0  |   2.59341377 |   2.85858719 |
+| M_freq_1  |   2.59341378 |   2.85858719 |
+| M_freq_2  |   2.59341378 |   2.85858719 |
+| M_freq_3  |   2.59341379 |   2.85858719 |
+| M_freq_4  |   5.85272461 |   5.66706047 |
+| M_freq_5  |   5.85272461 |   5.66706047 |
+| H_freq_0  |   3.82320403 |   4.80643423 |
+| H_freq_1  |   3.82320403 |   5.58010025 |
+| H_freq_2  |   6.40288977 |   5.65316738 |
+| H_freq_3  |   6.40288977 |   6.36651842 |
+| H_freq_4  |   7.92857431 |   6.40050186 |
+| H_freq_5  |   7.92857431 |   7.64082373 |
+| bandw.  G |   3.69394702 |   5.87085872 |
+| bandw.  K |   4.65178817 |   4.97424321 |
+| bandw.  M |   5.19329495 |   7.78109872 |
+| bandw.  L |   4.21232412 |   6.34433701 |
+| bandw.  H |   3.54700549 |   9.70902614 |
+| DOSerr_h  |   0.00000000 |   0.00000000 |
+| DOSerr_o  |   0.00000000 |   0.00000000 |
+| E_pris_f  |  98.95340236 | 220.00000000 |
+
+
+
+----------     E_prismatic_fault     -----------
+
+| tbe: |  98.953 | mJ/m^2 |                  |
+| DFT: | 250.000 | mJ/m^2 | [Benoit  2012]   |
+| DFT: | 233.000 | mJ/m^2 | [Ackland 1999]   |
+
+
+----------     E_Basal_fault I2     -----------
+
+| tbe: | 211.658 | mJ/m^2 |                 |
+| DFT: | 260.000 | mJ/m^2 | [Benoit  2012]  |
+   
+**** Defect Clusters
+
+----------     E_vacancy_formation     ----------
+
+| tbe: | 2.347  eV          |                              |
+| DFT: | 1.950  eV          | GGA-PAW:   Angsten  (2013)   |
+| exp: | 1.270  eV          | Hashimoto  (1984)            |
+
+***** Octahedral O interstitial relaxation
+
+Initial:
+[[file:Images/initial_octahedral_ox_ovito.png]]
+
+Final:
+[[file:Images/final_octahedral_ox_ovito.png]]
+
+***** Tetrahedral O interstitial relaxation
+
+Initial:
+[[file:Images/final_model_final_tetra_ox.png]]
+
+Final:
+[[file:Images/final_model_initial_tetra_ox_ovito.png]]
+
+
+***** Energies for defects 
+
+Relative differences are 
+
+>> (E_tetrahedral - E_octahedral) 
+| tbe:     | 1.65 eV |                |
+| GGA-DFT: | 1.23 eV | Kwasniak (2013) |
+
+>> (E_hexahedral - E_octahedral)
+| tbe:   |   0.90 eV  |
+
+> Note: Preference for tetrahedral oxygen to go into hexahedral site as seen by images above
+
+All formation energies below use the chemical potential of Akysonov
+(2013) of value $\mu_{\text{oxygen}} = \frac{5.6}{ 2} eV$.
+
+***** All formation energies
+
+| Quantity               | Energy (eV) |
+|------------------------+-------------|
+| Ef_Vf                  |       2.347 |
+|                        |             |
+| Ef_T_sol               |   -  21.783 |
+| Ef_T_dil_imp           |   -  28.991 |
+| Ef_T_formation         |   -  21.783 |
+| Ef_T_V_formation       |   -  18.905 |
+| Ef_T_vac_sol_bind      |   -   0.530 |
+|                        |             |
+| Ef_O_sol               |   -  23.436 |
+| Ef_O_dil_imp           |   -  30.645 |
+| Ef_O_formation         |   -  23.436 |
+| Ef_O_V_formation       |   -  18.905 |
+| Ef_O_vac_sol_bind      |   -   2.183 |
+|                        |             |
+| Ef_OO_sol              |   -  49.606 |
+| Ef_OO_dil_imp          |   -  56.814 |
+| Ef_OO_formation        |   -  46.806 |
+| Ef_OO_V_formation      |   -  41.910 |
+| Ef_OO_vac_sol_bind     |   -   2.547 |
+|                        |             |
+| Ef_OOO_sol             |   -  76.037 |
+| Ef_OOO_dil_imp         |   -  83.246 |
+| Ef_OOO_formation       |   -  70.437 |
+| Ef_OOO_V_formation     |   -  66.013 |
+| Ef_OOO_vac_sol_bind    |   -   2.076 |
+|                        |             |
+| Ef_OOOO_sol            |   - 102.470 |
+| Ef_OOOO_dil_imp        |   - 109.679 |
+| Ef_OOOO_formation      |   -  94.070 |
+| Ef_OOOO_V_formation    |   -  88.998 |
+| Ef_OOOO_vac_sol_bind   |   -  2.724  |
+|                        |             |
+| Ef_OOOOO_sol           |   - 128.781 |
+| Ef_OOOOO_dil_imp       |   - 135.989 |
+| Ef_OOOOO_formation     |   - 117.581 |
+| Ef_OOOOO_V_formation   |   - 113.649 |
+| Ef_OOOOO_vac_sol_bind  |   - 1.583   |
+|                        |             |
+| Ef_OOOOOO_sol          |   - 155.148 |
+| Ef_OOOOOO_dil_imp      |   - 162.357 |
+| Ef_OOOOOO_formation    |   - 141.148 |
+| Ef_OOOOOO_V_formation  |   - 137.110 |
+| Ef_OOOOOO_vac_sol_bind |   - 1.690   |
+
+**** Gamma surfaces
+
+Energies are accurate to within 2 mJm^{-2}, comparing the energies of
+points in the corners which (the zeros of energy). So surface energies
+might be  $\pm 2$ mJm^{-2} off which is reasonable. 
+
+These calculations were done in tight binding with 15 layers for both
+basal and prismatic with k-points adjusted accordingly. 
+DFT comparisons are usind results of Rodney. 
+
+The Pyramidal surface was obtained using the same 32 atom cell that
+Ready used in his paper on the pyramidal gamma surface with DFT
+pseudopotentials. 
+
+\newpage
+***** Basal
+
+TBE:
+[[file:Images/basal_gs_noo_2019-11-08_alat.png]]
+
+DFT:
+[[file:Images/rodney_basal_ti_gamma_surface.png]]
+
+***** Prismatic
+
+TBE:
+[[file:Images/prismatic_gs_noo_2019-11-08_alat.png]]
+
+DFT:
+[[file:Images/rodney_prismatic_ti_gamma_surface.png]]
+
+***** Pyramidal first order
+
+TBE:
+[[file:Images/pyramidal_gs_noo_2019-11-08_alat.png]]
+
+DFT pseudopot:
+[[file:Images/pyramidal_gamma_surface_ready_data_both.png]]
+
+***** Data
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/gamma_surfaces/basal/basal_gs_noo_alat_energies.dat][basal_gs_data]]
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/gamma_surfaces/prismatic/prismatic_gs_noo_alat_energies.dat][prismatic_gs_data]]
+[[file:~/Documents/ti/final_model_2019-11-12/gamma_surfaces/pyramidal_results_2019-11-13/pyramidal_gamma_surface_2019-11-13.dat][pyramidal_gs_data]]
+**** Dislocation core structures
+[[file:Images/ddplot_IP1_noo_best_model_alat.eps]]
+[[file:Images/ddplot_IP2_noo_best_model_alat.eps]]
+[[file:Images/ddplot_IP3_noo_best_model_alat.eps]]
+[[file:Images/ddplot_IP4_noo_best_model_alat.eps]]
+[[file:Images/ddplot_IP5_noo_best_model_alat.eps]]
+
+***** Data
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP1-oo_19-11-09--04-46-00.log][IP1]]
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP2-oo_19-11-09--04-46-00.log][IP2]]
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP3-oo_19-11-09--04-46-00.log][IP3]]
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP4-oo_19-11-09--04-46-00.log][IP4]]
+[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP5-oo_19-11-09--04-46-00.log][IP5]]
+ 
+**** Directory of the results
+[[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
+[[file:~/Documents/ti/final_model_2019-11]]
+
+**** BOP
+
+***** 4 recursion levels
+
+kbT = 0.1
+
+>> Lattice parameters:
+
+> hcp
+| a    |   2.901660  \AA  |
+| c    |   4.747485  \AA  |
+| etot | -18.342162  eV   |
+   
+> omega
+| a    | 7.917318  \AA |
+| c    | 2.749892 \AA  |
+| etot | -17.458700 eV |
+
+Omega is still not as stable as hcp as expected from model. 
+
+
+>> Elastic Constants
+
+| Quantity | calc. (10^11 Pa) | exp. (10^11 GPa) |
+|----------+------------------+------------------|
+| C11      |            1.781 |            1.761 |
+| C12      |            0.738 |            0.868 |
+| C13      |            0.611 |            0.682 |
+| C33      |            1.969 |            1.905 |
+| C44      |            0.285 |            0.508 |
+| C66      |            0.522 |            0.450 |
+| K        |            1.050 |            1.101 |
+| R        |            0.669 |            0.618 |
+| H        |            0.558 |            0.489 |

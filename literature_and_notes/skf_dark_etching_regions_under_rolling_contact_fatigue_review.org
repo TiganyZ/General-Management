@@ -563,7 +563,7 @@
       martensite from the initial microstructure.
     - The spheroidised (primary/residual carbides) are initally
       not affected by the decay of the microstructure and are
-      chemicaly and crystallographically unaltered.
+      chemically and crystallographically unaltered.
       - Does this mean that it is just the tempered carbides that
         dissolve? 
 
