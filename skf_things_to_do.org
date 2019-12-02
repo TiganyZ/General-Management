@@ -70,8 +70,18 @@
 
 
 
+** Current Calculations
 
-** TODO Project outline
+   
+*** TODO Peierls Barrier
+
+*** TODO Peierls Stress
+
+   
+*** TODO Core Reconstruction of C with easy core to hard core.
+    
+    
+** DONE Project outline
    DEADLINE: <2019-11-22 Fri>
    
    Create Gantt chart for the project. 
