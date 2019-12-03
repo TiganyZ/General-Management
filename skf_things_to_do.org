@@ -2,117 +2,143 @@
 #+AUTHOR: Tigany Zarrouk
 
 
-* Tasks
-
-
-
-** TODO Read Itakura
-** TODO Determine Calculations
-   DEADLINE: <2019-11-21 Thu>
+* TODO Determine Calculations
+  DEADLINE: <2019-11-21 Thu>
    
-   - What needs to be calculated for the construction of a Kinetic Monte Carlo model?
+  - What needs to be calculated for the construction of a Kinetic Monte Carlo model?
 
-   - How have the calculations by Wang et al changed anything?
+  - How have the calculations by Wang et al changed anything?
 
-*** Preliminary Calculations
+** Preliminary Calculations
 
-    It seems like the hard core configuration is stablised by C [[file:papers/2015_PRB%5BVentelon%20et%20al%20Fe-C%5D.pdf]] .
-    Is this the same for hydrogen?
+   It seems like the hard core configuration is stablised by C [[file:papers/2015_PRB%5BVentelon%20et%20al%20Fe-C%5D.pdf]] .
+   Is this the same for hydrogen?
 
-    - Shall I start off with the hard core configuration?
-    - What is the difference between the easy and the hard core?
+   - Shall I start off with the hard core configuration?
+   - What is the difference between the easy and the hard core?
     
-    - Looking briefly at the Ventelon paper, it seems that 
-      - They found a low energy site for the C in the middle of the
-        hard dislocation core.  
-      - The stablilsation of the hard core is apparent for other
-        solutes such at N, O and C. 
-      - This low energy core configuration is provides a *strong
-        solute-dislocation interaction*
-      - This leads to dislocation core saturation for low bulk solute
-        concentration. 
-      - Important for solute segregation phenomena such as strain aging. 
+   - Looking briefly at the Ventelon paper, it seems that 
+     - They found a low energy site for the C in the middle of the
+       hard dislocation core.  
+     - The stablilsation of the hard core is apparent for other
+       solutes such at N, O and C. 
+     - This low energy core configuration is provides a *strong
+       solute-dislocation interaction*
+     - This leads to dislocation core saturation for low bulk solute
+       concentration. 
+     - Important for solute segregation phenomena such as strain aging. 
 
-    - Interestingly, the Domain-Becquart EAM (nor the
-      Mendeleev-Ackland), could reproduce the transition of the easy
-      core into the hard core. 
+   - Interestingly, the Domain-Becquart EAM (nor the
+     Mendeleev-Ackland), could reproduce the transition of the easy
+     core into the hard core. 
 
-    - These potentials infact predict a core spreading. 
-    - Is this due to the directionality of the bonding in DFT, that it
-      is able to reproduce this result? 
-    - Potentially tight binding is the way forward with this model, as
-      it may be able to accurately obtain correct structure of the
-      dislocation core with Carbon. 
-
-
-*** Necessary Calculations
-
-     1) Kink-pair formation enthalpy *with* and *without*
-	carbon *at different stresses* to find the difference.
-	- This is to account the effect of carbon trapped in the core
-          ahead of the dislocation line. 
-	- Kink-nucleation enthalpy with hydrogen $E_{KH}$ and without
-          hydrogen $E_{K}$ was calculated for given shear stresses in
-          the $[111](1\bar{1}0)$ direction using *string method* on the
-          line tension model.
-	- This was done for the dislocation migration path E2-H0-E2.
-	- The reduction in the enthalpies is $\Delta E_K = E_K - E_{KH}
-          = 110 meV$
-     2) *Velocity* of the pure screw segment in $\alpha$-Fe calculated
-	*from the KMC* and the *experimentally determined velocity*.
-	- This determines the Frequency prefactor $f_{kp}$ by *comparison*.
-     3) Solution energies of carbon in different positions around the
-	dislocation line
-	- To account for changes in the solution enthalpy of the solute
-          as a kink sweeps past.
-     4) The change in these solution energies with applied stress to
-	find $E_t(\sigma)$.
+   - These potentials infact predict a core spreading. 
+   - Is this due to the directionality of the bonding in DFT, that it
+     is able to reproduce this result? 
+   - Potentially tight binding is the way forward with this model, as
+     it may be able to accurately obtain correct structure of the
+     dislocation core with Carbon. 
 
 
+** Necessary Calculations
 
-** Current Calculations
+    1) Kink-pair formation enthalpy *with* and *without*
+       carbon *at different stresses* to find the difference.
+       - This is to account the effect of carbon trapped in the core
+         ahead of the dislocation line. 
+       - Kink-nucleation enthalpy with hydrogen $E_{KH}$ and without
+         hydrogen $E_{K}$ was calculated for given shear stresses in
+         the $[111](1\bar{1}0)$ direction using *string method* on the
+         line tension model.
+       - This was done for the dislocation migration path E2-H0-E2.
+       - The reduction in the enthalpies is $\Delta E_K = E_K - E_{KH}
+         = 110 meV$
+    2) *Velocity* of the pure screw segment in $\alpha$-Fe calculated
+       *from the KMC* and the *experimentally determined velocity*.
+       - This determines the Frequency prefactor $f_{kp}$ by *comparison*.
+    3) Solution energies of carbon in different positions around the
+       dislocation line
+       - To account for changes in the solution enthalpy of the solute
+         as a kink sweeps past.
+    4) The change in these solution energies with applied stress to
+       find $E_t(\sigma)$.
+
+* TODO Current Calculations
 
    
-*** TODO Peierls Barrier
+** TODO Core Reconstruction of C with easy core to hard core.
+   - This is to check that tight binding, like DFT, can reproduce the
+     stablilisation of the hard screw core in bcc by C in a
+     neighbouring intersitial site.
+   - The EAM by Domain-Becquart does not predict this and so it shoud
+     be avoided.
+   - It is possible that there are other methods of kink-migration
+     that are valid in the EAM compared to tight-binding. 
 
-*** TODO Peierls Stress
 
    
-*** TODO Core Reconstruction of C with easy core to hard core.
+** TODO Peierls Barrier
+
+** TODO Peierls Stress
+
+* TODO Generate Cells for Calculations
+  SCHEDULED: <2019-11-25 Mon>
+   Once calculations necessary have been determined I can start generating files that generate dislocations. 
+   
+   - Generated a dislocation dipole with octahedral site near the easy
+     core
+   - Now need to see how the core reconstructs. 
+   - Need to now use the NEB scripts such that I can get the Peierls
+     barrier. 
     
+   - Ask Luke if Hexagonal cells are generally better or not?
+   - How does he simulate kinks?
+   - Read Luke's Thesis
+
+ 
     
-** DONE Project outline
-   DEADLINE: <2019-11-22 Fri>
+* TODO Create Presentation 
+  DEADLINE: <2019-11-25 Mon>
    
-   Create Gantt chart for the project. 
+  - Make outline of presentaton
+  - Tailor it for Eric Vegter and other members of group.
+  - Show why this project is important
+    - Put in things about how carbon migration is important
+    - Check the new proposal
+    - Fundamental interactions between C and dislocations. 
+* DONE Read Itakura    
+* DONE Project outline
+  DEADLINE: <2019-11-22 Fri>
+   
+  Create Gantt chart for the project. 
 
 
-    The open questions in terms of mechanisms are:
+   The open questions in terms of mechanisms are:
 
-    - Can dislocations carry carbon when they move?
+   - Can dislocations carry carbon when they move?
 
-    - Do temper carbides dissolve with rolling contact fatigue? Or do
-      they grow?
+   - Do temper carbides dissolve with rolling contact fatigue? Or do
+     they grow?
 
 
 
-*** TODO Details of the context of the project. 
+** TODO Details of the context of the project. 
 
-**** Initial microstructure of bearing steel
+*** Initial microstructure of bearing steel
      
-     - Machined bearings are heat treated to produce a *martensitic* microstructure.
-     - This is subsequently tempered.
-     - In the martensitic and tempered condition, bearing steel consists of at least four different phases.
-       1) Retained *austenite*
-       2) A tempered *martensitic matrix*
-       3) Tempered *transition carbides & cementite*
-       4) Dispersed residual *cementite*
-	  * This has a structure of $M_3C$ where M can be Mn/Cr.
+    - Machined bearings are heat treated to produce a *martensitic* microstructure.
+    - This is subsequently tempered.
+    - In the martensitic and tempered condition, bearing steel consists of at least four different phases.
+      1) Retained *austenite*
+      2) A tempered *martensitic matrix*
+      3) Tempered *transition carbides & cementite*
+      4) Dispersed residual *cementite*
+	 * This has a structure of $M_3C$ where M can be Mn/Cr.
 
-     - During /Austenisation/ a fraction of the spheroidised cementite dissolves and leads to a carbon enrichment of the austenite. 
+    - During /Austenisation/ a fraction of the spheroidised cementite dissolves and leads to a carbon enrichment of the austenite. 
 
 
-***** Austenite
+**** Austenite
 
       - This is fcc structure iron ($\gamma$ phase).
       - Generally a solid solution of iron and alloying elements. 
@@ -121,164 +147,143 @@
 
 For some iron metals, iron-based metals, and steels, the presence of carbides may occur during the austenitization step. The term commonly used for this is two-phase austenitization
 
-***** Martensite
-      - A very hard phase of iron
-      - Formed by quenching from /austenite/ (fcc iron) at such a high rate such that the carbon has no time to diffuse out of the microstructure to form /cementite/.
-      - This causes the fcc to transform to the highly strained body-centred tetragonal phase of /martensite/.
-      - It is supersaturated with carbon.
-      - The shear deformations that result form a /large number of dislocations/, which is the *primary mechanism* for the strengthening of steels.
+**** Martensite
+     - A very hard phase of iron
+     - Formed by quenching from /austenite/ (fcc iron) at such a high rate such that the carbon has no time to diffuse out of the microstructure to form /cementite/.
+     - This causes the fcc to transform to the highly strained body-centred tetragonal phase of /martensite/.
+     - It is supersaturated with carbon.
+     - The shear deformations that result form a /large number of dislocations/, which is the *primary mechanism* for the strengthening of steels.
       
-***** Cementite
-      - This is the name for the iron carbide Fe_3C
-      - It is hard and brittle
+**** Cementite
+     - This is the name for the iron carbide Fe_3C
+     - It is hard and brittle
 
-***** Ferrite
-      This is just bcc iron ($\alpha$ phase)
-
-
-**** Review of the problem
-     - With a bearing on a raceway one can expect a /Hertzian/ distribution of the stress.
-     - This leads to a large degree of stress on the /subsurface/ of the raceway.
-     - It has been seen in cross sections of the bearing raceway, with an increase in the number of fatigue cycles, after etching, dark and light etched regions start to develop.
-     - The light regions correspond to the normal microstructure.
-     - Dark regions seem to correspond to regions of high /von Mises/ stress from the Hertzian distribution of the stress.
-       - These are called /Dark Etched Regions/ (DERs)
-     - Within the DERs there are /white etched bands/ (WEBs).
-
-     - DERs are dark because there is more scattering of the light from the microscope so this implies a larger roughness
-
-     - It is not clear what the microstructure of the dark regions are. Nor what the white etched bands are.
-
-     - It it thought that the development of these regions is due to carbon diffusion and migration.
-     - I am not sure how carbon diffusion causes a change in the color of the image.
-     - But basically there are a couple of theories into the carbon migration.
+**** Ferrite
+     This is just bcc iron ($\alpha$ phase)
 
 
-**** Structure of DERs
-     - DERs are dark because there is more scattering of the light from the microscope so this implies a larger roughness
-     - The material is more brittle and hard (but this depends on temperature)
-       - Some results have shown that the hardness is similar or that the hardness decreases/increases. There is not a consensus.
+*** Review of the problem
+    - With a bearing on a raceway one can expect a /Hertzian/ distribution of the stress.
+    - This leads to a large degree of stress on the /subsurface/ of the raceway.
+    - It has been seen in cross sections of the bearing raceway, with an increase in the number of fatigue cycles, after etching, dark and light etched regions start to develop.
+    - The light regions correspond to the normal microstructure.
+    - Dark regions seem to correspond to regions of high /von Mises/ stress from the Hertzian distribution of the stress.
+      - These are called /Dark Etched Regions/ (DERs)
+    - Within the DERs there are /white etched bands/ (WEBs).
 
-     - DER is accomompanied by development of compressive residual stresses.
-       - X-ray diffraction has results in line broadening (a broader peak) with harder materials so FWHM is less. 
-       - Peak is narrower and higher in DER region so FWHM is higher. 
+    - DERs are dark because there is more scattering of the light from the microscope so this implies a larger roughness
+
+    - It is not clear what the microstructure of the dark regions are. Nor what the white etched bands are.
+
+    - It it thought that the development of these regions is due to carbon diffusion and migration.
+    - I am not sure how carbon diffusion causes a change in the color of the image.
+    - But basically there are a couple of theories into the carbon migration.
+
+
+*** Structure of DERs
+    - DERs are dark because there is more scattering of the light from the microscope so this implies a larger roughness
+    - The material is more brittle and hard (but this depends on temperature)
+      - Some results have shown that the hardness is similar or that the hardness decreases/increases. There is not a consensus.
+
+    - DER is accomompanied by development of compressive residual stresses.
+      - X-ray diffraction has results in line broadening (a broader peak) with harder materials so FWHM is less. 
+      - Peak is narrower and higher in DER region so FWHM is higher. 
 
 
 
 
-**** Cambridge's theory
+*** Cambridge's theory
 
-     - The theory is that essentially there are grains of martensite.
-     - Within these grains there are carbide precipitates of different types.
-     - It is thought that dislocations move in a cottrell atmosphere of carbon and then they deposit it into the precipitates.
-     - They tried to validate this claim by looking at atom probe tomography of a portion of the sample.
-     - They see near regions of large amounts of carbon, there are regions of decreased carbon content.
-     - They try to relate these regions of a high carbon concentration to different forms of carbide but there is debate as to whether the resolution of the APT results to actually determine with certainty what the actual stochiometry of the precipitates are.
+    - The theory is that essentially there are grains of martensite.
+    - Within these grains there are carbide precipitates of different types.
+    - It is thought that dislocations move in a cottrell atmosphere of carbon and then they deposit it into the precipitates.
+    - They tried to validate this claim by looking at atom probe tomography of a portion of the sample.
+    - They see near regions of large amounts of carbon, there are regions of decreased carbon content.
+    - They try to relate these regions of a high carbon concentration to different forms of carbide but there is debate as to whether the resolution of the APT results to actually determine with certainty what the actual stochiometry of the precipitates are.
 
        
-***** Qualms 
+**** Qualms 
 
-      1) Is it valid to say that the dislocations actually deposit carbon into the carbides?
-	 * Is there a segregation energy from dislocations to these carbide regions?
-	 * Predrag is looking at this with some interatomic potentials to see if there is favourable segregation of C from dislocation to precipitate. 
-	 * Do temper carbides dissolve with rolling contact fatigue?
-      2) Experimentalists don't seem to have seen any carbides. They don't think that this mechanism is likely.
-      3) It is thought that these carbide precipitates dissolve in the dark region. 
+     1) Is it valid to say that the dislocations actually deposit carbon into the carbides?
+	* Is there a segregation energy from dislocations to these carbide regions?
+	* Predrag is looking at this with some interatomic potentials to see if there is favourable segregation of C from dislocation to precipitate. 
+	* Do temper carbides dissolve with rolling contact fatigue?
+     2) Experimentalists don't seem to have seen any carbides. They don't think that this mechanism is likely.
+     3) It is thought that these carbide precipitates dissolve in the dark region. 
     
 
 
 
-**** SKF Theory
+*** SKF Theory
 
-     - Think that carbon drags along the cottrell atmosphere with the dislocation.
-     - This causes carbon migration.
-     - Might also be possible that edge dislocations, due to their high mobility diffuse carbon. 
-     - There might also be pipe diffusion of the C down the dislocation line. 
-       - This is what the engineers really like
-       - Essentially pipe diffusion is where (say with an edge dislocation) a vacancy and an "interstitial" pair are created where the interstitial moves downwards (negative climb direction)
-       - If this pair don't annihilate then diffusion takes place and this interstitial will diffuse down the dislocation line
+    - Think that carbon drags along the cottrell atmosphere with the dislocation.
+    - This causes carbon migration.
+    - Might also be possible that edge dislocations, due to their high mobility diffuse carbon. 
+    - There might also be pipe diffusion of the C down the dislocation line. 
+      - This is what the engineers really like
+      - Essentially pipe diffusion is where (say with an edge dislocation) a vacancy and an "interstitial" pair are created where the interstitial moves downwards (negative climb direction)
+      - If this pair don't annihilate then diffusion takes place and this interstitial will diffuse down the dislocation line
 
 
-**** Notes from Predrag
+*** Notes from Predrag
       
-     - Given a diffusion equation of the form 
+    - Given a diffusion equation of the form 
 
-       \[ \frac{\partial c}{\partial t} = \nabla ( D \nabla c ) - \nabla \cdot (\mathbf{v}c) + R\]
+      \[ \frac{\partial c}{\partial t} = \nabla ( D \nabla c ) - \nabla \cdot (\mathbf{v}c) + R\]
 
-     - Where c is the variable of interest (say concentration)
-     - D is the diffusion coefficient (diffusivity)
-     - $\mathbf{v}$ is a velocity field that the quantity is moving with.
-       - e.g In /advection/ then $c$ is the concentration of salt in a river and $\mathbf{v}$ would be the velocity of the water as a function of time and location.
-       - This is a quantity that is /driving the diffusion/. 
-     - $R$ Describes sources and sinks of the quantity. 
+    - Where c is the variable of interest (say concentration)
+    - D is the diffusion coefficient (diffusivity)
+    - $\mathbf{v}$ is a velocity field that the quantity is moving with.
+      - e.g In /advection/ then $c$ is the concentration of salt in a river and $\mathbf{v}$ would be the velocity of the water as a function of time and location.
+      - This is a quantity that is /driving the diffusion/. 
+    - $R$ Describes sources and sinks of the quantity. 
 
 	
-     - In relation to diffusion of carbon, we can say that $c$ is the concentration of carbon.
-     - In general the diffusion term (the first term) will be quite small.
-     - The velocity term makes the larger contributions. 
+    - In relation to diffusion of carbon, we can say that $c$ is the concentration of carbon.
+    - In general the diffusion term (the first term) will be quite small.
+    - The velocity term makes the larger contributions. 
 
-     /What is this velocity term composed of in terms of dislocations and carbon diffusion?/
+    /What is this velocity term composed of in terms of dislocations and carbon diffusion?/
 
-     - One can think of this velocity term as being decomposed into several parts.
-     - In a paper by Sadeghi? They relate this velocity term to something of the form 
+    - One can think of this velocity term as being decomposed into several parts.
+    - In a paper by Sadeghi? They relate this velocity term to something of the form 
 
-       \[ \mathvf{v} = \frac{D}{k_B T} W \]
+      \[ \mathvf{v} = \frac{D}{k_B T} W \]
 
-     - Where $W$ is the /work due to dissipation of plastic strain/ defined as (maybe):
-       \[ W = \int \sigma \varepsilon^p d^3r \]
+    - Where $W$ is the /work due to dissipation of plastic strain/ defined as (maybe):
+      \[ W = \int \sigma \varepsilon^p d^3r \]
 
-     - But one can also think about this in the case of a solute interacting with the strain field of a dislocation. 
+    - But one can also think about this in the case of a solute interacting with the strain field of a dislocation. 
 
-       \[ \mathvf{v} = \frac{D}{k_B T} \nabla ( P \Omega) \]
+      \[ \mathvf{v} = \frac{D}{k_B T} \nabla ( P \Omega) \]
 
-     - Where $\Omega$ is the /misfit volume/.
-     - $P$ is the trace of the stress tensor
+    - Where $\Omega$ is the /misfit volume/.
+    - $P$ is the trace of the stress tensor
 
        
 
 
 
-***  Relevant Articles
-    Here is the article where the first model is described:
+**  Relevant Articles
+   Here is the article where the first model is described:
     
-    http://dx.doi.org/10.1016/j.actamat.2017.08.005
-    [[file:papers/Strain-induced_Martensite_Decay_in_Bearing_Steels_under_Rolling_Contact_Fatigue_Modelling_and_Atomic-scale_Characterisation.pdf]]
+   http://dx.doi.org/10.1016/j.actamat.2017.08.005
+   [[file:papers/Strain-induced_Martensite_Decay_in_Bearing_Steels_under_Rolling_Contact_Fatigue_Modelling_and_Atomic-scale_Characterisation.pdf]]
     
-    And here the second model:
+   And here the second model:
 
-    http://www.tandfonline.com/doi/abs/10.1080/10402004.2012.754073
+   http://www.tandfonline.com/doi/abs/10.1080/10402004.2012.754073
 
-    [[file:papers/warhadpande2013.pdf]]
+   [[file:papers/warhadpande2013.pdf]]
 
 
-    http://www.tandfonline.com/doi/abs/10.1080/10402004.2013.847999
+   http://www.tandfonline.com/doi/abs/10.1080/10402004.2013.847999
 
-    [[file:papers/warhadpande2013-1.pdf]]
+   [[file:papers/warhadpande2013-1.pdf]]
  
 
-    The open questions in terms of mechanisms are:
+   The open questions in terms of mechanisms are:
 
-    - Can dislocations carry carbon when they move?
+   - Can dislocations carry carbon when they move?
 
-    - Do temper carbides dissolve with rolling contact fatigue? or do they grow?
-
- 
-    
-** TODO Create Presentation 
-   DEADLINE: <2019-11-25 Mon>
-   
-   - Make outline of presentaton
-   - Tailor it for Eric Vegter and other members of group.
-   - Show why this project is important
-     - Put in things about how carbon migration is important
-     - Check the new proposal
-     - Fundamental interactions between C and dislocations. 
-
-** TODO Generate Cells for Calculations
-   SCHEDULED: <2019-11-25 Mon>
-    Once calculations necessary have been determined I can start generating files that generate dislocations. 
-    
-    
-    - Ask Luke if Hexagonal cells are generally better or not?
-    - How does he simulate kinks?
-    - Read Luke's Thesis
+   - Do temper carbides dissolve with rolling contact fatigue? or do they grow?

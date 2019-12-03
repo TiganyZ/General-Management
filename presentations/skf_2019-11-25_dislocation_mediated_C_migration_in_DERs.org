@@ -67,7 +67,7 @@
 * Simulation Cells
   #+NAME: bcc kink pair
   #+ATTR_REVEAL: :frag fade-in
-  #+ATTR_HTML: :width 70% :style position:relative;top:-525px;left:0px;z_index:2;
+  #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
   [[file:~/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png]]
   
 
