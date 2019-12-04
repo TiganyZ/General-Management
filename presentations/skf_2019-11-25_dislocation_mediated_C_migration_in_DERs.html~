@@ -9,7 +9,7 @@
 </style>
 <link rel="stylesheet" href="file:///home/tigany/software/reveal.js/css/reveal.css"/>
 
-<link rel="stylesheet" href="file:///home/tigany/software/reveal.js/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="file:///home/tigany/software/reveal.js/css/theme/solarized.css" id="theme"/>
 
 <link rel="stylesheet" href="./extra.css"/>
 
@@ -35,8 +35,8 @@
 
 
 <section>
-<section id="slide-orgf43af38">
-<h2 id="orgf43af38">Motivation</h2>
+<section id="slide-org7819e08">
+<h2 id="org7819e08">Motivation</h2>
 <ul>
 <li>Rolling contact on bearing raceways generate maximal shear
 stresses in subsurface.</li>
@@ -56,10 +56,66 @@ carbon and the underlying mechanism.</li>
 </ul>
 
 </section>
+<section id="slide-org4cad09f">
+<h3 id="org4cad09f">Current Potential Mechanisms</h3>
+<ul>
+<li>Theories of carbon redisribution come from observations of C
+concentrations and of formation of lenticular carbides around
+ferrite features in the DERs.</li>
+<li>Carbon can segregate to defects such as dislocations.</li>
+<li>Dislocations can attract solutes, such at C, and form Cottrell
+atmospheres.</li>
+<li>Current theories suggest that with plastic deformation, due to
+the movement of dislocations, carbon <i>migrates</i>.</li>
+
+</ul>
+
 </section>
 <section>
-<section id="slide-orgff0a554">
-<h2 id="orgff0a554">Aims</h2>
+
+<ul>
+<li>We want to determine how these dislocations influence the
+movement of C:
+<ul>
+<li>Does C actually move with the dislocation?</li>
+<li>Are dislocations pinned and then unpinned with stress?</li>
+<li>How does stress actually change C diffusion rates, are they
+comparable to dislocation velocities?</li>
+<li>How is dislocation movement affected on larger timescales: what
+structures are found?</li>
+
+</ul></li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org24295ee">
+<h2 id="org24295ee">Objectives</h2>
+<ul>
+<li>Build Kinetic Monte-Carlo model of dislocation motion.</li>
+<li>Tight-binding/ atomistic simulations used to obtain formation energies:
+<ol>
+<li>Kink-pair formation energies as a function of carbon content
+and stress.</li>
+<li>Dissolution energies of carbon near core of dislocation as a
+function of stress.</li>
+
+</ol></li>
+<li>kMC model used to see larger scale movement of screw dislocation
+by kink-pair formation, in environment of C.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org4424651">
+<h2 id="org4424651">Aims</h2>
 <p>
 To answer the questions:
 </p>
@@ -70,31 +126,11 @@ To answer the questions:
 </ul>
 
 
-
 </section>
 </section>
 <section>
-<section id="slide-orgd5ebbde">
-<h2 id="orgd5ebbde">Objectives</h2>
-<ul>
-<li>Build Kinetic Monte-Carlo model of dislocation motion.</li>
-<li>Tight-binding used to obtain formation energies:
-<ol>
-<li>Kink-pair formation energies as a function of carbon content
-and stress.</li>
-<li>Dissolution energies of carbon near core of dislocation as a
-function of stress.</li>
-
-</ol></li>
-
-</ul>
-
-
-</section>
-</section>
-<section>
-<section id="slide-org694b83f">
-<h2 id="org694b83f">Methods</h2>
+<section id="slide-org67eb773">
+<h2 id="org67eb773">Methods</h2>
 <ul>
 <li>Density Functional Theory is not feasible.</li>
 <li>Use tight-binding: rigorous approximation to DFT.</li>
@@ -107,18 +143,18 @@ function of stress.</li>
 </section>
 </section>
 <section>
-<section id="slide-org1d6b3d8">
-<h2 id="org1d6b3d8">Simulation Cells</h2>
+<section id="slide-org15e17c4">
+<h2 id="org15e17c4">Simulation Cells</h2>
 
-<div id="org105e74a" class="figure">
-<p><img src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png" alt="bcc_kink_pair_iron_easy_to_easy_core.png" class="fragment fade-in" width="70%" style="position:relative;top:-525px;left:0px;z_index:2;" />
+<div id="orgb9f50b5" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png" alt="bcc_kink_pair_iron_easy_to_easy_core.png" class="fragment fade-in" width="70%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
 
 
 </section>
-<section id="slide-org17a860b">
-<h3 id="org17a860b">Tight Binding</h3>
+<section id="slide-orgfafdcfa">
+<h3 id="orgfafdcfa">Tight Binding</h3>
 <div class="column" style="float:left; width: 50%">
 
 <ul>
@@ -135,8 +171,8 @@ function of stress.</li>
 </div>
 
 </section>
-<section id="slide-org32a940d">
-<h3 id="org32a940d">BOP</h3>
+<section id="slide-org92524e9">
+<h3 id="org92524e9">BOP</h3>
 <div class="column" style="float:right; width: 50%">
 
 <ul>
@@ -154,8 +190,8 @@ electronic structure information.</li>
 
 
 </section>
-<section id="slide-orgfe2d09c">
-<h3 id="orgfe2d09c">Embedding</h3>
+<section id="slide-orgecd30c4">
+<h3 id="orgecd30c4">Embedding</h3>
 <div class="column" style="float:left; width: 50%">
 
 <ul>
@@ -188,8 +224,8 @@ conditions.
 </section>
 </section>
 <section>
-<section id="slide-org76d334f">
-<h2 id="org76d334f">Defect Clusters</h2>
+<section id="slide-org492ea8d">
+<h2 id="org492ea8d">Defect Clusters</h2>
 <ul>
 <li>Increase in oxygen content in Ti-7wt.%Al causes higher number density of
 \(\alpha_2\) precipitates at 550&deg; C (Felicity's results).</li>
@@ -201,8 +237,8 @@ conditions.
 
 
 </section>
-<section id="slide-org283b96b">
-<h3 id="org283b96b">Calculation Details</h3>
+<section id="slide-org2a0e93d">
+<h3 id="org2a0e93d">Calculation Details</h3>
 <ul>
 <li>Först <i>et al.</i> \([3]\) calculated energetics of defect complexes with associated local
 force-constant matrix.</li>
@@ -222,38 +258,38 @@ al</i>, Phys. Rev. Lett. 96, 2006
 
 
 </section>
-<section id="slide-org153d9a1">
-<h3 id="org153d9a1">Plots in Fe-C</h3>
+<section id="slide-org9e24074">
+<h3 id="org9e24074">Plots in Fe-C</h3>
 
-<div id="org9c9142b" class="figure">
+<div id="org57e22a7" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/forst_defect_concentration_cementite.png" alt="forst_defect_concentration_cementite.png" width="70%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
 
 
-<div id="orgdcb6253" class="figure">
+<div id="orgd59dfdb" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png" alt="forst_defect_concentration_vacancies.png" class="fragment fade-in" width="70%" style="position:relative;top:-525px;left:0px;z_index:2;" />
 </p>
 </div>
 
 </section>
-<section id="slide-org5319c06">
-<h3 id="org5319c06">\(\text{Ti}_{3}\text{Al}\)  Cells</h3>
+<section id="slide-org5cd0d95">
+<h3 id="org5cd0d95">\(\text{Ti}_{3}\text{Al}\)  Cells</h3>
 
-<div id="org5210614" class="figure">
+<div id="org74e2c01" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/ti3al_val_o.png" alt="ti3al_val_o.png" width="70%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
 
 </section>
-<section id="slide-orge357cf1">
-<h3 id="orge357cf1">Ti Cells</h3>
+<section id="slide-org2824764">
+<h3 id="org2824764">Ti Cells</h3>
 <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
 
 
 </section>
-<section id="slide-orgbe92c01">
-<h3 id="orgbe92c01">Defect Clusters: Future Work</h3>
+<section id="slide-orgcf52a10">
+<h3 id="orgcf52a10">Defect Clusters: Future Work</h3>
 <ul>
 <li>Finish Ti and \(\text{Ti}_{3}\text{Al}\) defect cluster calculations in DFT.</li>
 <li>Possibly extend to Ti-7wt%Al with SQS structures.</li>
@@ -265,8 +301,8 @@ al</i>, Phys. Rev. Lett. 96, 2006
 </section>
 </section>
 <section>
-<section id="slide-org829811d">
-<h2 id="org829811d">Summary</h2>
+<section id="slide-orgc88f310">
+<h2 id="orgc88f310">Summary</h2>
 <ul>
 <li>Successfully made TB model of Ti which reproduces DFT results with only
 d-orbitals.</li>

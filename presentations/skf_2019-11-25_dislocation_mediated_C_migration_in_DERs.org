@@ -9,7 +9,6 @@
 #+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
 #+REVEAL_THEME: solarized
 #+REVEAL_TRANS: linear 
-#+REVEAL_THEME: moon
 
 # Set up the title slide.
 #+REVEAL_TITLE_SLIDE: <h1>%t</h1><h2>%s</h2><h3>%A %a</h3><p>View online: <a href="%u">%u</a></p><p>This could be the file name in the <code>src</code> attribute of an <code>img</code> element for a QR code: %q
@@ -40,21 +39,46 @@
   - Atomistic modelling necessary to ascertain if dislocations move
     carbon and the underlying mechanism. 
 
-* Aims
-  To answer the questions:
-  - Do dislocations move carbon?
-  - Do temper carbides dissolve/grow with rolling contact fatigue?
+** Current Potential Mechanisms
+   
+   - Theories of carbon redisribution come from observations of C
+     concentrations and of formation of lenticular carbides around
+     ferrite features in the DERs.
+   - Carbon can segregate to defects such as dislocations. 
+   - Dislocations can attract solutes, such at C, and form Cottrell
+     atmospheres.
+   - Current theories suggest that with plastic deformation, due to
+     the movement of dislocations, carbon /migrates/.
+
+   #+REVEAL:split
+
+   - We want to determine how these dislocations influence the
+     movement of C:
+     - Does C actually move with the dislocation?
+     - Are dislocations pinned and then unpinned with stress?
+     - How does stress actually change C diffusion rates, are they
+       comparable to dislocation velocities?
+     - How is dislocation movement affected on larger timescales: what
+       structures are found?
     
     
 
 * Objectives
 
   - Build Kinetic Monte-Carlo model of dislocation motion. 
-  - Tight-binding used to obtain formation energies:
+  - Tight-binding/ atomistic simulations used to obtain formation energies:
     1) Kink-pair formation energies as a function of carbon content
        and stress.
     2) Dissolution energies of carbon near core of dislocation as a
-       function of stress. 
+       function of stress.
+  - kMC model used to see larger scale movement of screw dislocation
+    by kink-pair formation, in environment of C. 
+
+
+* Aims
+  To answer the questions:
+  - Do dislocations move carbon?
+  - Do temper carbides dissolve/grow with rolling contact fatigue?
 
 
 * Methods
@@ -68,7 +92,7 @@
   #+NAME: bcc kink pair
   #+ATTR_REVEAL: :frag fade-in
   #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
-  [[file:~/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png]]
+  [[file:~/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core_rotated.png]]
   
 
 ** Tight Binding
