@@ -11,8 +11,7 @@
 #+REVEAL_TRANS: linear 
 
 # Set up the title slide.
-#+REVEAL_TITLE_SLIDE: <h1>%t</h1><h2>%s</h2><h3>%A %a</h3><p>View online: <a href="%u">%u</a></p><p>This could be the file name in the <code>src</code> attribute of an <code>img</code> element for a QR code: %q
-
+#+REVEAL_TITLE_SLIDE: <h1 >%t</h1><h2>%s</h2><h3>%A %a</h3>
 
 # http://cdn.jsdelivr.net/reveal.js/3.0.0/
 
@@ -24,76 +23,90 @@
 
 
 * Motivation 
-  - Rolling contact on bearing raceways generate maximal shear
-    stresses in subsurface.
-  - Degradation in subsurface microstructure observed due to
-    plasticity.
-  - This can lead to failure by Rolling Contact Fatigue (RCF).
-  - Degradation arises in form of Dark Etching Regions (DERs),
-    characterised by development of ferrite features with patches of
-    unaltered martensitic matrix.
-  - Carbon redistribution is thought to be a fundamental mechanism
-    behind DER formation.
-  - Dislocation-driven carbon migration has been suggested but hard to
-    experimentally verify.
-  - Atomistic modelling necessary to ascertain if dislocations move
-    carbon and the underlying mechanism. 
+  # - Rolling contact on bearing raceways generate maximal shear
+  #   stresses in subsurface.
+  # - Degradation in subsurface microstructure observed.
+  # - This can lead to failure by Rolling Contact Fatigue (RCF).
+  - Subsurface degradation of bearing raceways arises in form of Dark
+    Etching Regions (DERs).
+  - DERs characterised by development of ferrite and carbide features with
+    patches of unaltered martensitic matrix.
+  - Carbon redistribution and plastic deformation are thought to be
+    fundamental mechanisms behind DER formation.
+  - Differing mechanisms of dislocation-driven carbon migration have
+    been suggested, but no consensus.
+  - Atomistic modelling necessary to elucidate how dislocations could
+    move carbon; thus clarifying potential mechanisms of DER formation. 
 
-** Current Potential Mechanisms
+** DER Mechanisms
    
-   - Theories of carbon redisribution come from observations of C
-     concentrations and of formation of lenticular carbides around
-     ferrite features in the DERs.
-   - Carbon can segregate to defects such as dislocations. 
-   - Dislocations can attract solutes, such at C, and form Cottrell
-     atmospheres.
-   - Current theories suggest that with plastic deformation, due to
-     the movement of dislocations, carbon /migrates/.
+   - Theories of carbon redistribution causing DERs come from several
+     observations:
+     - Ferrite formation
+     - Lenticular carbide formation
+     - Dissolution of residual carbides.
+     - Difference in C concentration from original martensite to DER. 
+   - Dislocations can attract carbon and form Cottrell atmospheres.
+   - Current theories suggest with dislocation glide, carbon
+     migration is assisted.
+   # - Growth of lenticular carbides is linked to formation of DER through
+   #   mechanical diffusion by dislocations and thermal diffusion.
+   - Debate as to whether carbon is deposited in temper carbides,
+     causing them to grow, or if there is dissolution of temper
+     carbides.
 
-   #+REVEAL:split
 
-   - We want to determine how these dislocations influence the
-     movement of C:
-     - Does C actually move with the dislocation?
-     - Are dislocations pinned and then unpinned with stress?
-     - How does stress actually change C diffusion rates, are they
-       comparable to dislocation velocities?
-     - How is dislocation movement affected on larger timescales: what
-       structures are found?
-    
-    
+** New DER Mechanism proposal
 
-* Objectives
-
-  - Build Kinetic Monte-Carlo model of dislocation motion. 
-  - Tight-binding/ atomistic simulations used to obtain formation energies:
-    1) Kink-pair formation energies as a function of carbon content
-       and stress.
-    2) Dissolution energies of carbon near core of dislocation as a
-       function of stress.
-  - kMC model used to see larger scale movement of screw dislocation
-    by kink-pair formation, in environment of C. 
-
+   - Dislocation pile-ups could cause attract carbon from temper/residual
+     carbides causing their dissolution.
+   - Dislocation rearrangement into cell structures from cyclic
+     stresses and dislocation-carbon interaction.
+   - Large plastic strains in region will form ferrite microbands and
+     nanocrystalline ferrite with as the number of stress cycles
+     increases.
+   - Expelled C from ferrite microbands and nanocrystalline ferrite
+     forms lenticular carbides.
+   - Carbon diffusion assisted by pipe diffusion along dislocation. 
 
 * Aims
-  To answer the questions:
-  - Do dislocations move carbon?
+    To answer the questions:
+  - How are dislocations influenced by carbon on atomistic scale?
+    - How does carbon affect kink-pair nucleation/migration?
+    - How does this affect dislocation movement on larger timescales?
+      - How fast do the dislocations move in carbon environemnt
+      - Does carbon move with the dislocation?
+      - What structures are found? 
+    - What does carbon move with the dislocation?
   - Do temper carbides dissolve/grow with rolling contact fatigue?
+    - Is is more energetically favourable for a carbon to be in a
+      Cottrell atmosphere or in a carbon rich grain boundary?
+    # - We want to determine how these dislocations influence the
+    #   movement of C:
+    #   - Does C actually move with the dislocation?
+    #   - Are dislocations pinned and then unpinned with stress?
+    #   - How does stress actually change C diffusion rates, are they
+    # 	comparable to dislocation velocities?
+      
+
+** Kinetic Monte Carlo
 
 
-* Methods
-  - Density Functional Theory is not feasible.
-  - Use tight-binding: rigorous approximation to DFT.
-  
-  - Boundaries of cell affect relaxation of core more.
-  - Semi-empirical method is more computationally efficient.
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
 
-* Simulation Cells
-  #+NAME: bcc kink pair
-  #+ATTR_REVEAL: :frag fade-in
-  #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
-  [[file:~/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core_rotated.png]]
-  
+- kMC simulations model the movement of dislocations on much larger
+  timescales than atomistics.
+- Propogation of dislocation line segments are treated as rare events
+  with particular rates and mechanisms depending on local environment.
+- Rates for each of the mechanism are derived from atomistic
+  calculations.
+- One can find dislocation velocity as a function of stress and
+  temperature. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML:  <img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
+#+REVEAL_HTML: </div>
 
 ** Tight Binding
 
@@ -109,6 +122,81 @@
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
 #+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
 #+REVEAL_HTML: </div>
+
+
+* Objectives
+
+  - Build kinetic Monte-Carlo (kMC) model of dislocation motion. 
+  - Atomistic (tight-binding) simulations used to obtain formation
+    energies necessary for kMC:
+    1) Kink-pair formation energies as a function of carbon content
+       and stress.
+    2) Dissolution energies of carbon near core of dislocation as a
+       function of stress.
+  - kMC model used to see larger scale movement of screw dislocation
+    by kink-pair formation, in environment of C. 
+
+*  Plan
+  1) C/defect solution energies
+     1. In perfect lattice
+     2. With dislocation
+  2) Dislocation core reconstruction with C
+  3) Kink-pair formation energies
+     1. Without C
+     2. With C in different interstitial sites
+     3. Under stress
+  4) kMC transition rates 
+  5) kMC screw dislocation propagation in C environment
+
+
+** Gantt Chart
+  
+   [[file:~/Documents/docs/Management/Images/skf_gantt_chart_der_project.PNG]]
+
+* Simulation Cells
+  #+NAME: bcc kink pair
+  #+ATTR_REVEAL: :frag fade-in
+  #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
+  [[file:~/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core_rotated.png]]
+  
+
+* Extra information
+
+
+** Kinetic Monte Carlo
+
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+- kMC simulations model the movement of dislocations on much larger
+  timescales than atomistics.
+- Propogation of dislocation line segments are treated as rare events
+  with particular rates and mechanisms depending on local environment.
+- Rates for each of the mechanism are derived from atomistic
+  calculations.
+- One can find dislocation velocity as a function of stress and
+  temperature. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML:  <img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
+#+REVEAL_HTML: </div>
+
+** Tight Binding
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Tight binding is an approximation to DFT.
+- Overlaps between atomic orbitals are key parameters.
+- Parameters can be fitted to experimental data
+- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
+
 
 ** BOP
 
@@ -147,6 +235,15 @@ Invariance theorem with green's function approaches. So good with boundary
 conditions. 
 
 #+END_NOTES
+  
+
+
+* Methods
+  - Density Functional Theory is not feasible.
+  - Use tight-binding: rigorous approximation to DFT.
+  
+  - Boundaries of cell affect relaxation of core more.
+  - Semi-empirical method is more computationally efficient.
 
 * Defect Clusters 
 

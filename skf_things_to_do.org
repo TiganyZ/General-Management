@@ -11,6 +11,9 @@
 
 ** Preliminary Calculations
 
+   
+** TODO Core reconstruction (ECC -> HCC) by C
+
    It seems like the hard core configuration is stablised by C [[file:papers/2015_PRB%5BVentelon%20et%20al%20Fe-C%5D.pdf]] .
    Is this the same for hydrogen?
 
@@ -39,9 +42,12 @@
      it may be able to accurately obtain correct structure of the
      dislocation core with Carbon. 
 
+** TODO Reproduction of Forst's paper on defect clusters. 
+
+   [[file:papers/Forst_Point_Defect_Concentrations_in_Metastable_Fe-C_Alloys.pdf]]
 
 ** Necessary Calculations
-
+   
     1) Kink-pair formation enthalpy *with* and *without*
        carbon *at different stresses* to find the difference.
        - This is to account the effect of carbon trapped in the core
@@ -62,7 +68,7 @@
          as a kink sweeps past.
     4) The change in these solution energies with applied stress to
        find $E_t(\sigma)$.
-
+       
 * TODO Current Calculations
 
    
