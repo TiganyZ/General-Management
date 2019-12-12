@@ -135,7 +135,11 @@
 
 
 * Objectives
+  #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+  #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
+  #+REVEAL_HTML: </div>
 
+  #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
   - Build kinetic Monte-Carlo (kMC) model of dislocation motion. 
   - Atomistic (tight-binding) simulations used to obtain formation
     energies necessary for kMC:
@@ -145,13 +149,11 @@
        function of stress.
   - kMC model used to see larger scale movement of screw dislocation
     by kink-pair formation, in environment of C. 
-
+  #+REVEAL_HTML: </div>  
 *  Plan
-  #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-  #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
-  #+REVEAL_HTML: </div>
 
-  #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+
   1) C/defect solution energies
      1. In perfect lattice
      2. With dislocation
@@ -163,7 +165,7 @@
   4) kMC transition rates 
   5) kMC screw dislocation propagation in C environment
 
-  #+REVEAL_HTML: </div>  
+
 
 ** Gantt Chart
   #+NAME: bcc kink pair
@@ -171,156 +173,13 @@
   #+ATTR_HTML: :width 100% :style position:relative;top:0px;left:0px;z_index:1;
    [[file:~/Documents/docs/Management/Images/skf_gantt_chart_der_project_updated_larger.PNG]]
 
-* Simulation Cells
-  #+NAME: bcc kink pair
-  #+ATTR_REVEAL: :frag fade-in
-  #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
-  [[file:~/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core_rotated.png]]
-  
-
-* Extra information
-
-
-** Kinetic Monte Carlo
-
-
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-
-- kMC simulations model the movement of dislocations on much larger
-  timescales than atomistics.
-- Propogation of dislocation line segments are treated as rare events
-  with particular rates and mechanisms depending on local environment.
-- Rates for each of the mechanism are derived from atomistic
-  calculations.
-- One can find dislocation velocity as a function of stress and
-  temperature. 
-
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-#+REVEAL_HTML:  <img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
-#+REVEAL_HTML: </div>
-
-** Tight Binding
-
-
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-
-- Tight binding is an approximation to DFT.
-- Overlaps between atomic orbitals are key parameters.
-- Parameters can be fitted to experimental data
-- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT. 
-
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
-#+REVEAL_HTML: </div>
-
-
-** BOP
-
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-
-- BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
-  force calculation within tight-binding.
-- One builds a local density of states from moments, giving detailed
-  electronic structure information. 
-
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
-#+REVEAL_HTML: </div>
-
-
-** Embedding 
-
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-
-- Idea is to combine speed of BOP ($\mathcal{O}(N)$) with accuracy of
-  tight-binding $\mathcal{O}(N^3)$.
-- Increasing the number of atoms gives freedom to:
-  - Investigate isolated dislocations. 
-  - Include solutes at more realistic concentrations. 
-  - Simulate interfaces near a surface (e.g. TiO$_2$ and
-    bulk Ti)
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-
-#+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hex_cell_embedding_crop_text.png" >
-#+REVEAL_HTML: </div>
-
-#+BEGIN_NOTES
-Invariance theorem with green's function approaches. So good with boundary
-conditions. 
-
-#+END_NOTES
-  
-
-
-* Methods
-  - Density Functional Theory is not feasible.
-  - Use tight-binding: rigorous approximation to DFT.
-  
-  - Boundaries of cell affect relaxation of core more.
-  - Semi-empirical method is more computationally efficient.
-
-* Defect Clusters 
-
-- Increase in oxygen content in Ti-7wt.%Al causes higher number density of
-  $\alpha_2$ precipitates at 550\deg C (Felicity's results).
-- Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
-- This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
-- First starting out with pure Ti and $\alpha_2$. Still working on extension to Ti-7wt.%Al.
-
-
-** Calculation Details
-- Först /et al./ $[3]$ calculated energetics of defect complexes with associated local
-  force-constant matrix.
-- Partial thermodynamic equilibrium imposed (thermal equilibrium for one species and not the other). 
-- Defect concentration plotted as a function of carbon/vacancy concentration
-  only at 160\deg C.
-- Extension: apply the quasiharmonic approximation/do thermodynamic integration
-  for better accuracy at higher temperatures (550\deg C - 950\deg C). 
-
-$[3]$ /Point Defect Concentrations in Metastable Fe-C Alloys/, Först /et
-al/, Phys. Rev. Lett. 96, 2006
-
-
-
-** Plots in Fe-C
-#+NAME: Forst calculation
-#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
-[[file:~/Documents/docs/Management/Images/forst_defect_concentration_cementite.png]]
-
-#+NAME: Forst calculation 2
-#+ATTR_REVEAL: :frag fade-in
-#+ATTR_HTML: :width 70% :style position:relative;top:-525px;left:0px;z_index:2;
-[[file:~/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png]]
-
-** $\text{Ti}_{3}\text{Al}$  Cells
-#+NAME: Ti3al VTi
-#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
-[[file:~/Documents/docs/Management/Images/ti3al_val_o.png]]
-
-** Ti Cells
-#+CAPTION: Ti 6V
-#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
-
-
-** Defect Clusters: Future Work 
-- Finish Ti and $\text{Ti}_{3}\text{Al}$ defect cluster calculations in DFT. 
-- Possibly extend to Ti-7wt%Al with SQS structures.
-- See how much of an effect anharmonicity has on predictions.
-
 
 * Summary
-- Successfully made TB model of Ti which reproduces DFT results with only
-  d-orbitals.
-- Transferable:
-  - Correct energetic ordering for study of different phases. 
-  - Correct elastic properties and good scaling for defect simulations.
-  - Integer number of electrons for charge transfer models (electrochemistry).
-- BOP formulation produces similar results with only linear scaling.
-- Embedding calculations should resolve single dislocation core ground-state
-  at realistic O concentrations.
-- To do: Embed O-disl, $\text{Ti/TiO}_2$ interface, defect clusters.
-
+  - Dislocation-assisted carbon migration thought to be fundamental
+    mechanism behind DER formation.
+  - No consensus on which mechanism is correct, if it is at all the case. 
+  - Simulations can give insight into how dislocations interact with
+    carbon, thus elucidating potential mechanism.
+  - A combination of atomistic and kinetic monte-carlo simulations can
+    be used to accurately model the behaviour of dislocations in an
+    environment of carbon.

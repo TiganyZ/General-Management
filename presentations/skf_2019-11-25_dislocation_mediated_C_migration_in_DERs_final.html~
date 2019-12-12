@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Dislocation mediated C migration in Fe Dark Etching Regions</title>
+<meta name="author" content="Tigany Zarrouk"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/tigany/software/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/tigany/software/reveal.js/css/theme/solarized.css" id="theme"/>
+
+<link rel="stylesheet" href="./extra.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home/tigany/software/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1 >Dislocation mediated C migration in Fe Dark Etching Regions</h1><h2></h2><h3> Tigany Zarrouk</h3>
+</section>
+
+
+
+<section>
+<section id="slide-orgd5550e4">
+<h2 id="orgd5550e4">Motivation</h2>
+<ul>
+<li>Carbon redistribution and plastic deformation are thought to be
+fundamental mechanisms behind DER formation.</li>
+<li>Differing mechanisms of dislocation-driven carbon migration have
+been suggested, but no consensus.</li>
+<li>Atomistic modelling necessary to elucidate how dislocations could
+move carbon; thus clarifying potential mechanisms of DER formation.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgae5f433">
+<h2 id="orgae5f433">Aims</h2>
+<p>
+To answer the questions:
+</p>
+<ul>
+<li>Do dislocations assist carbon migration?</li>
+<li>How are dislocations influenced by carbon on atomistic scale?
+<ul>
+<li>How does carbon affect kink-pair nucleation/migration?</li>
+<li>How fast do the dislocations move in carbon environemnt?</li>
+<li>What dislocation structures are found with dislocation movement?</li>
+
+</ul></li>
+<li>Do temper carbides dissolve/grow with rolling contact fatigue?
+<ul>
+<li>Is is more energetically favourable for a carbon to be in a
+Cottrell atmosphere or in a carbon rich grain boundary?</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org3c544de">
+<h2 id="org3c544de">Methods</h2>
+<ul>
+<li>Tight-binding simulations to determine influence of carbon on
+dislocations.</li>
+<li>Line tension model of dislocation to acquire stress-dependent
+kink-pair formation energies.</li>
+<li>Kinetic Monte Carlo model of dislocations in carbon environment.</li>
+
+</ul>
+
+<div id="org226e064" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_process_tb_lt_kmc.PNG" alt="skf_process_tb_lt_kmc.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org0e08917">
+<h2 id="org0e08917">Kinetic Monte Carlo</h2>
+<div class="column" style="float:right; width: 50%">
+
+<ul>
+<li>kMC simulations model the movement of dislocations on much larger
+timescales than atomistics.</li>
+<li>Propogation of dislocation line segments are treated as rare events
+with particular rates and mechanisms depending on local environment.</li>
+<li>Rates for each of the mechanism are derived from atomistic
+calculations.</li>
+<li>One can find dislocation velocity as a function of stress and
+temperature.</li>
+
+</ul>
+
+</div>
+<div class="column" style="float:left; width: 50%">
+<img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgea8d54c">
+<h2 id="orgea8d54c">Tight Binding</h2>
+<div class="column" style="float:left; width: 50%">
+
+<ul>
+<li>Tight binding is an approximation to DFT.</li>
+<li>Overlaps between atomic orbitals are key parameters.</li>
+<li>Parameters can be fitted to experimental data.</li>
+<li>\(\mathcal{O}(N^3)\), but much smaller prefactor compared to DFT.</li>
+
+</ul>
+
+</div>
+<div class="column" style="float:right; width: 50%">
+<img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org258371a">
+<h2 id="org258371a">Objectives</h2>
+<ul>
+<li>Build kinetic Monte-Carlo (kMC) model of dislocation motion.</li>
+<li>Atomistic (tight-binding) simulations used to obtain formation
+energies necessary for kMC:
+<ol>
+<li>Kink-pair formation energies as a function of carbon content
+and stress.</li>
+<li>Dissolution energies of carbon near core of dislocation as a
+function of stress.</li>
+
+</ol></li>
+<li>kMC model used to see larger scale movement of screw dislocation
+by kink-pair formation, in environment of C.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org8427829">
+<h2 id="org8427829">Plan</h2>
+<div class="column" style="float:right; width: 50%">
+<img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
+</div>
+
+<div class="column" style="float:left; width: 50%">
+<ol>
+<li>C/defect solution energies
+<ol>
+<li>In perfect lattice</li>
+<li>With dislocation</li>
+
+</ol></li>
+<li>Dislocation core reconstruction with C</li>
+<li>Kink-pair formation energies
+<ol>
+<li>Without C</li>
+<li>With C in different interstitial sites</li>
+<li>Under stress</li>
+
+</ol></li>
+<li>kMC transition rates</li>
+<li>kMC screw dislocation propagation in C environment</li>
+
+</ol>
+
+</div>
+
+</section>
+<section id="slide-orgdf06bc3">
+<h3 id="orgdf06bc3">Gantt Chart</h3>
+
+<div id="orgdde7ecb" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_gantt_chart_der_project_updated_larger.PNG" alt="skf_gantt_chart_der_project_updated_larger.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgf673da3">
+<h2 id="orgf673da3">Summary</h2>
+<ul>
+<li>Dislocation-assisted carbon migration thought to be fundamental
+mechanism behind DER formation.</li>
+<li>No consensus on which mechanism is correct, if it is at all the case.</li>
+<li>Simulations can give insight into how dislocations interact with
+carbon, thus elucidating potential mechanism.</li>
+<li>A combination of atomistic and kinetic monte-carlo simulations can
+be used to accurately model the behaviour of dislocations in an
+environment of carbon.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///home/tigany/software/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///home/tigany/software/reveal.js/js/reveal.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'h/v',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+
+overview: true,
+width: 1400,
+height: 1000,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // see README of reveal.js for options
+transitionSpeed: 'default',
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+{ src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/tigany/software/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/tigany/software/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home/tigany/software/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/tigany/software/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///home/tigany/software/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+</script>
+</body>
+</html>
