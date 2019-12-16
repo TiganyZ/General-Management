@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Dislocation mediated C migration in Fe Dark Etching Regions</title>
+<title>Atomistic investigation of dislocation assisted C migration in Dark Etching Regions</title>
 <meta name="author" content="Tigany Zarrouk"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
@@ -29,99 +29,70 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<h1 >Dislocation mediated C migration in Fe Dark Etching Regions</h1><h2></h2><h3> Tigany Zarrouk</h3>
+<h1 >Atomistic investigation of dislocation assisted C migration in Dark Etching Regions</h1><h2></h2><h3> Tigany Zarrouk</h3>
 </section>
 
 
 
 <section>
-<section id="slide-org873233f">
-<h2 id="org873233f">Motivation</h2>
+<section id="slide-org03fde37">
+<h2 id="org03fde37">Motivation</h2>
+<div class="column" style="float:left; width: 50%">
 <ul>
 <li>Carbon redistribution and plastic deformation are thought to be
 fundamental mechanisms behind DER formation.</li>
 <li>Differing mechanisms of dislocation-driven carbon migration have
 been suggested, but no consensus.</li>
-<li>Atomistic modelling necessary to elucidate how dislocations could
-move carbon; thus clarifying potential mechanisms of DER formation.</li>
+<li><p>
+Atomistic modelling necessary to elucidate how dislocations could
+move carbon; thus clarifying potential mechanisms of DER
+formation.
+</p>
+
+<p>
+[1] Martin <i>et al.</i>, Journal of Basic Engineering 1966
+</p></li>
 
 </ul>
+
+</div>
+<div class="column" style="float:right; width: 50%">
+<img width="600" src="file:///home/tigany/Documents/docs/Management/Images/DER_region_lenticular_carbides_warhadpande.png" >
+</div>
 
 </section>
 </section>
 <section>
-<section id="slide-org2def689">
-<h2 id="org2def689">Aims</h2>
+<section id="slide-org2803b8d">
+<h2 id="org2803b8d">Aims</h2>
 <p>
 To answer the questions:
 </p>
 <ul>
-<li>Do dislocations assist carbon migration?</li>
+<li>How do dislocations assist carbon migration?</li>
 <li>How are dislocations influenced by carbon on atomistic scale?
 <ul>
 <li>How does carbon affect kink-pair nucleation/migration?</li>
-<li>How fast do the dislocations move in carbon environemnt?</li>
+<li>How fast do the dislocations move in carbon environment?</li>
 <li>What dislocation structures are found with dislocation movement?</li>
 
 </ul></li>
-<li>Do temper carbides dissolve/grow with rolling contact fatigue?
-<ul>
-<li>Is is more energetically favourable for a carbon to be in a
-Cottrell atmosphere or in a carbon rich grain boundary?</li>
 
-</ul></li>
+<li>Can trapped carbon in core provide precipitation sites for
+carbides?</li>
 
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-orga7d42d7">
-<h2 id="orga7d42d7">Methods</h2>
-<ul>
-<li>Tight-binding simulations to determine influence of carbon on
-dislocations.</li>
-<li>Line tension model of dislocation to acquire stress-dependent
-kink-pair formation energies.</li>
-<li>Kinetic Monte Carlo model of dislocations in carbon environment.</li>
-
-</ul>
-
-<div id="org5101cd8" class="figure">
-<p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_process_tb_lt_kmc.PNG" alt="skf_process_tb_lt_kmc.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
-</p>
+<section id="slide-org668baff">
+<h2 id="org668baff">Methods</h2>
+<div class="outline-text-2" id="text-org668baff">
 </div>
-
-
 </section>
-</section>
-<section>
-<section id="slide-orgfc1699b">
-<h2 id="orgfc1699b">Kinetic Monte Carlo</h2>
-<div class="column" style="float:right; width: 50%">
-
-<ul>
-<li>kMC simulations model the movement of dislocations on much larger
-timescales than atomistics.</li>
-<li>Propogation of dislocation line segments are treated as rare events
-with particular rates and mechanisms depending on local environment.</li>
-<li>Rates for each of the mechanism are derived from atomistic
-calculations.</li>
-<li>One can find dislocation velocity as a function of stress and
-temperature.</li>
-
-</ul>
-
-</div>
-<div class="column" style="float:left; width: 50%">
-<img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
-</div>
-
-</section>
-</section>
-<section>
-<section id="slide-orgc976e35">
-<h2 id="orgc976e35">Tight Binding</h2>
+<section id="slide-orgfd1b523">
+<h3 id="orgfd1b523">Tight Binding</h3>
 <div class="column" style="float:left; width: 50%">
 
 <ul>
@@ -137,46 +108,113 @@ temperature.</li>
 <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
 </div>
 
+</section>
+<section id="slide-org7086108">
+<h3 id="org7086108">Line Tension Model</h3>
+<ul>
+<li>Line Tension model approximates energy along core of dislocation
+line.</li>
+<li>Parameters derived from atomistics: Peierls barrier (\(\Delta
+  E_{\text{P}}\)), \(K\), \(\Delta E_{\text{C}}\).</li>
 
+<li>Defined as [2]</li>
+
+</ul>
+<p>
+\(E^{\text{LT}} = \frac{K}{2}\sum_j(P_j + P_{j + 1})^2\)
+\(+ \sum_j  E_\text{P}(\mathbf{P}_j)\)
+\(+ \big\{ (\sigma\)
+\(\otimes \mathbf{b})\)
+\(\times  \mathbf{l} \big\}\)
+\(\cdot\mathbf{P_j}\)
+\(-\sum_{j,k} E_{\text{C}}(\)
+\(\mathbf{P}_j - \mathbf{P}_k^{\text{C}} )\)
+</p>
+
+<ul>
+<li><p>
+Minimisation of energy will be achieved by the string method.
+</p>
+
+<p>
+[2] Itakura, M., <i>et al.</i>,  Acta Materialia (2013).  
+</p></li>
+
+</ul>
+
+
+</section>
+<section id="slide-orgbfcff27">
+<h3 id="orgbfcff27">Kinetic Monte Carlo</h3>
+<div class="column" style="float:right; width: 50%">
+
+<ul>
+<li>kMC simulations model the movement of dislocations on much larger
+timescales than atomistics.</li>
+<li>Propogation of dislocation line segments are treated as rare events
+with particular rates and mechanisms depending on local environment.</li>
+<li>Rates for each of the mechanism are derived from atomistic
+calculations.</li>
+<li><p>
+One can find dislocation velocity as a function of stress and
+temperature. 
+</p>
+
+<p>
+[3] Katzarov <i>et al.</i>, Physical Review Materials, 2017
+</p></li>
+
+</ul>
+
+</div>
+<div class="column" style="float:left; width: 50%">
+<img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
+</div>
+</section>
+<section id="slide-orgee184b9">
+<h3 id="orgee184b9">Summary of Methods</h3>
+<ul>
+<li>Tight-binding simulations to determine influence of carbon on
+dislocations and for line-tension model constants.</li>
+<li>Line tension model of dislocation to acquire stress-dependent
+kink-pair formation energies.</li>
+<li>Kinetic Monte Carlo model of dislocations in carbon environment to
+ascertain behaviour of dislocations in carbon environment.</li>
+
+</ul>
+
+<div id="orgbead4c6" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_process_tb_lt_kmc.PNG" alt="skf_process_tb_lt_kmc.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
+</p>
+</div>
 </section>
 </section>
 <section>
-<section id="slide-orgd051671">
-<h2 id="orgd051671">Objectives</h2>
+<section id="slide-org1e5c6fc">
+<h2 id="org1e5c6fc">Plan</h2>
 <div class="column" style="float:right; width: 50%">
 <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
 </div>
-
 <div class="column" style="float:left; width: 50%">
-<ul>
-<li>Build kinetic Monte-Carlo (kMC) model of dislocation motion.</li>
-<li>Atomistic (tight-binding) simulations used to obtain formation
-energies necessary for kMC:
+<p>
+<span class="underline">Tight-binding:</span>
+</p>
 <ol>
-<li>Kink-pair formation energies as a function of carbon content
-and stress.</li>
-<li>Dissolution energies of carbon near core of dislocation as a
-function of stress.</li>
-
-</ol></li>
-<li>kMC model used to see larger scale movement of screw dislocation
-by kink-pair formation, in environment of C.</li>
-
-</ul>
-</div>
-</section>
-</section>
-<section>
-<section id="slide-orgf208dc0">
-<h2 id="orgf208dc0">Plan</h2>
-<ol>
-<li>C/defect solution energies
+<li>C/defect solution/binding energies
 <ol>
 <li>In perfect lattice</li>
 <li>With dislocation</li>
 
 </ol></li>
 <li>Dislocation core reconstruction with C</li>
+<li>Constants for line tension model.</li>
+
+</ol>
+
+<p>
+<span class="underline">Line-tension model:</span>
+</p>
+<ol>
 <li>Kink-pair formation energies
 <ol>
 <li>Without C</li>
@@ -185,17 +223,17 @@ by kink-pair formation, in environment of C.</li>
 
 </ol></li>
 <li>kMC transition rates</li>
-<li>kMC screw dislocation propagation in C environment</li>
 
 </ol>
 
 
+</div>
 
 </section>
-<section id="slide-org1da672d">
-<h3 id="org1da672d">Gantt Chart</h3>
+<section id="slide-orgf709845">
+<h3 id="orgf709845">Gantt Chart</h3>
 
-<div id="org635ec26" class="figure">
+<div id="orgf55d750" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_gantt_chart_der_project_updated_larger.PNG" alt="skf_gantt_chart_der_project_updated_larger.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
@@ -204,19 +242,29 @@ by kink-pair formation, in environment of C.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgf12ab0a">
-<h2 id="orgf12ab0a">Summary</h2>
+<section id="slide-orgab14dee">
+<h2 id="orgab14dee">Summary</h2>
 <ul>
 <li>Dislocation-assisted carbon migration thought to be fundamental
 mechanism behind DER formation.</li>
 <li>No consensus on which mechanism is correct, if it is at all the case.</li>
 <li>Simulations can give insight into how dislocations interact with
 carbon, thus elucidating potential mechanism.</li>
-<li>A combination of atomistic and kinetic monte-carlo simulations can
-be used to accurately model the behaviour of dislocations in an
-environment of carbon.</li>
+
+<li>Tight-binding can be used to model energetics of carbon and
+dislocations and constants for line-tension model.</li>
+<li>Line-tension model can obtain kink-pair formation energies for kMC
+model.</li>
+<li>kMC model can be used to see dislocation behaviour on longer
+length and timescales, allowing for us to elucidate mechanisms of
+dislocation-assisted carbon migration.</li>
 
 </ul>
+</section>
+</section>
+<section>
+<section id="slide-org8e99dc7">
+<h2 id="org8e99dc7">References</h2>
 </section>
 </section>
 </div>
