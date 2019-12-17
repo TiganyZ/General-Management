@@ -29,14 +29,14 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<h1 >Atomistic investigation of dislocation assisted C migration in Dark Etching Regions</h1><h2></h2><h3> Tigany Zarrouk</h3>
+<h1  style="font-size: 100px; text-transform: capitalize" >Atomistic investigation of dislocation assisted C migration in Dark Etching Regions</h1><h2></h2><h3>Tigany Zarrouk</h3><h2><a href="mailto:tigany.zarrouk@skf.com">tigany.zarrouk@skf.com</a></h2>
 </section>
 
 
 
 <section>
-<section id="slide-org066373f">
-<h2 id="org066373f">Motivation</h2>
+<section id="slide-orgab04c35">
+<h2 id="orgab04c35">Motivation</h2>
 <div class="column" style="float:left; width: 50%">
 <ul>
 <li>Carbon redistribution and plastic deformation are thought to be
@@ -44,7 +44,7 @@ fundamental mechanisms behind DER formation.</li>
 <li>Differing mechanisms of dislocation-driven carbon migration have
 been suggested, but no consensus.</li>
 <li><p>
-Atomistic modelling necessary to elucidate how dislocations could
+Atomistic modelling necessary to elucidate if/how dislocations could
 move carbon; thus clarifying potential mechanisms of DER
 formation.
 </p>
@@ -63,13 +63,13 @@ formation.
 </section>
 </section>
 <section>
-<section id="slide-org5e472b6">
-<h2 id="org5e472b6">Aims</h2>
+<section id="slide-org03a5ca5">
+<h2 id="org03a5ca5">Aims</h2>
 <p>
 To answer the questions:
 </p>
 <ul>
-<li>How do dislocations assist carbon migration?</li>
+<li>How can dislocations assist carbon migration?</li>
 <li>How are dislocations influenced by carbon on atomistic scale?
 <ul>
 <li>How does carbon affect kink-pair nucleation/migration?</li>
@@ -78,21 +78,18 @@ To answer the questions:
 
 </ul></li>
 
-<li>Can trapped carbon in core provide precipitation sites for
-carbides?</li>
-
 </ul>
 
 </section>
 </section>
 <section>
-<section id="slide-orgd73850a">
-<h2 id="orgd73850a">Methods</h2>
-<div class="outline-text-2" id="text-orgd73850a">
+<section id="slide-org2d2cb34">
+<h2 id="org2d2cb34">Methods</h2>
+<div class="outline-text-2" id="text-org2d2cb34">
 </div>
 </section>
-<section id="slide-org20c487c">
-<h3 id="org20c487c">Tight Binding</h3>
+<section id="slide-org7218375">
+<h3 id="org7218375">Tight Binding</h3>
 <div class="column" style="float:left; width: 50%">
 
 <ul>
@@ -100,6 +97,8 @@ carbides?</li>
 <li>Overlaps between atomic orbitals are key parameters.</li>
 <li>Parameters can be fitted to experimental data.</li>
 <li>\(\mathcal{O}(N^3)\), but much smaller prefactor compared to DFT.</li>
+<li>Fe/Fe-C carbon model developed by Paxton and Elsässer (Phys. Rev. B,
+2013).</li>
 
 </ul>
 
@@ -109,11 +108,11 @@ carbides?</li>
 </div>
 
 </section>
-<section id="slide-orgbba2086">
-<h3 id="orgbba2086">Line Tension Model</h3>
+<section id="slide-org2065b3d">
+<h3 id="org2065b3d">Line Tension Model</h3>
 <ul>
-<li>Line Tension model approximates energy along core of dislocation
-line.</li>
+<li>Line tension model approximates energy of dislocation line as a
+function of core position.</li>
 <li>Parameters derived from atomistics: Peierls barrier (\(\Delta
   E_{\text{P}}\)), \(K\), \(\Delta E_{\text{C}}\).</li>
 
@@ -132,25 +131,24 @@ line.</li>
 </p>
 
 <ul>
-<li><p>
-Minimisation of energy will be achieved by the string method.
-</p>
-
-<p>
-[2] Itakura, M., <i>et al.</i>,  Acta Materialia (2013).  
-</p></li>
+<li>Kink-pair formation energies can be obtained by searching for lowest
+energy stable kink-pair between adjacent Peierls valleys.</li>
 
 </ul>
 
+<p>
+[2] Itakura, M., <i>et al.</i>,  Acta Materialia (2013).  
+</p>
+
 
 </section>
-<section id="slide-orgc431e2b">
-<h3 id="orgc431e2b">Kinetic Monte Carlo</h3>
-<div class="column" style="float:right; width: 50%">
+<section id="slide-orgb0b2d46">
+<h3 id="orgb0b2d46">Kinetic Monte-Carlo</h3>
+<div class="column" style="float:right; width: 60%">
 
 <ul>
-<li>kMC simulations model the movement of dislocations on much larger
-timescales than atomistics.</li>
+<li>kMC simulations model the movement of dislocations on larger
+temporal and spatial scales than atomistics.</li>
 <li>Propogation of dislocation line segments are treated as rare events
 with particular rates and mechanisms depending on local environment.</li>
 <li>Rates for each of the mechanism are derived from atomistic
@@ -167,31 +165,32 @@ temperature.
 </ul>
 
 </div>
-<div class="column" style="float:left; width: 50%">
+<div class="column" style="float:left; width: 40%">
 <img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
 </div>
 </section>
-<section id="slide-orgb70a32d">
-<h3 id="orgb70a32d">Summary of Methods</h3>
+<section id="slide-orge66f1bd">
+<h3 id="orge66f1bd">Summary of Methods</h3>
 <ul>
-<li>Tight-binding simulations to determine influence of carbon on
-dislocations and for line-tension model constants.</li>
-<li>Line tension model of dislocation to acquire stress-dependent
-kink-pair formation energies.</li>
-<li>Kinetic Monte Carlo model of dislocations in carbon environment to
-ascertain behaviour of dislocations in carbon environment.</li>
+<li>Tight-binding simulations will be used to determine influence of
+carbon on dislocations and line tension model constants.</li>
+<li>From line tension model of Fe dislocation, one can find
+stress-dependent kink-pair formation energies for kMC.</li>
+<li>From Kinetic Monte-Carlo model of dislocations in carbon
+environment, we can observe influence of C on dislocation
+on larger timescales.</li>
 
 </ul>
 
-<div id="org38e0d62" class="figure">
+<div id="org11d54b7" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_process_tb_lt_kmc.PNG" alt="skf_process_tb_lt_kmc.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orge0d426f">
-<h2 id="orge0d426f">Plan</h2>
+<section id="slide-orgcd94592">
+<h2 id="orgcd94592">Plan</h2>
 <div class="column" style="float:right; width: 50%">
 <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
 </div>
@@ -200,28 +199,32 @@ ascertain behaviour of dislocations in carbon environment.</li>
 <span class="underline">Tight-binding:</span>
 </p>
 <ol>
-<li>C/defect solution energies
-<ol>
+<li>C solution/binding energies
+<ul>
 <li>In perfect lattice</li>
 <li>With dislocation</li>
 
-</ol></li>
-<li>Dislocation core reconstruction with C</li>
-<li>Constants for line tension model.</li>
+</ul></li>
+<li>Peierls barrier</li>
+<li>Constants for line tension model</li>
 
 </ol>
 
 <p>
-<span class="underline">Line-tension model:</span>
+<span class="underline">Line tension model:</span>
 </p>
 <ol>
 <li>Kink-pair formation energies
-<ol>
-<li>Without C</li>
-<li>With C in different interstitial sites</li>
+<ul>
+<li>W/o &amp; w/ C in different sites</li>
 <li>Under stress</li>
 
-</ol></li>
+</ul></li>
+<li>Kink trapping by C
+<ul>
+<li>Critical stress</li>
+
+</ul></li>
 <li>kMC transition rates</li>
 
 </ol>
@@ -230,41 +233,40 @@ ascertain behaviour of dislocations in carbon environment.</li>
 </div>
 
 </section>
-<section id="slide-org2f4982c">
-<h3 id="org2f4982c">Gantt Chart</h3>
+<section id="slide-org070922c">
+<h3 id="org070922c">Timeline</h3>
 
-<div id="org2bc763a" class="figure">
-<p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_gantt_chart_der_project_updated_larger.PNG" alt="skf_gantt_chart_der_project_updated_larger.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
+<div id="org597f9d1" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_gantt_chart_der_project_detailed_updated_2.PNG" alt="skf_gantt_chart_der_project_detailed_updated_2.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
-
 
 </section>
 </section>
 <section>
-<section id="slide-org2538541">
-<h2 id="org2538541">Summary</h2>
+<section id="slide-org24b2386">
+<h2 id="org24b2386">Summary</h2>
 <ul>
 <li>Dislocation-assisted carbon migration thought to be fundamental
 mechanism behind DER formation.</li>
 <li>No consensus on which mechanism is correct, if it is at all the case.</li>
 <li>Simulations can give insight into how dislocations interact with
-carbon, thus elucidating potential mechanism.</li>
+carbon, thus clarifying potential mechanism.</li>
 
 <li>Tight-binding can be used to model energetics of carbon and
-dislocations and constants for line-tension model.</li>
-<li>Line-tension model can obtain kink-pair formation energies for kMC
-model.</li>
-<li>kMC model can be used to see dislocation behaviour on longer
-length and timescales, allowing for us to elucidate mechanisms of
+dislocations and constants for line tension model.</li>
+<li>Line tension model can obtain kink-pair formation and solute trap
+energies for kMC model.</li>
+<li>kMC model allows for observation of dislocation motion on longer
+length and time scales, enabling elucidation of mechanisms for
 dislocation-assisted carbon migration.</li>
 
 </ul>
 </section>
 </section>
 <section>
-<section id="slide-org4667375">
-<h2 id="org4667375">References</h2>
+<section id="slide-org60b7038">
+<h2 id="org60b7038">Any Questions?</h2>
 </section>
 </section>
 </div>
