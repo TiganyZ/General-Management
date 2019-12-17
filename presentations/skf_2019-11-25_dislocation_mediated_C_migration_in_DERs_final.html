@@ -35,8 +35,8 @@
 
 
 <section>
-<section id="slide-orga8fddbc">
-<h2 id="orga8fddbc">Motivation</h2>
+<section id="slide-orgd7e9f68">
+<h2 id="orgd7e9f68">Motivation</h2>
 <div class="column" style="float:left; width: 50%">
 <ul>
 <li>Carbon redistribution and plastic deformation are thought to be
@@ -63,8 +63,8 @@ formation.
 </section>
 </section>
 <section>
-<section id="slide-org2f6c54f">
-<h2 id="org2f6c54f">Aims</h2>
+<section id="slide-org22800ec">
+<h2 id="org22800ec">Aims</h2>
 <p>
 To answer the questions:
 </p>
@@ -74,7 +74,6 @@ To answer the questions:
 <ul>
 <li>How does carbon affect kink-pair nucleation/migration?</li>
 <li>How fast do the dislocations move in carbon environment?</li>
-<li>What dislocation structures are found with dislocation movement?</li>
 
 </ul></li>
 
@@ -83,13 +82,13 @@ To answer the questions:
 </section>
 </section>
 <section>
-<section id="slide-orgcfa2de3">
-<h2 id="orgcfa2de3">Methods</h2>
-<div class="outline-text-2" id="text-orgcfa2de3">
+<section id="slide-orgf1d2e8c">
+<h2 id="orgf1d2e8c">Methods</h2>
+<div class="outline-text-2" id="text-orgf1d2e8c">
 </div>
 </section>
-<section id="slide-orgf41f8ce">
-<h3 id="orgf41f8ce">Tight Binding</h3>
+<section id="slide-orgae2c25e">
+<h3 id="orgae2c25e">Tight Binding</h3>
 <div class="column" style="float:left; width: 50%">
 
 <ul>
@@ -99,6 +98,8 @@ To answer the questions:
 <li>\(\mathcal{O}(N^3)\), but much smaller prefactor compared to DFT.</li>
 <li>Fe/Fe-C carbon model developed by Paxton and Elsässer (Phys. Rev. B,
 2013).</li>
+<li>One can find the C-dislocation binding energies, Peierls barriers
+and line tension constants.</li>
 
 </ul>
 
@@ -108,42 +109,45 @@ To answer the questions:
 </div>
 
 </section>
-<section id="slide-org02e855c">
-<h3 id="org02e855c">Line Tension Model</h3>
+<section id="slide-orge812aa8">
+<h3 id="orge812aa8">Line Tension Model</h3>
 <ul>
 <li>Line tension model approximates energy of dislocation line as a
 function of core position.</li>
-<li>Parameters derived from atomistics: Peierls barrier (\(\Delta
-  E_{\text{P}}\)), \(K\), \(\Delta E_{\text{C}}\).</li>
-
-<li>Defined as [2]</li>
-
-</ul>
-<p>
-\(E^{\text{LT}} = \frac{K}{2}\sum_j(P_j + P_{j + 1})^2\)
-\(+ \sum_j  E_\text{P}(\mathbf{P}_j)\)
-\(+ \big\{ (\sigma\)
-\(\otimes \mathbf{b})\)
-\(\times  \mathbf{l} \big\}\)
-\(\cdot\mathbf{P_j}\)
-\(-\sum_{j,k} E_{\text{C}}(\)
-\(\mathbf{P}_j - \mathbf{P}_k^{\text{C}} )\)
-</p>
-
+<li>Composed of quantities derived from atomistics <i>e.g.</i>:
 <ul>
-<li>Kink-pair formation energies can be obtained by searching for lowest
-energy stable kink-pair between adjacent Peierls valleys.</li>
+<li>Peierls barrier, \(E_{\text{P}}(\mathbf{P}_j)\)</li>
+<li>Carbon-dislocation interaction energy, \(E_{\text{C}}(\mathbf{P}_j)\),</li>
+<li>Line tension constant, \(K\).</li>
+
+</ul></li>
+
+<li><p>
+Defined from Itakura <i>et al.</i>, (Acta Materialia, 2013) as
+</p>
+
+<div>
+  \begin{align*}
+   E^{\text{LT}} = &\frac{K}{2}\sum_j(P_j + P_{j + 1})^2 + \sum_j
+  E_\text{P}(\mathbf{P}_j) + \big\{ (\sigma \otimes \mathbf{b}) \times
+  \mathbf{l} \big\} \cdot \mathbf{P_j} \\&- \sum_{j,k} E_{\text{C}}(
+  \mathbf{P}_j - \mathbf{P}_k^{\text{C}} ) 
+\end{align*}
+
+</div></li>
+<li>One can calculate:
+<ul>
+<li>Kink-pair formation energies with C in different sites.</li>
+<li>C-kink trapping energies and a critical escape stress</li>
+
+</ul></li>
 
 </ul>
-
-<p>
-[2] Itakura, M., <i>et al.</i>,  Acta Materialia (2013).  
-</p>
 
 
 </section>
-<section id="slide-org16c27d7">
-<h3 id="org16c27d7">Kinetic Monte-Carlo</h3>
+<section id="slide-org8ed7fc8">
+<h3 id="org8ed7fc8">Kinetic Monte-Carlo</h3>
 <div class="column" style="float:right; width: 60%">
 
 <ul>
@@ -151,7 +155,7 @@ energy stable kink-pair between adjacent Peierls valleys.</li>
 temporal and spatial scales than atomistics.</li>
 <li>Propogation of dislocation line segments are treated as rare events
 with particular rates and mechanisms depending on local environment.</li>
-<li>Rates for each of the mechanism are derived from atomistic
+<li>Rates for each of the mechanisms are derived from atomistic
 calculations.</li>
 <li><p>
 One can find dislocation velocity as a function of stress and
@@ -169,8 +173,8 @@ temperature.
 <img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
 </div>
 </section>
-<section id="slide-orga20862d">
-<h3 id="orga20862d">Summary of Methods</h3>
+<section id="slide-orgc202422">
+<h3 id="orgc202422">Summary of Methods</h3>
 <ul>
 <li>Tight-binding simulations will be used to determine influence of
 carbon on dislocations and line tension model constants.</li>
@@ -182,15 +186,15 @@ on larger timescales.</li>
 
 </ul>
 
-<div id="orgede0e14" class="figure">
+<div id="orgc08d3db" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_process_tb_lt_kmc.PNG" alt="skf_process_tb_lt_kmc.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgfd1099d">
-<h2 id="orgfd1099d">Plan</h2>
+<section id="slide-orgd7f6117">
+<h2 id="orgd7f6117">Plan</h2>
 <div class="column" style="float:right; width: 50%">
 <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
 </div>
@@ -233,10 +237,10 @@ on larger timescales.</li>
 </div>
 
 </section>
-<section id="slide-org1cbab36">
-<h3 id="org1cbab36">Timeline</h3>
+<section id="slide-org8819ee9">
+<h3 id="org8819ee9">Timeline</h3>
 
-<div id="orgce4ab87" class="figure">
+<div id="org56bbcec" class="figure">
 <p><img src="file:///home/tigany/Documents/docs/Management/Images/skf_gantt_chart_der_project_detailed_updated_2.PNG" alt="skf_gantt_chart_der_project_detailed_updated_2.PNG" class="fragment fade-in" width="100%" style="position:relative;top:0px;left:0px;z_index:1;" />
 </p>
 </div>
@@ -244,8 +248,8 @@ on larger timescales.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgf5fe9ce">
-<h2 id="orgf5fe9ce">Summary</h2>
+<section id="slide-org5e5fc26">
+<h2 id="org5e5fc26">Summary</h2>
 <ul>
 <li>Dislocation-assisted carbon migration thought to be fundamental
 mechanism behind DER formation.</li>
@@ -265,8 +269,8 @@ dislocation-assisted carbon migration.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgbd1a1ae">
-<h2 id="orgbd1a1ae">Any Questions?</h2>
+<section id="slide-orgc8481d3">
+<h2 id="orgc8481d3">Any Questions?</h2>
 </section>
 </section>
 </div>

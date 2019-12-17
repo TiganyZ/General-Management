@@ -86,7 +86,7 @@
   - How are dislocations influenced by carbon on atomistic scale?
     - How does carbon affect kink-pair nucleation/migration?
     - How fast do the dislocations move in carbon environment?
-    - What dislocation structures are found with dislocation movement? 
+  #   - What dislocation structures are found with dislocation movement? 
 
   # - Can trapped carbon in core provide precipitation sites for
   #   carbides? 
@@ -112,7 +112,9 @@
 - Parameters can be fitted to experimental data.
 - $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT.
 - Fe/Fe-C carbon model developed by Paxton and Elsässer (Phys. Rev. B,
-  2013). 
+  2013).
+- One can find the C-dislocation binding energies, Peierls barriers
+  and line tension constants. 
 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
@@ -122,34 +124,35 @@
 ** Line Tension Model
 
 
-- Line tension model approximates energy of dislocation line as a
-  function of core position. 
-- Parameters derived from atomistics: Peierls barrier ($\Delta
-  E_{\text{P}}$), $K$, $\Delta E_{\text{C}}$. 
+ - Line tension model approximates energy of dislocation line as a
+   function of core position. 
+ - Composed of quantities derived from atomistics /e.g./:
+   - Peierls barrier, $E_{\text{P}}(\mathbf{P}_j)$
+   - Carbon-dislocation interaction energy, $E_{\text{C}}(\mathbf{P}_j)$,
+   - Line tension constant, $K$.   
 
-- Defined as [2]
-$E^{\text{LT}} = \frac{K}{2}\sum_j(P_j + P_{j + 1})^2$
-$+ \sum_j  E_\text{P}(\mathbf{P}_j)$
-$+ \big\{ (\sigma$
-$\otimes \mathbf{b})$
-$\times  \mathbf{l} \big\}$
-$\cdot\mathbf{P_j}$
-$-\sum_{j,k} E_{\text{C}}($
-$\mathbf{P}_j - \mathbf{P}_k^{\text{C}} )$
+ - Defined from Itakura /et al./, (Acta Materialia, 2013) as
 
-# #+BEGIN_LATEX
-#   \begin{align*}
-#    E^{\text{LT}} = &\frac{K}{2}\sum_j(P_j + P_{j + 1})^2 + \sum_j
-#   E_\text{P}(\mathbf{P}_j) \\ &+ \big\{ (\sigma \otimes \mathbf{b}) \times
-#   \mathbf{l} \big\} \cdot \mathbf{P_j} \\&- \sum_{j,k} E_{\text{C}}(
-#   \mathbf{P}_j - \mathbf{P}_k^{\text{C}} ) 
-# \end{align*}
-# #+END_LATEX
-- Kink-pair formation energies can be obtained by searching for lowest
-  energy stable kink-pair between adjacent Peierls valleys. 
-# - Minimisation of energy will be achieved by the string method.
- 
-  [2] Itakura, M., /et al./,  Acta Materialia (2013).  
+   # $E^{\text{LT}} = \frac{K}{2}\sum_j(P_j + P_{j + 1})^2$
+   # $+ \sum_j  E_\text{P}(\mathbf{P}_j)$
+   # $+ \big\{ (\sigma$
+   # $\otimes \mathbf{b})$
+   # $\times  \mathbf{l} \big\}$
+   # $\cdot\mathbf{P_j}$
+   # $-\sum_{j,k} E_{\text{C}}(\mathbf{P}_j - \mathbf{P}_k^{\text{C}} )$
+   
+   # #+BEGIN_LATEX
+     \begin{align*}
+      E^{\text{LT}} = &\frac{K}{2}\sum_j(P_j + P_{j + 1})^2 + \sum_j
+     E_\text{P}(\mathbf{P}_j) + \big\{ (\sigma \otimes \mathbf{b}) \times
+     \mathbf{l} \big\} \cdot \mathbf{P_j} \\&- \sum_{j,k} E_{\text{C}}(
+     \mathbf{P}_j - \mathbf{P}_k^{\text{C}} ) 
+   \end{align*}
+   # #+END_LATEX
+ - One can calculate:
+   - Kink-pair formation energies with C in different sites.
+   - C-kink trapping energies and a critical escape stress 
+  # - Minimisation of energy will be achieved by the string method.
       
 
 ** Kinetic Monte-Carlo
@@ -161,7 +164,7 @@ $\mathbf{P}_j - \mathbf{P}_k^{\text{C}} )$
   temporal and spatial scales than atomistics.
 - Propogation of dislocation line segments are treated as rare events
   with particular rates and mechanisms depending on local environment.
-- Rates for each of the mechanism are derived from atomistic
+- Rates for each of the mechanisms are derived from atomistic
   calculations.
 - One can find dislocation velocity as a function of stress and
   temperature. 
