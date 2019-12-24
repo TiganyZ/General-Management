@@ -4055,11 +4055,49 @@ DFT pseudopot:
 [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/gamma_surfaces/prismatic/prismatic_gs_noo_alat_energies.dat][prismatic_gs_data]]
 [[file:~/Documents/ti/final_model_2019-11-12/gamma_surfaces/pyramidal_results_2019-11-13/pyramidal_gamma_surface_2019-11-13.dat][pyramidal_gs_data]]
 **** Dislocation core structures
-[[file:Images/ddplot_IP1_noo_best_model_alat.eps]]
-[[file:Images/ddplot_IP2_noo_best_model_alat.eps]]
-[[file:Images/ddplot_IP3_noo_best_model_alat.eps]]
-[[file:Images/ddplot_IP4_noo_best_model_alat.eps]]
-[[file:Images/ddplot_IP5_noo_best_model_alat.eps]]
+     In the following figures we have the partial differential
+     displacement maps of dislocations in their initial and final
+     state. These were done in different initial positions of the
+     dislocation centre (elastic centre) as following the paper by
+     Clouet. 
+
+     The partial burger's vector seen here is the $1/6 [11\bar{2}0]$
+     dislocation.
+
+     One can see that all of the dislocations have dissociated on the
+     prismatic plane. But there is a difference between initial
+     positions as to upon which prismatic plane they dissociate on,
+     from the original. 
+
+     Only initial position 2 actually dissociated on a different
+     prismatic plane to the others. 
+
+     
+     There does seem to be a large dissociation distance. 
+
+     There is a small energy difference between the dip in the
+     prismatic gamma surface along the $1/3 [11\bar{2}0]$
+     direction. This means that along that direction, due to the small
+     relative energy barrier between the trough in the centre of the
+     gamma surface line and the peaks, so to speak, the dislocation
+     can dissociate easily along this direction. 
+
+
+***** IP1
+      [[file:Images/final_model_IP1_partial_dd_initial.png]]
+      [[file:Images/final_model_IP1_partial_dd_final.png]]
+***** IP2
+      [[file:Images/final_model_IP2_partial_dd_initial..png]]
+      [[file:Images/final_model_IP2_partial_dd_final.png]]
+***** IP3
+      [[file:Images/final_model_IP3_partial_dd_initial.png]]
+      [[file:Images/final_model_IP3_partial_dd_final.png]]
+***** IP4
+      [[file:Images/final_model_IP4_partial_dd_initial.png]]
+      [[file:Images/final_model_IP4_partial_dd_final.png]]
+***** IP5 
+      [[file:Images/final_model_IP5_partial_dd_initial.png]]
+      [[file:Images/final_model_IP5_partial_dd_final.png]]
 
 ***** Data
 [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP1-oo_19-11-09--04-46-00.log][IP1]]

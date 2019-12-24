@@ -113,8 +113,10 @@
 - $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT.
 - Fe/Fe-C carbon model developed by Paxton and Elsässer (Phys. Rev. B,
   2013).
-- One can find the C-dislocation binding energies, Peierls barriers
-  and line tension constants. 
+- One can calculate:
+  - C-dislocation binding energies
+  - Peierls barriers
+  - Line tension constants. 
 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
@@ -143,10 +145,10 @@
    
    # #+BEGIN_LATEX
      \begin{align*}
-      E^{\text{LT}} = &\frac{K}{2}\sum_j(P_j + P_{j + 1})^2 + \sum_j
+      E^{\text{LT}} = &\frac{K}{2}\sum_j(\mathbf{P}_j + \mathbf{P}_{j + 1})^2 + \sum_j
      E_\text{P}(\mathbf{P}_j) + \big\{ (\sigma \otimes \mathbf{b}) \times
      \mathbf{l} \big\} \cdot \mathbf{P_j} \\&- \sum_{j,k} E_{\text{C}}(
-     \mathbf{P}_j - \mathbf{P}_k^{\text{C}} ) 
+     |\mathbf{P}_j - \mathbf{P}_k^{\text{C}} |) 
    \end{align*}
    # #+END_LATEX
  - One can calculate:
@@ -166,8 +168,8 @@
   with particular rates and mechanisms depending on local environment.
 - Rates for each of the mechanisms are derived from atomistic
   calculations.
-- One can find dislocation velocity as a function of stress and
-  temperature. 
+- One can calculate dislocation velocity as a function of stress,
+  temperature and C concentration. 
 
   [3] Katzarov /et al./, Physical Review Materials, 2017
 
@@ -252,5 +254,5 @@
   # - A combination of atomistic and kinetic monte-carlo simulations can
   #   be used to accurately model the behaviour of dislocations in an
   #   environment of carbon.
-* Any Questions?
+* Questions?
 

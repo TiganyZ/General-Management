@@ -16,12 +16,12 @@
 
 * Tasks
 
-** TODO Could one see how to use Ising model SFEs and Fourier Interpolation?
-- Maybe one can do this for the Prismatic stacking fault.
-  - The calculation only depends of periodicity perpendicular to the plane
-    that one wants the stacking fault on.
-  - This means that one can have a stacking that is probably ABCD or something
-    Must investigate this further. 
+** TODO Could one see how to use Ising model SFEs and Fourier Interpolation?  
+ - Maybe one can do this for the Prismatic stacking fault.
+   - The calculation only depends of periodicity perpendicular to the plane
+     that one wants the stacking fault on. 
+   - This means that one can have a stacking that is probably ABCD or
+     something. Must investigate this further.    
 ** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
 ** TODO Calculate solution enthalpy of oxygen in titanium. 
 - The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
@@ -34,7 +34,7 @@
 
 ** TODO Compile list of papers to read for Omar
 	
-** TODO Use python voronoi around a surface to find triangles through which dislocations will pass
+** DONE Use python voronoi around a surface to find triangles through which dislocations will pass
 ** TODO Has anyone investigated the stacking faults of Omega phase?
    - Maybe as Omega phase doesn't occur that often, perhaps it has not been
      studied in detail.
