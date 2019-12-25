@@ -1,4 +1,4 @@
-% Created 2019-11-28 Thu 14:40
+% Created 2019-11-28 Thu 14:41
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -29,11 +29,11 @@
 \tableofcontents
 
 \section{Narrowed Data for Sasha}
-\label{sec:org7498d1a}
+\label{sec:org6e4d328}
 
 
 \subsubsection{Objective Function}
-\label{sec:orgcd5fc96}
+\label{sec:orgb421cf4}
 
 
 PARAMETERS
@@ -113,7 +113,7 @@ DFT: & 260.000 & mJ/m\(^{\text{2}}\) & [Benoit  2012]\\
 \end{center}
 
 \subsubsection{Defect Clusters}
-\label{sec:org593b2c6}
+\label{sec:orgb82de00}
 
 ----------     E\(_{\text{vacancy}}\)\(_{\text{formation}}\)     ----------
 
@@ -127,7 +127,7 @@ exp: & 1.270  eV & Hashimoto  (1984)\\
 
 \begin{enumerate}
 \item Octahedral O interstitial relaxation
-\label{sec:org168a73a}
+\label{sec:orga895f93}
 
 Initial:
 \begin{center}
@@ -140,7 +140,7 @@ Final:
 \end{center}
 
 \item Tetrahedral O interstitial relaxation
-\label{sec:org6bd9218}
+\label{sec:org054b826}
 
 Initial:
 \begin{center}
@@ -154,7 +154,7 @@ Final:
 
 
 \item Energies for defects
-\label{sec:org2a54ac5}
+\label{sec:org2edb66d}
 
 Relative differences are 
 
@@ -179,7 +179,7 @@ All formation energies below use the chemical potential of Akysonov
 (2013) of value \(\mu_{\text{oxygen}} = \frac{5.6}{ 2} eV\).
 
 \item All formation energies
-\label{sec:orgfe13552}
+\label{sec:orgf972dca}
 
 \begin{center}
 \begin{tabular}{ll}
@@ -193,13 +193,11 @@ Ef\(_{\text{T}}\)\(_{\text{formation}}\) & -  21.783\\
 Ef\(_{\text{T}}\)\(_{\text{V}}\)\(_{\text{formation}}\) & -  18.905\\
 Ef\(_{\text{T}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & -   0.530\\
  & \\
- & \\
 Ef\(_{\text{O}}\)\(_{\text{sol}}\) & -  23.436\\
 Ef\(_{\text{O}}\)\(_{\text{dil}}\)\(_{\text{imp}}\) & -  30.645\\
 Ef\(_{\text{O}}\)\(_{\text{formation}}\) & -  23.436\\
 Ef\(_{\text{O}}\)\(_{\text{V}}\)\(_{\text{formation}}\) & -  18.905\\
 Ef\(_{\text{O}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & -   2.183\\
- & \\
  & \\
 Ef\(_{\text{OO}}\)\(_{\text{sol}}\) & -  49.606\\
 Ef\(_{\text{OO}}\)\(_{\text{dil}}\)\(_{\text{imp}}\) & -  56.814\\
@@ -217,26 +215,25 @@ Ef\(_{\text{OOOO}}\)\(_{\text{sol}}\) & - 102.470\\
 Ef\(_{\text{OOOO}}\)\(_{\text{dil}}\)\(_{\text{imp}}\) & - 109.679\\
 Ef\(_{\text{OOOO}}\)\(_{\text{formation}}\) & -  94.070\\
 Ef\(_{\text{OOOO}}\)\(_{\text{V}}\)\(_{\text{formation}}\) & -  88.998\\
-Ef\(_{\text{OOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & -   2.724\\
- & \\
+Ef\(_{\text{OOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & -  2.724\\
  & \\
 Ef\(_{\text{OOOOO}}\)\(_{\text{sol}}\) & - 128.781\\
 Ef\(_{\text{OOOOO}}\)\(_{\text{dil}}\)\(_{\text{imp}}\) & - 135.989\\
 Ef\(_{\text{OOOOO}}\)\(_{\text{formation}}\) & - 117.581\\
 Ef\(_{\text{OOOOO}}\)\(_{\text{V}}\)\(_{\text{formation}}\) & - 113.649\\
-Ef\(_{\text{OOOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & -   1.583\\
+Ef\(_{\text{OOOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & - 1.583\\
  & \\
 Ef\(_{\text{OOOOOO}}\)\(_{\text{sol}}\) & - 155.148\\
 Ef\(_{\text{OOOOOO}}\)\(_{\text{dil}}\)\(_{\text{imp}}\) & - 162.357\\
 Ef\(_{\text{OOOOOO}}\)\(_{\text{formation}}\) & - 141.148\\
 Ef\(_{\text{OOOOOO}}\)\(_{\text{V}}\)\(_{\text{formation}}\) & - 137.110\\
-Ef\(_{\text{OOOOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & -   1.690\\
+Ef\(_{\text{OOOOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & - 1.690\\
 \end{tabular}
 \end{center}
 \end{enumerate}
 
 \subsubsection{Gamma surfaces}
-\label{sec:org1a542e3}
+\label{sec:org9094bcd}
 
 Energies are accurate to within 2 mJm\(^{\text{-2}}\), comparing the energies of
 points in the corners which (the zeros of energy). So surface energies
@@ -253,7 +250,7 @@ pseudopotentials.
 \newpage
 \begin{enumerate}
 \item Basal
-\label{sec:org469a642}
+\label{sec:orgb31c1ab}
 
 TBE:
 \begin{center}
@@ -266,7 +263,7 @@ DFT:
 \end{center}
 
 \item Prismatic
-\label{sec:orgfbebbd2}
+\label{sec:orgd10b9e2}
 
 TBE:
 \begin{center}
@@ -279,7 +276,7 @@ DFT:
 \end{center}
 
 \item Pyramidal first order
-\label{sec:org4f39109}
+\label{sec:orgecb12bb}
 
 TBE:
 \begin{center}
@@ -292,13 +289,13 @@ DFT pseudopot:
 \end{center}
 
 \item Data
-\label{sec:org9063f35}
+\label{sec:org92925a0}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/gamma\_surfaces/basal/basal\_gs\_noo\_alat\_energies.dat}{basal\(_{\text{gs}}\)\(_{\text{data}}\)}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/gamma\_surfaces/prismatic/prismatic\_gs\_noo\_alat\_energies.dat}{prismatic\(_{\text{gs}}\)\(_{\text{data}}\)}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/gamma\_surfaces/pyramidal\_results\_2019-11-13/pyramidal\_gamma\_surface\_2019-11-13.dat}{pyramidal\(_{\text{gs}}\)\(_{\text{data}}\)}
 \end{enumerate}
 \subsubsection{Dislocation core structures}
-\label{sec:orgf49fbcb}
+\label{sec:org71c179b}
 \begin{center}
 \includegraphics[width=.9\linewidth]{Images/ddplot_IP1_noo_best_model_alat.eps}
 \end{center}
@@ -317,7 +314,7 @@ DFT pseudopot:
 
 \begin{enumerate}
 \item Data
-\label{sec:orgddaf1b4}
+\label{sec:org12ebd27}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP1-oo\_19-11-09--04-46-00.log}{IP1}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP2-oo\_19-11-09--04-46-00.log}{IP2}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP3-oo\_19-11-09--04-46-00.log}{IP3}
@@ -326,16 +323,16 @@ DFT pseudopot:
 \end{enumerate}
 
 \subsubsection{Directory of the results}
-\label{sec:orga72b636}
+\label{sec:org52f87b4}
 \url{file:///home/tigany/Documents/ti/2019-09-11\_final\_model/tbe/dislocations/2019-11-08\_no\_omega\_ordering\_ec\_latpar/}
 \url{file:///home/tigany/Documents/ti/final\_model\_2019-11}
 
 \subsubsection{BOP}
-\label{sec:org373a896}
+\label{sec:org46d7a82}
 
 \begin{enumerate}
 \item 4 recursion levels
-\label{sec:org62060f8}
+\label{sec:orgf84cee0}
 
 kbT = 0.1
 
