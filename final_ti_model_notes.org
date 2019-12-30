@@ -402,8 +402,46 @@ DFT pseudopot:
    #+ATTR_LATEX: :width 0.7\textwidth :center t
    [[file:Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png]]
   
-  
+** Peierls Stress  
 
+   By straining lattice and incrementally increasing the strain, one
+   can find the minimum stress necessary to move a dislocation from one
+   Peierls valley to the next. 
+
+*** Applying strain
+    
+    Applying strain as in cite:Chen2013. 
+    
+    Here we are incrementing the strain by $0.0001C^{*}$, where $C^{*}$
+    is the transformed elastic constant necessary for transforming a
+    strain into a stress from the relation $\sigma_{ij} =
+    C_{ijkl}\varepsilon_{kl}$. 
+
+    For finding the Peierls stress on the prismatic plane one finds
+    that the stress if given by $\sigma_{xy} = 2C_{66}\varepsilon_{xy}$. 
+
+    For the basal plane, one needs a stress applied which is $\sigma_xz =
+    2C_{44}\varepsilon_{xz}$. 
+    
+
+*** xy strain 0.03 naive
+
+    Here the \alpha parameter is 0.03. 
+
+    This means that the stress necessary to move the dislocation is 
+
+    \begin{align*}
+    \sigma_{12} &= C_{1212}\varepsilon_{12} \\
+        &= 2C^{\text{Voigt}}_{66 }\varepsilon_6^{\text{Voigt}} \\
+        &= ( C_{11}- C_{12}) \varepsilon_6^{\text{Voigt}} \\
+        &= 76.59 \times 0.03 \\ 
+        &= 2.31 GPa\ 
+    \end{align*}
+
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_peierls_xy_0.03_initial_partials.png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_peierls_xy_0.03_final_partials.png]]
 
 
 ** Data
@@ -417,6 +455,28 @@ DFT pseudopot:
  [[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
  [[file:~/Documents/ti/final_model_2019-11]]
 
+
+* Binding energies to dislocations
+  
+  A strategy to find the binding energies of different sites are to
+  firstly just determine. 
+
+  1. Octahedral sites near the dislocation core
+     - Shall one find a radius within which one can find binding
+       sites?
+     - Shall one build the perfect lattice and then move the site
+       into the relaxed octahedral one. 
+     - Find non-equivalent sites near the core
+     - Find the average dislplacement going from the perfect site to
+       the relaxed cell with dislocation
+     - Displace octahedral site by the average of the displacement of
+       the octahedral sites. 
+       
+  2. Relax the relaxed dislocation and the binding sites such that one
+     can find the solution energy. 
+
+
+  
 * BOP
 
 ** 4 recursion levels

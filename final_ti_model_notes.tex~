@@ -1,4 +1,4 @@
-% Created 2019-12-25 Wed 00:57
+% Created 2019-12-26 Thu 02:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -33,7 +33,7 @@
 
 
 \section{Objective Function}
-\label{sec:orge51018a}
+\label{sec:orga8defed}
 
 
 PARAMETERS
@@ -113,7 +113,7 @@ DFT: & 260.000 & mJ/m\(^{\text{2}}\) & [Benoit  2012]\\
 \end{center}
 
 \section{Defect Clusters}
-\label{sec:org0e24361}
+\label{sec:org93c760d}
 
 ----------     E\(_{\text{vacancy}}\)\(_{\text{formation}}\)     ----------
 
@@ -126,7 +126,7 @@ exp: & 1.270  eV & Hashimoto  (1984)\\
 \end{center}
 
 \subsection{Octahedral O interstitial relaxation}
-\label{sec:org92836b9}
+\label{sec:org171ee76}
 
 Initial:
 \begin{center}
@@ -139,7 +139,7 @@ Final:
 \end{center}
 
 \subsection{Tetrahedral O interstitial relaxation}
-\label{sec:org6b011fc}
+\label{sec:orgcc3a140}
 
 Initial:
 \begin{center}
@@ -152,7 +152,7 @@ Final:
 \end{center}
 
 \subsection{Energies for defects}
-\label{sec:org502e14d}
+\label{sec:org0b96c7d}
 
 Relative differences are 
 
@@ -177,7 +177,7 @@ All formation energies below use the chemical potential of Akysonov
 (2013) of value \(\mu_{\text{oxygen}} = \frac{5.6}{ 2} eV\).
 
 \subsection{All formation energies}
-\label{sec:orgbcd2c42}
+\label{sec:orgd4b6d0a}
 
 \begin{center}
 \begin{tabular}{ll}
@@ -230,7 +230,7 @@ Ef\(_{\text{OOOOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & - 1
 \end{center}
 
 \section{Gamma surfaces}
-\label{sec:orgdfbdfa0}
+\label{sec:org0ec1293}
 
 Energies are accurate to within 2 mJm\(^{\text{-2}}\), comparing the energies of
 points in the corners which (the zeros of energy). So surface energies
@@ -246,7 +246,7 @@ pseudopotentials.
 
 \newpage
 \subsection{Basal}
-\label{sec:org947e231}
+\label{sec:orga2a4ca4}
 
 TBE:
 \begin{center}
@@ -259,7 +259,7 @@ DFT:
 \end{center}
 
 \subsection{Prismatic}
-\label{sec:orgb0c5ed2}
+\label{sec:orgc909fbe}
 
 TBE:
 \begin{center}
@@ -272,7 +272,7 @@ DFT:
 \end{center}
 
 \subsection{Pyramidal first order}
-\label{sec:org5be38e6}
+\label{sec:orgecfd7bd}
 
 TBE:
 \begin{center}
@@ -285,12 +285,12 @@ DFT pseudopot:
 \end{center}
 
 \subsection{Data}
-\label{sec:orgb2d8bea}
+\label{sec:orgad42f12}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/gamma\_surfaces/basal/basal\_gs\_noo\_alat\_energies.dat}{basal\(_{\text{gs}}\)\(_{\text{data}}\)}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/gamma\_surfaces/prismatic/prismatic\_gs\_noo\_alat\_energies.dat}{prismatic\(_{\text{gs}}\)\(_{\text{data}}\)}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/gamma\_surfaces/pyramidal\_results\_2019-11-13/pyramidal\_gamma\_surface\_2019-11-13.dat}{pyramidal\(_{\text{gs}}\)\(_{\text{data}}\)}
 \section{Dislocation core structures}
-\label{sec:org293f035}
+\label{sec:org3411895}
 In the following figures we have the partial differential
 displacement maps of dislocations in their initial and final
 state. The atoms were relaxed until the root-mean square force
@@ -321,8 +321,15 @@ relative energy barrier between the trough in the centre of the
 gamma surface line and the peaks, so to speak, the dislocation
 can dissociate easily along this direction. 
 
+The dissociation distance is consistent between the different
+initial positions of the elastic centres. The distance is \(\approx4c =
+    35.4\) Bohr \(= 18.7 \AA\).
+
+This is roughly double the distance that is found in the DFT Zr
+results by Clouet \cite{Clouet2012}.
+
 \subsection{{\bfseries\sffamily TODO} Dissociation Distance Analysis}
-\label{sec:orge972c8b}
+\label{sec:orgead4efb}
 Following \cite{Clouet2012}, one can dislocation elasticity theory to
 compute the dissociation distance of a dislocation in both the
 basal and prism planes.  The energy variation caused by a
@@ -383,7 +390,7 @@ The dissociation length is
 
 
 \subsection{{\bfseries\sffamily TODO} Disregistry Analysis}
-\label{sec:org3ddbb76}
+\label{sec:orgbbcb59a}
 Look into the theory of dissociation distance in Clouet paper
 \cite{Clouet2012}
 
@@ -454,7 +461,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 
 
 \subsection{IP1}
-\label{sec:orge206b03}
+\label{sec:org64ef2ef}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP1_partial_dd_initial.png}
 \end{center}
@@ -463,7 +470,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \end{center} 
 
 \subsection{IP2}
-\label{sec:orgdc8c1c2}
+\label{sec:orgd3dfa69}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP2_partial_dd_initial..png}
 \end{center}
@@ -471,7 +478,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP2_partial_dd_final.png}
 \end{center}
 \subsection{IP3}
-\label{sec:orgde6f15f}
+\label{sec:orgf3ca1c9}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP3_partial_dd_initial.png}
 \end{center}
@@ -479,7 +486,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP3_partial_dd_final.png}
 \end{center}
 \subsection{IP4}
-\label{sec:org3362bfb}
+\label{sec:org0877953}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP4_partial_dd_initial.png}
 \end{center}
@@ -487,7 +494,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP4_partial_dd_final.png}
 \end{center}
 \subsection{IP5}
-\label{sec:org73a9ea4}
+\label{sec:orgee0b9c8}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP5_partial_dd_initial.png}
 \end{center}
@@ -495,25 +502,49 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.7\textwidth]{Images/final_model_IP5_partial_dd_final.png}
 \end{center}
 
+\subsection{Ghazisaeidi Results for comparison}
+\label{sec:org2e61d0b}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png}
+\end{center}
+
+\subsection{Peierls Stress}
+\label{sec:orgaff909c}
+
+By straining lattice and incrementally increasing the strain, one
+can find the minimum stress necessary to move a dislocation from one
+Peierls valley to the next. 
+
+\subsubsection{xy strain 0.03}
+\label{sec:orgb3b8fac}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Images/final_model_peierls_xy_0.03_initial_partials.png}
+\end{center}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Images/final_model_peierls_xy_0.03_final_partials.png}
+\end{center}
+
 
 \subsection{Data}
-\label{sec:org109f061}
+\label{sec:org45d3fd4}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP1-oo\_19-11-09--04-46-00.log}{IP1}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP2-oo\_19-11-09--04-46-00.log}{IP2}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP3-oo\_19-11-09--04-46-00.log}{IP3}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP4-oo\_19-11-09--04-46-00.log}{IP4}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP5-oo\_19-11-09--04-46-00.log}{IP5}
 
-\section{Directory of the results}
-\label{sec:org3c17dc8}
+\subsection{Directory of the results}
+\label{sec:org0502a6d}
 \url{file:///home/tigany/Documents/ti/2019-09-11\_final\_model/tbe/dislocations/2019-11-08\_no\_omega\_ordering\_ec\_latpar/}
 \url{file:///home/tigany/Documents/ti/final\_model\_2019-11}
 
 \section{BOP}
-\label{sec:org7846602}
+\label{sec:orge6d88c5}
 
 \subsection{4 recursion levels}
-\label{sec:org375f477}
+\label{sec:orgdbbd3e3}
 
 kbT = 0.1
 
@@ -559,8 +590,8 @@ H & 0.558 & 0.489\\
 \end{center}
 
 \section{Bibliography}
-\label{sec:orgcdba660}
-\label{org903fe29}
+\label{sec:orgab95718}
+\label{orgc327f57}
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography/org-refs}
