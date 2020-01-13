@@ -83,6 +83,31 @@
 
 
    
+** C-dislocation binding energies
+
+   The cells have been set up for the dislocation binding energies. 
+   
+   There are some differences in the literature on how one places
+   interstitials. 
+
+   Ventelon, in her paper on C-induced screw dislocation
+   reconstruction in bcc iron cite:Ventelon2015 put in *two* interstitial carbon atoms,
+   one for each of the dislocations in the simulation cell. Where as
+   Chaari, in his paper on oxygen-dislocation interaction in titanium
+   with first-principles cite:Chaari2018, put only one oxygen atom
+   near one of the dislocation cores. Chzran in his work on
+   oxygen-dislocation interaction with screw cores, cite:Yu2015, put
+   in an oxygen adjacent to each core. 
+
+   This leads me to believe that having a symmetric configuration of
+   cores is probably for the best. It means that the cell is truly
+   periodic, but this does introduce interactions that would otherwise
+   not be there if only one oxygen atom is put in the core. For
+   example the interaction of each of the dislocations strain fields
+   and each of the oxygen atoms, along with the interaction between
+   oxygen and the other strain fields. 
+
+
 ** TODO Peierls Barrier
 
 ** TODO Peierls Stress
@@ -293,3 +318,12 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
    - Can dislocations carry carbon when they move?
 
    - Do temper carbides dissolve with rolling contact fatigue? or do they grow?
+
+* Bibliography 
+<<bibliography link>>
+
+bibliographystyle:unsrt
+bibliography:./bibliography/org-refs.bib
+
+# \bibliographystyle{plain}
+# \bibliography{org-refs.bib}
