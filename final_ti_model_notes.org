@@ -115,69 +115,75 @@ All formation energies below use the chemical potential of Akysonov
 
 | Quantity               | Energy (eV) |
 |------------------------+-------------|
-| Ef_Vf                  |       2.347 |
+| Ef_Vf                  | 2.347       |
 |                        |             |
-| Ef_T_sol               |   -  21.783 |
-| Ef_T_dil_imp           |   -  28.991 |
-| Ef_T_formation         |   -  21.783 |
-| Ef_T_V_formation       |   -  18.905 |
-| Ef_T_vac_sol_bind      |   -   0.530 |
+| Ef_T_sol               | -  21.783   |
+| Ef_O_sol               | -  23.436   |
+| Ef_OO_sol              | -  49.606   |
+| Ef_OOO_sol             | -  76.037   |
+| Ef_OOOO_sol            | - 102.470   |
+| Ef_OOOOO_sol           | - 128.781   |
+| Ef_OOOOOO_sol          | - 155.148   |
 |                        |             |
-| Ef_O_sol               |   -  23.436 |
-| Ef_O_dil_imp           |   -  30.645 |
-| Ef_O_formation         |   -  23.436 |
-| Ef_O_V_formation       |   -  18.905 |
-| Ef_O_vac_sol_bind      |   -   2.183 |
+| Ef_T_dil_imp           | -  28.991   |
+| Ef_O_dil_imp           | -  30.645   |
+| Ef_OO_dil_imp          | -  56.814   |
+| Ef_OOO_dil_imp         | -  83.246   |
+| Ef_OOOO_dil_imp        | - 109.679   |
+| Ef_OOOOO_dil_imp       | - 135.989   |
+| Ef_OOOOOO_dil_imp      | - 162.357   |
 |                        |             |
-| Ef_OO_sol              |   -  49.606 |
-| Ef_OO_dil_imp          |   -  56.814 |
-| Ef_OO_formation        |   -  46.806 |
-| Ef_OO_V_formation      |   -  41.910 |
-| Ef_OO_vac_sol_bind     |   -   2.547 |
+| Ef_T_formation         | -  21.783   |
+| Ef_O_formation         | -  23.436   |
+| Ef_OO_formation        | -  46.806   |
+| Ef_OOO_formation       | -  70.437   |
+| Ef_OOOO_formation      | -  94.070   |
+| Ef_OOOOO_formation     | - 117.581   |
+| Ef_OOOOOO_formation    | - 141.148   |
 |                        |             |
-| Ef_OOO_sol             |   -  76.037 |
-| Ef_OOO_dil_imp         |   -  83.246 |
-| Ef_OOO_formation       |   -  70.437 |
-| Ef_OOO_V_formation     |   -  66.013 |
-| Ef_OOO_vac_sol_bind    |   -   2.076 |
+| Ef_T_V_formation       | -  18.905   |
+| Ef_O_V_formation       | -  18.905   |
+| Ef_OO_V_formation      | -  41.910   |
+| Ef_OOO_V_formation     | -  66.013   |
+| Ef_OOOO_V_formation    | -  88.998   |
+| Ef_OOOOO_V_formation   | - 113.649   |
+| Ef_OOOOOO_V_formation  | - 137.110   |
 |                        |             |
-| Ef_OOOO_sol            |   - 102.470 |
-| Ef_OOOO_dil_imp        |   - 109.679 |
-| Ef_OOOO_formation      |   -  94.070 |
-| Ef_OOOO_V_formation    |   -  88.998 |
-| Ef_OOOO_vac_sol_bind   |   -  2.724  |
-|                        |             |
-| Ef_OOOOO_sol           |   - 128.781 |
-| Ef_OOOOO_dil_imp       |   - 135.989 |
-| Ef_OOOOO_formation     |   - 117.581 |
-| Ef_OOOOO_V_formation   |   - 113.649 |
-| Ef_OOOOO_vac_sol_bind  |   - 1.583   |
-|                        |             |
-| Ef_OOOOOO_sol          |   - 155.148 |
-| Ef_OOOOOO_dil_imp      |   - 162.357 |
-| Ef_OOOOOO_formation    |   - 141.148 |
-| Ef_OOOOOO_V_formation  |   - 137.110 |
-| Ef_OOOOOO_vac_sol_bind |   - 1.690   |
+| Ef_T_vac_sol_bind      | -   0.530   |
+| Ef_O_vac_sol_bind      | -   2.183   |
+| Ef_OO_vac_sol_bind     | -   2.547   |
+| Ef_OOO_vac_sol_bind    | -   2.076   |
+| Ef_OOOO_vac_sol_bind   | -  2.724    |
+| Ef_OOOOO_vac_sol_bind  | - 1.583     |
+| Ef_OOOOOO_vac_sol_bind | - 1.690     |
 
 * Gamma surfaces
 
 Energies are accurate to within 2 mJm^{-2}, comparing the energies of
 points in the corners which (the zeros of energy). So surface energies
-might be  $\pm 2$ mJm^{-2} off which is reasonable. 
+might be $\pm 2$ mJm^{-2} off which is reasonable. 
 
 These calculations were done in tight binding with 15 layers for both
-basal and prismatic with k-points adjusted accordingly. 
+basal and prismatic. The k-points for the prismatic gamma surfaces were, and for basal they were. 
 DFT comparisons are usind results of Rodney. 
 
 The Pyramidal surface was obtained using the same 32 atom cell that
 Ready used in his paper on the pyramidal gamma surface with DFT
 pseudopotentials. 
 
+| Stacking Fault | Energy [mJm$^{-2}$] |
+|----------------+---------------------|
+| Prismatic      |                     |
+| Basal $I_2$    |                     |
+| Basal          |                     |
+| Pyramidal I    |                     |
+
 \newpage
 ** Basal
 
 TBE:
-[[file:Images/basal_gs_noo_2019-11-08_alat.png]]
+[[file:Images/basal_gamma_surface_final_model_2020-01-15.png]]
+
 
 DFT:
 [[file:Images/rodney_basal_ti_gamma_surface.png]]
@@ -185,7 +191,7 @@ DFT:
 ** Prismatic
 
 TBE:
-[[file:Images/prismatic_gs_noo_2019-11-08_alat.png]]
+[[file:Images/prismatic_gamma_surface_final_model_angle_smaller.png]]
 
 DFT:
 [[file:Images/rodney_prismatic_ti_gamma_surface.png]]
@@ -193,8 +199,7 @@ DFT:
 ** Pyramidal first order
 
 TBE:
-[[file:Images/pyramidal_gs_noo_2019-11-08_alat.png]]
-
+[[file:Images/pyramidal_gamma_surface_final_model_contours.png]]
 DFT pseudopot:
 [[file:Images/pyramidal_gamma_surface_ready_data_both.png]]
 
@@ -205,25 +210,28 @@ DFT pseudopot:
 * Dislocation core structures
 
 ** Methodology
-    In the following, we see results of dislocation relaxation. The
-    partial differential displacement maps are of dislocations in
-    their initial and final states in different initial positions. The
-    atoms were relaxed until the root-mean square force acting on each
-    atom was less than $1\times 10^-5$ Ryd/Bohr.
+    In the following, we see results of dislocation relaxation. The partial differential
+    displacement maps are of dislocations in their initial and final states in different initial
+    positions. The burger's vector seen in these plots is the partial $1/6 [11\bar{2}0]$. The
+    original dislocation, of burger's vector $1/3 [11\bar{2}0]$, should dissociate into two
+    dislocations on the primatic plane, each with burger's vector $1/6 [11\bar{2}0]$. The atoms were
+    relaxed until the root-mean square force acting on each atom was less than $1\times 10^{-5}$
+    Ryd/Bohr.
 
     These relaxations can be distinguished by the different initial
     positions of the dislocation centre (elastic centre) as following
     the paper by Tarrat cite:Tarrat2009.
 
-    The partial burger's vector seen here is the $1/6 [11\bar{2}0]$
-    dislocation, and this is the Burger's vector plotted on each of
-    hte initial positions. 
+    [[file:Images/tarrat_hcp_core_structures.png]]
 
 ** Discussion
     One can see that all of the dislocations have dissociated on the
     prismatic plane. But there is a difference between initial
     positions as to upon which prismatic plane they dissociate on,
     from the original. 
+
+    None of these states have dissociated onto the proposed pyramidally spread ground state that is
+    proposed by Clouet cite:Clouet2015.
 
     Only initial position 2 actually dissociated on a different
     prismatic plane to the others. 
@@ -257,7 +265,7 @@ DFT pseudopot:
     The energies for each of the dislocation cores, when relaxed to
     $1\times 10^{-5}$ Ryd/Bohr is 
 
-     | Initial position |        E_total |
+     | Initial position |        E_total [Ryd] |
      |------------------+---------------|
      |                1 | -331.54658899 |
      |                2 | -331.54660063 |
@@ -265,12 +273,11 @@ DFT pseudopot:
      |                4 | -331.54660061 |
      |                5 | -331.54658717 |
 
-     The 
 
 
      
     The dissociation distance is consistent between the different
-    initial positions of the elastic centres. The distance is $\approx4c =
+    initial positions of the elastic centres. The distance is $\approx 4c =
     35.4$ Bohr $= 18.7 \AA$, this is double the distance seen in
     Ghazisaedi and Trinkle cite:Ghazisaeidi2012 and double the
     distance that is found in the DFT Zr results by Clouet
@@ -348,17 +355,19 @@ DFT pseudopot:
 
 *** Analysis with Final Ti model. 
     
-    Using 
+ 
    \[
     d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
     \]
     
-    with $K_{33} = 6.79853$ GPa $= 6.79853 / 160.21766208 = 0.042433087$
-    eV/\AA^3 , $\alpha = 0$ and $\gamma_{\text{p}} = 98.95340236$ mJm^{-2} $=
-    1.6021766208*10^(-19) * 10^{-3} * 10^20 * 98.95340236 = 1.58540827809$
-    eV/\AA^3, $a = 2.955577 \AA$ we have the equilibrium dissociation
-    distance in the prismatic plane as $d_{\text{p}}^{\text{eq}} = 0.05845
-    \AA$, which seems a little close looking at the results... 
+    Using the above equation to calculate the dissociation distance with $K_{33} = 6.79853$ GPa $=
+    6.79853 / 160.21766208$ eV/\AA^3 $= 0.042433087$ eV/\AA^3, $\alpha = 0$ and $\gamma_{\text{p}} =
+    98.95340236$ mJm^{-2} $= 1.6021766208*10^{-19} * 10^{-3} * 10^{20} * 98.95340236$ eV/\AA^3 $ =
+    1.58540827809$ eV/\AA^3, $a = 2.955577 \AA$ we have the equilibrium dissociation distance in the
+    prismatic plane as $d_{\text{p}}^{\text{eq}} = 0.05845$ \AA, which seems very small, comparing
+    to the differential displacement maps...
+    
+    Further scrutiny is necessary. 
 
 ** TODO Disregistry Analysis
     Look into the theory of dissociation distance in Clouet paper
@@ -420,7 +429,7 @@ DFT pseudopot:
 
     Therefore, using this, one can fit the three fitting parameters:
     the dislocation position $x_0$, the dissociation length $d$, and the
-    spreading $\zeta$. This procedure therefore allows us to determine the
+    spreading $\zeta$. This procedure allows us to determine the
     location of the dislocation center.
 
     For all interaction models, we find that this center lies in
@@ -468,7 +477,7 @@ DFT pseudopot:
   
 ** Peierls Stress  
 
-   By straining lattice and incrementally increasing the strain, one
+   By straining the cell of a relaxed lattice and incrementally increasing the strain, one
    can find the minimum stress necessary to move a dislocation from one
    Peierls valley to the next. 
 
@@ -476,7 +485,7 @@ DFT pseudopot:
     
     Applying strain as in cite:Chen2013. 
     
-    Here we are incrementing the strain by $0.001C^{*}$, where $C^{*}$ is
+    Here we are incrementing the strain by $0.001C^{\text{rot}}$, where $C^{\text{rot}}$ is
     the transformed elastic constant necessary for transforming a
     strain into a stress from the relation $\sigma_{ij} = C_{ijkl}\varepsilon_{kl}$.
 
@@ -499,17 +508,17 @@ DFT pseudopot:
     rotation
 
     \begin{equation*}
-     C =	
+     R =	
       \begin{bmatrix}
-        1.0 & 0.0 & 0.0 \\
-        0.0 & 0.0 & -1.0 \\
-        0.0 & 1.0 & 0.0 \\
+        1 & 0 & 0 \\
+        0 & 0 & -1 \\
+        0 & 1 & 0 \\
       \end{bmatrix}
     \end{equation*}
 
 
     \begin{equation*}
-     C^{}^{\text{rot} }=	
+     C^{\text{rot}}=	
       \begin{bmatrix}
        171.6093 &  61.2262 &  94.6594 &   0.     &   0.      &  0.      \\
         61.2262 & 198.9006 &  61.2262 &   0.     &   0.      &  0.      \\
@@ -524,15 +533,15 @@ DFT pseudopot:
 
     For finding the Peierls stress to move partials away from each
     other on the prismatic plane plane one finds that the stress if
-    given by $\sigma_{xy} = 2C_{xy}_{}^{*}\varepsilon_{xy}$, where $C_{xy}^{*} =
+    given by $\sigma_{xy} = \sigma_{12} =  2C_{66}^{\text{rot}}\varepsilon_{12}$, where $C_{66}^{\text{rot}} =
     47.4255$ GPa.
 
     To move the whole dislocation on the prismatic plane, one needs a
-    stress applied which is $\sigma_xz = 2C_{xz}_{}^{*}\varepsilon_{xz}$, $C_{xz}^{*} =
+    stress applied which is $\sigma_xz = \sigma_{13} = 2C_{55}^{\text{rot}}\varepsilon_{13}$, $C_{55}^{\text{rot}} =
     38.4749$ GPa.
 
     To move the dislocation onto the basal plane one needs to apply as
-    stress given by $\sigma_yz = 2C_{yz}_{}^{*}\varepsilon_{xz}$, $C_{yz}^{*} =
+    stress given by $\sigma_yz = \sigma_{23} = 2C_{44}^{\text{rot}}\varepsilon_{23}$, $C_{44}^{\text{rot}} =
     47.4255$ GPa.
 
 
@@ -562,6 +571,10 @@ DFT pseudopot:
     
     
 
+
+*** yz Strain
+
+    This is the strain necessary for movement on the 
 
 *** xy strain 
 
@@ -599,10 +612,15 @@ DFT pseudopot:
     dislocation whereby the maximum resolved shear stress is on the
     first-order pyramidal plane. 
 
-    In the coordinate system of the dislocation, one finds that the
-    proportions of $\sigma_{xz}$ and $\sigma_{yz}$ should be $c/a : \sqrt{3}/2 \approx
-    1.83 : 1 \approx 1 : 0.54683$.
-
+    In the coordinate system of the dislocation, one can estimate the strain necessary by the ratio
+    of stresses for the basal and prismatic planes. The proportions strains $\sigma_{xz}$ and
+    $\sigma_{yz}$ should be $c/a : \sqrt{3}/2 \approx 1.83 : 1 \approx 1 : 0.54683$.
+    
+    Unfortunately, this proportion does not work, nor does the ratio $\sigma_{xz}:\sigma_{yz}$
+    \approx 1: 1/10$. A much, much lower proportion of the strain is
+    necessary as the dislocation just moves prismatically. Once one finds
+    the Peierls stress for the basal plane, we can estimate a more realistic proportion. 
+ 
 
 ** Data
 [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP1-oo_19-11-09--04-46-00.log][IP1]]
