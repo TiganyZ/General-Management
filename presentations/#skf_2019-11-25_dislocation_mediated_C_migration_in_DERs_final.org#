@@ -1,0 +1,258 @@
+#+ATTR_HTML: font-size: 1em
+#+TITLE: Atomistic investigation of dislocation assisted C migration in Dark Etching Regions
+#+Author: Tigany Zarrouk 
+#+Date: 25.11.2019
+#+Email: tigany.zarrouk@skf.com
+#+REVEAL_ROOT: file:///home/tigany/software/reveal.js
+
+
+#+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
+#+REVEAL_THEME: solarized
+#+REVEAL_TRANS: linear 
+# Set up the title slide.
+#+REVEAL_TITLE_SLIDE: <h1  style="font-size: 100px; text-transform: capitalize" >%t</h1><h2>%s</h2><h3>%a</h3><h4>%e</h4>
+
+# http://cdn.jsdelivr.net/reveal.js/3.0.0/
+
+# #+OPTIONS: Email:t author:t 
+#+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
+#+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
+#+REVEAL_EXTERNAL_PLUGINS:({src: "%splugins/chart.js"}”)
+#+REVEAL_EXTRA_CSS: ./extra.css
+
+#+REVEAL
+
+* Motivation 
+  # - Rolling contact on bearing raceways generate maximal shear
+  #   stresses in subsurface.
+  # - Degradation in subsurface microstructure observed.
+  # - This can lead to failure by Rolling Contact Fatigue (RCF).
+  # - Subsurface degradation of bearing raceways arises in form of Dark
+  #   Etching Regions (DERs).
+  # - DERs characterised by development of ferrite and carbide features with
+  #   patches of unaltered martensitic matrix.
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+  - Carbon redistribution and plastic deformation are thought to be
+    fundamental mechanisms behind DER formation.
+  - Differing mechanisms of dislocation-driven carbon migration have
+    been suggested, but no consensus.
+  - Atomistic modelling necessary to elucidate if/how dislocations could
+    move carbon; thus clarifying potential mechanisms of DER
+    formation.
+
+   [1] Martin /et al./, Journal of Basic Engineering 1966
+    
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="600" src="file:///home/tigany/Documents/docs/Management/Images/DER_region_lenticular_carbides_warhadpande.png" >
+#+REVEAL_HTML: </div>
+
+
+
+# ** DER Mechanisms
+   
+#    - Theories of carbon redistribution causing DERs come from several
+#      observations:
+#      - Ferrite formation
+#      - Lenticular carbide formation
+#      - Dissolution of residual carbides.
+#      - Difference in C concentration from original martensite to DER. 
+#    - Dislocations can attract carbon and form Cottrell atmospheres.
+#    - Current theories suggest with dislocation glide, carbon
+#      migration is assisted.
+#    # - Growth of lenticular carbides is linked to formation of DER through
+#    #   mechanical diffusion by dislocations and thermal diffusion.
+#    - Debate as to whether carbon is deposited in temper carbides,
+#      causing them to grow, or if there is dissolution of temper
+#      carbides.
+
+
+# ** New DER Mechanism proposal
+
+#    - Dislocation pile-ups could cause attract carbon from temper/residual
+#      carbides causing their dissolution.
+#    - Dislocation rearrangement into cell structures from cyclic
+#      stresses and dislocation-carbon interaction.
+#    - Large plastic strains in region will form ferrite microbands and
+#      nanocrystalline ferrite with as the number of stress cycles
+#      increases.
+#    - Expelled C from ferrite microbands and nanocrystalline ferrite
+#      forms lenticular carbides.
+#    - Carbon diffusion assisted by pipe diffusion along dislocation. 
+
+* Aims
+  To answer the questions:
+  - How can dislocations assist carbon migration?
+  - How are dislocations influenced by carbon on atomistic scale?
+    - How does carbon affect kink-pair nucleation/migration?
+    - How fast do the dislocations move in carbon environment?
+  #   - What dislocation structures are found with dislocation movement? 
+
+  # - Can trapped carbon in core provide precipitation sites for
+  #   carbides? 
+  # - Do temper carbides dissolve/grow with rolling contact fatigue?
+  #   - Is is more energetically favourable for a carbon to be in a
+  #     Cottrell atmosphere or in a carbon rich grain boundary?
+    # - We want to determine how these dislocations influence the
+    #   movement of C:
+    #   - Does C actually move with the dislocation?
+    #   - Are dislocations pinned and then unpinned with stress?
+    #   - How does stress actually change C diffusion rates, are they
+    # 	comparable to dislocation velocities?
+
+* Methods
+
+** Tight Binding
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Tight binding is an approximation to DFT.
+- Overlaps between atomic orbitals are key parameters.
+- Parameters can be fitted to experimental data.
+- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT.
+- Fe/Fe-C carbon model developed by Paxton and Elsässer (Phys. Rev. B,
+  2013).
+- One can calculate:
+  - C-dislocation binding energies
+  - Peierls barriers
+  - Line tension constants. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
+
+** Line Tension Model
+
+
+ - Line tension model approximates energy of dislocation line as a
+   function of core position. 
+ - Composed of quantities derived from atomistics /e.g./:
+   - Peierls barrier, $E_{\text{P}}(\mathbf{P}_j)$
+   - Carbon-dislocation interaction energy, $E_{\text{C}}(\mathbf{P}_j)$,
+   - Line tension constant, $K$.   
+
+ - Defined from Itakura /et al./, (Acta Materialia, 2013) as
+
+   # $E^{\text{LT}} = \frac{K}{2}\sum_j(P_j + P_{j + 1})^2$
+   # $+ \sum_j  E_\text{P}(\mathbf{P}_j)$
+   # $+ \big\{ (\sigma$
+   # $\otimes \mathbf{b})$
+   # $\times  \mathbf{l} \big\}$
+   # $\cdot\mathbf{P_j}$
+   # $-\sum_{j,k} E_{\text{C}}(\mathbf{P}_j - \mathbf{P}_k^{\text{C}} )$
+   
+   # #+BEGIN_LATEX
+     \begin{align*}
+      E^{\text{LT}} = &\frac{K}{2}\sum_j(\mathbf{P}_j + \mathbf{P}_{j + 1})^2 + \sum_j
+     E_\text{P}(\mathbf{P}_j) + \big\{ (\sigma \otimes \mathbf{b}) \times
+     \mathbf{l} \big\} \cdot \mathbf{P_j} \\&- \sum_{j,k} E_{\text{C}}(
+     |\mathbf{P}_j - \mathbf{P}_k^{\text{C}} |) 
+   \end{align*}
+   # #+END_LATEX
+ - One can calculate:
+   - Kink-pair formation energies with C in different sites.
+   - C-kink trapping energies and a critical escape stress 
+  # - Minimisation of energy will be achieved by the string method.
+      
+
+** Kinetic Monte-Carlo
+
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 60%">
+
+- kMC simulations model the movement of dislocations on larger
+  temporal and spatial scales than atomistics.
+- Propogation of dislocation line segments are treated as rare events
+  with particular rates and mechanisms depending on local environment.
+- Rates for each of the mechanisms are derived from atomistic
+  calculations.
+- One can calculate dislocation velocity as a function of stress,
+  temperature and C concentration. 
+
+  [3] Katzarov /et al./, Physical Review Materials, 2017
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 40%">
+#+REVEAL_HTML:  <img width="277" src="file:///home/tigany/Documents/docs/Management/Images/hyd_emb_I_screw_400K_200MPa_50appm.png" >
+#+REVEAL_HTML: </div>
+** Summary of Methods
+  - Tight-binding simulations will be used to determine influence of
+    carbon on dislocations and line tension model constants.
+  - From line tension model of Fe dislocation, one can find
+    stress-dependent kink-pair formation energies for kMC.
+  - From Kinetic Monte-Carlo model of dislocations in carbon
+    environment, we can observe influence of C on dislocation
+    on larger timescales. 
+  #+NAME: process
+  #+ATTR_REVEAL: :frag fade-in
+  #+ATTR_HTML: :width 100% :style position:relative;top:0px;left:0px;z_index:1;
+    [[file:~/Documents/docs/Management/Images/skf_process_tb_lt_kmc.PNG]]
+
+
+# * Objectives
+#   #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#   #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
+#   #+REVEAL_HTML: </div>
+
+#   #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#   - Build kinetic Monte-Carlo (kMC) model of dislocation motion. 
+#   - Atomistic (tight-binding) simulations used to obtain formation
+#     energies necessary for kMC:
+#     1) Kink-pair formation energies as a function of carbon content
+#        and stress.
+#     2) Dissolution energies of carbon near core of dislocation as a
+#        function of stress.
+#   - kMC model used to see larger scale movement of screw dislocation
+#     by kink-pair formation, in environment of C. 
+#   #+REVEAL_HTML: </div>  
+*  Plan
+
+  #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+  #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/bcc_kink_pair_iron_easy_to_easy_core.png">
+  #+REVEAL_HTML: </div>
+  #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+  _Tight-binding:_
+  1) C solution/binding energies
+     - In perfect lattice
+     - With dislocation
+  2) Peierls barrier
+  3) Constants for line tension model
+
+  _Line tension model:_
+  1) Kink-pair formation energies
+     - W/o & w/ C in different sites
+     - Under stress
+  2) Kink trapping by C
+     - Critical stress
+  3) kMC transition rates 
+
+
+  #+REVEAL_HTML: </div>  
+
+** Timeline
+  #+NAME: bcc kink pair
+  #+ATTR_REVEAL: :frag fade-in
+  #+ATTR_HTML: :width 100% :style position:relative;top:0px;left:0px;z_index:1;
+   [[file:~/Documents/docs/Management/Images/skf_gantt_chart_der_project_detailed_updated_2.PNG]]
+
+* Summary
+  - Dislocation-assisted carbon migration thought to be fundamental
+    mechanism behind DER formation.
+  - No consensus on which mechanism is correct, if it is at all the case. 
+  - Simulations can give insight into how dislocations interact with
+    carbon, thus clarifying potential mechanism.
+
+  - Tight-binding can be used to model energetics of carbon and
+    dislocations and constants for line tension model.
+  - Line tension model can obtain kink-pair formation and solute trap
+    energies for kMC model.
+  - kMC model allows for observation of dislocation motion on longer
+    length and time scales, enabling elucidation of mechanisms for
+    dislocation-assisted carbon migration.
+  # - A combination of atomistic and kinetic monte-carlo simulations can
+  #   be used to accurately model the behaviour of dislocations in an
+  #   environment of carbon.
+* Questions?
+

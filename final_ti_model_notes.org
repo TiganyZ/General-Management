@@ -215,14 +215,42 @@ DFT pseudopot:
     positions. The burger's vector seen in these plots is the partial $1/6 [11\bar{2}0]$. The
     original dislocation, of burger's vector $1/3 [11\bar{2}0]$, should dissociate into two
     dislocations on the primatic plane, each with burger's vector $1/6 [11\bar{2}0]$. The atoms were
-    relaxed until the root-mean square force acting on each atom was less than $1\times 10^{-5}$
+    relaxed until the root-mean square force acting on each atom was less than $4\times 10^{-5}$
     Ryd/Bohr.
 
     These relaxations can be distinguished by the different initial
     positions of the dislocation centre (elastic centre) as following
-    the paper by Tarrat cite:Tarrat2009.
+    the paper by Tarrat cite:Tarrat2009. Cell geometry was 16x16x1,
+    where the unit cell was of four atoms, with $x$, $y$ and $z$ axes
+    given by $[0001]$, $[\bar{1}100]$ and $1/3[11\bar{2}0]$
+    respectively. 
 
     [[file:Images/tarrat_hcp_core_structures.png]]
+
+    A quadrupolar array of dislocations was created using the "S"
+    arrangement of Clouet cite:Clouet2012: the cut plane of the
+    dislocation dipole is aligned along the diagonal of the cell;
+    dislocations of the same helicity are found on the same $x$ and
+    $y$ planes. This was found to give more satisfactory results for
+    Peierls barrier calculations (the "O" configuration---where the
+    dipole cut plane is parallel to the x axis---resulted in the
+    peierls barrier increasing with cell size, whereas the opposite
+    was found for the "S" arrangement). Displacements for each of the
+    dislocations were determined by solutions to the anisotropic
+    elasticity equations.
+
+    To accomodate for the plastic strain introduced with the addition of
+    a dislocation dipole in the simulation cell, an elastic strain was
+    applied, resulting in the tilting of the principal lattice
+    vectors. 
+
+    To satisfy periodic boundary conditions, periodic displacements
+    were calculated from the superposition of displacements from a
+    $30x30$ array of dislocation dipoles, with the subtraction of the
+    spurious linear term due to the conditional convergence of the sum
+    cite:vasilybulatov2006.
+    
+    
 
 ** Discussion
     One can see that all of the dislocations have dissociated on the
@@ -475,6 +503,11 @@ DFT pseudopot:
    #+ATTR_LATEX: :width 0.7\textwidth :center t
    [[file:Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png]]
   
+** TODO Replot all dislocations and do analysis in Atomman.
+   This will be very useful as one can see plots of the Nye tensor, so
+   one can truly see where the partials are and their dislocation
+   centres. 
+
 ** Peierls Stress  
 
    By straining the cell of a relaxed lattice and incrementally increasing the strain, one
@@ -551,9 +584,9 @@ DFT pseudopot:
     Applying an xz strain to the lattice causes the dislocation to
     move along the prismatic plane. 
 
-    Using an increment in the strain of $0.0001C^{*}$, where $C^{*}$ is
+    Using an increment in the strain of $1\times 10^{-4}C^{*}$, where $C^{*}$ is
     the transformed elastic constant, with a value of $C_{44}^{*}=38.4749$
-    GPa, we find that actually the dislocation moves from one Peierls
+    GPa, we find that the dislocation moves from one Peierls
     valley along the prismatic plane at $0.0012C_{44}^{*}$, giving a Peierls
     stress of $\sigma_xz = 2C_{44}\varepsilon_{xz} = 0.0923$ GPa
 
@@ -574,8 +607,20 @@ DFT pseudopot:
 
 *** yz Strain
 
-    This is the strain necessary for movement on the 
+    This is the strain necessary for movement on the basal
+    plane. Following the procedure above, one does not obtain
+    recombination of partials, or any movement of the dislocation onto
+    the basal plane. 
 
+    Increasing the accumulated strain up to 10\%, still in steps of
+    0.001C to see if there is any difference. 
+
+    Furthermore, one is starting from initial anisotropic elasticity
+    solutions, applying strain and then relaxing, such that one may be
+    able to find a strain where the screw dislocation has spread in
+    the basal plane.
+
+    
 *** xy strain 
 
     An xy strain can move the partials of the prismatic plane apart. 
@@ -636,26 +681,82 @@ DFT pseudopot:
 
 * Binding energies to dislocations
   
-  A strategy to find the binding energies of different sites are to
-  firstly just determine. 
+  A strategy to find the binding energies of different interstitial
+  sites. 
 
-  1) Octahedral sites near the dislocation core
-     - Shall one find a radius within which one can find binding
-       sites?
-     - Shall one build the perfect lattice and then move the site
-       into the relaxed octahedral one. 
-     - Find non-equivalent sites near the core
-     - Find the average dislplacement going from the perfect site to
-       the relaxed cell with dislocation
-     - Displace octahedral site by the average of the displacement of
-       the octahedral sites. 
+  1) Find cores of the dislocation using my in-house differential
+     displacement map analysis.
+  2) Identify octahedral sites near the cores.
+  3) Translate octahedral sites from the perfect lattice to the
+     lattice with a dislocation by the average displacement of the six
+     surrounding lattice sites. .
+  4) Put the solute into a given interstitial site such that upon
+     application of the transformation of lattice from one
+     dislocation core to another (upon rotation and reflection), the
+     interstitial is in an equivalent position. (If one were to look
+     at each dislocation in with the burgers vector pointing into the
+     page, the site should be equivalent.)
+  5) Relax and find the binding energy by calculating the difference
+     in energy from the relaxed dislocation to the unrelaxed. 
+
+     
+** Dissolution Energy Equation
+   
+   The binding energy of oxygen to a dislocation can be given by the
+   following equation:
+
+   \[ E^{\text{sol}}_{\text{O-disl.}} = E_{\text{disl} + n\text{O}} -
+   E_{\text{disl}} - \frac{n}{2} E_{\text{O}_2}   \]
+
+   Here, the energy of molecular oxygen $E_{\text{O}_2}/2$ is -5.6eV/atom
+   from Aksyonov 2016 cite:Aksyonov2016. 
+
+
+   
+** Current status of simulation
+   
+   An S-arrangement of dislocation dipoles what created in a 12x12
+   supercell of 576 atoms oriented such that the $1/3[11\bar{2}0]$
+   direction was parallel to the z axis. The dislocation cores were in
+   the initial position 5 (IP5) and relaxed.
+
+   The cell was augmented by two extra periodic images in the
+   z-direction, creating a 12x12x3 cell of 1728 atoms. 
+
+   Oxygen was put into octahedral sites in increasing distance
+   from each of the cores. The distance was up to four octahedral sites
+   from the core along the prismatic plane and four prismatic planes
+   along. This gives 16 sites from which one can extract the
+   dependence of the dislocation binding energy with distance from the
+   dislocation core.
+
+   These will provide references for the embedding calculations. It is
+   hoped that embedding will give more accurate answers due to:
+   1. There only being one dislocation in an embedding cell:
+      - Dislocation strain fields are long-ranged, therefore one can
+        expect errors due the the additional dislocation-dislocation
+        interaction upon relaxation. 
+
+
+
+
+  # 1) Octahedral sites near the dislocation core
+  #    - Shall one find a radius within which one can find binding
+  #      sites?
+  #    - Shall one build the perfect lattice and then move the site
+  #      into the relaxed octahedral one. 
+  #    - Find non-equivalent sites near the core
+  #    - Find the average dislplacement going from the perfect site to
+  #      the relaxed cell with dislocation
+  #    - Displace octahedral site by the average of the displacement of
+  #      the octahedral sites. 
        
-  2) Relax the relaxed dislocation and the binding sites such that one
-     can find the solution energy. 
+  # 2) Relax the relaxed dislocation and the binding sites such that one
+  #    can find the solution energy. 
 
-  3) Make perfect lattice, then find displacement from relaxed. Find
-     all octahedral sites near a particular dislocation core and then
-     displace cite by amount
+  # 3) Make perfect lattice, then find displacement from relaxed. Find
+  #    all octahedral sites near a particular dislocation core and then
+  #    displace cite by amount
 
   
 * BOP
