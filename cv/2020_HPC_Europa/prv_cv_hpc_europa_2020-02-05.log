@@ -1,0 +1,154 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.16)  5 FEB 2020 22:24
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&pdflatex prv_cv_hpc_europa_2020-02-05.ini \nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input \detokenize{ cv_hpc_europa_2020-02-05.tex }
+(./prv_cv_hpc_europa_2020-02-05.ini
+LaTeX2e <2019-10-01> patch level 1
+(/usr/share/texmf-dist/tex/latex/carlisle/mylatex.ltx) (/usr/share/texmf-dist/tex/latex/tools/.tex File ignored))
+No auxiliary output files.
+
+(./cv_hpc_europa_2020-02-05.tex (./res.cls
+Document Style `res' <26 Sep 89>.
+Document Class: res 2000/05/19 v1.4b Resume class
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+No auxiliary output files.
+
+\tabular@text=\toks14
+\tabular@head=\toks15
+\tabular@tail=\toks16
+\@ta=\toks17
+\undefined@token=\toks18
+\sectionwidth=\dimen103
+\sectionskip=\skip43
+\resumewidth=\dimen104
+\@columnwidth=\dimen105
+\c@numberofcolumns=\count88
+) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 28.
+ )
+Beginning to dump on file prv_cv_hpc_europa_2020-02-05.fmt
+ (preloaded format=prv_cv_hpc_europa_2020-02-05 2020.2.5)
+8197 strings of total length 122841
+62760 memory locations dumped; current usage is 219&61323
+4793 multiletter control sequences
+\font\nullfont=nullfont
+\font\OMX/cmex/m/n/5=cmex10
+\font\tenln=line10
+\font\tenlnw=linew10
+\font\tencirc=lcircle10
+\font\tencircw=lcirclew10
+\font\OT1/cmr/m/n/5=cmr5
+\font\OT1/cmr/m/n/7=cmr7
+\font\OT1/cmr/m/n/10=cmr10
+\font\OML/cmm/m/it/5=cmmi5
+\font\OML/cmm/m/it/7=cmmi7
+\font\OML/cmm/m/it/10=cmmi10
+\font\OMS/cmsy/m/n/5=cmsy5
+\font\OMS/cmsy/m/n/7=cmsy7
+\font\OMS/cmsy/m/n/10=cmsy10
+\font\OT1/cmr/m/n/12=cmr12
+\font\OT1/cmr/m/n/8=cmr8
+\font\OT1/cmr/bx/n/10=cmbx10
+\font\OT1/cmr/bx/it/10=cmbxti10
+\font\OT1/cmr/m/it/10=cmti10
+\font\OT1/cmtt/m/n/10=cmtt10
+\font\OT1/cmss/m/n/10=cmss10
+5716 words of font info for 21 preloaded fonts
+1141 hyphenation exceptions
+Hyphenation trie of length 374818 has 8781 ops out of 35111
+  143 for language 84
+  110 for language 83
+  138 for language 82
+  7 for language 81
+  12 for language 80
+  53 for language 79
+  127 for language 78
+  183 for language 77
+  71 for language 76
+  248 for language 75
+  62 for language 74
+  66 for language 73
+  119 for language 71
+  43 for language 70
+  58 for language 69
+  7 for language 68
+  194 for language 67
+  37 for language 66
+  23 for language 65
+  852 for language 64
+  852 for language 63
+  21 for language 62
+  38 for language 61
+  77 for language 60
+  58 for language 59
+  206 for language 58
+  105 for language 57
+  25 for language 56
+  27 for language 55
+  37 for language 54
+  229 for language 53
+  38 for language 52
+  21 for language 51
+  147 for language 38
+  185 for language 37
+  50 for language 36
+  18 for language 35
+  460 for language 34
+  235 for language 33
+  207 for language 32
+  39 for language 31
+  76 for language 30
+  40 for language 29
+  89 for language 28
+  31 for language 27
+  113 for language 24
+  145 for language 23
+  377 for language 22
+  224 for language 21
+  265 for language 20
+  60 for language 19
+  63 for language 18
+  19 for language 17
+  14 for language 16
+  3 for language 14
+  21 for language 13
+  54 for language 12
+  36 for language 11
+  5 for language 10
+  148 for language 7
+  97 for language 6
+  137 for language 5
+  475 for language 4
+  478 for language 3
+  2 for language 1
+  181 for language 0
+0 words of pdfTeX memory
+0 indirect objects
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

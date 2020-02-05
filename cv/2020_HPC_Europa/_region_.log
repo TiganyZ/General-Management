@@ -1,0 +1,62 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=prv_cv_hpc_europa_2020-02-05 2020.2.5)  5 FEB 2020 22:24
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**&prv_cv_hpc_europa_2020-02-05 /AUCTEXINPUT{ _region_.tex }
+(./_region_.tex
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+(/home/tigany/.emacs.d/elpa/auctex-12.2.0/latex/preview.sty
+Package: preview 2017/04/24 12.2 (AUCTeX/preview-latex)
+ (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (/home/tigany/.emacs.d/elpa/auctex-12.2.0/latex/prtightpage.def
+\PreviewBorder=\dimen106
+) (/home/tigany/.emacs.d/elpa/auctex-12.2.0/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count89
+\hfuzz=\dimen107
+(/home/tigany/.emacs.d/elpa/auctex-12.2.0/latex/prauctex.cfg)) (/home/tigany/.emacs.d/elpa/auctex-12.2.0/latex/prfootnotes.def)
+\pr@snippet=\count90
+\pr@box=\box27
+\pr@output=\toks19
+
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+)  !name(cv_hpc_europa_2020-02-05.tex) !offset(-3) 
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 64.
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+ ) 
+Here is how much of TeX's memory you used:
+ 208 strings out of 491803
+ 3092 string characters out of 6127159
+ 74651 words of memory out of 5000000
+ 4972 multiletter control sequences out of 15000+600000
+ 6030 words of font info for 22 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,8n,29p,313b,184s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
