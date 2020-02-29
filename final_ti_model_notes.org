@@ -209,475 +209,570 @@ DFT pseudopot:
 [[file:~/Documents/ti/final_model_2019-11-12/gamma_surfaces/pyramidal_results_2019-11-13/pyramidal_gamma_surface_2019-11-13.dat][pyramidal_gs_data]]
 * Dislocation core structures
 
-** Methodology
-    In the following, we see results of dislocation relaxation. The partial differential
-    displacement maps are of dislocations in their initial and final states in different initial
-    positions. The burger's vector seen in these plots is the partial $1/6 [11\bar{2}0]$. The
-    original dislocation, of burger's vector $1/3 [11\bar{2}0]$, should dissociate into two
-    dislocations on the primatic plane, each with burger's vector $1/6 [11\bar{2}0]$. The atoms were
-    relaxed until the root-mean square force acting on each atom was less than $4\times 10^{-5}$
-    Ryd/Bohr.
 
-    These relaxations can be distinguished by the different initial
-    positions of the dislocation centre (elastic centre) as following
-    the paper by Tarrat cite:Tarrat2009. Cell geometry was 16x16x1,
-    where the unit cell was of four atoms, with $x$, $y$ and $z$ axes
-    given by $[0001]$, $[\bar{1}100]$ and $1/3[11\bar{2}0]$
-    respectively. 
+** Quadrupolar Array
 
-    [[file:Images/tarrat_hcp_core_structures.png]]
+*** Methodology
+     In the following, we see results of dislocation relaxation. The partial differential
+     displacement maps are of dislocations in their initial and final states in different initial
+     positions. The burger's vector seen in these plots is the partial $1/6 [11\bar{2}0]$. The
+     original dislocation, of burger's vector $1/3 [11\bar{2}0]$, should dissociate into two
+     dislocations on the primatic plane, each with burger's vector $1/6 [11\bar{2}0]$. The atoms were
+     relaxed until the root-mean square force acting on each atom was less than $4\times 10^{-5}$
+     Ryd/Bohr.
 
-    A quadrupolar array of dislocations was created using the "S"
-    arrangement of Clouet cite:Clouet2012: the cut plane of the
-    dislocation dipole is aligned along the diagonal of the cell;
-    dislocations of the same helicity are found on the same $x$ and
-    $y$ planes. This was found to give more satisfactory results for
-    Peierls barrier calculations (the "O" configuration---where the
-    dipole cut plane is parallel to the x axis---resulted in the
-    peierls barrier increasing with cell size, whereas the opposite
-    was found for the "S" arrangement). Displacements for each of the
-    dislocations were determined by solutions to the anisotropic
-    elasticity equations.
+     These relaxations can be distinguished by the different initial
+     positions of the dislocation centre (elastic centre) as following
+     the paper by Tarrat cite:Tarrat2009. Cell geometry was 16x16x1,
+     where the unit cell was of four atoms, with $x$, $y$ and $z$ axes
+     given by $[0001]$, $[\bar{1}100]$ and $1/3[11\bar{2}0]$
+     respectively. 
 
-    To accomodate for the plastic strain introduced with the addition of
-    a dislocation dipole in the simulation cell, an elastic strain was
-    applied, resulting in the tilting of the principal lattice
-    vectors. 
+     [[file:Images/tarrat_hcp_core_structures.png]]
 
-    To satisfy periodic boundary conditions, periodic displacements
-    were calculated from the superposition of displacements from a
-    $30x30$ array of dislocation dipoles, with the subtraction of the
-    spurious linear term due to the conditional convergence of the sum
-    cite:vasilybulatov2006.
+     A quadrupolar array of dislocations was created using the "S"
+     arrangement of Clouet cite:Clouet2012: the cut plane of the
+     dislocation dipole is aligned along the diagonal of the cell;
+     dislocations of the same helicity are found on the same $x$ and
+     $y$ planes. This was found to give more satisfactory results for
+     Peierls barrier calculations (the "O" configuration---where the
+     dipole cut plane is parallel to the x axis---resulted in the
+     peierls barrier increasing with cell size, whereas the opposite
+     was found for the "S" arrangement). Displacements for each of the
+     dislocations were determined by solutions to the anisotropic
+     elasticity equations.
+
+     To accomodate for the plastic strain introduced with the addition of
+     a dislocation dipole in the simulation cell, an elastic strain was
+     applied, resulting in the tilting of the principal lattice
+     vectors. 
+
+     To satisfy periodic boundary conditions, periodic displacements
+     were calculated from the superposition of displacements from a
+     $30x30$ array of dislocation dipoles, with the subtraction of the
+     spurious linear term due to the conditional convergence of the sum
+     cite:vasilybulatov2006.
     
     
 
-** Discussion
-    One can see that all of the dislocations have dissociated on the
-    prismatic plane. But there is a difference between initial
-    positions as to upon which prismatic plane they dissociate on,
-    from the original. 
+*** Discussion
+     One can see that all of the dislocations have dissociated on the
+     prismatic plane. But there is a difference between initial
+     positions as to upon which prismatic plane they dissociate on,
+     from the original. 
 
-    None of these states have dissociated onto the proposed pyramidally spread ground state that is
-    proposed by Clouet cite:Clouet2015.
+     None of these states have dissociated onto the proposed pyramidally spread ground state that is
+     proposed by Clouet cite:Clouet2015.
 
-    Only initial position 2 actually dissociated on a different
-    prismatic plane to the others. 
+     Only initial position 2 actually dissociated on a different
+     prismatic plane to the others. 
 
-    The positions of the partials are also different once each of the
-    separate initial positions have been relaxed. 
-
-
-    IP2 and IP3, although they are on different planes, have a very
-    similar core structure to each other. They are both asymmetric
-    cores. 
+     The positions of the partials are also different once each of the
+     separate initial positions have been relaxed. 
 
 
-    IP1 has the upper partial dislocation located within an adjacent
-    triangle to the left, compared to IP2 and IP3. The lower partial
-    has been shifted downwards, by one triangle down and to the right,
-    with respect to IP3. The core structure of IP5 is
-    indistinguishable from IP1. These cores can be deemed as
-    metastable, as they have a slightly higher energy than the other
-    cores.
+     IP2 and IP3, although they are on different planes, have a very
+     similar core structure to each other. They are both asymmetric
+     cores. 
 
 
-    The upper partial of IP4 has been displaced upwards by one Peierls
-    valley with respect to IP3. The lower partial is in the same
-    triangle as IP3. IP4 is a mirrored core. 
+     IP1 has the upper partial dislocation located within an adjacent
+     triangle to the left, compared to IP2 and IP3. The lower partial
+     has been shifted downwards, by one triangle down and to the right,
+     with respect to IP3. The core structure of IP5 is
+     indistinguishable from IP1. These cores can be deemed as
+     metastable, as they have a slightly higher energy than the other
+     cores.
+
+
+     The upper partial of IP4 has been displaced upwards by one Peierls
+     valley with respect to IP3. The lower partial is in the same
+     triangle as IP3. IP4 is a mirrored core. 
 
     
-    Each of these cores are asymmetric, using the definition by Tarrat
-    cite:Tarrat2009. 
+     Each of these cores are asymmetric, using the definition by Tarrat
+     cite:Tarrat2009. 
 
-    The energies for each of the dislocation cores, when relaxed to
-    $1\times 10^{-5}$ Ryd/Bohr is 
+     The energies for each of the dislocation cores, when relaxed to
+     $1\times 10^{-5}$ Ryd/Bohr is 
 
-     | Initial position |        E_total [Ryd] |
-     |------------------+---------------|
-     |                1 | -331.54658899 |
-     |                2 | -331.54660063 |
-     |                3 | -331.54660053 |
-     |                4 | -331.54660061 |
-     |                5 | -331.54658717 |
+      | Initial position |        E_total [Ryd] |
+      |------------------+---------------|
+      |                1 | -331.54658899 |
+      |                2 | -331.54660063 |
+      |                3 | -331.54660053 |
+      |                4 | -331.54660061 |
+      |                5 | -331.54658717 |
 
 
 
      
-    The dissociation distance is consistent between the different
-    initial positions of the elastic centres. The distance is $\approx 4c =
-    35.4$ Bohr $= 18.7 \AA$, this is double the distance seen in
-    Ghazisaedi and Trinkle cite:Ghazisaeidi2012 and double the
-    distance that is found in the DFT Zr results by Clouet
-    cite:Clouet2012.
+     The dissociation distance is consistent between the different
+     initial positions of the elastic centres. The distance is $\approx 4c =
+     35.4$ Bohr $= 18.7 \AA$, this is double the distance seen in
+     Ghazisaedi and Trinkle cite:Ghazisaeidi2012 and double the
+     distance that is found in the DFT Zr results by Clouet
+     cite:Clouet2012.
 
-    # There is a small energy difference between the dip in the
-    # prismatic gamma surface along the $1/3 [11\bar{2}0]$
-    # direction. This means that along that direction, due to the small
-    # relative energy barrier between the trough in the centre of the
-    # gamma surface line and the peaks, so to speak, the dislocation
-    # can dissociate easily along this direction. 
+     # There is a small energy difference between the dip in the
+     # prismatic gamma surface along the $1/3 [11\bar{2}0]$
+     # direction. This means that along that direction, due to the small
+     # relative energy barrier between the trough in the centre of the
+     # gamma surface line and the peaks, so to speak, the dislocation
+     # can dissociate easily along this direction. 
 
 
 
-** TODO Dissociation Distance Analysis
-   Following cite:Clouet2012, one can dislocation elasticity theory to
-   compute the dissociation distance of a dislocation in both the
-   basal and prism planes.  The energy variation caused by a
-   dissociation length $d$ is
+*** TODO Dissociation Distance Analysis
+    Following cite:Clouet2012, one can dislocation elasticity theory to
+    compute the dissociation distance of a dislocation in both the
+    basal and prism planes.  The energy variation caused by a
+    dissociation length $d$ is
    
-   \[ \Delta E_{\text{diss}}(d) = - b_i^{(1)}K_{ij}b_j^{(2)}\ln \big( \frac{d}{r_c}
-   \big) + \gamma d,  \]
+    \[ \Delta E_{\text{diss}}(d) = - b_i^{(1)}K_{ij}b_j^{(2)}\ln \big( \frac{d}{r_c}
+    \big) + \gamma d,  \]
 
-   where $\mathbf{b}^{(i)}$ are the burger's vectors of the dissociated
-   dislocations.  $\gamma$ is the corresponding gamma surface energy and
-   $K$ is the Stroh matrix. Controlling the dislocation core radius
-   and the dislocation elastic energy, one can find the equilibrium
-   dissociation distance as 
-
-   \[
-   d^{\text{eq}} = \frac{ b_i^{(1)}K_{ij}b_j^{(2) }}{\gamma}
-   \]
-
-
-   With the orientation of the simulation cell as, $U_1 = na \frac{1}{2} [10\bar{1}0]$, $U_2 = mc [0001]$, 
-    $U_3 =  a \frac{1}{3} [1\bar{2}10]$, one finds the components of
-    the Stroh matrix as:
-
-    \begin{align}
-    &K_{11} =& &\frac{1}{2\pi} \big( \bar{C}_{11} + C_{13} \big)
-          \sqrt{ \frac{ C_{44} \big( \bar{C}_{11} - C_{13} \big)  }{
-	          C_{33} \big( \bar{C}_{11} + C_{13} + 2C_{44} \big)  } 
-	       }
-    \\    
-    &K_{22 }=& &\sqrt{ \frac{ C_{33} }{ C_{11} }  } K_{11}
-    \\
-    &K_{33} =& &\frac{1}{2\pi} \sqrt{ \frac{1}{2} C_{44} \big( C_{11} - C_{12} \big)  }_{}
-    \end{align}
-
-    here, $\bar{C}_{11} = \sqrt{ C_{11}C_{33} }$.
-
-
-    From the gamma surface, for the basal plane one expects a
-    dissociation of $1/3[1\bar{2}10] = 1/3[1\bar{1}00] +
-    1/3[0\bar{1}10]$. Then dissociation length in the basal plane is
-    given by 
+    where $\mathbf{b}^{(i)}$ are the burger's vectors of the dissociated
+    dislocations.  $\gamma$ is the corresponding gamma surface energy and
+    $K$ is the Stroh matrix. Controlling the dislocation core radius
+    and the dislocation elastic energy, one can find the equilibrium
+    dissociation distance as 
 
     \[
-    d_{\text{b}}^{\text{eq}} = \frac{ ( 3K_{33} - K_{11} ) a^2 }{ 12 \gamma_{\text{b}} } 
+    d^{\text{eq}} = \frac{ b_i^{(1)}K_{ij}b_j^{(2) }}{\gamma}
     \]
 
-    For the prism plane the $1/3[1\bar{2}10]$ dislocation can
-    dissociate into $1/6[1\bar{2}10] \pm \alpha(c/a)[0001]$ where the
-    parameter $\alpha$ controls the position of the stacking fault minimum
-    along the [0001] direction. Only in interatomic potentials like
-    the EAM, do we find that $\alpha = 0.14$. 
 
-    The dissociation length is 
+    With the orientation of the simulation cell as, $U_1 = na \frac{1}{2} [10\bar{1}0]$, $U_2 = mc [0001]$, 
+     $U_3 =  a \frac{1}{3} [1\bar{2}10]$, one finds the components of
+     the Stroh matrix as:
 
-    \[
-    d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
-    \]
+     \begin{align}
+     &K_{11} =& &\frac{1}{2\pi} \big( \bar{C}_{11} + C_{13} \big)
+           \sqrt{ \frac{ C_{44} \big( \bar{C}_{11} - C_{13} \big)  }{
+	           C_{33} \big( \bar{C}_{11} + C_{13} + 2C_{44} \big)  } 
+		}
+     \\    
+     &K_{22 }=& &\sqrt{ \frac{ C_{33} }{ C_{11} }  } K_{11}
+     \\
+     &K_{33} =& &\frac{1}{2\pi} \sqrt{ \frac{1}{2} C_{44} \big( C_{11} - C_{12} \big)  }_{}
+     \end{align}
+
+     here, $\bar{C}_{11} = \sqrt{ C_{11}C_{33} }$.
+
+
+     From the gamma surface, for the basal plane one expects a
+     dissociation of $1/3[1\bar{2}10] = 1/3[1\bar{1}00] +
+     1/3[0\bar{1}10]$. Then dissociation length in the basal plane is
+     given by 
+
+     \[
+     d_{\text{b}}^{\text{eq}} = \frac{ ( 3K_{33} - K_{11} ) a^2 }{ 12 \gamma_{\text{b}} } 
+     \]
+
+     For the prism plane the $1/3[1\bar{2}10]$ dislocation can
+     dissociate into $1/6[1\bar{2}10] \pm \alpha(c/a)[0001]$ where the
+     parameter $\alpha$ controls the position of the stacking fault minimum
+     along the [0001] direction. Only in interatomic potentials like
+     the EAM, do we find that $\alpha = 0.14$. 
+
+     The dissociation length is 
+
+     \[
+     d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
+     \]
 
     
 
-*** Analysis with Final Ti model. 
+**** Analysis with Final Ti model. 
     
  
-   \[
-    d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
-    \]
-    
-    Using the above equation to calculate the dissociation distance with $K_{33} = 6.79853$ GPa $=
-    6.79853 / 160.21766208$ eV/\AA^3 $= 0.042433087$ eV/\AA^3, $\alpha = 0$ and $\gamma_{\text{p}} =
-    98.95340236$ mJm^{-2} $= 1.6021766208*10^{-19} * 10^{-3} * 10^{20} * 98.95340236$ eV/\AA^3 $ =
-    1.58540827809$ eV/\AA^3, $a = 2.955577 \AA$ we have the equilibrium dissociation distance in the
-    prismatic plane as $d_{\text{p}}^{\text{eq}} = 0.05845$ \AA, which seems very small, comparing
-    to the differential displacement maps...
-    
-    Further scrutiny is necessary. 
-
-** TODO Disregistry Analysis
-    Look into the theory of dissociation distance in Clouet paper
-    cite:Clouet2012
-
-
-    Disregistry given by the Peierls-Nabarro model. Analytic
-    expression given in Hirth and Lothe cite:anderson2017theory.
-
-    Disregistry $D(x)$ is defined as the displacement difference
-    between the atoms in the plane just above and those just below the
-    dislocation glide plane. The derivative of this function $\rho(x) = \partial
-    D / \partial x$ corresponds to the dislocation density.
-    
-
     \[
-    D_{\text{dislo}} = \frac{b}{2\pi} 
-    \Bigg\{ \arctan \bigg[  \frac{x - x_0 - d/2}{ \zeta } \bigg] +
-           \arctan \bigg[  \frac{x - x_0 + d/2}{ \zeta } + \frac{\pi}{2} \bigg]
-	   \Bigg\}
-    \]
-
-    Given $x_0$ is the dislocation position, $d$ is dissociation
-    length and $\zeta$ is the spreading of each partial dislocation. 
+     d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
+     \]
     
-    \begin{align*}
-      D_{L} &= &\sum_{n = -\infty}^{\infty}  &D_{\text{dislo}} (x - nL) \\
-         &= &\frac{ b }{ 2\pi } 
-            \Bigg \{ 
-             &\arctan \bigg[ 
-                \frac{ 
-                      \tan \big( \frac{\pi}{L} [x - x_0 - d/2] \big)
-                     }{ 
-                     \tanh \big( \frac{\pi\zeta}{L} \big)
-                      } \bigg]
-           + \pi\bigg\lfloor 
-       	     \frac{x - x_0 - d/2}{ \zeta } + \frac{1}{2}
-       	   \bigg\rfloor \\
-       & &+
-             &\arctan \bigg[ 
-                \frac{ 
-                      \tan \big( \frac{\pi}{L} [x - x_0 + d/2] \big)
-                     }{ 
-                     \tanh \big( \frac{\pi\zeta}{L} \big)
-                      } \bigg]
-           + \pi \bigg\lfloor 
-       	     \frac{x - x_0 + d/2}{ \zeta } + \frac{1}{2}
-       	   \bigg\rfloor    \Bigg\},
-    \end{align*}
+     Using the above equation to calculate the dissociation distance with $K_{33} = 6.79853$ GPa $=
+     6.79853 / 160.21766208$ eV/\AA^3 $= 0.042433087$ eV/\AA^3, $\alpha = 0$ and $\gamma_{\text{p}} =
+     98.95340236$ mJm^{-2} $= 1.6021766208*10^{-19} * 10^{-3} * 10^{20} * 98.95340236$ eV/\AA^3 $ =
+     1.58540827809$ eV/\AA^3, $a = 2.955577 \AA$ we have the equilibrium dissociation distance in the
+     prismatic plane as $d_{\text{p}}^{\text{eq}} = 0.05845$ \AA, which seems very small, comparing
+     to the differential displacement maps...
+    
+     Further scrutiny is necessary. 
 
-    where $\lfloor \cdot \rfloor$ is the floor function. 
-
-    For an array of dislocations in the S arrangement, $D(x) = D_L(x)$,
-    with $L = mc$, where $m$ is the number of repeated unit cells in
-    the $U_2$ direction. 
-
-    Here, $U_1 = na \frac{1}{2} [10\bar{1}0]$, $U_2 = mc [0001]$, 
-    $U_3 =  a \frac{1}{3} [1\bar{2}10]$.
-
-    Therefore, using this, one can fit the three fitting parameters:
-    the dislocation position $x_0$, the dissociation length $d$, and the
-    spreading $\zeta$. This procedure allows us to determine the
-    location of the dislocation center.
-
-    For all interaction models, we find that this center lies in
-    between two (0001) atomic planes. One can see in Fig. 6 of
-    cite:Clouet2012 that this position corresponds to a local symmetry
-    axis of the differential displacement map. This is different from
-    the result obtained by Ghazisaeidi and Trinkle
-    cite:Ghazisaeidi2012 in Ti where the center of the screw
-    dislocation was found to lie exactly in one (0001) atomic plane.
-
-    \newpage
+*** TODO Disregistry Analysis
+     Look into the theory of dissociation distance in Clouet paper
+     cite:Clouet2012
 
 
-** IP1
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP1_partial_dd_initial.png]]
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP1_partial_dd_final.png]] 
+     Disregistry given by the Peierls-Nabarro model. Analytic
+     expression given in Hirth and Lothe cite:anderson2017theory.
+
+     Disregistry $D(x)$ is defined as the displacement difference
+     between the atoms in the plane just above and those just below the
+     dislocation glide plane. The derivative of this function $\rho(x) = \partial
+     D / \partial x$ corresponds to the dislocation density.
+    
+
+     \[
+     D_{\text{dislo}} = \frac{b}{2\pi} 
+     \Bigg\{ \arctan \bigg[  \frac{x - x_0 - d/2}{ \zeta } \bigg] +
+            \arctan \bigg[  \frac{x - x_0 + d/2}{ \zeta } + \frac{\pi}{2} \bigg]
+	    \Bigg\}
+     \]
+
+     Given $x_0$ is the dislocation position, $d$ is dissociation
+     length and $\zeta$ is the spreading of each partial dislocation. 
+    
+     \begin{align*}
+       D_{L} &= &\sum_{n = -\infty}^{\infty}  &D_{\text{dislo}} (x - nL) \\
+          &= &\frac{ b }{ 2\pi } 
+             \Bigg \{ 
+              &\arctan \bigg[ 
+                 \frac{ 
+                       \tan \big( \frac{\pi}{L} [x - x_0 - d/2] \big)
+                      }{ 
+                      \tanh \big( \frac{\pi\zeta}{L} \big)
+                       } \bigg]
+            + \pi\bigg\lfloor 
+       	      \frac{x - x_0 - d/2}{ \zeta } + \frac{1}{2}
+       	    \bigg\rfloor \\
+	& &+
+              &\arctan \bigg[ 
+                 \frac{ 
+                       \tan \big( \frac{\pi}{L} [x - x_0 + d/2] \big)
+                      }{ 
+                      \tanh \big( \frac{\pi\zeta}{L} \big)
+                       } \bigg]
+            + \pi \bigg\lfloor 
+       	      \frac{x - x_0 + d/2}{ \zeta } + \frac{1}{2}
+       	    \bigg\rfloor    \Bigg\},
+     \end{align*}
+
+     where $\lfloor \cdot \rfloor$ is the floor function. 
+
+     For an array of dislocations in the S arrangement, $D(x) = D_L(x)$,
+     with $L = mc$, where $m$ is the number of repeated unit cells in
+     the $U_2$ direction. 
+
+     Here, $U_1 = na \frac{1}{2} [10\bar{1}0]$, $U_2 = mc [0001]$, 
+     $U_3 =  a \frac{1}{3} [1\bar{2}10]$.
+
+     Therefore, using this, one can fit the three fitting parameters:
+     the dislocation position $x_0$, the dissociation length $d$, and the
+     spreading $\zeta$. This procedure allows us to determine the
+     location of the dislocation center.
+
+     From the Peierls-Nabarro model of an edge dislocation, one finds
+     that the displacement in x $u_x = -\frac{b}{2\pi} \tan^{-1}
+     \frac{x}{\zeta}$, where $\zeta = d/2(1-\nu)$, where the width of
+     the dislocation is $2\zeta$, where the disregistry is one-half the
+     maximum value at x=0.
+
+     For a screw dislocation, one essentially replaces $\zeta$ with
+     $\eta = (1-\nu)\zeta = d/2$
+
+
+     For all interaction models, we find that this center lies in
+     between two (0001) atomic planes. One can see in Fig. 6 of
+     cite:Clouet2012 that this position corresponds to a local symmetry
+     axis of the differential displacement map. This is different from
+     the result obtained by Ghazisaeidi and Trinkle
+     cite:Ghazisaeidi2012 in Ti where the center of the screw
+     dislocation was found to lie exactly in one (0001) atomic plane.
+
+     \newpage
+
+
+*** IP1
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP1_partial_dd_initial.png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP1_partial_dd_final.png]] 
                                                                                                             
-** IP2
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP2_partial_dd_initial..png]]
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP2_partial_dd_final.png]]
-** IP3
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP3_partial_dd_initial.png]]
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP3_partial_dd_final.png]]
-** IP4
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP4_partial_dd_initial.png]]
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP4_partial_dd_final.png]]
-** IP5 
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP5_partial_dd_initial.png]]
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/final_model_IP5_partial_dd_final.png]]
+*** IP2
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP2_partial_dd_initial..png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP2_partial_dd_final.png]]
+*** IP3
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP3_partial_dd_initial.png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP3_partial_dd_final.png]]
+*** IP4
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP4_partial_dd_initial.png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP4_partial_dd_final.png]]
+*** IP5 
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP5_partial_dd_initial.png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/final_model_IP5_partial_dd_final.png]]
 
-** Ghazisaeidi Results for comparison
+*** Ghazisaeidi Results for comparison
 
-   #+ATTR_LATEX: :width 0.7\textwidth :center t
-   [[file:Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png]]
+    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    [[file:Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png]]
   
-** TODO Replot all dislocations and do analysis in Atomman.
-   This will be very useful as one can see plots of the Nye tensor, so
-   one can truly see where the partials are and their dislocation
-   centres. 
+*** TODO Replot all dislocations and do analysis in Atomman.
+    This will be very useful as one can see plots of the Nye tensor, so
+    one can truly see where the partials are and their dislocation
+    centres. 
 
-** Peierls Stress  
+*** Peierls Stress  
 
-   By straining the cell of a relaxed lattice and incrementally increasing the strain, one
-   can find the minimum stress necessary to move a dislocation from one
-   Peierls valley to the next. 
+    By straining the cell of a relaxed lattice and incrementally increasing the strain, one
+    can find the minimum stress necessary to move a dislocation from one
+    Peierls valley to the next. 
 
-*** Applying strain
+**** Applying strain
     
-    Applying strain as in cite:Chen2013. 
+     Applying strain as in cite:Chen2013. 
     
-    Here we are incrementing the strain by $0.001C^{\text{rot}}$, where $C^{\text{rot}}$ is
-    the transformed elastic constant necessary for transforming a
-    strain into a stress from the relation $\sigma_{ij} = C_{ijkl}\varepsilon_{kl}$.
+     Here we are incrementing the strain by $0.001C^{\text{rot}}$, where $C^{\text{rot}}$ is
+     the transformed elastic constant necessary for transforming a
+     strain into a stress from the relation $\sigma_{ij} = C_{ijkl}\varepsilon_{kl}$.
 
-    The original elastic constant matrix in its untransformed state
-    is:
+     The original elastic constant matrix in its untransformed state
+     is:
     
-    \begin{equation*}
-     C =	
-      \begin{bmatrix}
-       171.6093 &  94.6594 &  61.2262 &   0.     &   0.      &  0.      \\
-        94.6594 & 171.6093 &  61.2262 &   0.     &   0.      &  0.      \\
-        61.2262 &  61.2262 & 198.9006 &   0.     &   0.      &  0.      \\
-         0.     &   0.     &   0.     &  47.4255 &   0.      &  0.      \\
-         0.     &   0.     &   0.     &   0.     &  47.4255  &  0.      \\
-         0.     &   0.     &   0.     &   0.     &   0.      & 38.4749  
-      \end{bmatrix}
-    \end{equation*}
+     \begin{equation*}
+      C =	
+       \begin{bmatrix}
+	171.6093 &  94.6594 &  61.2262 &   0.     &   0.      &  0.      \\
+         94.6594 & 171.6093 &  61.2262 &   0.     &   0.      &  0.      \\
+         61.2262 &  61.2262 & 198.9006 &   0.     &   0.      &  0.      \\
+          0.     &   0.     &   0.     &  47.4255 &   0.      &  0.      \\
+          0.     &   0.     &   0.     &   0.     &  47.4255  &  0.      \\
+          0.     &   0.     &   0.     &   0.     &   0.      & 38.4749  
+       \end{bmatrix}
+     \end{equation*}
 
-    Transforming it into the dislocation coordinate system, by the
-    rotation
+     Transforming it into the dislocation coordinate system, by the
+     rotation
 
-    \begin{equation*}
-     R =	
-      \begin{bmatrix}
-        1 & 0 & 0 \\
-        0 & 0 & -1 \\
-        0 & 1 & 0 \\
-      \end{bmatrix}
-    \end{equation*}
-
-
-    \begin{equation*}
-     C^{\text{rot}}=	
-      \begin{bmatrix}
-       171.6093 &  61.2262 &  94.6594 &   0.     &   0.      &  0.      \\
-        61.2262 & 198.9006 &  61.2262 &   0.     &   0.      &  0.      \\
-        94.6594 &  61.2262 & 171.6093 &   0.     &   0.      &  0.      \\
-         0.     &   0.     &   0.     &  47.4255 &   0.      &  0.      \\
-         0.     &   0.     &   0.     &   0.     &  38.4749  &  0.      \\
-         0.     &   0.     &   0.     &   0.     &   0.      & 47.4255  
-      \end{bmatrix}
-    \end{equation*}
-
-    
-
-    For finding the Peierls stress to move partials away from each
-    other on the prismatic plane plane one finds that the stress if
-    given by $\sigma_{xy} = \sigma_{12} =  2C_{66}^{\text{rot}}\varepsilon_{12}$, where $C_{66}^{\text{rot}} =
-    47.4255$ GPa.
-
-    To move the whole dislocation on the prismatic plane, one needs a
-    stress applied which is $\sigma_xz = \sigma_{13} = 2C_{55}^{\text{rot}}\varepsilon_{13}$, $C_{55}^{\text{rot}} =
-    38.4749$ GPa.
-
-    To move the dislocation onto the basal plane one needs to apply as
-    stress given by $\sigma_yz = \sigma_{23} = 2C_{44}^{\text{rot}}\varepsilon_{23}$, $C_{44}^{\text{rot}} =
-    47.4255$ GPa.
+     \begin{equation*}
+      R =	
+       \begin{bmatrix}
+         1 & 0 & 0 \\
+         0 & 0 & -1 \\
+         0 & 1 & 0 \\
+       \end{bmatrix}
+     \end{equation*}
 
 
+     \begin{equation*}
+      C^{\text{rot}}=	
+       \begin{bmatrix}
+	171.6093 &  61.2262 &  94.6594 &   0.     &   0.      &  0.      \\
+         61.2262 & 198.9006 &  61.2262 &   0.     &   0.      &  0.      \\
+         94.6594 &  61.2262 & 171.6093 &   0.     &   0.      &  0.      \\
+          0.     &   0.     &   0.     &  47.4255 &   0.      &  0.      \\
+          0.     &   0.     &   0.     &   0.     &  38.4749  &  0.      \\
+          0.     &   0.     &   0.     &   0.     &   0.      & 47.4255  
+       \end{bmatrix}
+     \end{equation*}
 
-*** xz Strain
-    
-    Applying an xz strain to the lattice causes the dislocation to
-    move along the prismatic plane. 
-
-    Using an increment in the strain of $1\times 10^{-4}C^{*}$, where $C^{*}$ is
-    the transformed elastic constant, with a value of $C_{44}^{*}=38.4749$
-    GPa, we find that the dislocation moves from one Peierls
-    valley along the prismatic plane at $0.0012C_{44}^{*}$, giving a Peierls
-    stress of $\sigma_xz = 2C_{44}\varepsilon_{xz} = 0.0923$ GPa
-
-
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
-    [[file:Images/final_model_peierls_xz_initial.png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
-    [[file:Images/final_model_peierls_xz_final_0.0012.png]]
     
 
+     For finding the Peierls stress to move partials away from each
+     other on the prismatic plane plane one finds that the stress if
+     given by $\sigma_{xy} = \sigma_{12} =  2C_{66}^{\text{rot}}\varepsilon_{12}$, where $C_{66}^{\text{rot}} =
+     47.4255$ GPa.
 
-   #  [[file:Images/final_model_peierls_xz_0.01_inital_full.png]]
-   # #+ATTR_LATEX: :width 0.7\textwidth :center t
-   # [[file:Images/final_model_peierls_xz_0.01_final_full.png]]
+     To move the whole dislocation on the prismatic plane, one needs a
+     stress applied which is $\sigma_xz = \sigma_{13} = 2C_{55}^{\text{rot}}\varepsilon_{13}$, $C_{55}^{\text{rot}} =
+     38.4749$ GPa.
+
+     To move the dislocation onto the basal plane one needs to apply as
+     stress given by $\sigma_yz = \sigma_{23} = 2C_{44}^{\text{rot}}\varepsilon_{23}$, $C_{44}^{\text{rot}} =
+     47.4255$ GPa.
+
+
+
+**** xz Strain
     
+     Applying an xz strain to the lattice causes the dislocation to
+     move along the prismatic plane. 
+
+     Using an increment in the strain of $1\times 10^{-4}C^{*}$, where $C^{*}$ is
+     the transformed elastic constant, with a value of $C_{44}^{*}=38.4749$
+     GPa, we find that the dislocation moves from one Peierls
+     valley along the prismatic plane at $0.0012C_{44}^{*}$, giving a Peierls
+     stress of $\sigma_xz = 2C_{44}\varepsilon_{xz} = 0.0923$ GPa
+
+
+     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     [[file:Images/final_model_peierls_xz_initial.png]]
+     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     [[file:Images/final_model_peierls_xz_final_0.0012.png]]
     
 
 
-*** yz Strain
+    #  [[file:Images/final_model_peierls_xz_0.01_inital_full.png]]
+    # #+ATTR_LATEX: :width 0.7\textwidth :center t
+    # [[file:Images/final_model_peierls_xz_0.01_final_full.png]]
+    
+    
 
-    This is the strain necessary for movement on the basal
-    plane. Following the procedure above, one does not obtain
-    recombination of partials, or any movement of the dislocation onto
-    the basal plane. 
 
-    Increasing the accumulated strain up to 10\%, still in steps of
-    0.001C to see if there is any difference. 
+**** yz Strain
 
-    Furthermore, one is starting from initial anisotropic elasticity
-    solutions, applying strain and then relaxing, such that one may be
-    able to find a strain where the screw dislocation has spread in
-    the basal plane.
+     This is the strain necessary for movement on the basal
+     plane. Following the procedure above, one does not obtain
+     recombination of partials, or any movement of the dislocation onto
+     the basal plane. 
+
+     Increasing the accumulated strain up to 10\%, still in steps of
+     0.001C to see if there is any difference. 
+
+     Furthermore, one is starting from initial anisotropic elasticity
+     solutions, applying strain and then relaxing, such that one may be
+     able to find a strain where the screw dislocation has spread in
+     the basal plane.
 
     
-*** xy strain 
+**** xy strain 
 
-    An xy strain can move the partials of the prismatic plane apart. 
+     An xy strain can move the partials of the prismatic plane apart. 
 
-    One can find the Peierls stress for these single partials to move
-    in opposite directions.
+     One can find the Peierls stress for these single partials to move
+     in opposite directions.
     
-    Here the \alpha parameter is 0.03. 
+     Here the \alpha parameter is 0.03. 
 
-    This means that the stress necessary to move the partial
-    dislocations apart is 
+     This means that the stress necessary to move the partial
+     dislocations apart is 
 
-    \begin{align*}
-    \sigma_{12} &= C_{1212}\varepsilon_{12} \\
-        &= 2C^{\text{Voigt}}_{66 }\varepsilon_6^{\text{Voigt}} \\
-        &= ( C_{11}- C_{12}) \varepsilon_6^{\text{Voigt}} \\
-        &= 47.4255 \times 0.03 \\ 
-        &= 1.42 GPa\ 
-    \end{align*}
+     \begin{align*}
+     \sigma_{12} &= C_{1212}\varepsilon_{12} \\
+         &= 2C^{\text{Voigt}}_{66 }\varepsilon_6^{\text{Voigt}} \\
+         &= ( C_{11}- C_{12}) \varepsilon_6^{\text{Voigt}} \\
+         &= 47.4255 \times 0.03 \\ 
+         &= 1.42 GPa\ 
+     \end{align*}
 
-    The strain is applied to the whole cell, as the dislocation cell
-    is periodic, then the stress upon each partial is the same. 
+     The strain is applied to the whole cell, as the dislocation cell
+     is periodic, then the stress upon each partial is the same. 
 
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
-    [[file:Images/final_model_peierls_xy_0.03_initial_partials.png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
-    [[file:Images/final_model_peierls_xy_0.03_final_partials.png]]
+     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     [[file:Images/final_model_peierls_xy_0.03_initial_partials.png]]
+     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     [[file:Images/final_model_peierls_xy_0.03_final_partials.png]]
 
 
-*** Pyramidal Strain
+**** Pyramidal Strain
 
-    For a strain to transform the dislocation into the metastable,
-    pyramidal state, one can apply a strain which applies shear to the
-    dislocation whereby the maximum resolved shear stress is on the
-    first-order pyramidal plane. 
+     For a strain to transform the dislocation into the metastable,
+     pyramidal state, one can apply a strain which applies shear to the
+     dislocation whereby the maximum resolved shear stress is on the
+     first-order pyramidal plane. 
 
-    In the coordinate system of the dislocation, one can estimate the strain necessary by the ratio
-    of stresses for the basal and prismatic planes. The proportions strains $\sigma_{xz}$ and
-    $\sigma_{yz}$ should be $c/a : \sqrt{3}/2 \approx 1.83 : 1 \approx 1 : 0.54683$.
+     In the coordinate system of the dislocation, one can estimate the strain necessary by the ratio
+     of stresses for the basal and prismatic planes. The proportions strains $\sigma_{xz}$ and
+     $\sigma_{yz}$ should be $c/a : \sqrt{3}/2 \approx 1.83 : 1 \approx 1 : 0.54683$.
     
-    Unfortunately, this proportion does not work, nor does the ratio $\sigma_{xz}:\sigma_{yz}$
-    \approx 1: 1/10$. A much, much lower proportion of the strain is
-    necessary as the dislocation just moves prismatically. Once one finds
-    the Peierls stress for the basal plane, we can estimate a more realistic proportion. 
+     Unfortunately, this proportion does not work, nor does the ratio $\sigma_{xz}:\sigma_{yz}$
+     \approx 1: 1/10$. A much, much lower proportion of the strain is
+     necessary as the dislocation just moves prismatically. Once one finds
+     the Peierls stress for the basal plane, we can estimate a more realistic proportion. 
  
 
-** Data
-[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP1-oo_19-11-09--04-46-00.log][IP1]]
-[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP2-oo_19-11-09--04-46-00.log][IP2]]
-[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP3-oo_19-11-09--04-46-00.log][IP3]]
-[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP4-oo_19-11-09--04-46-00.log][IP4]]
-[[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP5-oo_19-11-09--04-46-00.log][IP5]]
+*** Data
+ [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP1-oo_19-11-09--04-46-00.log][IP1]]
+ [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP2-oo_19-11-09--04-46-00.log][IP2]]
+ [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP3-oo_19-11-09--04-46-00.log][IP3]]
+ [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP4-oo_19-11-09--04-46-00.log][IP4]]
+ [[file:~/Documents/ti/final_model_2019-11-12/results_2019-11-09_muc/IP5-oo_19-11-09--04-46-00.log][IP5]]
  
-** Directory of the results
- [[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
- [[file:~/Documents/ti/final_model_2019-11]]
+*** Directory of the results
+  [[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
+  [[file:~/Documents/ti/final_model_2019-11]]
 
+** Cluster Method
+   
+*** Methodology
+
+    This secton comprises the results of using the cluster method to
+    simulate single dislocations in the Ti model. 
+    
+    The cluster method simulates dislocations by only imposing
+    periodicity in the direction of the dislocation line (the z-axis,
+    in this case).
+
+    As the number of atoms in a cluster increases, the resulting core
+    structure upon relaxation will tend to the bulk core structure, as
+    there is a reduction in the spurious dislocation-surface
+    interaction. Due to the finite size of simulations, the geometry
+    of the cell is important. With sufficient cell size, dislocation
+    core structure should be invariant to the boundary conditions
+    imposed. To ascertain how sensitive the new Ti model is to
+    boundary conditions, two different cell geometries were used:
+    circular and hexagonal. Each of these had two layers of fixed
+    (inert) atoms around a dynamic central region.
+
+    All relaxations were carried out using the Fletcher-Powell
+    conjugate gradient algorithm with a force twolerance of $4\times
+    10^{-5}$ Ryd/Bohr $\approx 1\times 10^{-3} \text{eV}/\AA$, with a
+    k-point mesh of 1x1x30. 
+
+    Tarrat cite:Tarrat2009 deemed that the use of hexagonal cluster
+    cell geometries were more beneficial to determine the core
+    structure of dislocations due to a lower total surface energy,
+    implying a reduction in the magnitude of dislocation-surface
+    interaction. 
+
+    Upon relaxation of a circular and a hexagonal cell, of 936 and
+    1082 atoms respectively, the time for the dynamic region of the
+    core of the dislocation to relax was approximately 1.5 times that of
+    using a circular ($\approx$ 43500 seconds to $\approx$ 28800). The
+    number of steps for the relaxation algorithm to reach tolerance
+    was one less for the hexagonal cell, to the circular cell (195 to
+    196 steps). Given the cubic scaling of direct-diagonalisation
+    tight-binding, one would expect that the increase in time for
+    these to cells to be $(1082/936)^3\approx 1.5$, which is exactly
+    what is seen. 
+
+    
+**** Circular Cluster
+     
+     # Make construct that has 6 images on one line so we can analyse
+     # each one
+     
+    #+BEGIN_LaTeX
+
+    Images/IP_circle_before_relaxation_full_bvec/crop/IP1_before_full.png
+    Images/IP_circle_before_relaxation_full_bvec/crop/IP2_before_full.png
+    Images/IP_circle_before_relaxation_full_bvec/crop/IP3_before_full.png
+    Images/IP_circle_before_relaxation_full_bvec/crop/IP4_before_full.png
+    Images/IP_circle_before_relaxation_full_bvec/crop/IP5_before_full.png
+    Images/IP_circle_before_relaxation_full_bvec/crop/IP6_before_full.png
+
+
+    Images/IP_circle_after_relaxation_half_bvec/crop/IP1_half_relaxed.png
+    Images/IP_circle_after_relaxation_half_bvec/crop/IP2_half_relaxed.png
+    Images/IP_circle_after_relaxation_half_bvec/crop/IP3_half_relaxed.png
+    Images/IP_circle_after_relaxation_half_bvec/crop/IP4_half_relaxed.png
+    Images/IP_circle_after_relaxation_half_bvec/crop/IP5_half_relaxed.png
+    Images/IP_circle_after_relaxation_half_bvec/crop/IP6_half_relaxed.png
+
+
+    Images/IP_circle_after_relaxation_full_bvec/crop/IP1_full_initial.png
+    Images/IP_circle_after_relaxation_full_bvec/crop/IP2_full_initial.png
+    Images/IP_circle_after_relaxation_full_bvec/crop/IP3_full_initial.png
+    Images/IP_circle_after_relaxation_full_bvec/crop/IP4_full_initial.png
+    Images/IP_circle_after_relaxation_full_bvec/crop/IP5_full_initial.png
+    Images/IP_circle_after_relaxation_full_bvec/crop/IP6_full_initial.png
+
+
+     #+END_LaTeX
+     [[file:Images/IP_circle_after_relaxation_full_bvec/IP1_full_initial.png]]
+
+     
+
+**** Hexagonal Cluster
 
 * Binding energies to dislocations
   

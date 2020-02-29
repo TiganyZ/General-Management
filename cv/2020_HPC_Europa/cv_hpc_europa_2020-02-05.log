@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.16)  5 FEB 2020 22:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.7)  19 FEB 2020 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -58,35 +58,36 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 36.
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-1.
+2.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+
+Overfull \hbox (0.55267pt too wide) in paragraph at lines 66--67
+[]\OT1/cmr/m/n/10 Implemented anisotropic elas-tic-ity so-lu-tions with cor-rec
+-tions for pe-ri-od-ic-ity and plas-tic strain. 
+ []
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] ) 
 Here is how much of TeX's memory you used:
  354 strings out of 492167
- 4088 string characters out of 6131558
- 71091 words of memory out of 5000000
+ 4088 string characters out of 6131559
+ 72091 words of memory out of 5000000
  4793 multiletter control sequences out of 15000+600000
  4553 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,8n,24p,283b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,8n,24p,254b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on cv_hpc_europa_2020-02-05.pdf (2 pages, 74839 bytes).
+Output written on cv_hpc_europa_2020-02-05.pdf (2 pages, 76044 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
