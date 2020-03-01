@@ -7,6 +7,18 @@ Nathalie Tarrat, Magali Benoit, and Joseph Morillo.
 \newblock {\em International Journal of Materials Research}, 100(3):329--332,
   mar 2009.
 
+\bibitem{Clouet2012}
+Emmanuel Clouet.
+\newblock {Screw dislocation in zirconium: An ab initio study}.
+\newblock {\em Physical Review B - Condensed Matter and Materials Physics},
+  86(14):1--11, 2012.
+
+\bibitem{vasilybulatov2006}
+Vasily Bulatov.
+\newblock {\em Computer Simulations of Dislocations (Oxford Series on Materials
+  Modelling)}.
+\newblock Oxford University Press, dec 2006.
+
 \bibitem{Clouet2015}
 Emmanuel Clouet, Daniel Caillard, Nermine Chaari, Fabien Onimus, and David
   Rodney.
@@ -18,12 +30,6 @@ M.~Ghazisaeidi and D.R. Trinkle.
 \newblock Core structure of a screw dislocation in ti from density functional
   theory and classical potentials.
 \newblock {\em Acta Materialia}, 60(3):1287--1292, feb 2012.
-
-\bibitem{Clouet2012}
-Emmanuel Clouet.
-\newblock {Screw dislocation in zirconium: An ab initio study}.
-\newblock {\em Physical Review B - Condensed Matter and Materials Physics},
-  86(14):1--11, 2012.
 
 \bibitem{anderson2017theory}
 P.M. Anderson, J.P. Hirth, and J.~Lothe.
@@ -39,5 +45,11 @@ Z~M Chen, M~Mrovec, and P~Gumbsch.
   microscopic yield criterion.
 \newblock {\em Modelling and Simulation in Materials Science and Engineering},
   21(5):055023, June 2013.
+
+\bibitem{Aksyonov2016}
+D~A Aksyonov, T~Hickel, J~Neugebauer, and A~G Lipnitskii.
+\newblock The impact of carbon and oxygen in alpha-titanium:ab initiostudy of
+  solution enthalpies and grain boundary segregation.
+\newblock {\em Journal of Physics: Condensed Matter}, 28(38):385001, July 2016.
 
 \end{thebibliography}
