@@ -2,7 +2,7 @@
 #+AUTHOR: Tigany Zarrouk 
 #+BIND: org-latex-images-centered nil
 #+BIND: org-latex-image-default-width "5cm"
-
+#+LATEX_HEADER: \usepackage[margin=0.75in]{geometry}
 
 * Objective Function
      
@@ -182,25 +182,31 @@ pseudopotentials.
 ** Basal
 
 TBE:
+#+ATTR_LATEX: :width=0.5\textwidth
 [[file:Images/basal_gamma_surface_final_model_2020-01-15.png]]
 
 
 DFT:
+#+ATTR_LATEX: :width=0.5\textwidth
 [[file:Images/rodney_basal_ti_gamma_surface.png]]
 
 ** Prismatic
 
 TBE:
+#+ATTR_LATEX: :width=0.5\textwidth
 [[file:Images/prismatic_gamma_surface_final_model_angle_smaller.png]]
 
 DFT:
+#+ATTR_LATEX: :width=0.5\textwidth
 [[file:Images/rodney_prismatic_ti_gamma_surface.png]]
 
 ** Pyramidal first order
 
 TBE:
+#+ATTR_LATEX: :width=0.5\textwidth
 [[file:Images/pyramidal_gamma_surface_final_model_contours.png]]
 DFT pseudopot:
+#+ATTR_LATEX: :width=0.5\textwidth
 [[file:Images/pyramidal_gamma_surface_ready_data_both.png]]
 
 ** Data
@@ -227,7 +233,8 @@ DFT pseudopot:
      where the unit cell was of four atoms, with $x$, $y$ and $z$ axes
      given by $[0001]$, $[\bar{1}100]$ and $1/3[11\bar{2}0]$
      respectively. 
-
+     
+     #+ATTR_LATEX: :width=0.5\textwidth
      [[file:Images/tarrat_hcp_core_structures.png]]
 
      A quadrupolar array of dislocations was created using the "S"
@@ -485,35 +492,35 @@ DFT pseudopot:
 
 
 *** IP1
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP1_partial_dd_initial.png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP1_partial_dd_final.png]] 
                                                                                                             
 *** IP2
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP2_partial_dd_initial..png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP2_partial_dd_final.png]]
 *** IP3
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP3_partial_dd_initial.png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP3_partial_dd_final.png]]
 *** IP4
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP4_partial_dd_initial.png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP4_partial_dd_final.png]]
 *** IP5 
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP5_partial_dd_initial.png]]
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/final_model_IP5_partial_dd_final.png]]
 
 *** Ghazisaeidi Results for comparison
 
-    #+ATTR_LATEX: :width 0.7\textwidth :center t
+    #+ATTR_LATEX: :width 0.5\textwidth :center t
     [[file:Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png]]
   
 *** TODO Replot all dislocations and do analysis in Atomman.
@@ -604,15 +611,15 @@ DFT pseudopot:
      stress of $\sigma_xz = 2C_{44}\varepsilon_{xz} = 0.0923$ GPa
 
 
-     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     #+ATTR_LATEX: :width 0.5\textwidth :center t
      [[file:Images/final_model_peierls_xz_initial.png]]
-     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     #+ATTR_LATEX: :width 0.5\textwidth :center t
      [[file:Images/final_model_peierls_xz_final_0.0012.png]]
     
 
 
     #  [[file:Images/final_model_peierls_xz_0.01_inital_full.png]]
-    # #+ATTR_LATEX: :width 0.7\textwidth :center t
+    # #+ATTR_LATEX: :width 0.5\textwidth :center t
     # [[file:Images/final_model_peierls_xz_0.01_final_full.png]]
     
     
@@ -657,9 +664,9 @@ DFT pseudopot:
      The strain is applied to the whole cell, as the dislocation cell
      is periodic, then the stress upon each partial is the same. 
 
-     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     #+ATTR_LATEX: :width 0.5\textwidth :center t
      [[file:Images/final_model_peierls_xy_0.03_initial_partials.png]]
-     #+ATTR_LATEX: :width 0.7\textwidth :center t
+     #+ATTR_LATEX: :width 0.5\textwidth :center t
      [[file:Images/final_model_peierls_xy_0.03_final_partials.png]]
 
 
@@ -698,9 +705,11 @@ DFT pseudopot:
     This secton comprises the results of using the cluster method to
     simulate single dislocations in the Ti model. 
     
-    The cluster method simulates dislocations by only imposing
-    periodicity in the direction of the dislocation line (the z-axis,
-    in this case).
+    The cluster method simulates dislocations by only imposing periodicity in the direction of the
+    dislocation line (the z-axis, in this case). This the advantage over dislocation dipole
+    simulations as there are no dislocation-dislocation interactions which interfere with
+    relaxation, but in their stead, there are dislocation-boundary interactions, which inhibit the
+    relaxation of the dislocation core.
 
     As the number of atoms in a cluster increases, the resulting core
     structure upon relaxation will tend to the bulk core structure, as
@@ -724,16 +733,18 @@ DFT pseudopot:
     implying a reduction in the magnitude of dislocation-surface
     interaction. 
 
-    Upon relaxation of a circular and a hexagonal cell, of 936 and
-    1082 atoms respectively, the time for the dynamic region of the
-    core of the dislocation to relax was approximately 1.5 times that of
-    using a circular ($\approx$ 43500 seconds to $\approx$ 28800). The
-    number of steps for the relaxation algorithm to reach tolerance
-    was one less for the hexagonal cell, to the circular cell (195 to
-    196 steps). Given the cubic scaling of direct-diagonalisation
-    tight-binding, one would expect that the increase in time for
-    these to cells to be $(1082/936)^3\approx 1.5$, which is exactly
-    what is seen. 
+
+
+    # Upon relaxation of a circular and a hexagonal cell, of 936 and
+    # 1082 atoms respectively, the time for the dynamic region of the
+    # core of the dislocation to relax was approximately 1.5 times that of
+    # using a circular ($\approx$ 43500 seconds to $\approx$ 28800). The
+    # number of steps for the relaxation algorithm to reach tolerance
+    # was one less for the hexagonal cell, to the circular cell (195 to
+    # 196 steps). Given the cubic scaling of direct-diagonalisation
+    # tight-binding, one would expect that the increase in time for
+    # these to cells to be $(1082/936)^3\approx 1.5$, which is exactly
+    # what is seen. 
 
     
 *** Circular Cluster
@@ -741,75 +752,211 @@ DFT pseudopot:
      # Make construct that has 6 images on one line so we can analyse
      # each one
      
-
+     \begin{table}	
     \begin{tabular}{ccccccc}
         \small  IP1 & IP2 & IP3 & IP4 & IP5 & IP6 \\ \hline
-	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{1} 0 2 \rangle$) &
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP1_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP2_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP3_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP4_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP5_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP6_before_full.png}}\\
+	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP1_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP2_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP3_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP4_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP5_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_circle_before_relaxation_full_bvec/crop/IP6_before_full.png}}\\
 
 
-    %	\small After relaxation ($\mathbf{b} = 1/6\langle 1 \bar{1} 0 2 \rangle$) &
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP1_full_initial.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP2_full_initial.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP3_full_initial.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP4_full_initial.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP5_full_initial.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP6_full_initial.png}\\
+    %	\small After relaxation ($\mathbf{b} = 1/6\langle 1 \bar{2} 1 0 \rangle$) &
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP1_full_initial.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP2_full_initial.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP3_full_initial.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP4_full_initial.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP5_full_initial.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_full_bvec/crop/IP6_full_initial.png}\\
 
 
-    %	\small After relaxation ($\mathbf{b} = 1/3\langle 1 \bar{1} 0 2 \rangle$) &
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP1_half_relaxed.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP2_half_relaxed.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP3_half_relaxed.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP4_half_relaxed.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP5_half_relaxed.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP6_half_relaxed.png}\\
+    %	\small After relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP1_half_relaxed.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP2_half_relaxed.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP3_half_relaxed.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP4_half_relaxed.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP5_half_relaxed.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_circle_after_relaxation_half_bvec/crop/IP6_half_relaxed.png}\\
     
     \end{tabular}
-
+    \caption{ Differential displacement map of dislocation
+    relaxations in different initial positions in a cylindrical
+    cell. Row 1: Prior to relaxation, $\mathbf{b} = 1/3\langle
+    1\bar{2}10\rangle$. Row 2: After relaxation, $\mathbf{b} = 1/3\langle
+    1\bar{2}10\rangle$. Row 3: After relaxation, $\mathbf{b} = 1/6\langle
+    1\bar{2}10\rangle$   }
+    \end{table}
 
     #  [[file:Images/IP_circle_after_relaxation_full_bvec/IP1_full_initial.png]]
 
      
 
 *** Hexagonal Cluster
+    \begin{table}
     \begin{tabular}{ccccccc}
         \small  IP1 & IP2 & IP3 & IP4 & IP5 & IP6 \\ \hline
-	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{1} 0 2 \rangle$) &
+	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
 
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_hex_before_relaxation/crop/IP1_hex_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_hex_before_relaxation/crop/IP2_hex_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_hex_before_relaxation/crop/IP3_hex_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_hex_before_relaxation/crop/IP4_hex_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_hex_before_relaxation/crop/IP5_hex_before_full.png}}&
-    \addheight{\includegraphics[width=0.2\textwidth]{Images/IP_hex_before_relaxation/crop/IP6_hex_before_full.png}}\\
-
-
-    %	\small After relaxation ($\mathbf{b} = 1/6\langle 1 \bar{1} 0 2 \rangle$) &
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP1_hex_after_relaxation_full.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP2_hex_after_relaxation_full.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP3_hex_after_relaxation_full.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP4_hex_after_relaxation_full.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP5_hex_after_relaxation_full.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP6_hex_after_relaxation_full.png}\\
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_hex_before_relaxation/crop/IP1_hex_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_hex_before_relaxation/crop/IP2_hex_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_hex_before_relaxation/crop/IP3_hex_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_hex_before_relaxation/crop/IP4_hex_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_hex_before_relaxation/crop/IP5_hex_before_full.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/IP_hex_before_relaxation/crop/IP6_hex_before_full.png}}\\
 
 
-    %	\small After relaxation ($\mathbf{b} = 1/3\langle 1 \bar{1} 0 2 \rangle$) &
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP1_hex_after_relaxation_half.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP2_hex_after_relaxation_half.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP3_hex_after_relaxation_half.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP4_hex_after_relaxation_half.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP5_hex_after_relaxation_half.png}& 
-    \includegraphics[width=0.2\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP6_hex_after_relaxation_half.png}\\
+    %	\small After relaxation ($\mathbf{b} = 1/6\langle 1 \bar{2} 1 0 \rangle$) &
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP1_hex_after_relaxation_full.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP2_hex_after_relaxation_full.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP3_hex_after_relaxation_full.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP4_hex_after_relaxation_full.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP5_hex_after_relaxation_full.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_full/crop/IP6_hex_after_relaxation_full.png}\\
+
+
+    %	\small After relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP1_hex_after_relaxation_half.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP2_hex_after_relaxation_half.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP3_hex_after_relaxation_half.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP4_hex_after_relaxation_half.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP5_hex_after_relaxation_half.png}& 
+    \includegraphics[width=0.165\textwidth]{Images/IP_hex_after_relaxation_half/crop/IP6_hex_after_relaxation_half.png}\\
     
     \end{tabular}
+    \caption{ Differential displacement map of dislocation
+    relaxations in different initial positions in a hexagonal
+    cell. Row 1: Prior to relaxation, $\mathbf{b} = 1/3\langle
+    1\bar{2}10\rangle$. Row 2: After relaxation, $\mathbf{b} = 1/3\langle
+    1\bar{2}10\rangle$. Row 3: After relaxation, $\mathbf{b} = 1/6\langle
+    1\bar{2}10\rangle$   }
+    \end{table}
 
-* Binding energies to dislocations
+
+
+*** Peierls Stress
+
+**** yz strain (basal transformation)
+
+     In the cluster method, by incrementally increasing the strain in
+     increments of 0.001, one found at 0.035 in the IP4 configuration, that
+     the bottom partial dislocation suddenly splits away from the
+     prismatic plane the dislocation was spread on.
+
+     The dislocations are then of basal character (the partial left on
+     the prismatic plane being $1/3\langle 0 \bar{1} 1 0\rangle$, with
+     the other partial being $1/3\langle 1 \bar{1} 0 0\rangle$).
+
+     This lower partial moved to the right by 6 lattice parameters and down by
+     1 clat. There is an I2 (fcc) stacking fault which separates the
+     prismatic plane from the partial. The core structure is only
+     basally spread upon movement. 
+     The other partial moves down the prismatic plane to join the
+     stacking fault to join in a more compact, yet still basally
+     dissociated dislocation. The resultant displacements from the
+     prismatic spreading are removed. 
+
+     Then after moving across by 1 alat and up 2 clat, the two
+     partials stay dissociated on the basal plane, being separated by
+     4 alat at a maximum. The fcc stacking fault is subsequently
+     removed by recombination of the dislocations into a compact
+     $1/3\langle 1 \bar{2} 1 0 \rangle$ core. This core then begins to
+     spread in two adjacent prismatic planes with a pyramidal core
+     spreading joining the two.
+
+     The spreading changes from pyramidal with prismatic on two
+     different prismatic planes, to purely prismatic on the
+     rightmost prismatic plane. Whereupon, after moving upwards, the
+     dislocation spreads in this plane identically to the spreading of
+     an IP4 core configuration upon relaxation.
+
+
+     This means that the Peierls stress for the basal plane, in the
+     case of a cluster calculation is $\sigma_{yz} = \sigma_{23} =
+     2C_{44}^{\text{rot}}\varepsilon_{23}$, with $\varepsilon =
+     0.035$, and  $C_{44}^{\text{rot}} = 47.4255$ GPa, we get
+     $\sigma_{yz}^{\text{crit.}} = 0.035  \times  47.4255 \approx 1.66$ GPa.
+
+
+    \begin{table}
+       \begin{tabular}{ccccc}
+          \addheight{\includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_1_cluster.png}}&
+          \addheight{\includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_2_cluster.png}}&
+          \addheight{\includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_3_cluster.png}}&
+          \addheight{\includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_4_cluster.png}}&
+          \addheight{\includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_5_cluster.png}}\\
+          
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_6_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_7_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_8_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_9_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_10_cluster.png}\\
+          
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_11_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_12_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_13_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_14_cluster.png}& 
+          \includegraphics[width=0.19\textwidth]{Images/basal_strain_peierls_035/crop/basal_yz_strain_15_cluster.png}\\
+       \end{tabular}
+       \caption{ Behaviour of $\mathbf{b} = 1/3\langle 1\bar{2}10\rangle$ screw dislocation (lime green dot) under action of yz strain to force movement on basal plane. White-coloured atoms denote defected areas of the lattice due to the spreading of dislocations/residual displacement. Red-coloured atoms denote a local hcp structure. Green-coloured atoms denote local fcc structure. The dislocation starts out dissociated in prismatic plane. $\sigma_{yz} \approx 1.66$ GPa forces a prismatic partial to move on its basal plane. The other basal partial moves down to meet the same basal plane as the partial which has broken away. These partials are separated by an I2 stacking fault (green coloured atoms). The basally dissociated partials recombine to form a $1/3\langle 1\bar{2}10\rangle$ screw , whereupon after briefly having a compact core structure, the core spreads in both the pyramidal and prismatic planes, before stabilising in a purely prismatically spread configuration.  }
+    \end{table}
+
+
+
+
+*** Discussion
+    
+    The boundary conditions of the cell seem to be quite important in determining the core
+    structure. There are differences between the core structure of some of the initial positions
+    between the hexagonal and cylindrical cells. 
+
+    IP1, IP2 and IP5 dislocation centres result in the same core configuration regardless of
+    the geometry of the cell. 
+
+    #  >  FINISH DESCRIPTION OF CORE STRUCTURES
+    #  >  COMPARE TO DISLOCATION DIPOLES. 
+    #  >  ADD IN ANALYSIS OF OXYGEN NEAR DISLOCATION
+
+
+* Binding of oxygen to dislocations
+
+** Quadrupolar Array
+   
+   Using a relaxed $12\times 12$ slab with an "S" quadrupolar
+   arrangement of dislocations, of which the elastic centres of each
+   are in initial position 5, one can repeat this cell three times in
+   the $z$-direction. One can place oxygen in octahedral sites near
+   the dislocation core in the middle layer at varying distances from
+   the core. By repeating this, one can ascertain how the binding
+   energy of oxygen to dislocations changes with distance from the
+   core. 
+
+   One does not expect a lot of interaction from the dislocation core
+   beyond a few burgers vectors of distance of the solute from the
+   core, as the core field decays rapidly. Beyone this, one would
+   expect resulting in a lot of the binding energy to come from the
+   interaction of the strain fields generated by the oxygen
+   interstitial deforming an octahedral site and the strain field of
+   the dislocation itself. 
+
+
+   Oxygen was placed near both cores in the simulation cell, such that
+   the quadrupolar array was more stable. 
+   
+   Oxygen in the closest octahedral sites in the same basal plane of
+   the dislocation, unsurprisingly, produced the most change from the
+   initial dislocation position. Interestingly, it seems that due to
+   the distortion of the octahedral site from the interstitial oxygen,
+   the shear stress field produces is above the Peierls stress
+   necessary for the dislocation to glide on the prismatic plane. This
+   results in the quadrupolar cores moving to form an S configuration
+   of an opposite type. 
+
+
+
+** Notes
   
   A strategy to find the binding energies of different interstitial
   sites. 
@@ -819,7 +966,7 @@ DFT pseudopot:
   2) Identify octahedral sites near the cores.
   3) Translate octahedral sites from the perfect lattice to the
      lattice with a dislocation by the average displacement of the six
-     surrounding lattice sites. .
+     surrounding lattice sites.
   4) Put the solute into a given interstitial site such that upon
      application of the transformation of lattice from one
      dislocation core to another (upon rotation and reflection), the
@@ -867,6 +1014,14 @@ DFT pseudopot:
         expect errors due the the additional dislocation-dislocation
         interaction upon relaxation. 
 
+
+   Unfortunately, it was seen with the addition of oxygen to both
+   cores that the dipole configuration became unstable. Furthermore,
+   the effective shear stress applied when an oxygen was near the
+   dislocation core was enough to cause the dislocation to move on the
+   prismatic plane. 
+
+   
 	
 
 
@@ -887,6 +1042,46 @@ DFT pseudopot:
   # 3) Make perfect lattice, then find displacement from relaxed. Find
   #    all octahedral sites near a particular dislocation core and then
   #    displace cite by amount
+
+
+* Peierls Barriers
+
+  One can calculate the Peierls barrier to dislocation motion on
+  particular planes by preparing two relaxed simulation cells, with
+  the dislocation cores translated with respect to each other on the
+  plane of interest. 
+
+  Evidence from Clouet cite:Clouet2015 suggests that such a
+  dislocation core in this initial position (IP1) can undergo a
+  locking and unlocking mechanism. A prismatically spread $\langle
+  11\bar{2}0 \rangle$ screw core can glide along the wide prismatic
+  plane with a low shear stress, due to the small Peierls barrier on
+  this plane. This glissile core is metastable, allowing for
+  transformation to the ground state configuration of the dislocation
+  (as found by DFT) which is a sessile, pyramidally spread core on the
+  first-order pyramidal plane. This is the "locking" mechanism
+  (whereas unlocking is the opposite: a sessile pyramidal to glissile
+  prismatic core transformation). This core can then glide on the
+  pyramidal plane by transformation into a glissile pyramidally spread
+  core, which has a much higher Peierls barrier (and excess energy)
+  than the prismatic glissile core, resulting in an increase in
+  lattice friction dislocation on the pyramidal plane compared to the
+  prismatic plane.
+
+  To calculate these Peierls barriers, first one considered the
+  prismatic plane. The relaxed IP1 core is situated in a wide
+  prismatic plane, which has a lower shear stress for glide activation
+  than the narrow prismatic plane. The dislocation(s) of one cell were
+  translated by $\frac{c}{2}$ in the $y$ direction with respect to the other
+  cell and relaxed. 
+
+  For the basal plane, one translated the dislocation(s) by
+  $\frac{\sqrt{3}a}{2}$ in the $x$ direction. 
+
+  For the pyramidal plane, one translated the dislocation by
+  $[\frac{\sqrt{3}a}{2}, c]$.
+
+
 
   
 * BOP
