@@ -2,6 +2,123 @@
 #+AUTHOR: Tigany Zarrouk
 
 
+* Results
+
+** Binding of carbon to dislocations
+   - After trialling dislocation dipole simulations to find the
+     binding energy of carbon to dislocations, which unfortunately did
+     not come to fruition because of computational time, one succeeded
+     in finding the binding energy of carbon to dislocations using the
+     cluster method.
+   - Firstly, an easy/hard dislocation was introduced according to the
+     anisotropic elasticity solutions for a $\langle 111 \rangle$
+     screw dislocation to 522 cylindrical cluster of iron atoms.
+   - The cell was only one burger's vector in depth in the
+     z-direction. 
+   - The outer two layers of atoms were fixed and could not relax.
+   - This single layer cell had the three atoms around the dislocation
+     core fixed, such that the dislocation core did not transform/move upon
+     relaxation.
+   - This relaxed cell had a 174 atom cylindrical cell cut out. This
+     smaller cell was  replicated three times in the z-direction
+     and then a carbon interstitial was then introduced into the middle layer at the
+     8 closest octahedral sites to the dislocation core, for both the
+     easy and hard core.
+   - These cells were then relaxed. All relaxations were done to a
+     root-mean-square force tolerance of $1$meV. 
+
+   - The dissolution energy (binding energy) of a solute to a
+     dislocation is given by 
+     
+     \[ E^{\text{Sol}}_{\text{C-disl}} = E_{\text{C-disl}} -
+     E_{\text{disl}} - \mu_{\text{C}} \]
+
+   - Where $\mu_{\text{C}}$ is the chemical potential necessary to
+     add carbon to the system. This is generally given as half of the
+     energy necessary to dissociate the diatomic molecular form of the
+     solute $\mu_{text{C}} \approx \frac{1}{2} E_{\text{C}_2}$.
+
+   - In Domain-Becquart they actually used a different equation for
+     the binding energy of carbon to a dislocation. 
+
+     \[ E_{\text{bind}}^{\text{Screw-Octa}} = E^{\text{Screw}} + E^{\text{Octa}} -
+     E^{\text{Screw-Octa}} - E^{\text{reference}}  \]
+     
+     where a positive binding energy indicates /attraction/ between
+     the interstitial and dislocation. 
+
+     I find that this definition makes the most sense: in terms of
+     splitting up the energy it makes sense, 
+     1. From a perfect lattice, which has a given energy, we add a
+        dislocation, which increases the energy of the system as we
+        have done work to the system.
+
+     2. To add a solute into the configuration, we must take a solute
+        with a given reference energy outside the lattice, lets say on
+        the surface of the lattice, and we must first /put it into the
+        lattice/. At infinite distance from the dislocation, we add in
+        the carbon and the carbon deforms the lattice, doing work.
+
+     3. Then we must take this carbon and do work, against or
+        with the stress field from the dislocation, such that we can
+        transport the carbon close to the dislocation.
+
+     4. This means that the binding energy of dislocation-solute
+        system is  
+	
+	\[  E_{\text{disl + solute + ref}} - E_{\text{ref}} - 
+          ( E_{\text{solute + ref}} -  E_{\text{ref}} )     - 
+          ( E_{\text{disl + ref}} - E_{\text{ref}} )      \]
+
+	
+	\[  E_{\text{disl + solute + ref}} - E_{\text{solute + ref}}  - E_{\text{disl + ref}} + E_{\text{ref}}       \]
+
+	This would give a more negative binding energy for favourable
+        binding. This is the work necessary to bring a carbon from infinity
+        in the lattice to the disocation core in that position. It
+        would be negative if the dislocation is providing a net
+        attractive force to the solute. 
+
+   - We can use the solute binding energies of carbon binding to a
+     site as the solute reference. 
+
+   - The energies of all the configurations are as follows. 
+
+   - REFERENCE for vacancy clusters:
+     -215.83697966 Ryd
+     
+   - REFERENCE: Perfect 3 layer reduced cell 
+     -255.22913581 Ryd
+
+   - REFERENCE:  Perfect 3 layer with one carbon
+     
+
+
+   Hard:
+   - $E^{\text{disl}} = -266.45275384$ Ryd (One slab)
+     - REFERENCE: -254.94672081 Hard dislocation 3 layers 
+     1. -255.87681258
+     2. -255.87681314
+     3. -255.83221679
+     4. -255.83221671
+     5. -255.81529725
+     6. -255.80429776
+     7. -255.81106541
+     8. -255.77268459
+
+   Easy: 
+   - $E^{\text{disl}} = -257.50567226$ Ryd (One larger slab)
+   - $E_{\text{disl + oct}} = -254.94545633$ Ryd (3 layers)
+     1. -255.83845269
+     2. -255.83846186
+     3. -255.79022092
+     4. -255.79697368
+     5. -255.83777894
+     6. -255.82402118
+     7. -255.80845320
+     8. -255.79319205
+
+
 * TODO Determine Calculations
   DEADLINE: <2019-11-21 Thu>
    
@@ -155,6 +272,8 @@
     - Check the new proposal
     - Fundamental interactions between C and dislocations. 
 * DONE Read Itakura    
+
+
 * DONE Project outline
   DEADLINE: <2019-11-22 Fri>
    

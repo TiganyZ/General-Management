@@ -1,4 +1,4 @@
-% Created 2020-03-10 Tue 10:32
+% Created 2020-03-10 Tue 14:34
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -33,7 +33,7 @@
 
 
 \section{Objective Function}
-\label{sec:org00db6ac}
+\label{sec:orgd32a296}
 
 
 PARAMETERS
@@ -113,7 +113,7 @@ DFT: & 260.000 & mJ/m\(^{\text{2}}\) & [Benoit  2012]\\
 \end{center}
 
 \section{Defect Clusters}
-\label{sec:orgd94e8b0}
+\label{sec:orgbd2cc34}
 
 ----------     E\(_{\text{vacancy}}\)\(_{\text{formation}}\)     ----------
 
@@ -126,7 +126,7 @@ exp: & 1.270  eV & Hashimoto  (1984)\\
 \end{center}
 
 \subsection{Octahedral O interstitial relaxation}
-\label{sec:orge359df2}
+\label{sec:org35edfd4}
 
 Initial:
 \begin{center}
@@ -139,7 +139,7 @@ Final:
 \end{center}
 
 \subsection{Tetrahedral O interstitial relaxation}
-\label{sec:org53e194b}
+\label{sec:org66bf9e9}
 
 Initial:
 \begin{center}
@@ -152,7 +152,7 @@ Final:
 \end{center}
 
 \subsection{Energies for defects}
-\label{sec:org8a32347}
+\label{sec:org7008612}
 
 Relative differences are 
 
@@ -177,7 +177,7 @@ All formation energies below use the chemical potential of Akysonov
 (2013) of value \(\mu_{\text{oxygen}} = \frac{5.6}{ 2} eV\).
 
 \subsection{All formation energies}
-\label{sec:orgd79ee08}
+\label{sec:org023dbae}
 
 \begin{center}
 \begin{tabular}{ll}
@@ -228,7 +228,7 @@ Ef\(_{\text{OOOOOO}}\)\(_{\text{vac}}\)\(_{\text{sol}}\)\(_{\text{bind}}\) & - 1
 \end{center}
 
 \section{Gamma surfaces}
-\label{sec:orga68c9b1}
+\label{sec:org01e552e}
 
 Energies are accurate to within 2 mJm\(^{\text{-2}}\), comparing the energies of
 points in the corners which (the zeros of energy). So surface energies
@@ -255,7 +255,7 @@ Pyramidal I & \\
 
 \newpage
 \subsection{Basal}
-\label{sec:org72abd3a}
+\label{sec:org0d131ef}
 
 TBE:
 \begin{center}
@@ -269,7 +269,7 @@ DFT:
 \end{center}
 
 \subsection{Prismatic}
-\label{sec:org79b4d07}
+\label{sec:orgac417ba}
 
 TBE:
 \begin{center}
@@ -282,7 +282,7 @@ DFT:
 \end{center}
 
 \subsection{Pyramidal first order}
-\label{sec:org8ad4744}
+\label{sec:org058e37c}
 
 TBE:
 \begin{center}
@@ -294,19 +294,19 @@ DFT pseudopot:
 \end{center}
 
 \subsection{Data}
-\label{sec:orgccbbe56}
+\label{sec:orgd65ea23}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/gamma\_surfaces/basal/basal\_gs\_noo\_alat\_energies.dat}{basal\(_{\text{gs}}\)\(_{\text{data}}\)}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/gamma\_surfaces/prismatic/prismatic\_gs\_noo\_alat\_energies.dat}{prismatic\(_{\text{gs}}\)\(_{\text{data}}\)}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/gamma\_surfaces/pyramidal\_results\_2019-11-13/pyramidal\_gamma\_surface\_2019-11-13.dat}{pyramidal\(_{\text{gs}}\)\(_{\text{data}}\)}
 \section{Dislocation core structures}
-\label{sec:org7a33d9e}
+\label{sec:orgbe99d29}
 
 
 \subsection{Quadrupolar Array}
-\label{sec:orgc2e30e4}
+\label{sec:orgad53587}
 
 \subsubsection{Methodology}
-\label{sec:orgc4f22f4}
+\label{sec:orgfdc5e98}
 In the following, we see results of dislocation relaxation. The partial differential
 displacement maps are of dislocations in their initial and final states in different initial
 positions. The burger's vector seen in these plots is the partial \(1/6 [11\bar{2}0]\). The
@@ -352,7 +352,7 @@ spurious linear term due to the conditional convergence of the sum
 
 
 \subsubsection{Discussion}
-\label{sec:org14d893e}
+\label{sec:org42b2487}
 One can see that all of the dislocations have dissociated on the
 prismatic plane. But there is a difference between initial
 positions as to upon which prismatic plane they dissociate on,
@@ -418,7 +418,7 @@ distance that is found in the DFT Zr results by Clouet
 
 
 \subsubsection{{\bfseries\sffamily TODO} Dissociation Distance Analysis}
-\label{sec:org8ec0742}
+\label{sec:orgbbf0ea2}
 Following \cite{Clouet2012}, one can dislocation elasticity theory to
 compute the dissociation distance of a dislocation in both the
 basal and prism planes.  The energy variation caused by a
@@ -481,7 +481,7 @@ The dissociation length is
 
 \begin{enumerate}
 \item Analysis with Final Ti model.
-\label{sec:orga158d29}
+\label{sec:org99b11e4}
 
 
 \[
@@ -499,7 +499,7 @@ Further scrutiny is necessary.
 \end{enumerate}
 
 \subsubsection{{\bfseries\sffamily TODO} Disregistry Analysis}
-\label{sec:org809c795}
+\label{sec:orgdff4f15}
 Look into the theory of dissociation distance in Clouet paper
 \cite{Clouet2012}
 
@@ -584,7 +584,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 
 
 \subsubsection{IP1}
-\label{sec:org7075ea7}
+\label{sec:orge3a7a63}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP1_partial_dd_initial.png}
 \end{center}
@@ -593,7 +593,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \end{center} 
 
 \subsubsection{IP2}
-\label{sec:orge6a3b9f}
+\label{sec:orga8d4719}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP2_partial_dd_initial..png}
 \end{center}
@@ -601,7 +601,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP2_partial_dd_final.png}
 \end{center}
 \subsubsection{IP3}
-\label{sec:orge48020f}
+\label{sec:org41860bb}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP3_partial_dd_initial.png}
 \end{center}
@@ -609,7 +609,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP3_partial_dd_final.png}
 \end{center}
 \subsubsection{IP4}
-\label{sec:org148cea6}
+\label{sec:orgbbac4d4}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP4_partial_dd_initial.png}
 \end{center}
@@ -617,7 +617,7 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP4_partial_dd_final.png}
 \end{center}
 \subsubsection{IP5}
-\label{sec:org342e091}
+\label{sec:org12aa4b2}
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Images/final_model_IP5_partial_dd_initial.png}
 \end{center}
@@ -626,20 +626,20 @@ dislocation was found to lie exactly in one (0001) atomic plane.
 \end{center}
 
 \subsubsection{Ghazisaeidi Results for comparison}
-\label{sec:orgfcbd369}
+\label{sec:orgec364c7}
 
 \begin{center}
 \includegraphics[width=0.5\textwidth]{Images/ghazisaiedi-trinkle-scew-dislocation-core-prism-symm-asymm.png}
 \end{center}
 
 \subsubsection{{\bfseries\sffamily TODO} Replot all dislocations and do analysis in Atomman.}
-\label{sec:orgbae0875}
+\label{sec:org70db9dc}
 This will be very useful as one can see plots of the Nye tensor, so
 one can truly see where the partials are and their dislocation
 centres. 
 
 \subsubsection{Peierls Stress}
-\label{sec:orgc96883b}
+\label{sec:org56f21cc}
 
 By straining the cell of a relaxed lattice and incrementally increasing the strain, one
 can find the minimum stress necessary to move a dislocation from one
@@ -647,7 +647,7 @@ Peierls valley to the next.
 
 \begin{enumerate}
 \item Applying strain
-\label{sec:orge71227e}
+\label{sec:org73582e6}
 
 Applying strain as in \cite{Chen2013}. 
 
@@ -713,7 +713,7 @@ stress given by \(\sigma_yz = \sigma_{23} = 2C_{44}^{\text{rot}}\varepsilon_{23}
 
 
 \item xz Strain
-\label{sec:org98cff49}
+\label{sec:org974f01a}
 
 Applying an xz strain to the lattice causes the dislocation to
 move along the prismatic plane. 
@@ -736,7 +736,7 @@ stress of \(\sigma_xz = 2C_{44}\varepsilon_{xz} = 0.0923\) GPa
 
 
 \item yz Strain
-\label{sec:org4217b9c}
+\label{sec:org74b5191}
 
 This is the strain necessary for movement on the basal
 plane. Following the procedure above, one does not obtain
@@ -753,7 +753,7 @@ the basal plane.
 
 
 \item xy strain
-\label{sec:org55f0e3f}
+\label{sec:org25df115}
 
 An xy strain can move the partials of the prismatic plane apart. 
 
@@ -785,7 +785,7 @@ is periodic, then the stress upon each partial is the same.
 
 
 \item Pyramidal Strain
-\label{sec:org7e9bff1}
+\label{sec:org6e69a72}
 
 For a strain to transform the dislocation into the metastable,
 pyramidal state, one can apply a strain which applies shear to the
@@ -804,7 +804,7 @@ the Peierls stress for the basal plane, we can estimate a more realistic proport
 
 
 \subsubsection{Data}
-\label{sec:org9f0bbb9}
+\label{sec:orgf4ffc3d}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP1-oo\_19-11-09--04-46-00.log}{IP1}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP2-oo\_19-11-09--04-46-00.log}{IP2}
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP3-oo\_19-11-09--04-46-00.log}{IP3}
@@ -812,15 +812,15 @@ the Peierls stress for the basal plane, we can estimate a more realistic proport
 \href{file:///home/tigany/Documents/ti/final\_model\_2019-11-12/results\_2019-11-09\_muc/IP5-oo\_19-11-09--04-46-00.log}{IP5}
 
 \subsubsection{Directory of the results}
-\label{sec:org4432465}
+\label{sec:orgcafca3b}
 \url{file:///home/tigany/Documents/ti/2019-09-11\_final\_model/tbe/dislocations/2019-11-08\_no\_omega\_ordering\_ec\_latpar/}
 \url{file:///home/tigany/Documents/ti/final\_model\_2019-11}
 
 \subsection{Cluster Method}
-\label{sec:org56a70df}
+\label{sec:org6986cc3}
 
 \subsubsection{Methodology}
-\label{sec:org7d5cf14}
+\label{sec:org7ee7f66}
 
 This secton comprises the results of using the cluster method to
 simulate single dislocations in the Ti model. 
@@ -855,7 +855,7 @@ interaction.
 
 
 \subsubsection{Circular Cluster}
-\label{sec:orgf58e07e}
+\label{sec:orgd98bf45}
 
  \begin{table}	
 \begin{tabular}{ccccccc}
@@ -898,7 +898,7 @@ cell. Row 1: Prior to relaxation, $\mathbf{b} = 1/3\langle
 
 
 \subsubsection{Hexagonal Cluster}
-\label{sec:org8354c9f}
+\label{sec:org8562f80}
 \begin{table}
 \begin{tabular}{ccccccc}
     \small  IP1 & IP2 & IP3 & IP4 & IP5 & IP6 \\ \hline
@@ -941,11 +941,11 @@ cell. Row 1: Prior to relaxation, $\mathbf{b} = 1/3\langle
 
 
 \subsubsection{Peierls Stress}
-\label{sec:org3159594}
+\label{sec:org0eda1db}
 
 \begin{enumerate}
 \item yz strain (basal transformation)
-\label{sec:org237b705}
+\label{sec:orgfcae13c}
 
 In the cluster method, by incrementally increasing the strain in
 increments of 0.001, one found at 0.035 in the IP4 configuration, that
@@ -1015,7 +1015,7 @@ case of a cluster calculation is \(\sigma_{yz} = \sigma_{23} =
 
 
 \subsubsection{Discussion}
-\label{sec:org7f63a86}
+\label{sec:orgad9cfd5}
 
 The boundary conditions of the cell seem to be quite important in determining the core
 structure. There are differences between the core structure of some of the initial positions
@@ -1026,10 +1026,10 @@ the geometry of the cell.
 
 
 \section{Binding of oxygen to dislocations}
-\label{sec:orgc2d897b}
+\label{sec:org59f3cda}
 
 \subsection{Quadrupolar Array}
-\label{sec:org78315ce}
+\label{sec:orgc81148b}
 
 Using a relaxed \(12\times 12\) slab with an "S" quadrupolar
 arrangement of dislocations, of which the elastic centres of each
@@ -1064,7 +1064,7 @@ of an opposite type.
 
 
 \subsection{Notes}
-\label{sec:org0db7b93}
+\label{sec:org9c113f0}
 
 A strategy to find the binding energies of different interstitial
 sites. 
@@ -1088,7 +1088,7 @@ in energy from the relaxed dislocation to the unrelaxed.
 
 
 \subsection{Dissolution Energy Equation}
-\label{sec:orgd27d2ef}
+\label{sec:orga5d49de}
 
 The binding energy of oxygen to a dislocation can be given by the
 following equation:
@@ -1102,7 +1102,7 @@ from Aksyonov 2016 \cite{Aksyonov2016}.
 
 
 \subsection{Current status of simulation}
-\label{sec:orgc108162}
+\label{sec:orgc3eb5e6}
 
 An S-arrangement of dislocation dipoles what created in a 12x12
 supercell of 576 atoms oriented such that the \(1/3[11\bar{2}0]\)
@@ -1139,7 +1139,7 @@ prismatic plane.
 
 
 \section{Peierls Barriers}
-\label{sec:org4e6ec38}
+\label{sec:org6b034cc}
 
 One can calculate the Peierls barrier to dislocation motion on
 particular planes by preparing two relaxed simulation cells, with
@@ -1180,10 +1180,10 @@ For the pyramidal plane, one translated the dislocation by
 
 
 \section{BOP}
-\label{sec:orgc9e1296}
+\label{sec:orgeb04eef}
 
 \subsection{4 recursion levels}
-\label{sec:org7fb2f4d}
+\label{sec:org45f4430}
 
 kbT = 0.1
 
@@ -1229,8 +1229,8 @@ H & 0.558 & 0.489\\
 \end{center}
 
 \section{Bibliography}
-\label{sec:org5df8eea}
-\label{org6208ac9}
+\label{sec:org767ba17}
+\label{org58280da}
 
 \bibliographystyle{unsrt}
 \bibliography{bibliography/org-refs}

@@ -5,6 +5,7 @@
 #+LATEX_HEADER: \usepackage[margin=0.75in]{geometry}
 
 * Objective Function
+
      
  
 PARAMETERS
@@ -71,8 +72,16 @@ VARGS
 | tbe: | 211.658 | mJ/m^2 |                 |
 | DFT: | 260.000 | mJ/m^2 | [Benoit  2012]  |
    
-* Defect Clusters
 
+* Phonons
+
+** Harmonic 
+
+** Quasiharmonic Effects
+   
+   
+* Defect Clusters
+  
 ----------     E_vacancy_formation     ----------
 
 | tbe: | 2.347  eV          |                              |
@@ -156,6 +165,27 @@ All formation energies below use the chemical potential of Akysonov
 | Ef_OOOO_vac_sol_bind   | -  2.724    |
 | Ef_OOOOO_vac_sol_bind  | - 1.583     |
 | Ef_OOOOOO_vac_sol_bind | - 1.690     |
+
+
+* Binding energy of defect clusters in the harmonic approximation
+
+  Using the defect cluster configurations mentioned earlier, one can
+  find the change in defect cluster formation free energies as a
+  function of temperature by using the harmonic approximation. 
+  
+  To build the dynamical matrix, to obtain the vibrational free energy
+  contribution, one used phonopy to generate the displacements for nearest/next-nearest
+  neighbours to the defect, as the local atomic environment of atoms
+  past the second-nearest shells would have hardly changed from the
+  perfect lattice. From this vibrational frequencies were used to
+  obtain the full free energy of bindng of the defect as a function of
+  temperature. 
+
+
+  It would be interesting to see how the quasi-harmonic approximation
+  would change improve the accuracy of temperature/concentration
+  predictions with the addition of the change in the lattice parameter
+  with temperature. 
 
 * Gamma surfaces
 
@@ -698,6 +728,7 @@ DFT pseudopot:
   [[file:~/Documents/ti/2019-09-11_final_model/tbe/dislocations/2019-11-08_no_omega_ordering_ec_latpar/]]
   [[file:~/Documents/ti/final_model_2019-11]]
 
+  
 ** Cluster Method
    
 *** Methodology
@@ -918,7 +949,6 @@ DFT pseudopot:
     #  >  FINISH DESCRIPTION OF CORE STRUCTURES
     #  >  COMPARE TO DISLOCATION DIPOLES. 
     #  >  ADD IN ANALYSIS OF OXYGEN NEAR DISLOCATION
-
 
 * Binding of oxygen to dislocations
 
