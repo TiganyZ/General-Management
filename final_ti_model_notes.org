@@ -79,6 +79,13 @@ VARGS
 
 ** Quasiharmonic Effects
    
+*** Gibbs free energy 
+    
+    [[file:Images/gibbs_free_energy_per_atom_2020-04-02.png]]
+
+*** Thermal Expansion
+
+    [[file:Images/thermal_expansion_all_phases_2020-04-02.png]]
    
 * Defect Clusters
   
@@ -985,6 +992,26 @@ DFT pseudopot:
    of an opposite type. 
 
 
+ 
+     \begin{table}	
+    \begin{tabular}{cccc}
+        \small  O1 & O2 & O3 & O4 \\ \hline
+	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_initial.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_initial.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_initial.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_initial.png}}\\
+
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_final.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_final.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_final.png}}&
+    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_final.png}}\\
+
+    
+    \end{tabular}
+    \caption{ Change in IP1 core structure and dislocation position upon addition of interstitial oxygen in different octahedral sites in a quadrupolar simulation. Row 1: Prior to relaxation. Row 2: After relaxation.   }
+    \end{table}
+   
 
 ** Notes
   
