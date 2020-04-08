@@ -82,11 +82,18 @@ VARGS
 *** Gibbs free energy 
     
     [[file:Images/gibbs_free_energy_per_atom_2020-04-02.png]]
+    [[file:Images/gibbs_free_energy_per_atom_2020-04-02_4x4x4.png]]
+
+    
 
 *** Thermal Expansion
 
+    This is roughly four times higher than one would expect from
+    experiment. 
     [[file:Images/thermal_expansion_all_phases_2020-04-02.png]]
-   
+    
+    [[file:Images/thermal_expansion_alpha_ti_exp.png]]
+
 * Defect Clusters
   
 ----------     E_vacancy_formation     ----------
