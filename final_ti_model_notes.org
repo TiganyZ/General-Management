@@ -998,21 +998,46 @@ DFT pseudopot:
    results in the quadrupolar cores moving to form an S configuration
    of an opposite type. 
 
+| Oct Site  |    E(disl+O)(Ryd)|   E(disl+O)-E_p (eV)|   E_int (meV) = E(disl+O) - E(O) - E(disl) + E(perf) (meV) (from Chaari 2019)|
+|  1 | -563.15021498 | -44.968444492620 |  -82.674534762389 |
+|  2 | -563.13197951 | -44.720338846189 |  165.431111668357 |
+|  3 | -563.15027173 | -44.969216613955 |  -83.446656097070 |
+|  4 | -563.15448656 | -45.026562167524 | -140.792209666334 |
+|  5 | -563.13211494 | -44.722181461032 |  163.588496825081 |
+|  6 | -563.13212731 | -44.722349763075 |  163.420194782614 |
+|  7 | -563.15390587 | -45.018661495492 | -132.891537633978 |
+|  8 | -563.14265589 | -44.865598066897 |   20.171890960566 |
+|  9 | -563.14023761 | -44.832695765906 |   53.074191951468 |
+| 10 | -563.13426045 | -44.751372545522 |  134.397412335697 |
 
  
      \begin{table}	
-    \begin{tabular}{cccc}
-        \small  O1 & O2 & O3 & O4 \\ \hline
+    \begin{tabular}{ccccc}
+        \small $E_{\text{int}}$ meV &O1: -82.6 &O2: +165.4 &O3: -83.4 &O4: -140.7 \\ \hline &
 	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_initial.png}}&
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_initial.png}}&
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_initial.png}}&
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_initial.png}}\\
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_initial.png}}\\
 
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_final.png}}&
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_final.png}}&
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_final.png}}&
-    \addheight{\includegraphics[width=0.165\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_final.png}}\\
+    &
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_final.png}}\\ \hhline
+
+        \small $E_{\text{int}}$ meV &O5: +163.5 &O6: +163.4 &O7: -132.8& O8: +20.1 \\ \hline &
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O5_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O6_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O7_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O8_initial.png}}\\
+
+    &
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O5_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O6_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O7_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O8_final.png}}\\
+
 
     
     \end{tabular}
