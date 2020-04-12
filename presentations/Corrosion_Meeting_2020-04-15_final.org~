@@ -1,0 +1,392 @@
+#+ATTR_HTML: font-size: 1em
+#+TITLE: Atomic scale stress corrosion cracking of Ti alloys.
+#+Author: Tigany Zarrouk 
+#+Date: 09.04.2019
+#+Email: tigany.zarrouk@kcl.ac.uk
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+org-re-reveal-title-slide: "<\%t><\%a><\%e>"
+#+OPTIONS: author:t email:t 
+#+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
+#+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
+#+REVEAL_EXTRA_CSS: ./extra.css
+#+REVEAL_THEME: solarized
+#+REVEAL_TRANS: linear 
+
+
+* Motivation 
+- Titanium alloys are used in highly demanding circumstances.
+- Brittle oxide layer can crack.
+- Solutes affect dislocation mobility, causing hardening.
+- Interaction between oxygen and dislocation cores is not clear.
+- Need for atomistic modelling.
+- Exploration of Ti/oxide scale interface will give insights into oxygen
+  diffusion, oxygen induces brittleness and stress corrosion cracking in Ti
+  alloys. 
+#+BEGIN_NOTES
+- Corrosion resistance, high strength to weight ratio.
+- Ti is used in commercial jet airliners
+#+END_NOTES
+
+
+* Quantum Methods
+- Density Functional Theory is not feasible.
+- System size is limited due to computational cost.
+- Boundaries of cell affect relaxation of core more.
+- Semi-empirical method is more computationally efficient.
+
+** Tight Binding
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Tight binding is an approximation to DFT.
+- Overlaps between atomic orbitals are key parameters.
+- Parameters can be fitted to experimental data
+- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
+
+** BOP
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+- BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
+  force calculation within tight-binding.
+- One builds a local density of states from moments, giving detailed
+  electronic structure information. 
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
+#+REVEAL_HTML: </div>
+
+
+** Embedding 
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Idea is to combine speed of BOP ($\mathcal{O}(N)$) with accuracy of
+  tight-binding $\mathcal{O}(N^3)$.
+- Increasing the number of atoms gives freedom to:
+  - Investigate isolated dislocations. 
+  - Include solutes at more realistic concentrations. 
+  - Simulate interfaces near a surface (e.g. TiO$_2$ and
+    bulk Ti)
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+#+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hex_cell_embedding_crop_text.png" >
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+Invariance theorem with green's function approaches. So good with boundary
+conditions. 
+
+#+END_NOTES
+
+
+* Parameter Optimisation
+- Parameter set for TB model optimised by two evolutionary algorithms: genetic
+  and covariance matrix evolution.
+- Fitting targets were a mix of experimental and DFT data. 
+
+** Results of optimisation. 
+#+ATTR_HTML: :width 100%
+#+ATTR_HTML: :height 90%
+|-----------------------------------+-------+-------+--------|
+| Quantity                          |    TB |   BOP | target |
+|-----------------------------------+-------+-------+--------|
+| $a_{\alpha}$              [bohr]  |  5.56 |  5.54 |   5.57 |
+| $c/a_{\alpha}$            [bohr]  |  1.61 |  1.62 |   1.58 |
+| $C_{11}$                  [GPa ]  | 180.7 | 199.8 |  176.1 |
+| $C_{33}$                  [GPa ]  | 206.1 | 206.9 |  190.5 |
+| $C_{44}$                  [GPa ]  |  48.3 |  37.7 |   50.8 |
+| $C_{12}$                  [GPa ]  |  95.2 |  80.7 |   86.9 |
+| $C_{13}$                  [GPa ]  |  66.5 |  59.6 |   68.3 |
+| $a_{\omega}$              [bohr]  |  8.84 |  8.85 |   8.73 |
+| $c_{\omega}$              [bohr]  |  5.38 |  5.37 |   5.32 |
+| $a_{\beta}$               [bohr]  |  6.26 |    -- |   6.17 |
+| $\Delta E(\omega-\alpha)$ [mRyd ] | -1.10 | -2.06 |  -0.73 |
+| bandwidth                 [Ryd ]  |  0.42 |    -- |   0.42 |
+|-----------------------------------+-------+-------+--------|
+
+*** Energy Splittings
+
+#+ATTR_HTML: :width 100%
+#+ATTR_HTML: :height 90%
+|---------------------------------------+-------+--------|
+| Quantity                              |    TB | target |
+|---------------------------------------+-------+--------|
+| $\Delta E(\omega-\alpha)$     [mRyd ] | -1.10 |  -0.73 |
+| $\Delta E(\text{4H}-\alpha)$  [mRyd ] |  1.98 |   3.17 |
+| $\Delta E(\text{6H}-\alpha)$  [mRyd ] |  2.98 |   3.72 |
+| $\Delta E(\text{fcc}-\alpha)$ [mRyd ] |  4.49 |   4.52 |
+| $\Delta E(\beta-\alpha)$      [mRyd ] |  9.83 |   7.64 |
+|---------------------------------------+-------+--------|
+
+
+#+begin_notes
+====================  Minimization complete  ====================
+
+    a_omega =  4.684778 AA
+    c_omega =  2.842485 AA
+    u_omega =  2.842485 
+ Etot_omega = -32.320179 eV
+
+- BOP difference is probably due to the fact that bond integrals are not
+  exactly the same due to approximate methods.
+- Pair potential can be tweaked once the right TB model has been found.
+- Energy difference between omega and alpha phase is different.
+- nrec = 5
+
+#+end_notes
+
+* Phonon Spectra
+
+** $\alpha$ phase
+:PROPERTIES:
+:END:
+
+#+NAME: hcp_phonon_band_spectrum
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:-200px;z_index:1;
+[[file:~/Documents/docs/Management/Images/hcp-band_dos-0-1.png]]
+
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 53% :style position:absolute;top:210px;left:285px;z_index:2;
+[[file:~/Documents/docs/Management/Images/experimental_hcp_phonons.png]]
+
+#+begin_notes
+All frequencies are in THz
+ #+end_notes
+
+** $\omega$ phase
+#+NAME: omega_phonon_band_spectrum
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:-200px;z_index:1;
+[[file:~/Documents/docs/Management/Images/omega-band_dos-0-1.png]]
+
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 35% :style position:absolute;top:240px;left:280px;z_index:2;
+[[file:~/Documents/docs/Management/Images/omega_phonons_trinkle.png]]
+
+
+** $\beta$ phase
+#+NAME: bcc_phonon_band_spectrum
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;
+[[file:~/Documents/docs/Management/Images/bcc-band_dos-0-1.png]]
+
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
+[[file:~/Documents/docs/Management/Images/bcc-band_dos_dft-1.png]]
+* Free Energies
+
+** Vibrational Free Energy
+#+NAME: Total Free energy 
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;
+[[file:~/Documents/docs/Management/Images/free_energy_tbe_bcc_hcp_2019-09-17.png]]
+
+
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 70% :style position:absolute;top:105px;left:450px;z_index:2;
+[[file:~/Documents/docs/Management/Images/free_energy_dft_old_band_conf.png]]
+
+** Gibbs Free Energy 
+#+NAME: Total Free energy 
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/gibbs_free-energies_rydperatom_2019-09-12.png]]
+
+
+
+
+** Thermal Expansion
+#+NAME: Thermal Expansion
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;
+[[file:~/Documents/docs/Management/Images/thermal_expansion_all_phases.png]]
+
+
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 70% :style position:absolute;top:180px;left:450px;z_index:2;
+[[file:~/Documents/docs/Management/Images/thermal_expansion_alpha_ti_exp.png]]
+
+
+#+BEGIN_NOTES
+Quasiharmonic scheme is used.
+
+Free energy contribution from soft phonon modes don't contribute alot to the
+free energy, hence why at the larger temperatures the bcc phase does not
+dominate. 
+
+bcc is not favoured and then at around 55-80K it is favoured marginally compared
+to the hcp structure. 
+After this the hcp structure is favoured with bcc again becoming the one least
+favourable. 
+
+hcp is always more stable than omega in this temperature range. 
+
+#+END_NOTES
+
+* Stacking Fault Energies
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+- Excess energy of sheared slab. 
+- Stable stacking faults provides insight into possible dislocation dissociations.
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/gamma_surface_video.ogv" ></video>
+#+REVEAL_HTML: </div>
+
+
+** Results
+#+ATTR_HTML: :width 100%
+| Plane     | Fault        |  TB | [DFT]              | [TB]         |
+|-----------+--------------+-----+--------------------+--------------|
+| Basal     | $I_{1}$      | 198 | 148 $^{[1]}$       | --           |
+|           | $I_{2}$      | 242 | 260 $^{[1]}$       | 290 $^{[2]}$ |
+| Prismatic | $\gamma_{P}$ |  45 | 250/233 $^{[1,4]}$ | 110$^{[5]}$  |
+|-----------+--------------+-----+--------------------+--------------|
+
+
+- Units are in $mJm^{-2}$. Square brackets denote method from literature. 
+- $^{[1]}$ Benoit (2012), $^{[2]}$ Bere (1999), $^{[3]}$ Girshick (1998)
+- $^{[4]}$ Ackland (1992), $^{[5]}$ Legrand (1984)
+
+
+#+BEGIN_NOTES
+Pyramidal plane large minima at 0.5, 0.5, 0.0. 
+
+For I_1 fault I get 288
+For the other fault, I get 671 mJm^-2
+
+Smaller minima is at 0.7, 0.5, 288 mJm^-2
+
+In pseudopotential one gets 288 as well! 
+
+
+Pair potential for the BOP on fitting needs to be tweaked for accurate
+results.
+
+
+#+END_NOTES
+
+
+* Core structures
+- Dislocation cores are sensitive to boundary conditions.
+- Sufficient resolution of core structure is necessary ascertain how
+  dislocation glide is modified. 
+
+ 
+
+** $\frac{1}{3}\langle11\bar{2}0\rangle$ screw
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/bop_dislocation_relaxation_prismatic_partials_larger.png]]
+#+REVEAL: split
+
+#+ATTR_HTML: :width 600 :style position:relative;top:-150px;left:50px;z_index:1;
+[[file:~/Documents/docs/Management/Images/zoom_core_look.png]]
+
+#+ATTR_HTML: :width 80% :style position:absolute;top:280px;left:150px;z_index:2;
+[[file:~/Documents/docs/Management/Images/ghazisaiedi_trinkle_3_core.png]]
+
+#+ATTR_HTML: :width 30% :style position:absolute;top:180px;left:-150px;z_index:2;
+[[file:~/Documents/docs/Management/Images/coordinate_prismatic_plane.png]]
+
+
+
+* Formation and Dissolution energies
+
+** Vacancy formation Energy
+
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/vacancy_relaxation_26-03-19.ogv" ></video>
+
+| $\Delta E_{\text{f}}^{\text{vacancy}}$ | [eV]    |
+|----------------------------------------+---------|
+| Tight Binding                          | 2.66    |
+| GGA-DFT Trinkle (2006)                 | 2.03    |
+| Exp. Hashimoto (1984)                  | 1.27    |
+|----------------------------------------+---------|
+
+** Dissolution Energies
+#+REVEAL_HTML: <video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/oxygen_octahedral_relax_perspective.ogv" ></video>
+
+| $\Delta E_{\text{f}}^{\text{solution}}(\text{Tetra.} - \text{Octa.} )$ | [eV] |
+|------------------------------------------------------------------------+------|
+| Tight Binding                                                          | 1.50 |
+| GGA-DFT Kwasniak (2013)                                                | 1.23 |
+|------------------------------------------------------------------------+------|
+
+
+** Molecular Dynamics  
+#+CAPTION: Molecular dynamics simulation of O in an octahedral site
+#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
+
+
+** Tight-Binding: Future Work
+- Finish embedding calculations to see how core structure changes
+  with O content.
+- Calculate the Peierls barrier on prism, and $\pi$ planes. 
+- Calculate secondary Peierls barrier for kink migration with and without
+  oxygen.
+- Add rutile layer. See how dislocations and oxygen interact with structure.
+- Simulate high pressure $\text{Ti-H}_{2}\text{O}$ system.
+
+
+* Defect Clusters 
+
+- Increase in oxygen content in Ti-7wt.%Al causes higher number density of
+  $\alpha_2$ precipitates at 550\deg C (Felicity's results).
+- Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
+- This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
+- First starting out with pure Ti and $\alpha_2$. Still working on extension to Ti-7wt.%Al.
+
+
+** Calculation Details
+- Först /et al./ $[6]$ calculated energetics of defect complexes with associated local
+  force-constant matrix.
+- Partial thermodynamic equilibrium imposed (thermal equilibrium for one species and not the other). 
+- Defect concentration plotted as a function of carbon/vacancy concentration
+  only at 160\deg C.
+- Extension: apply the quasiharmonic approximation/do thermodynamic integration
+  for better accuracy at higher temperatures (550\deg C - 950\deg C). 
+
+$[6]$ /Point Defect Concentrations in Metastable Fe-C Alloys/, Först /et
+al/, Phys. Rev. Lett. 96, 2006
+
+
+
+** Plots in Fe-C
+#+NAME: Forst calculation
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/forst_defect_concentration_cementite.png]]
+
+#+NAME: Forst calculation 2
+#+ATTR_REVEAL: :frag fade-in
+#+ATTR_HTML: :width 70% :style position:relative;top:-525px;left:0px;z_index:2;
+[[file:~/Documents/docs/Management/Images/forst_defect_concentration_vacancies.png]]
+
+** $\text{Ti}_{3}\text{Al}$  Cells
+#+NAME: Ti3al VTi
+#+ATTR_HTML: :width 70% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/ti3al_val_o.png]]
+
+** Ti Cells
+#+CAPTION: Ti 6V
+#+REVEAL_HTML: <video controls width="800" height="600" autoplay loop src="file:///home/tigany//Documents/docs/Management/Images/video_ti_v_6o_relax.ogv" ></video>
+
+
+** Defect Clusters: Future Work 
+- Finish Ti and $\text{Ti}_{3}\text{Al}$ defect cluster calculations in DFT. 
+- Possibly extend to Ti-7wt%Al with SQS structures.
+- See how much of an effect anharmonicity has on predictions. 
+
+
+* Additional references
+
+- Ghazisaeidi, Trinkle (2012), /Core structure of a screw dislocation in Ti from density functional theory and classical potentials/.
+- Rodney, Ventelon (2016), /Ab initio modelling of dislocation core properties
+  in metals and semiconductors/.
+- Chaari, Clouet (2014), /First order pyramidal slip of 1/3 screw dislocations in zirconium/
