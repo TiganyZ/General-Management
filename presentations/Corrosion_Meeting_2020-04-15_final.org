@@ -1,7 +1,7 @@
 #+ATTR_HTML: font-size: 1em
 #+TITLE: TB oxygen solute hardening in Ti. 
 #+Author: Tigany Zarrouk 
-#+Date: 09.04.2019
+#+Date: 15.04.2020
 #+Email: tigany.zarrouk@kcl.ac.uk
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_TITLE_SLIDE: <h1 >%t</h1><h2>%s</h2><h3>%A %a</h3> 
@@ -110,7 +110,7 @@ conditions.
 | $a_{\omega}$              [bohr]          |  8.93 |                     8.73 |
 | $c_{\omega}$              [bohr]          |  5.39 |                     5.32 |
 | $a_{\beta}$               [bohr]          |  6.20 |                     6.18 |
-| $\Gamma$ bandwidth                 [Ryd ] |  3.70 |                     5.87 |
+| $K$ bandwidth                 [Ryd ] |  4.65 |                    4.97  |
 |-------------------------------------------+-------+--------------------------|
 
 *** Energy Splittings
@@ -340,13 +340,8 @@ structure methods. Like the prismatic splitting above.
 
 ** Prismatic Peierls Stress
 
-   - $\epsilon_{xz}$ strain was applied to the cell in increments of 0.0001 to cause the dislocation to
-     move on the prismatic plane by c/2. 
-   - Using an increment in the strain of $\epsilon_{xz}$ by $1\times 10^{-4}C_{44}'^{}$, where $C_{44}'^{}$
-     is the $C_{44}$ elastic constant in the dislocation coordinate
-     system, with a value of $C_{44}'=38.4749$ GPa, we find that the
-     dislocation moves from one Peierls valley along the prismatic
-     plane at $0.0012C_{44}'^{}$, giving a Peierls stress of $\sigma_xz =
+   - Using an increment in the strain of $\epsilon_{xz}$ by $1\times 10^{-4}C_{44}'^{}$, the
+     dislocation moves by c/2 at $\sigma_xz = 0.0012C_{44}'^{}$, giving a Peierls stress of $\sigma_xz =
      2C_{44}\varepsilon_{xz} = 0.0923$ GPa/b. 
    - This is half the strain necessary for the MEAM potential of
      Trinkle et al. 
@@ -363,8 +358,8 @@ structure methods. Like the prismatic splitting above.
     E_{\text{perfect-O}} + E_{\text{perfect}} \]
 
   #+Reveal: split
-  #+ATTR_HTML: :style position:relative;top:10px;left:-250px;z_index:1;
-  [[file:~/Documents/docs/Management/Images/ocore_tio_interaction.png]]
+  #+ATTR_HTML: :style position:relative;top:10px;left:-180px;z_index:1;
+[[file:~/Documents/docs/Management/Images/prisotioquad.png]] v
 
 #+ATTR_HTML: :width 95% :style position:absolute;top:200px;left:450px;z_index:3;
   [[file:~/Documents/docs/Management/Images/chaari_ti-o_dislocation_interactions.png]]
@@ -379,6 +374,16 @@ structure methods. Like the prismatic splitting above.
 
 
 * Defects and Defect Clusters
+
+
+** Defect Clusters in Ti
+
+ - Increase in oxygen content in Ti-7wt.%Al causes higher number density of
+   $\alpha_2$ precipitates at 550\deg C (Felicity's results).
+ - Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
+ - This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
+ - First starting out with pure Ti and $\alpha_2$. 
+# Still working on extension to Ti-7wt.%Al.
 
 ** Vacancy formation Energy
 
@@ -403,19 +408,9 @@ structure methods. Like the prismatic splitting above.
 
     #+ATTR_HTML: :width 70% :style position:relative;top:10px;left:0px;z_index:1;      
       [[file:~/Documents/docs/Management/Images/vacancy_formation_temperature_dep_contrib_2020-04-13.png]]
-
-
-** Defect Clusters in Ti
-
- - Increase in oxygen content in Ti-7wt.%Al causes higher number density of
-   $\alpha_2$ precipitates at 550\deg C (Felicity's results).
- - Oxygen acting as a defactant might stabilise defect complexes (Ti_v + nO).
- - This can cause more defects resulting in the increased number of precipitates due to more nucleation sites.
- - First starting out with pure Ti and $\alpha_2$. 
-# Still working on extension to Ti-7wt.%Al.
     
 
-** Dissolution Energies
+** Oxygen solution Energies
    - Octahedral site for oxygen is most stable, as expected. 
    - Tetrahedral is unstable: oxygen prefers a hexahedral site. 
   
@@ -440,8 +435,8 @@ structure methods. Like the prismatic splitting above.
 
 | Defect Cluster      | Energy (eV) |
 |---------------------+-------------|
-| $E^{\text{sol}}(H)$    | -  21.783   |
-| $E^{\text{sol}}(O)$    | -  23.436   |
+| $E^{\text{sol}}(H)$    | -  21.783 (DFT: -4.8)   |
+| $E^{\text{sol}}(O)$    | -  23.436 (DFT: -5.592) |
 | $E^{\text{sol}}(2O)$   | -  46.806   |
 | $E^{\text{sol}}(3O)$   | -  70.437   |
 | $E^{\text{sol}}(4O)$   | -  94.070   |

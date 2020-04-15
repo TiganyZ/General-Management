@@ -1057,10 +1057,15 @@ DFT pseudopot:
 
  
      \begin{table}	
-    \begin{tabular}{cc}
-        \small $E_{\text{int}}$ meV & O Core: -405.6 \\
-     &\addheight{\includegraphics[width=0.19\textwidth]{Images/Ti-O1_pris_initial.png}}\\
-     &\addheight{\includegraphics[width=0.19\textwidth]{Images/Ti-O1_pris_final.png}}
+    \begin{tabular}{cccc}
+        \small $E_{\text{int}}$ meV & O Pris 1: -405.6 & O Pris 3: -412.3 & O Pris 3: -412.3 \\&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti-O1_pris_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_O2_pris_initial.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_O3_pris_initial.png}}\\&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti-O1_pris_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_O2_pris_final.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_O3_pris_final.png}}\\
+
     	      \end{tabular}
 
     \end{table}
