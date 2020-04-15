@@ -3,6 +3,7 @@
 #+BIND: org-latex-images-centered nil
 #+BIND: org-latex-image-default-width "5cm"
 #+LATEX_HEADER: \usepackage[margin=0.75in]{geometry}
+#+LATEX_HEADER: \usepackage{svg}
 
 * Objective Function
 
@@ -179,6 +180,50 @@ All formation energies below use the chemical potential of Akysonov
 | Ef_OOOO_vac_sol_bind   | -  2.724    |
 | Ef_OOOOO_vac_sol_bind  | - 1.583     |
 | Ef_OOOOOO_vac_sol_bind | - 1.690     |
+
+
+** Temperature dependence 
+
+        \begin{table}	
+    \begin{tabular}{ccccc}
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_1O_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_2O_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_3O_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_4O_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_5O_plot.png}}\\
+
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_1O_V_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_2O_V_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_3O_V_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_4O_V_plot.png}}&
+    \addheight{\includegraphics[width=0.19\textwidth]{Images/E_5O_V_plot.png}}\\ 
+
+
+
+    \end{tabular}
+    \caption{ The contribution of vibrational and configurational free energy to the formation enthalpies of defect clusters in Ti.  Row 1: Only oxygen interstitials: no vacancy. Row 2: Same number of intersititials with vacancy.   }
+    \end{table}
+
+
+
+        \begin{table}	
+    \begin{tabular}{cc}
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_1O_plot.png}}&
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_1O_V_plot.png}}\\
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_2O_plot.png}}&
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_2O_V_plot.png}}\\
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_3O_plot.png}}&
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_3O_V_plot.png}}\\
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_4O_plot.png}}&
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_4O_V_plot.png}}\\
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_5O_plot.png}}&
+    \addheight{\includegraphics[width=0.49\textwidth]{Images/E_5O_V_plot.png}}\\ 
+
+
+
+    \end{tabular}
+    \caption{ The contribution of vibrational and configurational free energy to the formation enthalpies of defect clusters in Ti.  Row 1: Only oxygen interstitials: no vacancy. Row 2: Same number of intersititials with vacancy.   }
+    \end{table}
 
 
 * Binding energy of defect clusters in the harmonic approximation
@@ -1012,8 +1057,18 @@ DFT pseudopot:
 
  
      \begin{table}	
+    \begin{tabular}{cc}
+        \small $E_{\text{int}}$ meV & O Core: -405.6 \\
+     &\addheight{\includegraphics[width=0.19\textwidth]{Images/Ti-O1_pris_initial.png}}\\
+     &\addheight{\includegraphics[width=0.19\textwidth]{Images/Ti-O1_pris_final.png}}
+    	      \end{tabular}
+
+    \end{table}
+
+ 
+     \begin{table}	
     \begin{tabular}{ccccc}
-        \small $E_{\text{int}}$ meV &O1: -82.6 &O2: +165.4 &O3: -83.4 &O4: -140.7 \\ \hline &
+        \small $E_{\text{int}}$ meV &O1: +82.6 &O2: -165.4 &O3: +83.4 &O4: +140.7 \\ \hline &
 	% \small Before relaxation ($\mathbf{b} = 1/3\langle 1 \bar{2} 1 0 \rangle$) &
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O1_initial.png}}&
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O2_initial.png}}&
@@ -1026,7 +1081,7 @@ DFT pseudopot:
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O3_final.png}}&
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O4_final.png}}\\ \hhline
 
-        \small $E_{\text{int}}$ meV &O5: +163.5 &O6: +163.4 &O7: -132.8& O8: +20.1 \\ \hline &
+        \small $E_{\text{int}}$ meV &O5: -163.5 &O6: -163.4 &O7: +132.8& O8: -20.1 \\ \hline &
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O5_initial.png}}&
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O6_initial.png}}&
     \addheight{\includegraphics[width=0.19\textwidth]{Images/Ti_IP1-O_interaction/crop/Ti-O7_initial.png}}&
