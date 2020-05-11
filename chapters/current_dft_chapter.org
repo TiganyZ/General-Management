@@ -28,20 +28,20 @@ PLAN
 
 * Introduction 
 
-To accurately model the behaviour of atoms in a solid, we must use quantum mechanics. The first
-postulate of of quantum mechanics states that a quantum mechanical system can be described by a
-wavefunction, a function of the positions of the quantum mechanical entities, and time, which
-satisfies the Schr\:odinger equation. Bonding in materials is heavily dependent on how electrons
-arrange themselves upon the assembly of atoms to make a solid. By the first postulate, we would
-expect upon assembly, that the state of the system can be fully described by a /many body
-wavefunction/: a wavefunction which is a function of the positions of each of the electrons and
-nuclei in the system.
+To accurately model the behaviour of an assembly of atoms we must use quantum mechanics. The
+wavelength of electrons, as described by de Broglie $\lambda = \hslash/p$, is of comparable length
+to the atomic spacing in solids. The first postulate of quantum mechanics states that a quantum
+mechanical system can be described by a wavefunction, a function of the positions of the quantum
+mechanical entities, and time, which satisfies the Schr\:odinger wave equation. As such we know that
+the state of the system can be fully described by a /many body wavefunction/: a wavefunction which
+is a function of the positions of each of the electrons and nuclei in the system, which also depends
+on time.
 
 Assuming that we have non-relativistic electrons, the Schr\:odinger equation one must solve is then 
 
 
-\[\Big( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i\sum_j    \frac{1}{|
-\mathbf{r}_i - \mathbf{r}_j |}+ \sum_i\sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |} \Big)
+\[\Big( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i \sum_j    \frac{1}{|
+\mathbf{r}_i - \mathbf{r}_j |}+ \sum_i \sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |} \Big)
 \mathbf{ \Psi }(\{\mathbf{r}\}; t) = E \mathbf{ \Psi }(\{\mathbf{r}\}; t),\]
 
 
@@ -68,7 +68,7 @@ The total energy is the expectation value of the Hamiltonian:
 
 where 
 
-\[ V_\text{ext}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$\] 
+\[ V_{\text{ext}}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$\] 
 
 is the external potential due to the coulomb interaction between the electrons and the nuclei---the
 expectation value has been explicitly written as an integral over the local electron density,
@@ -85,23 +85,23 @@ $\bra{\mathbf{\Psi}}$ that the ket must satisfy the time-independent Schr\:oding
 \[ \hat{H}\ket{\mathbf{\Psi}_m} = E \ket{\mathbf{\Psi}}, \]
 where $\ket{\mathbf{\Psi}_m}$ is an eigenstate.
 
-Quite often, the state we would most like to find is the lowest energy state (/ground state/)
-of the system, as this is the fundamental state from which other mechanisms return to or start
-from. This necessarily occurs at zero kelvin by the third law of thermodynamics. To find this
-state for the full system, one must minimise the energy with respect to the parameters of the
-many-body wavefunction that satisfies the Schr\:odinger equation and appropriate symmetry
-constraints (e.g. for electrons, $\mathbf{\Psi}$ must be antisymmetric). This quickly leads to
-a problem of computation: each electron has four degrees of freedom (the quantum numbers $n, m,
-l$ and $s$), and each nucleus will have $n^d_I$ degrees of freedom; given a collection of
-just $M$ atoms, we would have $4M + Mn^d_I$ variables to minimise with respect to energy. To
-make the problem tractable, we must make a few approximations.
+Quite often, the state we would most like to find is the lowest energy state (/ground state/) of the
+system, as this is the fundamental state from which other mechanisms return to or start from. This
+necessarily occurs at zero kelvin by the third law of thermodynamics. To find this state for the
+full system, one must minimise the energy with respect to the parameters of the many-body
+wavefunction that satisfies the Schr\:odinger equation and appropriate symmetry constraints
+(e.g. for electrons, $\mathbf{\Psi}$ must be antisymmetric). This quickly leads to an explosion of
+complexity: just describing wavefunction of the 22 electrons present in a single titanium, in a
+coarse 10x10x10 grid, one would need to tabulate $(10^3)^22=10^66$ complex numbers to describe the
+electronic wavefunction at each point in the grid. Clearly, minimising a function of this complexity
+is costly. To make the problem tractable, we must make a few approximations.
 
 ** Born-Oppenheimer Approximation
 
-The first approximation that we make allows us to separate nuclear and electronic motion: this is the
-Born-Oppenheimer approximation. One must first make the assumption that the
-wavefunction which describes the system is a product state between the nuclear and electronic
-portions of the system.
+The first impose an adiabatic approximation on the time-independent wavefunction, which allows us to separate
+nuclear and electronic motion: this is the Born-Oppenheimer approximation. One must first make the
+assumption that the wavefunction which describes the system is a product state between the nuclear
+and electronic portions of the system.
 
 \[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
 
@@ -110,8 +110,7 @@ the nuclear portion of the wavefunction.
 
 Due to the large disparity in mass between an electron and the nucleus of an atom ($M_\text{Nuc} \sim
 2000 m_e$) we can neglect the contribution to the Hamiltonian that comes from the nuclear
-kinetic energy operator acting on the electronic wavefunction, as the resulting term is far
-smaller than the electronic kinetic energy operator acting on the electronic wavefunction.
+kinetic energy operator acting on the electronic wavefunction.
 
 \[T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
 1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})\]
@@ -122,7 +121,7 @@ smaller than the electronic kinetic energy operator acting on the electronic wav
 \psi_{\mathbf{R}}(\mathbf{r}) \]
 
 This results in the motion of the electrons being instantaneous with regard to the
-motion of the ions in the system and that the electrons relax into their ground state with
+motion of the ions in the system: electrons relax into their ground state instantly with
 respect to any configuration of the ions. This results in the total energy being a function of
 only the nuclear coordinates cite:Finnis1997. 
 
@@ -134,7 +133,24 @@ solve for the nuclear wavefunction,
 where $E_{\mathbf{R}}$ contains all of the information of the configuration of the electrons in
 the system. 
 
+
 ** Self-Consistent Mean-Field Theory
+   
+   A major development on the path to tractable calculations is that of Hartree and Hartree-Fock
+   theory. A ansatz is made for the many-electron wavefunction, whereby we assume it is a product
+   state between single particle orbitals:
+
+   \[ \Psi_{}(\{\mathbf{r}\}) = \phi(\mathbf{r}_1)\phi(\mathbf{r}_2)\ldots \phi(\mathbf{r}_n). \]
+   
+   Applying the variational principle to find the ground state,
+
+   \[ \frac{ \exp{ \hat{H} }{ \Psi }}{ \bra{\Psi}\ket{\Psi} } = 0 \]
+
+   we obtain the Hartree equations. 
+
+   
+
+   N\:aively, 
 
 ** Density Functional Theory
 
@@ -268,7 +284,12 @@ The Kohn-Sham eigenvalues are not strictly correct.
 *** Practical steps towards accurate calculations
 
 
+    
+*** Thomas-Fermi model 
 
+*** Hohenburg and Kohn Theories
+
+    
 * Defects in Materials
 
 ** Vacancies and Solutes

@@ -1,0 +1,158 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=latex 2020.4.21)  28 APR 2020 18:49
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**apa6.ins
+(./apa6.ins
+LaTeX2e <2019-10-01> patch level 1
+(/usr/share/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count80
+\emptyLines=\count81
+\processedLines=\count82
+\commentsRemoved=\count83
+\commentsPassed=\count84
+\codeLinesPassed=\count85
+\TotalprocessedLines=\count86
+\TotalcommentsRemoved=\count87
+\TotalcommentsPassed=\count88
+\TotalcodeLinesPassed=\count89
+\NumberOfFiles=\count90
+\inFile=\read1
+\inputcheck=\read2
+\off@0=\count91
+\off@1=\count92
+\off@2=\count93
+\off@3=\count94
+\off@4=\count95
+\off@5=\count96
+\off@6=\count97
+\off@7=\count98
+\off@8=\count99
+\off@9=\count100
+\off@10=\count101
+\off@11=\count102
+\off@12=\count103
+\off@13=\count104
+\off@14=\count105
+\off@15=\count106
+\@maxfiles=\count107
+\@maxoutfiles=\count108
+
+Utility: `docstrip' 2.5g <2018/05/03>
+English documentation    <2018/05/03>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./apa6.cls 
+\openout0 = `./apa6.cls'.
+
+
+Processing file apa6.dtx (class) -> apa6.cls
+File apa6.dtx ended by \endinput.
+Lines  processed: 4720
+Comments removed: 1530
+Comments  passed: 56
+Codelines passed: 3088
+
+
+Generating file(s) ././config/APAamerican.txt ././config/APAbritish.txt ././con
+fig/APAdutch.txt ././config/APAenglish.txt ././config/APAgerman.txt ././config/
+APAngerman.txt ././config/APAgreek.txt ././config/APAczech.txt ././config/APAtu
+rkish.txt ././config/APAendfloat.cfg 
+\openout0 = `././config/APAamerican.txt'.
+
+\openout1 = `././config/APAbritish.txt'.
+
+\openout2 = `././config/APAdutch.txt'.
+
+\openout3 = `././config/APAenglish.txt'.
+
+\openout4 = `././config/APAgerman.txt'.
+
+\openout5 = `././config/APAngerman.txt'.
+
+\openout6 = `././config/APAgreek.txt'.
+
+\openout7 = `././config/APAczech.txt'.
+
+\openout8 = `././config/APAturkish.txt'.
+
+\openout9 = `././config/APAendfloat.cfg'.
+
+
+Processing file apa6.dtx (american) -> ./config/APAamerican.txt
+                         (british) -> ./config/APAbritish.txt
+                         (dutch) -> ./config/APAdutch.txt
+                         (english) -> ./config/APAenglish.txt
+                         (german) -> ./config/APAgerman.txt
+                         (ngerman) -> ./config/APAngerman.txt
+                         (greek) -> ./config/APAgreek.txt
+                         (czech) -> ./config/APAczech.txt
+                         (turkish) -> ./config/APAturkish.txt
+                         (APAendfloat) -> ./config/APAendfloat.cfg
+File apa6.dtx ended by \endinput.
+Lines  processed: 4720
+Comments removed: 1530
+Comments  passed: 56
+Codelines passed: 3088
+
+
+Generating file(s) ././samples/bibliography.bib ././samples/shortsample.tex ./.
+/samples/longsample.tex 
+\openout0 = `././samples/bibliography.bib'.
+
+\openout1 = `././samples/shortsample.tex'.
+
+\openout2 = `././samples/longsample.tex'.
+
+
+Processing file apa6.dtx (bibliography) -> ./samples/bibliography.bib
+                         (shortsample) -> ./samples/shortsample.tex
+                         (longsample) -> ./samples/longsample.tex
+File apa6.dtx ended by \endinput.
+Lines  processed: 4720
+Comments removed: 1530
+Comments  passed: 56
+Codelines passed: 3088
+
+
+Generating file(s) ././pseudoTeX/apa6.ptex ././pseudoTeX/TeX2WordForapa6.bas 
+\openout0 = `././pseudoTeX/apa6.ptex'.
+
+\openout1 = `././pseudoTeX/TeX2WordForapa6.bas'.
+
+
+Processing file apa6.dtx (ptex) -> ./pseudoTeX/apa6.ptex
+                         (bas) -> ./pseudoTeX/TeX2WordForapa6.bas
+File apa6.dtx ended by \endinput.
+Lines  processed: 4720
+Comments removed: 1530
+Comments  passed: 56
+Codelines passed: 3088
+
+Overall statistics:
+Files  processed: 4
+Lines  processed: 18880
+Comments removed: 6120
+Comments  passed: 224
+Codelines passed: 12352
+ ) 
+Here is how much of TeX's memory you used:
+ 454 strings out of 492168
+ 5915 string characters out of 6131584
+ 72962 words of memory out of 5000000
+ 4891 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 11i,0n,15p,134b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.

@@ -1,0 +1,5 @@
+# Fdb version 3
+["pdflatex"] 1588087265 "pdflatex=pdflatex -interaction nonstopmode" "pdflatex=pdflatex -interaction nonstopmode.pdf" "pdflatex=pdflatex -interaction nonstopmode" 1588087266
+  (generated)
+  "pdflatex=pdflatex -interaction nonstopmode.log"
+  "pdflatex=pdflatex -interaction nonstopmode.pdf"

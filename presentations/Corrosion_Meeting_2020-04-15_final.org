@@ -11,7 +11,7 @@
 #+REVEAL_EXTRA_CSS: ./extra.css
 #+REVEAL_THEME: solarized
 #+REVEAL_TRANS: linear 
-
+#+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
 
 
 * Motivation 
@@ -342,7 +342,7 @@ structure methods. Like the prismatic splitting above.
 
    - Using an increment in the strain of $\epsilon_{xz}$ by $1\times 10^{-4}C_{44}'$, the
      dislocation moves by c/2 at $\sigma_{xz}= 0.0012C_{44}'$, giving a Peierls stress of $\sigma_{xz} =
-     2C_{44}\epsilon_{xz}= 0.0923$ GPa/b. 
+     2C_{44}\epsilon_{xz}= 0.0923$ GPa. 
    - This is half the strain necessary for the MEAM potential of
      Trinkle et al. 
 

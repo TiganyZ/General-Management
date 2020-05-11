@@ -20,7 +20,7 @@
 #+REVEAL_EXTERNAL_PLUGINS:({src: "%splugins/chart.js"}”)
 #+REVEAL_EXTRA_CSS: ./extra.css
 
-#+REVEAL
+
 
 * Motivation 
   # - Rolling contact on bearing raceways generate maximal shear
