@@ -7,7 +7,7 @@ This file contains notes for the linux sysadmin of the PaxtonKCL group.
 
 su - 
 
-pass: forevernopercentrbigisevenec(4erno%rI7ec)
+pass: forevernopercentrbigisevenec
 
 ** Every Two Weeks
 
@@ -219,14 +219,5 @@ There are tickboxes which show what is active and what isn't.
 
 With the printers one of the tickboxes may be inactive, so untick it.
 
-** New IPs 2019-09-05
 
-10.101.17.99     gherkin
-10.101.17.100    coal
-10.101.17.158    beryl
-10.101.17.152    tar
-10.101.17.95     onyx
-137.73.5.17 172.17.0.1 opal
-10.101.140.248   char
-10.101.157.59    coke
-10.101.140.123   soot
+
