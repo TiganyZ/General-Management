@@ -1,3 +1,72 @@
 \begin{thebibliography}{}
 
+\bibitem [\protect \citeauthoryear {%
+Itakura%
+, Kaburaki%
+, Yamaguchi%
+\BCBL {}\ \BBA {} Okita%
+}{%
+Itakura%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+itakura13_effec_hydrog_atoms_screw_disloc}
+\APACinsertmetastar {%
+itakura13_effec_hydrog_atoms_screw_disloc}%
+\begin{APACrefauthors}%
+Itakura, M.%
+, Kaburaki, H.%
+, Yamaguchi, M.%
+\BCBL {}\ \BBA {} Okita, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Effect of Hydrogen Atoms on the Screw Dislocation
+  Mobility in Bcc Iron: a First-Principles Study} {The effect of hydrogen atoms
+  on the screw dislocation mobility in bcc iron: a first-principles
+  study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Acta Materialia}{61}{18}{6857-6867}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1016/j.actamat.2013.07.064}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.actamat.2013.07.064} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Paxton%
+\ \BBA {} Els\"{a}sser%
+}{%
+Paxton%
+\ \BBA {} Els\"{a}sser%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Paxton2013}
+\APACinsertmetastar {%
+Paxton2013}%
+\begin{APACrefauthors}%
+Paxton, A\BPBI T.%
+\BCBT {}\ \BBA {} Els\"{a}sser, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{{\APACmonth{06}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Analysis of a carbon dimer bound to a vacancy in iron
+  using density functional theory and a tight binding model} {Analysis of a
+  carbon dimer bound to a vacancy in iron using density functional theory and a
+  tight binding model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review B}{87}{22}{}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1103/physrevb.87.224110}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1103/physrevb.87.224110} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
 \end{thebibliography}

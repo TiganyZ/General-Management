@@ -1,53 +1,16 @@
-#+TITLE: Multi-scale investigation of dislocation mediated carbon migration in iron
-#+AUTHOR: Tigany Zarrouk
-#+BIBLIOGRAPHY: ../bibliography/org-refs.bib
-#+LaTeX_class: apa6
-#+LaTeX_CLASS_OPTIONS: [a4paper]
-#+LaTeX_HEADER: \affiliation{King's College London}
-#+LaTeX_HEADER: \shorttitle{Multi-scale modelling of carbon migration in iron}
-#+LaTeX_HEADER: \usepackage{breakcites}
-#+LaTeX_HEADER: \usepackage{apacite}
-#+LaTeX_HEADER: \usepackage{paralist}
-#+LaTeX_HEADER: \let\itemize\compactitem
-#+LaTeX_HEADER: \let\description\compactdesc
-#+LaTeX_HEADER: \let\enumerate\compactenum
+#    -*- mode: org -*-
 
 
-\begin{abstract}
-
-*Abstract*
-
-We investigate the validity of a dislocation-assisted carbon migration
-mechanism underpinning the formation of dark etching regions in
-bearing steels undergoing high-cycle fatigue through use of a
-multi-scale approach: from quantum mechanics,
-to stochastic simulations. We start from tight binding simulations of
-$1/3\langle 111 \rangle$ screw dislocations to obtain the 2-d Peierls
-potential and Fe-C binding energies. These become ingredients for a line-tension
-model of the $1/3\langle 111 \rangle$ screw dislocation to obtain the kink-pair formation
-energy as a function of stress and carbon concentration. Finally,
-3-d kinetic Monte-Carlo simulations of dislocations in an environment
-of carbon are used to ascertain which temperature and stress regimes
-dislocation-assisted carbon migration is a valid mechanism. 
-
-\end{abstract}
+Archived entries from file /home/tigany/Documents/docs/Management/fe_skf_paper/fe-c_paper_skf.org
 
 
-* Introduction 
-
-* Computational Method 
-
-  - Use tight-binding model of Paxton and Elsaetter cite:Paxton2013.
-  - Generate dislocations using anisotropic elasticity theory.
-  - Create clusters of dislocations in both easy and hard core
-    configurations. 
-  - Place carbon in octahedral sites around the core
-  - Calculate corrections (ZPE etc) 
-    
-
-* Results
-
-** Hard and easy core relaxations
+* Hard and easy core relaxations
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-07-03 Fri 17:25
+  :ARCHIVE_FILE: ~/Documents/docs/Management/fe_skf_paper/fe-c_paper_skf.org
+  :ARCHIVE_OLPATH: Results
+  :ARCHIVE_CATEGORY: fe-c_paper_skf
+  :END:
    
    Plot of dislocation energy as function of cluster size. 
    [[file:~/Documents/docs/Management/Images/img_fe_size_dependence_on_log_of_core_radius.png]]
@@ -132,10 +95,4 @@ dislocation-assisted carbon migration is a valid mechanism.
 
     
 
-
-* Bibliography 
-<<bibliography link>>
-
-bibliographystyle:apacite
-bibliography:../bibliography/org-refs.bib
 
