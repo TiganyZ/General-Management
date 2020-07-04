@@ -1,4 +1,4 @@
-% Created 2020-07-03 Fri 17:25
+% Created 2020-07-04 Sat 20:09
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{apa6}
 \usepackage[utf8]{inputenc}
@@ -58,10 +58,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:org9bf46eb}
+\label{sec:orgd824988}
 
 \section{Computational Method}
-\label{sec:org4605623}
+\label{sec:orgd5f5f3c}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -74,10 +74,22 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgb186146}
+\label{sec:orgce3de7e}
+
+
+
+\subsection{Dislocation core energy landscapes}
+\label{sec:org67e5cef}
+        \begin{table}	
+    \begin{tabular}{c}
+	     \includegraphics[width=0.4\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
+             \includegraphics[width=0.4\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
+    \end{tabular}		
+\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is larger in tight-binding compared to DFT. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
+    \end{table}
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org266eb33}
+\label{sec:orgd5954e3}
 
 Plot of dislocation energy as function of cluster size. 
 \begin{center}
@@ -158,8 +170,8 @@ Distance dependence of binding energies.
 
 
 \section{Bibliography}
-\label{sec:org0595511}
-\label{org172d722}
+\label{sec:orgbe3e157}
+\label{orgea8d8d5}
 
 \bibliographystyle{apacite}
 \bibliography{../bibliography/org-refs}
