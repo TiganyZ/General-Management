@@ -1,4 +1,4 @@
-% Created 2020-07-09 Thu 15:57
+% Created 2020-07-09 Thu 19:42
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{apa6}
 \usepackage[utf8]{inputenc}
@@ -58,10 +58,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:orge3bde97}
+\label{sec:orge83a9bb}
 
 \section{Computational Method}
-\label{sec:org81a7ab9}
+\label{sec:org811f961}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -74,12 +74,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgbcd7867}
+\label{sec:orgc4b8119}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:orgfc656ed}
+\label{sec:orge77bc3e}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -121,11 +121,34 @@ that of the hard core.
 This may be attributed to lack of core electron	repulsion, resulting from the sd-iron tight-binding model. 
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org9d9729d}
+\label{sec:orgd64a5d5}
 
-To determine the binding energy of carbon, we first relaxed
-clusters of atoms, with \$R\(_{\text{1}}\) = \$ simulation cells of each core in the cluster method. The three
-atoms surrounding the core were 
+To determine the binding energy of carbon to dislocations, we used the
+cluster method; where the simulation cells consist of a circular cluster of
+atoms, split into two regions, with a single dislocation introduced into the
+centre by using the anisotropic elasticity solutions. Each of the clusters
+were centred on the easy or hard core positions. The cluster of atoms was
+split into two regions: a central region of dynamic atoms with radius \(R_1\),
+and an annulus of atoms, between \(R_1\) and \(R_2\), which were fixed to the anisotropic
+elasticity solutions. 
+
+Initially, large cells of with \(R_1 = 6\sqrt{2}a_{\text{bcc}}\), and \(R_2 =
+   7\sqrt{2}a_{\text{bcc}}\) and depth of single burger's vector, were relaxed
+for both the easy and hard cores, which consisted of 522 and 540 atoms
+respectively. The three atoms surrounding the core were constrained, to only
+relax in \(X-Y\) plane, to stop the core from moving upon relaxation. The
+k-point sampling mesh for each of these cells was 1x1x24, with a charge
+tolerance for self-consistency of \(1e-6\). Atoms were relaxed until the force
+on each atom was less than \(1e-3\) eV/\AA{}.  
+
+From the relaxed cells, a smaller region of 174 atoms, with \(R_1 =
+   3\sqrt{2}a_{\text{bcc}}\), and \(R_2 = 4\sqrt{2}a_{\text{bcc}}\), was cut from
+the dynamic regions. This smaller cell was extended to a thickness of 3b in
+the Z direction. Carbon interstitials were inserted into octahedral sites
+near the dislocation core, in the middle layer. Exploiting reflection and
+rotational symmetry allowed us to use only 10 interstitial
+sites to obtain the binding energies of carbon \$\(\sim\) 1.8\$b from the core. 
+
 
 As found in DFT simulations by Ventelon \cite{Ventelon2015}, when a carbon was placed in the
 vicinity of a relaxed easy dislocation core---in either of the two nearest, distinguishable,
@@ -147,7 +170,7 @@ Plot of dislocation energy as function of cluster size.
  	          \includegraphics[width=0.45\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
 
      	     \end{tabular}		
-\caption{ Final positions and binding energies (eV) of carbon around the the easy core (top) and hard core (bottom). The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core. }
+\caption{ Final positions and binding energies (eV) of carbon around the easy core (top) and hard core (bottom). The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core. }
    \end{table}
 
 
@@ -216,8 +239,8 @@ Distance dependence of binding energies.
 
 
 \section{Bibliography}
-\label{sec:orgc113e08}
-\label{org162290f}
+\label{sec:orgf202318}
+\label{org40ca11c}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}

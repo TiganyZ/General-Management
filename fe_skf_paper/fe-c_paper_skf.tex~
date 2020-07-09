@@ -1,4 +1,4 @@
-% Created 2020-07-09 Thu 15:56
+% Created 2020-07-09 Thu 16:24
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{apa6}
 \usepackage[utf8]{inputenc}
@@ -58,10 +58,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:orgcc9d5cd}
+\label{sec:org298330a}
 
 \section{Computational Method}
-\label{sec:orgc096786}
+\label{sec:org26b4bbc}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -74,12 +74,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:org4de3af3}
+\label{sec:orgfdab1aa}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:orgde8188e}
+\label{sec:org51f32b0}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -121,7 +121,7 @@ that of the hard core.
 This may be attributed to lack of core electron	repulsion, resulting from the sd-iron tight-binding model. 
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org1af8bdb}
+\label{sec:org84ebbce}
 
 To determine the binding energy of carbon, we first relaxed
 clusters of atoms, with \$R\(_{\text{1}}\) = \$ simulation cells of each core in the cluster method. The three
@@ -143,8 +143,8 @@ Plot of dislocation energy as function of cluster size.
 
 \begin{table}	
     \begin{tabular}{c}
- 	          \includegraphics[width=0.24\textwidth]{../Images/easy_core_fe_C_positioning_energies.png}  \\
- 	          \includegraphics[width=0.24\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
+ 	          \includegraphics[width=0.45\textwidth]{../Images/easy_core_fe_C_positioning_energies.png}  \\
+ 	          \includegraphics[width=0.45\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
 
      	     \end{tabular}		
 \caption{ Final positions and binding energies (eV) of carbon around the the easy core (top) and hard core (bottom). The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core. }
@@ -216,8 +216,8 @@ Distance dependence of binding energies.
 
 
 \section{Bibliography}
-\label{sec:org2f3b13f}
-\label{org5b76436}
+\label{sec:org3e3c9a9}
+\label{org832d4b7}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}
