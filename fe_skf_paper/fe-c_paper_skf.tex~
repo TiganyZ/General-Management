@@ -1,4 +1,4 @@
-% Created 2020-07-04 Sat 19:52
+% Created 2020-07-09 Thu 15:56
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{apa6}
 \usepackage[utf8]{inputenc}
@@ -58,10 +58,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:orgf8fff4c}
+\label{sec:orgcc9d5cd}
 
 \section{Computational Method}
-\label{sec:org4b3037a}
+\label{sec:orgc096786}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -74,22 +74,65 @@ configurations.
 
 
 \section{Results}
-\label{sec:orged00ec3}
+\label{sec:org4de3af3}
 
 
 
-\subsection{Dislocation core energy landscapes}
-\label{sec:orgc17c423}
-        \begin{table}	
+\subsection{Peierls Potential}
+\label{sec:orgde8188e}
+
+To determine the Peierls potential, we followed the procedure detailed in Itakura
+\cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
+antiparallel \(1/2\langle 111\rangle\) Burgers vectors in an "S" arrangement \cite{Clouet2012}, with
+initial displacements determined by the anisotropic elasticity solutions. These displacements
+were modified to be periodic, thereby removing artificial stacking faults which would appear
+between periodic images after the introduction of the dipole. This was achieved by the subraction
+of a linear error term from the superposition of displacement fields arising from the
+dislocations in the simulation cell and its periodic images \cite{vasilybulatov2006}. To accomodate
+for the internal stress upon introduction of the dislocation dipole into a simulation cell, an
+elastic strain was imposed on the cell, resulting in an extra tilt component being added to the
+cell vectors \cite{Clouet2012,vasilybulatov2006}. Simulation cells were constructed with different
+initial core positions, which were sampled from the triangular region "EHS" (easy, hard and
+split) core positions, as detailed in \ref{fig:peierlspot}. To fix the dislocation positions during
+relaxation, the three atoms surrounding the easy core, for each dislocation, were fixed during
+relaxation.
+
+
+        \begin{table}
     \begin{tabular}{c}
 	     \includegraphics[width=0.4\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
-             \includegraphics[width=0.4\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
+             \includegraphics[width=0.4\textwidth]{../Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
     \end{tabular}		
-\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $b = \sqrt{3}/2 a_{\text{bcc}}$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is larger in tight-binding compared to DFT. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
+\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
+	\label{fig:peierlspot}
     \end{table}
 
+Comparison of 2d Peierls potentials of the \(1/2\langle 111\rangle\) screw dislocation between
+DFT can by found in \cite{Itakura2012}. Data was interpolated using 2d cubic splines. "E", "H"
+and "S" correspond to easy, hard and split core positions respectively, with the latter also
+corresponding to atomic positions. The relative energies between the different core
+positions is smaller in tight-binding compared to DFT; most notably, the energies. This is
+an artifact in the model, which has been validated in NEB calculations of the \(1/2\langle
+	111\rangle\) screw dislocation Peierls barrier, as calculated with NEB, is roughly half that
+when compared to DFT \textbf{INSERT LUKES THESIS REFERENCE}. The split core as seen in
+tight-binding is reminiscent of EAM potentials, where the split core energy is lower than
+that of the hard core.
+
+This may be attributed to lack of core electron	repulsion, resulting from the sd-iron tight-binding model. 
+
 \subsection{Hard and easy core relaxations}
-\label{sec:orge88af4e}
+\label{sec:org1af8bdb}
+
+To determine the binding energy of carbon, we first relaxed
+clusters of atoms, with \$R\(_{\text{1}}\) = \$ simulation cells of each core in the cluster method. The three
+atoms surrounding the core were 
+
+As found in DFT simulations by Ventelon \cite{Ventelon2015}, when a carbon was placed in the
+vicinity of a relaxed easy dislocation core---in either of the two nearest, distinguishable,
+octahedral sites---a spontaneous reconstruction of the dislocation core occurred: from easy to
+hard. Upon reconstruction, the dislocation core moved to a neighbouring triangle, when looking along the \(\langle
+   111\rangle\) direction, where the carbon found itself situated in the centre.
+
 
 Plot of dislocation energy as function of cluster size. 
 \begin{center}
@@ -98,17 +141,14 @@ Plot of dislocation energy as function of cluster size.
 
 
 
-     \begin{table}	
-    \begin{tabular}{cc}
-        \small  Initial  & Final \\ 
-	     \includegraphics[width=0.24\textwidth]{../Images/easy_core_initial_all_fe_octahedral_sites_with_core.png} &
-	           \includegraphics[width=0.24\textwidth]{../Images/easy_core_final_all_fe_octahedral_sites_with_core.png}  \\
-	     \includegraphics[width=0.24\textwidth]{../Images/hard_core_initial_all_fe_octahedral_sites_with_core.png} &
-	           \includegraphics[width=0.24\textwidth]{../Images/hard_core_final_all_fe_octahedral_sites_with_core.png}  \\
-		   
-    	      \end{tabular}		
-\caption{ Initial and final octahedral sites for the easy core (first row) and the hard core (second row). As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core, but we do not find that the easy core reconstructs into a hard core, with these same sites. }
-    \end{table}
+\begin{table}	
+    \begin{tabular}{c}
+ 	          \includegraphics[width=0.24\textwidth]{../Images/easy_core_fe_C_positioning_energies.png}  \\
+ 	          \includegraphics[width=0.24\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
+
+     	     \end{tabular}		
+\caption{ Final positions and binding energies (eV) of carbon around the the easy core (top) and hard core (bottom). The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core. }
+   \end{table}
 
 
 Following the paper by Itakura
@@ -133,46 +173,52 @@ directions. The zero-point energy is given by
 where \(k_i\) are the eigenvalues of the Hessian and \(m_\text{C}\) is
 the mass of carbon. 
 
-The ZPE corrected solution energy is given by 
-\[ E^{\text{Z}}_{s} = E_s + E_z - E_{z\text{C oct.}},  \]
+    The ZPE corrected solution energy is given by 
+    \[ E^{\text{Z}}_{s} = E_s + E_z - E_{z\text{C oct.}},  \]
+v
+    where \(E_{z\text{C oct.}} = 202.5 meV\) is the zero-point energy of carbon
+    situated in an octahedral site in a perfect cluster of the same size. 
 
-where \(E_{z\text{C oct.}} = 202.5 meV\) is the zero-point energy of carbon
-situated in an octahedral site in a perfect cluster of the same size. 
+Table of relaxed 
 
-Table of relaxed energies.  
 
 \begin{center}
-\begin{tabular}{lrrrrr}
-Site Type & \(E_{\text{d + C}} - E_{\text{d}}\)) & \(E_s\) & \(E_z - E_{z\text{ C oct.}}\) \(meV\) & \(E^b_z\) \(meV\) & distance from core\\
+\begin{tabular}{lrrr}
+Site Type & \(E_b^{z}\) eV & distance from core [b] & distance from core \AA{}\\
 \hline
-E1 & -0.89299636 & -0.05828365 & -17.8194 & -775.17 & 1.413699\\
-E2 & -0.89300553 & -0.05829282 & -0.529601 & -792.585 & 1.732527\\
-E3 & -0.84476459 & -0.01005188 & 2.47361 & -139.236 & 2.458179\\
-E4 & -0.85151735 & -0.01680464 & 5.36252 & -234.001 & 3.001665\\
-E5 & -0.89232261 & -0.0576099 & 7.63124 & -791.454 & 3.369997\\
-E6 & -0.87856485 & -0.04385214 & 6.60286 & -603.242 & 4.129084\\
-E7 & -0.86299687 & -0.02828416 & 3.21964 & -388.045 & 4.703422\\
-E8 & -0.84773572 & -0.01302301 & 0.35220 & -177.539 & 4.409563\\
-H1/H2 & -0.93009177 & -0.09537906 & -6.39993 & -1291.3 & 0.006472\\
-H3/H4 & -0.88549598 & -0.05078327 & 7.3888 & -698.331 & 2.960187\\
-H5 & -0.86857644 & -0.03386373 & 6.5459 & -467.286 & 5.287079\\
-H6 & -0.85757695 & -0.02286424 & 4.6842 & -315.768 & 4.746490\\
-H7 & -0.8643446 & -0.02963189 & 6.1659 & -409.328 & 4.483550\\
-H8 & -0.82596378 & 8.74893\,(-3) & 4.7335 & 114.302 & 3.480325\\
+E1 & 0.775 & 0.57 & 1.413699\\
+E2 & 0.793 & 0.70 & 1.732527\\
+E3 & 0.139 & 0.99 & 2.458179\\
+E4 & 0.234 & 1.21 & 3.001665\\
+E5 & 0.791 & 1.36 & 3.369997\\
+E6 & 0.603 & 1.66 & 4.129084\\
+E7 & 0.388 & 1.89 & 4.703422\\
+E8 & 0.178 & 1.77 & 4.409563\\
+H1/H2 & 1.291 & 0.00 & 0.006472\\
+H3/H4 & 0.698 & 1.19 & 2.960187\\
+H5 & 0.467 & 2.12 & 5.287079\\
+H6 & 0.316 & 1.91 & 4.746490\\
+H7 & 0.409 & 1.80 & 4.483550\\
+H8 & -0.114 & 1.40 & 3.480325\\
 \end{tabular}
 \end{center}
 
 
+These binding energies agree well with experiment and previous calculations. The maximum binding energy found by 
+
 
 Distance dependence of binding energies. 
 
+\begin{center}
+\includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png}
+\end{center}
 
 
 
 \section{Bibliography}
-\label{sec:orge2a6d74}
-\label{orgb8d30f5}
+\label{sec:org2f3b13f}
+\label{org5b76436}
 
-\bibliographystyle{apacite}
+\bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}
 \end{document}

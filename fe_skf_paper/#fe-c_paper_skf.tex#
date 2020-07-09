@@ -1,4 +1,4 @@
-% Created 2020-07-09 Thu 15:57
+% Created 2020-07-07 Tue 18:15
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{apa6}
 \usepackage[utf8]{inputenc}
@@ -58,10 +58,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:orge3bde97}
+\label{sec:org01061e3}
 
 \section{Computational Method}
-\label{sec:org81a7ab9}
+\label{sec:orgd2a422c}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -74,12 +74,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgbcd7867}
+\label{sec:org0a1b337}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:orgfc656ed}
+\label{sec:org20a61eb}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -93,18 +93,18 @@ for the internal stress upon introduction of the dislocation dipole into a simul
 elastic strain was imposed on the cell, resulting in an extra tilt component being added to the
 cell vectors \cite{Clouet2012,vasilybulatov2006}. Simulation cells were constructed with different
 initial core positions, which were sampled from the triangular region "EHS" (easy, hard and
-split) core positions, as detailed in \ref{fig:peierlspot}. To fix the dislocation positions during
+split) core positions, as detailed in \ref{fig:peierls_pot} . To fix the dislocation positions during
 relaxation, the three atoms surrounding the easy core, for each dislocation, were fixed during
 relaxation.
 
 
-        \begin{table}
+        \begin{table}	
+	[[label:fig:peierls_pot]]
     \begin{tabular}{c}
 	     \includegraphics[width=0.4\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
              \includegraphics[width=0.4\textwidth]{../Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
     \end{tabular}		
 \caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
-	\label{fig:peierlspot}
     \end{table}
 
 Comparison of 2d Peierls potentials of the \(1/2\langle 111\rangle\) screw dislocation between
@@ -121,11 +121,7 @@ that of the hard core.
 This may be attributed to lack of core electron	repulsion, resulting from the sd-iron tight-binding model. 
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org9d9729d}
-
-To determine the binding energy of carbon, we first relaxed
-clusters of atoms, with \$R\(_{\text{1}}\) = \$ simulation cells of each core in the cluster method. The three
-atoms surrounding the core were 
+\label{sec:orgcce65fd}
 
 As found in DFT simulations by Ventelon \cite{Ventelon2015}, when a carbon was placed in the
 vicinity of a relaxed easy dislocation core---in either of the two nearest, distinguishable,
@@ -141,14 +137,17 @@ Plot of dislocation energy as function of cluster size.
 
 
 
-\begin{table}	
-    \begin{tabular}{c}
- 	          \includegraphics[width=0.45\textwidth]{../Images/easy_core_fe_C_positioning_energies.png}  \\
- 	          \includegraphics[width=0.45\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
-
-     	     \end{tabular}		
-\caption{ Final positions and binding energies (eV) of carbon around the the easy core (top) and hard core (bottom). The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core. }
-   \end{table}
+     \begin{table}	
+    \begin{tabular}{cc}
+        \small  Initial  & Final \\ 
+	     \includegraphics[width=0.24\textwidth]{../Images/easy_core_initial_all_fe_octahedral_sites_with_core.png} &
+	           \includegraphics[width=0.24\textwidth]{../Images/easy_core_final_all_fe_octahedral_sites_with_core.png}  \\
+	     \includegraphics[width=0.24\textwidth]{../Images/hard_core_initial_all_fe_octahedral_sites_with_core.png} &
+	           \includegraphics[width=0.24\textwidth]{../Images/hard_core_final_all_fe_octahedral_sites_with_core.png}  \\
+		   
+    	      \end{tabular}		
+\caption{ Initial and final octahedral sites for the easy core (first row) and the hard core (second row). As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core, but we do not find that the easy core reconstructs into a hard core, with these same sites. }
+    \end{table}
 
 
 Following the paper by Itakura
@@ -216,9 +215,9 @@ Distance dependence of binding energies.
 
 
 \section{Bibliography}
-\label{sec:orgc113e08}
-\label{org162290f}
+\label{sec:org01c0a17}
+\label{orgd112afb}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrtnat}
 \bibliography{../bibliography/org-refs}
 \end{document}
