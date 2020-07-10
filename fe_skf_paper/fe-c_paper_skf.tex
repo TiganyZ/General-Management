@@ -1,6 +1,6 @@
-% Created 2020-07-09 Thu 19:42
+% Created 2020-07-10 Fri 18:11
 % Intended LaTeX compiler: pdflatex
-\documentclass[a4paper]{apa6}
+\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -14,14 +14,6 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\affiliation{King's College London}
-\shorttitle{Multi-scale modelling of carbon migration in iron}
-\usepackage{breakcites}
-\usepackage{apacite}
-\usepackage{paralist}
-\let\itemize\compactitem
-\let\description\compactdesc
-\let\enumerate\compactenum
 \author{Tigany Zarrouk}
 \date{\today}
 \title{Multi-scale investigation of dislocation mediated carbon migration in iron}
@@ -38,8 +30,6 @@
 \tableofcontents
 
 \begin{abstract}
-
-*Abstract*
 
 We investigate the validity of a dislocation-assisted carbon migration
 mechanism underpinning the formation of dark etching regions in
@@ -58,10 +48,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:orge83a9bb}
+\label{sec:org09a1465}
 
 \section{Computational Method}
-\label{sec:org811f961}
+\label{sec:orgf5af0fc}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -74,12 +64,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgc4b8119}
+\label{sec:org8dda13d}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:orge77bc3e}
+\label{sec:org6a12ea6}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -95,19 +85,63 @@ cell vectors \cite{Clouet2012,vasilybulatov2006}. Simulation cells were construc
 initial core positions, which were sampled from the triangular region "EHS" (easy, hard and
 split) core positions, as detailed in \ref{fig:peierlspot}. To fix the dislocation positions during
 relaxation, the three atoms surrounding the easy core, for each dislocation, were fixed during
-relaxation.
+relaxation. 
+
+The interaction energy between the dislocation dipole and periodic images
+followed the prescription of Bulatov and Cai \cite{vasilybulatov2006}. In
+isotropic elasticity, the elastic energy of a single dislocation dipole in an
+infinite lattice is given by
+
+
+\[ E_{\text{el}}^{\inf} = \frac{\mu b^2}{4\pi} ln( \frac{r}{r_{c}} )  \]
+
+The contribution from periodic images to the correction is 
+
+\[ E_{\text{img} } = E_{\text{el}} (\mathbf{a}, \mathbf{c}_i , r_c) - E_{\text{el}}^{\inf}
+   (\mathbf{a}, r_c)\], 
+
+where 
+
+\[ E_{\text{img} = \sum_{\mathbf{R}}' E_{\text{dd}} (\mathbf{R}), \]
+
+where \(\mathbf{R}\) is a sum over dislocation dipoles in the periodic images
+exclusively. 
+
+\[ E_{\text{dd}} (\mathbf{R}) = \frac{\mu b^2}{2\pi}
+   \text{ln}\frac{|\mathbf{R}|^2}{|\mathbf{R}+\mathbf{a}|\cdot|\mathbf{R}-\\mathbf{a}|}
+   \]
+
+"Ghost" dipoles are introduced to account for the conditional convergence
+of the sum at \(\pm\alpha \mathbf{b}\) and \(\pm \beta\mathbf{b}\), where \(\alpha = \beta = 0.5\).  
+
+
+As dislocations were kept at the same distance for each
+calculation, the difference in interaction energies, with dipole correction, was negligible. 
+
 
 
         \begin{table}
     \begin{tabular}{c}
-	     \includegraphics[width=0.4\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
-             \includegraphics[width=0.4\textwidth]{../Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
+	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
+             \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
     \end{tabular}		
 \caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
 	\label{fig:peierlspot}
     \end{table}
 
-Comparison of 2d Peierls potentials of the \(1/2\langle 111\rangle\) screw dislocation between
+
+
+        \begin{table}
+    \begin{tabular}{c}
+	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
+             \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
+    \end{tabular}		
+\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
+	\label{fig:peierlspot2}
+    \end{table}
+
+
+Comparison of 2d Peierls potentials of the \(1/2\langle 111 \rangle\) screw dislocation between
 DFT can by found in \cite{Itakura2012}. Data was interpolated using 2d cubic splines. "E", "H"
 and "S" correspond to easy, hard and split core positions respectively, with the latter also
 corresponding to atomic positions. The relative energies between the different core
@@ -120,8 +154,30 @@ that of the hard core.
 
 This may be attributed to lack of core electron	repulsion, resulting from the sd-iron tight-binding model. 
 
+\begin{center}
+\begin{tabular}{rrrrr}
+Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{P}}\) & \(\Delta E_{\text{P}}^{\text{DFT}}\)\\
+\hline
+1 & 0 & 0 & 0 & 0\\
+2 & -0.7 & 7.3 & 7.9 & 3.2\\
+3 & -1.4 & 16.0 & 17.4 & 19.2\\
+4 & -2.0 & 22.2 & 24.2 & 31.1\\
+5 & -2.5 & 24.8 & 27.4 & 39.3\\
+6 & -3.3 & 3.0 & 6.3 & 11.5\\
+7 & -6.5 & 7.1 & 13.6 & 39.9\\
+8 & -9.6 & 13.0 & 22.6 & 75.2\\
+9 & -12.5 & 5.4 & 17.9 & 108.9\\
+10 & -4.8 & 22.1 & 26.9 & 34.8\\
+11 & -7.2 & 18.2 & 25.4 & 37.9\\
+12 & -9.8 & 14.0 & 23.8 & 60.7\\
+13 & -3.8 & 11.5 & 15.3 & 17.6\\
+14 & -6.9 & 15.1 & 22.0 & 29.9\\
+15 & -4.3 & 18.6 & 22.9 & 39.7\\
+\end{tabular}
+\end{center}
+
 \subsection{Hard and easy core relaxations}
-\label{sec:orgd64a5d5}
+\label{sec:org8a4edad}
 
 To determine the binding energy of carbon to dislocations, we used the
 cluster method; where the simulation cells consist of a circular cluster of
@@ -146,8 +202,12 @@ From the relaxed cells, a smaller region of 174 atoms, with \(R_1 =
 the dynamic regions. This smaller cell was extended to a thickness of 3b in
 the Z direction. Carbon interstitials were inserted into octahedral sites
 near the dislocation core, in the middle layer. Exploiting reflection and
-rotational symmetry allowed us to use only 10 interstitial
-sites to obtain the binding energies of carbon \$\(\sim\) 1.8\$b from the core. 
+rotational symmetry, allows us to use only 10 interstitial
+sites to obtain the binding energies of carbon \(\sim 1.8\) b from the core. 
+
+The three atoms surrounding the core on the first and third layers were again
+constrained to relax only in the \(X\) and \(Y\) directions. No such constraints
+were imposed on the middle layer. 
 
 
 As found in DFT simulations by Ventelon \cite{Ventelon2015}, when a carbon was placed in the
@@ -166,8 +226,8 @@ Plot of dislocation energy as function of cluster size.
 
 \begin{table}	
     \begin{tabular}{c}
- 	          \includegraphics[width=0.45\textwidth]{../Images/easy_core_fe_C_positioning_energies.png}  \\
- 	          \includegraphics[width=0.45\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
+ 	          \includegraphics[width=0.85\textwidth]{../Images/easy_core_fe_C_positioning_energies.png}  \\
+ 	          \includegraphics[width=0.85\textwidth]{../Images/hard_core_fe_C_positioning_energies.png}  \\
 
      	     \end{tabular}		
 \caption{ Final positions and binding energies (eV) of carbon around the easy core (top) and hard core (bottom). The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core. }
@@ -179,53 +239,58 @@ Following the paper by Itakura
 binding energy of carbon each of the screw dislocation cores. 
 
 The solution energy is given by 
-\[ E_s = E_{\text{d + C}} - E_{\text{d}} - E_{\text{C oct.}}, \]
+\[ E_s = E_{\text{d + C}} - E_{\text{d}} - E_{\text{C ref.}}, \]
 where \(E_{\text{d + C}}\) is the total energy of a relaxed cluster with a
 carbon interstitial and a dislocation, \(E_{\text{d}}\) is the total
 energy of a relaxed cluster with a dislocation and \(E_{\text{C
     oct.}}\) is the total energy of relaxed a cluster with a single carbon in
 an octahedral site.
 
-The zero-point energy is calculated as in Itakura. A 3x3 Hessian
-matrix is constructed by taking the numerical derivative of the
-forces observed on the carbon atom after displacement by \(\pm 0.015 \AA\) in each of the \(X\), \(Y\) and \(Z\)
-directions. The zero-point energy is given by
+The zero-point energy is calculated as in Itakura. After relaxation of the
+C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
+numerical derivative of forces observed on the carbon atom after
+displacement by \(\pm 0.015 \AA\) in each of the \(X\), \(Y\) and \(Z\) directions.
+The three atoms surrounding the core on the first and third layers were
+again fixed in \(Z\) coordinate. The zero-point energy is
+given by
 
 \[ E_z = \frac{1}{2} \sum_{i=1}^3 \frac{h}{2\pi} \sqrt{ k_i /
     m_{\text{C}} },  \]
 where \(k_i\) are the eigenvalues of the Hessian and \(m_\text{C}\) is
 the mass of carbon. 
 
-    The ZPE corrected solution energy is given by 
-    \[ E^{\text{Z}}_{s} = E_s + E_z - E_{z\text{C oct.}},  \]
-v
-    where \(E_{z\text{C oct.}} = 202.5 meV\) is the zero-point energy of carbon
-    situated in an octahedral site in a perfect cluster of the same size. 
+The ZPE corrected solution energy is given by 
+\[ E^{\text{Z}}_{s} = E_s + \Delta E_z,  \]
 
-Table of relaxed 
+where \(\Delta E_z = E_z - E_{z\text{C ref.}}\) and \(E_{z\text{C ref.}} = 202.5 meV\) is the zero-point energy of carbon
+situated in an octahedral site in a perfect cluster of the same size. 
 
 
-\begin{center}
-\begin{tabular}{lrrr}
-Site Type & \(E_b^{z}\) eV & distance from core [b] & distance from core \AA{}\\
-\hline
-E1 & 0.775 & 0.57 & 1.413699\\
-E2 & 0.793 & 0.70 & 1.732527\\
-E3 & 0.139 & 0.99 & 2.458179\\
-E4 & 0.234 & 1.21 & 3.001665\\
-E5 & 0.791 & 1.36 & 3.369997\\
-E6 & 0.603 & 1.66 & 4.129084\\
-E7 & 0.388 & 1.89 & 4.703422\\
-E8 & 0.178 & 1.77 & 4.409563\\
-H1/H2 & 1.291 & 0.00 & 0.006472\\
-H3/H4 & 0.698 & 1.19 & 2.960187\\
-H5 & 0.467 & 2.12 & 5.287079\\
-H6 & 0.316 & 1.91 & 4.746490\\
-H7 & 0.409 & 1.80 & 4.483550\\
-H8 & -0.114 & 1.40 & 3.480325\\
-\end{tabular}
-\end{center}
+\begin{table*}
+    \begin{tabular}{cccccc}
+    \hline
+Site Type & distance from core [b] & $E^{z}$ [eV] & $\Delta E^{z}$ [eV] & $E_b$ [eV] & $E_b^{z}$ [eV]  \\ 
+     \hline
+% 00        &                    --  &   0.203      &               0.000 &             &         --     \\
+%           &                        &              &                     &             &                \\
+E1        &                   0.57 &   0.185      & 	     -0.018 &       0.793 &          0.775 \\
+E2        &                   0.70 &   0.202      & 	     -0.001 &       0.793 &          0.793 \\
+E3        &                   0.99 &   0.205      & 	      0.002 &       0.137 &          0.139 \\
+E4        &                   1.21 &   0.208      & 	      0.005 &       0.229 &          0.234 \\
+E5        &                   1.36 &   0.210      & 	      0.008 &       0.784 &          0.791 \\
+E6        &                   1.66 &   0.209      & 	      0.007 &       0.597 &          0.603 \\
+E7        &                   1.89 &   0.206      & 	      0.003 &       0.385 &          0.388 \\
+E8        &                   1.77 &   0.203      & 	      0.000 &       0.177 &          0.178 \\
+H1        &                   0.00 &   0.196      & 	     -0.006 &       1.298 &          1.291 \\
+H2        &                   1.19 &   0.210      & 	      0.007 &       0.691 &          0.698 \\
+H3        &                   2.12 &   0.209      & 	      0.007 &       0.461 &          0.467 \\
+H4        &                   1.91 &   0.207      & 	      0.005 &       0.311 &          0.316 \\
+H5        &                   1.80 &   0.208      & 	      0.006 &       0.403 &          0.409 \\
+H6        &                   1.40 &   0.207      & 	      0.005 &      -0.119 &         -0.114 \\
 
+    \end{tabular}		
+    \caption{Table of energies leading to the zero-point energy corrected binding energy. }
+\end{table*}
 
 These binding energies agree well with experiment and previous calculations. The maximum binding energy found by 
 
@@ -236,11 +301,14 @@ Distance dependence of binding energies.
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png}
 \end{center}
 
+\section{Line Tension}
+\label{sec:orgcae28ae}
+
 
 
 \section{Bibliography}
-\label{sec:orgf202318}
-\label{org40ca11c}
+\label{sec:orgfebc9e5}
+\label{orgb381ab0}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}
