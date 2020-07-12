@@ -1,4 +1,4 @@
-% Created 2020-07-10 Fri 18:07
+% Created 2020-07-12 Sun 14:09
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -48,10 +48,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:orgbcdf58b}
+\label{sec:orgdb85996}
 
 \section{Computational Method}
-\label{sec:org54840c3}
+\label{sec:org3ba4c5f}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -64,12 +64,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgbb744c1}
+\label{sec:orgd22a989}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:org55b1654}
+\label{sec:orgfab3ddb}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -131,16 +131,6 @@ calculation, the difference in interaction energies, with dipole correction, was
 
 
 
-        \begin{table}
-    \begin{tabular}{c}
-	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
-             \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
-    \end{tabular}		
-\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
-	\label{fig:peierlspot2}
-    \end{table}
-
-
 Comparison of 2d Peierls potentials of the \(1/2\langle 111 \rangle\) screw dislocation between
 DFT can by found in \cite{Itakura2012}. Data was interpolated using 2d cubic splines. "E", "H"
 and "S" correspond to easy, hard and split core positions respectively, with the latter also
@@ -177,7 +167,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org04a97e0}
+\label{sec:org0aa514f}
 
 To determine the binding energy of carbon to dislocations, we used the
 cluster method; where the simulation cells consist of a circular cluster of
@@ -292,7 +282,12 @@ H6        &                   1.40 &   0.207      & 	      0.005 &      -0.119 &
     \caption{Table of energies leading to the zero-point energy corrected binding energy. }
 \end{table*}
 
-These binding energies agree well with experiment and previous calculations. The maximum binding energy found by 
+These binding energies agree well with experiment and previous
+calculations. The maximum binding energy found by the Fe-C EAM
+potential by Becquart \cite{Becquart2007}, was 0.41eV. Kamber
+\emph{et al.} found a maximum binding energy of 0.5 eV. Cochardt
+found a value of 0.71 eV, which is within 0.1eV of the largest
+binding energy for the easy core. 
 
 
 Distance dependence of binding energies. 
@@ -301,14 +296,9 @@ Distance dependence of binding energies.
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png}
 \end{center}
 
-\section{Line Tension}
-\label{sec:org34c05e8}
-
-
-
 \section{Bibliography}
-\label{sec:orgd95b8c0}
-\label{org8384c94}
+\label{sec:org75ff6e1}
+\label{org3978794}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}

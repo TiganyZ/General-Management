@@ -105,14 +105,14 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 
-        \begin{table}
-    \begin{tabular}{c}
-	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
-             \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
-    \end{tabular}		
-\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
-	\label{fig:peierlspot2}
-    \end{table}
+#         \begin{table}
+#     \begin{tabular}{c}
+# 	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
+#              \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
+#     \end{tabular}		
+# \caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
+# 	\label{fig:peierlspot2}
+#     \end{table}
 
 
 	Comparison of 2d Peierls potentials of the $1/2\langle 111 \rangle$ screw dislocation between
@@ -317,7 +317,12 @@ dislocation-assisted carbon migration is a valid mechanism.
  	\caption{Table of energies leading to the zero-point energy corrected binding energy. }
     \end{table*}
 
-    These binding energies agree well with experiment and previous calculations. The maximum binding energy found by 
+    These binding energies agree well with experiment and previous
+    calculations. The maximum binding energy found by the Fe-C EAM
+    potential by Becquart cite:Becquart2007, was 0.41eV. Kamber
+    \emph{et al.} found a maximum binding energy of 0.5 eV. Cochardt
+    found a value of 0.71 eV, which is within 0.1eV of the largest
+    binding energy for the easy core. 
 
     # It might be useful to do another calculation in the final state of these calculations, just to
     # get a more relaxed binding energy. 
@@ -327,8 +332,28 @@ dislocation-assisted carbon migration is a valid mechanism.
     
     [[file:~/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png]]
     
-* Line Tension 
+* COMMENT Line Tension 
 
+
+  One is still doing the work for the line tension model. This model views the dislocation
+  as an elastic string which moves on the Peierls potential $\Delta E_{\text{P}}$. One is
+  using the julia implementation of the NEB algorithm by Ortner cite:Makri2019.
+  The equilibrium line shape $y(x)$ of the dislocation is the solution to the 1D Klein-Gordon
+  type equation cite:Rodney2009:
+
+  \[ - \frac{\text{d} ( \Delta E_{\text{P}}[y(x)] )}{\text{d} y(x) } + \sigma_{\text{A}} b
+  + T \frac{\partial^2 y}{\partial x^2} = 0,\]
+
+   where, 
+
+   \[ T = E_L + \frac{\text{d}^2 E_L}{\text{d}\phi^2},  \]
+
+  
+  \[ E_L = E _{\text{el}} + E _{\text{core}} = \frac{\mu b^2}{4\pi (1-\nu)} \text{ln} \big
+  ( \frac{R}{r_c}\big ) + E_{\text{core}}.\]
+
+  Things one needs to do is just fit the kink shape from Luke's thesis to obtain the
+  correct value for the line-tension $T$. 
   
 
 * Bibliography 
