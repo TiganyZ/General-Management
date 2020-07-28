@@ -43,4 +43,15 @@ C.S. Becquart, J.M. Raulot, G.~Bencteux, C.~Domain, M.~Perez, S.~Garruchet, and
 \newblock Atomistic modeling of an fe system with a small concentration of c.
 \newblock {\em Computational Materials Science}, 40(1):119--129, July 2007.
 
+\bibitem{Makri2019}
+Stela Makri, Christoph Ortner, and James~R. Kermode.
+\newblock A preconditioning scheme for minimum energy path finding methods.
+\newblock {\em The Journal of Chemical Physics}, 150(9):094109, March 2019.
+
+\bibitem{Rodney2009}
+David Rodney and Laurent Proville.
+\newblock Stress-dependent peierls potential: Influence on kink-pair
+  activation.
+\newblock {\em Physical Review B}, 79(9), March 2009.
+
 \end{thebibliography}

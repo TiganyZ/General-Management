@@ -1,4 +1,4 @@
-% Created 2020-07-12 Sun 15:35
+% Created 2020-07-27 Mon 10:45
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -48,10 +48,10 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:org119db83}
+\label{sec:org86fd581}
 
 \section{Computational Method}
-\label{sec:org48d89b7}
+\label{sec:orgbac91f9}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -64,12 +64,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgb5deb11}
+\label{sec:orgfd7266a}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:org924a8d5}
+\label{sec:orgd46fb04}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -87,8 +87,14 @@ split) core positions, as detailed in \ref{fig:peierlspot}. To fix the dislocati
 relaxation, the three atoms surrounding the easy core, for each dislocation, were fixed during
 relaxation. 
 
+I do not agree with the calculation of the interaction energy between dislocations in
+Itakura's paper. Their equation is a sum over periodic images, which leads to
+a problem in the conditional convergence of the interaction energy, as shown by Bulatov
+and Cai \cite{vasilybulatov2006}. The equation found in Itakura would clearly depend on
+the truncation limit for the sum, which they do not specify. 
+
 The interaction energy between the dislocation dipole and periodic images
-followed the prescription of Bulatov and Cai \cite{vasilybulatov2006}. In
+should follow the prescription of Bulatov and Cai \cite{vasilybulatov2006}. In
 isotropic elasticity, the elastic energy of a single dislocation dipole in an
 infinite lattice is given by
 
@@ -108,15 +114,18 @@ where \(\mathbf{R}\) is a sum over dislocation dipoles in the periodic images
 exclusively. 
 
 \[ E_{\text{dd}} (\mathbf{R}) = \frac{\mu b^2}{2\pi}
-   \text{ln}\frac{|\mathbf{R}|^2}{|\mathbf{R}+\mathbf{a}|\cdot|\mathbf{R}-\\mathbf{a}|}
+   \text{ln}\frac{|\mathbf{R}|^2}{|\mathbf{R}+\mathbf{a}|\cdot|\mathbf{R}-\mathbf{a}|}
    \]
 
 "Ghost" dipoles are introduced to account for the conditional convergence
 of the sum at \(\pm\alpha \mathbf{b}\) and \(\pm \beta\mathbf{b}\), where \(\alpha = \beta = 0.5\).  
 
 
-As dislocations were kept at the same distance for each
-calculation, the difference in interaction energies, with dipole correction, was negligible. 
+The Peierls potential can be calculated by subtraction of the interaction energy of the
+dislocations in the periodic array, from the energy of the easy core
+configuration, which is the ground-state dislocation core configuration. 
+
+\[ \Delta E_{\text{P}} = \Delta E^{\text{tbe}} - \Delta E_{\text{INT}} \]
 
 
 
@@ -131,6 +140,16 @@ calculation, the difference in interaction energies, with dipole correction, was
 
 
 
+        \begin{table}
+    \begin{tabular}{c}
+	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
+             \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_2_labelled.png}  \\
+    \end{tabular}		
+\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in simulation method: the cluster method may inhibit the relaxation of the core more than quadrupolar cells, due to finite size effects.}
+	\label{fig:peierlspot2}
+    \end{table}
+
+
 Comparison of 2d Peierls potentials of the \(1/2\langle 111 \rangle\) screw dislocation between
 DFT can by found in \cite{Itakura2012}. Data was interpolated using 2d cubic splines. "E", "H"
 and "S" correspond to easy, hard and split core positions respectively, with the latter also
@@ -138,9 +157,10 @@ corresponding to atomic positions. The relative energies between the different c
 positions is smaller in tight-binding compared to DFT; most notably, the energies. This is
 an artifact in the model, which has been validated in NEB calculations of the \(1/2\langle
 	111\rangle\) screw dislocation Peierls barrier, as calculated with NEB, is roughly half that
-when compared to DFT \textbf{INSERT LUKES THESIS REFERENCE}. The split core as seen in
+when compared to DFT \textbf{ref Luke's Thesis}. The split core as seen in
 tight-binding is reminiscent of EAM potentials, where the split core energy is lower than
-that of the hard core.
+that of the hard core, \emph{but first, to check that this is so, one must check that
+the interaction energy between dislocations follows Bulatov and Cai}.
 
 This may be attributed to lack of core electron	repulsion, resulting from the sd-iron tight-binding model. 
 
@@ -167,7 +187,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org9c9d46d}
+\label{sec:orgddb65c5}
 
 To determine the binding energy of carbon to dislocations, we used the
 cluster method; where the simulation cells consist of a circular cluster of
@@ -199,6 +219,13 @@ The three atoms surrounding the core on the first and third layers were again
 constrained to relax only in the \(X\) and \(Y\) directions. No such constraints
 were imposed on the middle layer. 
 
+The core energy difference can be estimated by the difference
+between the excess energies of the easy and hard cores in the limit
+that \(\text{ln}{\frac{R}{R_0}) \rightarrow 0\). At the smallest
+value, one finds that the core energy difference \(\Delta
+   E_c^{\text{Easy-Hard}} = 76\) meV/b. This is in agreement with the
+results of Itakura \cite{Itakura2012}, of 82 meV/b.
+
 
 As found in DFT simulations by Ventelon \cite{Ventelon2015}, when a carbon was placed in the
 vicinity of a relaxed easy dislocation core---in either of the two nearest, distinguishable,
@@ -208,6 +235,8 @@ hard. Upon reconstruction, the dislocation core moved to a neighbouring triangle
 
 
 Plot of dislocation energy as function of cluster size. 
+
+
 \begin{center}
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/img_fe_size_dependence_on_log_of_core_radius.png}
 \end{center}
@@ -257,6 +286,7 @@ situated in an octahedral site in a perfect cluster of the same size.
 
 
 \begin{table*}
+\label{org9e10cb2}
     \begin{tabular}{cccccc}
     \hline
 Site Type & distance from core [b] & $E^{z}$ [eV] & $\Delta E^{z}$ [eV] & $E_b$ [eV] & $E_b^{z}$ [eV]  \\ 
@@ -296,9 +326,51 @@ Distance dependence of binding energies.
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png}
 \end{center}
 
+\section{Line Tension}
+\label{sec:org2ea8356}
+
+
+One is still doing the work for the line tension model. This model views the dislocation
+as an elastic string which moves on the Peierls potential \(\Delta E_{\text{P}}\). One is
+using the julia implementation of the NEB algorithm by Ortner \cite{Makri2019}.
+The equilibrium line shape \(y(x)\) of the dislocation is the solution to the 1D Klein-Gordon
+type equation \cite{Rodney2009}:
+
+\[ - \frac{\text{d} ( \Delta E_{\text{P}}[y(x)] )}{\text{d} y(x) } + \sigma_{\text{A}} b + T \frac{\partial^2 y}{\partial x^2} = 0,\]
+
+where, 
+
+\[ T = E_L + \frac{\text{d}^2 E_L}{\text{d}\phi^2},  \]
+
+
+\[ E_L = E_{\text{el}} + E_{\text{core}} = \frac{\mu b^2}{2\pi} \text{ln} \big
+  ( \frac{R}{r_c}\big ) + E_{\text{core}}.\]
+
+
+I have calculated the coefficients necessary for the line tension model. But there seem
+to be differences between what Itakura states in his paper and the coefficients that are
+measured in the Proville paper \cite{Rodney2009}. 
+
+One thing I can do to check the coefficients are correct, is to fit to the the kink
+shape from Luke's thesis to obtain the correct value for the line-tension \(T\).
+
+
+\section{Future work}
+\label{sec:orgb8433a3}
+
+\begin{itemize}
+\item Validation of line-tension model by reproduction of the dislocation line shape from
+Itakura 2012 \cite{Itakura2012}.
+\item Compare tbe dislocation line shape with Itakura, and find the migration path of the dislocation from tbe data.
+\item\relax [Optional] Find the elastic dipole tensor to check the binding energy of C within anisotropic elasticity.
+\item Choose the sites for which one can fit a function (lorentzian) for the interaction energy between C and Fe.
+\item Find the kink-pair formation enthalpy, with and without carbon, to feed into the kMC
+code.
+\end{itemize}
+
 \section{Bibliography}
-\label{sec:org03cc71a}
-\label{orgd01439b}
+\label{sec:org4c5cdcc}
+\label{org17351c7}
 
 \bibliographystyle{unsrt}
 \bibliography{../bibliography/org-refs}

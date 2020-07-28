@@ -346,9 +346,9 @@
       form of areas of ferrite microbands of lower hardness than
       the original martensite.
     - Hertzian stress and internal friction of the material
-      originate the transformation of som e of the inflicted
+      originate the transformation of some of the inflicted
       shear energy into heat.
-    - Accumulation of head generated due to cyclic stressing of
+    - Accumulation of heat generated due to cyclic stressing of
       the material leads to decay of hard martensitic phase to
       the formation of the ferrite microbands.
     - Phase transformation is result of subsurface
