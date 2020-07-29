@@ -1,4 +1,4 @@
-% Created 2020-07-27 Mon 10:45
+% Created 2020-07-29 Wed 18:43
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -48,10 +48,162 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:org86fd581}
+\label{sec:org1fae4f5}
+
+\begin{itemize}
+\item Outline of the literature review 
+\begin{enumerate}
+\item Origin of DER formation through high-cycle fatigue
+\item What is the DER region and what phases is it composed of?
+\item What are the current mechanisms which explain this?
+\begin{enumerate}
+\item Why are they insufficient?
+\end{enumerate}
+\item Ouline of the work considering Fe-C dislocation modelling
+\end{enumerate}
+\end{itemize}
+
+
+Martensitic steels are frequently used in bearings due to their
+resilience to service conditions, such as high rotational speeds and
+contact pressures. However, under cyclic loading exceeding a given
+contact stress (the elastic shakedown limit), the microstructure of
+the steel can decay, signalling the onset of rolling cycle fatigue
+(RCF), enhancing the risk of failure from subsurface crack
+initiation. This microstructural decay corresponds to Dark Etching
+Regions (DERs) as seen in optical images, where the darkness of the images
+is due to the higher reactivity of the phases which compose the DER
+region to the etchant, exacerbated by the roughness of the DER
+region, with more grains per unit
+area scattering light.
+
+Further development of the DER occurs with more stress cycles (of
+which development is hastened with a higher contact
+pressure). Matured DER regions have additional features, such as
+white etching bands (WEBs), which occur at specific angles (\(30\deg
+  / 80\deg\), for low angle / high angle WEBs respectively).
+
+DERs are found in the subsurface of the material, due to the maximum
+deviatoric stress being found in the subsurface from the Hertzian
+stress distribution exhibited by bearing contact. 
+
+
+These DER regions are composed of multiple different phases. They are
+generally defined to be mixtures of ferritic features within a
+residual martensitic matrix initially, but there are other phases
+which appear upon the further degredation of martensite during RCF. 
+
+There are: ferrite microbands which are generally grouped together;
+elongated ferrite, which may be composed by multiple ferrite
+microbands joining together---these have also been seen to form WEBs
+along with ferrite microbands; residual carbides, in which ferrite
+(microbands and elongated) can form inside of, causing it to
+dissolve; lenticular carbides, which are formed on the side and
+parallel to WEBs, and are observed in conjunction with the formation
+of WEBs.
+
+It is thought that the formation of lenticular carbides is related
+to the dissolution of residual cementite and tempered carbides,
+increasing the carbon content within the the ferrite
+microbands/nanocrystalline ferrite (DER) and reducing solubility of
+the carbon within WEBs. Residual cementite does not need to by fully
+dissolved for the formation of lenticular carbides. 
+
+Fu \emph{et al.} have claimed that carbon is redistributed into higher
+carbon concetrated regions such as cementite and other transition
+carbides. 
+
+
+
+\begin{itemize}
+\item Elucidate on the measurements pertaining to the migration of
+carbon
+\end{itemize}
+
+
+Many authors have proposed that carbon plays a crucial role in the
+formation of the DER regions. 
+
+Voskamp suggests that cyclic stresses generate a local rise in
+temperature, which promotes diffusion of atomic carbon trapped in
+the martensitic matrix. With diffusion of carbon, dislocations
+become unpinned, enabling potential slip systems to activate. The
+unpinned dislocations cause deformation. 
+
+Polonsky and Keer propose that the redistribution of the carbon
+solutes cause the formation of ferrite microbands by 
+cyclic-plastic strain induced softening. Carbon redistribution
+is caused by the release of carbon trapped by dislocations with the
+application of stress. 
+
+Due to the high dislocation density of martensite, all dissolved
+carbon is segregated to dislocations---which also pin the
+dislocations. With applied stress, the dislocations become unpinned
+and mobile. Dislocations multiply/annihilate; with annihilation,
+carbon becomes in ordinary solution, which is available to
+diffuse. This diffusion causes the formation of ferritic
+microbands. The process of annihilation needs to be understood. 
+
+Hedman/Slycke propose that the degradation of the DER can by
+described by the growth of carbides, where the carbide sized are
+described by Ostwald ripening, and carbon diffuses both thermally
+and mechanically by dislocation glide. 
+
+Slycke proposes a creep deformation based mechanism which is
+controlled by vacancies produced by the climb of dislocations. 
+
+Fu \emph{et al.} propose that the fundamental mechanism to DER formation
+is carbon migration under RCF driven by gliding dislocations. Strain
+generated by pulsating stresses allow dislocations to escape their
+carbon rich environment. The dislocations, now free, re-attract
+carbon, allowing the Cottrell atmosphere to reform, subsequently
+pinning the dislocation. This creates a net carbon flux. But, if
+carbides were to form in martensite, they should follow the
+Bagaryatskii/Isaichev orientation relationship. The cementite formed
+within the DER region, has an irregular shape, which must be due to
+te incomplete dissolution of residual cementite. 
+
+Smelova proposes that the formation of elongated ferrite are the
+result of recrystallisation processes. 
+
+\subsection{Mechanisms}
+\label{sec:orge7398a2}
+
+There are many proposed mechanisms for DER formation.
+
+Bush proposes that DER formation is governed by an
+exchange of material between the carbides and the matrix, which is
+evidenced by the formation of intrusions/extrusions within the
+microstructure. 
+
+Swahn proposes that the transformation mechanisms which lead to the
+formation of new features in DER are due to the redistribution of
+carbon present in the initial microstructure, which in solution in
+the martensite, and due to the dissolution of carbides. 
+
+They further detail that initially, stress induced carbon diffusion
+leads to the diffusion of carbon from the martensitic lattice to
+the various defects in the material (mainly dislocations). 
+As plastic deformation accumulates, the movement of dislocations
+creates carbon rich grain boundary-type interfaces. 
+
+It is not certain what role and timescale the dissolution of
+carbides occurs on. 
+
+High operating temperatures are known to accelerate DER formation. 
+
+In early stage DER formation, there is a high density of ferrite
+microbands. Later, regions of homogeneous nanocrystalline ferrite
+(heavily deformed ferrite) are formed in a cell-like structure.
+
+
+
+
+
+
 
 \section{Computational Method}
-\label{sec:orgbac91f9}
+\label{sec:orgcdfc6ac}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -64,12 +216,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orgfd7266a}
+\label{sec:orgf76a3b1}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:orgd46fb04}
+\label{sec:orgd9a2cc3}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -187,7 +339,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Hard and easy core relaxations}
-\label{sec:orgddb65c5}
+\label{sec:org399e230}
 
 To determine the binding energy of carbon to dislocations, we used the
 cluster method; where the simulation cells consist of a circular cluster of
@@ -215,7 +367,7 @@ near the dislocation core, in the middle layer. Exploiting reflection and
 rotational symmetry, allows us to use only 10 interstitial
 sites to obtain the binding energies of carbon \(\sim 1.8\) b from the core. 
 
-The three atoms surrounding the core on the first and third layers were again
+The three atoms surrounding the core in the first and third layers were again
 constrained to relax only in the \(X\) and \(Y\) directions. No such constraints
 were imposed on the middle layer. 
 
@@ -232,6 +384,8 @@ vicinity of a relaxed easy dislocation core---in either of the two nearest, dist
 octahedral sites---a spontaneous reconstruction of the dislocation core occurred: from easy to
 hard. Upon reconstruction, the dislocation core moved to a neighbouring triangle, when looking along the \(\langle
    111\rangle\) direction, where the carbon found itself situated in the centre.
+
+
 
 
 Plot of dislocation energy as function of cluster size. 
@@ -285,8 +439,11 @@ where \(\Delta E_z = E_z - E_{z\text{C ref.}}\) and \(E_{z\text{C ref.}} = 202.5
 situated in an octahedral site in a perfect cluster of the same size. 
 
 
+
+
+
 \begin{table*}
-\label{org9e10cb2}
+\label{org1f8154f}
     \begin{tabular}{cccccc}
     \hline
 Site Type & distance from core [b] & $E^{z}$ [eV] & $\Delta E^{z}$ [eV] & $E_b$ [eV] & $E_b^{z}$ [eV]  \\ 
@@ -319,6 +476,27 @@ potential by Becquart \cite{Becquart2007}, was 0.41eV. Kamber
 found a value of 0.71 eV, which is within 0.1eV of the largest
 binding energy for the easy core. 
 
+EAM calculations by Clouet \cite{Clouet2008} found a binding energy of ---- by calculating the
+elastic dipole tensor within Eshelby theory. 
+Hanlumyuang \emph{et al.} \cite{Hanlumyuang2010} conducted DFT calculations for the interaction energy 12\AA{} from the core,
+and their calculations agreed with the continuum limit of Eshelby theory with ----. 
+
+
+In work by Ventelon \cite{Ventelon2015}, they found the interaction energy, in this convention of
+an attractive energy being positive, as 0.79eV for a thickness in the \(Z\) direction of 3\(b\),
+which is lower than the 1.29eV interaction energy of tight-binding. This indicates a reduction
+in attraction in DFT calculations than in the tight-binding model. This discrepancy can be
+partially explained due to the short cutoff of the carbon interactions in tight-binding---at
+\(\sim a_{\text{bcc}} = 2.87 \AA\). As the carbon is separated from its periodic image by \(3b =
+    8.61\AA\), there is no contribution from the repulsive C-C interaction from periodic images,
+which is included within DFT.
+
+
+
+
+
+
+
 
 Distance dependence of binding energies. 
 
@@ -326,8 +504,10 @@ Distance dependence of binding energies.
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png}
 \end{center}
 
-\section{Line Tension}
-\label{sec:org2ea8356}
+
+
+\subsection{Line Tension}
+\label{sec:org73d9443}
 
 
 One is still doing the work for the line tension model. This model views the dislocation
@@ -344,7 +524,7 @@ where,
 
 
 \[ E_L = E_{\text{el}} + E_{\text{core}} = \frac{\mu b^2}{2\pi} \text{ln} \big
-  ( \frac{R}{r_c}\big ) + E_{\text{core}}.\]
+   ( \frac{R}{r_c}\big ) + E_{\text{core}}.\]
 
 
 I have calculated the coefficients necessary for the line tension model. But there seem
@@ -354,9 +534,19 @@ measured in the Proville paper \cite{Rodney2009}.
 One thing I can do to check the coefficients are correct, is to fit to the the kink
 shape from Luke's thesis to obtain the correct value for the line-tension \(T\).
 
+\section{Discussion}
+\label{sec:org789a33d}
+
+
+\begin{itemize}
+\item How do the results of this work feed into C migration with
+dislocations?
+\item How valid is the theory we have vs Fu \emph{et al}.
+\item 
+\end{itemize}
 
 \section{Future work}
-\label{sec:orgb8433a3}
+\label{sec:orgb6bef35}
 
 \begin{itemize}
 \item Validation of line-tension model by reproduction of the dislocation line shape from
@@ -369,9 +559,10 @@ code.
 \end{itemize}
 
 \section{Bibliography}
-\label{sec:org4c5cdcc}
-\label{org17351c7}
+\label{sec:org8f4219d}
+\label{org50b6242}
 
 \bibliographystyle{unsrt}
+
 \bibliography{../bibliography/org-refs}
 \end{document}

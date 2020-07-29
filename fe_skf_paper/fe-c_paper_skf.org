@@ -136,8 +136,8 @@ dislocation-assisted carbon migration is a valid mechanism.
 
    There are many proposed mechanisms for DER formation.
 
-   Bush proposes that the DER trainformation is governed by an
-   exchange of material between the carbides and the matrics, which is
+   Bush proposes that DER formation is governed by an
+   exchange of material between the carbides and the matrix, which is
    evidenced by the formation of intrusions/extrusions within the
    microstructure. 
 
@@ -341,7 +341,7 @@ dislocation-assisted carbon migration is a valid mechanism.
    rotational symmetry, allows us to use only 10 interstitial
    sites to obtain the binding energies of carbon $\sim 1.8$ b from the core. 
 
-   The three atoms surrounding the core on the first and third layers were again
+   The three atoms surrounding the core in the first and third layers were again
    constrained to relax only in the $X$ and $Y$ directions. No such constraints
    were imposed on the middle layer. 
 
@@ -358,6 +358,13 @@ dislocation-assisted carbon migration is a valid mechanism.
    octahedral sites---a spontaneous reconstruction of the dislocation core occurred: from easy to
    hard. Upon reconstruction, the dislocation core moved to a neighbouring triangle, when looking along the $\langle
    111\rangle$ direction, where the carbon found itself situated in the centre.
+
+   # > How does carbon in the hard core change how dislocations move with carbon.
+   # > How are dislocations pinned by carbon in the hard core?
+   # > Is there Arrhenius form of activation energy for this? 
+   # > How does carbon concentration change with temperature around the dislocation core?
+
+   
 
    
    Plot of dislocation energy as function of cluster size. 
@@ -433,6 +440,12 @@ dislocation-assisted carbon migration is a valid mechanism.
     where $\Delta E_z = E_z - E_{z\text{C ref.}}$ and $E_{z\text{C ref.}} = 202.5 meV$ is the zero-point energy of carbon
     situated in an octahedral site in a perfect cluster of the same size. 
 
+    # ###--- Check C solution energy against paxton 
+    # ###--- Maybe run new calculations
+    
+
+    
+    
 
     # Put in values from Domain and Becquart, and also Rodney/Clouet
     # > It looks like a contradiction in the arXiv paper of domain and becquart, but it isn't. 
@@ -491,6 +504,30 @@ dislocation-assisted carbon migration is a valid mechanism.
     \emph{et al.} found a maximum binding energy of 0.5 eV. Cochardt
     found a value of 0.71 eV, which is within 0.1eV of the largest
     binding energy for the easy core. 
+    
+    EAM calculations by Clouet cite:Clouet2008 found a binding energy of ---- by calculating the
+    elastic dipole tensor within Eshelby theory. 
+    Hanlumyuang /et al./ cite:Hanlumyuang2010 conducted DFT calculations for the interaction energy 12\AA from the core,
+    and their calculations agreed with the continuum limit of Eshelby theory with ----. 
+
+
+    In work by Ventelon cite:Ventelon2015, they found the interaction energy, in this convention of
+    an attractive energy being positive, as 0.79eV for a thickness in the $Z$ direction of 3$b$,
+    which is lower than the 1.29eV interaction energy of tight-binding. This indicates a reduction
+    in attraction in DFT calculations than in the tight-binding model. This discrepancy can be
+    partially explained due to the short cutoff of the carbon interactions in tight-binding---at
+    $\sim a_{\text{bcc}} = 2.87 \AA$. As the carbon is separated from its periodic image by $3b =
+    8.61\AA$, there is no contribution from the repulsive C-C interaction from periodic images,
+    which is included within DFT.
+
+    # Find table of binding energies here with the references 
+    
+    
+    
+    
+
+    
+    
 
     # It might be useful to do another calculation in the final state of these calculations, just to
     # get a more relaxed binding energy. 
@@ -499,34 +536,47 @@ dislocation-assisted carbon migration is a valid mechanism.
     Distance dependence of binding energies. 
     
     [[file:~/Documents/docs/Management/Images/temp_binding_energy_distance_C_Fe.png]]
+
+
+    # How will one fit a Lorentzian? Is there any way of interpolating between the different sites
+    # on dislocation motion? 
+
+
     
-*  Line Tension 
+**  Line Tension 
 
 
-  One is still doing the work for the line tension model. This model views the dislocation
-  as an elastic string which moves on the Peierls potential $\Delta E_{\text{P}}$. One is
-  using the julia implementation of the NEB algorithm by Ortner cite:Makri2019.
-  The equilibrium line shape $y(x)$ of the dislocation is the solution to the 1D Klein-Gordon
-  type equation cite:Rodney2009:
+   One is still doing the work for the line tension model. This model views the dislocation
+   as an elastic string which moves on the Peierls potential $\Delta E_{\text{P}}$. One is
+   using the julia implementation of the NEB algorithm by Ortner cite:Makri2019.
+   The equilibrium line shape $y(x)$ of the dislocation is the solution to the 1D Klein-Gordon
+   type equation cite:Rodney2009:
 
-  \[ - \frac{\text{d} ( \Delta E_{\text{P}}[y(x)] )}{\text{d} y(x) } + \sigma_{\text{A}} b + T \frac{\partial^2 y}{\partial x^2} = 0,\]
+   \[ - \frac{\text{d} ( \Delta E_{\text{P}}[y(x)] )}{\text{d} y(x) } + \sigma_{\text{A}} b + T \frac{\partial^2 y}{\partial x^2} = 0,\]
 
-   where, 
+    where, 
 
-   \[ T = E_L + \frac{\text{d}^2 E_L}{\text{d}\phi^2},  \]
+    \[ T = E_L + \frac{\text{d}^2 E_L}{\text{d}\phi^2},  \]
 
   
-  \[ E_L = E_{\text{el}} + E_{\text{core}} = \frac{\mu b^2}{2\pi} \text{ln} \big
-  ( \frac{R}{r_c}\big ) + E_{\text{core}}.\]
+   \[ E_L = E_{\text{el}} + E_{\text{core}} = \frac{\mu b^2}{2\pi} \text{ln} \big
+   ( \frac{R}{r_c}\big ) + E_{\text{core}}.\]
 
 
-  I have calculated the coefficients necessary for the line tension model. But there seem
-  to be differences between what Itakura states in his paper and the coefficients that are
-  measured in the Proville paper cite:Rodney2009. 
+   I have calculated the coefficients necessary for the line tension model. But there seem
+   to be differences between what Itakura states in his paper and the coefficients that are
+   measured in the Proville paper cite:Rodney2009. 
 
-  One thing I can do to check the coefficients are correct, is to fit to the the kink
-  shape from Luke's thesis to obtain the correct value for the line-tension $T$.
+   One thing I can do to check the coefficients are correct, is to fit to the the kink
+   shape from Luke's thesis to obtain the correct value for the line-tension $T$.
 
+* Discussion
+  
+
+  - How do the results of this work feed into C migration with
+    dislocations? 
+  - How valid is the theory we have vs Fu /et al/.
+  - 
 
 * Future work  
 
@@ -542,6 +592,7 @@ dislocation-assisted carbon migration is a valid mechanism.
 <<bibliography link>>
 
 bibliographystyle:unsrt
+
 bibliography:../bibliography/org-refs.bib
 
 # \bibliographystyle{plain}

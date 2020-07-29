@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Paxton2013}
 A.~T. Paxton and C.~Els\"{a}sser.
@@ -42,6 +42,18 @@ C.S. Becquart, J.M. Raulot, G.~Bencteux, C.~Domain, M.~Perez, S.~Garruchet, and
   H.~Nguyen.
 \newblock Atomistic modeling of an fe system with a small concentration of c.
 \newblock {\em Computational Materials Science}, 40(1):119--129, July 2007.
+
+\bibitem{Clouet2008}
+Emmanuel Clouet, S{\'{e}}bastien Garruchet, Hoang Nguyen, Michel Perez, and
+  Charlotte~S. Becquart.
+\newblock Dislocation interaction with c in $\upalpha$-fe: A comparison between
+  atomic simulations and elasticity theory.
+\newblock {\em Acta Materialia}, 56(14):3450--3460, August 2008.
+
+\bibitem{Hanlumyuang2010}
+Y.~Hanlumyuang, P.A. Gordon, T.~Neeraj, and D.C. Chrzan.
+\newblock Interactions between carbon solutes and dislocations in bcc iron.
+\newblock {\em Acta Materialia}, 58(16):5481--5490, September 2010.
 
 \bibitem{Makri2019}
 Stela Makri, Christoph Ortner, and James~R. Kermode.
