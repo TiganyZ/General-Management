@@ -1,4 +1,4 @@
-% Created 2020-07-29 Wed 18:35
+% Created 2020-07-29 Wed 18:43
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -48,7 +48,7 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:org8b3cce8}
+\label{sec:org1fae4f5}
 
 \begin{itemize}
 \item Outline of the literature review 
@@ -167,7 +167,7 @@ Smelova proposes that the formation of elongated ferrite are the
 result of recrystallisation processes. 
 
 \subsection{Mechanisms}
-\label{sec:org6a3ef25}
+\label{sec:orge7398a2}
 
 There are many proposed mechanisms for DER formation.
 
@@ -203,7 +203,7 @@ microbands. Later, regions of homogeneous nanocrystalline ferrite
 
 
 \section{Computational Method}
-\label{sec:org222363d}
+\label{sec:orgcdfc6ac}
 
 \begin{itemize}
 \item Use tight-binding model of Paxton and Elsaetter \cite{Paxton2013}.
@@ -216,12 +216,12 @@ configurations.
 
 
 \section{Results}
-\label{sec:orge6bc0a8}
+\label{sec:orgf76a3b1}
 
 
 
 \subsection{Peierls Potential}
-\label{sec:org029322a}
+\label{sec:orgd9a2cc3}
 
 To determine the Peierls potential, we followed the procedure detailed in Itakura
 \cite{Itakura2012}. Quadrupolar arrays of dislocations were constructed by placing dislocations of
@@ -339,7 +339,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Hard and easy core relaxations}
-\label{sec:orgda64e57}
+\label{sec:org399e230}
 
 To determine the binding energy of carbon to dislocations, we used the
 cluster method; where the simulation cells consist of a circular cluster of
@@ -443,7 +443,7 @@ situated in an octahedral site in a perfect cluster of the same size.
 
 
 \begin{table*}
-\label{org9977ee9}
+\label{org1f8154f}
     \begin{tabular}{cccccc}
     \hline
 Site Type & distance from core [b] & $E^{z}$ [eV] & $\Delta E^{z}$ [eV] & $E_b$ [eV] & $E_b^{z}$ [eV]  \\ 
@@ -485,10 +485,11 @@ and their calculations agreed with the continuum limit of Eshelby theory with --
 In work by Ventelon \cite{Ventelon2015}, they found the interaction energy, in this convention of
 an attractive energy being positive, as 0.79eV for a thickness in the \(Z\) direction of 3\(b\),
 which is lower than the 1.29eV interaction energy of tight-binding. This indicates a reduction
-in attraction in DFT calculations than in the tight-binding model. This could be due to the
-short cutoff of the carbon interactions at \(\sim a_{\text{bcc}} = 2.87 \AA\), leading to carbon
-having no direct repulsive interaction with their periodic images separated by \(3b = 8.61\AA\),
-whereas carbon interactions do not have a cutoff range in DFT.
+in attraction in DFT calculations than in the tight-binding model. This discrepancy can be
+partially explained due to the short cutoff of the carbon interactions in tight-binding---at
+\(\sim a_{\text{bcc}} = 2.87 \AA\). As the carbon is separated from its periodic image by \(3b =
+    8.61\AA\), there is no contribution from the repulsive C-C interaction from periodic images,
+which is included within DFT.
 
 
 
@@ -506,7 +507,7 @@ Distance dependence of binding energies.
 
 
 \subsection{Line Tension}
-\label{sec:org417c1f2}
+\label{sec:org73d9443}
 
 
 One is still doing the work for the line tension model. This model views the dislocation
@@ -534,7 +535,7 @@ One thing I can do to check the coefficients are correct, is to fit to the the k
 shape from Luke's thesis to obtain the correct value for the line-tension \(T\).
 
 \section{Discussion}
-\label{sec:org8a4a662}
+\label{sec:org789a33d}
 
 
 \begin{itemize}
@@ -545,7 +546,7 @@ dislocations?
 \end{itemize}
 
 \section{Future work}
-\label{sec:orgf1d319e}
+\label{sec:orgb6bef35}
 
 \begin{itemize}
 \item Validation of line-tension model by reproduction of the dislocation line shape from
@@ -558,8 +559,8 @@ code.
 \end{itemize}
 
 \section{Bibliography}
-\label{sec:org560188e}
-\label{orgcf7df4c}
+\label{sec:org8f4219d}
+\label{org50b6242}
 
 \bibliographystyle{unsrt}
 

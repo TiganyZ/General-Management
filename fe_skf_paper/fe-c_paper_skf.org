@@ -444,9 +444,6 @@ dislocation-assisted carbon migration is a valid mechanism.
     # ###--- Maybe run new calculations
     
 
-    
-    
-
     # Put in values from Domain and Becquart, and also Rodney/Clouet
     # > It looks like a contradiction in the arXiv paper of domain and becquart, but it isn't. 
     # > they have different variants, and the binding energy for the variants, changes. 
@@ -511,21 +508,51 @@ dislocation-assisted carbon migration is a valid mechanism.
     and their calculations agreed with the continuum limit of Eshelby theory with ----. 
 
 
-    In work by Ventelon cite:Ventelon2015, they found the interaction energy, in this convention of
-    an attractive energy being positive, as 0.79eV for a thickness in the $Z$ direction of 3$b$,
-    which is lower than the 1.29eV interaction energy of tight-binding. This indicates a reduction
-    in attraction in DFT calculations than in the tight-binding model. This discrepancy can be
+    In work by Ventelon cite:Ventelon2015, the interaction energy of a carbon in a hard
+    core prism configuration was found to be 0.79eV for a thickness in the $Z$ direction of 3$b$ (0.73eV for $6b$)---in the
+    convention that a positive binding energy indicates attraction. This is significantly lower than
+    the 1.29eV interaction energy of tight-binding. This discrepancy can be
     partially explained due to the short cutoff of the carbon interactions in tight-binding---at
-    $\sim a_{\text{bcc}} = 2.87 \AA$. As the carbon is separated from its periodic image by $3b =
+    $\sim a_{\text{bcc}} = 2.87 \AA$. In addition, these cells are not fully relaxed, as the three
+    atoms around the core are fixed in Z. As the carbon is separated from its periodic image by $3b =
     8.61\AA$, there is no contribution from the repulsive C-C interaction from periodic images,
     which is included within DFT.
 
-    # Find table of binding energies here with the references 
-    
-    
-    
+
+    # #####-----  BINDING ENERGY WITH UNCONSTRAINED DIPOLE
+    # >>> This would not account for the energy of the core changing to hard <<<
+    #     - Subtract Peierls energy difference?
+    #     -> 3 * \Delta E_P( Easy -> Hard ) (meV/b)
+    #     -> = 74.4 meV -> 0.074 eV
+    #     || But! One could use the estimate of the core energy from the cylinder calculations from
+    # anisotropic elasticity.
+    #     -> = - 228 meV
+    #     -> Ventelon's figure suggests \Delta E_easy_hard = 0.04eV (for 1b)
+    #     -> We have 0.027eV (from pure E_P) 
+    # > E_disl x 3  = -287.32974402 Ryd 
+    # > E_disl      = -287.37220999
+    # > E_perf      = -287.85438256
+    # > E_C         = 
+    # > E_disl_C1   = -289.21360299
     
 
+    # In Ventelon, they see the effect of the strong binding of carbon by looking at the energy by
+    # carbon atom
+    
+
+    # -> WE CAN GENERALIZE THIS
+    # ->  We do not have an interaction energy as first neighbour between more of the sites, but
+    # this can be changed rather easily, by constraining the same atoms as before and introducing
+    # carbon into the other two layers.??
+    
+
+    In the mean-field model of Ventelon, we have
+    \[ E_{\text{int}}( c_d ) = E^{(0)}_{\text{int}} + \frac{\Delta E_{\text{Easy-Hard}}}{c_d} + c_d V_{\text{CC}} , \]
+
+    where $V_{\text{CC}}$ is the C-C interaction energy which can be found by the equation. In
+    tight-binding $V_{\text{CC}}= 0$, 
+
+    # Find table of binding energies here with the references 
     
     
 
