@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Fu2017}
+H.~Fu, E.I. Galindo-Nava, and P.E.J. Rivera-D{\'{\i}}az del Castillo.
+\newblock Modelling and characterisation of stress-induced carbide
+  precipitation in bearing steels under rolling contact fatigue.
+\newblock {\em Acta Materialia}, 128:176--187, April 2017.
+
 \bibitem{fu17_strain_induc_marten_decay_bearin}
 Hanwei Fu, Wenwen Song, Enrique~I. Galindo-Nava, and Pedro E.J. Rivera-D{\'i}az
   del Castillo.
@@ -7,17 +13,30 @@ Hanwei Fu, Wenwen Song, Enrique~I. Galindo-Nava, and Pedro E.J. Rivera-D{\'i}az
   contact fatigue: Modelling and atomic-scale characterisation.
 \newblock {\em Acta Materialia}, 139(nil):163--173, 2017.
 
-\bibitem{Fu2017}
-H.~Fu, E.I. Galindo-Nava, and P.E.J. Rivera-D{\'{\i}}az del Castillo.
-\newblock Modelling and characterisation of stress-induced carbide
-  precipitation in bearing steels under rolling contact fatigue.
-\newblock {\em Acta Materialia}, 128:176--187, April 2017.
+\bibitem{Bhadeshia2018}
+H.~K. D.~H. Bhadeshia.
+\newblock Solution to the bagaryatskii and isaichev
+  ferrite{\textendash}cementite orientation relationship problem.
+\newblock {\em Materials Science and Technology}, 34(14):1666--1668, May 2018.
 
 \bibitem{Paxton2013}
 A.~T. Paxton and C.~Els\"{a}sser.
 \newblock Analysis of a carbon dimer bound to a vacancy in iron using density
   functional theory and a tight binding model.
 \newblock {\em Physical Review B}, 87(22), June 2013.
+
+\bibitem{Ventelon2015}
+Lisa Ventelon, B.~L\"{u}thi, E.~Clouet, L.~Proville, B.~Legrand, D.~Rodney, and
+  F.~Willaime.
+\newblock Dislocation core reconstruction induced by carbon segregation in bcc
+  iron.
+\newblock {\em Physical Review B}, 91(22), June 2015.
+
+\bibitem{itakura13_effec_hydrog_atoms_screw_disloc}
+M.~Itakura, H.~Kaburaki, M.~Yamaguchi, and T.~Okita.
+\newblock The effect of hydrogen atoms on the screw dislocation mobility in bcc
+  iron: a first-principles study.
+\newblock {\em Acta Materialia}, 61(18):6857--6867, 2013.
 
 \bibitem{Itakura2012}
 M.~Itakura, H.~Kaburaki, and M.~Yamaguchi.
@@ -37,18 +56,11 @@ Vasily Bulatov.
   Modelling)}.
 \newblock Oxford University Press, dec 2006.
 
-\bibitem{Ventelon2015}
-Lisa Ventelon, B.~L\"{u}thi, E.~Clouet, L.~Proville, B.~Legrand, D.~Rodney, and
-  F.~Willaime.
-\newblock Dislocation core reconstruction induced by carbon segregation in bcc
-  iron.
-\newblock {\em Physical Review B}, 91(22), June 2015.
-
-\bibitem{itakura13_effec_hydrog_atoms_screw_disloc}
-M.~Itakura, H.~Kaburaki, M.~Yamaguchi, and T.~Okita.
-\newblock The effect of hydrogen atoms on the screw dislocation mobility in bcc
-  iron: a first-principles study.
-\newblock {\em Acta Materialia}, 61(18):6857--6867, 2013.
+\bibitem{Simpson2019}
+E.~Simpson.
+\newblock {\em A Tight Binding Study of Dislocations in Iron and Their
+  Interactions with Hydrogen}.
+\newblock PhD thesis, King's College London, 2019.
 
 \bibitem{Becquart2007}
 C.S. Becquart, J.M. Raulot, G.~Bencteux, C.~Domain, M.~Perez, S.~Garruchet, and
@@ -73,17 +85,16 @@ Stela Makri, Christoph Ortner, and James~R. Kermode.
 \newblock A preconditioning scheme for minimum energy path finding methods.
 \newblock {\em The Journal of Chemical Physics}, 150(9):094109, March 2019.
 
-\bibitem{Rodney2009}
-David Rodney and Laurent Proville.
-\newblock Stress-dependent peierls potential: Influence on kink-pair
-  activation.
-\newblock {\em Physical Review B}, 79(9), March 2009.
-
 \bibitem{Lthi2019}
 B~L\"{u}thi, F~Berthier, L~Ventelon, B~Legrand, D~Rodney, and F~Willaime.
 \newblock Ab initio thermodynamics of carbon segregation on dislocation cores
   in bcc iron.
 \newblock {\em Modelling and Simulation in Materials Science and Engineering},
   27(7):074002, July 2019.
+
+\bibitem{Cai2003}
+Wei Cai, Vasily~V. Bulatob, Jinpeng Chang, Ju~Li, and Sidney Yip.
+\newblock Periodic image effects in dislocation modelling.
+\newblock {\em Philosophical Magazine}, 83(5):539--567, January 2003.
 
 \end{thebibliography}
