@@ -1,4 +1,4 @@
-% Created 2020-08-07 Fri 16:35
+% Created 2020-08-07 Fri 20:46
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -48,7 +48,7 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 \section{Introduction}
-\label{sec:org8d00b84}
+\label{sec:org8896918}
 
 Martensitic steels are frequently used in bearings due to their resilience to service conditions,
 being subject to high rotational speeds and contact pressures. However, under cyclic loading
@@ -72,7 +72,7 @@ structure of a WEB consisting of a ferrite band and a LC adjacent to it. One can
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/der_picture_fu.png}
-\caption{\label{fig:org7374b20}
+\caption{\label{fig:orgaff0fb4}
 Diagram of where DER occurs and its characteristics, taken from \cite{Fu2017}. (a) Axial and Circumferential sections of a bearing inner ring. (b) Circumferential section of a bearing inner ring under optical microscope, where ferrite bands (white etching bands) are formed at the subsurface with an inclination angle of 30\textdegree{} to the rolling direction. (c) Diagram showing the}
 \end{figure}
 
@@ -134,7 +134,7 @@ atomistic scale in bcc iron, which will feed into the line-tension model of disl
 
 
 \section{Computational Method}
-\label{sec:org306cf70}
+\label{sec:org721f55e}
 
 We use the tight-binding model of Paxton and Elsätter \cite{Paxton2013}, which has been
 shown to describe the binding energies of carbon complexes in bcc iron, in good agreement with
@@ -166,14 +166,14 @@ during relaxation. Relaxations were carried out until forces on each atom were l
 
 \begin{center}
 \includegraphics[width=0.5\textwidth]{/home/tigany/Documents/docs/Management/Images/s_arrangement_clouet.png}
-\captionof{figure}{\label{fig:orgbb85e15}
+\captionof{figure}{\label{fig:orgfc626b8}
 Figure of the quadrupolar arrangement used to determine the Peierls potential. \(\vec{U}_1\) and \(\vec{U}_2\) are the periodicity vectors in the X-Y plane. \(\vec{A}\) is the vector defining the cut plane of the dislocation dipole \cite{Clouet2012}.}
 \end{center}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{/home/tigany/Documents/docs/Management/Images/peierls_potential_positions_tbe.png}
-\caption{\label{fig:orgd36efd5}
+\caption{\label{fig:org3b88b8d}
 Figure of the sampled positions used to determine the the Peierls potential. "E", "H" and "S" correspond to the easy, hard and split core positions respectively.}
 \end{figure}
 
@@ -264,10 +264,10 @@ expect from an atom much larger than hydrogen.
 
 
 \section{Results}
-\label{sec:orga092f71}
+\label{sec:org176ac5d}
 
 \subsection{Peierls Potential}
-\label{sec:org5aa6bf7}
+\label{sec:orgd2239b3}
 
         \begin{table}
     \begin{tabular}{c}
@@ -319,7 +319,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Hard and easy core relaxations}
-\label{sec:org2f71f2d}
+\label{sec:org6c5992a}
 
 
 To validate the cluster simulation method, the excess energy, defined as the difference in energy between
@@ -335,7 +335,7 @@ not account for.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{/home/tigany/Documents/docs/Management/Images/img_fe_size_dependence_on_log_of_core_radius.png}
-\caption{\label{fig:orgd008941}
+\caption{\label{fig:org7ffdd97}
 Excess energy of dislocation clusters with differing radii for both the easy and hard core configurations. The prediction from elasticity theory is given by the black, dashed line. Deviation of both cores occur when cell size is small, creating an increase in the core energy, which elasticity theory cannot account for.}
 \end{figure}
 
@@ -362,7 +362,7 @@ results of Itakura \cite{Itakura2012}, of 82 meV/b.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org997b4e9}
+\label{sec:orgec1307b}
 
 The binding energies, and distribution, of carbon to both the hard and easy cores can be seen in table
 \ref{tab:bindingenergies} and figures \ref{easybindingenergydist} and \ref{hardbindingenergydist}. The
@@ -382,7 +382,7 @@ and iH10 decaying to a H7 site. Relations between each of the sites is given in 
 \ref{decayrelations}.
 
 \begin{table}[htbp]
-\caption{\label{tab:org8d275ce}
+\caption{\label{tab:orgf3a1443}
 Decay relations between the initial and final sites upon relaxation of carbon intersitials around the hard core.}
 \centering
 \begin{tabular}{ll}
@@ -491,24 +491,52 @@ binding site, assuming carbon atoms around the core are sufficiently spaced such
 interaction energies are negligible \cite{Ventelon2015}.
 
 The fraction is given by 
-\[  \frac{ c_d^{i} }{1 -  c_d^{i} } = \frac{ c_{\text{bulk}}^{} }{1 - c_{\text{bulk}} } \text{exp} \Big( -
+
+
+\[  \frac{ c_d^{i} }{1 -  c_d^{i} } = \frac{ c_{\text{bulk}}^{} }{1 - c_{\text{bulk}} } \text{exp} \Big( 
     \frac{E_{\text{b}} }{k_{\text{B}}T}  \Big), \]
-where \(i\) denotes the \(i^{\text{th}}\) carbon binding site, with \(E_{\text{b}}^{i}\), being the
-corresponding dislocation-solute binding energy and \(c_d^{i}\) being the concentration that carbon
-site on the dislocation. \(c_{\text{bulk}}^{}\) is the carbon concentration in the bulk, with
+\label{eq:cd}
+
+where \(i\) denotes the \(i^{\text{th}}\) carbon binding site (with the convention of attraction
+denoting a positive binding energy), with \(E_{\text{b}}^{i}\), being the
+corresponding dislocation-solute binding energyand \(c_d^{i}\) being the average concentration of that carbon
+site bound to the dislocation. \(c_{\text{bulk}}^{}\) is the carbon concentration in the bulk, with
 \(c_{\text{nom}}^{}\) the nominal carbon concentration per Fe atom.
 
 
 In a volume \(V\), the number of carbon sites along the dislocation cores is \(N_d = \rho V/b\), with
 \(\rho\) the dislocation density, while the number of octahedral sites is \(N_{\text{oct}} = 6V/a_{\text{bcc}}\). This
 gives constraints on the carbon concentrations: \(N_{\text{oct}} c_{\text{bulk}}^{} + N_d c_d = N_{\text{oct}} c_{\text{nom}}/3\),
-where the factor of 3 arises from there being three octahedral sites per Fe atom. 
+where the factor of 3 arises from there being three octahedral sites per Fe atom. This equation
+and \ref{eq:cd} can be solved self-consistently to give the carbon concentration around the core,
+\(c_d\) as a function of nominal carbon concentration and temperature. The nominal carbon
+concentration was taken to be the maximum solubility of ferrite in the DER region, 0.02 wt$\backslash$% \(\approx
+    433\) appm. The dislocation density was varied between \(1\times10^{12}\), \(1\times10^{14}\) and \(5\times10^{15}\).
 
 
 
-\[ C_d^{i} = \frac{ 
-                  \frac{1}{3} C_{\text{C}}^{i} \text{exp}\big( \frac{E_b^{\text{C}}}{k_{\text{B}}T }  \big)  }{
-              1 + \frac{1}{3} C_{\text{C}}^{i} \text{exp}\big( \frac{E_b^{\text{C}}}{k_{\text{B}}T } }, \]
+
+
+\begin{table}	
+    \begin{tabular}{c}
+      	     \includegraphics[width=0.85\textwidth]{../Images/cd_easy_core_ferrite_sc.png}  \\
+      	     \includegraphics[width=0.85\textwidth]{../Images/cd_hard_core_ferrite_sc.png}  \\
+
+          	\end{tabular}		
+\caption{ Variation of carbon concentration $c_d$ for each of the binding sites for the easy core (top) and hard core (bottom). The bulk carbon concentration was taken to be the maximum solubility in ferrite of 0.02wt\%, resulting in $\sim433$ appm. The concentration of carbons around the easy core drops off at a lower temperature than that of the hard core due to lower binding energies. The operating temperature is taken to be $50\deg$ C $= 320 \deg$ K. The dislocation density was varied between $1\times10^{12}$, $1\times10^{14}$ and $5\times10^{15}$. }
+\label{cdhardeasy}
+   \end{table}
+
+
+
+
+
+The time for carbon transport by diffusion
+over \(1/\sqrt{\rho}\), the typical distance between dislocations, given the diffusion coefficient in
+iron, with a dislocation density corresponding  to annihilation 
+1/ ρ, the typical distance between dislocations, varies from
+10 5 to 10 8 s at 300 K and from 0.02 to 20 s at 600 K,
+when the dislocation density varies from 10 15 to 10 12 m −2 .
 
 
 
@@ -534,7 +562,7 @@ finds that the line shapes are similar to that of Itakura.
 
 
 \section{Discussion}
-\label{sec:orgb75af9b}
+\label{sec:org86abe37}
 
 
 \begin{itemize}
@@ -574,7 +602,7 @@ The first stage in this work is
 
 
 \section{Future work}
-\label{sec:org9fb6611}
+\label{sec:orga5ed2f6}
 
 \begin{itemize}
 \item Validation of line-tension model by reproduction of the dislocation line shape from
@@ -589,13 +617,15 @@ code.
 
 
 It would be of interest to pursue atomistic calculations of carbon bound to edge
-dislocations. Recent work by Maugis \emph{et al.} \cite{Maugis2020}, show that, counterintuitively, under
-\emph{compressive} stress, carbon diffusivity is \emph{enhanced}. Pipe diffusion of carbon along edge
-dislocations could therefore be a very important aspect of dislocation-assisted carbon migration. 
+dislocations. Recent DFT/Eshelby elasticity calculations by Maugis \emph{et al.} \cite{Maugis2020}, show,
+counterintuitively, that under \emph{compressive} stress, carbon diffusivity is \emph{enhanced}. Pipe
+diffusion along edge dislocations could therefore be an important aspect to consider in carbon transport; in
+addition to the higher mobility edge dislocations in bcc iron. As such, edge dislocations could be quite
+important within the mechanism of dislocation-assisted carbon migration.
 
 
 \section{Conclusion}
-\label{sec:org082ea3b}
+\label{sec:orgefd4598}
 
 
 \begin{itemize}
@@ -612,10 +642,10 @@ dislocations could therefore be a very important aspect of dislocation-assisted 
 \end{itemize}
 
 \section{Appendix}
-\label{sec:orgcae7bfd}
+\label{sec:org9bdedc4}
 
 \subsection{Regularisation of interaction energy in quadrupolar array}
-\label{sec:org7c1640e}
+\label{sec:org469e61d}
 \label{sec:Ainteractionenergy}
 
 
@@ -648,8 +678,8 @@ which can be subtracted from the total energy as given from atomistic calculatio
 regularised interaction energy. 
 
 \section{Bibliography}
-\label{sec:orgaf6ff7e}
-\label{orgf21e9fb}
+\label{sec:org5291e11}
+\label{orgcdcf39c}
 
 \bibliographystyle{unsrt}
 
