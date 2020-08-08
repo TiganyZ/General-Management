@@ -13,6 +13,28 @@ Hanwei Fu, Wenwen Song, Enrique~I. Galindo-Nava, and Pedro E.J. Rivera-D{\'i}az
   contact fatigue: Modelling and atomic-scale characterisation.
 \newblock {\em Acta Materialia}, 139(nil):163--173, 2017.
 
+\bibitem{Warhadpande1_2013}
+Anurag Warhadpande, Farshid Sadeghi, and Ryan~D. Evans.
+\newblock Microstructural alterations in bearing steels under rolling contact
+  fatigue part 1{\textemdash}historical overview.
+\newblock {\em Tribology Transactions}, 56(3):349--358, May 2013.
+
+\bibitem{Warhadpande2013}
+Anurag Warhadpande, Farshid Sadeghi, and Ryan~D. Evans.
+\newblock Microstructural alterations in bearing steels under rolling contact
+  fatigue: Part 2{\textemdash}diffusion-based modeling approach.
+\newblock {\em Tribology Transactions}, 57(1):66--76, November 2013.
+
+\bibitem{voskamp97_state_resid_stres_induc_by}
+A.~P. Voskamp and E.~J. Mittemeijer.
+\newblock State of residual stress induced by cyclic rolling contact loading.
+\newblock {\em Materials Science and Technology}, 13(5):430--438, 1997.
+
+\bibitem{Swahn1976}
+H.~Swahn, P.~C. Becker, and O.~Vingsbo.
+\newblock Martensite decay during rolling contact fatigue in ball bearings.
+\newblock {\em Metallurgical Transactions A}, 7(8):1099--1110, August 1976.
+
 \bibitem{Bhadeshia2018}
 H.~K. D.~H. Bhadeshia.
 \newblock Solution to the bagaryatskii and isaichev
@@ -84,11 +106,6 @@ C.S. Becquart, J.M. Raulot, G.~Bencteux, C.~Domain, M.~Perez, S.~Garruchet, and
 Y.~Hanlumyuang, P.A. Gordon, T.~Neeraj, and D.C. Chrzan.
 \newblock Interactions between carbon solutes and dislocations in bcc iron.
 \newblock {\em Acta Materialia}, 58(16):5481--5490, September 2010.
-
-\bibitem{Makri2019}
-Stela Makri, Christoph Ortner, and James~R. Kermode.
-\newblock A preconditioning scheme for minimum energy path finding methods.
-\newblock {\em The Journal of Chemical Physics}, 150(9):094109, March 2019.
 
 \bibitem{Lthi2019}
 B~L\"{u}thi, F~Berthier, L~Ventelon, B~Legrand, D~Rodney, and F~Willaime.
