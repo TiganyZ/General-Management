@@ -2,6 +2,8 @@
 #+AUTHOR: Tigany Zarrouk
 #+BIBLIOGRAPHY: ../bibliography/org-refs.bib
 #+LaTeX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{rotating}
+#+LATEX_HEADER: \usepackage{pdflscape}
 
 
 \begin{abstract}
@@ -322,9 +324,10 @@ dislocation-assisted carbon migration is a valid mechanism.
     interaction energies are negligible cite:Ventelon2015.
 
     The fraction is given by 
+    
     \[  \frac{ c_d^{i} }{1 -  c_d^{i} } = \frac{ c_{\text{bulk}}^{} }{1 - c_{\text{bulk}} } \text{exp} \Big( 
-    \frac{E_{\text{b}} }{k_{\text{B}}T}  \Big), \]
-    \label{eq:cd}
+    \frac{E_{\text{b}} }{k_{\text{B}}T}  \Big),     \label{eq:cd}\]
+
 
     where $i$ denotes the $i^{\text{th}}$ carbon binding site (with the convention of attraction
     denoting a positive binding energy), with $E_{\text{b}}^{i}$, being the
@@ -346,18 +349,37 @@ dislocation-assisted carbon migration is a valid mechanism.
 
   
 
+** Progression to Line Tension Model 
+
+   From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
+   line tension model of a dislocation from which we can obtain the kink-pair formation energies as
+   a function of stress and carbon content.  This model views the dislocation as an elastic string
+   which moves on the Peierls potential $\Delta E_{\text{P}}$.
+
+   The dislocation is modelled as a discretised line, with layer labels $j$. The energy of a
+   dislocation line in the line tension model is given by:
+
+   \[ E_{\text{LT}} = \frac{K}{2} \sum_j (\vec{P}_j - \vec{P}_{j+1} )^2  + \sum_j \Delta E_{\text{P}}  (\vec{P}_j) +
+   (\sigma \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j  - \sum_{j,k} E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|), \]
+   
+   where $K$ is a constant calculated from the model, $\Delta E_{\text{P}}$ is the Peierls potential, $\sigma$ is
+   the stress applied, $\vec{b}$ is the burger's vector, with the dislocation line sense given by
+   $\vec{l}$. $\vec{P_{j}}$ corresponds to the dislocation core position in a given
+   layer, with $E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|)$ being the binding energy of a particular carbon
+   $k$, at position $\vec{P}_k^{\text{C}}$, to a dislocation positioned at $\vec{P}_j$. 
+
 * Results
 
 ** Peierls Potential
 
-        \begin{table}
+        \begin{figure}
     \begin{tabular}{c}
 	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
              \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
     \end{tabular}		
 \caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT cite:Itakura2012 (top) and tight-binding (bottom). Data was interpolated using cubic splines. Energies are in $meV$, with x and y scales in units of $\sqrt{2} a_{\text{bcc}} = 2\sqrt{2/3}b$. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. Some of this discrepancy can be attributed to the difference in interaction energy definitions.}
 	\label{fig:peierlspot}
-    \end{table}
+    \end{figure}
 
 
 
@@ -450,7 +472,7 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
 
-#      \begin{table}	
+#      \begin{figure}	
 #     \begin{tabular}{cc}
 #         \small  Initial  & Final \\ 
 # 	     \includegraphics[width=0.24\textwidth]{../Images/easy_core_initial_all_fe_octahedral_sites_with_core.png} &
@@ -460,7 +482,7 @@ dislocation-assisted carbon migration is a valid mechanism.
 		   
 #     	      \end{tabular}		
 # \caption{ Initial and final octahedral sites for the easy core (first row) and the hard core (second row). As shown by Ventelon cite:Ventelon2015, the first and second closest octahedral sites to the hard core have their minimum energy inside the hard core, but we do not find that the easy core reconstructs into a hard core, with these same sites. }
-#     \end{table}
+#     \end{figure}
 
 
 
@@ -519,7 +541,7 @@ dislocation-assisted carbon migration is a valid mechanism.
  	           # \includegraphics[width=0.85\textwidth]{../Images/hard_core_fe_C_positioning_energies_h7_label.png}  \\
 
 
- \begin{table}	
+ \begin{figure}	
      \begin{tabular}{l}
  	           \includegraphics[width=0.7\textwidth]{../Images/easy_core_fe_C_initial_positioning.png}  \\
  	           \includegraphics[width=0.85\textwidth]{../Images/easy_core_fe_C_positioning_energies_e10_label.png}  \\
@@ -527,10 +549,10 @@ dislocation-assisted carbon migration is a valid mechanism.
      	      \end{tabular}		
  \caption{ Initial and final positions and binding energies (eV) of carbon around the easy core. Binding energies are not shown for the initial positions. Top: initial positions before relaxation. Bottom: final positions and binding energies after relaxation. The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon \cite{Ventelon2015}, the first and second closest octahedral sites to the hard core decay to a prismatic position inside the hard core. }
  \label{easybindingenergydist}
-    \end{table}
+    \end{figure}
  
 
- \begin{table}	
+ \begin{figure}	
      \begin{tabular}{l}
  	           \includegraphics[width=0.7\textwidth]{../Images/hard_core_fe_C_initial_positioning.png}  \\
  	           \includegraphics[width=0.85\textwidth]{../Images/hard_core_fe_C_positioning_energies_h7_label.png}  \\
@@ -538,7 +560,7 @@ dislocation-assisted carbon migration is a valid mechanism.
      	      \end{tabular}		
  \caption{ Final positions and binding energies (eV) of carbon around the hard core. Top: initial positions before relaxation. Bottom: positions after relaxation. The core was constrained by fixing the top and bottom three atoms surrounding each of the cores. As shown by Ventelon \cite{Ventelon2015}, the first and second closest octahedral sites to the hard core decay to a prismatic position inside the hard core. }
  \label{hardbindingenergydist}
-    \end{table}
+    \end{figure}
     
 
 
@@ -640,23 +662,30 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 ** Analysis of carbon concentration along dislocation
    
-   Variation of carbon concentration along the dislocation line for each of the binding sites can
-   be seen in figure ref:cdhardeasy. Due to the easy core binding less strongly to the screw core,
-   one sees that the concentration of weakly bound sites occurs at a lower temperature, as
-   expected. Dislocation densities near the upper bound of what has been observed in martensite, from $\rho =
-   \sim10^{15}$, reduce the temperature at which concentrations of carbon decrease around the dislocation
-   core.  
-    
-      \begin{table}	
+   Variation of carbon concentration along the dislocation line for each of the binding sites can be
+   seen in figure ref:cdhardeasy. Due to the easy core binding less strongly to the screw core, one
+   sees that the concentration of weakly bound sites occurs at a lower temperature, as
+   expected. Dislocation densities near the upper bound of what has been observed in martensite,
+   from $\rho = \sim10^{15}$, reduce the temperature at which carbon concentration decreases around the
+   dislocation core. As expected, lower nominal carbon concentrations cause carbon concentrations
+   around the dislocation to decrease at a lower temperature. In the operating temperature range of
+   $40-90\deg\text{C} = 310-360\deg\text{K}$, we expect to find most of the hard core sites to be
+   saturated. Given the high concentrations of the E1/E2 sites around the easy core in this range, we expect all
+   dislocations will be of the hard core type, due to reconstruction by adjacent carbon. 
+
+   
+   
+   \begin{landscape}
+      \begin{figure}	
           \begin{tabular}{c}
-      	           \includegraphics[width=0.85\textwidth]{../Images/cd_easy_core_ferrite_sc.png}  \\
-      	           \includegraphics[width=0.85\textwidth]{../Images/cd_hard_core_ferrite_sc.png}  \\
+      	           \includegraphics[width=1.65\textwidth]{../Images/cd_easy_core_ferrite_sc_all_10_433_1000_appm.png}  \\
+      	           \includegraphics[width=1.65\textwidth]{../Images/cd_hard_core_ferrite_sc_all_10_433_1000_appm.png}  \\
      		   
           	      \end{tabular}		
-      \caption{ Variation of carbon concentration on the dislocation line $c_d$ for each of the binding sites for the easy core (top) and hard core (bottom). Solid, dashed and dotted lined correspond to dislocation densities of $1\times10^{12}$, $1\times10^{14}$ and $5\times10^{15}$ respectively. The nominal carbon concentration was taken to be the maximum solubility of C in ferrite of 0.02wt\% $\approx433$ appm. $c_d$ and $c_{\text{bulk}}$ reached self-consistency, with an absolute tolerance of $1\times10^{-3}$. C-C interactions were not taken into account. The concentration of carbon around the easy core, drops off at a lower temperature than that of the hard core due to lower binding energies. The operating temperature is taken to be $50\deg$ C $= 320 \deg$ K. }
+      \caption{ Variation of carbon concentration on the dislocation line $c_d$ for each of the binding sites for the easy core (top) and hard core (bottom). Solid, dashed and dotted lined correspond to dislocation densities of $1\times10^{12}$, $1\times10^{14}$ and $5\times10^{15}$ respectively. The nominal carbon concentrations are 10 appm (left) and 1000 appm (right), with the middle figures taken to be the concentration of carbon at the solubility limit C in ferrite: 0.02wt\% $\approx433$ appm. $c_d$ and $c_{\text{bulk}}$ reached self-consistency, with an absolute tolerance of $1\times10^{-3}$. C-C interactions were not taken into account. The concentration of carbon around the easy core, drops off at a lower temperature than that of the hard core due to lower binding energies, with reduction in concentration  The operating temperature is taken to be $50\deg$ C $= 320 \deg$ K. }
       \label{cdhardeasy}
-         \end{table}
-
+         \end{figure}
+	 \end{landscape}
     
       #  Perform analysis of carbon dimer near dislocation core??
       # Are there stable defect clusters near the dislocation core? 
@@ -717,42 +746,32 @@ dislocation-assisted carbon migration is a valid mechanism.
 
 
     
+
 ** Progression to Line Tension Model 
 
-   From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
-   line tension model of a dislocation from which we can obtain the kink-pair formation energies as
-   a function of stress and carbon content.  This model views the dislocation as an elastic string
-   which moves on the Peierls potential $\Delta E_{\text{P}}$.
 
-   The dislocation is modelled as a discretised line, with layer labels $j$. The energy of a
-   dislocation line in the line tension model is given by:
-
-   \[ E_{\text{LT}} = \frac{K}{2} \sum_j (\vec{P}_j - \vec{P}_{j+1} )^2  + \sum_j \Delta E_{\text{P}}  (\vec{P}_j) +
-   (\sigma \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j  - \sum_{j,k} E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|), \]
-   
-   where $K$ is a constant calculated from the model, $\Delta E_{\text{P}}$ is the Peierls potential, $\sigma$ is
-   the stress applied, $\vec{b}$ is the burger's vector, with the dislocation line sense given by
-   $\vec{l}$. $\vec{P_{j}}$ corresponds to the dislocation core position in a given
-   layer, with $E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|)$ being the binding energy of a particular carbon
-   $k$, at position $\vec{P}_k^{\text{C}}$, to a dislocation positioned at $\vec{P}_j$. 
-
-
-   The $K$ coefficient was calculated from atomistic simulations, using the prescription of Itakura cite:Itakura2012,
+   The $K$ coefficient for the line tension model  was calculated from atomistic simulations, using the prescription of Itakura cite:Itakura2012,
    calculating a hessian from the displacement of atoms surrounding the dislocation core, giving
-   results of $K = 0.734$ eV\AA$^{-2}$, compared to DFT $K = 0.816}$ eV\AA$^{-2}$. 
-
-
+   results of $K = 0.734$ eV\AA$^{-2}$, compared to DFT $K = 0.816$ eV\AA$^{-2}$. 
 
    #+NAME: lorentzianfit
-   #+CAPTION: Fit of lorentzian to carbon-dislocation binding energies. The sites chosen to fit to were determined by those sites a prismatic carbon in a hard core configuration would find itself, if the dislocation were to move without it along the $X = \lang\bar{2}111\rang$ direction. 
+   #+CAPTION: Fit of lorentzian to carbon-dislocation binding energies. The sites chosen to fit to were determined by those sites a prismatic carbon in a hard core configuration would find itself, if the dislocation were to move without it along the $X = \lang\bar{2}11\rang$ direction. 
    [[file:~/Documents/docs/Management/Images/fe-c_lorentzian_fit_binding_energies.png]]
 
 
-   The distance dependence of the dislocation-carbon binding energies, as seen in ref:distancedep
-   and ref:lorentzianfit,
-   can be fit by a single lorentzian, as was done in Itakura---but with the ommision of many binding
-   energies, as is done in . To take more of the atomistic data into account in the line tension
-   model, we propose another method to be used in further work.
+
+   The distance dependence of the dislocation-carbon binding energies,
+   as seen in figures ref:distancedep and ref:lorentzianfit, can be fit by a
+   single lorentzian, as was done in Itakura---but with the ommision
+   of many binding energies, as is done in Itakura
+   cite:itakura13_effec_hydrog_atoms_screw_disloc. To take more of the
+   atomistic data into account in the line tension model, we propose
+   another method to be used in further work.
+
+
+   The NEB and String algorithms implemented by by Makri cite:Makri2019, will be used to validate the line
+   tension model implementation on the data from Itakura, using both their Peierls potential
+   and hydrogen-dislocation binding energy fit.
 
    # Upon movement of a screw dislocation saturated with carbon, for example, the expected hard core
    # ground state configuration (with H$x$ sites filled) to an adjacent easy core position, it is
@@ -798,16 +817,21 @@ dislocation-assisted carbon migration is a valid mechanism.
     dislocations move in steels. Due to the spontaneous reconstruction of the easy core upon
     introduction of carbon, and the large binding energy of the H1 site, one would expect a hard
     core with carbon in a prismatic site as the ground state configuration for pinned
-    dislocations. With stress, the dislocation will be forced to move (say, along the $X =
+    dislocations. In the context of dislocation-assisted carbon migration, with sufficient contact
+    stress, dislocations in their hard core ground state will be forced to move (say, along the $X =
     \lang\bar{2}11\rang$ direction), which results in the hard core reconstructing to an easy core. Due to
-    the much higher velocity of dislocations, relative to the diffusivity of carbon, one expects
-    carbon in the prismatic site will not move, becoming an E1 site. A drag force acting on the
-    dislocation now hinders further motion due to the binding of the carbon in the E1
-    site relative to the dislocation centre. Progression of dislocation glide results in further
-    reconstruction of the dislocation core to hard, easy and hard cores, with the original carbon being situated in H2, E6 and H3
-    sites respectively, relative to the dislocation. Thus as the dislocation moves, the drag forces
-    on the dislocation decrease.
+    the much higher velocity of dislocations, relative to the diffusivity of carbon, carbon in the
+    prismatic site stay in-place, becoming an E1 site. A drag force now acts to impede motion of the
+    dislocation, due to the binding of the carbon in the E1 site. Progression of dislocation glide
+    results in further reconstruction of the dislocation core to hard, easy and hard cores, with the
+    original carbon being situated in H2, E6 and H3 sites respectively, relative to the dislocation
+    centre. Thus as the dislocation moves, there is a significant drag force acting on the
+    dislocation, which decreases the further the dislocation moves from carbon. This can be seen in
+    figure ref:lorentzianfit.
 
+    In the ranges of normal bearing operating temperatures ($40\deg\text{C} - 70\deg\text{C}$). The carbon
+    concentration of weakly bound sites starts to decrease.  
+    
 
 
     This forms the basis of the line tension model of the dislocation. We have a more sophisticated
@@ -832,14 +856,32 @@ dislocation-assisted carbon migration is a valid mechanism.
   - Find the kink-pair formation enthalpy, with and without carbon, to feed into the kMC
     code. 
 
+  The prerequisites for a line tension model are in place for determination of the
+  kink-pair formation enthalpies of screw dislocations as a function of carbon
+  content and stress. 
+
+  Using the enthalpies and the binding energies of carbon to screw dislocations,
+  one can proceed with the kinetic Monte Carlo model of dislocation glide, in
+  the environment of a solute to understand dislocation-assisted carbon migration.
+
 
   It would be of interest to pursue atomistic calculations of carbon bound to edge
-  dislocations. Recent DFT/Eshelby elasticity calculations by Maugis /et al./ cite:Maugis2020, show,
+  dislocations. Recent DFT/Eshelby theory calculations by Maugis /et al./ cite:Maugis2020, show,
   counterintuitively, that under /compressive/ stress, carbon diffusivity is /enhanced/. Pipe
   diffusion along edge dislocations could therefore be an important aspect to consider in carbon transport; in
   addition to the higher mobility edge dislocations in bcc iron. As such, edge dislocations could be quite
-  important within the mechanism of dislocation-assisted carbon migration.
+  important within the mechanism of dislocation-assisted carbon migration. 
   
+  Ising and Monte Carlo models of intersite carbon interactions have been
+  performed in DFT cite:Lthi2019.  These calculations only considered the hard
+  core, with carbon binding sites of the H1 prismatic site and a H2 site, (which
+  they name $P$ and $O^{(4)}$ respectively in their paper). First neighbour C-C
+  interactions were taken into account, both along the dislocation line and
+  between carbon sites. With the tight-binding calculations already performed,
+  we can easily apply and extend this analysis to consider more
+  binding sites around the hard core, and observe the carbon
+  distribution around the easy core in tight-binding, which is of interest due to
+  the higher density of binding sites.
 
 * Conclusion 
 
