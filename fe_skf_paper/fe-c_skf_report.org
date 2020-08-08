@@ -343,7 +343,8 @@ dislocation-assisted carbon migration is a valid mechanism.
     three octahedral sites per Fe atom in the bcc lattice. Using this relation, equation [[ref:eq:cd]] can be solved
     self-consistently to give the carbon concentration around the core, $c_d$ as a function of
     nominal carbon concentration and temperature. The nominal carbon concentration was taken to be
-    the maximum solubility of ferrite in the DER region, 0.02 wt\% $\approx 433$ appm. The dislocation
+    the maximum solubility of ferrite in the DER region, 0.02 wt\% $\approx 433$ appm. Calculations of 10
+    and 1000 appm were also performed. The dislocation
     density was varied between $1\times10^{12}$, $1\times10^{14}$ and $5\times10^{15}$.
 
 
@@ -500,9 +501,10 @@ dislocation-assisted carbon migration is a valid mechanism.
    to fully understand screw dislocation behaviour in bcc iron. 
 
 
-   The binding energies, and distribution, of carbon to both the hard and easy cores can be seen in table
-   ref:tab:bindingenergies and figures ref:easybindingenergydist and ref:hardbindingenergydist. The
-   distribution of carbon strongly depends on the type of core it finds itself situated near. 
+   The binding energies, and distribution, of carbon to both the hard and easy cores can be seen in
+   table ref:tab:bindingenergies and figures ref:easybindingenergydist and
+   ref:hardbindingenergydist. The distribution of carbon strongly depends on the type of core it
+   finds itself situated near.
 
    The easy core only significantly modifies the position of the iE1 site, to the E1 site, situated
    in the centre of an adjacent triangle. All other sites are unaffected, so there is a one-to-one
@@ -667,11 +669,13 @@ dislocation-assisted carbon migration is a valid mechanism.
    sees that the concentration of weakly bound sites occurs at a lower temperature, as
    expected. Dislocation densities near the upper bound of what has been observed in martensite,
    from $\rho = \sim10^{15}$, reduce the temperature at which carbon concentration decreases around the
-   dislocation core. As expected, lower nominal carbon concentrations cause carbon concentrations
-   around the dislocation to decrease at a lower temperature. In the operating temperature range of
-   $40-90\deg\text{C} = 310-360\deg\text{K}$, we expect to find most of the hard core sites to be
-   saturated. Given the high concentrations of the E1/E2 sites around the easy core in this range, we expect all
-   dislocations will be of the hard core type, due to reconstruction by adjacent carbon. 
+   dislocation core. Lower nominal carbon concentrations cause carbon concentrations
+   around the dislocation to decrease at a lower temperature. 
+
+   In the operating temperature range of $40-90\deg\text{C} = 310-360\deg\text{K}$, we expect most
+   of the hard core sites are saturated. Given the high concentrations of the E1/E2 sites around
+   the easy core in this range, we expect all dislocations will be of the hard core type, due to
+   reconstruction by carbon adjacent to the dislocation core. 
 
    
    
@@ -691,10 +695,10 @@ dislocation-assisted carbon migration is a valid mechanism.
       # Are there stable defect clusters near the dislocation core? 
 
 
-    The time for carbon transport by diffusion over $1/\sqrt{\rho}$, the typical distance between
-    dislocations, with a dislocation density corresponding
-    to annihilation 1/ ρ, the typical distance between dislocations, varies from 10^5 to 10^8 s at 300
-    K and from 0.02 to 20 s at 600 K, when the dislocation density varies from 10 15 to 10 12 m −2 .
+    # The time for carbon transport by diffusion over $1/\sqrt{\rho}$, the typical distance between
+    # dislocations, with a dislocation density corresponding
+    # to annihilation 1/ ρ, the typical distance between dislocations, varies from 10^5 to 10^8 s at 300
+    # K and from 0.02 to 20 s at 600 K, when the dislocation density varies from 10 15 to 10 12 m −2 .
 
 
    # \[ C_d^{i} = \frac{ 
@@ -817,8 +821,10 @@ dislocation-assisted carbon migration is a valid mechanism.
     dislocations move in steels. Due to the spontaneous reconstruction of the easy core upon
     introduction of carbon, and the large binding energy of the H1 site, one would expect a hard
     core with carbon in a prismatic site as the ground state configuration for pinned
-    dislocations. In the context of dislocation-assisted carbon migration, with sufficient contact
-    stress, dislocations in their hard core ground state will be forced to move (say, along the $X =
+    dislocations. 
+
+    In the context of dislocation-assisted carbon migration, with sufficient contact stress,
+    dislocations in their hard core ground state will be forced to move (say, along the $X =
     \lang\bar{2}11\rang$ direction), which results in the hard core reconstructing to an easy core. Due to
     the much higher velocity of dislocations, relative to the diffusivity of carbon, carbon in the
     prismatic site stay in-place, becoming an E1 site. A drag force now acts to impede motion of the
@@ -827,15 +833,21 @@ dislocation-assisted carbon migration is a valid mechanism.
     original carbon being situated in H2, E6 and H3 sites respectively, relative to the dislocation
     centre. Thus as the dislocation moves, there is a significant drag force acting on the
     dislocation, which decreases the further the dislocation moves from carbon. This can be seen in
-    figure ref:lorentzianfit.
+    figure ref:lorentzianfit. 
 
-    In the ranges of normal bearing operating temperatures ($40\deg\text{C} - 70\deg\text{C}$). The carbon
-    concentration of weakly bound sites starts to decrease.  
+
+    In normal operating temperatures of the bearing, one expects all dislocations to be hard cores
+    saturated with carbon (neglecting C-C interaction) in most of the $\text{H}x$ sites, as seen in
+    the concentration analysis.
+
+
+    # In the ranges of normal bearing operating temperatures ($40\deg\text{C} - 70\deg\text{C}$). The carbon
+    # concentration of weakly bound sites starts to decrease.  
     
 
 
-    This forms the basis of the line tension model of the dislocation. We have a more sophisticated
-    method of being able to incorporate the binding energy of carbon to dislocations than Itakura. 
+    # This forms the basis of the line tension model of the dislocation. We have a more sophisticated
+    # method of being able to incorporate the binding energy of carbon to dislocations than Itakura. 
 
   # - Peierls potential agrees, although it is low compared to DFT
   # - Line tension model has been set up, although results have not been achieved yet.
@@ -847,22 +859,23 @@ dislocation-assisted carbon migration is a valid mechanism.
   
 * Future work  
 
-  - Validation of line-tension model by reproduction of the dislocation line shape from
-    Itakura 2012 cite:Itakura2012.
-  - Compare tbe dislocation line shape with Itakura, and find the migration path of the dislocation from tbe data.
-  - [Optional] Create Ising model for easy and hard core an compare the binding energies like cite:Lthi2019. 
-  - [Optional] Find the elastic dipole tensor to check the binding energy of C within anisotropic elasticity.
-  - Choose the sites for which one can fit a function (lorentzian) for the interaction energy between C and Fe.
-  - Find the kink-pair formation enthalpy, with and without carbon, to feed into the kMC
-    code. 
+  # - Validation of line-tension model by reproduction of the dislocation line shape from
+  #   Itakura 2012 cite:Itakura2012.
+  # - Compare tbe dislocation line shape with Itakura, and find the migration path of the dislocation from tbe data.
+  # - [Optional] Create Ising model for easy and hard core an compare the binding energies like cite:Lthi2019. 
+  # - [Optional] Find the elastic dipole tensor to check the binding energy of C within anisotropic elasticity.
+  # - Choose the sites for which one can fit a function (lorentzian) for the interaction energy between C and Fe.
+  # - Find the kink-pair formation enthalpy, with and without carbon, to feed into the kMC
+  #   code. 
 
   The prerequisites for a line tension model are in place for determination of the
   kink-pair formation enthalpies of screw dislocations as a function of carbon
   content and stress. 
 
-  Using the enthalpies and the binding energies of carbon to screw dislocations,
-  one can proceed with the kinetic Monte Carlo model of dislocation glide, in
-  the environment of a solute to understand dislocation-assisted carbon migration.
+  Using the enthalpies and the binding energies of carbon to screw dislocations, one can proceed
+  with the kinetic Monte Carlo model of dislocation glide, in the environment of a solute to
+  understand how carbon can move with dislocations under applied stress, in different temperature
+  and concentration regimes.
 
 
   It would be of interest to pursue atomistic calculations of carbon bound to edge
@@ -884,14 +897,35 @@ dislocation-assisted carbon migration is a valid mechanism.
   the higher density of binding sites.
 
 * Conclusion 
+  
+  Dislocation-assisted carbon migration is the mechanism by which martensite decays to form DER
+  regions---composed of ferrite interspersed in a martensitic matrix---which enhances failure risk
+  by RCF. There is dispute over where excess carbon from the martensitic matrix finds itself after
+  decay. The current leading mechanism suggests carbon segregates to pre-existing carbides, yet
+  recent experimental results show in the late stages of DER formation, pre-existing carbides are partially
+  dissolved in areas of highly localized plasticity, implying segregation of carbon to
+  dislocations. As such, a thorough investigation of carbon-dislocation interactions is vital to
+  understanding how DER initially forms and progresses.
 
+  Tight-binding simulations, the first stage in a multi-scale paradigm to understand
+  dislocation-assisted carbon migration, found a peierls potential comparable to that of DFT
+  results. Carbon distribution around the easy and hard cores differ significantly, with the largest
+  binding energy being found by carbon being situated in a prismatic site in the hard core. Carbon
+  within 3\AA of the easy core caused reconstruction to the hard core, with carbon in a prismatic
+  site. 
 
-  - Outline of the literature review 
-     1. Origin of DER formation through high-cycle fatigue
-     2. What is the DER region and what phases is it composed of?
-     3. What are the current mechanisms which explain this?
-        1. Why are they insufficient?
-     4. Ouline of the work considering Fe-C dislocation modelling
+  Concentrations of carbon around the easy core at normal operating temperatures cause
+  reconstruction to all dislocations to the hard core, resulting in all dislocations being pinned.
+
+  As a dislocation moves under stress from the hard core-prismatic carbon ground state, a large drag force
+  acts on the dislocation upon movement to adjacent easy and hard positions, as the carbon will stay
+  in place due to its low diffusion velocity. The carbon-dislocation binding energies decreases with
+  distance, and are in good agreement with literature. 
+
+  Line tension and kMC models will be used to determine how dislocation glide is affected by carbon
+  and how carbon can move with dislocations. 
+
+  
 
 * Appendix 
   
