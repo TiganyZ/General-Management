@@ -1,4 +1,4 @@
-#+TITLE: Multi-scale investigation of dislocation mediated carbon migration in iron
+#+TITLE: Atomistic investigation of dislocation mediated carbon migration in iron
 #+AUTHOR: Tigany Zarrouk
 #+BIBLIOGRAPHY: ../bibliography/org-refs.bib
 #+LaTeX_CLASS_OPTIONS: [a4paper,11pt]
@@ -23,11 +23,35 @@
 
 # \end{abstract}
 
+\clearpage
 
-# \begin{abstract}
-# In this report, details of atomistic calculations to understand the proposed dislocation-assisted carbon migration mechanism in 
+  \begin{abstract}
+  Martensitic bearing steels have been shown to undergo subsurface microstructural decay forming
+  Dark Etching Regions (DERs), which promote failure through rolling contact fatigue
+  (RCF). Dislocation-assisted carbon migration is thought to be the underlying mechanism, yet
+  empirical studies have been inconclusive as to how dislocations move carbon and where excess
+  carbon from the martensitic matrix migrates to upon transformation to ferrite---of starkly lower
+  solubility. In this report, we detail the first stage of a multi-scale modelling approach to
+  elucidate carbon transport by dislocations. Tight-binding calculations of the $1/2\langle 111 \rangle$ screw
+  dislocation in bcc iron gave a 2d Peierls potential comparable to Density Functional Theory (DFT)
+  calculations. Carbon distribution within $\sim2$b of the easy and hard cores was seen to vary
+  significantly, with the highest binding energy being found in the centre of the hard screw core,
+  which is the ground state carbon-dislocation configuration, in agreement with DFT. Determination
+  of equilibrium carbon concentration along dislocation lines, at various dislocation densities and
+  nominal carbon concentrations, found most sites around the hard core were saturated, with all easy
+  cores reconstructing to hard due to saturation of adjacent octahedral sites. As such, within normal
+  operating temperature range, we expect all dislocations to be of hard core type, pinned by carbon
+  in a prismatic site within the dislocation core. We anticipate large drag forces upon initial
+  movement of disocations with sufficient contact stress due to carbon-dislocation binding. These
+  atomistic results pave the way for the last two stages in this multi-scale approach: a line
+  tension model of a dislocation line, to determine the kink-pair formation energies as a function
+  of stress and carbon concentration, and kinetic Monte Carlo (kMC) simulations in an environment of
+  carbon, to ascertain how carbon moves with dislocations in different stress, temperature and
+  concentration regimes.
 
-# \end{abstract}
+  \end{abstract}
+
+\clearpage
 
 * Introduction
 
