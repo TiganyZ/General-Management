@@ -91,7 +91,7 @@
   However, fundamentals behind DER formation through this process remain contentious. It is not
   definitively known where carbon migrates to with the onset of DER formation: where does excess
   carbon from the martensitic matrix find itself, when the structure decays to low solubility
-  (0.02 wt\%) ferrite? It is not known whether carbon atoms inside the martensite are transported
+  (0.02 wt%) ferrite? It is not known whether carbon atoms inside the martensite are transported
   towards the residual transition carbides, cite:fu17_strain_induc_marten_decay_bearin, or if they
   segregate to the boundaries of ferrite microbands/elongated ferrite.
 
@@ -104,7 +104,7 @@
   Bagaryatskii/Isaichev orientation relationship, but observations suggest a lack of any orientation
   relationship cite:Bhadeshia2018. Carbides formed within the DER region have an irregular
   shape/diffuse boundaries, which are seemingly due to the incomplete /dissolution/ of /residual/
-  carbides, which is at odds with the theory of Fu /et al./ and residual carbide growth.
+  carbides, which is at odds with the theory of Fu /et al./.
 
 
   # The appearance of WEBs are correlated with lenticular carbide
@@ -139,7 +139,7 @@
   To shed light dislocation-assisted carbon migration, a multi-scale modelling approach can be
   used. Atomistics can provide information of the 2d Peierls energy landscape which dislocations are
   subject to in iron; and how this landscape is modified by the binding of carbon to
-  dislocations. This data can be used in a line tension model of a dislocation, to determine the
+  dislocations. This data can be used in a line tension model of a dislocation to determine the
   kink-pair nucleation energies of dislocations as a function of carbon content and stress. Finally,
   one can use a kinetic Monte Carlo (kMC) model of dislocation glide, by thermally activated kink-pair
   nucleation, in an environment of carbon. From this last stage of coarse-graining, one can
@@ -217,7 +217,7 @@
    To determine the Peierls potential of a $1/2\langle 111 \rangle$ screw dislocation, we followed the procedure
    detailed in Itakura cite:Itakura2012. Quadrupolar arrays of dislocations were constructed by
    placing dislocations of antiparallel $1/2\langle 111\rangle$ Burgers vectors in an "S" arrangement
-   cite:Clouet2012, see figure ref:sarrangementclouet, with initial displacements determined by the
+   cite:Clouet2012, with initial displacements determined by the
    anisotropic elasticity solutions. These displacements were modified to be periodic, thereby
    removing artificial stacking faults which would appear between periodic images after the
    introduction of the dislocation dipole. This was achieved by the subraction of a linear error
@@ -233,15 +233,27 @@
    each of these cells was 5x5x30.
 
 
-   #+ATTR_LATEX: :float :width 0.5\textwidth
-   #+CAPTION: Figure of the quadrupolar arrangement used to determine the Peierls potential. $\vec{U}_1$ and $\vec{U}_2$ are the periodicity vectors in the X-Y plane. $\vec{A}$ is the vector defining the cut plane of the dislocation dipole \cite{Clouet2012}. [[label:sarrangementclouet]]
-   [[file:~/Documents/docs/Management/Images/s_arrangement_clouet.png]]
+   # #+ATTR_LATEX: :float :width 0.5\textwidth
+   # #+CAPTION: Figure of the quadrupolar arrangement used to determine the Peierls potential. $\vec{U}_1$ and $\vec{U}_2$ are the periodicity vectors in the X-Y plane. $\vec{A}$ is the vector defining the cut plane of the dislocation dipole \cite{Clouet2012}. [[label:sarrangementclouet]]
+   # [[file:~/Documents/docs/Management/Images/s_arrangement_clouet.png]]
 
-   
-   #+ATTR_LATEX: :width 0.45\textwidth
-   #+CAPTION: Figure of the sampled positions used to determine the the Peierls potential. "E", "H" and "S" correspond to the easy, hard and split core positions respectively. [[label:sampledpositions]]
-   [[file:~/Documents/docs/Management/Images/peierls_potential_positions_tbe.png]]
+        \begin{figure}
+    \begin{tabular}{cc}
+	     \includegraphics[width=0.45\textwidth]{../Images/hardeasycoreatomdiagram_coord2.png} &
+             \includegraphics[width=0.45\textwidth]{../Images/peierls_potential_positions_tbe.png}  \\
+    \end{tabular}		
+\caption{Diagrams of dislocation core positions. "E", "H" and "S" correspond to the easy, hard and split core positions respectively. Left: core positions as seen along the $Z=\langle 111 \rangle$ direction, along the dislocation line. Atomic positions are shown as grey circles. Right: positions sampled within the triangle EHS used to determine the the Peierls potential.  \label{sampledpositions}}
+	\label{fig:peierlspot}
+    \end{figure}
 
+
+   # #+BEGIN_center
+   # #+ATTR_LATEX: :width 0.45\textwidth :center
+   # [[file:~/Documents/docs/Management/Images/hardeasycoreatomdiagram_coord.png]]
+   # #+ATTR_LATEX: :width 0.45\textwidth :center
+   # #+CAPTION: Figure of the sampled positions used to determine the the Peierls potential. "E", "H" and "S" correspond to the easy, hard and split core positions respectively. [[label:sampledpositions]]
+   # [[file:~/Documents/docs/Management/Images/peierls_potential_positions_tbe.png]]
+   # #+END_center
 
    # Secondly, the interaction energy between the
    # dislocations should not change in the calculation of the Peierls potential. In a
@@ -266,7 +278,7 @@
    quantities relative to the easy core configuration, divided by the total number of dislocations
    in the reference cell.  The difference in total energies is taken between a relaxed cell with
    displaced dislocation cores, from the periodic easy core reference, with a correction term coming
-   from the difference in interaction energies between periodic images between the displaced
+   from the difference in interaction energies (of simulation cell and its periodic images) between the displaced
    dislocation cell and the reference, $\Delta E_{\text{INT}}$.
 
 
@@ -306,14 +318,12 @@
    relax in $X-Y$ plane, to fix the dislocation upon relaxation. 
    The k-point sampling mesh for each of these cells was 1x1x24.
 
-   From the relaxed cells, a smaller region of 174 atoms, with $R_1 =
-   3\sqrt{2}a_{\text{bcc}}$, and $R_2 = 4\sqrt{2}a_{\text{bcc}}$, was cut from
-   the dynamic regions. This smaller cell was extended to a thickness of 3$b$ in
-   the $Z$ direction. Carbon interstitials were inserted into octahedral sites
-   near the dislocation core, in the middle layer. Exploiting reflection and
-   rotational symmetry, allows us to use only 10 interstitial
-   sites to obtain the binding energies of carbon $\sim2$ b from the core, denoted by iH$j$ and iE$j$,
-   where $j \in \{1\dots10\}$. 
+   From the relaxed cells, a smaller region of 174 atoms, with $R_1 = 3\sqrt{2}a_{\text{bcc}}$, and $R_2
+   = 4\sqrt{2}a_{\text{bcc}}$, was cut from the dynamic regions. This smaller cell was extended to a
+   thickness of 3$b$ in the $Z$ direction. Carbon interstitials were inserted into octahedral sites
+   near the dislocation core, in the middle layer. Exploiting reflection and rotational symmetry,
+   only 10 interstitial sites were used, to obtain the binding energies of carbon $\sim2$ b from the
+   core, denoted by iH$j$ and iE$j$, where $j \in \{1\dots10\}$.
 
    The three atoms surrounding the core in the first and third layers were again
    constrained to relax only in the $X$ and $Y$ directions. No such constraints
@@ -335,12 +345,12 @@
     carbon interstitial and a dislocation, $E_{\text{d}}$ is the total
     energy of a relaxed cluster with a dislocation and $E_{\text{C
     ref.}}$ is the total energy of a relaxed perfect cluster with a single carbon in
-    an octahedral site.
+    an octahedral site. 
 
-    The zero-point energy (ZPE) is calculated as in Itakura, details can be found in ref:sec:zeropointenergy. 
+    The zero-point energy (ZPE) is calculated as in Itakura. Details can be found in ref:sec:zeropointenergy. 
     The ZPE corrected binding energy is given by 
     \[ E^{\text{Z}}_{b} = E_b + \Delta E_z,  \]
-    where $\Delta E_z = E_z - E_{z\text{C ref.}}$ and $E_{z\text{C ref.}} = 202.5 \text{meV}$ is the zero-point energy of carbon
+    where $\Delta E_z = E_z - E_{z}^{\text{C ref.}}$ and $E_{z}^{\text{C ref.}} = 202.5 \text{meV}$ is the zero-point energy of carbon
     situated in an octahedral site in a perfect cluster of the same size. 
 
 ** Analysis of carbon concentration along dislocation
@@ -357,10 +367,10 @@
     \end{equation}
 
 
-    where $i$ denotes the $i^{\text{th}}$ carbon binding site (with the convention of attraction
-    denoting a positive binding energy), with $E_{\text{b}}^{i}$, being the
-    corresponding dislocation-solute binding energy and $c_d^{i}$ being the average concentration of that carbon
-    site bound to the dislocation. $c_{\text{bulk}}^{}$ is the carbon concentration in the bulk, with
+    where $i$ denotes the $i^{\text{th}}$ carbon binding site, with $E_{\text{b}}^{i}$, being the
+    corresponding dislocation-solute binding energy (in the convention of attraction
+    denoting a positive binding energy). $c_d^{i}$ is the average concentration of the $i^{\text{th}}$ carbon
+    site bound to the dislocations. $c_{\text{bulk}}^{}$ is the carbon concentration in the bulk, with
     $c_{\text{nom}}^{}$ the nominal carbon concentration per Fe atom.
 
 
@@ -394,8 +404,8 @@
    $\vec{l}$. $\vec{P_{j}}$ corresponds to the dislocation core position in a given
    layer. $E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|)$ is the binding energy of a particular carbon
    $k$, at position $\vec{P}_k^{\text{C}}$, to a dislocation positioned at $\vec{P}_j$. The kink-pair
-   formation enthalpies can then be found using the NEB/String method, to find the transition
-   barrier height. 
+   formation enthalpies can then be found using the NEB/String method, to find the height of the transition-state
+   barrier. 
 
 * Results
 
@@ -406,7 +416,7 @@
 	     \includegraphics[width=0.8\textwidth]{../Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
              \includegraphics[width=0.8\textwidth]{../Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
     \end{tabular}		
-\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT \cite{Itakura2012} (top) and tight-binding (bottom). "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. The discrepancy is probably due to an insufficient repulsion at close range within the tight-binding model.}
+\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT \cite{Itakura2012} (top) and tight-binding (bottom). Energy scale is in meV. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponting to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. The discrepancy is probably due to an insufficient repulsion at close range within the tight-binding model.}
 	\label{fig:peierlspot}
     \end{figure}
 
@@ -416,15 +426,16 @@
 	tight-binding can be found in figure ref:fig:peierlspot. Data was interpolated using 2d
 	cubic splines. "E", "H" and "S" correspond to easy, hard and split core positions
 	respectively, with the latter also corresponding to atomic positions. The relative energies
-	between the different core positions is smaller in tight-binding compared to DFT. This is an
-	artifact in the model, which has been validated in NEB calculations of the $1/2\langle 111\rangle$ screw
-	dislocation Peierls barrier: the tight-binding Peierls barrier is approximately half that of DFT
-	cite:Simpson2019. The split core as seen in tight-binding is reminiscent of EAM potentials,
-	where the split core energy is lower than that of the hard core cite:Itakura2012. Some of
-	this discrepancy can be attributed to the to erroneous interaction term included by Itakura,
-	as detailed above---interaction energies can become arbitrarily high, if not made
-	independent of truncation limit---but likely, there are effects in DFT which are not
-	encapsulated fully within tight-binding (or EAM), such as a lack of core electron repulsion.
+	between the different core positions was found to be smaller in tight-binding compared to
+	DFT. This is an artifact of the model, which has been reproduced in NEB calculations of the
+	$1/2\langle 111\rangle$ screw dislocation Peierls barrier: the tight-binding Peierls barrier is
+	approximately half that of DFT cite:Simpson2019. The split core energy is lower than that of
+	the hard core, which is reminiscent of EAM potentials cite:Itakura2012. Some of this
+	discrepancy can be attributed to the to erroneous interaction term included by Itakura, as
+	detailed above---interaction energies can become arbitrarily high, if not made independent
+	of truncation limit---but likely, there are effects in DFT which are not encapsulated fully
+	within tight-binding, such as a lack of core electron repulsion upon deformation of the
+	lattice, which would increase the relative energy difference.
 	
      | Pos | $\Delta E_{\text{INT}}$ | $\Delta E_{\text{tbe}}$ | $\Delta E_{\text{P}}$ | $\Delta E_{\text{P}}^{\text{DFT}}$ |
      |-----+-------------------------+-------------------------+-----------------------+------------------------------------|
@@ -474,7 +485,7 @@
 
    The core energy difference can be estimated by the difference between of excess energies between
    the easy and hard cores in the limit of $\text{ln}(\frac{R}{R_0}) \rightarrow 0$. At the smallest measured
-   value, one finds that the core energy difference $\Delta E_c^{\text{Easy-Hard}} = 76$ meV/b. This is in
+   value, one finds that the core energy difference $\Delta E_{\text{core}}^{\text{Easy-Hard}} = 76$ meV/b. This is in
    agreement with the results of Itakura cite:Itakura2012, of 82 meV/b.
 
    # > How does carbon in the hard core change how dislocations move with carbon.
@@ -518,11 +529,10 @@
    As found in DFT simulations by Ventelon cite:Ventelon2015, when a carbon was placed in the
    vicinity of a relaxed easy dislocation core---in either of the two nearest, distinguishable,
    octahedral sites---a spontaneous reconstruction of the dislocation core occurred: from easy to
-   hard. Upon reconstruction, the dislocation core moved to a neighbouring triangle, when looking along the $\langle
-   111\rangle$ direction, where the carbon found itself situated in the centre. This will be called a
-   prismatic site, as in Ventelon's paper. This model successfully
-   reproduces this behaviour, confirming that both hard and easy dislocation cores must be studied
-   to fully understand screw dislocation behaviour in bcc iron. 
+   hard. Upon reconstruction, the dislocation core moved to a neighbouring triangle, when looking
+   along the $\langle 111\rangle$ direction, where the carbon found itself situated in the centre. This will be
+   called a prismatic site, as in Ventelon's paper. This confirms that both hard and easy
+   dislocation cores must be studied to fully understand screw dislocation behaviour in bcc iron.
 
 
    The binding energies of carbon to both the hard and easy cores can be seen in
@@ -650,22 +660,18 @@
 
     # Values in square brackets denote fully unconstrained relaxation of all degrees of freedom, using quadrupolar dislocation arrays for direct comparison to Ventelon \cite{Ventelon2015}.
 
-    These binding energies agree well with experiment and previous calculations.
     # Kamber /et
     # al./ found a maximum binding energy of 0.5 eV. Cochardt found a value of 0.71 eV
     # within 0.1eV of the largest binding energy for the easy core.
-    
-    EAM calculations by Clouet cite:Clouet2008,Becquart2007 found a maximum binding energy of 0.41 eV by
-    calculating the elastic dipole tensor within Eshelby theory. Hanlumyuang /et al./
-    cite:Hanlumyuang2010, similarly conducted DFT and EAM calculations for the interaction energy
-    12\AA from the core, and their calculations agreed with the continuum limit of Eshelby theory with
-    a binding energy of 0.2 eV.
-
-    In DFT calculations by Ventelon cite:Ventelon2015, the interaction energy of a carbon in a hard
-    core prism configuration was found to be 0.79 eV for a thickness in the $Z$ direction of 3$b$
-    (0.73eV for $6b$)---in the convention that a positive binding energy indicates attraction. This
-    is significantly lower than the 1.29eV interaction energy of tight-binding. 
-
+    These binding energies agree well with experiment and atomistic/elastic calculations. EAM simulations
+    by Clouet cite:Clouet2008,Becquart2007 found a maximum binding energy of 0.41 eV by calculating
+    the elastic dipole tensor within Eshelby theory. Hanlumyuang /et al./ cite:Hanlumyuang2010,
+    similarly conducted DFT and EAM calculations for the interaction energy 12\AA from the core, and
+    their calculations agreed with the continuum limit of Eshelby theory with a binding energy of
+    0.2 eV. In DFT calculations by Ventelon cite:Ventelon2015, the interaction energy of a carbon in a
+    hard core prism configuration was found to be 0.79 eV for a thickness in the $Z$ direction of
+    3$b$ (0.73eV for $6b$)---in the convention that a positive binding energy indicates
+    attraction. This is significantly lower than the 1.29eV interaction energy of tight-binding.
     This discrepancy can be partially explained by the fact that the cells have not been allowed to
     relax with all degrees of freedom, as in the Ventelon results: the three atoms around the screw
     core are fixed in $Z$ to so the dislocation core position does not change upon relaxation. A
@@ -673,8 +679,7 @@
     Peierls barrier of this s-d model of iron, necessary for Fe-C interactions, has been show to be
     half that found in DFT, or the canonical d model cite:Simpson2019, but the solution energies for
     Fe-C defect complexes are well described. This implies there is insufficient repulsion between
-    Fe-Fe species, upon deformation, leading to a higher Fe-C binding energy from tight-binding,
-    compared to DFT.
+    Fe-Fe species upon deformation, leading to a larger resultant Fe-C binding energy from tight-binding.
 
 
 
