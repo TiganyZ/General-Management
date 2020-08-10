@@ -1,4 +1,4 @@
-% Created 2020-08-09 Sun 23:19
+% Created 2020-08-10 Mon 09:35
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -34,35 +34,35 @@
 \clearpage
 
 \begin{abstract}
-Martensitic bearing steels have been shown to undergo subsurface microstructural decay forming
-Dark Etching Regions (DERs), which promote failure through rolling contact fatigue
+Martensitic bearing steels have been shown to undergo subsurface microstructural decay, forming
+Dark Etching Regions (DERs), promoting failure through rolling contact fatigue
 (RCF). Dislocation-assisted carbon migration is thought to be the underlying mechanism, yet
 empirical studies have been inconclusive as to how dislocations move carbon and where excess
 carbon from the martensitic matrix migrates to upon transformation to ferrite---a phase of
 significantly lower carbon solubility. In this report, we detail the first stage of a multi-scale
-modelling approach to elucidate carbon transport by dislocations. Tight-binding calculations of
-the $1/2\langle 111 \rangle$ screw dislocation in bcc iron gave a 2d Peierls potential comparable to Density
-Functional Theory (DFT) calculations. Carbon distribution within $\sim2$b of the easy and hard cores
-was seen to vary significantly, with the highest binding energy being found in the centre of the
-hard screw core---which is the ground state carbon-dislocation configuration---in agreement with
-DFT. Determination of equilibrium carbon concentration along dislocation lines, at various
-dislocation densities and nominal carbon concentrations, found most sites around the hard core
-were saturated, with all easy cores reconstructing to hard due to saturation of adjacent
-octahedral sites. As such, within normal operating temperature range, we expect all dislocations
-to be of hard core type, pinned by carbon in a prismatic site within the dislocation core. We
-anticipate large drag forces acting on disocations in the initial stages of glide due to
-carbon-dislocation binding. These atomistic results provide important data for the last two stages
-in this multi-scale approach: determination of kink-pair formation energies as a function of
-stress and carbon concentration using a line tension model of a dislocation, and kinetic
-Monte Carlo (kMC) simulations in an environment of carbon, to ascertain how carbon moves with
-dislocations in different stress, temperature and concentration regimes.
+modelling approach to elucidate carbon transport by dislocations. Tight-binding simulations of
+carbon interactions with the $1/2\langle 111 \rangle$ screw dislocation found solute distribution to vary
+significantly within $\sim2$b of the easy and hard cores; the highest binding energy being found in
+the centre of the hard screw core---which is the ground state carbon-dislocation
+configuration---in agreement with Density Functional Theory (DFT). Determination of equilibrium
+carbon concentration along dislocation lines, at various dislocation densities and nominal carbon
+concentrations, found most sites around the hard core were saturated, with all easy cores
+reconstructing to hard due to saturation of adjacent octahedral sites. In the typical temperature
+range of bearing operation, we expect all dislocations to be of hard core type, pinned by carbon
+in a prismatic site within the dislocation core. We anticipate large drag forces acting on
+disocations in the initial stages of glide, due to carbon-dislocation binding. These atomistic
+results provide data for the last two stages in this multi-scale approach: determination
+of kink-pair formation energies as a function of stress and carbon concentration using a line
+tension model of a dislocation, and kinetic Monte Carlo (kMC) simulations incorporating solute
+diffusion, to ascertain how carbon moves with dislocations in different stress, temperature and
+concentration regimes.
 
 \end{abstract}
 
 \clearpage
 
 \section{Introduction}
-\label{sec:org13e2a6a}
+\label{sec:orgb3619c6}
 
 Martensitic steels are frequently used in bearings due to their resilience to service conditions,
 being subject to high rotational speeds and contact pressures. However, under cyclic loading
@@ -85,22 +85,22 @@ phenomena. Martensite transforms to ferrite (microband and elongated forms) as a
 localization. Residual carbides, untouched at the start of DER formation, gradually dissolve
 within ferrite and martensite. Further RCF progression leads to the formation of low and high
 angle ferrite features, White Etching Bands (WEBs), composed of microband and elongated
-ferrite. Lenticular carbides precipitate at the boundaries of these ferrite bands.  Thickening of
+ferrite. Lenticular carbides precipitate at the boundaries of these ferrite bands. Thickening of
 these carbides occurs during DER development and is correlated with WEB growth. Reductions in
 dislocation density in nanocrystalline (heavily deformed) ferrite have been observed in the later
 stages of DER formation.
 
 
-The fundamental mechanism behind these complex phenomena remains contentious. It is not definitively known
-how/where carbon migrates to with the onset of DER formation. The key question is: where does
-excess carbon from the martensitic matrix find itself, when the structure decays to low solubility
-(0.02 wt\%) ferrite \cite{hashemi11_stren_hardn_statis_correl_api_x65_steel}? It is not known whether
-carbon atoms inside the martensite are transported towards the residual transition carbides,
-\cite{fu17_strain_induc_marten_decay_bearin}, or if they segregate to the boundaries of ferrite.
+Carbon migration is thought to be the mechanism by which this degradation occurs, but it is not
+definitively known how or where carbon migrates with the onset of DER formation. The key questions
+are: where does excess carbon from the martensitic matrix find itself when the structure decays to
+low solubility (0.02 wt\%) ferrite? and how is the carbon transported, given its low diffusivity in
+martensite/DER phases
+\cite{hashemi11_stren_hardn_statis_correl_api_x65_steel}? 
 
 Fu \emph{et al.} propose that carbon atoms inside the martensite would segregate to
 pre-existing/residual carbides, increasing their size
-\cite{fu17_strain_induc_marten_decay_bearin}. This theory has been successfully applied to the
+\cite{fu17_strain_induc_marten_decay_bearin}. This theory was successfully applied to the
 growth of lenticular carbides \cite{Fu2017}, however, problems arise with the application to
 residual carbide growth: if carbides were to form in martensite, they should follow the
 Bagaryatskii/Isaichev orientation relationship, but observations suggest a lack of any orientation
@@ -108,31 +108,30 @@ relationship \cite{Bhadeshia2018}. Residual carbides residing within DERs have i
 shapes/diffuse boundaries, which are seemingly due to the incomplete \emph{dissolution} of \emph{residual}
 carbides, which is at odds with the theory of Fu \emph{et al.}.
 
-
-A plausible mechanism for the degradation of the martensitic microstructure is a process of carbon migration, driven by dislocation glide, which is as
+A plausible mechanism for carbon migration is that it is driven by dislocation glide, which is as
 follows
 \cite{Fu2017,fu17_strain_induc_marten_decay_bearin,Warhadpande1_2013,Warhadpande2013,voskamp97_state_resid_stres_induc_by,Swahn1976}. Due
 to the high dislocation density exhibited in martensite, carbon segregates to dislocations in
 Cottrell atmospheres, causing pinning. Strain generated by cyclic stresses allow dislocations to
 escape their carbon rich environment. The free dislocations re-attract carbon, allowing the
 Cottrell atmospheres to reform, subsequently re-pinning the dislocations, creating a net carbon
-flux.
+flux.  This mechanism allows for the movement of carbon during the martensite-ferrite transition,
+while also explaining how excess carbon can move from the ferrite phases to lenticular carbides at
+the boundaries, describing the process behind both WEB growth and carbide thickening. Moreover, it
+explains the dissolution of residual carbides, both in ferrite WEBs and martensite, due to
+dislocation rearrangement and pile ups at the carbide interface drawing carbon atoms out, due to a
+more favourable binding to dislocations. However, as to how this process occurs on the atomistic
+scale, or if it is indeed feasible, is unknown.
 
 
-This dislocation-assisted carbon migration mechanism allows for the migration of excess carbon from within
-the low solubility ferrite to lenticular carbides at the boundaries. Moreover, it explains the
-dissolution of residual carbides, both in ferrite WEBs and martensite, due to dislocation rearrangement
-and pile ups at carbide interface drawing carbon atoms out. However, as to how this
-mechanism occurs on the atomistic scale, or if it is indeed feasible, is unknown. 
 
-
-
-Experimentally probing this mechanism has proven difficult and inconclusive. Work needs to be done
+Experimentally probing dislocation-assisted carbon migration has proven difficult and inconclusive. Work needs to be done
 to understand dislocation-carbon interactions; more specifically: how dislocations move carbon
 within the temperature and stress regimes experienced during operation; where carbon is
 transported to and what the resultant dislocation networks are. 
 
-To shed light on dislocation-assisted carbon migration, a multi-scale modelling approach can be
+
+To shed light on this mechanism, a multi-scale modelling approach can be
 used. Atomistics can provide information of the 2d Peierls energy landscape which dislocations are
 subject to in iron; and how this landscape is modified by the binding of carbon to
 dislocations. This data can be used in a line tension model of a dislocation to determine the
@@ -141,8 +140,10 @@ one can use a kinetic Monte Carlo (kMC) model of dislocation glide by thermally 
 kink-pair nucleation, in an environment of carbon. From this last stage of coarse-graining, one
 can determine in which regimes of temperature, stress and carbon concentration,
 dislocation-assisted carbon migration becomes a feasible mechanism behind DER formation, with
-predictions of dislocation velocity, dislocation configurations and where carbon moves to with
-dislocation movement. In this report, we will focus on the atomistic portion of this project,
+predictions of dislocation velocity, dislocation configurations and where carbon moves with
+dislocation glide. 
+
+In this report, we will focus on the atomistic portion of this project,
 directed at understanding dislocation-carbon interactions at the atomistic scale in ferrite (bcc
 iron).
 With further knowledge of the fundamental mechanism behind DER formation, we can hope to surpress
@@ -155,20 +156,20 @@ dislocation motion in the martensitic matrix, mitigating failure by RCF.
 
 
 \section{Computational Method}
-\label{sec:orgac541eb}
+\label{sec:org66290c4}
 
 We use the tight-binding model of Paxton and Elsätter \cite{Paxton2013}, which has been shown to
-describe the binding energies of carbon complexes in bcc iron in good agreement with Density
-Functional Theory (DFT) calculations. This model reproduces the two screw dislocation core
-structures---the easy and hard \(1/2\langle 111 \rangle\) cores---exhibited in bcc iron. Study of both is
-crucial to understanding solute-dislocation interactions. The easy core is the ground state in
-pure iron, but solutes, such as hydrogen and carbon, have been shown to reconstruct the this core
-into the hard core configuration
-\cite{Ventelon2015,itakura13_effec_hydrog_atoms_screw_disloc}. Computationally cheaper models, which
-do not incorporate quantum mechanics, such as the EAM, cannot reproduce these behaviours.
+describe the binding energies of carbon complexes in bcc iron, in good agreement with DFT
+calculations. This model reproduces the two screw dislocation core structures---the easy and hard
+\(1/2\langle 111 \rangle\) cores---exhibited in bcc iron. Study of both is crucial to understanding
+solute-dislocation interactions. The easy core is the ground state in pure iron, but solutes, such
+as hydrogen and carbon, have been shown to reconstruct the this core into the hard core
+configuration \cite{Ventelon2015,itakura13_effec_hydrog_atoms_screw_disloc}. Computationally cheaper
+models, which do not incorporate quantum mechanics, such as the EAM, cannot reproduce these
+behaviours.
 
 \subsection{Peierls Potential}
-\label{sec:org27f9eac}
+\label{sec:org2d3e22a}
 
 To determine the Peierls potential of the \(1/2\langle 111 \rangle\) screw dislocation, we followed the
 procedure detailed in Itakura \cite{Itakura2012}. Quadrupolar arrays of dislocations were
@@ -218,7 +219,7 @@ periodic images) between the cell of displaced dislocations and the reference.
 
 
 \subsection{Preliminary calculations}
-\label{sec:org6ee1287}
+\label{sec:orgb7da4eb}
 To determine the binding energy of carbon to dislocations, we used the cluster method. Simulation
 cells consisted of a cylindrical cluster of atoms, with a single dislocation introduced into the
 centre using displacements from anisotropic elasticity solutions. Each of the clusters were
@@ -259,7 +260,7 @@ constraints were imposed on the middle layer.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org928243d}
+\label{sec:org940a330}
 Following the paper by Itakura
 \cite{itakura13_effec_hydrog_atoms_screw_disloc} we calculated the
 binding energy of carbon each of the screw dislocation cores. 
@@ -282,7 +283,7 @@ where \(\Delta E_z = E_z - E_{z}^{\text{C ref.}}\) and \(E_{z}^{\text{C ref.}} =
 situated in an octahedral site in a perfect cluster of the same size. 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:orgb1fccf7}
+\label{sec:orgaf64e2a}
 
 Using the Fe-C binding energies, one can predict the equilibrium carbon concentration of a carbon
 binding site \(c_d\), under the assumption that carbon atoms around the core are sufficiently spaced such that intersite
@@ -314,7 +315,7 @@ between \(1\times10^{12}\), \(1\times10^{14}\) and \(5\times10^{15}\).
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:org5797fb4}
+\label{sec:orga840c2c}
 
 From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
 line tension model of a dislocation from which we can obtain the kink-pair formation energies as
@@ -336,10 +337,10 @@ formation enthalpies can then be found using the NEB/String method, to find the 
 barrier. 
 
 \section{Results}
-\label{sec:org21e55eb}
+\label{sec:org069f944}
 
 \subsection{Peierls Potential}
-\label{sec:orgc7df3ae}
+\label{sec:orgca3ecb5}
 
         \begin{figure}
     \begin{tabular}{c}
@@ -354,18 +355,17 @@ barrier.
 
 Comparison of 2d Peierls potentials of the \(1/2\langle 111 \rangle\) screw dislocation between DFT and
 tight-binding can be found in figure \ref{fig:peierlspot}. Data was interpolated using 2d
-cubic splines. "E", "H" and "S" correspond to easy, hard and split core positions
-respectively, with the latter also corresponding to atomic positions. The relative energies
-between the different core positions was found to be smaller in tight-binding compared to
-DFT. This is an artifact of the model, which has been reproduced in NEB calculations of the
-\(1/2\langle 111\rangle\) screw dislocation Peierls barrier: the tight-binding Peierls barrier is
-approximately half that of DFT \cite{Simpson2019}. The split core energy is lower than that of
-the hard core, which is reminiscent of EAM potentials \cite{Itakura2012}. Some of this
-discrepancy can be attributed to the to erroneous interaction term included by Itakura, as
-detailed above---interaction energies can become arbitrarily high, if not made independent
-of truncation limit---but likely, there are effects in DFT which are not encapsulated fully
-within tight-binding, such as a lack of core electron repulsion upon deformation of the
-lattice, which would increase the relative energy difference.
+cubic splines. The relative energies between the different core positions was found to be
+smaller in tight-binding compared to DFT. This is an artifact of the model, which has been
+reproduced in NEB calculations of the \(1/2\langle 111\rangle\) screw dislocation Peierls barrier: the
+tight-binding Peierls barrier is approximately half that of DFT \cite{Simpson2019}. The split
+core energy is lower than that of the hard core, which is reminiscent of EAM potentials
+\cite{Itakura2012}. Some of this discrepancy can be attributed to the to erroneous interaction
+term included by Itakura, as detailed above---interaction energies can become arbitrarily
+high, if not made independent of truncation limit---but likely there are effects in DFT
+which are not encapsulated fully within the tight-binding description, such as a lack of core electron
+repulsion upon deformation of the lattice, which would increase the relative energy
+difference.
 
 \begin{center}
 \begin{tabular}{rrrrr}
@@ -390,7 +390,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Preliminary calculations}
-\label{sec:orgbf48bc2}
+\label{sec:org3d12fbb}
 
 
 To validate the cluster simulation method, the excess energy, defined as the difference in energy
@@ -421,7 +421,7 @@ value of 82 meV/b \cite{Itakura2012}.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org068fb6e}
+\label{sec:org06c7108}
 
 
 
@@ -552,20 +552,20 @@ Fe-Fe species upon deformation, leading to a larger resultant Fe-C binding energ
 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:orgda20dae}
+\label{sec:orgf631a07}
 
 Variation of carbon concentration along the dislocation line for each of the binding sites can be
 seen in figure \ref{cdhardeasy}. Due to the lower overall binding energies of carbon to the easy
 core, the concentration of weakly bound sites occured at a lower temperature. Dislocation
-densities near the upper bound of what has been observed in martensite, from \(\rho \approx10^{15}\), reduce
+densities near the upper bound of what has been observed in martensite, \(\rho \approx10^{15}\), reduce
 the temperature at which carbon concentration decreases around the dislocation core. Lower
 nominal carbon concentrations cause carbon concentrations around the dislocation to decrease at a
 lower temperature.
 
 In the operating temperature range of \(40-90\deg\text{C} = 310-360\deg\text{K}\), we expect most hard
 core sites are saturated. Given the high concentrations of the E1/E2 sites around the easy core
-in this range, we expect all dislocations will be of the hard core type, due to reconstruction by
-carbon adjacent to the dislocation core.
+in this range, we expect all dislocations will be of the hard core type, due to reconstruction of
+the easy core by the adjacent carbon.
 
 
 
@@ -587,7 +587,7 @@ carbon adjacent to the dislocation core.
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:org91e2d6f}
+\label{sec:org9fc085e}
 
 
 The \(K\) coefficient for the line tension model was calculated from atomistic simulations, using
@@ -604,9 +604,8 @@ with DFT, where \(K = 0.816\) eV\AA{}\(^{-2}\).
 
 Dislocation-carbon binding energies were found to decay with distance, as seen in figures
 \ref{distancedep} and \ref{lorentzianfit}. A lorentzian was fit to specific binding energies such
-that a continuous function could be used to describe binding within the line tension model. See
-figure \ref{lorentzianfit}. The choice of sites used for the fitting is
-discussed in section \ref{sec:discussion}.
+that a continuous function could be used to describe binding within the line tension model. The
+choice of sites used for the fitting is discussed in section \ref{sec:discussion}.
 
 
 
@@ -620,7 +619,7 @@ discussed in section \ref{sec:discussion}.
 
 
 \section{Discussion}
-\label{sec:org271a682}
+\label{sec:org4a5562d}
 \label{sec:discussion}
 
 
@@ -640,19 +639,22 @@ dislocation, due to the binding of the carbon in the E1 site. Progression of dis
 results in further reconstruction of the dislocation core to hard and easy states, with the
 original carbon being situated in H2, E6 and H3 sites, relative to the dislocation
 centre. Thus as the dislocation moves, there is a significant drag force acting on the
-dislocation, which decreases the further the dislocation moves from carbon. The dependence of
-the binding energy to these sites can be seen in figure \ref{lorentzianfit}.
+dislocation, which decreases the further the dislocation moves from carbon, as one would
+expect. This suggests that a dislocation-assisted carbon migration mechanism could be feasible,
+but the last two stages of the multi-scale model are necessary to verify this.
 
 
 In normal operating temperatures of the bearing, one expects all dislocations to be hard cores
 saturated with carbon (neglecting C-C interaction) in most of the \(\text{H}j\) sites, as seen in
-the concentration analysis. Including C-C interactions would reduce these concentrations from
+the concentration analysis. In ferrite that has just transformed, assuming a C concentration of
+0.6 wt\% as seen in martensite, we expect similar behaviour to the 1000 appm case as seen in
+figure \ref{cdhardeasy}. Including C-C interactions would reduce these concentrations from
 saturation. There is insufficient data to say how strong this effect would be.
 
 
 
 \section{Future work}
-\label{sec:orgb51b31e}
+\label{sec:org5adc264}
 
 The prerequisites for a line tension model are in place for determination of the kink-pair
 formation enthalpies of screw dislocations as a function of carbon content and stress. Validation
@@ -681,20 +683,25 @@ into account, both along the dislocation line and between carbon sites. Using th
 calculations detailed in this report, we can easily apply and extend this analysis to consider more
 binding sites around the hard core, and observe stable carbon distributions around the easy core.
 
+Further analysis of diffusion barriers of carbon around a dislocation are necessary. In an EAM
+study of carbon-supersaturated ferrite in pearlitic wires, it was found that carbon can diffuse
+easily around the dislocation, which is an important consideration in the drag mechanism proposed
+\cite{Nematollahi2016}.
+
 \section{Conclusion}
-\label{sec:orga0caa54}
+\label{sec:org3009ee0}
 
 Dislocation-assisted carbon migration is thought to be a viable mechanism by which martensite
 decays to form DER regions---mostly composed of ferrite interspersed in a martensitic
 matrix---which enhances failure risk by RCF. There is dispute over where excess carbon from the
 martensitic matrix finds itself upon transformation to ferrite, of much lower carbon
 solubility. The current leading mechanism suggests carbon segregates to pre-existing carbides, yet
-recent experimental results show in the late stages of DER formation, pre-existing carbides are
-partially dissolved in areas of highly localized plasticity, implying segregation of carbon to
+experimental results show in the late stages of DER formation, pre-existing carbides are partially
+dissolved in areas of highly localized plasticity, implying segregation of carbon to
 dislocations. As such, a thorough investigation of carbon-dislocation interactions is vital to
 understanding how DER initially forms and progresses.
 
-Tight-binding, atomistic simulations, the first stage in a multi-scale paradigm to understand
+Atomistic calculations using tight-binding, the first stage in a multi-scale paradigm to understand
 dislocation-assisted carbon migration, found a peierls potential comparable to that of DFT
 results. Carbon distribution around the easy and hard cores were found differ significantly, with the largest
 binding energy being found by carbon being situated in a prismatic site in the hard core. Carbon
@@ -702,7 +709,7 @@ within 3\AA{} of the easy core caused reconstruction to the hard core, with carb
 site.
 
 Equilibrium concentrations of carbon around the hard/easy cores at normal operating temperatures
-suggest that all dislocations are of hard core type with carbon situated in a H1 site, with
+suggest that all dislocations are of hard core type with carbon situated in a H1/prismatic site, with
 reconstruction of all easy core dislocations to hard core, resulting in all dislocations being
 pinned.
 
@@ -718,9 +725,9 @@ and how carbon can move with dislocations.
 
 
 \section{Appendix}
-\label{sec:orge960e99}
+\label{sec:org7199df2}
 \subsection{Regularisation of interaction energy in quadrupolar array}
-\label{sec:org282f40d}
+\label{sec:org91cf05c}
 \label{sec:Ainteractionenergy}
 
 
@@ -754,7 +761,7 @@ regularised interaction energy.
 
 
 \subsection{Zero-point energy calculation}
-\label{sec:orgd029302}
+\label{sec:org9c76f29}
 \label{sec:zeropointenergy}
 
 After relaxation of the C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
@@ -769,8 +776,8 @@ the mass of carbon.
 
 
 \section{Bibliography}
-\label{sec:orgb71d8af}
-\label{orgbb2e243}
+\label{sec:org9bbb374}
+\label{orgf06295c}
 
 \bibliographystyle{unsrt}
 
