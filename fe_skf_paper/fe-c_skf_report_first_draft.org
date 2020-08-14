@@ -228,7 +228,7 @@
   # We focus here on atomistic simulations, the first stage in the modelling process of
   # dislocation-driven carbon migration. 
 
-  We use the tight-binding model of Paxton and Elsätter cite:Paxton2013, which has been shown to
+  We use the tight-binding model of Paxton and Elsässer cite:Paxton2013, which has been shown to
   describe the binding energies of carbon complexes in bcc iron, in good agreement with DFT
   calculations. This model reproduces the two screw dislocation core structures---the easy and hard
   $1/2\langle 111 \rangle$ cores---exhibited in bcc iron. Study of both is crucial to understanding
@@ -956,7 +956,7 @@
   calculations detailed in this report, we can easily apply and extend this analysis to consider more
   binding sites around the hard core, and observe stable carbon distributions around the easy core.
 
-  Further analysis of diffusion barriers of carbon around a dislocation are necessary. In an EAM
+  Analysis of carbon diffusion barriers around a dislocation are necessary. In a DFT/EAM
   study of carbon-supersaturated ferrite in pearlitic wires, it was found that carbon can diffuse
   easily around the dislocation, which is an important consideration in the drag mechanism proposed
   cite:Nematollahi2016.
@@ -986,14 +986,18 @@
   pinned.
 
   If a dislocation moves under stress from the hard core-prismatic carbon ground state, a large drag
-  force acts on the dislocation upon movement to adjacent easy and hard positions, as the carbon
+  force acts on the dislocation upon movement to adjacent easy and hard positions, assuming the carbon
   will stay in place due to its low diffusion coefficient, relative to dislocation velocity. The
   carbon-dislocation binding energies decrease with distance, and are in good agreement with
-  literature.
+  literature. This suggests that a dislocation-assisted carbon migration mechanism is plausible, but
+  more work needs to be done to confirm if so.
 
+  Further work will be done to ascertain diffusion barriers around the dislocation, which have been
+  shown to be significantly reduced from bulk values due to the presence of dislocations in DFT/EAM
+  calculations cite:Nematollahi2016. This will complete the description of the solute drag mechanism.
+  
   Line tension and kMC models will be used to determine how dislocation glide is affected by carbon
   and how carbon can move with dislocations. 
-
   
 
 * Appendix 

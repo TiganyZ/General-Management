@@ -1,4 +1,4 @@
-% Created 2020-08-10 Mon 09:35
+% Created 2020-08-10 Mon 13:06
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -62,7 +62,7 @@ concentration regimes.
 \clearpage
 
 \section{Introduction}
-\label{sec:orgb3619c6}
+\label{sec:org242ffb2}
 
 Martensitic steels are frequently used in bearings due to their resilience to service conditions,
 being subject to high rotational speeds and contact pressures. However, under cyclic loading
@@ -156,9 +156,9 @@ dislocation motion in the martensitic matrix, mitigating failure by RCF.
 
 
 \section{Computational Method}
-\label{sec:org66290c4}
+\label{sec:orgdda8af8}
 
-We use the tight-binding model of Paxton and Elsätter \cite{Paxton2013}, which has been shown to
+We use the tight-binding model of Paxton and Elsässer \cite{Paxton2013}, which has been shown to
 describe the binding energies of carbon complexes in bcc iron, in good agreement with DFT
 calculations. This model reproduces the two screw dislocation core structures---the easy and hard
 \(1/2\langle 111 \rangle\) cores---exhibited in bcc iron. Study of both is crucial to understanding
@@ -169,7 +169,7 @@ models, which do not incorporate quantum mechanics, such as the EAM, cannot repr
 behaviours.
 
 \subsection{Peierls Potential}
-\label{sec:org2d3e22a}
+\label{sec:org5b7089e}
 
 To determine the Peierls potential of the \(1/2\langle 111 \rangle\) screw dislocation, we followed the
 procedure detailed in Itakura \cite{Itakura2012}. Quadrupolar arrays of dislocations were
@@ -219,7 +219,7 @@ periodic images) between the cell of displaced dislocations and the reference.
 
 
 \subsection{Preliminary calculations}
-\label{sec:orgb7da4eb}
+\label{sec:org5d847c1}
 To determine the binding energy of carbon to dislocations, we used the cluster method. Simulation
 cells consisted of a cylindrical cluster of atoms, with a single dislocation introduced into the
 centre using displacements from anisotropic elasticity solutions. Each of the clusters were
@@ -260,7 +260,7 @@ constraints were imposed on the middle layer.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org940a330}
+\label{sec:org226bdaf}
 Following the paper by Itakura
 \cite{itakura13_effec_hydrog_atoms_screw_disloc} we calculated the
 binding energy of carbon each of the screw dislocation cores. 
@@ -283,7 +283,7 @@ where \(\Delta E_z = E_z - E_{z}^{\text{C ref.}}\) and \(E_{z}^{\text{C ref.}} =
 situated in an octahedral site in a perfect cluster of the same size. 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:orgaf64e2a}
+\label{sec:org07151bf}
 
 Using the Fe-C binding energies, one can predict the equilibrium carbon concentration of a carbon
 binding site \(c_d\), under the assumption that carbon atoms around the core are sufficiently spaced such that intersite
@@ -315,7 +315,7 @@ between \(1\times10^{12}\), \(1\times10^{14}\) and \(5\times10^{15}\).
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:orga840c2c}
+\label{sec:orge92b04b}
 
 From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
 line tension model of a dislocation from which we can obtain the kink-pair formation energies as
@@ -337,10 +337,10 @@ formation enthalpies can then be found using the NEB/String method, to find the 
 barrier. 
 
 \section{Results}
-\label{sec:org069f944}
+\label{sec:orgb687abe}
 
 \subsection{Peierls Potential}
-\label{sec:orgca3ecb5}
+\label{sec:org953c466}
 
         \begin{figure}
     \begin{tabular}{c}
@@ -390,7 +390,7 @@ Pos & \(\Delta E_{\text{INT}}\) & \(\Delta E_{\text{tbe}}\) & \(\Delta E_{\text{
 \end{center}
 
 \subsection{Preliminary calculations}
-\label{sec:org3d12fbb}
+\label{sec:orga5de1aa}
 
 
 To validate the cluster simulation method, the excess energy, defined as the difference in energy
@@ -421,7 +421,7 @@ value of 82 meV/b \cite{Itakura2012}.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org06c7108}
+\label{sec:org8875376}
 
 
 
@@ -552,7 +552,7 @@ Fe-Fe species upon deformation, leading to a larger resultant Fe-C binding energ
 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:orgf631a07}
+\label{sec:orgac1d7ef}
 
 Variation of carbon concentration along the dislocation line for each of the binding sites can be
 seen in figure \ref{cdhardeasy}. Due to the lower overall binding energies of carbon to the easy
@@ -587,7 +587,7 @@ the easy core by the adjacent carbon.
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:org9fc085e}
+\label{sec:org860231b}
 
 
 The \(K\) coefficient for the line tension model was calculated from atomistic simulations, using
@@ -619,7 +619,7 @@ choice of sites used for the fitting is discussed in section \ref{sec:discussion
 
 
 \section{Discussion}
-\label{sec:org4a5562d}
+\label{sec:orgc67c71d}
 \label{sec:discussion}
 
 
@@ -654,7 +654,7 @@ saturation. There is insufficient data to say how strong this effect would be.
 
 
 \section{Future work}
-\label{sec:org5adc264}
+\label{sec:org8c523bf}
 
 The prerequisites for a line tension model are in place for determination of the kink-pair
 formation enthalpies of screw dislocations as a function of carbon content and stress. Validation
@@ -683,13 +683,13 @@ into account, both along the dislocation line and between carbon sites. Using th
 calculations detailed in this report, we can easily apply and extend this analysis to consider more
 binding sites around the hard core, and observe stable carbon distributions around the easy core.
 
-Further analysis of diffusion barriers of carbon around a dislocation are necessary. In an EAM
+Analysis of carbon diffusion barriers around a dislocation are necessary. In a DFT/EAM
 study of carbon-supersaturated ferrite in pearlitic wires, it was found that carbon can diffuse
 easily around the dislocation, which is an important consideration in the drag mechanism proposed
 \cite{Nematollahi2016}.
 
 \section{Conclusion}
-\label{sec:org3009ee0}
+\label{sec:org496184f}
 
 Dislocation-assisted carbon migration is thought to be a viable mechanism by which martensite
 decays to form DER regions---mostly composed of ferrite interspersed in a martensitic
@@ -714,20 +714,25 @@ reconstruction of all easy core dislocations to hard core, resulting in all disl
 pinned.
 
 If a dislocation moves under stress from the hard core-prismatic carbon ground state, a large drag
-force acts on the dislocation upon movement to adjacent easy and hard positions, as the carbon
+force acts on the dislocation upon movement to adjacent easy and hard positions, assuming the carbon
 will stay in place due to its low diffusion coefficient, relative to dislocation velocity. The
 carbon-dislocation binding energies decrease with distance, and are in good agreement with
-literature.
+literature. This suggests that a dislocation-assisted carbon migration mechanism is plausible, but
+more work needs to be done to confirm if so.
+
+Further work will be done to ascertain diffusion barriers around the dislocation, which have been
+shown to be significantly reduced from bulk values due to the presence of dislocations in DFT/EAM
+calculations \cite{Nematollahi2016}. This will complete the description of the solute drag mechanism
+within our tight-binding model.
 
 Line tension and kMC models will be used to determine how dislocation glide is affected by carbon
 and how carbon can move with dislocations. 
 
 
-
 \section{Appendix}
-\label{sec:org7199df2}
+\label{sec:orge0bbb36}
 \subsection{Regularisation of interaction energy in quadrupolar array}
-\label{sec:org91cf05c}
+\label{sec:orgfab8cd2}
 \label{sec:Ainteractionenergy}
 
 
@@ -761,7 +766,7 @@ regularised interaction energy.
 
 
 \subsection{Zero-point energy calculation}
-\label{sec:org9c76f29}
+\label{sec:org45fbccd}
 \label{sec:zeropointenergy}
 
 After relaxation of the C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
@@ -776,8 +781,8 @@ the mass of carbon.
 
 
 \section{Bibliography}
-\label{sec:org9bbb374}
-\label{orgf06295c}
+\label{sec:org11f7ebc}
+\label{orgaff85b8}
 
 \bibliographystyle{unsrt}
 
