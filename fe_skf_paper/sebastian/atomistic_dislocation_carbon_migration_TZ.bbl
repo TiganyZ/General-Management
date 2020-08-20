@@ -11,21 +11,44 @@ H.~Fu, E.I. Galindo-Nava, and P.E.J. Rivera-D{\'{\i}}az del Castillo.
   precipitation in bearing steels under rolling contact fatigue.
 \newblock {\em Acta Materialia}, 128:176--187, April 2017.
 
+\bibitem{il_micros_alter_rollin_contac_fatig}
+A.~H. King and J.~L. O'Brian.
+\newblock {\em Microstructural Alterations in Rolling Contact Fatigue}, pages
+  74--74--15.
+\newblock Advances in Electron Metallography: Vol. 6. ASTM International, nil.
+
+\bibitem{jonesil_metal_obser_ball_bearin_fatig_phenom}
+A.~B. Jones.
+\newblock {\em Metallographic Observations of Ball Bearing Fatigue Phenomena},
+  pages 35--35--18.
+\newblock Symposium on Testing of Bearings. ASTM International, nil.
+
+\bibitem{70_micros_microh_resid_stres_chang}
+J.~J. Bush, W.~L. Grube, and G.~H. Robinson.
+\newblock Microstructural, microhardness and residual stress changes due to
+  rolling contact.
+\newblock {\em Tribology}, 3(4):249, 1970.
+
+\bibitem{Swahn1976}
+H.~Swahn, P.~C. Becker, and O.~Vingsbo.
+\newblock Martensite decay during rolling contact fatigue in ball bearings.
+\newblock {\em Metallurgical Transactions A}, 7(8):1099--1110, August 1976.
+
 \bibitem{Voskamp1997}
 AP~Voskamp.
 \newblock Fatigue and material response in rolling contact.
 \newblock 1997.
 
-\bibitem{Mitamura_2007}
-N.~Mitamura, H.~Hidaka, and Setsuo Takaki.
-\newblock Microstructural development in bearing steel during rolling contact
-  fatigue.
-\newblock {\em Materials Science Forum}, 539-543:4255–4260, Mar 2007.
+\bibitem{voskamp97_state_resid_stres_induc_by}
+A.~P. Voskamp and E.~J. Mittemeijer.
+\newblock State of residual stress induced by cyclic rolling contact loading.
+\newblock {\em Materials Science and Technology}, 13(5):430--438, 1997.
 
-\bibitem{Osterlund_1980}
-Ragnar Österlund and Olof Vingsbo.
-\newblock Phase changes in fatigued ball bearings.
-\newblock {\em Metallurgical Transactions A}, 11(5):701–707, May 1980.
+\bibitem{polonsky95_white_etchin_band_format_rollin_bearin}
+I~Polonsky.
+\newblock On white etching band formation in rolling bearings.
+\newblock {\em Journal of the Mechanics and Physics of Solids}, 43(4):637--669,
+  1995.
 
 \bibitem{vsmelova17_elect_micros_inves_micros_alter}
 Viktorija {\V{S}}meļova, Alexander Schwedt, Ling Wang, Walter Holweger, and
@@ -35,10 +58,16 @@ Viktorija {\V{S}}meļova, Alexander Schwedt, Ling Wang, Walter Holweger, and
   steel.
 \newblock {\em International Journal of Fatigue}, 98(nil):142--154, 2017.
 
-\bibitem{hashemi11_stren_hardn_statis_correl_api_x65_steel}
-S.H. Hashemi.
-\newblock Strength-hardness statistical correlation in api x65 steel.
-\newblock {\em Materials Science and Engineering: A}, 528(3):1648--1655, 2011.
+\bibitem{Osterlund_1980}
+Ragnar Österlund and Olof Vingsbo.
+\newblock Phase changes in fatigued ball bearings.
+\newblock {\em Metallurgical Transactions A}, 11(5):701–707, May 1980.
+
+\bibitem{Mitamura_2007}
+N.~Mitamura, H.~Hidaka, and Setsuo Takaki.
+\newblock Microstructural development in bearing steel during rolling contact
+  fatigue.
+\newblock {\em Materials Science Forum}, 539-543:4255–4260, Mar 2007.
 
 \bibitem{fu17_strain_induc_marten_decay_bearin}
 Hanwei Fu, Wenwen Song, Enrique~I. Galindo-Nava, and Pedro E.J. Rivera-D{\'i}az
@@ -46,12 +75,6 @@ Hanwei Fu, Wenwen Song, Enrique~I. Galindo-Nava, and Pedro E.J. Rivera-D{\'i}az
 \newblock Strain-induced martensite decay in bearing steels under rolling
   contact fatigue: Modelling and atomic-scale characterisation.
 \newblock {\em Acta Materialia}, 139(nil):163--173, 2017.
-
-\bibitem{Bhadeshia2018}
-H.~K. D.~H. Bhadeshia.
-\newblock Solution to the bagaryatskii and isaichev
-  ferrite{\textendash}cementite orientation relationship problem.
-\newblock {\em Materials Science and Technology}, 34(14):1666--1668, May 2018.
 
 \bibitem{Warhadpande1_2013}
 Anurag Warhadpande, Farshid Sadeghi, and Ryan~D. Evans.
@@ -65,15 +88,22 @@ Anurag Warhadpande, Farshid Sadeghi, and Ryan~D. Evans.
   fatigue: Part 2{\textemdash}diffusion-based modeling approach.
 \newblock {\em Tribology Transactions}, 57(1):66--76, November 2013.
 
-\bibitem{voskamp97_state_resid_stres_induc_by}
-A.~P. Voskamp and E.~J. Mittemeijer.
-\newblock State of residual stress induced by cyclic rolling contact loading.
-\newblock {\em Materials Science and Technology}, 13(5):430--438, 1997.
+\bibitem{voskamp80_gradual_chang_resid_stres_micros}
+A.~P. Voskamp, R.~{\"O}sterlund, P.~C. Becker, and O.~Vingsbo.
+\newblock Gradual changes in residual stress and microstructure during contact
+  fatigue in ball bearings.
+\newblock {\em Metals Technology}, 7(1):14--21, 1980.
 
-\bibitem{Swahn1976}
-H.~Swahn, P.~C. Becker, and O.~Vingsbo.
-\newblock Martensite decay during rolling contact fatigue in ball bearings.
-\newblock {\em Metallurgical Transactions A}, 7(8):1099--1110, August 1976.
+\bibitem{hashemi11_stren_hardn_statis_correl_api_x65_steel}
+S.H. Hashemi.
+\newblock Strength-hardness statistical correlation in api x65 steel.
+\newblock {\em Materials Science and Engineering: A}, 528(3):1648--1655, 2011.
+
+\bibitem{Bhadeshia2018}
+H.~K. D.~H. Bhadeshia.
+\newblock Solution to the bagaryatskii and isaichev
+  ferrite{\textendash}cementite orientation relationship problem.
+\newblock {\em Materials Science and Technology}, 34(14):1666--1668, May 2018.
 
 \bibitem{Paxton2013}
 A.~T. Paxton and C.~Els\"{a}sser.
@@ -146,6 +176,12 @@ Y.~Hanlumyuang, P.A. Gordon, T.~Neeraj, and D.C. Chrzan.
 \newblock Interactions between carbon solutes and dislocations in bcc iron.
 \newblock {\em Acta Materialia}, 58(16):5481--5490, September 2010.
 
+\bibitem{Nematollahi2016}
+Gh.~Ali Nematollahi, Blazej Grabowski, Dierk Raabe, and J\"{o}rg Neugebauer.
+\newblock Multiscale description of carbon-supersaturated ferrite in severely
+  drawn pearlitic wires.
+\newblock {\em Acta Materialia}, 111:321--334, June 2016.
+
 \bibitem{Lthi2019}
 B~L\"{u}thi, F~Berthier, L~Ventelon, B~Legrand, D~Rodney, and F~Willaime.
 \newblock Ab initio thermodynamics of carbon segregation on dislocation cores
@@ -157,12 +193,6 @@ B~L\"{u}thi, F~Berthier, L~Ventelon, B~Legrand, D~Rodney, and F~Willaime.
 P.~Maugis and D.~Kandaskalov.
 \newblock Revisiting the pressure effect on carbon migration in iron.
 \newblock {\em Materials Letters}, 270:127725, July 2020.
-
-\bibitem{Nematollahi2016}
-Gh.~Ali Nematollahi, Blazej Grabowski, Dierk Raabe, and J\"{o}rg Neugebauer.
-\newblock Multiscale description of carbon-supersaturated ferrite in severely
-  drawn pearlitic wires.
-\newblock {\em Acta Materialia}, 111:321--334, June 2016.
 
 \bibitem{Cai2003}
 Wei Cai, Vasily~V. Bulatob, Jinpeng Chang, Ju~Li, and Sidney Yip.
