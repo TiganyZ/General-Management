@@ -383,7 +383,27 @@
 
 
 
+	#+CAPTION: Peierls potential along the hard-split line. One can see in s-d tight-binding model is similar to the EAM potential: it decreases constantly from the hard core to the split core, which will result in a kink shape which goes through the split core position. In DFT one finds a saddle point between the hard core and the midpoint, in which a kink in the transitional state will go through. [[label:hardsplittransition]]
+	[[file:Images/hard-split_transition.png]]
 
+
+
+  The expected transition kink-shape will differ compared to that of DFT, with dislocation core
+  positions possibly being situated closer to/at the split core position, similar to EAM potentials
+  cite:Itakura2012. We can see this by following the Peierls potential along the H-S direction,
+  (see figure ref:hardsplittransition). We see that the Itakura potential has a saddle point, along this
+  direction, whereas in the tight-binding case there is no saddle point: the Peierls potential
+  decreases monotonically from the hard core to the split core position. However, calculation of the
+  Peierls barrier between two easy core positions in the canonical $d\text{-band}$ version of this
+  tight-binding model (where $s\text{-}d$ hybridisation and non-orthogonality are simply turned
+  off), found the transition state to go through the metastable point, as in DFT
+  cite:Simpson2019. The inclusion of s-d hybridisation in the tight-binding model seemingly reduces
+  the repulsive interaction between the iron atoms, as can be seen by the favouring of the split
+  core in our calculations, whereas in the canonical d-band model, there is sufficient repulsion to
+  recover the saddle point in the Peierls potential between the cores. To verify this, a
+  recalculation of the Peierls potential using the canonical d-band model is necessary. Further
+  Line-tension/NEB calculations are necessary to verify the dislocation line shape and discrepancies
+  in the kink-pair formation enthalpy.
 
 
 	# Some of this discrepancy can be attributed to the
@@ -773,15 +793,17 @@
   # - How valid is the theory we have vs Fu /et al/.
   # - Novel work to find out dislocation environment around both dislocation cores.
 
-	We expect the transitional kink-shape to be similar to DFT in this model, as the Peierls
-	potential at the metastable point between the easy cores, (point 13 in table
-	ref:tab:peierlspot and figure ref:sampledpositions, right), is lower in energy than the
-	split core position (point 9 in the aforementioned figures) as found in the Itakura data set
-	cite:Itakura2012. This was seen in the canonical $d\text{-band}$ version of this
-	tight-binding model (where $s\text{-}d$ hybridisation is simply turned off)
-	cite:Simpson2019. Line-tension/NEB calculations are necessary to verify this.
+  
+  # We expect the transitional kink-shape to be similar to DFT in this model, as the Peierls
+  # 	potential at the metastable point between the easy cores, (point 13 in table
+  # 	ref:tab:peierlspot and figure ref:sampledpositions, right), is lower in energy than the
+  # 	split core position (point 9 in the aforementioned figures) as found in the Itakura data set
+  # 	cite:Itakura2012. This was seen in the canonical $d\text{-band}$ version of this
+  # 	tight-binding model (where $s\text{-}d$ hybridisation is simply turned off)
+  # 	cite:Simpson2019. Line-tension/NEB calculations are necessary to verify this.
 
-	We expect a small reduction in the kink-pair formation enthalpy in tight-binding, due to the
+
+	We expect a reduction in the kink-pair formation enthalpy in tight-binding, due to the
 	slightly smaller overall Peierls potential along the expected minimum enthalpy path. This
 	would slightly increase the rate of kink nucleation in kMC models, causing a higher overall
 	dislocation velocity. As such, there would be a slightly larger disparity between the
@@ -810,13 +832,9 @@
 	# these effects will manifest in the prediction of how and where carbon migrates with
 	# dislocations.
 
-	# The expected transition kink-shape may differ compared to that of DFT, with some dislocation
-	# core positions possibly being situated closer to a split core position due to its lower
-	# energy than the hard core, similar to EAM potentials cite:Itakura2012. 
 
 
-
-	# This difference in core configuration would, in principle, give
+	# this difference in core configuration would, in principle, give
 	# another set of carbon-dislocation binding energies and carbon distributions to account for
 	# at that position, with also a different distribution of carbon sites around the core, but as
 	# these are positions on the side of the kink, we can neglect these details in the
