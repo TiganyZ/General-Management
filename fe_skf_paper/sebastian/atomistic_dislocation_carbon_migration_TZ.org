@@ -149,7 +149,7 @@
    procedure detailed in Itakura cite:Itakura2012. Quadrupolar arrays of dislocations were
    constructed by placing dislocations of antiparallel $1/2\langle 111\rangle$ Burgers vectors in an "S"
    arrangement cite:Clouet2012, with initial displacements determined by anisotropic elasticity
-   solutions. See figure ref:fig:dislocationschematics, right. A quadrupolar arrangement minimises
+   solutions. See figure ref:fig:dislocationschematics, left. A quadrupolar arrangement minimises
    the stress each dislocation experiences in the simulation. These displacements were modified to
    be periodic, thereby removing artificial stacking faults which would appear between periodic
    images after introduction of the dislocation dipole. This was achieved by the subtraction of a
@@ -170,7 +170,7 @@
 	     \includegraphics[width=0.5\textwidth]{Images/s_arrangement_quadrupole.png} &
              \includegraphics[width=0.45\textwidth]{Images/cluster_method_schematic.png}  \\
     \end{tabular}		
-\caption{Schematics of dislocation simulation methods. Left: quadrupolar arrangement of dislocations in a simulation cell (grey square). This arrangement  minimises the stress experienced by each dislocation in a periodic simulation. Cell vectors $\vec{U}_1$ and $\vec{U}_2$ are shown; $\vec{A}$ defines the cut plane between the dipoles. The dislocation positions, and their corresponding burger's vector direction, are denoted by the symbols $\otimes$ and $\odot$, which are antiparallel to each other. Tilt components to cell vectors to accomodate for the plastic strain are not shown. Right: cluster method, where atoms are displaced according the displacement field from the screw dislocation at the centre of the cluster, denoted by "\S". Atoms in the annulus $R_2 - R_1$ are fixed in position to the anisotropic elasticity solutions. Within $R_1$, all atoms can relax. Periodicity is only imposed in the $Z$ direction.}
+\caption{Schematics of dislocation simulation methods. Left: quadrupolar arrangement of dislocations in a simulation cell (grey square). This arrangement  minimises the stress experienced by each dislocation in a periodic simulation. Cell vectors $\vec{U}_1$ and $\vec{U}_2$ are shown; $\vec{A}$ defines the cut plane between the dipoles. The dislocation positions, and their corresponding burger's vector direction, are denoted by the symbols $\otimes$ and $\odot$, which are antiparallel to each other. Tilt components added to cell vectors to accomodate for the plastic strain are not shown. Right: cluster method, where atoms are displaced according the displacement field from the screw dislocation at the centre of the cluster, denoted by "\S". Atoms in the annulus $R_2 - R_1$ are fixed in position to the anisotropic elasticity solutions. Within $R_1$, all atoms can relax. Periodicity is only imposed in the $Z$ direction.}
 	\label{fig:dislocationschematics}
     \end{figure}
 
@@ -346,20 +346,21 @@
 
 
 
-	Comparison of 2d Peierls potentials of the $1/2\langle 111 \rangle$ screw dislocation between DFT and
-	tight-binding can be found in figure ref:fig:peierlspot, with data found in table
-	ref:tab:peierlspot. The sampled energies were interpolated using 2d
-	cubic splines. The relative energies between the different core positions was found to be
-	smaller in tight-binding compared to DFT. This is an artifact of the model, which has been
-	reproduced in NEB calculations of the $1/2\langle 111\rangle$ screw dislocation Peierls barrier: the
+	Comparison of 2d Peierls potentials of the $1/2\langle 111 \rangle$ screw dislocation
+	between DFT and tight-binding can be found in figure ref:fig:peierlspot, with data found in
+	table ref:tab:peierlspot. The sampled energies were interpolated using 2d cubic splines. The
+	relative energies between the different core positions was found to be smaller in
+	tight-binding compared to DFT. This is an artifact of the model, which has been reproduced
+	in NEB calculations of the $1/2\langle 111\rangle$ screw dislocation Peierls barrier: the
 	tight-binding Peierls barrier is approximately half that of DFT cite:Simpson2019. The split
 	core energy is lower than that of the hard core, which is reminiscent of EAM potentials
 	cite:Itakura2012. Some of this discrepancy can be attributed to the to erroneous interaction
 	term included by Itakura, as detailed above---interaction energies can become arbitrarily
 	high, if not made independent of truncation limit---but likely there are effects in DFT
-	which are not encapsulated fully within the tight-binding description, such as a lack of core electron
-	repulsion upon deformation of the lattice, which would increase the relative energy
-	difference. Consequences of this discrepancy are discussed in section ref:sec:discussion.
+	which are not encapsulated fully within the tight-binding description, such as a lack of
+	core electron repulsion upon deformation of the lattice, which would increase the relative
+	energy difference. Consequences of this discrepancy on future kMC simulations are discussed
+	in section ref:sec:discussion.
 
 
 	#+CAPTION: Table of energies used to calculate the Peierls potential. All values in meV. $\Delta E_{\text{P}}^{\text{DFT}}$ values taken from \cite{Itakura2012}. [[label:tab:peierlspot]]
@@ -382,28 +383,54 @@
      |  15 |            -4.3 |            18.6 |          22.9 |                    39.7 |
 
 
-
-	#+CAPTION: Peierls potential along the hard-split line. One can see in s-d tight-binding model is similar to the EAM potential: it decreases constantly from the hard core to the split core, which will result in a kink shape which goes through the split core position. In DFT one finds a saddle point between the hard core and the midpoint, in which a kink in the transitional state will go through. [[label:hardsplittransition]]
+	#+ATTR_LATEX:  :width 0.8\textwidth :center
+	#+CAPTION: Peierls potential along the hard-split line. One can see in $s\text{-}d$ tight-binding model is similar to the EAM potential of Mendelev \cite{Mendelev2003}: it decreases constantly from the hard core to the split core, which will result in a kink shape which goes through the split core position. In DFT one finds a saddle point between the hard core and the midpoint, in which a kink in the transitional state will go through. [[label:hardsplittransition]]
 	[[file:Images/hard-split_transition.png]]
 
 
 
-  The expected transition kink-shape will differ compared to that of DFT, with dislocation core
-  positions possibly being situated closer to/at the split core position, similar to EAM potentials
-  cite:Itakura2012. We can see this by following the Peierls potential along the H-S direction,
-  (see figure ref:hardsplittransition). We see that the Itakura potential has a saddle point, along this
-  direction, whereas in the tight-binding case there is no saddle point: the Peierls potential
-  decreases monotonically from the hard core to the split core position. However, calculation of the
-  Peierls barrier between two easy core positions in the canonical $d\text{-band}$ version of this
-  tight-binding model (where $s\text{-}d$ hybridisation and non-orthogonality are simply turned
-  off), found the transition state to go through the metastable point, as in DFT
-  cite:Simpson2019. The inclusion of s-d hybridisation in the tight-binding model seemingly reduces
-  the repulsive interaction between the iron atoms, as can be seen by the favouring of the split
-  core in our calculations, whereas in the canonical d-band model, there is sufficient repulsion to
-  recover the saddle point in the Peierls potential between the cores. To verify this, a
-  recalculation of the Peierls potential using the canonical d-band model is necessary. Further
-  Line-tension/NEB calculations are necessary to verify the dislocation line shape and discrepancies
-  in the kink-pair formation enthalpy.
+  The expected transitional kink shape from this Peierls potential may differ compared to DFT, with
+  dislocation core positions possibly being situated closer to/at the split core position, similar
+  to EAM potentials cite:Itakura2012. Following the Peierls potential along the H-S direction,
+  figure ref:hardsplittransition, we see that the Itakura potential has a saddle point, whereas in
+  $s\text{-}d$ tight-binding there is not: the Peierls potential decreases monotonically
+  from the hard core to the split core position. However, calculation of the Peierls barrier between
+  two easy core positions in the canonical $d\text{-band}$ version of this tight-binding model
+  (where $s\text{-}d$ hybridisation and non-orthogonality are simply turned off) found core
+  positions of the transitional kink state to go through the metastable point, similar to DFT
+  cite:Simpson2019. Furthermore, the canonical $d\text{-band}$ model produces structural energy
+  differences and elastic constants which are closer to values in literature than the $s\text{-}d$ model
+  cite:Paxton2010; as such, it could provide a better description of Fe-Fe interactions, and the
+  Peierls potential, by extension. To verify this, recalculation of the Peierls potential using the
+  canonical model will need to be undertaken.
+ 
+  # To verify this, a recalculation of the
+  # Peierls potential using the canonical d-band model is necessary. Further line-tension/NEB
+  # calculations are necessary to verify the dislocation line shape and discrepancies in the kink-pair
+  # formation enthalpy.
+
+
+ #  The lowering of Peierls potential as the dislocation centre approaches the split core from the
+ #  hard core can be explained by observing the end cases. In a hard core position, the dislocation
+ #  centre is at the centroid of a triangle of atoms. Each of these atoms are heavily displaced,
+ #  as they are well within the core region. The distance from the hard core to each
+ #  atom is $a_{\text{bcc}}\sqrt{2}/3$. For the split core, the largest displacement atom at the split core position: all atoms neighbouring the split core position are at their maximum
+ #  distance from the centre, $\sqrt{2/3}a_{\text{bcc}}$, $\sqrt{3} \approx 1.73$ times further. Whereas, in the hard core position, this
+ #  higher energy is relaxed due to 
+
+ #  Even though the inclusion of $s$ orbitals in the tight-binding model contributes a
+ #  positive pressure cite:paxton96_atomic_struc_metal_inter,Paxton2013, and non-orthogonality
+ #  effectively screens bond integral interactions---further reducing cohesion---it seems even these additions
+ #  are not enough to introduce a metastable point into the Peierls potential $s\text{-}d$ hybridisation
+
+ # in the tight-binding model reduces
+ #  the repulsive interaction between the iron atoms: $s$ orbitals in Fe-Fe interactions result in an
+ #  increase in the cohesive energy, which can be . This can be seen by the favouring of the split core
+ #  in our calculations, where the pair potential---which was fitted at the same time as the canonical
+ #  d-band model---cannot accomodate for the extra attraction of the $s$ orbitals, resulting in an
+ #  insufficient in energy increase upon large deformation of the lattice, /e.g./ in the core region
+ #  of a dislocation. In the canonical d-band model, there is sufficient repulsion to recover the
+ #  saddle point in the Peierls potential between the cores. 
 
 
 	# Some of this discrepancy can be attributed to the
@@ -622,7 +649,7 @@
     relax with all degrees of freedom, as in the Ventelon results: the three atoms around the screw
     core are fixed in $Z$ to so the dislocation core position does not change upon relaxation. A
     larger source of error is likely from the fitting of the tight-binding model itself. The
-    Peierls barrier of this s-d model of iron, necessary for Fe-C interactions, has been shown to be
+    Peierls barrier of this $s\text{-}d$ model of iron, necessary for Fe-C interactions, has been shown to be
     half that found in DFT cite:Simpson2019, but the solution energies for
     Fe-C defect complexes are well described. This implies there is insufficient repulsion between
     Fe-Fe species upon deformation, leading to a larger resultant Fe-C binding energy from tight-binding.
@@ -804,18 +831,20 @@
 
 
 	We expect a reduction in the kink-pair formation enthalpy in tight-binding, due to the
-	slightly smaller overall Peierls potential along the expected minimum enthalpy path. This
-	would slightly increase the rate of kink nucleation in kMC models, causing a higher overall
-	dislocation velocity. As such, there would be a slightly larger disparity between the
-	dislocation velocity and the speed of carbon diffusion. In the vicinity of the dislocation
-	line, there is a "high-mobility" zone for carbon to diffuse around the dislocation
-	cite:Nematollahi2016. Due to the kink-pair formation enthalpy being well within the same
-	order of magnitude, it is unlikely this change in kink-formation enthalpy, and subsequent
-	increase in dislocation velocity, would be so large as to to effectively negate the effect
-	of the high-mobility zone due to carbon not being able to "catch-up" to the dislocation upon
-	movement. As such, we do not expect the Peierls potential discrepancy to significantly
-	change the principal mechanisms or results obtained from kMC simulations of
-	dislocation-assisted carbon migration.
+	slightly smaller overall Peierls potential along the expected minimum enthalpy path of the
+	kink. This would increase the rate of kink nucleation in kMC models, causing a higher
+	overall dislocation velocity. This will increase the disparity between the dislocation velocity and the
+	speed of carbon diffusion. In the vicinity of the dislocation line, there
+	is a "high-mobility" zone for carbon to diffuse easily around the dislocation
+	cite:Nematollahi2016. Assuming a similar kink shape as found in EAM calculations, we expect
+	the kink-pair formation energy to be $\sim 0.7$ eV, which similar in magnitude to the DFT
+	value ($0.73$ eV) cite:Itakura2012. Hence, we predict the increase in dislocation velocity
+	would not so large as to effectively negate the effect of the high-mobility zone---which
+	would result in carbon not being able to "catch-up" to dislocations upon
+	movement. Therefore, we do not expect the observed discrepancy in the Peierls potential to
+	significantly change the principal mechanisms observed, or results obtained, from kMC
+	simulations of dislocation-assisted carbon migration.
+
 
 	# by a factor of ${\text{exp}}(+\Delta E_{\text{kp}}^{\text{tbe-DFT}}/ k_{\text{b}} T)$
 
@@ -824,7 +853,7 @@
 	# carbon-dislocation binding energies to the kink nucleation energy barrier.
 
 	# The However, measurements of the Peierls stress with the canonical $d$-band version of this
-	# tight-binding model (where $s-d$ hybridisation is simply turned off) agree well with DFT
+	# tight-binding model (where $$s\text{-}d$$ hybridisation is simply turned off) agree well with DFT
 	# compared to other iron tight-binding models: the Peierls stress is 1.3 GPa, compared to 1.4
 	# GPa cite:Simpson2019. Thus we expect a peierls potential which is more reminiscent of the
 	# DFT version in the canonical $d$-band tight-binding model. As such, a recalculation of the
@@ -844,7 +873,7 @@
 
 
 
-	# We expect the $s-d$
+	# We expect the $$s\text{-}d$$
 	# model kink width is to be larger than DFT due to the lower overall Peierls potential, as the
 	# kink width $w \propto b\sqrt{ K / \Delta E_{\text{P}}}$.
 
@@ -904,9 +933,12 @@
   #   code. 
 
   The prerequisites for a line tension model are in place for determination of the kink-pair
-  formation enthalpies of screw dislocations as a function of carbon content and stress. Validation
-  tests will be carried out on the Itakura data set for the binding of hydrogen to screw
-  dislocations in bcc iron. 
+  formation enthalpies of screw dislocations as a function of carbon content and stress. This is
+  ongoing work. Validation tests will be carried out on the Itakura data set for the binding of
+  hydrogen to screw dislocations in bcc iron.
+
+  # The Peierls potential will be recalculated using the canonical $d\text{-band}$ model, in hopes to
+  # rectify the discrepancy in the Peierls potential found in DFT.
 
   # This data set will also be used to verify the new interpolated
   # solute-dislocation interaction energy, between the hard and easy core configurations.
@@ -950,12 +982,16 @@
   dislocations. As such, a thorough investigation of carbon-dislocation interactions is vital to
   understanding how DER initially forms and progresses.
 
-  Atomistic calculations using tight-binding, the first stage in a multi-scale paradigm to understand
-  dislocation-assisted carbon migration, found a peierls potential comparable to that of DFT
-  results. Carbon distribution around the easy and hard cores were found differ significantly, with the largest
-  binding energy being found by carbon being situated in a prismatic site in the hard core. Carbon
-  within 3\AA of the easy core caused reconstruction to the hard core, with carbon in a prismatic
-  site.
+  Atomistic calculations using tight-binding, the first stage in a multi-scale paradigm to
+  understand dislocation-assisted carbon migration, found a Peierls potential with characteristics
+  comparable to both EAM/DFT results. A canonical $d\text{-band}$ model may better describe this
+  energy landscape. It is not expected that the discrepancy in the Peierls potential would
+  significantly change results in kMC simulations.
+
+  Carbon distribution around the easy and hard cores were found to differ
+  significantly, with the largest binding energy being found by carbon being situated in a prismatic
+  site in the hard core. Carbon within 3\AA of the easy core caused reconstruction to the hard core,
+  with carbon in a prismatic site.
 
   Equilibrium concentrations of carbon around the hard/easy cores at normal operating temperatures
   suggest that all dislocations are of hard core type with carbon situated in a H1/prismatic site, with
