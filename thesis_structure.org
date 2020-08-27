@@ -1,0 +1,123 @@
+#+TITLE: Thesis Structure
+#+AUTHOR: Tigany Zarrouk
+
+
+* Statement of the Problem 
+* Introduction: Literature Review
+** Summary of Thesis
+
+* Simulation Methodology
+** Tight-binding
+   - Explain tight-binding, from the perspective of maybe density
+     functional theory / Horsfield [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
+
+*** TODO Read Majeski & Vogel [[file:~/Documents/books/The%20Structures%20of%20Binary%20Compounds%20by%20J.%20Hafner,%20F.%20Hulliger,%20W.B.%20Jensen,%20J.A.%20Majewski,%20K.%20Mathis,%20P.%20Villars%20and%20P.%20Vogl%20(Eds.)%20(z-lib.org).pdf][Structures of binary compounds chapter 4]]
+    DEADLINE: <2020-09-04 Fri>
+       
+*** TODO Read Horsfield-Smutna  [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
+    DEADLINE: <2020-09-09 Wed>
+
+*** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
+    DEADLINE: <2020-09-11 Fri>
+       
+*** TODO Summarise the theory - Consolidate here 
+    DEADLINE: <2020-09-18 Fri>
+   
+** BOP
+** Embedding
+** Fitting
+   - Explain algorithms 
+   - Regularization - Elastic Net
+     - What's the benefit? 
+   - How could I have made it better if it failed. 
+*** TODO Finalize model for fitting 
+    DEADLINE: <2020-11-16 Mon>
+
+** Remarks on tight-binding
+   - Love it / Loathe it
+   - Remark how with tight-binding we can see the different
+     contributions to the total energy.
+   - P. W. Anderson's theory on tight-binding. Dismissing it
+     initially, but it's the right way to think about solids
+
+* Dislocations in pure metals
+** Fe 
+   - Comparison of the:
+     - sd, non-orthogonal tight-binding models.
+     - d-canonical model
+
+*** DONE Peierls Potential 
+
+*** TODO Plot d/sd peierls potential - How does non-O/sd change? 
+    DEADLINE: <2020-09-03 Thu>
+     
+** Ti
+*** TODO Energy dependence and core energy 
+    DEADLINE: <2020-12-20 Sun>
+*** TODO Core Energy difference in tbe - bop
+    DEADLINE: <2020-11-16 Mon>
+    - Tiny difference of 0.53 eV which determines the difference
+      between each of the core energies.
+*** TODO Calculate gamma surfaces for new model
+    DEADLINE: <2020-11-23 Mon>
+    - Planar faults 
+      - Compare to DFT literature of Rodney, Curtin and Tarrat
+      - Compare to other TB models
+	- ICAMS model is rubbish!
+
+
+* Oxygen in Ti
+  - TB >> DFT!
+    - Because we can decompose the total energy into contributions
+    - Look at how tight-binding allows us to see the physics by
+      breaking down the total energy.
+
+** TODO Defect clusters
+   DEADLINE: <2020-12-16 Wed>
+
+** TODO Binding of oxygen to dislocations if possible
+   DEADLINE: <2021-01-10 Sun>
+
+*** TODO Repulsive energy of oxygen
+    DEADLINE: <2021-01-10 Sun>
+
+*** TODO Concentration Analysis 
+    DEADLINE: <2021-01-10 Sun>
+   
+** TODO Embedding Calculations
+   DEADLINE: <2021-03-20 Sat>
+
+
+   
+       
+* C in Fe
+  - SKF report 
+  - Onwards to kMC
+** DONE Carbon binding to dislocations
+
+** TODO Energy dependence with radius - Add data
+   DEADLINE: <2020-11-16 Mon>
+
+** TODO Concentration Analysis - Add in repulsive energy
+   DEADLINE: <2020-09-25 Fri>
+
+** TODO Line Tension Model
+
+*** TODO Derive line tension equations 
+    DEADLINE: <2020-09-18 Fri>
+
+*** TODO  Use simple models  
+    DEADLINE: <2020-10-02 Fri>
+    - Sine-Gordon
+    - Others as found in Caillard [[file:~/Documents/books/Thermally%20Activated%20Mechanisms%20in%20Crystal%20Plasticity%20by%20D.%20Caillard%20and%20J.L.%20Martin%20(Eds.)%20(z-lib.org)%20(1).pdf][Thermally activated mechanisms in crystal plasticity]]
+
+*** TODO Verify Itakura results with impelementation
+    DEADLINE: <2020-10-16 Fri>
+
+*** TODO Look at what we get from d/sd Iron models 
+    DEADLINE: <2020-11-06 Fri>
+
+* Wish-list
+  - Line tension models maybe? 
+
+

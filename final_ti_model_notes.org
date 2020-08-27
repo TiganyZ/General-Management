@@ -507,9 +507,23 @@ DFT pseudopot:
      d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
      \]
 
+**** Analysis with other Ti models 
+
+  | Calculation Method | d_pris [\AA] | d_basal [\AA] | P sfe [mJ/m^2] | B sfe [mJ/m^2] |     a |     q |   C11 |  C12 |  C13 |   C33 |  C44 |
+  |--------------------+-----------+------------+---------------+---------------+-------+-------+-------+------+------+-------+------|
+  | Curtin DFT         |     6.631 |      1.252 |         214.0 |         306.0 | 5.526 | 1.582 | 177.0 | 90.0 | 84.0 | 189.0 | 40.0 |
+  | Tarrat DFT         |     7.014 |      1.358 |         250.0 |         259.1 | 5.662 | 1.588 | 183.4 | 84.6 | 63.8 | 204.9 | 48.8 |
+  | Clouet VASP DFT    |     5.628 |      0.898 |         220.0 |         292.0 | 5.518 | 1.581 | 169.0 | 97.0 | 84.0 | 189.0 | 37.0 |
+  | Clouet Pwscf DFT   |     5.491 |      1.049 |         256.0 |         297.0 | 5.548 | 1.583 | 169.0 | 89.0 | 77.0 | 192.0 | 42.0 |
+  | Trinkle DFT        |     7.083 |      1.391 |         220.0 |         292.0 | 5.575 | 1.586 | 172.0 | 82.0 | 75.0 | 190.0 | 45.0 |
+  | Hennig MEAM        |     5.509 |      2.139 |         297.0 |         172.0 | 5.539 | 1.596 | 174.0 | 95.0 | 72.0 | 188.0 | 58.0 |
+  | Girshick BOP       |     6.782 |      5.484 |         260.0 |         110.0 | 5.575 | 1.587 | 176.1 | 74.0 | 83.3 | 190.5 | 50.8 |
+  | Matous BOP         |    20.233 |      2.334 |          55.0 |         160.0 | 5.522 | 1.604 | 170.0 | 96.0 | 86.0 | 144.0 | 29.0 |
     
 
 **** Analysis with Final Ti model. 
+
+     
     
  
     \[
@@ -1039,7 +1053,7 @@ DFT pseudopot:
     #  >  ADD IN ANALYSIS OF OXYGEN NEAR DISLOCATION
 
 * Binding of oxygen to dislocations
-
+  
 ** Quadrupolar Array
    
    Using a relaxed $12\times 12$ slab with an "S" quadrupolar

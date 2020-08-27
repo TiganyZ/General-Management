@@ -1,0 +1,6 @@
+* TODO Read Majeski & Vogel 
+  :LOGBOOK:
+  CLOCK: [2020-08-27 Thu 12:21]--[2020-08-27 Thu 12:21] =>  0:00
+  :END:
+[2020-08-27 Thu 12:21]
+[[file:~/Documents/docs/Management/thesis_structure.org::*Tight-binding][Tight-binding]]

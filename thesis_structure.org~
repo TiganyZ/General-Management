@@ -1,0 +1,48 @@
+#+TITLE: Thesis Structure
+#+AUTHOR: Tigany Zarrouk
+
+
+* Statement of the Problem 
+
+* Introduction: Literature Review
+** Summary of Thesis
+
+* Simulation Methodology
+** Tight-binding
+** Fitting
+** Remarks on tight-binding
+   - Love it / Loathe it
+   - Remark how with tight-binding we can see the different
+     contributions to the total energy.
+   - P. W. Anderson's theory on tight-binding. Dismissing it
+     initially, but it's the right way to think about solids
+
+* Dislocations in pure metals
+** Fe 
+   - Comparison of the 
+     - sd, non-orthogonal tight-binding models.
+     - d-canonical model
+** Ti       
+   - Tiny difference of 0.53 eV which determines the difference
+     between each of the core energies.
+   - Planar faults 
+     - Compare to DFT literature of Rodney, Curtin and Tarrat
+     - Compare to other TB models
+       - ICAMS model is rubbish!
+
+* Oxygen in Ti
+  - Defect clusters and binding of oxygen to dislocations if possible 
+  - TB >> DFT!
+    - Because we can decompose the total energy into contributions
+    - Look at how tight-binding allows us to see the physics by
+      breaking down the total energy.
+       
+
+* C in Fe
+  - SKF report 
+  - Onwards to kMC
+
+* Wish-list
+  - Line tension models maybe? 
+
+
