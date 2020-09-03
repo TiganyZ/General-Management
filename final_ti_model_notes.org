@@ -507,7 +507,7 @@ DFT pseudopot:
      d_{\text{p}}^{\text{eq}} = \frac{ ( K_{33}a^2 - 4 \alpha^2 K_{22} c^2 ) }{ 4 \gamma_{p} }
      \]
 
-**** Analysis with other Ti models 
+**** Dissociation Analysis with other Ti models 
 
   | Calculation Method | d_pris [\AA] | d_basal [\AA] | P sfe [mJ/m^2] | B sfe [mJ/m^2] |     a |     q |   C11 |  C12 |  C13 |   C33 |  C44 |
   |--------------------+-----------+------------+---------------+---------------+-------+-------+-------+------+------+-------+------|
