@@ -339,8 +339,9 @@
     \begin{tabular}{c}
 	     \includegraphics[width=0.8\textwidth]{Images/itakura_dislocation_energy_landscape_2_labelled.png} \\
              \includegraphics[width=0.8\textwidth]{Images/tbe_dislocation_energy_landscape_pure_labelled.png}  \\
+             \includegraphics[width=0.8\textwidth]{Images/tbe_dislocation_energy_landscape_canonical_actual_labelled.png}  \\
     \end{tabular}		
-\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT \cite{Itakura2012} (top) and tight-binding (bottom). Energy scale is in meV. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponding to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. The discrepancy is probably due to an insufficient repulsion at close range within the tight-binding model.}
+\caption{Comparison of 2d Peierls potentials of the $1/2\langle 111\rangle$ screw dislocation between DFT \cite{Itakura2012} (top) and tight-binding (sd-non-orthogonal middle, canonical d, bottom). Energy scale is in meV. "E", "H" and "S" correspond to easy, hard and split core positions respectively, with the latter also corresponding to atomic positions. The relative energies between the different core positions is smaller in tight-binding compared to DFT. The split core as seen in tight-binding is reminiscent of EAM potentials, where the split core energy is lower than that of the hard core. The discrepancy is probably due to an insufficient repulsion at close range within the tight-binding model.}
 	\label{fig:peierlspot}
     \end{figure}
 
@@ -364,28 +365,28 @@
 
 
 	#+CAPTION: Table of energies used to calculate the Peierls potential. All values in meV. $\Delta E_{\text{P}}^{\text{DFT}}$ values taken from \cite{Itakura2012}. [[label:tab:peierlspot]]
-     | Pos | $\Delta E_{\text{INT}}$ | $\Delta E_{\text{tbe}}$ | $\Delta E_{\text{P}}$ | $\Delta E_{\text{P}}^{\text{DFT}}$ |
-     |-----+-----------------+-----------------+---------------+-------------------------|
-     |   1 |               0 |               0 |             0 |                       0 |
-     |   2 |            -0.7 |             7.3 |           7.9 |                     3.2 |
-     |   3 |            -1.4 |            16.0 |          17.4 |                    19.2 |
-     |   4 |            -2.0 |            22.2 |          24.2 |                    31.1 |
-     |   5 |            -2.5 |            24.8 |          27.4 |                    39.3 |
-     |   6 |            -3.3 |             3.0 |           6.3 |                    11.5 |
-     |   7 |            -6.5 |             7.1 |          13.6 |                    39.9 |
-     |   8 |            -9.6 |            13.0 |          22.6 |                    75.2 |
-     |   9 |           -12.5 |             5.4 |          17.9 |                   108.9 |
-     |  10 |            -4.8 |            22.1 |          26.9 |                    34.8 |
-     |  11 |            -7.2 |            18.2 |          25.4 |                    37.9 |
-     |  12 |            -9.8 |            14.0 |          23.8 |                    60.7 |
-     |  13 |            -3.8 |            11.5 |          15.3 |                    17.6 |
-     |  14 |            -6.9 |            15.1 |          22.0 |                    29.9 |
-     |  15 |            -4.3 |            18.6 |          22.9 |                    39.7 |
+     | Pos | $\Delta E_{\text{INT}}$ | $\Delta E_{\text{tbe}}$ | $\Delta E_{\text{P}}^{sd}$ | $\Delta E_{\text{P}}^{d}$ | $\Delta E_{\text{P}}^{\text{DFT}}$ |
+     |-----+-----------------+-----------------+-----------------+----------------+-------------------------|
+     |   1 |               0 |               0 |               0 |            0.0 |                       0 |
+     |   2 |            -0.7 |             7.3 |             7.9 |            6.3 |                     3.2 |
+     |   3 |            -1.4 |            16.0 |            17.4 |           15.1 |                    19.2 |
+     |   4 |            -2.0 |            22.2 |            24.2 |           20.4 |                    31.1 |
+     |   5 |            -2.5 |            24.8 |            27.4 |           22.6 |                    39.3 |
+     |   6 |            -3.3 |             3.0 |             6.3 |            4.6 |                    11.5 |
+     |   7 |            -6.5 |             7.1 |            13.6 |           12.7 |                    39.9 |
+     |   8 |            -9.6 |            13.0 |            22.6 |           22.7 |                    75.2 |
+     |   9 |           -12.5 |             5.4 |            17.9 |           26.8 |                   108.9 |
+     |  10 |            -4.8 |            22.1 |            26.9 |           23.0 |                    34.8 |
+     |  11 |            -7.2 |            18.2 |            25.4 |           23.5 |                    37.9 |
+     |  12 |            -9.8 |            14.0 |            23.8 |           24.4 |                    60.7 |
+     |  13 |            -3.8 |            11.5 |            15.3 |           13.2 |                    17.6 |
+     |  14 |            -6.9 |            15.1 |            22.0 |           20.3 |                    29.9 |
+     |  15 |            -4.3 |            18.6 |            22.9 |           20.0 |                    39.7 |
 
 
 	#+ATTR_LATEX:  :width 0.8\textwidth :center
 	#+CAPTION: Peierls potential along the hard-split line. One can see in $s\text{-}d$ tight-binding model is similar to the EAM potential of Mendelev \cite{Mendelev2003}: it decreases constantly from the hard core to the split core, which will result in a kink shape which goes through the split core position. In DFT one finds a saddle point between the hard core and the midpoint, in which a kink in the transitional state will go through. [[label:hardsplittransition]]
-	[[file:Images/hard-split_transition.png]]
+	[[file:Images/hard-split_transition_w_canonical.png]]
 
 
 
@@ -403,7 +404,28 @@
   cite:Paxton2010; as such, it could provide a better description of Fe-Fe interactions, and the
   Peierls potential, by extension. To verify this, recalculation of the Peierls potential using the
   canonical model will need to be undertaken.
- 
+
+
+  The Peierls potential with the $d\text{-band}$ model was found to be more reminiscent of
+  DFT (with these specific contour bounds); but the difference is small: the
+  maximum difference between the $d$/$s\text{-}d$ models is ~10 meV, with an average
+  difference of ~+3 meV to the former.
+
+  Along the hard-split line, instead of monotonically decreasing, like the
+  $s\text{-}d$ model, there is an increase in energy from the hard core up until
+  close to the midpoint, at which is decreases to the split core
+  energy. Previous calculations of the Peierls barrier of the $d{\text{-band}}$
+  found that the peak of the Peierls barrier was close to the midpoint, as in
+  DFT, see figure ref:easyeasytransition.
+
+  #+ATTR_LATEX:  :width \textwidth :center
+  #+CAPTION: Comparison of the Peierls potentials (left) produced from $d\text{-band}$ tight-binding, DFT and EAM along each of their respective the minimum energy pathways (right), which are the reaction coordinates for the figure on the right. The EAM potential of Mendelev \cite{Mendelev2003} has an unphysical well in the centre of the potential, while tight-binding and DFT produce single-humped potentials. Tight-binding follows a pathway much closer to that of DFT. EAM potentials predict that the dislocation core goes to the split core and then back to the easy core. Even though the Peierls landscape found in tight binding has similar characteristics to the EAM in terms of the energetic ordering of different core states, the description of the minimum energy pathway of the $1/2\langle 111 \rangle$ screw dislocation as it moves between core positions is in good agreement with DFT. [[label:easyeasytransition]]
+  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam.png]]
+
+
+  In the EAM model, the midpoint along the hard-split transition is not a saddle
+  point. The MEP for kink-pair formation deviates widely from the DFT path. 
+   
   # To verify this, a recalculation of the
   # Peierls potential using the canonical d-band model is necessary. Further line-tension/NEB
   # calculations are necessary to verify the dislocation line shape and discrepancies in the kink-pair
@@ -462,6 +484,12 @@
    difference $\Delta E_{\text{core}}^{\text{Easy-Hard}} = 76$ meV/b, which is in good agreement with the DFT
    value of 82 meV/b cite:Itakura2012.
 
+
+   For a line tension model of a dislocation, it is necessary to
+   ascertain the energy, denoted $E_{\text{L}} = E_{\text{el}} + E_{\text{core}}$ as in Proville
+   cite:Rodney2009. This can be obtained by subtracting the total
+   energies of relaxed dislocation configurations to obtain the core
+   energy. 
    # > How does carbon in the hard core change how dislocations move with carbon.
    # > How are dislocations pinned by carbon in the hard core?
    # > Is there Arrhenius form of activation energy for this? 
@@ -830,20 +858,22 @@
   # 	cite:Simpson2019. Line-tension/NEB calculations are necessary to verify this.
 
 
-	We expect a reduction in the kink-pair formation enthalpy in tight-binding, due to the
-	slightly smaller overall Peierls potential along the expected minimum enthalpy path of the
-	kink. This would increase the rate of kink nucleation in kMC models, causing a higher
-	overall dislocation velocity. This will increase the disparity between the dislocation velocity and the
-	speed of carbon diffusion. In the vicinity of the dislocation line, there
-	is a "high-mobility" zone for carbon to diffuse easily around the dislocation
-	cite:Nematollahi2016. Assuming a similar kink shape as found in EAM calculations, we expect
-	the kink-pair formation energy to be $\sim 0.7$ eV, which similar in magnitude to the DFT
-	value ($0.73$ eV) cite:Itakura2012. Hence, we predict the increase in dislocation velocity
-	would not so large as to effectively negate the effect of the high-mobility zone---which
-	would result in carbon not being able to "catch-up" to dislocations upon
-	movement. Therefore, we do not expect the observed discrepancy in the Peierls potential to
-	significantly change the principal mechanisms observed, or results obtained, from kMC
-	simulations of dislocation-assisted carbon migration.
+	We expect a reduction in the kink-pair formation enthalpy in tight-binding, due to
+	the slightly smaller overall Peierls potential along the expected minimum enthalpy
+	path of the kink within the line tension model. This would increase
+	the rate of kink nucleation in kMC models, causing a higher overall dislocation
+	velocity. This will increase the disparity between the dislocation velocity and
+	the speed of carbon diffusion. In the vicinity of the dislocation line, there is a
+	"high-mobility" zone for carbon to diffuse easily around the dislocation
+	cite:Nematollahi2016. Assuming a similar kink shape as found in DFT calculations,
+	we expect the kink-pair formation energy to be $\sim 0.7$ eV, which similar in
+	magnitude to the DFT value ($0.73$ eV) cite:Itakura2012. Hence, we predict the
+	increase in dislocation velocity would not so large as to effectively negate the
+	effect of the high-mobility zone---which would result in carbon not being able to
+	"catch-up" to dislocations upon movement. Therefore, we do not expect the observed
+	discrepancy in the Peierls potential to significantly change the principal
+	mechanisms observed, or results obtained, from kMC simulations of
+	dislocation-assisted carbon migration.
 
 
 	# by a factor of ${\text{exp}}(+\Delta E_{\text{kp}}^{\text{tbe-DFT}}/ k_{\text{b}} T)$

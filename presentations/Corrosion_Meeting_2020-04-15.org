@@ -168,7 +168,7 @@ All frequencies are in THz
 [[file:~/Documents/docs/Management/Images/bcc-band_dos_dft-1.png]]
 * Free Energies
 
-
+  
 ** Vibrational Free Energy
 #+NAME: Vibrational free energy
 #+ATTR_HTML: :width 70% :style position:relative;top:0px;left:-350px;z_index:1;

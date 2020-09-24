@@ -1,4 +1,4 @@
-* TODO Read Majeski & Vogel 
+* DONE Read Majeski & Vogel 
   :LOGBOOK:
   CLOCK: [2020-08-27 Thu 12:21]--[2020-08-27 Thu 12:21] =>  0:00
   :END:
@@ -16,7 +16,7 @@
   :END:
 [2020-08-27 Thu 23:52]
 [[file:~/Documents/docs/Management/thesis_structure.org]]
-* TODO Record Habits 
+* DONE Record Habits 
   :LOGBOOK:
   CLOCK: [2020-08-27 Thu 23:53]--[2020-08-27 Thu 23:53] =>  0:00
   :END:
@@ -24,41 +24,44 @@
 [[file:~/Documents/docs/Management/thesis_structure.org]]
 * TODO Check Ti Models 
   :PROPERTIES:
-  :LAST_REPEAT: [2020-09-02 Wed 11:57]
+  :LAST_REPEAT: [2020-09-08 Tue 10:15]
   :END:
+  - State "DONE"       from "TODO"       [2020-09-08 Tue 10:15]
   - State "DONE"       from "NEXT"       [2020-09-02 Wed 11:57]
   :LOGBOOK:
+  CLOCK: [2020-09-07 Mon 10:21]--[2020-09-08 Tue 10:15] => 23:54
   CLOCK: [2020-09-02 Wed 10:46]--[2020-09-02 Wed 11:57] =>  1:11
   CLOCK: [2020-09-02 Wed 10:45]--[2020-09-02 Wed 10:46] =>  0:01
   CLOCK: [2020-09-02 Wed 10:25]--[2020-09-02 Wed 10:45] =>  0:20
   :END:
 [2020-09-02 Wed 10:09]
 
-SCHEDULED: <2020-09-03 Thu .+1d/3d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
-** TODO Run Dislocation Calculation
+** WAITING Run Dislocation Calculation                              :WAITING:
    :PROPERTIES:
-   :LAST_REPEAT: [2020-09-02 Wed 11:23]
+   :LAST_REPEAT: [2020-09-08 Tue 10:16]
    :END:
+   - State "DONE"       from "HOLD"       [2020-09-08 Tue 10:16]
+   - State "HOLD"       from "TODO"       [2020-09-07 Mon 10:20] \\
+     Checking models now
    - State "DONE"       from "NEXT"       [2020-09-02 Wed 11:23]
  [2020-09-02 Wed 11:12]
  [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
- SCHEDULED: <2020-09-03 Thu .+1d/3d>
  :PROPERTIES:
  :STYLE: habit
  :REPEAT_TO_STATE: NEXT
  :END:
 ** TODO Run next ti fitting
    :PROPERTIES:
-   :LAST_REPEAT: [2020-09-02 Wed 11:57]
+   :LAST_REPEAT: [2020-09-08 Tue 10:16]
    :END:
+   - State "DONE"       from "TODO"       [2020-09-08 Tue 10:16]
    - State "DONE"       from "NEXT"       [2020-09-02 Wed 11:57]
  [2020-09-02 Wed 11:31]
  [[file:~/Documents/docs/Management/org/refile.org::*Run Dislocation Calculation][Run Dislocation Calculation]]
- SCHEDULED: <2020-09-03 Thu .+1d/3d>
  :PROPERTIES:
  :STYLE: habit
  :REPEAT_TO_STATE: NEXT
@@ -74,3 +77,31 @@ SCHEDULED: <2020-09-03 Thu .+1d/3d>
   CLOCK: [2020-09-03 Thu 16:14]--[2020-09-03 Thu 16:14] =>  0:00
   :END:
 [2020-09-03 Thu 16:14]
+* HOLD Check Ti relaxation on SKF                                      :HOLD:
+  - State "HOLD"       from "NEXT"       [2020-09-07 Mon 10:17]
+[2020-09-07 Mon 10:16]
+SCHEDULED: <2020-09-07 Mon .+1d/7d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+* DONE Respond to  on 
+SCHEDULED: <2020-09-09 Wed>
+:LOGBOOK:
+CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
+:END:
+[2020-09-09 Wed 11:19]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+* DONE Respond to  on 
+SCHEDULED: <2020-09-09 Wed>
+:LOGBOOK:
+CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
+:END:
+[2020-09-09 Wed 11:19]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+* DONE Email James French to turn on Opal
+  :LOGBOOK:
+  CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:20] =>  0:01
+  :END:
+[2020-09-09 Wed 11:19]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]

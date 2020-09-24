@@ -3,6 +3,15 @@
 
 
 * Statement of the Problem 
+  I do think that an underlying theme in your thesis can be what can and
+  cannot be rendered in TB in the plasticity of transition metals with and
+  without interstitials. And you can discuss how good (or rather bad) EAM
+  is, especially with interstitials. You may also be sceptical of the DFT,
+  especially in view of the difficulty with cell size and boundary
+  conditions. And not forgetting that the French school's theory of jerky
+  glice in Ti is based on a calculation of core energy difference that is
+  within the error limits.
+
 * Introduction: Literature Review
 ** Summary of Thesis
 
@@ -68,6 +77,8 @@
    - P. W. Anderson's theory on tight-binding. Dismissing it
      initially, but it's the right way to think about solids
 
+* Surface Energies?
+
 * Dislocations in pure metals
 ** Fe 
    - Comparison of the:
@@ -76,13 +87,22 @@
 
 *** DONE Peierls Potential 
 
-*** WAITING Plot d/sd peierls potential - How does non-O/sd change? :WAITING:
+*** DONE Plot d/sd peierls potential - How does non-O/sd change?
     DEADLINE: <2020-09-04 Fri>
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    - State "DONE"       from "WAITING"    [2020-09-04 Fri 14:01]
     - State "WAITING"    from "TODO"       [2020-09-02 Wed 10:18] \\
       Waiting for the simulations to finish
     :LOGBOOK:
+    CLOCK: [2020-09-04 Fri 12:00]--[2020-09-04 Fri 14:01] =>  2:01
     CLOCK: [2020-09-01 Tue 15:37]--[2020-09-01 Tue 21:10] =>  5:33
     :END:
+
+    - Not much difference between the canonical-d band model and the sd
+      model. The difference is surely within the error of convergence for these
+      calculations.  
      
 ** Ti
 *** TODO Energy dependence and core energy 
@@ -149,6 +169,9 @@
 ** TODO Embedding Calculations
    DEADLINE: <2021-03-20 Sat>
 
+*** TODO Just look at vacancies and oxygen? 
+
+*** TODO Other Dislocation structures if models don't work?
 
    
        
@@ -166,7 +189,11 @@
 ** TODO Line Tension Model
 
 *** TODO Derive line tension equations 
-    DEADLINE: <2020-09-18 Fri>
+    DEADLINE: <2020-09-25 Fri>
+    :LOGBOOK:
+    CLOCK: [2020-09-15 Tue 11:00]--[2020-09-16 Wed 11:39] => 24:39
+    CLOCK: [2020-09-08 Tue 10:25]--[2020-09-08 Tue 11:52] =>  1:27
+    :END:
 
 *** TODO  Use simple models  
     DEADLINE: <2020-10-02 Fri>
