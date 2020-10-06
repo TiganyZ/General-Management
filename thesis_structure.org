@@ -167,7 +167,7 @@
     DEADLINE: <2021-01-10 Sun>
    
 ** TODO Embedding Calculations
-   DEADLINE: <2021-03-20 Sat>
+   SCHEDULED: <2020-10-09 Fri> DEADLINE: <2021-03-20 Sat>
 
 *** TODO Just look at vacancies and oxygen? 
 

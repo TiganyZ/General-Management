@@ -420,7 +420,9 @@
 
   #+ATTR_LATEX:  :width \textwidth :center
   #+CAPTION: Comparison of the Peierls potentials (left) produced from $d\text{-band}$ tight-binding, DFT and EAM along each of their respective the minimum energy pathways (right), which are the reaction coordinates for the figure on the right. The EAM potential of Mendelev \cite{Mendelev2003} has an unphysical well in the centre of the potential, while tight-binding and DFT produce single-humped potentials. Tight-binding follows a pathway much closer to that of DFT. EAM potentials predict that the dislocation core goes to the split core and then back to the easy core. Even though the Peierls landscape found in tight binding has similar characteristics to the EAM in terms of the energetic ordering of different core states, the description of the minimum energy pathway of the $1/2\langle 111 \rangle$ screw dislocation as it moves between core positions is in good agreement with DFT. [[label:easyeasytransition]]
-  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam.png]]
+  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension_nopoints.png]]
+#  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension.png]]
+#  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam.png]]
 
 
   In the EAM model, the midpoint along the hard-split transition is not a saddle
@@ -661,6 +663,12 @@
 
     # Values in square brackets denote fully unconstrained relaxation of all degrees of freedom, using quadrupolar dislocation arrays for direct comparison to Ventelon \cite{Ventelon2015}.
 
+    # Quadrupolar array results:
+    # E_bind Fe-C Oct 1 = -0.8806209130839188 eV -> Ventelon results -0.79 eV at 3b
+    # /// Note --- In the lower one, one of the carbons failed to go into the hard core
+    # site. 
+    # E_bind Fe-C Oct 2 = -0.7473003889178021 eV -> Ventelon results -0.79 eV at 3b
+
     # Kamber /et
     # al./ found a maximum binding energy of 0.5 eV. Cochardt found a value of 0.71 eV
     # within 0.1eV of the largest binding energy for the easy core.
@@ -833,10 +841,25 @@
    #   fit a Lorentzian!
 
 
+ \begin{figure}	
+     \begin{tabular}{rl}
+ 	           \includegraphics[width=0.7\textwidth]{Images/img_itakura_string_images_15.png}  &
+ 	           \includegraphics[width=0.85\textwidth]{Images/img_tbe_string_images_15.png}  \\
+		   
+     	      \end{tabular}		
+ \caption{ Core positions of the line tension model from Itakura (left) and tight-binding (right) for images 1, 4, 7, 12, 15. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. Figures correspond to the x-coordinate (top) or y-coordinate (bottom) of the dislocation core position as a function of the dislocation line. Due to the difference in Peierls potentials, the tight-binding kink takes a different path upon migration to an adjacent easy core position, going closer to the split-core position rather than the hard core, in the case of the DFT results.  }
+ \label{linetensionpurefe}
+    \end{figure}
+
+   # [[file:Images/img_itakura_string_images_15_path.png]]
+   # [[file:Images/img_tbe_string_images_15_path.png]]
 
 
-   # The julia implementation of the NEB/string algorithms was used cite:Makri2019. One
-   # finds that the line shapes are similar to that of Itakura. 
+   The julia implementation of the NEB/string algorithms was used cite:Makri2019. One
+   finds that the line shapes are similar to that of Itakura, for the x-coordinate of the
+   dislocation core position.  
+
+
 
    
    

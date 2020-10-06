@@ -105,3 +105,23 @@ CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
   :END:
 [2020-09-09 Wed 11:19]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+* TODO Think about the possible interactions of dislocations in dipole configuration upon relaxation
+  :LOGBOOK:
+  CLOCK: [2020-09-29 Tue 11:05]--[2020-09-29 Tue 11:06] =>  0:01
+  :END:
+[2020-09-29 Tue 11:05]
+[[file:~/Documents/line-tension/precon-path-paper/lt_fourier.jl::path = ODENEB(reltol=0.1, k=1000, interp=3, tol = tol,]]
+* DONE Add overlap in s-d model 
+  DEADLINE: <2020-10-07 Wed>
+  :LOGBOOK:
+  CLOCK: [2020-10-06 Tue 10:34]--[2020-10-06 Tue 10:34] =>  0:00
+  :END:
+[2020-10-06 Tue 10:34]
+[[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+* TODO Read Katzarov-Paxton LT paper
+  DEADLINE: <2020-10-09 Fri>
+  :LOGBOOK:
+  CLOCK: [2020-10-06 Tue 10:34]--[2020-10-06 Tue 10:34] =>  0:00
+  :END:
+[2020-10-06 Tue 10:34]
+[[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
