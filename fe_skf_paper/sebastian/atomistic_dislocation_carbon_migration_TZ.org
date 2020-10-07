@@ -262,7 +262,7 @@
 
     The binding energy is given by 
     \begin{equation}  
-    E_b = E_{\text{d+C}} + E_{\text{perfect}}- E_{\text{d}} - E_{\text{C ref.}},    
+    E_b = -( E_{\text{d+C}} + E_{\text{perfect}}- E_{\text{d}} - E_{\text{C ref.} } ),    
     \end{equation}
 
     where $E_{\text{d+C}}$ is the total energy of a relaxed cluster with a
@@ -423,6 +423,7 @@
   [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension_nopoints.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam.png]]
+
 
 
   In the EAM model, the midpoint along the hard-split transition is not a saddle
@@ -648,7 +649,7 @@
     E8        &                   1.77 &   0.203      & 	      0.000 &       0.177 &          0.178 \\
     E9        &                   1.52 &   0.201      & 	      0.000 &       0.683 &          0.683 \\
     E10       &                   1.95 &   0.202      & 	      0.000 &       0.067 &          0.067 \\ \hline
-    H1        &                   0.00 &   0.196      & 	     -0.006 &       1.298 &          1.291 \\
+    H1        &                   0.00 &   0.196      & 	     -0.006 &       1.298 &          1.291 [ 0.881\textsuperscript{a}, 0.790\textsuperscript{b}  ] \\
     H2        &                   1.19 &   0.210      & 	      0.007 &       0.691 &          0.698 \\
     H3        &                   2.12 &   0.209      & 	      0.007 &       0.461 &          0.467 \\
     H4        &                   1.91 &   0.207      & 	      0.005 &       0.311 &          0.316 \\
@@ -657,7 +658,7 @@
     H7        &                   1.35 &   0.206      & 	      0.006 &       0.825 &          0.819 \\
     
 	\end{tabular}		
- 	\caption{Table of energies leading to the zero-point energy corrected binding energy using the cluster method for simulation of dislocation-carbon interactions. }
+ 	\caption{Table of energies leading to the zero-point energy corrected binding energy using the cluster method for simulation of dislocation-carbon interactions. \textsuperscript{a} Tight-binding quadrupolar array results, starting from a fully relaxed easy core quadrupole extended to a depth of 3b with carbon introduced into the iH1 site in the middle layer, by both dislocations. \textsuperscript{b} DFT results of Ventelon, using the same quadrupolar configuration as in \textsuperscript{a}. In both quadrupolar simulations, carbon ended up in the H1 site.}
 	\label{tab:bindingenergies}
     \end{table*}
 
@@ -683,12 +684,20 @@
     attraction. This is significantly lower than the 1.29eV interaction energy of tight-binding.
     This discrepancy can be partially explained by the fact that the cells have not been allowed to
     relax with all degrees of freedom, as in the Ventelon results: the three atoms around the screw
-    core are fixed in $Z$ to so the dislocation core position does not change upon relaxation. A
-    larger source of error is likely from the fitting of the tight-binding model itself. The
-    Peierls barrier of this $s\text{-}d$ model of iron, necessary for Fe-C interactions, has been shown to be
-    half that found in DFT cite:Simpson2019, but the solution energies for
-    Fe-C defect complexes are well described. This implies there is insufficient repulsion between
-    Fe-Fe species upon deformation, leading to a larger resultant Fe-C binding energy from tight-binding.
+    core are fixed in $Z$ to so the dislocation core position does not change upon
+    relaxation. 
+
+    Repeating the calculation for the binding of a H1 carbon to a screw
+    dislocation using a quadrupolar array, allowing for all atoms to relax, gives a
+    binding energy of 0.88 eV. This agrees very well with the DFT results of Ventelon
+    cite:Ventelon2015.
+
+    A source of error for this discrepancy is likely from the fitting of the tight-binding model
+    itself. The Peierls barrier of this $s\text{-}d$ model of iron, necessary for Fe-C
+    interactions, has been shown to be half that found in DFT cite:Simpson2019, but the
+    solution energies for Fe-C defect complexes are well described. This implies there is
+    insufficient repulsion between Fe-Fe species upon deformation, leading to a larger
+    resultant Fe-C binding energy from tight-binding.
 
 
 
@@ -841,26 +850,37 @@
    #   fit a Lorentzian!
 
 
- \begin{figure}	
-     \begin{tabular}{rl}
- 	           \includegraphics[width=0.7\textwidth]{Images/img_itakura_string_images_15.png}  &
- 	           \includegraphics[width=0.85\textwidth]{Images/img_tbe_string_images_15.png}  \\
+ # \begin{figure}	
+ #     \begin{tabular}{rl}
+ # 	           \includegraphics[width=0.7\textwidth]{Images/img_itakura_string_images_15.png}  &
+ # 	           \includegraphics[width=0.85\textwidth]{Images/img_tbe_string_images_15.png}  \\
 		   
-     	      \end{tabular}		
- \caption{ Core positions of the line tension model from Itakura (left) and tight-binding (right) for images 1, 4, 7, 12, 15. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. Figures correspond to the x-coordinate (top) or y-coordinate (bottom) of the dislocation core position as a function of the dislocation line. Due to the difference in Peierls potentials, the tight-binding kink takes a different path upon migration to an adjacent easy core position, going closer to the split-core position rather than the hard core, in the case of the DFT results.  }
- \label{linetensionpurefe}
-    \end{figure}
+ #     	      \end{tabular}		
+ # \caption{ Core positions of the line tension model from Itakura (left) and tight-binding (right) for images 1, 4, 7, 12, 15. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. Figures correspond to the x-coordinate (top) or y-coordinate (bottom) of the dislocation core position as a function of the dislocation line. Due to the difference in Peierls potentials, the tight-binding kink takes a different path upon migration to an adjacent easy core position, going closer to the split-core position rather than the hard core, in the case of the DFT results.  }
+ # \label{linetensionpurefe}
+ #    \end{figure}
 
    # [[file:Images/img_itakura_string_images_15_path.png]]
    # [[file:Images/img_tbe_string_images_15_path.png]]
 
+   #+ATTR_LATEX:  :width 0.9\textwidth :center
+   #+CAPTION: Core positions of the line tension model from DFT (blue) and tight-binding (yellow) for the middle image corresponding the MEP and the kink-pair formation energy. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. $P_x$ and $P_y$ correspond to the x/y-coordinate of the dislocation core position in each of the discretised layers of the dislocation. One finds that the kink width in tight-binding is wider than that found in DFT, which corresponds with the fact that the width is proportional to $b\sqrt{K/\Delta E_P}$, where the reduction in $\Delta E_P^{\text{tbe}}$ is greater than the reduction in $K_{\text{tbe}}$.   [[label:lineshape]].
+   [[file:Images/lineshape-all_redo.png]]
 
    The julia implementation of the NEB/string algorithms was used cite:Makri2019. One
    finds that the line shapes are similar to that of Itakura, for the x-coordinate of the
    dislocation core position.  
 
+   One finds that the kink width in tight-binding is slightly wider than that found in DFT, which
+   corresponds with the fact that the width is proportional to $b\sqrt{K/\Delta E_P}$, where the
+   reduction in $\Delta E_P^{\text{tbe}}$ is greater than the reduction in $K^{\text{tbe}}$ cite:Itakura2012. 
 
-
+   #+CAPTION: Kink-pair formation energies between DFT, and the two flavours of tight-binding used with the line-tension model. 
+   | Method              | $E_{\text{kp}}^{\text{form}}$ |
+   |---------------------+-------------------------|
+   | DFT                 | 0.72 eV                 |
+   | TB (d-orthog.)      | 0.65 eV                 |
+   | TB (sd-non-orthog.) | 0.61 eV                 |
    
    
 * Discussion

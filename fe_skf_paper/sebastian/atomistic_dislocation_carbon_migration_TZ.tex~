@@ -1,4 +1,4 @@
-% Created 2020-10-06 Tue 13:55
+% Created 2020-10-07 Wed 17:50
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -62,7 +62,7 @@ concentration regimes.
 \clearpage
 
 \section{Introduction}
-\label{sec:orgd057900}
+\label{sec:orgac3e31d}
 
 Martensitic steels are frequently used in bearings due to their resilience to service conditions,
 being subject to high rotational speeds and contact pressures. However, under cyclic loading
@@ -158,7 +158,7 @@ dislocation motion in the martensitic matrix, mitigating failure by RCF.
 
 
 \section{Computational Method}
-\label{sec:org7f9b6c4}
+\label{sec:orgb7e00fc}
 
 
 We use the tight-binding model of Paxton and Elsässer \cite{Paxton2013}, which has been shown to
@@ -173,7 +173,7 @@ behaviours.
 
 
 \subsection{Peierls Potential}
-\label{sec:org8fadcd5}
+\label{sec:org0aa2b7d}
 
 To determine the Peierls potential of the \(1/2\langle 111 \rangle\) screw dislocation, we followed the
 procedure detailed in Itakura \cite{Itakura2012}. Quadrupolar arrays of dislocations were
@@ -242,7 +242,7 @@ interaction energies must be subracted, which is achieved by the correction term
    = \frac{1}{2} ( E_{\text{INT}}^{i} - E_{\text{INT}}^{\text{E}} )\).
 
 \subsection{Preliminary calculations}
-\label{sec:orge3f63fe}
+\label{sec:org8497104}
 To determine the binding energy of carbon to dislocations, we used the cluster method, as shown
 in figure \ref{fig:dislocationschematics}, right. Simulation
 cells consisted of a cylindrical cluster of atoms, with a single dislocation introduced into the
@@ -285,13 +285,13 @@ constraints were imposed on the middle layer.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:orgbb358c1}
+\label{sec:org3611fb8}
 We calculated the carbon-dislocation binding energies as in Itakura
  \cite{itakura13_effec_hydrog_atoms_screw_disloc}.
 
 The binding energy is given by 
 \begin{equation}  
-E_b = E_{\text{d+C}} + E_{\text{perfect}}- E_{\text{d}} - E_{\text{C ref.}},    
+E_b = -( E_{\text{d+C}} + E_{\text{perfect}}- E_{\text{d}} - E_{\text{C ref.} } ),    
 \end{equation}
 
 where \(E_{\text{d+C}}\) is the total energy of a relaxed cluster with a
@@ -307,7 +307,7 @@ where \(\Delta E_z = E_z - E_{z}^{\text{C ref.}}\) and \(E_{z}^{\text{C ref.}} =
 situated in an octahedral site in a perfect cluster of the same size. 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:orgc405616}
+\label{sec:orgb038b50}
 
 Using the Fe-C binding energies, one can predict the equilibrium carbon concentration of a carbon
 binding site \(c_d\), under the assumption that carbon atoms around the core are sufficiently spaced such that intersite
@@ -341,7 +341,7 @@ found in Fe-0.61wt\%C martensite \cite{morito03_disloc_densit_within_lath_marten
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:orgabd4c07}
+\label{sec:orgc4836b2}
 
 From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
 line tension model of a dislocation from which we can obtain the kink-pair formation energies as
@@ -363,10 +363,10 @@ formation enthalpies can then be found using the NEB/String method, to find the 
 barrier. 
 
 \section{Results}
-\label{sec:orgc2639b2}
+\label{sec:orge0340b6}
 
 \subsection{Peierls Potential}
-\label{sec:org8509540}
+\label{sec:org62ac724}
 
         \begin{figure}
     \begin{tabular}{c}
@@ -460,16 +460,17 @@ DFT, see figure \ref{easyeasytransition}.
 
 \begin{figure}[htbp]
 
-\includegraphics[width=\textwidth]{Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension.png}
+\includegraphics[width=\textwidth]{Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension_nopoints.png}
 \caption{Comparison of the Peierls potentials (left) produced from \(d\text{-band}\) tight-binding, DFT and EAM along each of their respective the minimum energy pathways (right), which are the reaction coordinates for the figure on the right. The EAM potential of Mendelev \cite{Mendelev2003} has an unphysical well in the centre of the potential, while tight-binding and DFT produce single-humped potentials. Tight-binding follows a pathway much closer to that of DFT. EAM potentials predict that the dislocation core goes to the split core and then back to the easy core. Even though the Peierls landscape found in tight binding has similar characteristics to the EAM in terms of the energetic ordering of different core states, the description of the minimum energy pathway of the \(1/2\langle 111 \rangle\) screw dislocation as it moves between core positions is in good agreement with DFT. \label{easyeasytransition}}
 \end{figure}
+
 
 
 In the EAM model, the midpoint along the hard-split transition is not a saddle
 point. The MEP for kink-pair formation deviates widely from the DFT path. 
 
 \subsection{Preliminary calculations}
-\label{sec:org4210081}
+\label{sec:orgd9f1999}
 
 
 To validate the cluster simulation method, the excess energy, defined as the difference in energy
@@ -507,7 +508,7 @@ energy.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:orga8728ce}
+\label{sec:orgd184377}
 
 
 
@@ -603,7 +604,7 @@ E7        &                   1.89 &   0.206      & 	      0.003 &       0.385 &
 E8        &                   1.77 &   0.203      & 	      0.000 &       0.177 &          0.178 \\
 E9        &                   1.52 &   0.201      & 	      0.000 &       0.683 &          0.683 \\
 E10       &                   1.95 &   0.202      & 	      0.000 &       0.067 &          0.067 \\ \hline
-H1        &                   0.00 &   0.196      & 	     -0.006 &       1.298 &          1.291 \\
+H1        &                   0.00 &   0.196      & 	     -0.006 &       1.298 &          1.291 [ 0.881\textsuperscript{a}, 0.790\textsuperscript{b}  ] \\
 H2        &                   1.19 &   0.210      & 	      0.007 &       0.691 &          0.698 \\
 H3        &                   2.12 &   0.209      & 	      0.007 &       0.461 &          0.467 \\
 H4        &                   1.91 &   0.207      & 	      0.005 &       0.311 &          0.316 \\
@@ -612,7 +613,7 @@ H6        &                   1.40 &   0.207      & 	      0.005 &      -0.119 &
 H7        &                   1.35 &   0.206      & 	      0.006 &       0.825 &          0.819 \\
 
     \end{tabular}		
-    \caption{Table of energies leading to the zero-point energy corrected binding energy using the cluster method for simulation of dislocation-carbon interactions. }
+    \caption{Table of energies leading to the zero-point energy corrected binding energy using the cluster method for simulation of dislocation-carbon interactions. \textsuperscript{a} Tight-binding quadrupolar array results, starting from a fully relaxed easy core quadrupole extended to a depth of 3b with carbon introduced into the iH1 site in the middle layer, by both dislocations. \textsuperscript{b} DFT results of Ventelon, using the same quadrupolar configuration as in \textsuperscript{a}. In both quadrupolar simulations, carbon ended up in the H1 site.}
     \label{tab:bindingenergies}
 \end{table*}
 
@@ -627,18 +628,26 @@ hard core prism configuration was found to be 0.79 eV for a thickness in the \(Z
 attraction. This is significantly lower than the 1.29eV interaction energy of tight-binding.
 This discrepancy can be partially explained by the fact that the cells have not been allowed to
 relax with all degrees of freedom, as in the Ventelon results: the three atoms around the screw
-core are fixed in \(Z\) to so the dislocation core position does not change upon relaxation. A
-larger source of error is likely from the fitting of the tight-binding model itself. The
-Peierls barrier of this \(s\text{-}d\) model of iron, necessary for Fe-C interactions, has been shown to be
-half that found in DFT \cite{Simpson2019}, but the solution energies for
-Fe-C defect complexes are well described. This implies there is insufficient repulsion between
-Fe-Fe species upon deformation, leading to a larger resultant Fe-C binding energy from tight-binding.
+core are fixed in \(Z\) to so the dislocation core position does not change upon
+relaxation. 
+
+Repeating the calculation for the binding of a H1 carbon to a screw
+dislocation using a quadrupolar array, allowing for all atoms to relax, gives a
+binding energy of 0.88 eV. This agrees very well with the DFT results of Ventelon
+\cite{Ventelon2015}.
+
+A source of error for this discrepancy is likely from the fitting of the tight-binding model
+itself. The Peierls barrier of this \(s\text{-}d\) model of iron, necessary for Fe-C
+interactions, has been shown to be half that found in DFT \cite{Simpson2019}, but the
+solution energies for Fe-C defect complexes are well described. This implies there is
+insufficient repulsion between Fe-Fe species upon deformation, leading to a larger
+resultant Fe-C binding energy from tight-binding.
 
 
 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:org7016cde}
+\label{sec:orgcab7a14}
 
 Variation of carbon concentration along the dislocation line for each of the binding sites can be
 seen in figure \ref{cdhardeasy}. Due to the lower overall binding energies of carbon to the easy
@@ -673,7 +682,7 @@ the easy core by the adjacent carbon.
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:orgdbb6cad}
+\label{sec:orgd13ebf0}
 
 
 The \(K\) coefficient for the line tension model was calculated from atomistic simulations, using
@@ -705,27 +714,35 @@ choice of sites used for the fitting is discussed in section \ref{sec:discussion
 
 
 
-\begin{figure}	
-    \begin{tabular}{rl}
- 	          \includegraphics[width=0.7\textwidth]{Images/img_itakura_string_images_15.png}  &
- 	          \includegraphics[width=0.85\textwidth]{Images/img_tbe_string_images_15.png}  \\
+\begin{figure}[htbp]
 
-     	     \end{tabular}		
-\caption{ Core positions of the line tension model from Itakura (left) and tight-binding (right) for images 1, 4, 7, 12, 15. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. Figures correspond to the x-coordinate (top) or y-coordinate (bottom) of the dislocation core position as a function of the dislocation line. Due to the difference in Peierls potentials, the tight-binding kink takes a different path upon migration to an adjacent easy core position, going closer to the split-core position rather than the hard core, in the case of the DFT results.  }
-\label{linetensionpurefe}
-   \end{figure}
-
+\includegraphics[width=0.8\textwidth]{Images/lineshape-all_redo.png}
+\caption{Core positions of the line tension model from DFT (blue) and tight-binding (yellow) for the middle image corresponding the MEP and the kink-pair formation energy. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. \(P_x\) and \(P_y\) correspond to the x/y-coordinate of the dislocation core position in each of the discretised layers of the dislocation. One finds that the kink width in tight-binding is wider than that found in DFT, which corresponds with the fact that the width is proportional to \(b\sqrt{K/\Delta E_P}\), where the reduction in \(\Delta E_P^{\text{tbe}}\) is greater than the reduction in \(K_{\text{tbe}}\).   \label{lineshape}.}
+\end{figure}
 
 The julia implementation of the NEB/string algorithms was used \cite{Makri2019}. One
 finds that the line shapes are similar to that of Itakura, for the x-coordinate of the
 dislocation core position.  
 
+One finds that the kink width in tight-binding is slightly wider than that found in DFT, which
+corresponds with the fact that the width is proportional to \(b\sqrt{K/\Delta E_P}\), where the
+reduction in \(\Delta E_P^{\text{tbe}}\) is greater than the reduction in \(K^{\text{tbe}}\) \cite{Itakura2012}. 
 
-
+\begin{table}[htbp]
+\caption{Kink-pair formation energies between DFT, and the two flavours of tight-binding used with the line-tension model.}
+\centering
+\begin{tabular}{ll}
+Method & \(E_{\text{kp}}^{\text{form}}\)\\
+\hline
+DFT & 0.72 eV\\
+TB (d-orthog.) & 0.65 eV\\
+TB (sd-non-orthog.) & 0.61 eV\\
+\end{tabular}
+\end{table}
 
 
 \section{Discussion}
-\label{sec:org7a2feeb}
+\label{sec:org8829d66}
 \label{sec:discussion}
 
 
@@ -778,7 +795,7 @@ saturation. There is insufficient data to say how strong this effect would be.
 
 
 \section{Future work}
-\label{sec:orgde16f02}
+\label{sec:org5281d69}
 
 The prerequisites for a line tension model are in place for determination of the kink-pair
 formation enthalpies of screw dislocations as a function of carbon content and stress. This is
@@ -813,7 +830,7 @@ easily around the dislocation, which is an important consideration in the drag m
 \cite{Nematollahi2016}.
 
 \section{Conclusion}
-\label{sec:org3b10c04}
+\label{sec:org42af055}
 
 Dislocation-assisted carbon migration is thought to be a viable mechanism by which martensite
 decays to form DER regions---mostly composed of ferrite interspersed in a martensitic
@@ -857,9 +874,9 @@ and how carbon can move with dislocations.
 
 
 \section{Appendix}
-\label{sec:org221d5fc}
+\label{sec:org05ed3db}
 \subsection{Regularisation of interaction energy in quadrupolar array}
-\label{sec:orgf39df20}
+\label{sec:org803be03}
 \label{sec:Ainteractionenergy}
 
 
@@ -893,7 +910,7 @@ regularised interaction energy.
 
 
 \subsection{Zero-point energy calculation}
-\label{sec:org47150e5}
+\label{sec:org0fbb366}
 \label{sec:zeropointenergy}
 
 After relaxation of the C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
@@ -908,8 +925,8 @@ the mass of carbon.
 
 
 \section{Bibliography}
-\label{sec:org003ea64}
-\label{orgad0de64}
+\label{sec:orga6b91c2}
+\label{org832d2f6}
 
 \bibliographystyle{unsrt}
 
