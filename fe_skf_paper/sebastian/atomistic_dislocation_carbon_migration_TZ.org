@@ -420,7 +420,8 @@
 
   #+ATTR_LATEX:  :width \textwidth :center
   #+CAPTION: Comparison of the Peierls potentials (left) produced from $d\text{-band}$ tight-binding, DFT and EAM along each of their respective the minimum energy pathways (right), which are the reaction coordinates for the figure on the right. The EAM potential of Mendelev \cite{Mendelev2003} has an unphysical well in the centre of the potential, while tight-binding and DFT produce single-humped potentials. Tight-binding follows a pathway much closer to that of DFT. EAM potentials predict that the dislocation core goes to the split core and then back to the easy core. Even though the Peierls landscape found in tight binding has similar characteristics to the EAM in terms of the energetic ordering of different core states, the description of the minimum energy pathway of the $1/2\langle 111 \rangle$ screw dislocation as it moves between core positions is in good agreement with DFT. [[label:easyeasytransition]]
-  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension_nopoints.png]]
+  [[file:Images/easy-easy_transition_pathway_combined_dTB_sdTB_DFT_EAM_dotted.png]]
+#  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension_nopoints.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam.png]]
 
@@ -878,11 +879,20 @@
    #+CAPTION: Kink-pair formation energies between DFT, and the two flavours of tight-binding used with the line-tension model. 
    | Method              | $E_{\text{kp}}^{\text{form}}$ |
    |---------------------+-------------------------|
-   | DFT                 | 0.72 eV                 |
-   | TB (d-orthog.)      | 0.65 eV                 |
-   | TB (sd-non-orthog.) | 0.61 eV                 |
+   | DFT                 | 0.81 eV                 |
+   | TB (sd-non-orthog.) | 0.72 eV                 |
+   | TB (d-orthog.)      | 0.67 eV                 |
    
    
+
+   Analysing the energies given at each point of the image in the transition state, one
+   can find the Peierls potential. Each of the Peierls potentials from these calculations
+   match well with atomistic NEB simulations from both DFT and tight-binding
+   cite:Ventelon_2013,Simpson2019.
+
+   #+CAPTION: Peierls potential obtained with line tension model from the Itakura data set and tight-binding simulations. The height of these barriers agree well with atomistic NEB calculations of the Peierls barrier in both DFT and tight-binding. 
+   [[file:Images/fe_peierls_potential_pure.png]]
+
 * Discussion
   \label{sec:discussion}
 
