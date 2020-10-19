@@ -820,7 +820,9 @@
 
    #+ATTR_LATEX:  :width 0.8\textwidth :center
    #+CAPTION: Fit of Lorentzian to carbon-dislocation binding energies. The sites chosen to fit to were determined by those sites a prismatic carbon in a hard core configuration would find itself, if the dislocation were to move without it along the $X = \langle\bar{2}11\rangle$ direction. [[label:lorentzianfit]]
-   [[file:~/Documents/docs/Management/Images/fe-c_lorentzian_fit_binding_energies2.png]]
+[[file:Images/fe-c_lorentzian_fit_binding_energies_quadrupole.png]]
+
+#   [[file:~/Documents/docs/Management/Images/fe-c_lorentzian_fit_binding_energies2.png]]
    
 #    To choose the sites to fit the Lorentzian too, 
 #    Upon movement of a screw dislocation saturated with carbon, for example, the expected hard core
@@ -884,6 +886,9 @@
    | TB (d-orthog.)      | 0.67 eV                 |
    
    
+   #+ATTR_LATEX:  :width 0.9\textwidth :center
+   #+CAPTION: Dependence of the kink-pair formation enthalpy with increasing stress on the $[111](1\bar{1}0)$ direction. DFT results taken from Itakura \cite{Itakura2012}, with experimental data taken from Spitzig \cite{Spitzig_1970}    [[label:kinkpairstress]].
+   [[file:Images/kink-pair_formation_enthalpies_all.png]]
 
    Analysing the energies given at each point of the image in the transition state, one
    can find the Peierls potential. Each of the Peierls potentials from these calculations
@@ -892,6 +897,9 @@
 
    #+CAPTION: Peierls potential obtained with line tension model from the Itakura data set and tight-binding simulations. The height of these barriers agree well with atomistic NEB calculations of the Peierls barrier in both DFT and tight-binding. 
    [[file:Images/fe_peierls_potential_pure.png]]
+
+
+
 
 * Discussion
   \label{sec:discussion}
