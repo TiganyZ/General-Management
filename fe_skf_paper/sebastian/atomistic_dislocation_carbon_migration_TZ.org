@@ -420,7 +420,8 @@
 
   #+ATTR_LATEX:  :width \textwidth :center
   #+CAPTION: Comparison of the Peierls potentials (left) produced from $d\text{-band}$ tight-binding, DFT and EAM along each of their respective the minimum energy pathways (right), which are the reaction coordinates for the figure on the right. The EAM potential of Mendelev \cite{Mendelev2003} has an unphysical well in the centre of the potential, while tight-binding and DFT produce single-humped potentials. Tight-binding follows a pathway much closer to that of DFT. EAM potentials predict that the dislocation core goes to the split core and then back to the easy core. Even though the Peierls landscape found in tight binding has similar characteristics to the EAM in terms of the energetic ordering of different core states, the description of the minimum energy pathway of the $1/2\langle 111 \rangle$ screw dislocation as it moves between core positions is in good agreement with DFT. [[label:easyeasytransition]]
-  [[file:Images/easy-easy_transition_pathway_combined_dTB_sdTB_DFT_EAM_dotted.png]]
+  [[file:Images/easy-easy_transition_pathway_correct_gradient.png]]
+#  [[file:Images/easy-easy_transition_pathway_combined_dTB_sdTB_DFT_EAM_dotted.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension_nopoints.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam_line-tension.png]]
 #  [[file:Images/easy-easy_transition_pathway_combined_dft_dTB_eam.png]]
@@ -822,6 +823,12 @@
    #+CAPTION: Fit of Lorentzian to carbon-dislocation binding energies. The sites chosen to fit to were determined by those sites a prismatic carbon in a hard core configuration would find itself, if the dislocation were to move without it along the $X = \langle\bar{2}11\rangle$ direction. [[label:lorentzianfit]]
 [[file:Images/fe-c_lorentzian_fit_binding_energies_quadrupole.png]]
 
+   # Parameters 
+   # gamma  =  0.37126788430432184
+   # r0  =  6.514357682207945
+
+   
+
 #   [[file:~/Documents/docs/Management/Images/fe-c_lorentzian_fit_binding_energies2.png]]
    
 #    To choose the sites to fit the Lorentzian too, 
@@ -868,7 +875,8 @@
 
    #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Core positions of the line tension model from DFT (blue) and tight-binding (yellow) for the middle image corresponding the MEP and the kink-pair formation energy. Images were relaxed using the ODE String method of Makri and Ortner \cite{Makri2019}. $P_x$ and $P_y$ correspond to the x/y-coordinate of the dislocation core position in each of the discretised layers of the dislocation. One finds that the kink width in tight-binding is wider than that found in DFT, which corresponds with the fact that the width is proportional to $b\sqrt{K/\Delta E_P}$, where the reduction in $\Delta E_P^{\text{tbe}}$ is greater than the reduction in $K_{\text{tbe}}$.   [[label:lineshape]].
-   [[file:Images/lineshape-all_redo.png]]
+   [[file:Images/lineshape-all_correct_gradient.png]]
+#   [[file:Images/lineshape-all_redo.png]]
 
    The julia implementation of the NEB/string algorithms was used cite:Makri2019. One
    finds that the line shapes are similar to that of Itakura, for the x-coordinate of the
@@ -888,7 +896,8 @@
    
    #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Dependence of the kink-pair formation enthalpy with increasing stress on the $[111](1\bar{1}0)$ direction. DFT results taken from Itakura \cite{Itakura2012}, with experimental data taken from Spitzig \cite{Spitzig_1970}    [[label:kinkpairstress]].
-   [[file:Images/kink-pair_formation_enthalpies_all.png]]
+   [[file:Images/kink-pair_formation_enthalpies_corrected.png]]
+#   [[file:Images/kink-pair_formation_enthalpies_all.png]]
 
    Analysing the energies given at each point of the image in the transition state, one
    can find the Peierls potential. Each of the Peierls potentials from these calculations
