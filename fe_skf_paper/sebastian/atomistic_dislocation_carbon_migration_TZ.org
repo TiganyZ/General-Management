@@ -286,20 +286,20 @@
     The concentration is given by 
 
     \begin{equation}
-    \frac{ c_d^{i} }{1 -  c_d^{i} } = \frac{ c_{\text{bulk}}^{} }{1 - c_{\text{bulk}} } \text{exp} \Big( 
+    \frac{ c_d^{i} }{1 -  c_d^{i} } = \frac{ c_{\text{bulk}} }{1 - c_{\text{bulk}} } \text{exp} \Big( 
     \frac{E_{\text{b}}^i}{k_{\text{B}}T}  \Big),    \label{eq:cd}
     \end{equation}
     where $i$ denotes the $i^{\text{th}}$ carbon binding site, with $E_{\text{b}}^{i}$, being the
     corresponding dislocation-solute binding energy (in the convention of attraction
     denoting a positive binding energy). $c_d^{i}$ is the average concentration of the $i^{\text{th}}$ carbon
-    site bound to the dislocations. $c_{\text{bulk}}^{}$ is the carbon concentration in the bulk, with
-    $c_{\text{nom}}^{}$ the nominal carbon concentration per Fe atom.
+    site bound to the dislocations. $c_{\text{bulk}}$ is the carbon concentration in the bulk, with
+    $c_{\text{nom}}$ the nominal carbon concentration per Fe atom.
 
 
     In a given volume $V$, the number of carbon sites along the dislocation cores is $N_d = \rho V/b$,
     with $\rho$ the dislocation density, and the number of octahedral sites is $N_{\text{oct}} =
     6V/a_{\text{bcc}}$. This imposes constraints on the carbon concentrations: $N_{\text{oct}}
-    c_{\text{bulk}}^{} + N_d c_d = N_{\text{oct}} c_{\text{nom}}/3$, where the factor of 3 is because there are
+    c_{\text{bulk}} + N_d c_d = N_{\text{oct}} c_{\text{nom}}/3$, where the factor of 3 is because there are
     three octahedral sites per Fe atom in the bcc lattice. Using this relation, equation ref:eq:cd
     can be solved self-consistently to give the carbon concentration around the core, as a function
     of nominal carbon concentration and temperature. The nominal carbon concentration was taken to
@@ -310,25 +310,26 @@
     found in Fe-0.61wt%C martensite cite:morito03_disloc_densit_within_lath_marten.
   
 
-** Progression to Line Tension Model 
+**  Line Tension Model 
 
    From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
    line tension model of a dislocation from which we can obtain the kink-pair formation energies as
-   a function of stress and carbon content.  This model views the dislocation as an elastic string
+   a function of stress and carbon content. This model views the dislocation as an elastic string
    which moves on the Peierls potential $\Delta E_{\text{P}}$.
 
    The dislocation is modelled as a discretised line, with layer labels $j$. The energy of the
    dislocation line is given by:
 
    \[ E_{\text{LT}} = \frac{K}{2} \sum_j (\vec{P}_j - \vec{P}_{j+1} )^2  + \sum_j \Delta E_{\text{P}}  (\vec{P}_j) +
-   (\sigma \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j  - \sum_{j,k} E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|), \]
+   (\sigma \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j  - \sum_{j,k} E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{\text{C}}|), \]
    
    where $K$ is a constant calculated from the model, $\Delta E_{\text{P}}$ is the Peierls potential, $\sigma$ is
    the stress applied and $\vec{b}$ is the burger's vector, with the dislocation line sense given by
    $\vec{l}$. $\vec{P_{j}}$ corresponds to the dislocation core position in a given
-   layer. $E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{}^{\text{C}}|)$ is the binding energy of a particular carbon
+   layer. $E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{\text{C}}|)$ is the binding energy of a particular carbon
    $k$, at position $\vec{P}_k^{\text{C}}$, to a dislocation core positioned at $\vec{P}_j$. The kink-pair
-   formation enthalpies can then be found using the NEB/String method, to find the height of the transition-state
+   formation enthalpies can then be found using the string method to
+   relax images which interpolate between the initial and final, to find the height of the transition-state
    barrier. 
 
 * Results
@@ -878,26 +879,65 @@
    [[file:Images/lineshape-all_correct_gradient.png]]
 #   [[file:Images/lineshape-all_redo.png]]
 
-   The julia implementation of the NEB/string algorithms was used cite:Makri2019. One
-   finds that the line shapes are similar to that of Itakura, for the x-coordinate of the
-   dislocation core position.  
+   A julia implementation of the string algorithm, accelerated by use
+   of an ODE solver, was used to relax the images cite:Makri2019. One finds that the line
+   shapes are similar to that of Itakura, for the x-coordinate of the
+   dislocation core position.
 
-   One finds that the kink width in tight-binding is slightly wider than that found in DFT, which
+   The kink width in tight-binding is slightly wider than that found in DFT, which
    corresponds with the fact that the width is proportional to $b\sqrt{K/\Delta E_P}$, where the
    reduction in $\Delta E_P^{\text{tbe}}$ is greater than the reduction in $K^{\text{tbe}}$ cite:Itakura2012. 
 
+   To validate the model, the itakura dat
+   
    #+CAPTION: Kink-pair formation energies between DFT, and the two flavours of tight-binding used with the line-tension model. 
    | Method              | $E_{\text{kp}}^{\text{form}}$ |
    |---------------------+-------------------------|
-   | DFT                 | 0.81 eV                 |
-   | TB (sd-non-orthog.) | 0.72 eV                 |
-   | TB (d-orthog.)      | 0.67 eV                 |
+   | DFT                 | 0.71 eV                 |
+   | TB (sd-non-orthog.) | 0.56 eV                 |
+   | TB (d-orthog.)      | 0.53 eV                 |
    
+   # Stress matrices for sd-TB in eV/GPa, with stress matrix
+   # normalised to 1. 
+   #      -0.0        0.323647  -0.0   
+   #       0.323647  -0.0       -0.7903
+   #      -0.0       -0.7903    -0.0   
    
+   # # In units of GPa
+   #      -0.0        51.854  -0.0   
+   #       51.854    -0.0     -126.62
+   #      -0.0       -126.62   -0.0   
+
+ 
+ [[file:Images/lineshape_with_carbon_combined.png]]
+
+ [[file:Images/lineshape_with_carbon_combined_Py.png]]
+
+
+
+
+ [[file:Images/H_itakura_0.0_MPa.png]]
+ [[file:Images/H_itakura_0.0025_MPa.png]]
+ [[file:Images/H_itakura_0.005_MPa.png]]
+
    #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Dependence of the kink-pair formation enthalpy with increasing stress on the $[111](1\bar{1}0)$ direction. DFT results taken from Itakura \cite{Itakura2012}, with experimental data taken from Spitzig \cite{Spitzig_1970}    [[label:kinkpairstress]].
-   [[file:Images/kink-pair_formation_enthalpies_corrected.png]]
-#   [[file:Images/kink-pair_formation_enthalpies_all.png]]
+ [[file:Images/img_comparison_of_kink_pair_energies_real_stress.png]]
+
+ [[file:Images/img_comparison_of_kink_pair_energies.png]]
+
+
+   # | Method              | $E_{\text{kp}}^{\text{form}}$ |
+   # |---------------------+-------------------------|
+   # | DFT                 | 0.81 eV                 |
+   # | TB (sd-non-orthog.) | 0.72 eV                 |
+   # | TB (d-orthog.)      | 0.67 eV                 |
+   
+   
+#    #+ATTR_LATEX:  :width 0.9\textwidth :center
+#    #+CAPTION: Dependence of the kink-pair formation enthalpy with increasing stress on the $[111](1\bar{1}0)$ direction. DFT results taken from Itakura \cite{Itakura2012}, with experimental data taken from Spitzig \cite{Spitzig_1970}    [[label:kinkpairstress]].
+#    [[file:Images/kink-pair_formation_enthalpies_corrected.png]]ss
+# #   [[file:Images/kink-pair_formation_enthalpies_all.png]]
 
    Analysing the energies given at each point of the image in the transition state, one
    can find the Peierls potential. Each of the Peierls potentials from these calculations
@@ -1148,7 +1188,7 @@
    \text{ln}\frac{|\mathbf{R}|^2}{|\mathbf{R}+\mathbf{a}|\cdot|\mathbf{R}-\mathbf{a}|},
    \]
    we obtain,
-   \[ E_{\text{img}} = \frac{1}{2}\sum_{\mathbf{R}} [ E_{\text{dd}} (\mathbf{R}) - E_{\text{dg}} (\mathbf{R}) ] - \frac{1}{2}_{}
+   \[ E_{\text{img}} = \frac{1}{2}\sum_{\mathbf{R}} [ E_{\text{dd}} (\mathbf{R}) - E_{\text{dg}} (\mathbf{R}) ] - \frac{1}{2}
    E_{\text{dg}} (\mathbf{R} = 0),  \]
    
    which can be subtracted from the total energy as given from atomistic calculations, for a
