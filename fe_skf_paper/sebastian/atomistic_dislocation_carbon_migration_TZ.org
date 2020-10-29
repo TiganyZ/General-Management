@@ -888,7 +888,7 @@
    corresponds with the fact that the width is proportional to $b\sqrt{K/\Delta E_P}$, where the
    reduction in $\Delta E_P^{\text{tbe}}$ is greater than the reduction in $K^{\text{tbe}}$ cite:Itakura2012. 
 
-   To validate the model, the itakura dat
+   To validate the model, 
    
    #+CAPTION: Kink-pair formation energies between DFT, and the two flavours of tight-binding used with the line-tension model. 
    | Method              | $E_{\text{kp}}^{\text{form}}$ |
@@ -923,6 +923,9 @@
    #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Dependence of the kink-pair formation enthalpy with increasing stress on the $[111](1\bar{1}0)$ direction. DFT results taken from Itakura \cite{Itakura2012}, with experimental data taken from Spitzig \cite{Spitzig_1970}    [[label:kinkpairstress]].
  [[file:Images/img_comparison_of_kink_pair_energies_real_stress.png]]
+
+[[file:Images/img_differeice_of_kink_pair_energies_real_stress.png]]
+
 
  [[file:Images/img_comparison_of_kink_pair_energies.png]]
 
