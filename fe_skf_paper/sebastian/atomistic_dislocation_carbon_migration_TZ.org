@@ -915,6 +915,11 @@
 
 
 
+ [[file:Images/H_pathway_tol_1e-3.png]]
+
+ [[file:Images/img_comparison_of_images_shift_tol_1e-3.png]]
+ 
+ [[file:Images/img_comparison_of_kink_pair_energies_real_stress_prelim.png]]
 
  [[file:Images/H_itakura_0.0_MPa.png]]
  [[file:Images/H_itakura_0.0025_MPa.png]]
