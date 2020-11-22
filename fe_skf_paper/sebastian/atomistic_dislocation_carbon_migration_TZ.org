@@ -733,6 +733,20 @@
       \label{cdhardeasy}
          \end{figure}
 	 \end{landscape}
+
+
+
+
+   
+   
+   \begin{landscape}
+      \begin{figure}	
+         \includegraphics[width=1.8\textwidth]{Images/mcclean_isotherm_all.png} 		
+      \caption{ Variation of carbon concentration on the dislocation line $c_d$ for each of the binding sites for the easy core (top) and hard core (bottom). Solid, dashed and dotted lined correspond to dislocation densities of $1\times10^{12}$, $1\times10^{14}$ and $5\times10^{15}$ respectively. The nominal carbon concentrations are 10, 100, 433 and 1000 appm from left to right, where 433 appm corresponds to the concentration of carbon at the solubility limit of C in ferrite: 0.02wt\% $\approx433$ appm. $c_d$ and $c_{\text{bulk}}$ reached self-consistency, with an absolute tolerance of $1\times10^{-6}$. C-C interactions were taken into account with the repulsive first-neighbour interaction energy $V_{\text{CC}}=0.21$ eV. The concentration of carbon around the easy core, drops off at a lower temperature than that of the hard core due to lower binding energies, with reduction in concentration  The operating temperature is taken to be $50\deg$ C $= 320 \deg$ K. }
+      \label{cdhardeasy}
+         \end{figure}
+	 \end{landscape}
+
     
       #  Perform analysis of carbon dimer near dislocation core??
       # Are there stable defect clusters near the dislocation core? 
@@ -915,24 +929,34 @@
 
 
 
- [[file:Images/H_pathway_tol_1e-3.png]]
-
  [[file:Images/img_comparison_of_images_shift_tol_1e-3.png]]
  
- [[file:Images/img_comparison_of_kink_pair_energies_real_stress_prelim.png]]
+# [[file:Images/img_comparison_of_kink_pair_energies_real_stress_prelim.png]]
 
- [[file:Images/H_itakura_0.0_MPa.png]]
- [[file:Images/H_itakura_0.0025_MPa.png]]
- [[file:Images/H_itakura_0.005_MPa.png]]
+ # [[file:Images/H_itakura_0.0_MPa.png]]
+ # [[file:Images/H_itakura_0.0025_MPa.png]]
+ # [[file:Images/H_itakura_0.005_MPa.png]]
+   #+ATTR_LATEX:  :width 0.9\textwidth :center
+   #+CAPTION: Validation of the Fe-H Itakura results using the line tension model.[[label:kinkpairstress]].
+[[file:Images/H_itakura_0_MPa.png]]
+[[file:Images/H_itakura_400_MPa.png]]
+[[file:Images/H_itakura_800_MPa.png]] 
 
    #+ATTR_LATEX:  :width 0.9\textwidth :center
+   #+CAPTION: Pathway of the highest enthalpy image in Fe-H. 
+ [[file:Images/H_pathway_tol_1e-3.png]]
+
+ 
+   #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Dependence of the kink-pair formation enthalpy with increasing stress on the $[111](1\bar{1}0)$ direction. DFT results taken from Itakura \cite{Itakura2012}, with experimental data taken from Spitzig \cite{Spitzig_1970}    [[label:kinkpairstress]].
+[[file:Images/img_comparison_of_kink_pair_energies_real_stress_with_C.png]]
+
+Lower tolerances for relaxation below $\sim 1$ MeV/$\AA$. 
  [[file:Images/img_comparison_of_kink_pair_energies_real_stress.png]]
 
-[[file:Images/img_differeice_of_kink_pair_energies_real_stress.png]]
+# [[file:Images/img_differeice_of_kink_pair_energies_real_stress.png]]
 
-
- [[file:Images/img_comparison_of_kink_pair_energies.png]]
+#  [[file:Images/img_comparison_of_kink_pair_energies.png]]
 
 
    # | Method              | $E_{\text{kp}}^{\text{form}}$ |
