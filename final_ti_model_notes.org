@@ -448,7 +448,7 @@ DFT pseudopot:
 
 
 
-*** TODO Dissociation Distance Analysis
+*** DONE Dissociation Distance Analysis
     Following cite:Clouet2012, one can dislocation elasticity theory to
     compute the dissociation distance of a dislocation in both the
     basal and prism planes.  The energy variation caused by a

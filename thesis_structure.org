@@ -21,7 +21,7 @@
      functional theory / Horsfield [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
 
 *** TODO Read Majeski & Vogel [[file:~/Documents/books/The%20Structures%20of%20Binary%20Compounds%20by%20J.%20Hafner,%20F.%20Hulliger,%20W.B.%20Jensen,%20J.A.%20Majewski,%20K.%20Mathis,%20P.%20Villars%20and%20P.%20Vogl%20(Eds.)%20(z-lib.org).pdf][Structures of binary compounds chapter 4]]
-    DEADLINE: <2020-09-04 Fri>
+    DEADLINE: <2021-02-05 Fri>
     :PROPERTIES:
     :ORDERED:  t
     :END:
@@ -29,13 +29,13 @@
 **** TODO Relate to DFT
  
 *** TODO Read Horsfield-Smutna  [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
-    DEADLINE: <2020-09-09 Wed>
+    DEADLINE: <2021-02-19 Fri>
 
 *** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
-    DEADLINE: <2020-09-11 Fri>
+    DEADLINE: <2021-01-08 Fri>
        
 *** TODO Summarise the theory - Consolidate here 
-    DEADLINE: <2020-09-18 Fri>
+    DEADLINE: <2021-03-05 Fri>
    
 ** BOP
 ** Embedding
@@ -68,7 +68,7 @@
       
 
 *** TODO Finalize model for fitting 
-    DEADLINE: <2020-11-16 Mon>
+    DEADLINE: <2021-01-29 Fri>
 
 ** Remarks on tight-binding
    - Love it / Loathe it
@@ -114,11 +114,11 @@
    [2020-09-02 Wed 10:46]
    [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 *** TODO Core Energy difference in tbe - bop
-    DEADLINE: <2020-11-16 Mon>
+    DEADLINE: <2021-01-29 Fri>
     - Tiny difference of 0.53 eV which determines the difference
       between each of the core energies.
 *** TODO Calculate gamma surfaces for new model
-    DEADLINE: <2020-11-23 Mon>
+    DEADLINE: <2021-02-26 Fri>
     - Planar faults 
       - Compare to DFT literature of Rodney, Curtin and Tarrat
       - Compare to other TB models
@@ -155,7 +155,7 @@
       breaking down the total energy.
 
 ** TODO Defect clusters
-   DEADLINE: <2020-12-16 Wed>
+   DEADLINE: <2021-03-26 Fri>
 
 ** TODO Binding of oxygen to dislocations if possible
    DEADLINE: <2021-01-10 Sun>
@@ -181,14 +181,14 @@
 ** DONE Carbon binding to dislocations
 
 ** TODO Energy dependence with radius - Add data
-   DEADLINE: <2020-11-16 Mon>
+   DEADLINE: <2021-01-29 Fri>
 
-** TODO Concentration Analysis - Add in repulsive energy
+** DONE Concentration Analysis - Add in repulsive energy
    DEADLINE: <2020-09-25 Fri>
 
-** TODO Line Tension Model
+** DONE Line Tension Model
 
-*** TODO Derive line tension equations 
+*** DONE Derive line tension equations 
     DEADLINE: <2020-09-25 Fri>
     :LOGBOOK:
     CLOCK: [2020-09-15 Tue 11:00]--[2020-09-16 Wed 11:39] => 24:39
@@ -196,14 +196,14 @@
     :END:
 
 *** TODO  Use simple models  
-    DEADLINE: <2020-10-02 Fri>
+    DEADLINE: <2021-01-22 Fri>
     - Sine-Gordon
     - Others as found in Caillard [[file:~/Documents/books/Thermally%20Activated%20Mechanisms%20in%20Crystal%20Plasticity%20by%20D.%20Caillard%20and%20J.L.%20Martin%20(Eds.)%20(z-lib.org)%20(1).pdf][Thermally activated mechanisms in crystal plasticity]]
 
-*** TODO Verify Itakura results with impelementation
+*** DONE Verify Itakura results with impelementation
     DEADLINE: <2020-10-16 Fri>
 
-*** TODO Look at what we get from d/sd Iron models 
+*** DONE Look at what we get from d/sd Iron models 
     DEADLINE: <2020-11-06 Fri>
 
 * Wish-list

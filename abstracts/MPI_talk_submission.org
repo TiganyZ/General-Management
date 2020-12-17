@@ -1,0 +1,37 @@
+Martensitic bearing steels undergo subsurface microstructural decay, forming Dark Etching Regions, which promote failure through rolling contact fatigue. Dislocation-assisted carbon migration is thought to be the underlying mechanism, yet empirical studies have been inconclusive as to how dislocations move carbon and where excess carbon from martensite migrates to upon transformation to ferrite. We detail a multi-scale modelling approach to elucidate carbon transport by dislocations. Quantum-mechanical tight-binding simulations found that carbon stabilises the 1/2<111> hard screw dislocation core---in agreement with ab-initio calculations. Equilibrium carbon concentrations, estimated from solute-dislocation interaction energies, suggest all dislocations are pinned in this hard-core configuration, in typical conditions. A dislocation line tension model found kink-pair formation enthalpies to decrease with both carbon content and stress. Kinetic Monte Carlo simulations incorporating solute diffusion will complete the multi-scale description, showing potential mechanisms for dislocation-assisted carbon migration.
+
+  Martensitic bearing steels undergo subsurface microstructural decay, forming Dark Etching Regions, which promote failure through rolling contact fatigue. Dislocation-assisted carbon migration is thought to be the underlying mechanism, yet empirical studies have been inconclusive as to how dislocations move carbon and where excess carbon from martensite migrates to upon transformation to ferrite. We detail a multi-scale modelling approach to elucidate carbon transport by dislocations. Tight-binding simulations found that carbon stabilises the 1/2<111> hard screw dislocation core---in agreement with ab-initio calculations. Equilibrium carbon concentrations, estimated from solute-dislocation interaction energies, suggest all dislocations are pinned in this hard-core configuration, in typical conditions. A dislocation line tension model found kink-pair formation enthalpies to decrease with both carbon content and stress. Kinetic Monte Carlo simulations incorporating solute diffusion will complete the multi-scale description, showing potential mechanisms for dislocation-assisted carbon migration in steels.
+
+
+
+  Martensitic bearing steels undergo subsurface microstructural decay, forming Dark Etching
+  Regions, which promote failure through rolling contact fatigue. Dislocation-assisted carbon
+  migration is thought to be the underlying mechanism, yet empirical studies have been inconclusive as to how
+  dislocations move carbon and where excess carbon from martensite migrates to upon transformation
+  to ferrite. We detail a multi-scale modelling approach to elucidate carbon transport by
+  dislocations. Tight-binding simulations found the ground state carbon-$1/2\langle 111 \rangle$ screw
+  dislocation configuration as hard-core with a carbon in a prismatic site---in agreement with ab-initio
+  calculations. Equilibrium carbon-concentration calculations suggest all dislocations are pinned in this
+  ground-state configuration in typical operating conditions. A dislocation line
+  tension model found kink-pair formation enthalpies to decrease with both carbon content and stress. Kinetic
+  Monte Carlo (kMC) simulations incorporating solute diffusion will complete the multi-scale description.
+
+
+  Martensitic bearing steels have been shown to undergo subsurface microstructural decay, forming Dark Etching
+  Regions (DERs), promoting failure through rolling contact fatigue (RCF). Dislocation-assisted carbon
+  migration is thought to be the underlying mechanism, yet empirical studies have been inconclusive as to how
+  dislocations move carbon and where excess carbon from the martensitic matrix migrates to upon transformation
+  to ferrite---a phase of significantly lower carbon solubility. In this talk, we detail the first stages of a
+  multi-scale modelling approach to elucidate carbon transport by dislocations. Tight-binding simulations of
+  carbon interactions with the $1/2\langle 111 \rangle$ screw dislocation found solute distribution to vary
+  significantly within ~2b of the easy and hard cores; the highest binding energy being found in the centre of
+  the hard screw core---which is the ground state carbon-dislocation configuration---in agreement with Density
+  Functional Theory (DFT). Determination of equilibrium carbon concentration along dislocation lines, at
+  various dislocation densities and nominal carbon concentrations, found most sites around the hard core to be
+  saturated, with all easy cores reconstructing to hard due to saturation of adjacent octahedral sites. In the
+  typical temperature range of bearing operation, we expect all dislocations to be of hard core type, pinned
+  by carbon in a prismatic site within the dislocation core. A line tension model of a dislocation was built
+  from tight-binding results. Kink-pair formation enthalpies were found to decrease with both carbon content and
+  stress. These results provide the basis for the last stage in this multi-scale approach:
+  a kinetic Monte Carlo (kMC) simulation incorporating solute diffusion. From these results we can ascertain
+  how carbon moves with dislocations in different stress, temperature and concentration regimes.

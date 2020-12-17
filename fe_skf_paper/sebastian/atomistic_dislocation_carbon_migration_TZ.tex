@@ -1,4 +1,4 @@
-% Created 2020-11-22 Sun 20:59
+% Created 2020-11-26 Thu 14:16
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -62,7 +62,7 @@ concentration regimes.
 \clearpage
 
 \section{Introduction}
-\label{sec:org033486a}
+\label{sec:org69cc2fb}
 
 Martensitic steels are frequently used in bearings due to their resilience to service conditions,
 being subject to high rotational speeds and contact pressures. However, under cyclic loading
@@ -158,7 +158,7 @@ dislocation motion in the martensitic matrix, mitigating failure by RCF.
 
 
 \section{Computational Method}
-\label{sec:orgb381d2d}
+\label{sec:org52a1c79}
 
 
 We use the tight-binding model of Paxton and Elsässer \cite{Paxton2013}, which has been shown to
@@ -173,7 +173,7 @@ behaviours.
 
 
 \subsection{Peierls Potential}
-\label{sec:orgf7dafcd}
+\label{sec:org6ed405f}
 
 To determine the Peierls potential of the \(1/2\langle 111 \rangle\) screw dislocation, we followed the
 procedure detailed in Itakura \cite{Itakura2012}. Quadrupolar arrays of dislocations were
@@ -242,7 +242,7 @@ interaction energies must be subracted, which is achieved by the correction term
    = \frac{1}{2} ( E_{\text{INT}}^{i} - E_{\text{INT}}^{\text{E}} )\).
 
 \subsection{Preliminary calculations}
-\label{sec:org0b0981a}
+\label{sec:org3f43e66}
 To determine the binding energy of carbon to dislocations, we used the cluster method, as shown
 in figure \ref{fig:dislocationschematics}, right. Simulation
 cells consisted of a cylindrical cluster of atoms, with a single dislocation introduced into the
@@ -285,7 +285,7 @@ constraints were imposed on the middle layer.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org240b6dd}
+\label{sec:orgce8eab5}
 We calculated the carbon-dislocation binding energies as in Itakura
  \cite{itakura13_effec_hydrog_atoms_screw_disloc}.
 
@@ -307,7 +307,7 @@ where \(\Delta E_z = E_z - E_{z}^{\text{C ref.}}\) and \(E_{z}^{\text{C ref.}} =
 situated in an octahedral site in a perfect cluster of the same size. 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:org147da44}
+\label{sec:orgd2888e3}
 
 Using the Fe-C binding energies, one can predict the equilibrium carbon concentration of a carbon
 binding site \(c_d\), under the assumption that carbon atoms around the core are sufficiently spaced such that intersite
@@ -341,7 +341,7 @@ found in Fe-0.61wt\%C martensite \cite{morito03_disloc_densit_within_lath_marten
 
 
 \subsection{Line Tension Model}
-\label{sec:org4f1ba8b}
+\label{sec:orga989cbf}
 
 From the atomistic calculations of the Peierls potential and carbon-dislocation binding energies, one can make a
 line tension model of a dislocation from which we can obtain the kink-pair formation energies as
@@ -364,10 +364,10 @@ relax images which interpolate between the initial and final, to find the height
 barrier. 
 
 \section{Results}
-\label{sec:org9f24e91}
+\label{sec:org7a8601f}
 
 \subsection{Peierls Potential}
-\label{sec:orge8ad9c3}
+\label{sec:orgbd359dd}
 
         \begin{figure}
     \begin{tabular}{c}
@@ -471,7 +471,7 @@ In the EAM model, the midpoint along the hard-split transition is not a saddle
 point. The MEP for kink-pair formation deviates widely from the DFT path. 
 
 \subsection{Preliminary calculations}
-\label{sec:org12757b0}
+\label{sec:org2a38b7d}
 
 
 To validate the cluster simulation method, the excess energy, defined as the difference in energy
@@ -509,7 +509,7 @@ energy.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:org346f780}
+\label{sec:org6098986}
 
 
 
@@ -644,11 +644,19 @@ solution energies for Fe-C defect complexes are well described. This implies the
 insufficient repulsion between Fe-Fe species upon deformation, leading to a larger
 resultant Fe-C binding energy from tight-binding.
 
+\subsubsection{Migration energy of carbon from the hard core}
+\label{sec:org15f241b}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{Images/H1-H1_migration_energy_barrier.png}
+\caption{Migration energy from H1 to H2 site from NEB calculations.}
+\end{figure}
 
 
 
 \subsection{Analysis of carbon concentration along dislocation}
-\label{sec:org1cd74de}
+\label{sec:org3a207b2}
 
 Variation of carbon concentration along the dislocation line for each of the binding sites can be
 seen in figure \ref{cdhardeasy}. Due to the lower overall binding energies of carbon to the easy
@@ -685,10 +693,14 @@ the easy core by the adjacent carbon.
 \begin{landscape}
    \begin{figure}	
       \includegraphics[width=1.8\textwidth]{Images/mcclean_isotherm_all.png} 		
-   \caption{ Variation of carbon concentration on the dislocation line $c_d$ for each of the binding sites for the easy core (top) and hard core (bottom). Solid, dashed and dotted lined correspond to dislocation densities of $1\times10^{12}$, $1\times10^{14}$ and $5\times10^{15}$ respectively. The nominal carbon concentrations are 10, 100, 433 and 1000 appm from left to right, where 433 appm corresponds to the concentration of carbon at the solubility limit of C in ferrite: 0.02wt\% $\approx433$ appm. $c_d$ and $c_{\text{bulk}}$ reached self-consistency, with an absolute tolerance of $1\times10^{-6}$. C-C interactions were taken into account with the repulsive first-neighbour interaction energy $V_{\text{CC}}=0.21$ eV. The concentration of carbon around the easy core, drops off at a lower temperature than that of the hard core due to lower binding energies, with reduction in concentration  The operating temperature is taken to be $50\deg$ C $= 320 \deg$ K. }
+   \caption{ Variation of carbon concentration on the dislocation line $c_d$ for each of the binding sites for the easy core (top) and hard core (bottom). Solid, dashed, dotted and dash-dotted lines correspond to dislocation densities of $1\times10^{12}$, $1\times10^{14}$, $1\times10^{15}$ and $5\times10^{15}$ respectively. The nominal carbon concentrations are 10, 100, 433 and 1000 appm from left to right, where 433 appm corresponds to the concentration of carbon at the solubility limit of C in ferrite: 0.02wt\%. $c_d$ and $c_{\text{bulk}}$ reached self-consistency, with an absolute tolerance of $1\times10^{-6}$. C-C interactions were taken into account with the repulsive first-neighbour interaction energy $V_{\text{CC}}=0.21$ eV. No intersite interactions were taken into account. The maximum concentration of carbon around the easy core, drops off at a lower temperature than that of the hard core due to lower binding energies of the E$i$ sites compared to the H1 site. The operating temperature is taken to be $50\deg$ C $= 320 \deg$ K. }
    \label{cdhardeasy}
       \end{figure}
       \end{landscape}
+
+This assumes equilibrium but only between dislocations containing carbon and the
+bulk. In actuality the carbides will absorb carbon too, so there will actually be
+equilibrium between the carbides, dislocations, and the lattice.
 
 
 
@@ -696,7 +708,7 @@ the easy core by the adjacent carbon.
 
 
 \subsection{Progression to Line Tension Model}
-\label{sec:orgf3c3904}
+\label{sec:org7dda4c1}
 
 
 The \(K\) coefficient for the line tension model was calculated from atomistic simulations, using
@@ -822,7 +834,7 @@ match well with atomistic NEB simulations from both DFT and tight-binding
 
 
 \section{Discussion}
-\label{sec:org00fa572}
+\label{sec:org56e7298}
 \label{sec:discussion}
 
 
@@ -875,7 +887,7 @@ saturation. There is insufficient data to say how strong this effect would be.
 
 
 \section{Future work}
-\label{sec:org14651fa}
+\label{sec:org1953986}
 
 The prerequisites for a line tension model are in place for determination of the kink-pair
 formation enthalpies of screw dislocations as a function of carbon content and stress. This is
@@ -910,7 +922,7 @@ easily around the dislocation, which is an important consideration in the drag m
 \cite{Nematollahi2016}.
 
 \section{Conclusion}
-\label{sec:org8c9edd6}
+\label{sec:orga3050d6}
 
 Dislocation-assisted carbon migration is thought to be a viable mechanism by which martensite
 decays to form DER regions---mostly composed of ferrite interspersed in a martensitic
@@ -954,9 +966,9 @@ and how carbon can move with dislocations.
 
 
 \section{Appendix}
-\label{sec:org5e202c0}
+\label{sec:orge202120}
 \subsection{Regularisation of interaction energy in quadrupolar array}
-\label{sec:orgfde8e90}
+\label{sec:orgdb89227}
 \label{sec:Ainteractionenergy}
 
 
@@ -990,7 +1002,7 @@ regularised interaction energy.
 
 
 \subsection{Zero-point energy calculation}
-\label{sec:org37d60ca}
+\label{sec:orgef25b9a}
 \label{sec:zeropointenergy}
 
 After relaxation of the C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
@@ -1005,8 +1017,8 @@ the mass of carbon.
 
 
 \section{Bibliography}
-\label{sec:org9d8834d}
-\label{org6438295}
+\label{sec:org832bd37}
+\label{org72f4160}
 
 \bibliographystyle{unsrt}
 

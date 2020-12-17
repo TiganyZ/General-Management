@@ -1,0 +1,175 @@
+* DONE Read Majeski & Vogel 
+  :LOGBOOK:
+  CLOCK: [2020-08-27 Thu 12:21]--[2020-08-27 Thu 12:21] =>  0:00
+  :END:
+[2020-08-27 Thu 12:21]
+[[file:~/Documents/docs/Management/thesis_structure.org::*Tight-binding][Tight-binding]]
+** TODO Read Harrison
+   :LOGBOOK:
+   CLOCK: [2020-09-02 Wed 12:33]--[2020-09-02 Wed 12:33] =>  0:00
+   :END:
+ [2020-09-02 Wed 12:33]
+ [[file:~/Documents/docs/Management/thesis_structure.org::*Statement of the Problem][Statement of the Problem]]
+* TODO Recite electronic knowledge
+  :LOGBOOK:
+  CLOCK: [2020-08-27 Thu 23:52]--[2020-08-27 Thu 23:52] =>  0:00
+  :END:
+[2020-08-27 Thu 23:52]
+[[file:~/Documents/docs/Management/thesis_structure.org]]
+* DONE Record Habits 
+  :LOGBOOK:
+  CLOCK: [2020-08-27 Thu 23:53]--[2020-08-27 Thu 23:53] =>  0:00
+  :END:
+[2020-08-27 Thu 23:53]
+[[file:~/Documents/docs/Management/thesis_structure.org]]
+* NEXT Check Ti Models                                                :today:
+  :PROPERTIES:
+  :LAST_REPEAT: [2020-09-08 Tue 10:15]
+  :END:
+  - State "DONE"       from "TODO"       [2020-09-08 Tue 10:15]
+  - State "DONE"       from "NEXT"       [2020-09-02 Wed 11:57]
+  :LOGBOOK:
+  CLOCK: [2020-09-07 Mon 10:21]--[2020-09-08 Tue 10:15] => 23:54
+  CLOCK: [2020-09-02 Wed 10:46]--[2020-09-02 Wed 11:57] =>  1:11
+  CLOCK: [2020-09-02 Wed 10:45]--[2020-09-02 Wed 10:46] =>  0:01
+  CLOCK: [2020-09-02 Wed 10:25]--[2020-09-02 Wed 10:45] =>  0:20
+  :END:
+[2020-09-02 Wed 10:09]
+
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+** WAITING Run Dislocation Calculation                              :WAITING:
+   :PROPERTIES:
+   :LAST_REPEAT: [2020-09-08 Tue 10:16]
+   :END:
+   - State "DONE"       from "HOLD"       [2020-09-08 Tue 10:16]
+   - State "HOLD"       from "TODO"       [2020-09-07 Mon 10:20] \\
+     Checking models now
+   - State "DONE"       from "NEXT"       [2020-09-02 Wed 11:23]
+ [2020-09-02 Wed 11:12]
+ [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+ :PROPERTIES:
+ :STYLE: habit
+ :REPEAT_TO_STATE: NEXT
+ :END:
+** TODO Run next ti fitting
+   :PROPERTIES:
+   :LAST_REPEAT: [2020-09-08 Tue 10:16]
+   :END:
+   - State "DONE"       from "TODO"       [2020-09-08 Tue 10:16]
+   - State "DONE"       from "NEXT"       [2020-09-02 Wed 11:57]
+ [2020-09-02 Wed 11:31]
+ [[file:~/Documents/docs/Management/org/refile.org::*Run Dislocation Calculation][Run Dislocation Calculation]]
+ :PROPERTIES:
+ :STYLE: habit
+ :REPEAT_TO_STATE: NEXT
+ :END:
+*  Narrow band Hybrid nearly free TB pettifor lack of higher order terms ole andersen :NOTE:
+  :LOGBOOK:
+  CLOCK: [2020-09-02 Wed 12:59]--[2020-09-02 Wed 12:59] =>  0:00
+  :END:
+[2020-09-02 Wed 12:59]
+[[file:~/Documents/docs/Management/org/refile.org::*Read Harrison][Read Harrison]]
+* MEETING with Tony, discuss environmental dependence of bond integrals within BOP :MEETING:
+  :LOGBOOK:
+  CLOCK: [2020-09-03 Thu 16:14]--[2020-09-03 Thu 16:14] =>  0:00
+  :END:
+[2020-09-03 Thu 16:14]
+* HOLD Check Ti relaxation on SKF                                      :HOLD:
+  - State "HOLD"       from "NEXT"       [2020-09-07 Mon 10:17]
+[2020-09-07 Mon 10:16]
+SCHEDULED: <2020-09-07 Mon .+1d/7d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+* DONE Respond to  on 
+SCHEDULED: <2020-09-09 Wed>
+:LOGBOOK:
+CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
+:END:
+[2020-09-09 Wed 11:19]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+* DONE Respond to  on 
+SCHEDULED: <2020-09-09 Wed>
+:LOGBOOK:
+CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
+:END:
+[2020-09-09 Wed 11:19]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+* DONE Email James French to turn on Opal
+  :LOGBOOK:
+  CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:20] =>  0:01
+  :END:
+[2020-09-09 Wed 11:19]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+* TODO Think about the possible interactions of dislocations in dipole configuration upon relaxation
+  :LOGBOOK:
+  CLOCK: [2020-09-29 Tue 11:05]--[2020-09-29 Tue 11:06] =>  0:01
+  :END:
+[2020-09-29 Tue 11:05]
+[[file:~/Documents/line-tension/precon-path-paper/lt_fourier.jl::path = ODENEB(reltol=0.1, k=1000, interp=3, tol = tol,]]
+* DONE Add overlap in s-d model 
+  DEADLINE: <2020-10-07 Wed>
+  :LOGBOOK:
+  CLOCK: [2020-10-06 Tue 10:34]--[2020-10-06 Tue 10:34] =>  0:00
+  :END:
+[2020-10-06 Tue 10:34]
+[[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+* DONE Read Katzarov-Paxton LT paper
+  DEADLINE: <2020-11-27 Fri>
+  :LOGBOOK:
+  CLOCK: [2020-10-06 Tue 10:34]--[2020-10-06 Tue 10:34] =>  0:00
+  :END:
+[2020-10-06 Tue 10:34]
+[[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+* TODO [#B] Compile bop on French supercomputer
+  DEADLINE: <2020-12-23 Wed 16:00> SCHEDULED: <2020-11-27 Fri>
+  :LOGBOOK:
+  CLOCK: [2020-11-23 Mon 11:29]--[2020-11-23 Mon 11:30] =>  0:01
+  :END:
+[2020-11-23 Mon 11:29]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
+* WAITING [#A] Implement Line Tension McClean Isotherm              :WAITING:
+  SCHEDULED: <2020-12-16 Wed 18:20> DEADLINE: <2020-12-24 Thu>
+  - State "WAITING"    from "NEXT"       [2020-12-16 Wed 17:31] \\
+    Finish optimisation of emacs setup first
+  :LOGBOOK:
+  CLOCK: [2020-11-23 Mon 11:30]--[2020-11-23 Mon 11:31] =>  0:01
+  :END:
+[2020-11-23 Mon 11:30]
+[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
+* NEXT Check C Lorentzian potential gives no errors
+  SCHEDULED: <2020-12-17 Thu 11:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-16 Wed 17:40]--[2020-12-16 Wed 17:41] =>  0:01
+  :END:
+[2020-12-16 Wed 17:40]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Implement Line Tension McClean Isotherm][Implement Line Tension McClean Isotherm]]
+* TODO Concentration Analysis - think of intersites and if it is too much work 
+  :LOGBOOK:
+  CLOCK: [2020-11-23 Mon 11:34]--[2020-11-23 Mon 11:34] =>  0:00
+  :END:
+[2020-11-23 Mon 11:34]
+[[file:~/Documents/docs/Management/papers/Luthi2019.pdf]]
+* DONE Write Abstract for Materials Processing Institute
+  SCHEDULED: <2020-11-30 Mon> DEADLINE: <2020-12-14 Mon>
+  :LOGBOOK:
+  CLOCK: [2020-11-23 Mon 11:36]--[2020-11-23 Mon 11:37] =>  0:01
+  :END:
+[2020-11-23 Mon 11:36]
+* NEXT [#A] Sync Orgzly with org-mode                                 :today:
+  SCHEDULED: <2020-12-17 Thu 14:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-16 Wed 16:18]--[2020-12-16 Wed 16:19] =>  0:01
+  :END:
+[2020-12-16 Wed 16:18]
+* NEXT Think about energy dependence on distance, radial dependence?
+  SCHEDULED: <2020-12-17 Thu 11:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-16 Wed 22:45]--[2020-12-16 Wed 22:49] =>  0:04
+  :END:
+[2020-12-16 Wed 22:45]
+
