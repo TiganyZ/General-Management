@@ -1,10 +1,9 @@
 #+TITLE: SKF Internship: Things to do
 #+AUTHOR: Tigany Zarrouk
 
-
 * Results
-
 ** Binding of carbon to dislocations
+
    - After trialling dislocation dipole simulations to find the
      binding energy of carbon to dislocations, which unfortunately did
      not come to fruition because of computational time, one succeeded
@@ -220,19 +219,14 @@ Ordering these energies we get H1/H2, E2, E1, E5, H3, H4, E6,
 
 We have a zero-point energy correction 
 
+* TODO Consider Literature on any other calculations :Thesis:
+  DEADLINE: <2021-01-08 Fri 10:00> SCHEDULED: <2020-12-29 Tue 10:00>
 
-
-
-* TODO Determine Calculations
-  DEADLINE: <2019-11-21 Thu>
-   
-  - What needs to be calculated for the construction of a Kinetic Monte Carlo model?
-
-  - How have the calculations by Wang et al changed anything?
+- How have the calculations by Wang et al changed anything?
+- What are their kink pair formation energies with carbon? 
+- Does carbon move with dislocation? 
 
 ** Preliminary Calculations
-
-   
 ** TODO Core reconstruction (ECC -> HCC) by C
 
    It seems like the hard core configuration is stablised by C [[file:papers/2015_PRB%5BVentelon%20et%20al%20Fe-C%5D.pdf]] .
@@ -263,12 +257,12 @@ We have a zero-point energy correction
      it may be able to accurately obtain correct structure of the
      dislocation core with Carbon. 
 
-** TODO Reproduction of Forst's paper on defect clusters. 
+** TODO Reproduction of Forst's paper on defect clusters.
 
    [[file:papers/Forst_Point_Defect_Concentrations_in_Metastable_Fe-C_Alloys.pdf]]
 
 ** Necessary Calculations
-   
+
     1) Kink-pair formation enthalpy *with* and *without*
        carbon *at different stresses* to find the difference.
        - This is to account the effect of carbon trapped in the core
@@ -289,11 +283,10 @@ We have a zero-point energy correction
          as a kink sweeps past.
     4) The change in these solution energies with applied stress to
        find $E_t(\sigma)$.
-       
-* TODO Current Calculations
 
-   
+* TODO Current Calculations
 ** TODO Core Reconstruction of C with easy core to hard core.
+
    - This is to check that tight binding, like DFT, can reproduce the
      stablilisation of the hard screw core in bcc by C in a
      neighbouring intersitial site.
@@ -302,8 +295,6 @@ We have a zero-point energy correction
    - It is possible that there are other methods of kink-migration
      that are valid in the EAM compared to tight-binding. 
 
-
-   
 ** C-dislocation binding energies
 
    The cells have been set up for the dislocation binding energies. 
@@ -345,13 +336,11 @@ We have a zero-point energy correction
    perspective, but it does look like this puts the strain fields out
    of periodicity...
 
-
 ** TODO Peierls Barrier
-
 ** TODO Peierls Stress
+* DONE Generate Cells for Calculations
+  CLOSED: [2020-12-18 Fri 16:34] SCHEDULED: <2019-11-25 Mon>
 
-* TODO Generate Cells for Calculations
-  SCHEDULED: <2019-11-25 Mon>
    Once calculations necessary have been determined I can start generating files that generate dislocations. 
    
    - Generated a dislocation dipole with octahedral site near the easy
@@ -364,23 +353,20 @@ We have a zero-point energy correction
    - How does he simulate kinks?
    - Read Luke's Thesis
 
- 
-    
-* TODO Create Presentation 
-  DEADLINE: <2019-11-25 Mon>
-   
+* DONE Create Presentation
+  CLOSED: [2020-12-18 Fri 16:34] DEADLINE: <2019-11-25 Mon>
+
   - Make outline of presentaton
   - Tailor it for Eric Vegter and other members of group.
   - Show why this project is important
     - Put in things about how carbon migration is important
     - Check the new proposal
     - Fundamental interactions between C and dislocations. 
-* DONE Read Itakura    
 
-
+* DONE Read Itakura
 * DONE Project outline
   DEADLINE: <2019-11-22 Fri>
-   
+
   Create Gantt chart for the project. 
 
 
@@ -391,12 +377,9 @@ We have a zero-point energy correction
    - Do temper carbides dissolve with rolling contact fatigue? Or do
      they grow?
 
-
-
-** TODO Details of the context of the project. 
-
+** TODO Details of the context of the project.
 *** Initial microstructure of bearing steel
-     
+
     - Machined bearings are heat treated to produce a *martensitic* microstructure.
     - This is subsequently tempered.
     - In the martensitic and tempered condition, bearing steel consists of at least four different phases.
@@ -408,7 +391,6 @@ We have a zero-point energy correction
 
     - During /Austenisation/ a fraction of the spheroidised cementite dissolves and leads to a carbon enrichment of the austenite. 
 
-
 **** Austenite
 
       - This is fcc structure iron ($\gamma$ phase).
@@ -419,21 +401,24 @@ We have a zero-point energy correction
 For some iron metals, iron-based metals, and steels, the presence of carbides may occur during the austenitization step. The term commonly used for this is two-phase austenitization
 
 **** Martensite
+
      - A very hard phase of iron
      - Formed by quenching from /austenite/ (fcc iron) at such a high rate such that the carbon has no time to diffuse out of the microstructure to form /cementite/.
      - This causes the fcc to transform to the highly strained body-centred tetragonal phase of /martensite/.
      - It is supersaturated with carbon.
      - The shear deformations that result form a /large number of dislocations/, which is the *primary mechanism* for the strengthening of steels.
-      
+
 **** Cementite
+
      - This is the name for the iron carbide Fe_3C
      - It is hard and brittle
 
 **** Ferrite
+
      This is just bcc iron ($\alpha$ phase)
 
-
 *** Review of the problem
+
     - With a bearing on a raceway one can expect a /Hertzian/ distribution of the stress.
     - This leads to a large degree of stress on the /subsurface/ of the raceway.
     - It has been seen in cross sections of the bearing raceway, with an increase in the number of fatigue cycles, after etching, dark and light etched regions start to develop.
@@ -450,8 +435,8 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
     - I am not sure how carbon diffusion causes a change in the color of the image.
     - But basically there are a couple of theories into the carbon migration.
 
-
 *** Structure of DERs
+
     - DERs are dark because there is more scattering of the light from the microscope so this implies a larger roughness
     - The material is more brittle and hard (but this depends on temperature)
       - Some results have shown that the hardness is similar or that the hardness decreases/increases. There is not a consensus.
@@ -459,9 +444,6 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
     - DER is accomompanied by development of compressive residual stresses.
       - X-ray diffraction has results in line broadening (a broader peak) with harder materials so FWHM is less. 
       - Peak is narrower and higher in DER region so FWHM is higher. 
-
-
-
 
 *** Cambridge's theory
 
@@ -472,8 +454,7 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
     - They see near regions of large amounts of carbon, there are regions of decreased carbon content.
     - They try to relate these regions of a high carbon concentration to different forms of carbide but there is debate as to whether the resolution of the APT results to actually determine with certainty what the actual stochiometry of the precipitates are.
 
-       
-**** Qualms 
+**** Qualms
 
      1) Is it valid to say that the dislocations actually deposit carbon into the carbides?
 	* Is there a segregation energy from dislocations to these carbide regions?
@@ -481,9 +462,6 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
 	* Do temper carbides dissolve with rolling contact fatigue?
      2) Experimentalists don't seem to have seen any carbides. They don't think that this mechanism is likely.
      3) It is thought that these carbide precipitates dissolve in the dark region. 
-    
-
-
 
 *** SKF Theory
 
@@ -495,9 +473,8 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
       - Essentially pipe diffusion is where (say with an edge dislocation) a vacancy and an "interstitial" pair are created where the interstitial moves downwards (negative climb direction)
       - If this pair don't annihilate then diffusion takes place and this interstitial will diffuse down the dislocation line
 
-
 *** Notes from Predrag
-      
+
     - Given a diffusion equation of the form 
 
       \[ \frac{\partial c}{\partial t} = \nabla ( D \nabla c ) - \nabla \cdot (\mathbf{v}c) + R\]
@@ -531,11 +508,8 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
     - Where $\Omega$ is the /misfit volume/.
     - $P$ is the trace of the stress tensor
 
-       
+** Relevant Articles
 
-
-
-**  Relevant Articles
    Here is the article where the first model is described:
     
    http://dx.doi.org/10.1016/j.actamat.2017.08.005
@@ -559,7 +533,8 @@ For some iron metals, iron-based metals, and steels, the presence of carbides ma
 
    - Do temper carbides dissolve with rolling contact fatigue? or do they grow?
 
-* Bibliography 
+* Bibliography
+
 <<bibliography link>>
 
 bibliographystyle:unsrt
@@ -567,3 +542,4 @@ bibliography:./bibliography/org-refs.bib
 
 # \bibliographystyle{plain}
 # \bibliography{org-refs.bib}
+

@@ -1,28 +1,32 @@
-* DONE Read Majeski & Vogel 
+* DONE Read Majeski & Vogel
   :LOGBOOK:
   CLOCK: [2020-08-27 Thu 12:21]--[2020-08-27 Thu 12:21] =>  0:00
   :END:
 [2020-08-27 Thu 12:21]
 [[file:~/Documents/docs/Management/thesis_structure.org::*Tight-binding][Tight-binding]]
+
 ** TODO Read Harrison
    :LOGBOOK:
    CLOCK: [2020-09-02 Wed 12:33]--[2020-09-02 Wed 12:33] =>  0:00
    :END:
  [2020-09-02 Wed 12:33]
  [[file:~/Documents/docs/Management/thesis_structure.org::*Statement of the Problem][Statement of the Problem]]
+
 * TODO Recite electronic knowledge
   :LOGBOOK:
   CLOCK: [2020-08-27 Thu 23:52]--[2020-08-27 Thu 23:52] =>  0:00
   :END:
 [2020-08-27 Thu 23:52]
 [[file:~/Documents/docs/Management/thesis_structure.org]]
-* DONE Record Habits 
+
+* DONE Record Habits
   :LOGBOOK:
   CLOCK: [2020-08-27 Thu 23:53]--[2020-08-27 Thu 23:53] =>  0:00
   :END:
 [2020-08-27 Thu 23:53]
 [[file:~/Documents/docs/Management/thesis_structure.org]]
-* NEXT Check Ti Models                                                :today:
+
+* NEXT Check Ti Models :today:
   :PROPERTIES:
   :LAST_REPEAT: [2020-09-08 Tue 10:15]
   :END:
@@ -40,7 +44,8 @@
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
-** WAITING Run Dislocation Calculation                              :WAITING:
+
+** WAITING Run Dislocation Calculation :WAITING:
    :PROPERTIES:
    :LAST_REPEAT: [2020-09-08 Tue 10:16]
    :END:
@@ -54,6 +59,7 @@
  :STYLE: habit
  :REPEAT_TO_STATE: NEXT
  :END:
+
 ** TODO Run next ti fitting
    :PROPERTIES:
    :LAST_REPEAT: [2020-09-08 Tue 10:16]
@@ -66,58 +72,45 @@
  :STYLE: habit
  :REPEAT_TO_STATE: NEXT
  :END:
-*  Narrow band Hybrid nearly free TB pettifor lack of higher order terms ole andersen :NOTE:
+
+* Narrow band Hybrid nearly free TB pettifor lack of higher order terms ole andersen :NOTE:
   :LOGBOOK:
   CLOCK: [2020-09-02 Wed 12:59]--[2020-09-02 Wed 12:59] =>  0:00
   :END:
 [2020-09-02 Wed 12:59]
 [[file:~/Documents/docs/Management/org/refile.org::*Read Harrison][Read Harrison]]
+
 * MEETING with Tony, discuss environmental dependence of bond integrals within BOP :MEETING:
   :LOGBOOK:
   CLOCK: [2020-09-03 Thu 16:14]--[2020-09-03 Thu 16:14] =>  0:00
   :END:
 [2020-09-03 Thu 16:14]
-* HOLD Check Ti relaxation on SKF                                      :HOLD:
-  - State "HOLD"       from "NEXT"       [2020-09-07 Mon 10:17]
-[2020-09-07 Mon 10:16]
-SCHEDULED: <2020-09-07 Mon .+1d/7d>
-:PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: NEXT
-:END:
-* DONE Respond to  on 
-SCHEDULED: <2020-09-09 Wed>
-:LOGBOOK:
-CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
-:END:
-[2020-09-09 Wed 11:19]
-[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
-* DONE Respond to  on 
-SCHEDULED: <2020-09-09 Wed>
-:LOGBOOK:
-CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
-:END:
-[2020-09-09 Wed 11:19]
-[[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+
+* DONE HOLD Check Ti relaxation on SKF :HOLD:
+  CLOSED: [2020-12-19 Sat 12:44] SCHEDULED: <2020-12-23 Wed>
+
 * DONE Email James French to turn on Opal
   :LOGBOOK:
   CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:20] =>  0:01
   :END:
 [2020-09-09 Wed 11:19]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
+
 * TODO Think about the possible interactions of dislocations in dipole configuration upon relaxation
   :LOGBOOK:
   CLOCK: [2020-09-29 Tue 11:05]--[2020-09-29 Tue 11:06] =>  0:01
   :END:
 [2020-09-29 Tue 11:05]
 [[file:~/Documents/line-tension/precon-path-paper/lt_fourier.jl::path = ODENEB(reltol=0.1, k=1000, interp=3, tol = tol,]]
-* DONE Add overlap in s-d model 
+
+* DONE Add overlap in s-d model
   DEADLINE: <2020-10-07 Wed>
   :LOGBOOK:
   CLOCK: [2020-10-06 Tue 10:34]--[2020-10-06 Tue 10:34] =>  0:00
   :END:
 [2020-10-06 Tue 10:34]
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+
 * DONE Read Katzarov-Paxton LT paper
   DEADLINE: <2020-11-27 Fri>
   :LOGBOOK:
@@ -125,51 +118,184 @@ CLOCK: [2020-09-09 Wed 11:19]--[2020-09-09 Wed 11:19] =>  0:00
   :END:
 [2020-10-06 Tue 10:34]
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+
 * TODO [#B] Compile bop on French supercomputer
-  DEADLINE: <2020-12-23 Wed 16:00> SCHEDULED: <2020-11-27 Fri>
+  SCHEDULED: <2021-01-04 Mon 11:00> DEADLINE: <2021-01-06 Wed 16:00>
   :LOGBOOK:
   CLOCK: [2020-11-23 Mon 11:29]--[2020-11-23 Mon 11:30] =>  0:01
   :END:
 [2020-11-23 Mon 11:29]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
-* WAITING [#A] Implement Line Tension McClean Isotherm              :WAITING:
-  SCHEDULED: <2020-12-16 Wed 18:20> DEADLINE: <2020-12-24 Thu>
-  - State "WAITING"    from "NEXT"       [2020-12-16 Wed 17:31] \\
+
+* NEXT [#A] Implement Line Tension McClean Isotherm
+  SCHEDULED: <2021-01-04 Mon 12:00> DEADLINE: <2021-01-08 Fri>
+  - State "NEXT"       from "WAITING"    [2020-12-18 Fri 16:27]
+  - State "WAITING"    fromu "NEXT"       [2020-12-16 Wed 17:31] \\
     Finish optimisation of emacs setup first
   :LOGBOOK:
   CLOCK: [2020-11-23 Mon 11:30]--[2020-11-23 Mon 11:31] =>  0:01
   :END:
 [2020-11-23 Mon 11:30]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
-* NEXT Check C Lorentzian potential gives no errors
-  SCHEDULED: <2020-12-17 Thu 11:00>
+
+* DONE Check C Lorentzian potential gives no errors
+  SCHEDULED: <2020-12-21 Mon 11:00>
   :LOGBOOK:
   CLOCK: [2020-12-16 Wed 17:40]--[2020-12-16 Wed 17:41] =>  0:01
   :END:
 [2020-12-16 Wed 17:40]
 [[file:~/Documents/docs/Management/org/TODOs.org::*Implement Line Tension McClean Isotherm][Implement Line Tension McClean Isotherm]]
-* TODO Concentration Analysis - think of intersites and if it is too much work 
+
+* TODO Concentration Analysis - think of intersites and if it is too much work
   :LOGBOOK:
   CLOCK: [2020-11-23 Mon 11:34]--[2020-11-23 Mon 11:34] =>  0:00
   :END:
 [2020-11-23 Mon 11:34]
 [[file:~/Documents/docs/Management/papers/Luthi2019.pdf]]
-* DONE Write Abstract for Materials Processing Institute
-  SCHEDULED: <2020-11-30 Mon> DEADLINE: <2020-12-14 Mon>
+
+* DONE Writeu Abstract for Materials Processinguu Institute
+  DEADLINE: <2020-12-14 Mon> SCHEDULED: <2020-11-30 Mon>
   :LOGBOOK:
   CLOCK: [2020-11-23 Mon 11:36]--[2020-11-23 Mon 11:37] =>  0:01
   :END:
 [2020-11-23 Mon 11:36]
-* NEXT [#A] Sync Orgzly with org-mode                                 :today:
+
+* DONE [#A] Sync Orgzly with org-mode :today:
   SCHEDULED: <2020-12-17 Thu 14:00>
   :LOGBOOK:
   CLOCK: [2020-12-16 Wed 16:18]--[2020-12-16 Wed 16:19] =>  0:01
   :END:
-[2020-12-16 Wed 16:18]
-* NEXT Think about energy dependence on distance, radial dependence?
-  SCHEDULED: <2020-12-17 Thu 11:00>
+[]
+
+* TODO Think about lorentzian energy dependence on distance, radial dependence? :WAITING:
+  SCHEDULED: <2020-12-29 Tue 11:00>
   :LOGBOOK:
   CLOCK: [2020-12-16 Wed 22:45]--[2020-12-16 Wed 22:49] =>  0:04
   :END:
 [2020-12-16 Wed 22:45]
 
+* DONE Schedule calisthenics workouts :Workout:
+  SCHEDULED: <2020-12-19 Sat 12:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-19 Sat 12:06]--[2020-12-19 Sat 12:30] =>  0:24
+  :END:
+
+- Push pull A/B splits 
+- Cardio 
+
+* TODO Look at org-drill
+  SCHEDULED: <2020-12-30 Wed 15:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-19 Sat 11:59]--[2020-12-19 Sat 11:59] =>  0:00
+  :END:
+[2020-12-19 Sat 11:59]
+*
+
+* TODO Plot C/H line energies and compare with peierls potential of 10 GPa
+  SCHEDULED: <2020-12-29 Tue 11:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
+  :END:
+[2020-12-22 Tue 12:25]
+[[file:~/Documents/docs/Management/papers/Luthi2018.pdf]]
+
+* DONE Chill with Rachel :Personal:
+  CLOSED: [2020-12-27 Sun 15:40] SCHEDULED: <2020-12-27 Sun 12:00>
+
+Chill at her pad n play games 
+*
+
+* TODO Read Izzy's paper
+  SCHEDULED: <2020-12-29 Tue 13:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-22 Tue 18:02]--[2020-12-22 Tue 18:07] =>  0:05
+  :END:
+[2020-12-22 Tue 18:02]
+[[file:~/Documents/docs/Management/papers/Evaluating_edge_importance.pdf]]
+
+* NEXT Reading
+  SCHEDULED: <2020-12-31 Thu 22:00 ++1d>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-30 Wed 18:38]
+  :END:
+  - State "DONE"       from "NEXT"       [2020-12-30 Wed 18:38]
+  - State "DONE"       from "NEXT"       [2020-12-29 Tue 17:47]
+  - State "DONE"       from "NEXT"       [2020-12-29 Tue 14:04]
+  - State "DONE"       from "NEXT"       [2020-12-22 Tue 13:41]
+  - State "DONE"       from "NEXT"       [2020-12-23 Wed 13:41]
+  - State "DONE"       from "NEXT"       [2020-12-27 Sun 13:41]
+
+* DONE [#A] Rachel's for eve :Personal:
+  CLOSED: [2020-12-25 Fri 18:50] SCHEDULED: <2020-12-24 Thu 12:00>
+
+- Yoga + Meditate
+- Board games 
+- PlayStation games 
+- Presents 
+- pajamas 
+- alcohol (eggnog?) 
+- 2 player board games 
+- Yo, if you haven't showered yet 
+- incept thoughts 
+
+* NEXT Reply to Predrag :Email:
+  SCHEDULED: <2020-12-29 Tue 14:00>
+
+* DONE Sleepover at mine :Personal:
+  CLOSED: [2020-12-27 Sun 04:08] SCHEDULED: <2020-12-26 Sat 12:00>
+
+* TODO Decide on Laptop and fit bit for Rachel :Personal:
+  SCHEDULED: <2020-12-30 Wed 14:00-16:00>
+
+* TODO Rachel's room :Personal:
+  SCHEDULED: <2020-12-30 Wed 13:00>
+
+* DONE [#A] Anni: message :Personal:
+  CLOSED: [2020-12-26 Sat 16:11] SCHEDULED: <2020-12-26 Sat 11:00>
+
+* DONE Meditation and yoga                                         :Personal:
+  SCHEDULED: <2020-12-29 Tue 19:00>
+  :PROPERTIES:
+  :habit :   t
+  :END:
+
+* DONE Bind Org pomodoro to clock in
+  SCHEDULED: <2020-12-27 Sun 18:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-28 Mon 16:56]--[2020-12-28 Mon 17:00] =>  0:04
+  :END:
+
+* DONE Arrange games/video call with Lizzie                        :Personal:
+  SCHEDULED: <2020-12-27 Sun 18:30>
+
+* TODO Try GTD once today :Productivity:
+  SCHEDULED: <2020-12-29 Tue 10:00>
+  :LOGBOOK:
+  CLOCK: [2020-12-29 Tue 19:49]--[2020-12-29 Tue 20:14] =>  0:25
+  CLOCK: [2020-12-29 Tue 18:06]--[2020-12-29 Tue 19:47] =>  1:41
+  :END:
+
+** TODO Org roam: DFT Mazari                                  :Emacs:WAITING:
+   SCHEDULED: <2020-12-26 Sat 12:00>
+   - State "WAITING"    from "NEXT"       [2020-12-18 Fri 16:17] \\
+     Test with DFT links to see how it works in practice. 
+     - Task: Make notes of the Implementation by diag/Nicola Mazari notes and see how links work
+   :LOGBOOK:
+   CLOCK: [2020-12-22 Tue 18:10]--[2020-12-22 Tue 18:35] =>  0:25
+   CLOCK: [2020-12-18 Fri 16:00]--[2020-12-18 Fri 16:17] =>  0:17
+   :END:
+
+* DONE Buy protein powder                                          :Personal:
+* DONE But shibari rope                                            :Personal:
+* TODO Tidal :Music:
+* NEXT Review TODO
+SCHEDULED: <2021-01-04 Mon 09:00 ++7d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+
+* TODO Call dad
+* TODO Order Flying circus physics

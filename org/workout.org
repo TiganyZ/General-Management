@@ -1,0 +1,146 @@
+* NEXT Stretch
+  SCHEDULED: <2021-01-01 Fri 09:30 ++2d>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-30 Wed 18:38]
+  :END:
+  - State "DONE"       from "NEXT"       [2020-12-30 Wed 18:38]
+  - State "DONE"       from "TODO"       [2020-12-22 Tue 19:56]
+  - State "DONE"       from "TODO"       [2020-12-20 Sun 13:54]
+
+  - Calf stretch stairs 
+  - Hamstring stretch 
+  - Hip flexor contract release 
+  - Front fold 
+  - Scapular pushups 
+  - One-arm scapular pushups 
+  - Cobra/Dish circles 
+  - Hamstring/Hip flexor stretch 
+  - 90/90 fold to squat 
+  - Lunge arm circles 
+  - Good morning/Overhead squat 
+
+* NEXT Handstand                                                    :Workout:
+  SCHEDULED: <2021-01-02 Sat 09:30 ++2d>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-31 Thu 18:01]
+  :END:
+
+  - State "DONE"       from "NEXT"       [2020-12-31 Thu 18:01]
+  - State "CANCELLED"  from "NEXT"       [2020-12-28 Mon 17:08]
+  - State "DONE"       from "TODO"       [2020-12-28 Mon 17:08]
+[[https://youtu.be/vPE4SGZjo3Q]]
+- Warm up fingers and shoulders 
+- Stretch on floor from wall 
+- Handstand walk hold 3x30s
+- H-hold 3x20s 
+- Scissor walks 3x5 each leg 
+- Free standing handstand 3x5
+- Balance thinking of hips 
+
+* TODO Upper A :Workout:
+  SCHEDULED: <2021-01-04 Mon 09:30 ++1w>
+  :PROPERTIES:
+  :LAST_REPEAT: [2020-12-28 Mon 16:53]
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :END:
+
+| Exercise                    | Sets |   Reps | Rest |
+|-----------------------------+------+--------+------|
+| Explosive pull ups          |    3 |   5-10 |    2 |
+| Dips                        |    3 |   5-10 |    2 |
+| Archer row                  |    3 |   8-12 |    2 |
+| Archer push-ups             |    3 |   8-12 |    2 |
+| Back extension              |    3 |  10-15 |    1 |
+| Weighted hollow body hold   |    3 | 30-45s |    1 |
+| Chest to wall shoulder taps |    3 | 30-60s |    1 |
+
+* NEXT Upper B                                                      :Workout:
+  SCHEDULED: <2021-01-06 Wed 09:30 ++1w>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-31 Thu 18:01]
+  :END:
+
+  - State "DONE"       from "TODO"       [2020-12-31 Thu 18:01]
+| Exercise         | Sets |   Reps | Rest |
+|------------------+------+--------+------|
+| Pull ups         |    3 |   5-10 |    2 |
+| Pike push-up     |    3 |   5-10 |    2 |
+| Single arm row |    3 |   8-12 |    2 |
+| Ring push-ups |    3 |   8-12 |    2 |
+| Back extension   |    3 |  10-15 |    1 |
+| Hanging abs      |    3 | 30-45s |    1 |
+| Handstand        |    3 | 30-60s |    1 |
+
+* TODO Upper C :Workout:
+  SCHEDULED: <2021-01-02 Sat 09:30 ++1w>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-27 Sun 04:08]
+  :END:
+
+| Exercise                    | Sets |   Reps | Rest |
+|-----------------------------+------+--------+------|
+| Explosive pull ups          |    3 |   8 7 |    2 |
+| Handstand push-up negatives |    3 |   5-10 |    2 |
+| Archer row                  |    3 |   8-12 |    2 |
+| Pseudo-planche push-ups     |    3 |   8-12 |    2 |
+| Back extension              |    3 |  10-15 |    1 |
+| L-sit                       |    3 | 30-45s |    1 |
+| Handstand                   |    3 | 30-60s |    1 |
+
+* NEXT Lower A                                                      :Workout:
+  SCHEDULED: <2021-01-05 Tue 09:30 ++1w>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-29 Tue 17:47]
+  :END:
+  - State "DONE"       from "NEXT"       [2020-12-29 Tue 17:47]
+  - State "DONE"       from "TODO"       [2020-12-22 Tue 20:03]
+| Exercise              | Sets |    Reps | Rest |
+|-----------------------+------+---------+------|
+| Step up               |    3 |    8-12 |    2 |
+| Nordic curl eccentric |    3 |       5 |    2 |
+| Back Extension        |    3 |   10-15 |    2 |
+| Reverse Nordic curl   |    3 |    8-15 |    2 |
+| Calf Raise            |    3 | failure |    1 |
+| Hollow body hold      |    3 |  30-45s |    1 |
+
+* NEXT Lower B                                                      :Workout:
+  SCHEDULED: <2021-01-03 Sun 09:30 ++1w>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2020-12-28 Mon 17:09]
+  :END:
+
+  - State "CANCELLED"  from "TODO"       [2020-12-28 Mon 17:09]
+| Exercise          | Sets |    Reps | Rest |
+|-------------------+------+---------+------|
+| Pistol squat      |    3 |    8-12 |    2 |
+| Back Extension    |    3 |   10-15 |    2 |
+| Sissy squat       |    3 |    8-12 |    2 |
+| Nordic curl hinge |    3 |    6-12 |    2 |
+| Calf Raise        |    3 | failure |    1 |
+| Hanging abs       |    3 |    8-15 |    1 |
+| Hollow body hold/L-sit |    3 |    8-15 |    1 |
+
+* TODO Lower C :Workout:
+
+| Exercise              | Sets |    Reps | Rest |
+|-----------------------+------+---------+------|
+| Step up               |    3 |    8-12 |    2 |
+| Calf Raise            |    3 | failure |    1 |
+| Nordic curl eccentric |    3 |       5 |    2 |
+| L-sit                 |    3 |  15-30s |    2 |
+| Back Extension        |    3 |   10-15 |    2 |
+| Reverse Nordic curl   |    3 |    8-15 |    1 |
+

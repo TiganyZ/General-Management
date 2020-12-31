@@ -1,8 +1,8 @@
 #+TITLE: Thesis Structure
 #+AUTHOR: Tigany Zarrouk
 
+* Statement of the Problem
 
-* Statement of the Problem 
   I do think that an underlying theme in your thesis can be what can and
   cannot be rendered in TB in the plasticity of transition metals with and
   without interstitials. And you can discuss how good (or rather bad) EAM
@@ -14,9 +14,9 @@
 
 * Introduction: Literature Review
 ** Summary of Thesis
-
 * Simulation Methodology
 ** Tight-binding
+
    - Explain tight-binding, from the perspective of maybe density
      functional theory / Horsfield [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
 
@@ -25,22 +25,29 @@
     :PROPERTIES:
     :ORDERED:  t
     :END:
+
 **** TODO Make notes of Majeski/Vogel
 **** TODO Relate to DFT
+
  
+
 *** TODO Read Horsfield-Smutna  [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
     DEADLINE: <2021-02-19 Fri>
 
 *** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
     DEADLINE: <2021-01-08 Fri>
+
        
-*** TODO Summarise the theory - Consolidate here 
+
+*** TODO Summarise the theory - Consolidate here
     DEADLINE: <2021-03-05 Fri>
+
    
+
 ** BOP
 ** Embedding
 ** Fitting
-*** HOLD Explain why I chose to fit this way                           :HOLD:
+*** HOLD Explain why I chose to fit this way :HOLD:
     - State "HOLD"       from "HOLD"       [2020-09-01 Tue 21:32] \\
       Use theory e.g. discontinity of inverse Slater Koster in Bond
       Integrals. Waiting for writing.
@@ -65,12 +72,12 @@
     - Perhaps, using the BOP code, one can put in environment dependent terms
       and see if the dissociation distance changes, but this is quite a large
       ask in the timeframe
-      
 
-*** TODO Finalize model for fitting 
+*** TODO Finalize model for fitting
     DEADLINE: <2021-01-29 Fri>
 
 ** Remarks on tight-binding
+
    - Love it / Loathe it
    - Remark how with tight-binding we can see the different
      contributions to the total energy.
@@ -78,15 +85,14 @@
      initially, but it's the right way to think about solids
 
 * Surface Energies?
-
 * Dislocations in pure metals
-** Fe 
+** Fe
+
    - Comparison of the:
      - sd, non-orthogonal tight-binding models.
      - d-canonical model
 
-*** DONE Peierls Potential 
-
+*** DONE Peierls Potential
 *** DONE Plot d/sd peierls potential - How does non-O/sd change?
     DEADLINE: <2020-09-04 Fri>
     :PROPERTIES:
@@ -103,28 +109,34 @@
     - Not much difference between the canonical-d band model and the sd
       model. The difference is surely within the error of convergence for these
       calculations.  
-     
+
 ** Ti
-*** TODO Energy dependence and core energy 
-    DEADLINE: <2020-12-20 Sun>
+*** TODO Energy dependence and core energy
+    DEADLINE: <2021-01-15 Fri>
+
 **** Think about why a d-canonical model would lead to large spreading? :NOTE:
      :LOGBOOK:
      CLOCK: [2020-09-02 Wed 10:46]--[2020-09-02 Wed 10:46] =>  0:00
      :END:
    [2020-09-02 Wed 10:46]
    [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+
 *** TODO Core Energy difference in tbe - bop
     DEADLINE: <2021-01-29 Fri>
+
     - Tiny difference of 0.53 eV which determines the difference
       between each of the core energies.
+
 *** TODO Calculate gamma surfaces for new model
     DEADLINE: <2021-02-26 Fri>
+
     - Planar faults 
       - Compare to DFT literature of Rodney, Curtin and Tarrat
       - Compare to other TB models
 	- ICAMS model is rubbish!
+
 *** Notes
-    
+
     How does the orthogonal and canonical d-band model come into
     dislocation core structure. 
 
@@ -132,7 +144,8 @@
     - State "HOLD"       from "WAITING"    [2020-09-03 Thu 12:46]
       Ruminate
 
-*** HOLD How does overlap and non-orthogonality play a role? 
+*** HOLD How does overlap and non-orthogonality play a role?
+
     - In Trinkle's NOTB model and Hennig's MEAM, the dissociation distance is
       small.
     - NOTB includes overlap and s-orbitals.
@@ -142,13 +155,13 @@
         splines for the functional form. This removes the constraint of fixed
         angular char- acter and allows for additional flexibility of the
         potential. cite:hennig08_class_poten_descr_marten_phase
-    
-      
-*** WAITING Checking that self-consistency doesn't change the dissociation distance :WAITING:
 
+*** WAITING Checking that self-consistency doesn't change the dissociation distance :WAITING:
     - State "WAITING"    from "HOLD"       [2020-09-03 Thu 15:47] \\
       Waiting for mag calculation to finish
+
 * Oxygen in Ti
+
   - TB >> DFT!
     - Because we can decompose the total energy into contributions
     - Look at how tight-binding allows us to see the physics by
@@ -163,23 +176,22 @@
 *** TODO Repulsive energy of oxygen
     DEADLINE: <2021-01-10 Sun>
 
-*** TODO Concentration Analysis 
+*** TODO Concentration Analysis
     DEADLINE: <2021-01-10 Sun>
+
    
+
 ** TODO Embedding Calculations
-   SCHEDULED: <2020-10-09 Fri> DEADLINE: <2021-03-20 Sat>
+   DEADLINE: <2021-03-20 Sat> SCHEDULED: <2021-01-11 Mon 10:00>
 
-*** TODO Just look at vacancies and oxygen? 
-
+*** TODO Just look at vacancies and oxygen?
 *** TODO Other Dislocation structures if models don't work?
-
-   
-       
 * C in Fe
+
   - SKF report 
   - Onwards to kMC
-** DONE Carbon binding to dislocations
 
+** DONE Carbon binding to dislocations
 ** TODO Energy dependence with radius - Add data
    DEADLINE: <2021-01-29 Fri>
 
@@ -187,26 +199,26 @@
    DEADLINE: <2020-09-25 Fri>
 
 ** DONE Line Tension Model
-
-*** DONE Derive line tension equations 
+*** DONE Derive line tension equations
     DEADLINE: <2020-09-25 Fri>
     :LOGBOOK:
     CLOCK: [2020-09-15 Tue 11:00]--[2020-09-16 Wed 11:39] => 24:39
     CLOCK: [2020-09-08 Tue 10:25]--[2020-09-08 Tue 11:52] =>  1:27
     :END:
 
-*** TODO  Use simple models  
+*** TODO Use simple models
     DEADLINE: <2021-01-22 Fri>
+
     - Sine-Gordon
     - Others as found in Caillard [[file:~/Documents/books/Thermally%20Activated%20Mechanisms%20in%20Crystal%20Plasticity%20by%20D.%20Caillard%20and%20J.L.%20Martin%20(Eds.)%20(z-lib.org)%20(1).pdf][Thermally activated mechanisms in crystal plasticity]]
 
 *** DONE Verify Itakura results with impelementation
     DEADLINE: <2020-10-16 Fri>
 
-*** DONE Look at what we get from d/sd Iron models 
+*** DONE Look at what we get from d/sd Iron models
     DEADLINE: <2020-11-06 Fri>
 
 * Wish-list
-  - Line tension models maybe? 
 
+  - Line tension models maybe? 
 

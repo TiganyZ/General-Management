@@ -1,0 +1,8 @@
+#+ROAM_KEY: %^{citekey}
+#+PROPERTY: type %^{type}
+#+ROAM_TAGS: %^{keywords}
+#+PROPERTY: authors %^{author}
+
+In this %\2 %\4 concluded that %?
+
+fullcite:%\1

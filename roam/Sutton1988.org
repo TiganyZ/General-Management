@@ -1,0 +1,14 @@
+#+TITLE: Sutton1988: The tight-binding bond model
+#+ROAM_KEY: cite:Sutton1988
+
+- tags ::
+- keywords :: 
+
+* The tight-binding bond model
+:PROPERTIES:
+:Custom_ID: Sutton1988
+:URL: https://doi.org/10.1088/0022-3719/21/1/007
+:AUTHOR: Sutton, A. P., Finnis, M. W., Pettifor, D. G., & Ohta, Y.
+:NOTER_DOCUMENT: ../papers/Sutton1988_tight-binding_bond_model.pdf
+:NOTER_PAGE:              ;     is available, the user will be prompted to choose
+:END:
