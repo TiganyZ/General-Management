@@ -1,10 +1,13 @@
 * NEXT Stretch
-  SCHEDULED: <2021-01-01 Fri 09:30 ++2d>
+  SCHEDULED: <2021-01-07 Thu 09:30 ++2d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2020-12-30 Wed 18:38]
+  :LAST_REPEAT: [2021-01-05 Tue 11:19]
   :END:
+  - State "DONE"       from "NEXT"       [2021-01-05 Tue 11:19]
+  - State "DONE"       from "NEXT"       [2021-01-04 Mon 10:18]
+  - State "DONE"       from "NEXT"       [2021-01-02 Sat 14:18]
   - State "DONE"       from "NEXT"       [2020-12-30 Wed 18:38]
   - State "DONE"       from "TODO"       [2020-12-22 Tue 19:56]
   - State "DONE"       from "TODO"       [2020-12-20 Sun 13:54]
@@ -22,13 +25,14 @@
   - Good morning/Overhead squat 
 
 * NEXT Handstand                                                    :Workout:
-  SCHEDULED: <2021-01-02 Sat 09:30 ++2d>
+  SCHEDULED: <2021-01-06 Wed 09:30 ++2d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2020-12-31 Thu 18:01]
+  :LAST_REPEAT: [2021-01-04 Mon 10:18]
   :END:
 
+  - State "DONE"       from "NEXT"       [2021-01-04 Mon 10:18]
   - State "DONE"       from "NEXT"       [2020-12-31 Thu 18:01]
   - State "CANCELLED"  from "NEXT"       [2020-12-28 Mon 17:08]
   - State "DONE"       from "TODO"       [2020-12-28 Mon 17:08]
@@ -78,14 +82,15 @@
 | Hanging abs      |    3 | 30-45s |    1 |
 | Handstand        |    3 | 30-60s |    1 |
 
-* TODO Upper C :Workout:
-  SCHEDULED: <2021-01-02 Sat 09:30 ++1w>
+* NEXT Upper C                                                      :Workout:
+  SCHEDULED: <2021-01-09 Sat 09:30 ++1w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2020-12-27 Sun 04:08]
+  :LAST_REPEAT: [2021-01-04 Mon 10:11]
   :END:
 
+  - State "DONE"       from "TODO"       [2021-01-04 Mon 10:11]
 | Exercise                    | Sets |   Reps | Rest |
 |-----------------------------+------+--------+------|
 | Explosive pull ups          |    3 |   8 7 |    2 |
@@ -115,13 +120,14 @@
 | Hollow body hold      |    3 |  30-45s |    1 |
 
 * NEXT Lower B                                                      :Workout:
-  SCHEDULED: <2021-01-03 Sun 09:30 ++1w>
+  SCHEDULED: <2021-01-10 Sun 09:30 ++1w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2020-12-28 Mon 17:09]
+  :LAST_REPEAT: [2021-01-04 Mon 10:11]
   :END:
 
+  - State "DONE"       from "NEXT"       [2021-01-04 Mon 10:11]
   - State "CANCELLED"  from "TODO"       [2020-12-28 Mon 17:09]
 | Exercise          | Sets |    Reps | Rest |
 |-------------------+------+---------+------|

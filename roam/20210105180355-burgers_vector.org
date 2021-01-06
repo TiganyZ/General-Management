@@ -1,0 +1,8 @@
+#+title: Burgers Vector
+
+A Burgers vector is the topological constant which measures the
+magnitude and direction of distortion from a dislocation. It is
+invariant on the dislocation line.
+
+It can be calculated by a burgers circuit, going from one atom to the
+next around the defect.

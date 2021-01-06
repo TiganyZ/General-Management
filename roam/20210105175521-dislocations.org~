@@ -1,0 +1,17 @@
+#+title: dislocations
+
+A dislocation is a linear crystallographic defect or irregularity
+within a crystal structure that contains an abrupt change in the
+arrangement of atoms.
+
+The crystalline order is restored on either side of a normal
+dislocation (the atoms on one side are displaced with respect to the
+others by one atomic position).
+
+ A dislocation defines the boundary between slipped and unslipped
+regions of material and as a result, must either form a complete loop,
+intersect other dislocations or defects, or extend to the edges of the
+crystal.
+
+ A dislocation can be characterised by the distance and direction of movement it causes to atoms which is defined by the [[file:20210105180355-burgers_vector.org][Burgers Vector]]. Plastic deformation of a material occurs by the creation and movement of many dislocations. 
+ 

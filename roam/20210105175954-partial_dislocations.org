@@ -1,0 +1,4 @@
+#+title: Partial Dislocations
+
+The crystalline order on either side of the dislocation is not fully
+restored if the crystal were to by translated by a partial [[file:20210105175521-dislocations.org][dislocation]]. 

@@ -120,15 +120,19 @@
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 
 * TODO [#B] Compile bop on French supercomputer
-  SCHEDULED: <2021-01-04 Mon 11:00> DEADLINE: <2021-01-06 Wed 16:00>
+  DEADLINE: <2021-01-06 Wed 16:00> SCHEDULED: <2021-01-05 Tue 11:00>
+  :PROPERTIES:
+  :ORDERED:  t
+  :END:
   :LOGBOOK:
+  CLOCK: [2021-01-05 Tue 11:31]--[2021-01-05 Tue 11:56] =>  0:25
   CLOCK: [2020-11-23 Mon 11:29]--[2020-11-23 Mon 11:30] =>  0:01
   :END:
 [2020-11-23 Mon 11:29]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
 
 * NEXT [#A] Implement Line Tension McClean Isotherm
-  SCHEDULED: <2021-01-04 Mon 12:00> DEADLINE: <2021-01-08 Fri>
+  DEADLINE: <2021-01-08 Fri> SCHEDULED: <2021-01-06 Wed 12:00>
   - State "NEXT"       from "WAITING"    [2020-12-18 Fri 16:27]
   - State "WAITING"    fromu "NEXT"       [2020-12-16 Wed 17:31] \\
     Finish optimisation of emacs setup first
@@ -168,7 +172,7 @@
 []
 
 * TODO Think about lorentzian energy dependence on distance, radial dependence? :WAITING:
-  SCHEDULED: <2020-12-29 Tue 11:00>
+  SCHEDULED: <2021-01-05 Tue 11:00>
   :LOGBOOK:
   CLOCK: [2020-12-16 Wed 22:45]--[2020-12-16 Wed 22:49] =>  0:04
   :END:
@@ -192,7 +196,7 @@
 *
 
 * TODO Plot C/H line energies and compare with peierls potential of 10 GPa
-  SCHEDULED: <2020-12-29 Tue 11:00>
+  SCHEDULED: <2021-01-06 Wed 11:00>
   :LOGBOOK:
   CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
   :END:
@@ -206,7 +210,7 @@ Chill at her pad n play games
 *
 
 * TODO Read Izzy's paper
-  SCHEDULED: <2020-12-29 Tue 13:00>
+  SCHEDULED: <2021-01-06 Wed 13:00>
   :LOGBOOK:
   CLOCK: [2020-12-22 Tue 18:02]--[2020-12-22 Tue 18:07] =>  0:05
   :END:
@@ -214,11 +218,11 @@ Chill at her pad n play games
 [[file:~/Documents/docs/Management/papers/Evaluating_edge_importance.pdf]]
 
 * NEXT Reading
-  SCHEDULED: <2020-12-31 Thu 22:00 ++1d>
+  SCHEDULED: <2021-01-04 Mon 22:00 ++1d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2020-12-30 Wed 18:38]
+  :LAST_REPEAT: [2021-01-03 Sun 18:33]
   :END:
   - State "DONE"       from "NEXT"       [2020-12-30 Wed 18:38]
   - State "DONE"       from "NEXT"       [2020-12-29 Tue 17:47]
@@ -240,26 +244,27 @@ Chill at her pad n play games
 - Yo, if you haven't showered yet 
 - incept thoughts 
 
-* NEXT Reply to Predrag :Email:
-  SCHEDULED: <2020-12-29 Tue 14:00>
+* DONE Reply to Predrag                                               :Email:
+  SCHEDULED: <2021-01-05 Tue 12:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-05 Tue 12:13]--[2021-01-05 Tue 12:25] =>  0:12
+  :END:
+
 
 * DONE Sleepover at mine :Personal:
   CLOSED: [2020-12-27 Sun 04:08] SCHEDULED: <2020-12-26 Sat 12:00>
 
-* TODO Decide on Laptop and fit bit for Rachel :Personal:
-  SCHEDULED: <2020-12-30 Wed 14:00-16:00>
+* DONE Decide on Laptop and fit bit for Rachel :Personal:
+  CLOSED: [2021-01-01 Fri 20:10] SCHEDULED: <2020-12-30 Wed 14:00-16:00>
 
-* TODO Rachel's room :Personal:
-  SCHEDULED: <2020-12-30 Wed 13:00>
+* DONE Rachel's room :Personal:
+  CLOSED: [2021-01-01 Fri 20:10] SCHEDULED: <2020-12-30 Wed 13:00>
 
 * DONE [#A] Anni: message :Personal:
   CLOSED: [2020-12-26 Sat 16:11] SCHEDULED: <2020-12-26 Sat 11:00>
 
-* DONE Meditation and yoga                                         :Personal:
-  SCHEDULED: <2020-12-29 Tue 19:00>
-  :PROPERTIES:
-  :habit :   t
-  :END:
+* DONE Meditation and yoga :Personal:
+  CLOSED: [2020-12-31 Thu 11:26] SCHEDULED: <2020-12-29 Tue 19:00>
 
 * DONE Bind Org pomodoro to clock in
   SCHEDULED: <2020-12-27 Sun 18:00>
@@ -267,35 +272,110 @@ Chill at her pad n play games
   CLOCK: [2020-12-28 Mon 16:56]--[2020-12-28 Mon 17:00] =>  0:04
   :END:
 
-* DONE Arrange games/video call with Lizzie                        :Personal:
-  SCHEDULED: <2020-12-27 Sun 18:30>
+* DONE Arrange games/video call with Lizzie :Personal:
+  CLOSED: [2021-01-01 Fri 20:10] SCHEDULED: <2020-12-27 Sun 18:30>
 
-* TODO Try GTD once today :Productivity:
-  SCHEDULED: <2020-12-29 Tue 10:00>
+* DONE Try GTD once today                                      :Productivity:
+  SCHEDULED: <2021-01-04 Mon 10:00>
   :LOGBOOK:
   CLOCK: [2020-12-29 Tue 19:49]--[2020-12-29 Tue 20:14] =>  0:25
   CLOCK: [2020-12-29 Tue 18:06]--[2020-12-29 Tue 19:47] =>  1:41
   :END:
 
-** TODO Org roam: DFT Mazari                                  :Emacs:WAITING:
-   SCHEDULED: <2020-12-26 Sat 12:00>
+** TODO Org roam: DFT Mazari :Emacs:WAITING:
+   SCHEDULED: #<2021-01-04 Mon 12:00>
    - State "WAITING"    from "NEXT"       [2020-12-18 Fri 16:17] \\
      Test with DFT links to see how it works in practice. 
      - Task: Make notes of the Implementation by diag/Nicola Mazari notes and see how links work
    :LOGBOOK:
+   CLOCK: [2021-01-06 Wed 10:33]--[2021-01-06 Wed 10:45] =>  0:12
+   CLOCK: [2021-01-04 Mon 17:04]--[2021-01-04 Mon 17:22] =>  0:18
+   CLOCK: [2021-01-04 Mon 13:46]--[2021-01-04 Mon 14:11] =>  0:25
    CLOCK: [2020-12-22 Tue 18:10]--[2020-12-22 Tue 18:35] =>  0:25
    CLOCK: [2020-12-18 Fri 16:00]--[2020-12-18 Fri 16:17] =>  0:17
    :END:
 
-* DONE Buy protein powder                                          :Personal:
-* DONE But shibari rope                                            :Personal:
+* DONE Buy protein powder :Personal:
+* DONE But shibari rope :Personal:
 * TODO Tidal :Music:
 * NEXT Review TODO
-SCHEDULED: <2021-01-04 Mon 09:00 ++7d>
+  SCHEDULED: <2021-01-11 Mon 09:00 ++7d>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: NEXT
+  :LAST_REPEAT: [2021-01-04 Mon 15:48]
+  :END:
+  - State "DONE"       from "NEXT"       [2021-01-04 Mon 15:48]
+  :LOGBOOK:
+  CLOCK: [2021-01-04 Mon 10:29]--[2021-01-04 Mon 10:30] =>  0:01
+  CLOCK: [2021-01-04 Mon 10:25]--[2021-01-04 Mon 10:27] =>  0:02
+  :END:
+
+* TODO Call dad
+* TODO Order Flying circus physics
+* DONE Follow the Zotero/Roam workflow                         :Productivity:
+  SCHEDULED: <2021-01-05 Tue 14:00>
+
+* DONE Call Emilie                                                 :Personal:
+  SCHEDULED: <2021-01-04 Mon 12:00>
+
+* DONE Email Rolls Royce about Internship
+  SCHEDULED: <2021-01-04 Mon 09:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-04 Mon 16:57]--[2021-01-04 Mon 17:04] =>  0:07
+  CLOCK: [2021-01-04 Mon 15:49]--[2021-01-04 Mon 16:14] =>  0:25
+  CLOCK: [2021-01-04 Mon 14:57]--[2021-01-04 Mon 15:22] =>  0:25
+  :END:
+
+* TODO [#A] Yoga with Adrienne                                     :Personal:
+  SCHEDULED: <2021-01-06 Wed 08:00 +1d>
+  :PROPERTIES:
+  :HABIT:    t
+  :LAST_REPEAT: [2021-01-06 Wed 10:33]
+  :END:
+
+  - State "DONE"       from "TODO"       [2021-01-06 Wed 10:33]
+  - State "DONE"       from "TODO"       [2021-01-05 Tue 11:19]
+Call Rachel beforehand 
+
+* DONE [#A] Set Revision Times                                 :Productivity:
+  SCHEDULED: <2021-01-04 Mon 10:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-04 Mon 10:39]--[2021-01-04 Mon 10:41] =>  0:02
+  CLOCK: [2021-01-04 Mon 10:30]--[2021-01-04 Mon 10:39] =>  0:09
+  :END:
+* TODO MPI talk
+  :LOGBOOK:
+  CLOCK: [2021-01-04 Mon 10:27]--[2021-01-04 Mon 10:29] =>  0:02
+  :END:
+[2021-01-04 Mon 10:27]
+DEADLINE: <2021-02-15 Sun>
+
+- Head and shoulders photo
+- 15 min talk on Fe-C work
+* TODO Thesis work 
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-01-04 Mon 18:23]
+  :END:
+  - State "DONE"       from "NEXT"       [2021-01-04 Mon 18:23]
+[2021-01-04 Mon 10:40]
+
+SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
 
-* TODO Call dad
-* TODO Order Flying circus physics
+- Figuring out errors in emacs such that I can use org-noter/org-roam-bibtex framework
+* TODO Go through Luthi Paper to find the 10 GPa calculations
+  :LOGBOOK:
+  CLOCK: [2021-01-05 Tue 12:26]--[2021-01-05 Tue 12:38] =>  0:12
+  CLOCK: [2021-01-05 Tue 12:25]--[2021-01-05 Tue 12:26] =>  0:01
+  :END:
+[2021-01-05 Tue 12:25]
+* TODO Git repo line tension code 
+  :LOGBOOK:
+  CLOCK: [2021-01-06 Wed 10:46]--[2021-01-06 Wed 10:58] =>  0:12
+  CLOCK: [2021-01-06 Wed 10:45]--[2021-01-06 Wed 10:45] =>  0:00
+  :END:
+[2021-01-06 Wed 10:45]
