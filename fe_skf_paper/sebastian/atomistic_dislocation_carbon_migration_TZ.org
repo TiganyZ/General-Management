@@ -989,6 +989,19 @@ Lower tolerances for relaxation below $\sim 1$ MeV/$\AA$.
    [[file:Images/fe_peierls_potential_pure.png]]
 
 
+** Self-consistent dislocation solute concentration
+
+   To extend the line-tension model, one can introduce the effect of the first-neighbour repulsive
+   interaction of solutes into the evaluation of the concentration on the dislocation line.
+
+   #+ATTR_LATEX:  :width 0.9\textwidth :center
+   #+CAPTION: Concentration of carbon on the dislocation line as a function of distance from the core at differing dislocation densities and initial nominal carbon concentrations. [[label:conc_dist_disl]]
+   [[file:Images/concentration_vs_solute_distance_all_with_legend.png]]
+
+   # [[file:Images/concentration_vs_solute_distance_1.00E+12_appm.png]]
+   # [[file:Images/concentration_vs_solute_distance_1.00E+14_appm.png]]
+   # [[file:Images/concentration_vs_solute_distance_1.00E+15_appm.png]]
+
 
 
 * Discussion

@@ -120,7 +120,7 @@
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 
 * TODO [#B] Compile bop on French supercomputer
-  DEADLINE: <2021-01-06 Wed 16:00> SCHEDULED: <2021-01-05 Tue 11:00>
+  SCHEDULED: <2021-01-14 Thu 11:00> DEADLINE: <2021-01-15 Fri 16:00>
   :PROPERTIES:
   :ORDERED:  t
   :END:
@@ -131,14 +131,21 @@
 [2020-11-23 Mon 11:29]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
 
-* NEXT [#A] Implement Line Tension McClean Isotherm
-  DEADLINE: <2021-01-08 Fri> SCHEDULED: <2021-01-06 Wed 12:00>
+* DONE [#A] Implement Line Tension McClean Isotherm
+  SCHEDULED: <2021-01-10 Sun 09:30> DEADLINE: <2021-01-15 Fri>
   - State "NEXT"       from "WAITING"    [2020-12-18 Fri 16:27]
   - State "WAITING"    fromu "NEXT"       [2020-12-16 Wed 17:31] \\
-    Finish optimisation of emacs setup first
   :LOGBOOK:
+  CLOCK: [2021-01-10 Sun 13:31]--[2021-01-10 Sun 13:56] =>  0:25
+  CLOCK: [2021-01-07 Thu 17:50]--[2021-01-07 Thu 18:15] =>  0:25
+  CLOCK: [2021-01-06 Wed 16:36]--[2021-01-06 Wed 17:01] =>  0:25
   CLOCK: [2020-11-23 Mon 11:30]--[2020-11-23 Mon 11:31] =>  0:01
   :END:
+
+
+
+
+
 [2020-11-23 Mon 11:30]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
 
@@ -171,7 +178,7 @@
   :END:
 []
 
-* TODO Think about lorentzian energy dependence on distance, radial dependence? :WAITING:
+* DONE Think about lorentzian energy dependence on distance, radial dependence?
   SCHEDULED: <2021-01-05 Tue 11:00>
   :LOGBOOK:
   CLOCK: [2020-12-16 Wed 22:45]--[2020-12-16 Wed 22:49] =>  0:04
@@ -187,7 +194,7 @@
 - Push pull A/B splits 
 - Cardio 
 
-* TODO Look at org-drill
+* DONE Look at org-drill
   SCHEDULED: <2020-12-30 Wed 15:00>
   :LOGBOOK:
   CLOCK: [2020-12-19 Sat 11:59]--[2020-12-19 Sat 11:59] =>  0:00
@@ -196,8 +203,9 @@
 *
 
 * TODO Plot C/H line energies and compare with peierls potential of 10 GPa
-  SCHEDULED: <2021-01-06 Wed 11:00>
+  SCHEDULED: <2021-01-12 Tue 11:00>
   :LOGBOOK:
+  CLOCK: [2021-01-06 Wed 16:36]--[2021-01-06 Wed 16:36] =>  0:00
   CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
   :END:
 [2020-12-22 Tue 12:25]
@@ -210,7 +218,7 @@ Chill at her pad n play games
 *
 
 * TODO Read Izzy's paper
-  SCHEDULED: <2021-01-06 Wed 13:00>
+  SCHEDULED: <2021-01-12 Tue 13:00>
   :LOGBOOK:
   CLOCK: [2020-12-22 Tue 18:02]--[2020-12-22 Tue 18:07] =>  0:05
   :END:
@@ -218,12 +226,15 @@ Chill at her pad n play games
 [[file:~/Documents/docs/Management/papers/Evaluating_edge_importance.pdf]]
 
 * NEXT Reading
-  SCHEDULED: <2021-01-04 Mon 22:00 ++1d>
+  SCHEDULED: <2021-01-12 Tue 22:00 ++1d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-03 Sun 18:33]
+  :LAST_REPEAT: [2021-01-11 Mon 17:25]
   :END:
+  - State "DONE"       from "NEXT"       [2021-01-11 Mon 17:25]
+  - State "DONE"       from "NEXT"       [2021-01-10 Sun 13:29]
+  - State "DONE"       from "NEXT"       [2021-01-10 Sun 13:29]
   - State "DONE"       from "NEXT"       [2020-12-30 Wed 18:38]
   - State "DONE"       from "NEXT"       [2020-12-29 Tue 17:47]
   - State "DONE"       from "NEXT"       [2020-12-29 Tue 14:04]
@@ -299,13 +310,12 @@ Chill at her pad n play games
 * DONE But shibari rope :Personal:
 * TODO Tidal :Music:
 * NEXT Review TODO
-  SCHEDULED: <2021-01-11 Mon 09:00 ++7d>
+  SCHEDULED: <2021-01-18 Mon 09:00 ++7d>
   :PROPERTIES:
-  :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-04 Mon 15:48]
+  :LAST_REPEAT: [2021-01-11 Mon 15:39]
   :END:
-  - State "DONE"       from "NEXT"       [2021-01-04 Mon 15:48]
+  - State "DONE"       from "NEXT"       [2021-01-11 Mon 15:39]
   :LOGBOOK:
   CLOCK: [2021-01-04 Mon 10:29]--[2021-01-04 Mon 10:30] =>  0:01
   CLOCK: [2021-01-04 Mon 10:25]--[2021-01-04 Mon 10:27] =>  0:02
@@ -327,16 +337,22 @@ Chill at her pad n play games
   CLOCK: [2021-01-04 Mon 14:57]--[2021-01-04 Mon 15:22] =>  0:25
   :END:
 
-* TODO [#A] Yoga with Adrienne                                     :Personal:
-  SCHEDULED: <2021-01-06 Wed 08:00 +1d>
+* TODO #A Yoga with Adrienne                                     :Personal:
+  SCHEDULED: <2021-01-12 Tue 08:00 +1d>
   :PROPERTIES:
-  :HABIT:    t
-  :LAST_REPEAT: [2021-01-06 Wed 10:33]
+  :STYLE: habit
+  :LAST_REPEAT: [2021-01-11 Mon 17:38]
   :END:
 
+  - State "DONE"       from "TODO"       [2021-01-11 Mon 17:38]
+  - State "DONE"       from "TODO"       [2021-01-10 Sun 13:29]
+  - State "DONE"       from "TODO"       [2021-01-10 Sun 13:29]
+  - State "DONE"       from "TODO"       [2021-01-10 Sun 13:29]
+  - State "DONE"       from "TODO"       [2021-01-08 Fri 15:05]
+  - State "DONE"       from "TODO"       [2021-01-06 Wed 18:09]
   - State "DONE"       from "TODO"       [2021-01-06 Wed 10:33]
   - State "DONE"       from "TODO"       [2021-01-05 Tue 11:19]
-Call Rachel beforehand 
+
 
 * DONE [#A] Set Revision Times                                 :Productivity:
   SCHEDULED: <2021-01-04 Mon 10:00>
@@ -373,9 +389,40 @@ SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
   CLOCK: [2021-01-05 Tue 12:25]--[2021-01-05 Tue 12:26] =>  0:01
   :END:
 [2021-01-05 Tue 12:25]
-* TODO Git repo line tension code 
+* DONE Git repo line tension code 
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 10:46]--[2021-01-06 Wed 10:58] =>  0:12
   CLOCK: [2021-01-06 Wed 10:45]--[2021-01-06 Wed 10:45] =>  0:00
   :END:
 [2021-01-06 Wed 10:45]
+* TODO Finish writing about why carbon has less of an effect than hydrogen on the kink-pair formation enthalpies
+  SCHEDULED: <2021-01-20 Wed 10:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-06 Wed 13:03]--[2021-01-06 Wed 13:04] =>  0:01
+  :END:
+[2021-01-06 Wed 13:03]
+* TODO Look at therapy for rachel and I
+  SCHEDULED: <2021-01-11 Mon 18:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-08 Fri 15:32]--[2021-01-08 Fri 15:33] =>  0:01
+  :END:
+[2021-01-08 Fri 15:32]
+- Better help?
+* TODO Call Seb
+  SCHEDULED: <2021-01-11 Mon 19:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-08 Fri 15:33]--[2021-01-08 Fri 15:33] =>  0:00
+  :END:
+[2021-01-08 Fri 15:33]
+* TODO Reply to Predrag about carbon binding energies
+  SCHEDULED: <2021-01-12 Tue 13:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-11 Mon 10:45]--[2021-01-11 Mon 10:46] =>  0:01
+  :END:
+[2021-01-11 Mon 10:45]
+* TODO Reply to Rolls Royce about internship
+  SCHEDULED: <2021-01-12 Tue 16:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-11 Mon 14:35]--[2021-01-11 Mon 14:36] =>  0:01
+  :END:
+[2021-01-11 Mon 14:35]

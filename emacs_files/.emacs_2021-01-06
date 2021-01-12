@@ -1,0 +1,1073 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;; (package-initialize)
+(add-to-list 'load-path "~/.emacs.d/elpa/org-colored-text")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(TeX-command-list
+   '(("TeX" "%(PDF)%(tex) %(file-line-error) %`%(extraopts) %S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
+      (plain-tex-mode texinfo-mode ams-tex-mode)
+      :help "Run plain TeX")
+     ("LaTeX" "%`%l%(mode)%' %T" TeX-run-TeX nil
+      (latex-mode doctex-mode)
+      :help "Run LaTeX")
+     ("Makeinfo" "makeinfo %(extraopts) %t" TeX-run-compile nil
+      (texinfo-mode)
+      :help "Run Makeinfo with Info output")
+     ("Makeinfo HTML" "makeinfo %(extraopts) --html %t" TeX-run-compile nil
+      (texinfo-mode)
+      :help "Run Makeinfo with HTML output")
+     ("AmSTeX" "amstex %(PDFout) %`%(extraopts) %S%(mode)%' %t" TeX-run-TeX nil
+      (ams-tex-mode)
+      :help "Run AMSTeX")
+     ("ConTeXt" "%(cntxcom) --once --texutil %(extraopts) %(execopts)%t" TeX-run-TeX nil
+      (context-mode)
+      :help "Run ConTeXt once")
+     ("ConTeXt Full" "%(cntxcom) %(extraopts) %(execopts)%t" TeX-run-TeX nil
+      (context-mode)
+      :help "Run ConTeXt until completion")
+     ("BibTeX" "bibtex %s" TeX-run-BibTeX nil
+      (plain-tex-mode latex-mode doctex-mode context-mode texinfo-mode ams-tex-mode)
+      :help "Run BibTeX")
+     ("Biber" "biber %s" TeX-run-Biber nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Run Biber")
+     ("View" "zathura %o" TeX-run-discard-or-function t t :help "Run Viewer")
+     ("Print" "%p" TeX-run-command t t :help "Print the file")
+     ("Queue" "%q" TeX-run-background nil t :help "View the printer queue" :visible TeX-queue-command)
+     ("File" "%(o?)dvips %d -o %f " TeX-run-dvips t
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Generate PostScript file")
+     ("Dvips" "%(o?)dvips %d -o %f " TeX-run-dvips nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Convert DVI file to PostScript")
+     ("Dvipdfmx" "dvipdfmx %d" TeX-run-dvipdfmx nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Convert DVI file to PDF with dvipdfmx")
+     ("Ps2pdf" "ps2pdf %f" TeX-run-ps2pdf nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Convert PostScript file to PDF")
+     ("Glossaries" "makeglossaries %s" TeX-run-command nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Run makeglossaries to create glossary
+     file")
+     ("Index" "makeindex %s" TeX-run-index nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Run makeindex to create index file")
+     ("upMendex" "upmendex %s" TeX-run-index t
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Run upmendex to create index file")
+     ("Xindy" "texindy %s" TeX-run-command nil
+      (plain-tex-mode latex-mode doctex-mode texinfo-mode ams-tex-mode)
+      :help "Run xindy to create index file")
+     ("Check" "lacheck %s" TeX-run-compile nil
+      (latex-mode)
+      :help "Check LaTeX file for correctness")
+     ("ChkTeX" "chktex -v6 %s" TeX-run-compile nil
+      (latex-mode)
+      :help "Check LaTeX file for common mistakes")
+     ("Spell" "(TeX-ispell-document \"\")" TeX-run-function nil t :help "Spell-check the document")
+     ("Clean" "TeX-clean" TeX-run-function nil t :help "Delete generated intermediate files")
+     ("Clean All" "(TeX-clean t)" TeX-run-function nil t :help "Delete generated intermediate and output files")
+     ("Other" "" TeX-run-command t t :help "Run an arbitrary command")))
+ '(inhibit-startup-screen t)
+ '(org-agenda-files
+   '("~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org" "~/Documents/docs/Management/org/TODOs.org" "~/Documents/docs/Management/org/personal.org" "~/Documents/docs/Management/thesis_structure.org" "~/Documents/docs/Management/fe_skf_paper/fe-c_paper_skf.org" "~/Documents/docs/Management/final_ti_model_notes.org" "~/Documents/docs/Management/ti_model_notes.org" "~/Documents/docs/Management/org/workout.org"))
+ '(org-roam-directory "/home/tigany/Documents/docs/Management/roam")
+ '(package-selected-packages
+   '(org-plus-contrib org-noter org-noter-pdftools org-pdftools powershell sound-wav deft company-org-roam org-journal org-roam-bibtex which-key origami org-super-agenda w3m tidal sclang-extensions sclang-snippets gnuplot gnuplot-mode org-pomodoro doom-themes doom-modeline ivy-yasnippet julia-snail julia-repl ess flycheck-julia julia-mode expand-region undo-tree elpy jedi company-jedi lammps-mode org-colored-text use-package offlineimap mu4e-overview auctex magit counsel ivy swiper))
+ '(pdf-annot-activate-created-annotations t))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")
+			 ))
+
+;; (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+;;                          ("melpa" . "https://melpa.org/packages/")
+;; 			 ))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+
+;;(use-package diminish)
+(require 'bind-key)
+
+(require 'julia-mode)
+(require 'julia-repl)
+(setq julia-repl-executable-records
+      '((v0.6 "~/software/julia-9d11f62bcb/bin/julia")
+       (v1.50 "/usr/bin/julia")))
+(add-hook 'julia-mode-hook 'julia-repl-mode)
+;;(require 'ess-site)
+(require 'flycheck-julia)
+;; enable flycheck globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;; tell flycheck about the julia linter
+(flycheck-julia-setup)
+;; (add-to-list 'flycheck-global-modes 'julia-mode)
+;; (add-to-list 'flycheck-global-modes 'ess-julia-mode)
+
+(use-package jedi
+  :ensure t
+  :hook
+  (python-mode . jedi:setup)
+  :init
+  (setq jedi:complete-on-dot t)                 ; optional
+  )
+
+
+;; Elpy
+(require 'elpy)
+(elpy-enable)
+(progn
+  (setq elpy-rpc-python-command "python3.8")
+  (setq elpy-rpc-backend "jedi")                                                                    
+  (setq python-shell-interpreter "python3.8";"jupyter"
+	python-shell-interpreter-args "";"console --simple-prompt"
+	python-shell-prompt-detect-failure-warning nil) 
+    ) 
+(add-to-list 'python-shell-completion-native-disabled-interpreters
+		 "python3.8")
+
+
+
+;; (use-package elpy
+;;   :ensure t
+;;   :config
+;;   (elpy-enable)
+;;   :init
+;;   (progn
+;;     (setq elpy-rpc-python-command "python3.8")
+;;     (setq elpy-rpc-backend "jedi")                                                                    
+;;     (setq python-shell-interpreter "python3.8";"jupyter"
+;; 	  python-shell-interpreter-args "";"console --simple-prompt"
+;; 	  python-shell-prompt-detect-failure-warning nil) 
+;;     ) )
+;; (add-to-list 'python-shell-completion-native-disabled-interpreters
+;; 		 "python3.8")
+
+(use-package avy
+	     :bind
+	     (( "C-;" . avy-goto-char)
+	     ( "C-'" . avy-goto-char-2)
+	     ( "M-g f" . avy-goto-line)
+	     ( "M-g w" . avy-goto-word-1)
+	     ( "C-c C-j" . avy-resume))
+	     :init
+	     (avy-setup-default)
+	     :ensure t)
+
+;; (use-package org-re-reveal)
+;; (require 'org-re-reveal)
+
+(use-package flyspell-correct-ivy
+    :ensure t
+    :bind (:map flyspell-mode-map
+		("C-:" . flyspell-correct-wrapper)) )
+
+
+;;----------------------------------------------------------------
+;; Undo Tree
+;;----------------------------------------------------------------
+(use-package undo-tree
+  :ensure t
+  :config
+  (global-undo-tree-mode))
+
+
+;;----------------------------------------------------------------
+;; Expand Region and kill
+;;----------------------------------------------------------------
+(use-package expand-region
+  :ensure t
+  :bind 
+  ( "C-=" . er/expand-region))
+
+;;----------------------------------------------------------------
+;; Line highlight and Beacon
+;;----------------------------------------------------------------
+(global-hl-line-mode t)
+
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+
+(use-package beacon
+	     :config
+	     (beacon-mode 1)
+	     :ensure t
+	     )
+
+(add-to-list 'company-backends 'company-jedi)
+
+(use-package ivy
+  :demand
+  :bind(
+	(:map ivy-minibuffer-map ( "M-y" . ivy-next-line))
+	( "C-c C-r" . ivy-resume)
+	( "<f6>" . ivy-resume)
+	( "C-c C-r" . ivy-resume)
+	( "<f6>" . ivy-resume)
+	)
+  :config
+  (ivy-mode 1)
+  :ensure t
+  )
+
+(ivy-mode 1)
+
+(require 'counsel)                                                                                                                      
+(require 'ivy)                                                                                                                          
+(ivy-mode 1)                                                                                                                            
+(setq ivy-use-virtual-buffers t)                                                                                                        
+(setq enable-recursive-minibuffers t)                                                                                                   
+;; enable this if you want `swiper' to use it                                                                                           
+;; (setq search-default-mode #'char-fold-to-regexp)                                                                                     
+(global-set-key "\C-s" 'swiper)                                                                                                         
+(global-set-key (kbd "C-c C-r") 'ivy-resume)                                                                                            
+(global-set-key (kbd "<f6>") 'ivy-resume)                                                                                               
+(global-set-key (kbd "M-x") 'counsel-M-x)                                                                                               
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)                                                                                     
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)                                                                              
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)                                                                              
+(global-set-key (kbd "<f1> l") 'counsel-find-library)                                                                                   
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)                                                                             
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)                                                                                   
+(global-set-key (kbd "C-c g") 'counsel-git)                                                                                             
+(global-set-key (kbd "C-c j") 'counsel-git-grep)                                                                                        
+(global-set-key (kbd "C-c k") 'counsel-ag)                                                                                              
+(global-set-key (kbd "C-x l") 'counsel-locate)                                                                                          
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)                                                                                       
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)                                                               
+(global-set-key (kbd "<f2> j" ) 'counsel-set-variable)
+(global-set-key (kbd "C-x b"  ) 'ivy-switch-buffer)
+(global-set-key (kbd "C-c v"  ) 'ivy-push-view)
+(global-set-key (kbd "C-c V"  ) 'ivy-pop-view)
+
+
+
+
+(server-start)                                                                                                                          
+                                                                                                                                        
+                                                                                                                                        
+(global-set-key (kbd "M-y") 'counsel-yank-pop)                                                                                          
+(define-key ivy-minibuffer-map (kbd "M-y") 'ivy-next-line)                                                                              
+(global-set-key (kbd  "M-x" ) 'counsel-M-x)
+;; (global-set-key (kbd  "M-y" ) 'counsel-yank-pop)                                                                                                                                        
+
+(use-package flyspell-correct-ivy
+  :ensure t
+    :bind ("C-M-:" . flyspell-correct-wrapper)
+    :init
+    (setq flyspell-correct-interface #'flyspell-correct-ivy))
+
+
+;; (use-package doom-modeline
+;;   :ensure t
+;;   :hook (after-init . doom-modeline-mode))
+
+(require 'doom-modeline)
+(doom-modeline-mode 1)
+
+(require 'doom-themes)
+
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+
+  ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each
+  ;; theme may have their own settings.
+  (load-theme 'doom-one t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+
+  ;; Enable custom neotree theme
+  (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
+
+
+(require 'ivy-rich)
+(ivy-rich-mode 1)
+
+(require 'ivy-yasnippet)                                                                                                                     
+(yas-minor-mode 1)
+(yas-global-mode 1)        
+
+
+;; (use-package counsel
+;;   :demand
+;;   :bind ((:map minibuffer-local-map ("C-r" . counsel-minibuffer-history))
+;; 	 ( "M-x" . counsel-M-x)
+;; 	 ( "M-y" . counsel-yank-pop)
+;; 	 ( "C-x C-f" . counsel-find-file)
+;; 	 ( "<f1> f" . counsel-describe-function)
+;; 	 ( "<f1> v" . counsel-describe-variable)
+;; 	 ( "<f1> l" . counsel-find-library)
+;; 	 ( "<f2> i" . counsel-info-lookup-symbol)
+;; 	 ( "<f2> u" . counsel-unicode-char)
+;; 	 ( "C-c g" . counsel-git)
+;; 	 ( "C-c j" . counsel-git-grep)
+;; 	 ( "C-c k" . counsel-ag)
+;; 	 ( "C-x l" . counsel-locate)
+;; 	 ( "C-S-o" . counsel-rhythmbox)
+;; 	 ( "C-s" . swiper)
+;; 	 ( "<f2> j" . counsel-set-variable)
+;; 	 ( "C-x b"  . ivy-switch-buffer)
+;; 	 ( "C-c v"  . ivy-push-view)
+;; 	 ( "C-c V"  . ivy-pop-view)
+;; 	 )
+;;     :ensure t
+;;   )
+
+(use-package magit
+    :ensure t
+    :bind
+    ( "C-x g" . magit-status) )
+
+;; (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+(set-face-attribute 'default nil :height 140)
+(server-start)
+
+(use-package pdf-tools
+  ;;  :ensure t
+  ;; :pin manual ;; manually update
+  :config
+  ;; initialise
+  (pdf-tools-install)
+   ;; open pdfs scaled to fit width
+  (setq-default pdf-view-display-size 'fit-width)
+  ;; use normal isearch
+  (define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward)
+   :custom
+   (pdf-annot-activate-created-annotations t "automatically annotate highlights"))
+
+
+;; (use-package org-ref
+;;     :ensure t)
+
+;; (require 'org-noter)
+;; (setq org-noter-always-create-frame nil)
+
+;; ;; (use-package org-pdftools
+;; ;;   :hook (org-mode . org-pdftools-setup-link))
+
+;; ;; (require 'org-noter-pdftools)
+
+;; (use-package org-noter-pdftools
+;;   :after org-noter
+;;   :config
+;;   (with-eval-after-load 'pdf-annot
+;;     (add-hook 'pdf-annot-activate-handler-functions #'org-noter-pdftools-jump-to-note)))
+                                                                                                                                        
+
+;; (setq reftex-default-bibliography '("~/Documents/docs/Management/bibliography/org-refs.bib"))                                           
+;; (setq org-ref-bibliography-notes "~/Documents/docs/Management/bibliography/notes.org"                                                   
+;;       org-ref-default-bibliography '("~/Documents/docs/Management/bibliography/org-refs.bib")                                           
+;;       org-ref-pdf-directory "~/Documents/docs/Management/papers")                                                    
+;; (setq bibtex-completion-bibliography "~/Documents/docs/Management/bibliography/org-refs.bib"                                            
+;;       bibtex-completion-library-path "~/Documents/docs/Management/papers"                                             
+;;       bibtex-completion-notes-path "~/Documents/docs/Management/bibliography/helm-bibtex-notes")                                        
+;; (setq bibtex-completion-pdf-open-function                                                                                               
+;;       (lambda (fpath)                                                                                                                   
+;;         (start-process "open" "*open*" "open" fpath)))                                                                                  
+                                                                                                                                        
+                                                                                                                                        
+(setq org-highlight-latex-and-related '(latex))                                                                                         
+;; (setq org-latex-listings 'minted                                                                                                        
+;;       org-latex-packages-alist '(("" "minted")))                                                                                        
+(setq org-latex-pdf-process                                                                                                             
+      '("pdflatex -interaction nonstopmode -output-directory %o %f"                                                                     
+        "bibtex %b"                                                                                                                     
+        "pdflatex -interaction nonstopmode -output-directory %o %f"                                                                     
+        "pdflatex -interaction nonstopmode -output-directory %o %f"))         
+
+;; (setq org-latex-pdf-process                                                                                                             
+;;       '("latexmk pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+
+
+;; (setq bibtex-completion-bibliography "/home/tigany/Documents/docs/Management/bibliography/org-refs.bib"
+;;        bibtex-completion-library-path "/home/tigany/Documents/docs/Management/bibliography/bibtex-pdfs"
+;;        bibtex-completion-notes-path "/home/tigany/Documents/docs/Management/bibliography/helm-bibtex-notes")
+;;  (setq bibtex-completion-pdf-open-function
+;;        (lambda (fpath)
+;; 	 (start-process "open" "*open*" "open" fpath)))
+;; (setq org-highlight-latex-and-related '(latex script entities))
+
+
+;; Colour text
+
+;; (use-package org-colored-text)
+
+;; Taken and adapted from org-colored-text
+
+;; Making org mode look pretty
+(add-hook 'org-mode-hook 'visual-line-mode)
+(setq org-hide-emphasis-markers nil)
+
+
+(global-set-key (kbd "C-c c"  ) 'org-capture)
+
+;; Define the custum capture templates
+(setq org-capture-templates
+       '(("t" "todo" entry (file org-default-notes-file)
+	  "* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
+	 ("m" "Meeting" entry (file org-default-notes-file)
+	  "* MEETING with %? :MEETING:\n%t" :clock-in t :clock-resume t)
+	 ("d" "Diary" entry (file+datetree "~/org/diary.org")
+	  "* %?\n%U\n" :clock-in t :clock-resume t)
+	 ("i" "Idea" entry (file org-default-notes-file)
+	  "* %? :IDEA: \n%t" :clock-in t :clock-resume t)
+	 ("n" "Next Task" entry (file+headline org-default-notes-file "Tasks")
+	  "** NEXT %? \nDEADLINE: %t") ))
+
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
+
+;; Standard key bindings
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "MEETING"))))
+
+(setq org-todo-keyword-faces
+      (quote (("TODO" :foreground "red" :weight bold)
+              ("NEXT" :foreground "blue" :weight bold)
+              ("DONE" :foreground "forest green" :weight bold)
+              ("WAITING" :foreground "orange" :weight bold)
+              ("HOLD" :foreground "magenta" :weight bold)
+              ("CANCELLED" :foreground "forest green" :weight bold)
+              ("MEETING" :foreground "forest green" :weight bold))))
+(setq org-use-fast-todo-selection t)
+(setq org-todo-state-tags-triggers
+      (quote (("CANCELLED" ("CANCELLED" . t))
+              ("WAITING" ("WAITING" . t))
+              ("HOLD" ("WAITING") ("HOLD" . t))
+              (done ("WAITING") ("HOLD"))
+              ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
+              ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
+              ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
+
+(setq org-directory "~/Documents/docs/Management")
+(setq org-default-notes-file "~/Documents/docs/Management/org/TODOs.org")
+
+;; I use C-c c to start capture mode
+(global-set-key (kbd "C-c c") 'org-capture)
+
+;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
+(setq org-capture-templates
+      (quote (("t" "todo" entry (file "~/Documents/docs/Management/org/TODOs.org")
+               "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
+              ("n" "note" entry (file "~/Documents/docs/Management/org/TODOs.org")
+               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+              ("j" "Journal" entry (file+datetree "~/Documents/docs/Management/org/diary.org")
+               "* %?\n%U\n" :clock-in t :clock-resume t)
+              ("w" "org-protocol" entry (file "~/Documents/docs/Management/org/TODOs.org")
+               "* TODO Review %c\n%U\n" :immediate-finish t)
+              ("m" "Meeting" entry (file "~/Documents/docs/Management/org/TODOs.org")
+               "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
+              ("h" "Habit" entry (file "~/Documents/docs/Management/org/TODOs.org")
+               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; org-mode agenda options                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;open agenda in current window
+(setq org-agenda-window-setup (quote current-window))
+;;warn me of any deadlines in next 7 days
+(setq org-deadline-warning-days 30)
+;;show me tasks scheduled or due in next fortnight
+(setq org-agenda-span (quote day))
+;;don't show tasks as scheduled if they are already shown as a deadline
+(setq org-agenda-skip-scheduled-if-deadline-is-shown nil)
+;;don't give awarning colour to tasks with impending deadlines
+;;if they are scheduled to be done
+(setq org-agenda-skip-deadline-prewarning-if-scheduled (quote pre-scheduled))
+;;don't show tasks that are scheduled or have deadlines in the
+;;normal todo list
+(setq org-agenda-todo-ignore-deadlines (quote none))
+(setq org-agenda-todo-ignore-scheduled (quote none))
+;;sort tasks in order of when they are due and then by priority
+;; (setq org-agenda-sorting-strategy
+;;   (quote
+;;    ((agenda deadline-up priority-down)
+;;     (todo priority-down category-keep)
+;;     (tags priority-down category-keep)
+;;     (search category-keep))))
+
+;; Highlight lock mode
+;;(global-hi-lock-mode 1)
+
+
+
+;; (use-package origami
+;;   :general (:keymaps 'org-super-agenda-header-map
+;;                      "TAB" #'origami-toggle-node)
+;;   :config
+
+;;   (defvar ap/org-super-agenda-auto-show-groups
+;;     '("Schedule" "Bills" "Priority A items" "Priority B items"))
+
+;;   (defun ap/org-super-agenda-origami-fold-default ()
+;;     "Fold certain groups by default in Org Super Agenda buffer."
+;;     (forward-line 3)
+;;     (cl-loop do (origami-forward-toggle-node (current-buffer) (point))
+;;              while (origami-forward-fold-same-level (current-buffer) (point)))
+;;     (--each ap/org-super-agenda-auto-show-groups
+;;       (goto-char (point-min))
+;;       (when (re-search-forward (rx-to-string `(seq bol " " ,it)) nil t)
+;;         (origami-show-node (current-buffer) (point)))))
+
+;;   :hook ((org-agenda-mode . origami-mode)
+;;          (org-agenda-finalize . ap/org-super-agenda-origami-fold-default)))
+
+(require 'org-super-agenda)
+(org-super-agenda-mode 1)
+;; (let ((org-super-agenda-groups
+;;        '(;; Each group has an implicit boolean OR operator between its selectors.
+;;          (:name "Today"  ; Optionally specify section name
+;;                 :time-grid t  ; Items that appear on the time grid
+;;                 :todo "TODAY")  ; Items that have this TODO keyword
+;;          (:name "Important"
+;;                 ;; Single arguments given alone
+;;                 :tag "bills"
+;;                 :priority "A")
+;;          ;; Set order of multiple groups at once
+;;          (:order-multi (2 (:name "Shopping in town"
+;;                                  ;; Boolean AND group matches items that match all subgroups
+;;                                  :and (:tag "shopping" :tag "@town"))
+;;                           (:name "Food-related"
+;;                                  ;; Multiple args given in list with implicit OR
+;;                                  :tag ("food" "dinner"))
+;;                           (:name "Personal"
+;;                                  :habit t
+;;                                  :tag "personal")
+;;                           (:name "Space-related (non-moon-or-planet-related)"
+;;                                  ;; Regexps match case-insensitively on the entire entry
+;;                                  :and (:regexp ("space" "NASA")
+;;                                                ;; Boolean NOT also has implicit OR between selectors
+;;                                                :not (:regexp "moon" :tag "planet")))))
+;;          ;; Groups supply their own section names when none are given
+;;          (:todo "WAITING" :order 8)  ; Set order of this section
+;;          (:todo ("SOMEDAY" "TO-READ" "CHECK" "TO-WATCH" "WATCHING")
+;;                 ;; Show this group at the end of the agenda (since it has the
+;;                 ;; highest number). If you specified this group last, items
+;;                 ;; with these todo keywords that e.g. have priority A would be
+;;                 ;; displayed in that group instead, because items are grouped
+;;                 ;; out in the order the groups are listed.
+;;                 :order 9)
+;;          (:priority<= "B"
+;;                       ;; Show this section after "Today" and "Important", because
+;;                       ;; their order is unspecified, defaulting to 0. Sections
+;;                       ;; are displayed lowest-number-first.
+;;                       :order 1)
+;;          ;; After the last group, the agenda will display items that didn't
+;;          ;; match any of these groups, with the default order position of 99
+;;          )))
+;;   (org-agenda nil "a"))
+
+
+(setq org-agenda-skip-scheduled-if-done t
+      org-agenda-skip-deadline-if-done t
+      org-agenda-include-deadlines t
+      org-agenda-include-diary t
+      org-agenda-block-separator t ;;nil
+      org-agenda-compact-blocks t
+      org-agenda-start-with-log-mode t)
+
+(setq org-agenda-custom-commands
+      ;; '( ("o" "Overview+Log"
+      ;;     ((agenda "" ((org-agenda-span 'day)
+      ;;                 (org-super-agenda-groups
+      ;; 		       '((:log t)  ; Automatically named "Log"
+      ;; 			 (:name "Schedule"
+      ;; 				:time-grid t)
+      ;; 			 (:name "Today"
+      ;; 				:scheduled today
+      ;; 				:todo "NEXT")
+      ;; 			 (:habit t)) )))
+      ;;      (alltodo "" ((org-agenda-overriding-header "")
+      ;;                  (org-super-agenda-groups
+
+      ;; 			 (:name "Due today"
+      ;; 				:deadline today)
+      ;; 			 (:name "Overdue"
+      ;; 				:deadline past)
+      ;; 			 (:name "Due soon"
+      ;; 				:deadline future)
+      ;; 			 (:name "Unimportant"
+      ;; 				:todo ("SOMEDAY" "MAYBE" "CHECK" "TO-READ" "TO-WATCH")
+      ;; 				:order 100)
+      ;; 			 (:name "Waiting..."
+      ;; 				:todo "WAITING"
+      ;; 				:order 98)
+      ;; 			 (:name "Scheduled earlier"
+      ;; 				:scheduled past)))
+      ;; 		    ) ) ) ))
+
+      '(("z" "Overview"
+         ((agenda "" ((org-agenda-span 'day)
+                      (org-super-agenda-groups
+		       '((:name "Today"
+				:log t
+				:time-grid t
+				:scheduled today
+				:todo ("NEXT" "WAITING")
+				:priority "A"
+ 				:habit t
+				:order 0)))))
+          (alltodo "" ((org-agenda-overriding-header "")
+                       (org-super-agenda-groups
+			 '((:name "Due today"
+				  :deadline today
+				  :order 3)
+			   (:name "Overdue"
+				  :deadline past
+				  :order 2)
+			   (:name "Due soon"
+				  :deadline future
+				  :order 4)
+			   (:name "Unimportant"
+				  :todo ("SOMEDAY" "MAYBE" "CHECK" "TO-READ" "TO-WATCH")
+				  :order 100)
+			   (:name "Waiting..."
+				  :todo "WAITING"
+				  :order 5)
+			   (:name "Scheduled earlier"
+				  :scheduled past
+				  :order 6) ))))))))
+
+
+(require 'org-habit)
+;;(setq org-habit-show-all-today t)
+(setq org-habit-show-habits-only-for-today nil)
+
+(use-package org-roam
+      :ensure t
+      :hook
+      (after-init . org-roam-mode)
+      :custom
+      (org-roam-directory "/home/tigany/Documents/docs/Management/roam")
+      :bind (:map org-roam-mode-map
+              (("C-c n l" . org-roam)
+               ("C-c n f" . org-roam-find-file)
+               ("C-c n g" . org-roam-graph))
+              :map org-mode-map
+              (("C-c n i" . org-roam-insert))
+              (("C-c n I" . org-roam-insert-immediate))))
+      
+
+(org-agenda-list)
+
+(require 'which-key)
+(which-key-mode)
+
+(global-auto-revert-mode 1)
+
+(global-set-key (kbd "C-c C-x C-p"  ) 'org-pomodoro)
+
+
+(use-package deft
+:bind ("C-c D" . deft)
+:commands (deft)
+:config (setq deft-directory "/home/tigany/Documents/docs/Management/roam"
+deft-extensions '("md" "org")))
+
+
+;; If you installed via MELPA
+;; If you installed via MELPA
+;; (require 'org-roam-bibtex)
+;; (add-hook 'after-init-hook #'org-roam-bibtex-mode)
+
+
+
+(require 'sound-wav)
+;; (use-package org-roam-bibtex
+;;   :after org-roam
+;;   :hook (org-roam-mode . org-roam-bibtex-mode))
+
+
+;; (require `org-roam-bibtex)
+;; (add-hook 'after-init-hook #'org-roam-bibtex-mode)
+;; (define-key org-roam-bibtex-mode-map (kbd "C-c n a") #'orb-note-actions)
+
+;; (setq org-roam-capture-templates
+;;       '(("r" "reference" plain (function org-roam-capture--get-point)
+;;          (file "/home/tigany/Documents/docs/Management/org/orb-template.org") ; <--
+;;          :file-name "test/${citekey}"
+;;          :head "#+TITLE: ${title}\n"
+;;          :unnarrowed t)))
+
+;; (setq orb-preformat-keywords
+;;       '("citekey" "title" "url" "author-or-editor" "keywords" "file")
+;;       orb-process-file-keyword t
+;;       orb-file-field-extensions '("pdf"))
+
+;; (setq orb-templates
+;;       '(("r" "ref" plain (function org-roam-capture--get-point)
+;;          ""
+;;          :file-name "${citekey}"
+;;          :head "#+TITLE: ${citekey}: ${title}\n#+ROAM_KEY: ${ref}
+
+;; - tags ::
+;; - keywords :: ${keywords}
+
+;; * ${title}
+;; :PROPERTIES:
+;; :Custom_ID: ${citekey}
+;; :URL: ${url}
+;; :AUTHOR: ${author-or-editor}
+;; :NOTER_DOCUMENT: ${file}
+;; :END:")))
+
+
+
+
+(use-package org-noter
+  :after (:any org )
+  ;; :config
+  ;; (setq
+  ;;  ;; The WM can handle splits
+  ;;  org-noter-notes-window-location 'horizontal-split
+  ;;  ;; Please stop opening frames
+  ;;  org-noter-always-create-frame nil
+  ;;  ;; I want to see the whole file
+  ;;  ;;   org-noter-hide-other nil
+  ;;  ;; Everything is relative to the main notes file
+  ;;  org-noter-notes-search-path (list "~/Documents/docs/Management/roam")
+  ;;  )
+  :bind ("C-c n n" . org-noter)
+  )
+
+(use-package org-pdftools
+  :hook (org-mode . org-pdftools-setup-link))
+
+(use-package org-noter-pdftools
+  :after org-noter
+  :config
+  (with-eval-after-load 'pdf-annot
+    (add-hook 'pdf-annot-activate-handler-functions #'org-noter-pdftools-jump-to-note)))
+
+
+(require 'org-ref)                                                                                                                      
+(global-set-key (kbd "C-c ]") 'org-ref-insert-cite-key )
+(global-set-key (kbd "C-}") 'org-ref-helm-insert-ref-link )
+;; (setq org-ref-completion-library 'org-ref-ivy-cite)
+;; (setq org-ref-completion-library 'org-ref-ivy-cite)
+
+(setq
+ org-ref-completion-library 'org-ref-helm-bibtex
+ org-ref-get-pdf-filename-function 'org-ref-get-pdf-filename-helm-bibtex
+ org-ref-note-title-format "* TODO %y - %t\n :PROPERTIES:\n  :Custom_ID: %k\n  :NOTER_DOCUMENT: %F\n :ROAM_KEY: cite:%k\n  :AUTHOR: %9a\n  :JOURNAL: %j\n  :YEAR: %y\n  :VOLUME: %v\n  :PAGES: %p\n  :DOI: %D\n  :URL: %U\n :END:\n\n"
+         org-ref-notes-directory "~/Documents/docs/Management/roam"
+         org-ref-notes-function 'orb-edit-notes
+    )
+(setq org-highlight-latex-and-related '(latex))                                                                                         
+
+
+(setq reftex-default-bibliography '("~/Documents/docs/Management/bibliography/zoteroLibrary.bib"))                                           
+(setq org-ref-bibliography-notes "~/Documents/docs/Management/bibliography/notes.org"                                                   
+      org-ref-default-bibliography '("~/Documents/docs/Management/bibliography/zoteroLibrary.bib")                                           
+      org-ref-pdf-directory "~/Documents/docs/Management/papers")                                                    
+(setq bibtex-completion-bibliography "~/Documents/docs/Management/bibliography/zoteroLibrary.bib"                                            
+      bibtex-completion-library-path "~/Documents/docs/Management/papers"                                             
+      bibtex-completion-notes-path "~/Documents/docs/Management/bibliography/helm-bibtex-notes"
+      bibtex-completion-pdf-field "file"
+       bibtex-completion-notes-template-multiple-files
+ (concat
+  "#+TITLE: ${title}\n"
+  "#+ROAM_KEY: cite:${=key=}\n"
+  "* TODO Notes\n"
+  ":PROPERTIES:\n"
+  ":Custom_ID: ${=key=}\n"
+  ":NOTER_DOCUMENT: %(orb-process-file-field \"${=key=}\")\n"
+  ":AUTHOR: ${author-abbrev}\n"
+  ":JOURNAL: ${journaltitle}\n"
+  ":DATE: ${date}\n"
+  ":YEAR: ${year}\n"
+  ":DOI: ${doi}\n"
+  ":URL: ${url}\n"
+  ":END:\n\n"
+  ))
+(setq bibtex-completion-pdf-open-function                                                                                               
+      (lambda (fpath)                                                                                                                   
+        (start-process "open" "*open*" "open" fpath)))                                    
+
+
+(font-lock-add-keywords 'org-mode
+                        '(("^ *\\([-]\\) "
+                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+(defun org-export-latex-no-toc (depth)
+    (when depth
+      (format "%% Org-mode is exporting headings to %s levels.\n"
+              depth)))
+(setq org-export-latex-format-toc-function 'org-export-latex-no-toc)
+
+(add-to-list 'org-latex-classes
+               '("apa6"
+                 "\\documentclass{apa6}"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+
+
+(let* ((variable-tuple
+        (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+              ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+              ((x-list-fonts "Verdana")         '(:font "Verdana"))
+              ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+              (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+       (base-font-color     (face-foreground 'default nil 'default))
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+  (custom-theme-set-faces
+   'user
+   `(org-level-8 ((t (,@headline ,@variable-tuple))))
+   `(org-level-7 ((t (,@headline ,@variable-tuple))))
+   `(org-level-6 ((t (,@headline ,@variable-tuple))))
+   `(org-level-5 ((t (,@headline ,@variable-tuple))))
+   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.2))))
+   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.4))))
+   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+   `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))
+ '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight normal))))
+'(fixed-pitch ((t ( :family "Verdana" :slant normal :weight normal :height 1.0 :width normal))))
+ '(org-block ((t (:inherit fixed-pitch))))
+ '(org-code ((t (:inherit (shadow fixed-pitch)))))
+ '(org-document-info ((t (:foreground "dark orange"))))
+ '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ '(org-link ((t (:foreground "royal blue" :underline t))))
+ '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-property-value ((t (:inherit fixed-pitch))) t)
+ '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+ '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))))
+
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+
+(use-package org-roam-bibtex
+  :after (org-roam)
+  :hook (org-roam-mode . org-roam-bibtex-mode)
+  :config
+  (setq orb-preformat-keywords
+   '("=key=" "title" "url" "file" "author-or-editor" "keywords"))
+  (setq orb-templates
+        '(("r" "ref" plain (function org-roam-capture--get-point)
+           ""
+           :file-name "${slug}"
+           :head "#+TITLE: ${=key=}: ${title}\n#+ROAM_KEY: ${ref}
+- tags ::
+- keywords :: ${keywords}
+\n* ${title}\n  :PROPERTIES:\n  :Custom_ID: ${=key=}\n  :URL: ${url}\n  :AUTHOR: ${author-or-editor}\n  :NOTER_DOCUMENT: %(orb-process-file-field \"${=key=}\")\n  :NOTER_PAGE: \n  :END:\n\n"
+           :unnarrowed t))))
+
+
+(require 'company-org-roam)
+;; (company-org-roam-init)
+
+(setq visual-bell t)
+
+;; (use-package org-roam-bibtex
+;;   :after org-roam
+;;   :hook (org-roam-mode . org-roam-bibtex-mode))
+;; (setq org-super-agenda-groups
+;;        '((:log t)  ; Automatically named "Log"
+;;          (:name "Schedule"
+;;                 :time-grid t)
+;;          (:name "Today"
+;;                 :scheduled today)
+;;          (:habit t)
+;;          (:name "Due today"
+;;                 :deadline today)
+;;          (:name "Overdue"
+;;                 :deadline past)
+;;          (:name "Due soon"
+;;                 :deadline future)
+;;          (:name "Unimportant"
+;;                 :todo ("SOMEDAY" "MAYBE" "CHECK" "TO-READ" "TO-WATCH")
+;;                 :order 100)
+;;          (:name "Waiting..."
+;;                 :todo "WAITING"
+;;                 :order 98)
+;;          (:name "Scheduled earlier"
+;;                 :scheduled past)))
+;; (org-agenda-list)
+       
+;; (setq org-super-agenda-groups
+;;        '(;; Each group has an implicit boolean OR operator between its selectors.
+;;          (:name "Today"  ; Optionally specify section name
+;;                 :time-grid t  ; Items that appear on the time grid
+;; 		:tag "today")  ; Items that have this TODO keyword
+;;          (:name "Important"
+;;                 ;; Single arguments given alone
+;; 		:todo ("NEXT" "WAITING")
+;;                 :tag "thesis"
+;;                 :priority "A")
+;;          ;; Set order of multiple groups at once
+;;          (:order-multi (2 ;; (:name "Shopping in town"
+;;                           ;;        ;; Boolean AND group matches items that match all subgroups
+;;                           ;;        :and (:tag "shopping" :tag "@town"))
+;;                           ;; (:name "Food-related"
+;;                           ;;        ;; Multiple args given in list with implicit OR
+;;                           ;;        :tag ("food" "dinner"))
+;;                           (:name "Personal"
+;;                                  :habit t
+;;                                  :tag "personal")
+;;                           (:name "Space-related (non-moon-or-planet-related)"
+;;                                  ;; Regexps match case-insensitively on the entire entry
+;;                                  :and (:regexp ("space" "NASA")
+;;                                                ;; Boolean NOT also has implicit OR between selectors
+;;                                                :not (:regexp "moon" :tag "planet")))))
+;;          ;; Groups supply their own section names when none are given
+;;          (:todo "WAITING" :order 8)  ; Set order of this section
+;;          (:todo ("HOLD" "MEETING")
+;;                 ;; Show this group at the end of the agenda (since it has the
+;;                 ;; highest number). If you specified this group last, items
+;;                 ;; with these todo keywords that e.g. have priority A would be
+;;                 ;; displayed in that group instead, because items are grouped
+;;                 ;; out in the order the groups are listed.
+;;                 :order 9)
+;;          (:priority<= "B"
+;;                       ;; Show this section after "Today" and "Important", because
+;;                       ;; their order is unspecified, defaulting to 0. Sections
+;;                       ;; are displayed lowest-number-first.
+;;                       :order 1)
+;;          ;; After the last group, the agenda will display items that didn't
+;;          ;; match any of these groups, with the default order position of 99
+;;          ))
+
+;; (let* ((variable-tuple
+;;         (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+;;               ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+;;               ((x-list-fonts "Verdana")         '(:font "Verdana"))
+;;               ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+;;               (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+;;        (base-font-color     (face-foreground 'default nil 'default))
+;;        (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+;;   (custom-theme-set-faces
+;;    'user
+;;    `(org-level-8 ((t (,@headline ,@variable-tuple))))
+;;    `(org-level-7 ((t (,@headline ,@variable-tuple))))
+;;    `(org-level-6 ((t (,@headline ,@variable-tuple))))
+;;    `(org-level-5 ((t (,@headline ,@variable-tuple))))
+;;    `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+;;    `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+;;    `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+;;    `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+;;    `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))
+;;    '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight normal))))
+;;  '(fixed-pitch ((t ( :family "Inconsolata" :slant normal :weight normal :height 1.0 :width normal))))
+;;  '(org-block ((t (:inherit fixed-pitch))))
+;;  '(org-code ((t (:inherit (shadow fixed-pitch)))))
+;;  '(org-document-info ((t (:foreground "dark orange"))))
+;;  '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+;;  '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+;;  '(org-link ((t (:foreground "royal blue" :underline t))))
+;;  '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+;;  '(org-property-value ((t (:inherit fixed-pitch))) t)
+;;  '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+;;  '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+;;  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+;;  '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
+
+(add-hook 'org-mode-hook 'variable-pitch-mode)
+(put 'narrow-to-region 'disabled nil)
+(put 'set-goal-column 'disabled nil)
+
+(add-to-list 'load-path "~/projects/tidal")
+(require 'haskell-mode)
+(require 'tidal)
+
+;; (require 'sclang)
+(require 'w3m)
+
+(require 'gnuplot-mode)
+
+(defvar gnuplot-flags "-persist -pointsize 2")
+(eval-after-load 'gnuplot-mode
+  '(add-hook 'gnuplot-mode-hook
+             (lambda ()
+               (flyspell-prog-mode)
+               (add-hook 'before-save-hook
+                         'whitespace-cleanup nil t))))
+
+
+(require 'org-pomodoro)
+
+(use-package rainbow-delimiters
+    :ensure t)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(fixed-pitch ((t (:family "Verdana" :slant normal :weight normal :height 1.0 :width normal))))
+ '(org-block ((t (:inherit fixed-pitch))))
+ '(org-code ((t (:inherit (shadow fixed-pitch)))))
+ '(org-document-info ((t (:foreground "dark orange"))))
+ '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ '(org-document-title ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif" :height 2.0 :underline nil))))
+ '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ '(org-level-1 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif" :height 1.75))))
+ '(org-level-2 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif" :height 1.5))))
+ '(org-level-3 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif" :height 1.25))))
+ '(org-level-4 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif" :height 1.1))))
+ '(org-level-5 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif"))))
+ '(org-level-6 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif"))))
+ '(org-level-7 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif"))))
+ '(org-level-8 ((t (:inherit default :weight bold :foreground "#bbc2cf" :family "Sans Serif"))))
+ '(org-link ((t (:foreground "royal blue" :underline t))))
+ '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-property-value ((t (:inherit fixed-pitch))) t)
+ '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-table ((t (:inherit fixed-pitch :foreground "#83a598"))))
+ '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
+ '(variable-pitch ((t (:family "Source Sans Pro" :height 180 :weight normal)))))
+
+
+(org-add-link-type
+ "color"
+ (lambda (path)
+   "No follow action.")
+ (lambda (color description backend)
+   (cond
+    ((eq backend 'latex)                  ; added by TL
+     (format "{\\color{%s}%s}" color description)) ; added by TL
+    ((eq backend 'html)
+     (let ((rgb (assoc color color-name-rgb-alist))
+           r g b)
+       (if rgb
+           (progn
+             (setq r (* 255 (/ (nth 1 rgb) 65535.0))
+                   g (* 255 (/ (nth 2 rgb) 65535.0))
+                   b (* 255 (/ (nth 3 rgb) 65535.0)))
+             (format "<span style=\"color: rgb(%s,%s,%s)\">%s</span>"
+                     (truncate r) (truncate g) (truncate b)
+                     (or description color)))
+         (format "No Color RGB for %s" color)))))))
+

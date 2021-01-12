@@ -35,7 +35,7 @@
     DEADLINE: <2021-02-19 Fri>
 
 *** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
-    DEADLINE: <2021-01-08 Fri>
+    DEADLINE: <2021-01-29 Fri>
 
        
 
@@ -171,18 +171,61 @@
    DEADLINE: <2021-03-26 Fri>
 
 ** TODO Binding of oxygen to dislocations if possible
-   DEADLINE: <2021-01-10 Sun>
+   DEADLINE: <2021-02-05 Fri>
 
 *** TODO Repulsive energy of oxygen
-    DEADLINE: <2021-01-10 Sun>
+    DEADLINE: <2021-02-12 Fri>
 
-*** TODO Concentration Analysis
-    DEADLINE: <2021-01-10 Sun>
+*** TODO [#A] Implement Partial occupancy line tension model
+    SCHEDULED: <2021-01-12 Tue 09:30> DEADLINE: <2021-01-22 Fri>
+    :PROPERTIES:
+    :ORDERED:  t
+    :END:
+    :LOGBOOK:
+    CLOCK: [2021-01-11 Mon 16:51]--[2021-01-11 Mon 17:16] =>  0:25
+    CLOCK: [2021-01-11 Mon 16:21]--[2021-01-11 Mon 16:46] =>  0:25
+    CLOCK: [2021-01-11 Mon 14:36]--[2021-01-11 Mon 14:55] =>  0:19
+    CLOCK: [2021-01-11 Mon 14:30]--[2021-01-11 Mon 14:35] =>  0:05
+    CLOCK: [2021-01-11 Mon 14:30]--[2021-01-11 Mon 14:30] =>  0:00
+    CLOCK: [2021-01-11 Mon 10:46]--[2021-01-11 Mon 10:55] =>  0:09
+    CLOCK: [2021-01-11 Mon 10:30]--[2021-01-11 Mon 10:45] =>  0:15
+    :END:
+
+
+**** TODO Actions [3/4]
+    - [ ]  Include initial summation of concentrations along [0/3]
+      dislocation line.
+      - [ ] Make new file which controls the addition of concentration
+        dependence along the dislocation line
+      - [ ] Define trap sites for an image:
+	- These are ones which reside in the plane of the dislocation.
+	- The solute redistributes in each plane only.
+	- Does the occupation probability does not "spill over" into
+          other segments.
+      - [ ] Constrain total concentration
+
+
+   - Follow the notes on Ivo's paper [[file:roam/gonginfluencehydrogenplasticity2020.org::#gongInfluenceHydrogenPlasticity2020][The influence of hydrogen on plasticity in pure iron—theory and experiment]]
+
+   - [X] Why are the dependences not changing with concentration?
+      They are.
+   - [X] Check that the full temperature dependent concentrations
+      are giving sensible results.
+   - [X] Solve why Spline is giving zeros for concentration at any distance
+
+
+**** Notes
+    - Making a function such that at a given distance of a solute one
+      can get the McClean isotherm concentration.
+    - Input: distance, Output: concentration
+    - The data fed into the system are the energies from the lorentzian
+      at different distances. These act at formation energies in the
+      equations for the solution of the McClean isotherm.
 
    
 
 ** TODO Embedding Calculations
-   DEADLINE: <2021-03-20 Sat> SCHEDULED: <2021-01-11 Mon 10:00>
+   SCHEDULED: <2021-01-15 Fri 10:00> DEADLINE: <2021-03-20 Sat>
 
 *** TODO Just look at vacancies and oxygen?
 *** TODO Other Dislocation structures if models don't work?

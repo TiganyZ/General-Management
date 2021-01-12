@@ -1,0 +1,39 @@
+#+TITLE: gongInfluenceHydrogenPlasticity2020: The influence of hydrogen on plasticity in pure iron—theory and experiment
+#+ROAM_KEY: cite:gongInfluenceHydrogenPlasticity2020
+- tags ::
+- keywords :: 
+
+* The influence of hydrogen on plasticity in pure iron—theory and experiment
+  :PROPERTIES:
+  :Custom_ID: gongInfluenceHydrogenPlasticity2020
+  :URL: http://www.nature.com/articles/s41598-020-66965-z
+  :AUTHOR: Gong, P., Katzarov, I. H., Nutter, J., Paxton, A. T., & Rainforth, W. M.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/MC6RHHPD/Gong et al. - 2020 - The influence of hydrogen on plasticity in pure ir.pdf
+  :NOTER_PAGE: 
+  :END:
+
+  
+  - When the dislocation is lying in its equilibrium Peierls valley the probability of occupancy, χ i , of a trap site, i,
+is determined by the McLean isotherm.
+
+  - Ivo assumes constant H occupancy along the dislocation line according to his email.
+  - But the model can calculate the energy change when the dislocation segment moves between two
+    stable configurations.
+  - In this case H atoms are placed in one or more dislocation segements which have length b. He
+    suggests this is the way we can study carbon interactions.
+
+  - Seems like if the *dislocation* does not accept or reject the
+    solute, then the trap sites are only those which are in the plane
+    perpendicular to the dislocation line. This means that the
+    summation is just over trap sites in that particular plane, and
+    each segment has its own redistribution to account for.
+
+
+
+  
+    
+** Notes for Research:
+   - I can actually, becuase of this change in the occupancy, one can look at energy barriers
+     between carbon in different layers of the dislocation.
+   - Would this be more accurate than the kMC model of carbon
+     diffusion by cite:luthiInitioThermodynamicsCarbon2019 ?

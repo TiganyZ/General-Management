@@ -1,0 +1,14 @@
+* MEETING with Tony Paxton                                          :MEETING:
+  SCHEDULED: <2021-01-11 Mon 12:00 ++7d>
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-01-11 Mon 18:36]
+  :REPEAT_TO_STATE: MEETING
+  :END:
+
+** <2021-01-11 Mon>
+*** Actions
+    - None
+*** Notes
+    - No meeting
+    - Continuing with implementation of the line-tension model with
+      the concentration dependence as in Ivo's paper
