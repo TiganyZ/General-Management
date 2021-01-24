@@ -112,7 +112,7 @@
 
 ** Ti
 *** TODO Energy dependence and core energy
-    DEADLINE: <2021-01-15 Fri>
+    DEADLINE: <2021-02-26 Fri>
 
 **** Think about why a d-canonical model would lead to large spreading? :NOTE:
      :LOGBOOK:
@@ -177,7 +177,7 @@
     DEADLINE: <2021-02-12 Fri>
 
 *** TODO [#A] Implement Partial occupancy line tension model
-    SCHEDULED: <2021-01-12 Tue 09:30> DEADLINE: <2021-01-22 Fri>
+    SCHEDULED: <2021-01-21 Thu 09:30> DEADLINE: <2021-01-22 Fri>
     :PROPERTIES:
     :ORDERED:  t
     :END:
@@ -193,25 +193,60 @@
 
 
 **** TODO Actions [3/4]
-    - [ ]  Include initial summation of concentrations along [0/3]
+    - [-]  Include initial summation of concentrations along [4/5]
       dislocation line.
-      - [ ] Make new file which controls the addition of concentration
+      - [ ] Constrain total concentration
+      - [X] Make new file which controls the addition of concentration
         dependence along the dislocation line
-      - [ ] Define trap sites for an image:
+      - [X] Define trap sites for an image:
 	- These are ones which reside in the plane of the dislocation.
 	- The solute redistributes in each plane only.
 	- Does the occupation probability does not "spill over" into
           other segments.
-      - [ ] Constrain total concentration
+	- Are these just the usual octahedral sites within the line?
+	- What is the redistribution?
+	  * I assume the redistribution is just the change in
+            concentration from the dislocation moving, so the trap
+            site is in another relative position, therefore the
+            concentration of that particular site is less (think of
+            the spline distance dependence).
+	  * As its intra-planar, then the trap sites depend on the 2d
+            distance from the core position. We know the octahedral
+            positions thankfully.
+	- We could include the effects of the other sites further from
+          the dislocation also. It would complicate the implementation
+          though, as mappings aren't unique: how can one smoothly
+          transition a site when the hard core does not have a similar
+          distribution of trap sites to the easy core?
+	- Ivo chooses this latter description, with some reasonable
+          (albeit wrong) assumptions.
+	- Each core should have all the trap sites from molecular
+          statics described, but then their action should be scaled by
+          the number of sites which "decay" to that position.
+      - [X] Describe paths along the transition between easy and hard
+        core.
+      - [X] Figure out how to circumvent the trap site problem
+	- From easy to hard there is different mappings of sites.
+	- Need mapping of all sites such that it is symmetric.
+	- Can include all sites, but then there is a difference in the
+          range of interactions which are included in the x direction
+          (more than the y direction).
+	- *Fixed*:
+	  - Will find the many-to-one mappings and
+            multiplicatively scale each of the interactions based on the
+            distance from the initial easy core site.
+	  - Isolated sites will be multiplicatively scaled to zero by
+            the same process.
+	  - This multiplicative action will also modify the energies
+            in the same way.
 
+    - Follow the notes on Ivo's paper [[file:roam/gonginfluencehydrogenplasticity2020.org::#gongInfluenceHydrogenPlasticity2020][The influence of hydrogen on plasticity in pure iron—theory and experiment]]
 
-   - Follow the notes on Ivo's paper [[file:roam/gonginfluencehydrogenplasticity2020.org::#gongInfluenceHydrogenPlasticity2020][The influence of hydrogen on plasticity in pure iron—theory and experiment]]
-
-   - [X] Why are the dependences not changing with concentration?
-      They are.
-   - [X] Check that the full temperature dependent concentrations
-      are giving sensible results.
-   - [X] Solve why Spline is giving zeros for concentration at any distance
+    - [X] Why are the dependences not changing with concentration?
+       They are.
+    - [X] Check that the full temperature dependent concentrations
+       are giving sensible results.
+    - [X] Solve why Spline is giving zeros for concentration at any distance
 
 
 **** Notes
@@ -225,7 +260,7 @@
    
 
 ** TODO Embedding Calculations
-   SCHEDULED: <2021-01-15 Fri 10:00> DEADLINE: <2021-03-20 Sat>
+   SCHEDULED: <2021-01-22 Fri 10:00> DEADLINE: <2021-03-20 Sat>
 
 *** TODO Just look at vacancies and oxygen?
 *** TODO Other Dislocation structures if models don't work?

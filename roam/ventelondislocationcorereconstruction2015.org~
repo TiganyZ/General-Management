@@ -1,0 +1,23 @@
+#+TITLE: ventelonDislocationCoreReconstruction2015: Dislocation core reconstruction induced by carbon segregation in bcc iron
+#+ROAM_KEY: cite:ventelonDislocationCoreReconstruction2015
+- tags ::
+- keywords ::
+
+* Dislocation core reconstruction induced by carbon segregation in bcc iron
+  :PROPERTIES:
+  :Custom_ID: ventelonDislocationCoreReconstruction2015
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.91.220102
+  :AUTHOR: Ventelon, L., Lüthi, B., Clouet, E., Proville, L., Legrand, B., Rodney, D., & Willaime, F.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/HK87Y9VN/Ventelon et al. - 2015 - Dislocation core reconstruction induced by carbon .pdf
+  :NOTER_PAGE: 
+  :END:
+
+
+  - Did this for tbe for the repulsive energy.
+
+  - E_int(1b) = E0_int +  \Delta E_easy-hard + V_CC
+
+  - E_int(2b) = E0_int + 2\Delta E_easy-hard
+
+  - Need to calculate the interaction energy using a 2b cell, can just
+    multiply the other numbers by the 2/3 to get the effective values.

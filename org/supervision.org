@@ -1,11 +1,23 @@
 * MEETING with Tony Paxton                                          :MEETING:
-  SCHEDULED: <2021-01-18 Mon 12:00 ++7d>
+  SCHEDULED: <2021-01-25 Mon 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-11 Mon 18:42]
+  :LAST_REPEAT: [2021-01-18 Mon 15:10]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-01-18 Mon 15:10]
   - State "DONE"       from "MEETING"    [2021-01-11 Mon 18:42]
+** <2021-01-18 Mon>
+*** Actions
+    - None
+*** Notes
+    - Mention the muted effect of carbon due to the longer range
+      lorentzian.
+    - Gladman
+    - Binding energy of carbon with strain
+    - Continuing with implementation of the line-tension model with
+      the concentration dependence as in Ivo's paper
+
 ** <2021-01-11 Mon>
 *** Actions
     - None
@@ -13,3 +25,21 @@
     - No meeting
     - Continuing with implementation of the line-tension model with
       the concentration dependence as in Ivo's paper
+* TODO with Group                                                   :MEETING:
+  SCHEDULED: <2021-01-20 Wed 12:00 ++7d>
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-01-13 Wed 12:45]
+  :END:
+
+  - State "DONE"       from "MEETING"    [2021-01-13 Wed 12:45]
+** <2021-01-13 Wed>
+
+*** Actions
+    - No group meeting
+    - Follow up Ivo about his notes and how he defines the trap
+      sites in the McClean Isotherm model.
+*** Notes
+    - Talk about the lorentzian of carbon having a reduced effect
+      compared to that of hydrogen
+    - Talk about the distance dependence of the self-consistent
+      McClean isotherm.

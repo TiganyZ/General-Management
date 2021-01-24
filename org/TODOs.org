@@ -120,7 +120,7 @@
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 
 * TODO [#B] Compile bop on French supercomputer
-  SCHEDULED: <2021-01-14 Thu 11:00> DEADLINE: <2021-01-15 Fri 16:00>
+  DEADLINE: <2021-01-29 Fri 16:00> SCHEDULED: <2021-01-25 Mon 11:00>
   :PROPERTIES:
   :ORDERED:  t
   :END:
@@ -203,7 +203,7 @@
 *
 
 * TODO Plot C/H line energies and compare with peierls potential of 10 GPa
-  SCHEDULED: <2021-01-12 Tue 11:00>
+  SCHEDULED: <2021-01-22 Fri 11:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 16:36]--[2021-01-06 Wed 16:36] =>  0:00
   CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
@@ -218,20 +218,25 @@ Chill at her pad n play games
 *
 
 * TODO Read Izzy's paper
-  SCHEDULED: <2021-01-12 Tue 13:00>
+  SCHEDULED: <2021-01-22 Fri 13:00>
   :LOGBOOK:
   CLOCK: [2020-12-22 Tue 18:02]--[2020-12-22 Tue 18:07] =>  0:05
   :END:
 [2020-12-22 Tue 18:02]
 [[file:~/Documents/docs/Management/papers/Evaluating_edge_importance.pdf]]
 
-* NEXT Reading
-  SCHEDULED: <2021-01-12 Tue 22:00 ++1d>
+* NEXT Reading                                                      :MEETING:
+  SCHEDULED: <2021-01-22 Fri 22:00 ++1d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-11 Mon 17:25]
+  :LAST_REPEAT: [2021-01-21 Thu 10:00]
   :END:
+  - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:00]
+  - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
+  - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
+  - State "DONE"       from "NEXT"       [2021-01-13 Wed 12:40]
+  - State "DONE"       from "NEXT"       [2021-01-13 Wed 11:34]
   - State "DONE"       from "NEXT"       [2021-01-11 Mon 17:25]
   - State "DONE"       from "NEXT"       [2021-01-10 Sun 13:29]
   - State "DONE"       from "NEXT"       [2021-01-10 Sun 13:29]
@@ -309,12 +314,13 @@ Chill at her pad n play games
 * DONE Buy protein powder :Personal:
 * DONE But shibari rope :Personal:
 * TODO Tidal :Music:
-* NEXT Review TODO
-  SCHEDULED: <2021-01-18 Mon 09:00 ++7d>
+* NEXT Review TODO                                                  :MEETING:
+  SCHEDULED: <2021-02-01 Mon 09:00 ++7d>
   :PROPERTIES:
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-11 Mon 15:39]
+  :LAST_REPEAT: [2021-01-21 Thu 10:01]
   :END:
+  - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:01]
   - State "DONE"       from "NEXT"       [2021-01-11 Mon 15:39]
   :LOGBOOK:
   CLOCK: [2021-01-04 Mon 10:29]--[2021-01-04 Mon 10:30] =>  0:01
@@ -337,13 +343,19 @@ Chill at her pad n play games
   CLOCK: [2021-01-04 Mon 14:57]--[2021-01-04 Mon 15:22] =>  0:25
   :END:
 
-* TODO #A Yoga with Adrienne                                     :Personal:
-  SCHEDULED: <2021-01-12 Tue 08:00 +1d>
+* TODO #A Yoga with Adrienne                               :Personal:MEETING:
+  SCHEDULED: <2021-01-18 Mon 08:00 +1d>
   :PROPERTIES:
   :STYLE: habit
-  :LAST_REPEAT: [2021-01-11 Mon 17:38]
+  :LAST_REPEAT: [2021-01-21 Thu 10:02]
   :END:
 
+  - State "DONE"       from "TODO"       [2021-01-21 Thu 10:02]
+  - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:00]
+  - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
+  - State "DONE"       from "TODO"       [2021-01-18 Mon 15:11]
+  - State "DONE"       from "TODO"       [2021-01-13 Wed 12:40]
+  - State "DONE"       from "TODO"       [2021-01-13 Wed 11:34]
   - State "DONE"       from "TODO"       [2021-01-11 Mon 17:38]
   - State "DONE"       from "TODO"       [2021-01-10 Sun 13:29]
   - State "DONE"       from "TODO"       [2021-01-10 Sun 13:29]
@@ -396,33 +408,53 @@ SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
   :END:
 [2021-01-06 Wed 10:45]
 * TODO Finish writing about why carbon has less of an effect than hydrogen on the kink-pair formation enthalpies
-  SCHEDULED: <2021-01-20 Wed 10:00>
+  SCHEDULED: <2021-01-22 Fri 10:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 13:03]--[2021-01-06 Wed 13:04] =>  0:01
   :END:
 [2021-01-06 Wed 13:03]
 * TODO Look at therapy for rachel and I
-  SCHEDULED: <2021-01-11 Mon 18:00>
+  SCHEDULED: <2021-01-22 Fri 18:00>
   :LOGBOOK:
   CLOCK: [2021-01-08 Fri 15:32]--[2021-01-08 Fri 15:33] =>  0:01
   :END:
 [2021-01-08 Fri 15:32]
 - Better help?
 * TODO Call Seb
-  SCHEDULED: <2021-01-11 Mon 19:00>
+  SCHEDULED: <2021-01-18 Mon 19:00>
   :LOGBOOK:
   CLOCK: [2021-01-08 Fri 15:33]--[2021-01-08 Fri 15:33] =>  0:00
   :END:
 [2021-01-08 Fri 15:33]
-* TODO Reply to Predrag about carbon binding energies
-  SCHEDULED: <2021-01-12 Tue 13:00>
+* DONE Reply to Predrag about carbon binding energies
+  SCHEDULED: <2021-01-13 Wed 13:00>
   :LOGBOOK:
   CLOCK: [2021-01-11 Mon 10:45]--[2021-01-11 Mon 10:46] =>  0:01
   :END:
 [2021-01-11 Mon 10:45]
 * TODO Reply to Rolls Royce about internship
-  SCHEDULED: <2021-01-12 Tue 16:00>
+  SCHEDULED: <2021-01-25 Mon 16:00>
   :LOGBOOK:
   CLOCK: [2021-01-11 Mon 14:35]--[2021-01-11 Mon 14:36] =>  0:01
   :END:
 [2021-01-11 Mon 14:35]
+** As part of this I am going to contact Aalto for nominal dates
+
+   - Aalto is for 10 weeks
+   - RR ask for a 1-2 month delay.
+   - Initial dates: <2021-03-29 Mon>--<2021-06-18 Fri>
+   - 2 month delay: <2021-05-24 Mon>--<2021-08-13 Fri>
+   - 3 month delay: <2021-06-28 Mon>--<2021-09-17 Fri>
+   - 4 month delay: <2021-07-26 Mon>--<2021-10-15 Fri>
+   - 4 month delay + 1 week: <2021-08-02 Mon>--<2021-10-22 Fri>
+
+   - As for Aalto, it would be nice if I could change the dates to be
+     in summer.
+   - <2021-04-17 Sat>--<2021-06-26 Sat>
+   - <2021-05-15 Sat>--<2021-07-24 Sat>
+* TODO Call with Anni
+  SCHEDULED: <2021-01-21 Thu 20:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-21 Thu 10:03]--[2021-01-21 Thu 10:03] =>  0:00
+  :END:
+[2021-01-21 Thu 10:03]

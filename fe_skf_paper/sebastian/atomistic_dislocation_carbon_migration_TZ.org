@@ -673,12 +673,12 @@
     # site. 
     # E_bind Fe-C Oct 2 = -0.7473003889178021 eV -> Ventelon results -0.79 eV at 3b
 
-    # Kamber /et
-    # al./ found a maximum binding energy of 0.5 eV. Cochardt found a value of 0.71 eV
+    # Kamber et
+    # al. found a maximum binding energy of 0.5 eV. Cochardt found a value of 0.71 eV
     # within 0.1eV of the largest binding energy for the easy core.
     These binding energies agree well with experiment and atomistic/elastic calculations. EAM simulations
     by Clouet cite:Clouet2008,Becquart2007 found a maximum binding energy of 0.41 eV by calculating
-    the elastic dipole tensor within Eshelby theory. Hanlumyuang /et al./ cite:Hanlumyuang2010,
+    the elastic dipole tensor within Eshelby theory. Hanlumyuang et al. cite:Hanlumyuang2010,
     similarly conducted DFT and EAM calculations for the interaction energy 12\AA from the core, and
     their calculations agreed with the continuum limit of Eshelby theory with a binding energy of
     0.2 eV. In DFT calculations by Ventelon cite:Ventelon2015, the interaction energy of a carbon in a
@@ -812,7 +812,17 @@
     # It might be useful to do another calculation in the final state of these calculations, just to
     # get a more relaxed binding energy. 
     
-    
+    The C-C first-neighbour repulsive energy present of carbon in a
+    site was found for the H1 site using a quadrupolar configuration.
+    It was found to be 0.75 eV, which is in good agreement with DFT.
+
+    # Total energy of 1b thickness hard core -96.66507101
+    # Energy of 1b sep 3layer thickness Fe-C dipole (6 C total) =
+    # -292.62133376
+
+    # E_1b = -97.5404445867 (2C)
+    # E_2b = -96.66507101   (2C)
+
 
 
     
@@ -996,7 +1006,9 @@ Lower tolerances for relaxation below $\sim 1$ MeV/$\AA$.
 
    #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Concentration of carbon on the dislocation line as a function of distance from the core at differing dislocation densities and initial nominal carbon concentrations. [[label:conc_dist_disl]]
-   [[file:Images/concentration_vs_solute_distance_all_with_legend.png]]
+   [[file:Images/concentration_vs_solute_distance_all_with_legend_5b.png]]
+
+   # [[file:Images/concentration_vs_solute_distance_all_with_legend.png]]
 
    # [[file:Images/concentration_vs_solute_distance_1.00E+12_appm.png]]
    # [[file:Images/concentration_vs_solute_distance_1.00E+14_appm.png]]
