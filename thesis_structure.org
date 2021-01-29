@@ -21,7 +21,7 @@
      functional theory / Horsfield [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
 
 *** TODO Read Majeski & Vogel [[file:~/Documents/books/The%20Structures%20of%20Binary%20Compounds%20by%20J.%20Hafner,%20F.%20Hulliger,%20W.B.%20Jensen,%20J.A.%20Majewski,%20K.%20Mathis,%20P.%20Villars%20and%20P.%20Vogl%20(Eds.)%20(z-lib.org).pdf][Structures of binary compounds chapter 4]]
-    DEADLINE: <2021-02-05 Fri>
+    DEADLINE: <2021-02-15 Mon>
     :PROPERTIES:
     :ORDERED:  t
     :END:
@@ -35,7 +35,7 @@
     DEADLINE: <2021-02-19 Fri>
 
 *** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
-    DEADLINE: <2021-01-29 Fri>
+    SCHEDULED: <2021-02-01 Mon 17:00> DEADLINE: <2021-02-05 Fri>
 
        
 
@@ -74,7 +74,7 @@
       ask in the timeframe
 
 *** TODO Finalize model for fitting
-    DEADLINE: <2021-01-29 Fri>
+    DEADLINE: <2021-02-05 Fri>
 
 ** Remarks on tight-binding
 
@@ -84,7 +84,6 @@
    - P. W. Anderson's theory on tight-binding. Dismissing it
      initially, but it's the right way to think about solids
 
-* Surface Energies?
 * Dislocations in pure metals
 ** Fe
 
@@ -122,7 +121,7 @@
    [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 
 *** TODO Core Energy difference in tbe - bop
-    DEADLINE: <2021-01-29 Fri>
+    DEADLINE: <2021-02-12 Fri>
 
     - Tiny difference of 0.53 eV which determines the difference
       between each of the core energies.
@@ -142,7 +141,10 @@
 
 *** HOLD Are s-orbitals a necessary inclusion for dislocation mechanics? :HOLD:
     - State "HOLD"       from "WAITING"    [2020-09-03 Thu 12:46]
-      Ruminate
+
+      - Why would they be necessary in the description?
+
+      - Bonding-wise, why would they be necessary? Hybridisation?
 
 *** HOLD How does overlap and non-orthogonality play a role?
 
@@ -171,17 +173,43 @@
    DEADLINE: <2021-03-26 Fri>
 
 ** TODO Binding of oxygen to dislocations if possible
-   DEADLINE: <2021-02-05 Fri>
+   DEADLINE: <2021-03-05 Fri>
 
 *** TODO Repulsive energy of oxygen
-    DEADLINE: <2021-02-12 Fri>
+    DEADLINE: <2021-03-05 Fri>
 
-*** TODO [#A] Implement Partial occupancy line tension model
-    SCHEDULED: <2021-01-21 Thu 09:30> DEADLINE: <2021-01-22 Fri>
+*** DONE [#A] Implement Partial occupancy line tension model
+    SCHEDULED: <2021-01-28 Thu 09:30> DEADLINE: <2021-01-28 Thu>
     :PROPERTIES:
     :ORDERED:  t
     :END:
     :LOGBOOK:
+    CLOCK: [2021-01-28 Thu 17:03]--[2021-01-28 Thu 17:28] =>  0:25
+    CLOCK: [2021-01-28 Thu 16:37]--[2021-01-28 Thu 17:02] =>  0:25
+    CLOCK: [2021-01-28 Thu 15:49]--[2021-01-28 Thu 16:14] =>  0:25
+    CLOCK: [2021-01-28 Thu 14:11]--[2021-01-28 Thu 14:36] =>  0:25
+    CLOCK: [2021-01-28 Thu 11:39]--[2021-01-28 Thu 12:04] =>  0:25
+    CLOCK: [2021-01-28 Thu 10:59]--[2021-01-28 Thu 11:24] =>  0:25
+    CLOCK: [2021-01-28 Thu 10:11]--[2021-01-28 Thu 10:36] =>  0:25
+    CLOCK: [2021-01-27 Wed 17:01]--[2021-01-27 Wed 17:26] =>  0:25
+    CLOCK: [2021-01-27 Wed 16:18]--[2021-01-27 Wed 16:43] =>  0:25
+    CLOCK: [2021-01-27 Wed 15:33]--[2021-01-27 Wed 15:48] =>  0:15
+    CLOCK: [2021-01-27 Wed 15:23]--[2021-01-27 Wed 15:32] =>  0:09
+    CLOCK: [2021-01-27 Wed 11:29]--[2021-01-27 Wed 11:54] =>  0:25
+    CLOCK: [2021-01-27 Wed 10:57]--[2021-01-27 Wed 11:22] =>  0:25
+    CLOCK: [2021-01-27 Wed 10:19]--[2021-01-27 Wed 10:44] =>  0:25
+    CLOCK: [2021-01-27 Wed 09:46]--[2021-01-27 Wed 10:11] =>  0:25
+    CLOCK: [2021-01-26 Tue 13:21]--[2021-01-26 Tue 13:44] =>  0:23
+    CLOCK: [2021-01-26 Tue 13:20]--[2021-01-26 Tue 13:21] =>  0:01
+    CLOCK: [2021-01-26 Tue 13:19]--[2021-01-26 Tue 13:20] =>  0:01
+    CLOCK: [2021-01-26 Tue 11:32]--[2021-01-26 Tue 11:57] =>  0:25
+    CLOCK: [2021-01-26 Tue 11:02]--[2021-01-26 Tue 11:27] =>  0:25
+    CLOCK: [2021-01-26 Tue 10:16]--[2021-01-26 Tue 10:41] =>  0:25
+    CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 10:00] =>  0:21
+    CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 09:39] =>  0:00
+    CLOCK: [2021-01-26 Tue 09:38]--[2021-01-26 Tue 09:38] =>  0:00
+    CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:36] =>  0:00
+    CLOCK: [2021-01-26 Tue 09:35]--[2021-01-26 Tue 09:36] =>  0:01
     CLOCK: [2021-01-11 Mon 16:51]--[2021-01-11 Mon 17:16] =>  0:25
     CLOCK: [2021-01-11 Mon 16:21]--[2021-01-11 Mon 16:46] =>  0:25
     CLOCK: [2021-01-11 Mon 14:36]--[2021-01-11 Mon 14:55] =>  0:19
@@ -192,10 +220,15 @@
     :END:
 
 
-**** TODO Actions [3/4]
-    - [-]  Include initial summation of concentrations along [4/5]
+**** TODO Actions [6/6]
+    - [X] Do I just include carbon along the whole dislocation line?
+      Talk to Ivo perhaps about teams and the like
+
+    - [X] Implement the Maxwell-Boltzmann statistics for the concentration.
+
+    - [X]  Include initial summation of concentrations along [5/5]
       dislocation line.
-      - [ ] Constrain total concentration
+      - [X] Constrain total concentration
       - [X] Make new file which controls the addition of concentration
         dependence along the dislocation line
       - [X] Define trap sites for an image:
@@ -241,7 +274,6 @@
             in the same way.
 
     - Follow the notes on Ivo's paper [[file:roam/gonginfluencehydrogenplasticity2020.org::#gongInfluenceHydrogenPlasticity2020][The influence of hydrogen on plasticity in pure iron—theory and experiment]]
-
     - [X] Why are the dependences not changing with concentration?
        They are.
     - [X] Check that the full temperature dependent concentrations
@@ -258,20 +290,21 @@
       equations for the solution of the McClean isotherm.
 
    
-
 ** TODO Embedding Calculations
-   SCHEDULED: <2021-01-22 Fri 10:00> DEADLINE: <2021-03-20 Sat>
+   SCHEDULED: <2021-02-01 Mon 10:00> DEADLINE: <2021-03-20 Sat>
 
 *** TODO Just look at vacancies and oxygen?
 *** TODO Other Dislocation structures if models don't work?
-* C in Fe
+** Surface Energies?
+* Embedding
+* Carbon in Fe
 
   - SKF report 
   - Onwards to kMC
 
 ** DONE Carbon binding to dislocations
 ** TODO Energy dependence with radius - Add data
-   DEADLINE: <2021-01-29 Fri>
+   DEADLINE: <2021-02-12 Fri>
 
 ** DONE Concentration Analysis - Add in repulsive energy
    DEADLINE: <2020-09-25 Fri>
@@ -284,7 +317,7 @@
     CLOCK: [2020-09-08 Tue 10:25]--[2020-09-08 Tue 11:52] =>  1:27
     :END:
 
-*** TODO Use simple models
+*** DONE Use simple models
     DEADLINE: <2021-01-22 Fri>
 
     - Sine-Gordon
@@ -296,6 +329,7 @@
 *** DONE Look at what we get from d/sd Iron models
     DEADLINE: <2020-11-06 Fri>
 
+* Line Tension modelling
 * Wish-list
 
   - Line tension models maybe? 

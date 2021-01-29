@@ -219,7 +219,7 @@ Ordering these energies we get H1/H2, E2, E1, E5, H3, H4, E6,
 
 We have a zero-point energy correction 
 
-* TODO Consider Literature on any other calculations :Thesis:
+* DONE Consider Literature on any other calculations                 :Thesis:
   SCHEDULED: <2021-01-22 Fri 10:00> DEADLINE: <2021-01-22 Fri 10:00>
 
 - How have the calculations by Wang et al changed anything?

@@ -814,7 +814,9 @@
     
     The C-C first-neighbour repulsive energy present of carbon in a
     site was found for the H1 site using a quadrupolar configuration.
-    It was found to be 0.75 eV, which is in good agreement with DFT.
+    It was found to be 0.75 eV, which is quite off DFT, now just
+    recalculating using different reference cells for the carbon
+    configurations.
 
     # Total energy of 1b thickness hard core -96.66507101
     # Energy of 1b sep 3layer thickness Fe-C dipole (6 C total) =

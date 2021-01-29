@@ -1,4 +1,4 @@
-#+TITLE: ventelonDislocationCoreReconstruction2015: Dislocation core reconstruction induced by carbon segregation in bcc iron
+-#+TITLE: ventelonDislocationCoreReconstruction2015: Dislocation core reconstruction induced by carbon segregation in bcc iron
 #+ROAM_KEY: cite:ventelonDislocationCoreReconstruction2015
 - tags ::
 - keywords ::

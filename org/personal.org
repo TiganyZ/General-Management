@@ -1,8 +1,10 @@
 * TODO Popping
+  SCHEDULED: <2021-01-31 Sun .+2d/4d>
   :PROPERTIES:
-  :LAST_REPEAT: [2020-12-16 Wed 19:34]
-  :STYLE: t
+  :LAST_REPEAT: [2021-01-29 Fri 11:44]
+  :STYLE: habit
   :END:
+  - State "DONE"       from "TODO"       [2021-01-29 Fri 11:44]
   - State "DONE"       from "NEXT"       [2020-12-16 Wed 19:34]
 [2020-12-16 Wed 17:53]
 [[file:~/Documents/docs/Management/org/personal.org]]

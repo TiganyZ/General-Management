@@ -1,12 +1,22 @@
 * MEETING with Tony Paxton                                          :MEETING:
-  SCHEDULED: <2021-01-25 Mon 12:00 ++7d>
+  SCHEDULED: <2021-02-01 Mon 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-18 Mon 15:10]
+  :LAST_REPEAT: [2021-01-25 Mon 16:10]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-01-25 Mon 16:10]
   - State "DONE"       from "MEETING"    [2021-01-18 Mon 15:10]
   - State "DONE"       from "MEETING"    [2021-01-11 Mon 18:42]
+** <2021-01-25 Mon>
+*** Actions
+    - Distributed dSE ARCHER 2 call.
+    - Compile all Ti results.
+    - Embedding calculations
+    - Oxygen vacancy binding
+    - Dissolution energies in the octahedral and tetrahedral sites.
+      - Maybe use an experimental reference?
+    - Perhaps DFT
 ** <2021-01-18 Mon>
 *** Actions
     - None
@@ -25,12 +35,15 @@
     - No meeting
     - Continuing with implementation of the line-tension model with
       the concentration dependence as in Ivo's paper
-* TODO with Group                                                   :MEETING:
-  SCHEDULED: <2021-01-20 Wed 12:00 ++7d>
+* MEETING with Group                                                :MEETING:
+  SCHEDULED: <2021-02-03 Wed 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-13 Wed 12:45]
+  :LAST_REPEAT: [2021-01-27 Wed 15:07]
+  :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-01-27 Wed 15:07]
+  - State "DONE"       from "TODO"       [2021-01-25 Mon 16:11]
   - State "DONE"       from "MEETING"    [2021-01-13 Wed 12:45]
 ** <2021-01-13 Wed>
 

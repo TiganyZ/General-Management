@@ -1,10 +1,14 @@
 * NEXT Stretch                                                      :MEETING:
-  SCHEDULED: <2021-01-23 Sat 09:30 ++2d>
+  SCHEDULED: <2021-01-31 Sun 09:30 ++2d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-21 Thu 09:59]
+  :LAST_REPEAT: [2021-01-29 Fri 09:59]
   :END:
+  - State "DONE"       from "NEXT"       [2021-01-29 Fri 09:59]
+  - State "DONE"       from "NEXT"       [2021-01-28 Thu 00:10]
+  - State "DONE"       from "NEXT"       [2021-01-28 Thu 00:10]
+  - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
   - State "DONE"       from "NEXT"       [2021-01-13 Wed 11:34]
@@ -30,13 +34,16 @@
   - Good morning/Overhead squat 
 
 * NEXT Handstand                                            :Workout:MEETING:
-  SCHEDULED: <2021-01-22 Fri 09:30 ++2d>
+  SCHEDULED: <2021-01-28 Thu 09:30 .+2d/3d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-21 Thu 09:59]
+  :LAST_REPEAT: [2021-01-27 Wed 00:56]
   :END:
 
+
+
+  - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
   - State "DONE"       from "NEXT"       [2021-01-13 Wed 11:34]
@@ -56,13 +63,14 @@
 - Balance thinking of hips 
 
 * NEXT Upper A                                                      :Workout:
-  SCHEDULED: <2021-01-25 Mon 09:30 ++1w>
+  SCHEDULED: <2021-02-01 Mon 09:30 ++1w>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-18 Mon 15:11]
+  :LAST_REPEAT: [2021-01-25 Mon 11:59]
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
   :END:
 
+  - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
   - State "DONE"       from "NEXT"       [2021-01-11 Mon 17:25]
   - State "DONE"       from "TODO"       [2021-01-06 Wed 18:09]
@@ -99,13 +107,14 @@
 | Handstand        |    3 | 30-60s |    1 |
 
 * NEXT Upper C                                                      :Workout:
-  SCHEDULED: <2021-01-23 Sat 09:30 ++1w>
+  SCHEDULED: <2021-01-30 Sat 09:30 ++1w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-18 Mon 15:11]
+  :LAST_REPEAT: [2021-01-25 Mon 11:59]
   :END:
 
+  - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
   - State "DONE"       from "NEXT"       [2021-01-10 Sun 13:30]
   - State "DONE"       from "TODO"       [2021-01-04 Mon 10:11]
@@ -120,12 +129,13 @@
 | Handstand                   |    3 | 30-60s |    1 |
 
 * NEXT Lower A                                              :Workout:MEETING:
-  SCHEDULED: <2021-01-26 Tue 09:30 ++1w>
+  SCHEDULED: <2021-02-02 Tue 09:30 ++1w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-21 Thu 09:59]
+  :LAST_REPEAT: [2021-01-26 Tue 20:28]
   :END:
+  - State "DONE"       from "NEXT"       [2021-01-26 Tue 20:28]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
   - State "DONE"       from "NEXT"       [2021-01-13 Wed 11:34]
   - State "DONE"       from "NEXT"       [2021-01-06 Wed 18:09]
@@ -141,13 +151,14 @@
 | Hollow body hold      |    3 |  30-45s |    1 |
 
 * NEXT Lower B                                                      :Workout:
-  SCHEDULED: <2021-01-24 Sun 09:30 ++1w>
+  SCHEDULED: <2021-01-31 Sun 09:30 ++1w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-18 Mon 15:11]
+  :LAST_REPEAT: [2021-01-25 Mon 11:59]
   :END:
 
+  - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
   - State "DONE"       from "NEXT"       [2021-01-10 Sun 13:30]
   - State "DONE"       from "NEXT"       [2021-01-04 Mon 10:11]
@@ -162,7 +173,7 @@
 | Hanging abs       |    3 |    8-15 |    1 |
 | Hollow body hold/L-sit |    3 |    8-15 |    1 |
 
-* TODO Lower C :Workout:
+* DONE Lower C                                                      :Workout:
 
 | Exercise              | Sets |    Reps | Rest |
 |-----------------------+------+---------+------|

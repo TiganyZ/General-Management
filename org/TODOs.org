@@ -27,6 +27,7 @@
 [[file:~/Documents/docs/Management/thesis_structure.org]]
 
 * NEXT Check Ti Models :today:
+  SCHEDULED: <2021-02-01 Mon 15:00>
   :PROPERTIES:
   :LAST_REPEAT: [2020-09-08 Tue 10:15]
   :END:
@@ -120,7 +121,7 @@
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 
 * TODO [#B] Compile bop on French supercomputer
-  DEADLINE: <2021-01-29 Fri 16:00> SCHEDULED: <2021-01-25 Mon 11:00>
+  DEADLINE: <2021-02-01 Mon 16:00> SCHEDULED: <2021-02-01 Mon 14:00>
   :PROPERTIES:
   :ORDERED:  t
   :END:
@@ -203,7 +204,7 @@
 *
 
 * TODO Plot C/H line energies and compare with peierls potential of 10 GPa
-  SCHEDULED: <2021-01-22 Fri 11:00>
+  SCHEDULED: <2021-02-01 Mon 10:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 16:36]--[2021-01-06 Wed 16:36] =>  0:00
   CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
@@ -218,7 +219,7 @@ Chill at her pad n play games
 *
 
 * TODO Read Izzy's paper
-  SCHEDULED: <2021-01-22 Fri 13:00>
+  SCHEDULED: <2021-01-28 Thu 17:00>
   :LOGBOOK:
   CLOCK: [2020-12-22 Tue 18:02]--[2020-12-22 Tue 18:07] =>  0:05
   :END:
@@ -226,12 +227,14 @@ Chill at her pad n play games
 [[file:~/Documents/docs/Management/papers/Evaluating_edge_importance.pdf]]
 
 * NEXT Reading                                                      :MEETING:
-  SCHEDULED: <2021-01-22 Fri 22:00 ++1d>
+  SCHEDULED: <2021-01-26 Tue 22:00 ++1d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-21 Thu 10:00]
+  :LAST_REPEAT: [2021-01-26 Tue 00:11]
   :END:
+  - State "DONE"       from "NEXT"       [2021-01-26 Tue 00:11]
+  - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:00]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
@@ -318,10 +321,10 @@ Chill at her pad n play games
   SCHEDULED: <2021-02-01 Mon 09:00 ++7d>
   :PROPERTIES:
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-21 Thu 10:01]
+  :LAST_REPEAT: [2021-01-26 Tue 17:46]
   :END:
+  - State "DONE"       from "NEXT"       [2021-01-26 Tue 17:46]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:01]
-  - State "DONE"       from "NEXT"       [2021-01-11 Mon 15:39]
   :LOGBOOK:
   CLOCK: [2021-01-04 Mon 10:29]--[2021-01-04 Mon 10:30] =>  0:01
   CLOCK: [2021-01-04 Mon 10:25]--[2021-01-04 Mon 10:27] =>  0:02
@@ -343,13 +346,14 @@ Chill at her pad n play games
   CLOCK: [2021-01-04 Mon 14:57]--[2021-01-04 Mon 15:22] =>  0:25
   :END:
 
-* TODO #A Yoga with Adrienne                               :Personal:MEETING:
-  SCHEDULED: <2021-01-18 Mon 08:00 +1d>
+* DONE #A Yoga with Adrienne                               :Personal:MEETING:
+  SCHEDULED: <2021-01-20 Wed 08:00 +0d>
   :PROPERTIES:
-  :STYLE: habit
-  :LAST_REPEAT: [2021-01-21 Thu 10:02]
+  :LAST_REPEAT: [2021-01-25 Mon 16:09]
   :END:
 
+  - State "DONE"       from "TODO"       [2021-01-25 Mon 16:09]
+  - State "DONE"       from "TODO"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "TODO"       [2021-01-21 Thu 10:02]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:00]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
@@ -408,19 +412,20 @@ SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
   :END:
 [2021-01-06 Wed 10:45]
 * TODO Finish writing about why carbon has less of an effect than hydrogen on the kink-pair formation enthalpies
-  SCHEDULED: <2021-01-22 Fri 10:00>
+  SCHEDULED: <2021-02-02 Tue 17:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 13:03]--[2021-01-06 Wed 13:04] =>  0:01
   :END:
 [2021-01-06 Wed 13:03]
 * TODO Look at therapy for rachel and I
-  SCHEDULED: <2021-01-22 Fri 18:00>
+  SCHEDULED: <2021-02-01 Mon 18:00>
   :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 18:44]--[2021-01-26 Tue 19:09] =>  0:25
   CLOCK: [2021-01-08 Fri 15:32]--[2021-01-08 Fri 15:33] =>  0:01
   :END:
 [2021-01-08 Fri 15:32]
 - Better help?
-* TODO Call Seb
+* DONE Call Seb
   SCHEDULED: <2021-01-18 Mon 19:00>
   :LOGBOOK:
   CLOCK: [2021-01-08 Fri 15:33]--[2021-01-08 Fri 15:33] =>  0:00
@@ -432,8 +437,8 @@ SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
   CLOCK: [2021-01-11 Mon 10:45]--[2021-01-11 Mon 10:46] =>  0:01
   :END:
 [2021-01-11 Mon 10:45]
-* TODO Reply to Rolls Royce about internship
-  SCHEDULED: <2021-01-25 Mon 16:00>
+* DONE Reply to Rolls Royce about internship
+  SCHEDULED: <2021-01-26 Tue 13:00>
   :LOGBOOK:
   CLOCK: [2021-01-11 Mon 14:35]--[2021-01-11 Mon 14:36] =>  0:01
   :END:
@@ -447,14 +452,134 @@ SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
    - 3 month delay: <2021-06-28 Mon>--<2021-09-17 Fri>
    - 4 month delay: <2021-07-26 Mon>--<2021-10-15 Fri>
    - 4 month delay + 1 week: <2021-08-02 Mon>--<2021-10-22 Fri>
+   - 5 month delay: <2021-08-23 Mon>--<2021-11-12 Fri>
 
    - As for Aalto, it would be nice if I could change the dates to be
      in summer.
    - <2021-04-17 Sat>--<2021-06-26 Sat>
    - <2021-05-15 Sat>--<2021-07-24 Sat>
-* TODO Call with Anni
+* DONE Call with Anni
   SCHEDULED: <2021-01-21 Thu 20:00>
   :LOGBOOK:
   CLOCK: [2021-01-21 Thu 10:03]--[2021-01-21 Thu 10:03] =>  0:00
   :END:
 [2021-01-21 Thu 10:03]
+* TODO Compile things for thesis
+  DEADLINE: <2021-05-14 Fri>
+  :LOGBOOK:
+  CLOCK: [2021-01-25 Mon 18:01]--[2021-01-25 Mon 18:02] =>  0:01
+  :END:
+[2021-01-25 Mon 18:01]
+* TODO [#A] Thesis Work
+  SCHEDULED:<2021-01-27 Wed 17:00 .+1d/3d>>
+  :PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2021-01-26 Tue 19:13]
+:END:
+  - State "DONE"       from "TODO"       [2021-01-26 Tue 19:13]
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 17:50]--[2021-01-26 Tue 18:15] =>  0:25
+  :END:
+  - State "DONE"       from "TODO"       [2021-01-25 Mon 00:29]
+* DONE Call Fam
+  SCHEDULED: <2021-01-27 Wed 19:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 00:31]--[2021-01-26 Tue 00:31] =>  0:00
+  :END:
+[2021-01-26 Tue 00:31]
+* TODO Reply to Anna
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:38] =>  0:02
+  CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:36] =>  0:00
+  :END:
+[2021-01-26 Tue 09:36]
+* DONE Ask Tony if I can get a desk chair
+  SCHEDULED: <2021-01-26 Tue 10:30>
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 09:38]--[2021-01-26 Tue 09:39] =>  0:01
+  :END:
+[2021-01-26 Tue 09:38]
+* DONE Toothpaste
+  SCHEDULED: <2021-01-26 Tue 12:30>
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 09:39] =>  0:00
+  :END:
+[2021-01-26 Tue 09:39]
+* TODO Consolidate Items
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-01-29 Fri 17:49]
+  :END:
+  - State "DONE"       from "TODO"       [2021-01-29 Fri 17:49]
+  - State "DONE"       from "TODO"       [2021-01-26 Tue 17:47]
+[2021-01-26 Tue 09:42]
+
+SCHEDULED: <2021-01-30 Sat 17:30 .+1d/3d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: TODO
+:END:
+* TODO Gaming Mouse
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 13:20]--[2021-01-26 Tue 13:20] =>  0:00
+  :END:
+[2021-01-26 Tue 13:20]
+* DONE Fill form for desk chair
+  SCHEDULED: <2021-01-26 Tue 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 14:07]--[2021-01-26 Tue 14:32] =>  0:25
+  CLOCK: [2021-01-26 Tue 13:21]--[2021-01-26 Tue 13:21] =>  0:00
+  :END:
+[2021-01-26 Tue 13:21]
+* TODO BUY TICKETS to MONTPELLIER
+  DEADLINE: <2021-03-31 Wed>
+  :LOGBOOK:
+  CLOCK: [2021-01-26 Tue 16:20]--[2021-01-26 Tue 16:21] =>  0:01
+  :END:
+[2021-01-26 Tue 16:20]
+
+- 26 March 2022 Montpellier
+* DONE Pick up medication
+  SCHEDULED: <2021-01-27 Wed 13:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-27 Wed 00:52]--[2021-01-27 Wed 00:53] =>  0:01
+  :END:
+[2021-01-27 Wed 00:52]
+* TODO Progress Report 6
+  SCHEDULED: <2021-02-01 Mon 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-27 Wed 15:32]--[2021-01-27 Wed 15:33] =>  0:01
+  :END:
+[2021-01-27 Wed 15:32]
+* DONE Buy Moisturiser for face/beard
+  SCHEDULED: <2021-01-28 Thu 12:30>
+  :LOGBOOK:
+  CLOCK: [2021-01-28 Thu 00:11]--[2021-01-28 Thu 00:12] =>  0:01
+  :END:
+[2021-01-28 Thu 00:11]
+* DONE with Crobaetians
+  SCHEDULED: <2021-01-28 Thu 19:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-28 Thu 00:14]--[2021-01-28 Thu 00:15] =>  0:01
+  :END:
+[2021-01-28 Thu 00:14]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Gaming Mouse][Gaming Mouse]]
+* TODO Check line tension
+  :LOGBOOK:
+  CLOCK: [2021-01-29 Fri 11:42]--[2021-01-29 Fri 11:42] =>  0:00
+  :END:
+[2021-01-29 Fri 11:42]
+SKF
+/home/tigany/r/fe/lt/equilibrium/test
+* DONE Write out positions of solutes and figure out analytic gradient
+  SCHEDULED: <2021-01-29 Fri 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-29 Fri 12:39]--[2021-01-29 Fri 12:40] =>  0:01
+  :END:
+[2021-01-29 Fri 12:39]
+* TODO Write visual test for trap positions occupancy
+  SCHEDULED: <2021-02-01 Mon 10:00>
+  :LOGBOOK:
+  CLOCK: [2021-01-29 Fri 17:47]--[2021-01-29 Fri 17:48] =>  0:01
+  :END:
+[2021-01-29 Fri 17:47]
