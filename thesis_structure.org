@@ -35,7 +35,7 @@
     DEADLINE: <2021-02-19 Fri>
 
 *** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
-    SCHEDULED: <2021-02-01 Mon 17:00> DEADLINE: <2021-02-05 Fri>
+    SCHEDULED: <2021-02-04 Thu 17:00> DEADLINE: <2021-02-05 Fri>
 
        
 
@@ -291,7 +291,7 @@
 
    
 ** TODO Embedding Calculations
-   SCHEDULED: <2021-02-01 Mon 10:00> DEADLINE: <2021-03-20 Sat>
+   SCHEDULED: <2021-02-08 Mon 10:00> DEADLINE: <2021-03-20 Sat>
 
 *** TODO Just look at vacancies and oxygen?
 *** TODO Other Dislocation structures if models don't work?

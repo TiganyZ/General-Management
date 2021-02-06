@@ -1,13 +1,34 @@
 * MEETING with Tony Paxton                                          :MEETING:
-  SCHEDULED: <2021-02-01 Mon 12:00 ++7d>
+  SCHEDULED: <2021-02-08 Mon 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-25 Mon 16:10]
+  :LAST_REPEAT: [2021-02-02 Tue 16:23]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-02-02 Tue 16:23]
   - State "DONE"       from "MEETING"    [2021-01-25 Mon 16:10]
   - State "DONE"       from "MEETING"    [2021-01-18 Mon 15:10]
   - State "DONE"       from "MEETING"    [2021-01-11 Mon 18:42]
+
+
+** <2021-02-01 Mon>
+
+*** Actions
+
+*** Notes
+    - How are Ivo's enthalpies so low?
+    - What would be his occupancies?
+    - Check that my impkementation is correct for the
+      Maxwell-Boltzmann statistics.
+    - Feugas thinks jerky flow of oxygen dislocations is from oxygen
+      content.
+    - But Clouet etc things jerky flow from core transition from
+      pyramidal to prismatic.
+    - But have error limits
+    - Set up TB based theory to investigate.
+    - Classical potentials dont work
+    - Can we use TB to rationalise this
+
 ** <2021-01-25 Mon>
 *** Actions
     - Distributed dSE ARCHER 2 call.
@@ -35,13 +56,16 @@
     - No meeting
     - Continuing with implementation of the line-tension model with
       the concentration dependence as in Ivo's paper
+
 * MEETING with Group                                                :MEETING:
-  SCHEDULED: <2021-02-03 Wed 12:00 ++7d>
+  SCHEDULED: <2021-02-10 Wed 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-27 Wed 15:07]
+  :LAST_REPEAT: [2021-02-04 Thu 10:13]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+]
+  - State "DONE"       from "MEETING"    [2021-02-04 Thu 10:13]
   - State "DONE"       from "MEETING"    [2021-01-27 Wed 15:07]
   - State "DONE"       from "TODO"       [2021-01-25 Mon 16:11]
   - State "DONE"       from "MEETING"    [2021-01-13 Wed 12:45]
@@ -56,3 +80,9 @@
       compared to that of hydrogen
     - Talk about the distance dependence of the self-consistent
       McClean isotherm.
+* MEETING with MPI presentation                                     :MEETING:
+  SCHEDULED: <2021-02-08 Mon 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-04 Thu 10:11]--[2021-02-04 Thu 10:12] =>  0:01
+  :END:
+[2021-02-04 Thu 10:11]

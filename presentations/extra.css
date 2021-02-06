@@ -9,13 +9,15 @@
     font-size     : 1em;
 }
 
-h1 {
-    color: #999999;
-    font-family: arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
+.reveal h1 {
+    /* color: #999999; */
+    /* font-family: arial, sans-serif; */
+    font-size: 3em;
+    /* font-weight: bold; */
     margin-top: 0px;
     margin-bottom: 1px;
+    text-align     : center;
+   -text-transform : capitalize;
 }
 
 /* .reveal title { */

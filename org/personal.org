@@ -1,5 +1,5 @@
 * TODO Popping
-  SCHEDULED: <2021-01-31 Sun .+2d/4d>
+  SCHEDULED: <2021-02-01 Mon .+2d/4d>
   :PROPERTIES:
   :LAST_REPEAT: [2021-01-29 Fri 11:44]
   :STYLE: habit

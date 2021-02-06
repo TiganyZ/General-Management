@@ -12,6 +12,23 @@
   :NOTER_PAGE: 
   :END:
 
+
+  - There are differences of this implementation to the one actually
+    done by Ivo.
+
+  - In my implementation, even with 1appm of carbon, the total number
+    of carbon atoms around the core is 2.03
+
+  - With 100 appm, we find that the number of carbons has increased to
+    64.52.
+
+  - This is quite a departure. This means that the peierls landscape
+    is significantly modified.
+
+  - The actual total amount of carbon, we can limit to the maximum
+    which is on the central dislocation line. Perhaps if we assume
+    this 
+
   
   - When the dislocation is lying in its equilibrium Peierls valley the probability of occupancy, χ i , of a trap site, i,
 is determined by the McLean isotherm.

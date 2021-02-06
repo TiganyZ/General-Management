@@ -1,0 +1,43 @@
+#+TITLE: luthiInitioThermodynamicsCarbon2019: Ab Initio thermodynamics of carbon segregation on dislocation cores in bcc iron
+#+ROAM_KEY: cite:luthiInitioThermodynamicsCarbon2019
+- tags ::
+- keywords ::
+
+* Ab Initio thermodynamics of carbon segregation on dislocation cores in bcc iron
+  :PROPERTIES:
+  :Custom_ID: luthiInitioThermodynamicsCarbon2019
+  :URL: https://iopscience.iop.org/article/10.1088/1361-651X/ab28d4
+  :AUTHOR: Lüthi, B., Berthier, F., Ventelon, L., Legrand, B., Rodney, D., & Willaime, F.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/JI72W6JI/Lüthi et al. - 2019 - Ab initio thermodynamics of carbon segregat.pdf
+  :NOTER_PAGE:
+  :END:
+
+
+** Main points
+   - Ising model used to model the equilibrium distribution of carbon
+     around screw dislocations in bcc Fe.
+   - Fourth neighbour octahedral sites of the hard core (which has
+     been reconstructed from the easy core due to the attraction of
+     carbon to the prismatic site)  are also attractive with a binding
+     energy similar to before.
+   - Segregation results as a competition between the repulsive
+     carbon-carbon interactions, parallel to the dislocation line, and
+     attraction toward the line.
+   - This leads to complex ordering phenomena:
+     - At high temperatures, in the regime of [[file:20210105175322-strain_ageing.org][dynamical strain-ageing]]
+       of steels, the prismatic line of carbons are occupied while the
+       octahedral lines are empty.
+     - Iso-concentrations for the primatic site are obtained by a
+       mean field approach, where monte carlo similations are
+       similar.
+
+
+** Notes
+
+   - The prismatic core reconstruction can be considered to be in a
+     local environment close to that of Fe3C, cementite.
+   - Forces only converged to 10^-2 eV/\AA.
+   - 270 atoms in 2b depth cell.
+   - Only one carbon atom used in these cells. Do they modify the
+     interaction energy? The periodic array of dipoles will interact
+     when the position of the core has changed due to reconstruction.
