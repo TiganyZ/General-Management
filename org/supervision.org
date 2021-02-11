@@ -1,14 +1,22 @@
 * MEETING with Tony Paxton                                          :MEETING:
-  SCHEDULED: <2021-02-08 Mon 12:00 ++7d>
+  SCHEDULED: <2021-02-15 Mon 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-02-02 Tue 16:23]
+  :LAST_REPEAT: [2021-02-09 Tue 10:53]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-02-09 Tue 10:53]
   - State "DONE"       from "MEETING"    [2021-02-02 Tue 16:23]
   - State "DONE"       from "MEETING"    [2021-01-25 Mon 16:10]
   - State "DONE"       from "MEETING"    [2021-01-18 Mon 15:10]
   - State "DONE"       from "MEETING"    [2021-01-11 Mon 18:42]
+
+** <2021-02-08 Mon>
+
+   - dislocatiom modelling good
+   - carbon is very important,
+   - no single vacancies
+   - core reconstruction
 
 
 ** <2021-02-01 Mon>
@@ -58,12 +66,13 @@
       the concentration dependence as in Ivo's paper
 
 * MEETING with Group                                                :MEETING:
-  SCHEDULED: <2021-02-10 Wed 12:00 ++7d>
+  SCHEDULED: <2021-02-17 Wed 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-02-04 Thu 10:13]
+  :LAST_REPEAT: [2021-02-10 Wed 14:56]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-02-10 Wed 14:56]
 ]
   - State "DONE"       from "MEETING"    [2021-02-04 Thu 10:13]
   - State "DONE"       from "MEETING"    [2021-01-27 Wed 15:07]
@@ -80,8 +89,8 @@
       compared to that of hydrogen
     - Talk about the distance dependence of the self-consistent
       McClean isotherm.
-* MEETING with MPI presentation                                     :MEETING:
-  SCHEDULED: <2021-02-08 Mon 15:00>
+* DONE with MPI presentation                                        :MEETING:
+  SCHEDULED: <2021-02-10 Wed 13:00>
   :LOGBOOK:
   CLOCK: [2021-02-04 Thu 10:11]--[2021-02-04 Thu 10:12] =>  0:01
   :END:

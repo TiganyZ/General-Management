@@ -31,6 +31,10 @@
        mean field approach, where monte carlo similations are
        similar.
 
+     - This thermodynamical mean field model, as in Ventelon's paper
+       [[file:ventelondislocationcorereconstruction2015.org][Dislocation core reconstruction induced by carbon segregation
+       in bcc iron]], accounts for configurational entropy, neglecting
+       vibrational, electronic and magnetic.
 
 ** Notes
 

@@ -13,6 +13,14 @@
   :END:
 
 
+  - There are differences in this paper between the actual
+    implementation done by ivo.
+
+  - Apparently, at low C_nom, there is not equilibrium with C_bulk, so
+    the McClean isotherm is not valid: all carbon is trapped by
+    dislocations.
+
+
   - There are differences of this implementation to the one actually
     done by Ivo.
 

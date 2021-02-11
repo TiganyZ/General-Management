@@ -204,7 +204,7 @@
 *
 
 * TODO Plot C/H line energies and compare with peierls potential of 10 GPa
-  SCHEDULED: <2021-02-08 Mon 10:00>
+  SCHEDULED: <2021-02-12 Fri 10:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 16:36]--[2021-01-06 Wed 16:36] =>  0:00
   CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
@@ -593,7 +593,7 @@ SKF
   :END:
 [2021-02-01 Mon 12:02]
 * TODO Line Tension: equilibrium solute conc
-  SCHEDULED: <2021-02-08 Mon 11:00>
+  SCHEDULED: <2021-02-10 Wed 11:00>
   :LOGBOOK:
   CLOCK: [2021-02-04 Thu 11:19]--[2021-02-04 Thu 11:44] =>  0:25
   CLOCK: [2021-02-04 Thu 10:47]--[2021-02-04 Thu 10:47] =>  0:00
@@ -607,3 +607,26 @@ SKF
      - [ ] Will implement different concentrations for particular
        sites.
    - [ ] See this effect for energy mapping
+* TODO Reply to Predrag
+  SCHEDULED: <2021-02-10 Wed 13:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-08 Mon 00:16]--[2021-02-08 Mon 00:16] =>  0:00
+  :END:
+[2021-02-08 Mon 00:16]
+* TODO Moonpig card for condolences for Omar
+  SCHEDULED: <2021-02-10 Wed 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-10 Wed 14:29]--[2021-02-10 Wed 14:54] =>  0:25
+  CLOCK: [2021-02-10 Wed 12:16]--[2021-02-10 Wed 12:17] =>  0:01
+  :END:
+[2021-02-10 Wed 12:16]
+[[file:~/Documents/docs/Management/org/supervision.org::*with Group][with Group]]
+* TODO MPI presentation
+  SCHEDULED: <2021-02-10 Wed 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-10 Wed 17:04]--[2021-02-10 Wed 17:29] =>  0:25
+  CLOCK: [2021-02-10 Wed 16:29]--[2021-02-10 Wed 16:54] =>  0:25
+  CLOCK: [2021-02-10 Wed 15:08]--[2021-02-10 Wed 15:33] =>  0:25
+  CLOCK: [2021-02-10 Wed 15:07]--[2021-02-10 Wed 15:08] =>  0:01
+  :END:
+[2021-02-10 Wed 15:07]

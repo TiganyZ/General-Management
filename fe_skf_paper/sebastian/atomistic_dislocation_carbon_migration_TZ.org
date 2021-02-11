@@ -1285,7 +1285,6 @@ Lower tolerances for relaxation below $\sim 1$ MeV/$\AA$.
 <<bibliography link>>
 
 bibliographystyle:unsrt
-
 bibliography:./bibliography/org-refs.bib
 
 # \bibliographystyle{plain}
