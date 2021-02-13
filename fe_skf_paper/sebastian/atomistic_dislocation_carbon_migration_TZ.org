@@ -1006,6 +1006,18 @@ Lower tolerances for relaxation below $\sim 1$ MeV/$\AA$.
    To extend the line-tension model, one can introduce the effect of the first-neighbour repulsive
    interaction of solutes into the evaluation of the concentration on the dislocation line.
 
+   Actually, the 433 appm here fo 0.02wt% C is wrong, it corresponds
+   to 930 appm.
+
+
+   #+begin_src ess-julia
+     appm(w, mc, mfe) = 10^6 * mfe*w / ( mc*(100-w) + mfe*w )
+     mc = 12.0
+     mfe = 55.8
+     appm(0.02, mc, mfe)
+   #+end_src
+
+
    #+ATTR_LATEX:  :width 0.9\textwidth :center
    #+CAPTION: Concentration of carbon on the dislocation line as a function of distance from the core at differing dislocation densities and initial nominal carbon concentrations. [[label:conc_dist_disl]]
    [[file:Images/concentration_vs_solute_distance_all_with_legend_5b.png]]

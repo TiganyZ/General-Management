@@ -1,4 +1,3 @@
-#+ATTR_HTML: font-size: 1em
 #+TITLE: Multi-scale investigation of dislocation assisted carbon migration in ferrite
 #+Author: Tigany Zarrouk 
 #+Date: 23.02.2021
@@ -31,31 +30,33 @@
 #+REVEAL_TITLE_SLIDE: title-slide.html
 
 * Introduction
-  - Rolling contact on bearing raceways causes /degradation in subsurface/ microstructure.
-  - Failure by Rolling Contact Fatigue (RCF).
-  - Degradation arises in form of /Dark Etching Regions/ (DERs).
-  - DERs characterised by development of ferrite and carbide features with
-    patches of unaltered martensitic matrix.
-  #+NAME: process
-  #+ATTR_HTML: :width 80%
-  [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/der_picture_fu.png]]
-  Circumferential section showing DER cite:Fu2017.
+** Introduction
+   - Rolling contact on bearing raceways causes /degradation in subsurface/ microstructure.
+   - Failure by Rolling Contact Fatigue (RCF).
+   - Degradation arises in form of /Dark Etching Regions/ (DERs).
+   - DERs characterised by development of ferrite and carbide features with
+     patches of unaltered martensitic matrix.
+   #+NAME: process
+   #+ATTR_HTML: :width 80%
+   [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/der_picture_fu.png]]
+
+
+   Circumferential section showing DER cite:Fu2017.
 
 ** Features of DER
    #+REVEAL_HTML: <div class="column" style="float:left; width: 48%">
-   1) Martensite \rightarrow ferrite microbands (from strain localisation).
+   1) Martensite → ferrite microbands (from strain localisation).
    2) Residual carbides gradually dissolve.
    3) 30\deg and 80\deg ferrite features form: White Etching Bands (WEBs).
    4) Lenticular carbides precipitate at ferrite band boundaries.
-   5) Carbides thicken during DER development; correlated with WEB
+   5) These carbides thicken during DER development; correlated with WEB
       growth.
-   6) Reduction in dislocation density in late stage.
    #+REVEAL_HTML: </div>
    #+REVEAL_HTML: <div class="column" style="float:right; width: 52%">
    #+ATTR_HTML: :width 100%
   [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/smelova_der_zoom_ferrite_carbon.png]]
-   Kernel Average Misorientation (KAM) map showing 30\deg & 80\deg WEBs and carbide
-   features cite:Smelova2017.
+   EBSD Kernel Average Misorientation (KAM) map showing 30\deg & 80\deg WEBs and carbide
+   features in circumferential section cite:Smelova2017.
    #+REVEAL_HTML: </div>
 
    #  #+REVEAL: split
@@ -72,21 +73,21 @@
   #  - Right: Kernel Average Misorientation (KAM) map of same area cite:Smelova2017.
 
 
-** Unresolved problems
-   - Where does excess carbon from the martensitic matrix find itself
-     when the structure decays to low C solubility (0.02 wt%) ferrite?
-   - How is carbon transported, given its low diffusivity in
-     martensite/DER phases?
-     #+REVEAL_HTML: <br/>
-   - _Carbon redistribution_ and _plastic deformation_ are thought to be
-     fundamental mechanisms behind DER formation.
-   - Differing mechanisms of */dislocation-driven carbon migration/* have
-     been suggested, but no consensus.
-   - Can use _multi-scale modelling_ to ascertain the mechanism of
-     dislocation-assisted carbon migration.
+** Unanswered questions
+   1) Where does excess carbon from the martensitic matrix find itself
+      when the structure decays to low C solubility (0.02 wt%) ferrite?
+      #+REVEAL_HTML: <br/>
+   2) How is carbon transported, given its low diffusivity in
+      martensite/DER phases?
+      #+REVEAL_HTML: <br/>
+   3) Do pre-existing carbides dissolve or thicken?
+      #+REVEAL_HTML: <br/>
+   */Dislocation-assisted carbon migration/* has been suggested as
+      fundamental mechanism, but no proof/consensus.
 
 
-
+   #   #+REVEAL: split
+* Dislocation-assisted carbon migration
 ** Dislocation-assisted carbon migration
    #+REVEAL_HTML: <div class="column" style="float:left; width: 48%">
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/dislocation-assisted_carbon_migration_mechanism_fu2017_transparent.png]]
@@ -94,90 +95,99 @@
    #+REVEAL_HTML: </div>
    #+REVEAL_HTML: <div class="column" style="float:right; width: 48%">
    - Carbon segregated to dislocations.
-   - Cyclic stresses cause dislocations to break away from
-     carbon environment.
+   - Cyclic stresses cause dislocations to break away from carbon environment.
    - Carbon re-attracted to dislocation, causing carbon flux.
      #+REVEAL_HTML: <br />
-   - Modelling can find regimes of stress/temperature/carbon
-     concentration/dislocation density in which this is feasible.
+   - Modelling can find regimes of stress/temperature/carbon concentration/dislocation density in
+     which this is feasible.
    #+REVEAL_HTML: </div>
 
-* Methods
-   - _Quantum-mechanical_, atomistic (tight-binding/TB) simulations used
-     to see how solutes interact with dislocations.
-     - Tight-binding is more accurate than empirical potentials, with
-       better scaling than DFT.
-   - _Line tension model_ of dislocations used to
-     ascertain how carbon interactions change dislocation movement.
-   - Future work: _SCkMC model_ to simulate dislocation dynamics and measure
-     effects on dislocation velocity and loop debris in carbon
-     environment. cite:Katzarov2017
-  #+NAME: process
-  #+ATTR_HTML: :width 100% :style position:relative;top:0px;left:0px;z_index:1;
-  [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/tbprocess_trans_label.PNG]]
+** Why is it plausible?
+   - Explains:
+     - Martensite to ferrite transformation.
+     - Carbon transport.
+     - Lenticular carbide growth.
+     - Pre-existing carbide dissolution.
+   - Can use _multi-scale modelling_ to ascertain if mechanism of
+     dislocation-assisted carbon migration is valid.
+
+* Multi-Scale Modelling
+** Methods
+    - _Quantum-mechanical_, atomistic (tight-binding/TB) simulations used
+      to see how solutes interact with dislocations.
+      - Tight-binding is more accurate than empirical potentials, with
+	better scaling than DFT.
+    - _Line tension model_ of dislocations used to ascertain how carbon interactions modify
+      thermally-activated dislocation movement (kink-pair formation).
+    - _SCkMC model_ to simulate dislocation dynamics and measure
+      effects on dislocation velocity and loop debris in carbon
+      environment. cite:Katzarov2017
+   #+NAME: process
+   #+ATTR_HTML: :width 100% :style position:relative;top:0px;left:0px;z_index:1;
+   [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/tbprocess_trans_label.PNG]]
 
 
- # ** DER Mechanisms
+  # ** DER Mechanisms
    
- #    - Theories of carbon redistribution causing DERs come from several
- #      observations:
- #      - Ferrite formation
- #      - Lenticular carbide formation
- #      - Dissolution of residual carbides.
- #      - Difference in C concentration from original martensite to DER.
- #    - Dislocations can attract carbon and form Cottrell atmospheres.
- #    - Current theories suggest with dislocation glide, carbon
- #      migration is assisted.
- #    # - Growth of lenticular carbides is linked to formation of DER through
- #    #   mechanical diffusion by dislocations and thermal diffusion.
- #    - Debate as to whether carbon is deposited in temper carbides,
- #      causing them to grow, or if there is dissolution of temper
- #      carbides.
+  #    - Theories of carbon redistribution causing DERs come from several
+  #      observations:
+  #      - Ferrite formation
+  #      - Lenticular carbide formation
+  #      - Dissolution of residual carbides.
+  #      - Difference in C concentration from original martensite to DER.
+  #    - Dislocations can attract carbon and form Cottrell atmospheres.
+  #    - Current theories suggest with dislocation glide, carbon
+  #      migration is assisted.
+  #    # - Growth of lenticular carbides is linked to formation of DER through
+  #    #   mechanical diffusion by dislocations and thermal diffusion.
+  #    - Debate as to whether carbon is deposited in temper carbides,
+  #      causing them to grow, or if there is dissolution of temper
+  #      carbides.
 
 
- # ** New DER Mechanism proposal
+  # ** New DER Mechanism proposal
 
- #    - Dislocation pile-ups could cause attract carbon from temper/residual
- #      carbides causing their dissolution.
- #    - Dislocation rearrangement into cell structures from cyclic
- #      stresses and dislocation-carbon interaction.
- #    - Large plastic strains in region will form ferrite microbands and
- #      nanocrystalline ferrite with as the number of stress cycles
- #      increases.
- #    - Expelled C from ferrite microbands and nanocrystalline ferrite
- #      forms lenticular carbides.
- #    - Carbon diffusion assisted by pipe diffusion along dislocation.
+  #    - Dislocation pile-ups could cause attract carbon from temper/residual
+  #      carbides causing their dissolution.
+  #    - Dislocation rearrangement into cell structures from cyclic
+  #      stresses and dislocation-carbon interaction.
+  #    - Large plastic strains in region will form ferrite microbands and
+  #      nanocrystalline ferrite with as the number of stress cycles
+  #      increases.
+  #    - Expelled C from ferrite microbands and nanocrystalline ferrite
+  #      forms lenticular carbides.
+  #    - Carbon diffusion assisted by pipe diffusion along dislocation.
 
-# * Aims
-#   To answer the questions:
-#   - How can dislocations assist in carbon migration?
-#   - How are dislocations influenced by carbon on atomistic scale?
-#     - Is dislocation core structure affected?
-#     - What is the concentration of carbon on the dislocation core?
-#     - How does this amount at the core carbon affect kink-pair nucleation/migration?
-#     - Will carbon be dragged with the dislocation?
-  #   - How fast do the dislocations move in carbon environemnt?
-  #   - What dislocation structures are found with dislocation movement?
-  # - Do temper carbides dissolve/grow with rolling contact fatigue?
-  #   - Is is more energetically favourable for a carbon to be in a
-  #     Cottrell atmosphere or in a carbon rich grain boundary?
-    # - We want to determine how these dislocations influence the
-    #   movement of C:
-    #   - Does C actually move with the dislocation?
-    #   - Are dislocations pinned and then unpinned with stress?
-    #   - How does stress actually change C diffusion rates, are they
-    # 	comparable to dislocation velocities?
+ # * Aims
+ #   To answer the questions:
+ #   - How can dislocations assist in carbon migration?
+ #   - How are dislocations influenced by carbon on atomistic scale?
+ #     - Is dislocation core structure affected?
+ #     - What is the concentration of carbon on the dislocation core?
+ #     - How does this amount at the core carbon affect kink-pair nucleation/migration?
+ #     - Will carbon be dragged with the dislocation?
+   #   - How fast do the dislocations move in carbon environemnt?
+   #   - What dislocation structures are found with dislocation movement?
+   # - Do temper carbides dissolve/grow with rolling contact fatigue?
+   #   - Is is more energetically favourable for a carbon to be in a
+   #     Cottrell atmosphere or in a carbon rich grain boundary?
+     # - We want to determine how these dislocations influence the
+     #   movement of C:
+     #   - Does C actually move with the dislocation?
+     #   - Are dislocations pinned and then unpinned with stress?
+     #   - How does stress actually change C diffusion rates, are they
+     # 	comparable to dislocation velocities?
 
 
-# * Tight-binding
-#   #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-#    #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/s_arrangement_quadrupole.png" >
-#    Cell dislocaton arrangement used to find Peierls potential.
-#    #+REVEAL_HTML: </div>
-#    #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-#    #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/cluster_method_schematic.png" >
-#    Simulation cell used to find binding energies of carbon to screw dislocations.
-#    #+REVEAL_HTML: </div>
+ # * Tight-binding
+ #   #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+ #    #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/s_arrangement_quadrupole.png" >
+ #    Cell dislocaton arrangement used to find Peierls potential.
+ #    #+REVEAL_HTML: </div>
+ #    #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+ #    #+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/cluster_method_schematic.png" >
+ #    Simulation cell used to find binding energies of carbon to screw dislocations.
+ #    #+REVEAL_HTML: </div>
 
 * Atomistic results
 ** Core reconstruction
@@ -188,8 +198,8 @@
      when carbon is dissolved in ferrite/.
    - Empirical potentials only predict core spreading, /no/ spontaneous
      reconstruction to hard core.
-   - C-dislocation binding energies and C-C repulsive energies can be used to find the
-     concentration of carbon on dislocation line at given T.
+   # - C-dislocation binding energies and C-C repulsive energies can be used to find the
+   #   concentration of carbon on dislocation line at given T.
      #+REVEAL_HTML: </div>
 
    #+REVEAL_HTML: <div class="column" style="float:left; width: 55%">
@@ -220,33 +230,33 @@
 
    #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
    #+REVEAL_HTML:  <img width="700" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/easy_core_fe_C_positioning_energies_e10_label.png" >
-   Binding sites of carbon around the easy core dislocation in TB.
+   Carbon binding sites/energies around _easy core_ dislocation in TB.
    #+REVEAL_HTML: </div>
    #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
    #+REVEAL_HTML:  <img width="650" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/hard_core_fe_C_positioning_energies_h7_label.png" >
-   Binding sites of carbon around the hard core dislocation in TB.
+   Carbon binding sites/energies around _hard core_ dislocation in TB.
    #+REVEAL_HTML: </div>
    * Highest binding energy found inside hard core.
    * Cores fixed in position, such that reconstruction does not occur.
-   * Binding to both cores important for line-tension model: to
-     determine C concentration at which hard core becomes dominant.
+   * Binding to both cores important for further modelling.
 
 * Concentration analysis
 ** Carbon concentration on dislocation line
-   - Equilibrium carbon concentration on dislocation line from the C-dislocation
-     binding energies.
-   - Can include the effect of the C-C first-neighbour repulsive energy
-     of carbon within hard-core prismatic site, which gives a more
-     realistic estimation using the bare McClean Isotherm for the
-     equlilbrium concentration.
+   - We can calculate the carbon concentration on dislocation line,
+     $C_d$, where carbon atoms are at equilibrium with the matrix.
+   - We use nominal carbon concentration, to link to the carbon
+     concentration in the matrix, $C_{\text{bulk}}$.
+   - Included the effect of the C-C first-neighbour repulsive energy
+     of carbon within hard-core prismatic site, with atomistics.
+   - Used dislocation densities up to maximum found in martensite.
 
    #   \begin{equation}  \frac{ c_d^{i} }{1 -  c_d^{i} } = \frac{ c_{\text{bulk}} }{1 - c_{\text{bulk}} } \text{exp} \Big(
    #   \frac{E_{\text{b}}^i}{k_{\text{B}}T}  \Big)    \end{equation}
 
    # \begin{equation}  N_{\text{oct}}    c_{\text{bulk}} + N_d c_d = N_{\text{oct}} c_{\text{nom}}/3  \end{equation}
    #+REVEAL_HTML: </section>
-   #+REVEAL_HTML: <section data-background-size="contain" data-background="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/mcclean_isotherm_all.png">
-   #+REVEAL_HTML: </section>
+   #+REVEAL_HTML: <section data-background-size="contain" data-background="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/mcclean_isotherm_all_500.png">
+
 
 
 
@@ -258,49 +268,61 @@
 
 
 ** What does this tell us?
-   - Dislocation cores are saturated with carbon around normal
-     operating temperature (320$\deg$ K), and
-     dislocation densities even up to maximum measured in martensite $\sim 5\times10^{15}$.
-   - This means *all* dislocations are reconstructed to the hard core
-     configuration in our material of interest.
-   - How do different concentrations of carbon affect dislocation
-     movement?
+   - _All_ carbon is segregated to dislocations with carbon around normal
+     operating temperature (320\deg K), carbon concentrations and
+     dislocation densities.
+   - We predict that _all dislocations are reconstructed to the hard core_
+     in typical conditions, even in _high-purity iron_.
+   - How does carbon affect thermally-activated dislocation movement?
 
 * Line-tension Results
 ** Line-tension model of dislocation
 
-     \[ E_{\text{LT}} = \frac{K}{2} \sum_j (\vec{P}_j - \vec{P}_{j+1} )^2  + \sum_j \Delta E_{\text{P}}  (\vec{P}_j) +
-    (\sigma \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j  - \sum_{j,k} E_{\text{C}} (|\vec{P}_j-\vec{P}_k^{\text{C}}|), \]
-     #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-    - Equation used to obtain the line energy for the line tension model.
-    - We can obtain the kink-pair formation enthalpy as a function of
-      stress, temperature and carbon concentration.
-    - The interaction between solutes is parameterised with a
-      lorentzian.
-    - String method used to find transition state image.
+   \begin{equation}
+   E_{\text{LT}} = \underbrace{
+   \underbrace{\frac{K}{2} \sum_j (\vec{P}_j -
+   \vec{P}_{j+1} )^2}_{\text{Spring term}}
+   + \underbrace{\sum_j \Delta E_{\text{P}}  (\vec{P}_j)}_{\text{Peierls Potential}}  -
+     \underbrace{\sum_{j,k} E_{\text{C}}
+     (|\vec{P}_j-\vec{P}_k^{\text{C}}|)}_{\text{C Interaction}}}_{\textbf{From Atomistics}} +
+(\sigma
+     \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j,
+     \end{equation}
+       #+REVEAL_HTML: <div class="column" style="float:left; width: 60%">
+      - We can obtain the kink-pair formation enthalpy as a function of
+	stress, temperature and carbon concentration.
+      - All terms from atomistic data, apart from Peach-Kohler term.
+      - The interaction between solutes is parameterised with a lorentzian.
+      # - String method used to find transition state image.
+	Figure: Kink-pair formation in Peierls landscape cite:Itakura2012.
+	#+REVEAL_HTML: </div>
+      #+REVEAL_HTML: <div class="column" style="float:right; width: 40%">
+      #+ATTR_HTML: width:40%
+      [[file:~/Documents/docs/Management/Images/itakura_peierls_valley_kink_prop.png]]
       #+REVEAL_HTML: </div>
-    #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-    #+CAPTION: Kink-pair formation in Peierls landscape. cite:Itakura2012
-    [[file:~/Documents/docs/Management/Images/itakura_peierls_valley_kink_prop.png]]
-     #+REVEAL_HTML: </div>
 
 ** Kink-pair formation enthalpies
 
    [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/kink-pair_formation_enthalpies_just_tb_results.png]]
+    #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+   - Carbon _decreases_ the kink-pair formation enthalpy, when the
+     carbon is ahead of the dislocation.
+   - Carbon will _reduce_ dislocation velocity, if behind.
+    #+REVEAL_HTML: </div>
+    #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+    #+ATTR_HTML: width:110%
+    [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/schematic_solute_dislocation_interaction_itakura_C.png]]
+    #+REVEAL_HTML: </div>
 
-   - The addition of carbon _reduces_ the kink-pair formation enthalpy.
-   - The reduction is less than one would expect from hydrodgen as the
-     interaction with carbon is longer ranged due to the large
-     tetragonal distortion and binding energies.
 
-
-* Future Work
+* SCkMC (Future Work)
 
 ** SCkMC Simulations
 
    - Kinetic Monte Carlo simulations incorporating carbon diffusion
      will complete the description of how carbon can move with
-     dislocations
+     dislocations.
+   - Dislocation moves through thermally-activated kink-pair formation.
 
    [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/kMC_hydrogen_emb_I.png]]
    - Figure of kMC work with hydrogen (blue), showing dislocation line
@@ -308,16 +330,21 @@
      dislocation line cite:Katzarov2017b.
 
 * Summary
-- Used tight-binding model of Fe-C, rooted in quantum mechanics, to
-  simulate dislocation-C interactions.
-- _Hard core_ found to be _ground-state_ in system with _carbon_.
-- Equilibrium concentration of carbon on dislocation line predicts
-  that _*all* dislocations are hard core_, at typical dislocation
-  densities, nominal carbon concentrations and operating temperatures.
-- Line-tension model shows that _carbon decreases kink-pair formation
-  enthalpy_ barrier: it is easier for dislocations to move in a carbon environment.
-- Carbon decreases the stress necessary to move the screw
-  dislocations at all temperatures.
+  - Dark Etching Regions are formed during Rolling Cycle Fatigue of
+    bearing steels, but no consensus on mechanism.
+  - Multi-scale modelling can shed light on the validity of
+    dislocation-assisted carbon migration.
+  - Atomistics finds the _hard screw core_ to be _ground-state_
+    due to carbon interaction.
+  - Shown _*all* carbon segregated to dislocations_, during martensite
+    → ferrite transition, due to large binding energy of C.
+  - Therefore, initial assumption of */dislocation-driven carbon migration/* is correct.
+  - _All dislocations_, even in _high-purity iron_, are _pinned with
+    carbon in a hard core configuration_ (up to 400\deg K).
+  - Line-tension model shows amount by which _carbon decreases kink-pair formation
+    enthalpy_ barrier is ahead of dislocation. Drag if behind.
+  - Further work, through SCkMC model will ascertain regimes in which
+    dislocation-assisted carbon migration is valid.
 
 
 * Bibliography

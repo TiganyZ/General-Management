@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Atomic scale stress corrosion cracking of Ti alloys.</title>
+<meta name="author" content="Tigany Zarrouk"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/dist/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/dist/theme/solarized.css" id="theme"/>
+
+<link rel="stylesheet" href="./extra.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body prefix="dc: http://purl.org/dc/elements/1.1/ dcterms: http://purl.org/dc/terms/ dcmitype: http://purl.org/dc/dcmitype/ cc: http://creativecommons.org/ns# schema: http://schema.org/" typeof="dcmitype:InteractiveResource schema:PresentationDigitalDocument schema:LearningResource">
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1 class="title">Atomic scale stress corrosion cracking of Ti alloys.</h1><h2 class="author">Tigany Zarrouk</h2><h2 class="email"><a href="mailto:tigany.zarrouk@kcl.ac.uk">tigany.zarrouk@kcl.ac.uk</a></h2><h2 class="date">09.04.2019</h2><p class="date">Created: 2021-02-11 Thu 15:13</p>
+</section>
+
+
+<section>
+<section id="slide-org792ceb1">
+<h2 id="org792ceb1">Motivation</h2>
+<ul>
+<li>Titanium alloys are used in highly demanding circumstances.</li>
+<li>Brittle oxide layer can crack.</li>
+<li>Solutes affect dislocation mobility, causing hardening.</li>
+<li>Interaction between oxygen and dislocation cores is not clear.</li>
+<li>Need for atomistic modelling.</li>
+<li>Exploration of Ti/oxide scale interface will give insights into oxygen
+diffusion, oxygen induces brittleness and stress corrosion cracking in Ti
+alloys.</li>
+
+</ul>
+<aside class="notes">
+<ul>
+<li>Corrosion resistance, high strength to weight ratio.</li>
+<li>Ti is used in commercial jet airliners</li>
+
+</ul>
+
+</aside>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc1f9e9c">
+<h2 id="orgc1f9e9c">Quantum Methods</h2>
+<ul>
+<li>Density Functional Theory is not feasible.</li>
+<li>System size is limited due to computational cost.</li>
+<li>Boundaries of cell affect relaxation of core more.</li>
+<li>Semi-empirical method is more computationally efficient.</li>
+
+</ul>
+
+</section>
+<section id="slide-org8cd49e8">
+<h3 id="org8cd49e8">Tight Binding</h3>
+<div class="column" style="float:left; width: 50%">
+
+<ul>
+<li>Tight binding is an approximation to DFT.</li>
+<li>Overlaps between atomic orbitals are key parameters.</li>
+<li>Parameters can be fitted to experimental data</li>
+<li>\(\mathcal{O}(N^3)\), but much smaller prefactor compared to DFT.</li>
+
+</ul>
+
+</div>
+<div class="column" style="float:right; width: 50%">
+<img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+</div>
+
+</section>
+<section id="slide-org3a1ab53">
+<h3 id="org3a1ab53">BOP</h3>
+<div class="column" style="float:right; width: 50%">
+
+<ul>
+<li>BOP is a faster but less accurate \(\mathcal{O}(N)\) method of interatomic
+force calculation within tight-binding.</li>
+<li>One builds a local density of states from moments, giving detailed
+electronic structure information.</li>
+
+</ul>
+
+</div>
+<div class="column" style="float:left; width: 50%">
+<img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
+</div>
+
+
+</section>
+<section id="slide-orgba9c5a8">
+<h3 id="orgba9c5a8">Embedding</h3>
+<div class="column" style="float:left; width: 50%">
+
+<ul>
+<li>Idea is to combine speed of BOP (\(\mathcal{O}(N)\)) with accuracy of
+tight-binding \(\mathcal{O}(N^3)\).</li>
+<li>Increasing the number of atoms gives freedom to:
+<ul>
+<li>Investigate isolated dislocations.</li>
+<li>Include solutes at more realistic concentrations.</li>
+<li>Simulate interfaces near a surface (e.g. TiO\(_2\) and
+bulk Ti)</li>
+
+</ul></li>
+
+</ul>
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hex_cell_embedding_crop_text.png" >
+</div>
+
+<aside class="notes">
+<p>
+Invariance theorem with green's function approaches. So good with boundary
+conditions. 
+</p>
+
+</aside>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org4a1103a">
+<h2 id="org4a1103a">Parameter Optimisation</h2>
+<ul>
+<li>Parameter set for TB model optimised by two evolutionary algorithms: genetic
+and particle swarm.</li>
+<li>More optimisation necessary. Interim model used for simulations.</li>
+<li>Similar tests can improve the optimisation procedure such
+that parameters are not overfit to training data.</li>
+
+</ul>
+
+</section>
+<section id="slide-org9b1b452">
+<h3 id="org9b1b452">Results of optimisation.</h3>
+<table height="90%" width="100%">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Quantity</th>
+<th scope="col" class="org-right">TB</th>
+<th scope="col" class="org-right">BOP</th>
+<th scope="col" class="org-right">target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(a_{\alpha}\)              [bohr]</td>
+<td class="org-right">5.42</td>
+<td class="org-right">5.20</td>
+<td class="org-right">5.57</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{\alpha}\)              [bohr]</td>
+<td class="org-right">8.72</td>
+<td class="org-right">9.15</td>
+<td class="org-right">8.85</td>
+</tr>
+
+<tr>
+<td class="org-left">\(C_{11}\)                  [GPa ]</td>
+<td class="org-right">221.8</td>
+<td class="org-right">218.1</td>
+<td class="org-right">176.1</td>
+</tr>
+
+<tr>
+<td class="org-left">\(C_{33}\)                  [GPa ]</td>
+<td class="org-right">194.2</td>
+<td class="org-right">263.4</td>
+<td class="org-right">190.5</td>
+</tr>
+
+<tr>
+<td class="org-left">\(C_{44}\)                  [GPa ]</td>
+<td class="org-right">58.6</td>
+<td class="org-right">-8.5</td>
+<td class="org-right">50.8</td>
+</tr>
+
+<tr>
+<td class="org-left">\(C_{12}\)                  [GPa ]</td>
+<td class="org-right">71.4</td>
+<td class="org-right">93.6</td>
+<td class="org-right">86.9</td>
+</tr>
+
+<tr>
+<td class="org-left">\(C_{13}\)                  [GPa ]</td>
+<td class="org-right">60.0</td>
+<td class="org-right">54.4</td>
+<td class="org-right">68.3</td>
+</tr>
+
+<tr>
+<td class="org-left">\(a_{\omega}\)              [bohr]</td>
+<td class="org-right">8.50</td>
+<td class="org-right">8.34</td>
+<td class="org-right">8.73</td>
+</tr>
+
+<tr>
+<td class="org-left">\(c_{\omega}\)              [bohr]</td>
+<td class="org-right">5.27</td>
+<td class="org-right">5.30</td>
+<td class="org-right">5.32</td>
+</tr>
+
+<tr>
+<td class="org-left">\(a_{\beta}\)               [bohr]</td>
+<td class="org-right">5.92</td>
+<td class="org-right">--</td>
+<td class="org-right">6.17</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\Delta E(\omega-\alpha)\) [mRyd ]</td>
+<td class="org-right">5.16</td>
+<td class="org-right">14.34</td>
+<td class="org-right">-0.73</td>
+</tr>
+
+<tr>
+<td class="org-left">bandwidth                 [Ryd ]</td>
+<td class="org-right">0.41</td>
+<td class="org-right">--</td>
+<td class="org-right">0.42</td>
+</tr>
+</tbody>
+</table>
+
+
+<aside class="notes">
+<p>
+
+</p>
+
+<ul>
+<li>BOP difference is probably due to the fact that bond integrals are not
+exactly the same due to approximate methods.</li>
+<li>Pair potential can be tweaked once the right TB model has been found.</li>
+<li>Energy difference between omega and alpha phase is different.</li>
+<li>nrec = 5</li>
+
+</ul>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org8cf24c2">
+<h2 id="org8cf24c2">Phonon Spectra</h2>
+<div class="outline-text-2" id="text-org8cf24c2">
+</div>
+</section>
+<section id="slide-orge437f8a">
+<h3 id="orge437f8a">\(\alpha\) phase</h3>
+
+<div id="org78afb0b" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/hcp-band_dos_2019-03-21-1.png" alt="hcp-band_dos_2019-03-21-1.png" width="90%" style="position:relative;top:50px;left:-350px;z_index:1;">
+</p>
+</div>
+
+
+<div id="org3475790" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/experimental_hcp_phonons.png" alt="experimental_hcp_phonons.png" width="65%" style="position:absolute;top:150px;left:550px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+
+<aside class="notes">
+<p>
+All frequencies are in THz
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org7faa9bd">
+<h3 id="org7faa9bd">\(\omega\) phase</h3>
+
+<div id="orge287774" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png" alt="omega-band_dos_2019-03-21-1.png" width="90%" style="position:relative;top:50px;left:-200px;z_index:1;">
+</p>
+</div>
+
+
+<div id="org48a9b04" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/omega_phonons_trinkle.png" alt="omega_phonons_trinkle.png" width="32%" style="position:absolute;top:285px;left:450px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+
+
+</section>
+<section id="slide-org986085a">
+<h3 id="org986085a">\(\beta\) phase</h3>
+
+<div id="org2dceba5" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/bcc-band_dos_rightconf-1.png" alt="bcc-band_dos_rightconf-1.png" width="70%" style="position:relative;top:0px;left:-350px;z_index:1;">
+</p>
+</div>
+
+
+
+
+<div id="org353f911" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/bcc-band_dos_dft-1.png" alt="bcc-band_dos_dft-1.png" width="70%" style="position:absolute;top:105px;left:450px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org0aba707">
+<h2 id="org0aba707">Free Energies</h2>
+<div class="outline-text-2" id="text-org0aba707">
+</div>
+</section>
+<section id="slide-orgda774f8">
+<h3 id="orgda774f8">Vibrational Free Energy</h3>
+
+<div id="org18cd2fa" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/vibrational_free_energy_2019-04-04.png" alt="vibrational_free_energy_2019-04-04.png" width="70%" style="position:relative;top:0px;left:-350px;z_index:1;">
+</p>
+</div>
+
+
+<div id="orge276d89" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/vibrational_free_energy_lda.png" alt="vibrational_free_energy_lda.png" width="77%" style="position:absolute;top:110px;left:470px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+
+</section>
+<section id="slide-orgf665cf0">
+<h3 id="orgf665cf0">Total Free Energy</h3>
+
+<div id="orgd46b59b" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_tbe_thick.png" alt="enthalpy_and_vibrational_Rydberg_alternate_tbe_thick.png" width="70%" style="position:relative;top:0px;left:-350px;z_index:1;">
+</p>
+</div>
+
+
+
+<div id="org2b373f7" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/enthalpy_and_vibrational_Rydberg_alternate_lda_thick.png" alt="enthalpy_and_vibrational_Rydberg_alternate_lda_thick.png" width="77%" style="position:absolute;top:105px;left:450px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+
+
+<aside class="notes">
+<p>
+
+</p>
+
+
+<p>
+Free energy contribution from soft phonon modes don't contribute alot to the
+free energy, hence why at the larger temperatures the bcc phase does not
+dominate. 
+</p>
+
+<p>
+bcc is not favoured and then at around 55-80K it is favoured marginally compared
+to the hcp structure. 
+After this the hcp structure is favoured with bcc again becoming the one least
+favourable. 
+</p>
+
+<p>
+hcp is always more stable than omega in this temperature range. 
+</p>
+
+</aside>
+
+</section>
+</section>
+<section>
+<section id="slide-org0b1eb9f">
+<h2 id="org0b1eb9f">Gamma Surfaces</h2>
+<div class="column" style="float:left; width: 50%">
+
+<ul>
+<li>\(\gamma\) -surfaces are plots of excess energy with the movement of
+atoms on a fault plane.</li>
+<li>Stable stacking faults correspond to local minima.</li>
+<li>This provides insight into possible dislocation dissociations.</li>
+
+</ul>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/gamma_surface_video.ogv" ></video>
+</div>
+
+</section>
+<section id="slide-org85d07be">
+<h3 id="org85d07be">Basal gamma surfaces</h3>
+
+<div id="orgbfcc681" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/basal_gamma_surface_tbe_2019-03-21_format_2.png" alt="basal_gamma_surface_tbe_2019-03-21_format_2.png" width="65%" style="position:relative;top:0px;left:-300px;z_index:1;">
+</p>
+</div>
+
+
+
+<div id="org7bc0ba0" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/basal_gamma_surface_bop_2019-03-30_format_2.png" alt="basal_gamma_surface_bop_2019-03-30_format_2.png" width="65%" style="position:absolute;top:100px;left:-140px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+
+
+
+<div id="org523168f" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/rodney_basal_ti_gamma_surface.png" alt="rodney_basal_ti_gamma_surface.png" width="65%" style="position:absolute;top:200px;left:540px;z_index:3;">
+</p>
+</div>
+
+<p>
+Expected splitting (all models): \(\frac{1}{3}[1\bar{2}10] = \frac{1}{3}[1\bar{1}00] +  \frac{1}{3}[0\bar{1}10]\)
+</p>
+
+</section>
+<section id="slide-org9d4a1f2">
+<h3 id="org9d4a1f2">Prismatic gamma surfaces</h3>
+
+<div id="org434544d" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/prismatic_gamma_surface_2019-12-28_tbe.png" alt="prismatic_gamma_surface_2019-12-28_tbe.png" width="50%" style="position:relative;top:10px;left:-350px;z_index:1;">
+</p>
+</div>
+
+
+
+<div id="org660d6d0" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/prismatic_gamma_surface_2019-12-28_bop.png" alt="prismatic_gamma_surface_2019-12-28_bop.png" width="50%" style="position:absolute;top:120px;left:-100px;z_index:2;" class="fragment fade-in">
+</p>
+</div>
+
+
+
+
+<div id="org1cb9bd3" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/rodney_prismatic_ti_gamma_surface.png" alt="rodney_prismatic_ti_gamma_surface.png" width="50%" style="position:absolute;top:170px;left:450px;z_index:3;">
+</p>
+</div>
+
+
+<ul>
+<li>Theoretical splitting: \(\frac{1}{3}[1\bar{2}10] = \frac{1}{6}[1\bar{2}10] + \frac{1}{6}[1\bar{2}10]\)</li>
+<li>Expected splitting (TB): \(\frac{1}{3}[1\bar{2}10] = ( \frac{1}{6}[1\bar{2}10] + 0.15[0001]) + ( \frac{1}{6}[1\bar{2}10] - 0.15[0001] )\)</li>
+<li>Expected splitting (BOP): None.</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+From TB one can see that the splitting is immediately not exactly the same as
+that of DFT. 
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orge09ef90" data-background-transition="none">
+<h3 id="orge09ef90">Pyramidal gamma surfaces</h3>
+
+<div id="orgc5c8da3" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/pyramidal_gamma_surface_2019-03-27_mapped.png" alt="pyramidal_gamma_surface_2019-03-27_mapped.png" width="900" style="position:absolute;top:100px;left:50px;z_index:1;">
+</p>
+</div>
+
+<img src="file:///home/tigany/Documents/docs/Management/Images/pyramidal_gamma_surface_ready_data_4eIPP.png" width="830"  class="fragment fade-out" style="position:absolute;top:400px;left:60px;z_index:3;" >
+<img class="fragment fade-in" src="file:///home/tigany/Documents/docs/Management/Images/chaari_zr_first_order_pyramidal.png" width="830" style="position:absolute;top:400px;left:60px;z_index:2;" >
+
+
+
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+One can see a saddle point in the interatomic potential and the tb model. So
+one can assume that this is a point which relies on subtle electronic
+structure methods. Like the prismatic splitting above. 
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org0aa53a4">
+<h3 id="org0aa53a4">Results</h3>
+<table width="100%">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Plane</th>
+<th scope="col" class="org-left">Fault</th>
+<th scope="col" class="org-right">TB</th>
+<th scope="col" class="org-left">BOP</th>
+<th scope="col" class="org-left">[DFT]</th>
+<th scope="col" class="org-left">[TB]</th>
+<th scope="col" class="org-left">[BOP]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Basal</td>
+<td class="org-left">\(I_{2}\)</td>
+<td class="org-right">19</td>
+<td class="org-left">127</td>
+<td class="org-left">260 \(^{[1]}\)</td>
+<td class="org-left">290 \(^{[2]}\)</td>
+<td class="org-left">110 \(^{[3]}\)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Prismatic</td>
+<td class="org-left">\(\gamma_{P}\)</td>
+<td class="org-right">299</td>
+<td class="org-left">4618</td>
+<td class="org-left">250/233 \(^{[1,4]}\)</td>
+<td class="org-left">110\(^{[5]}\)</td>
+<td class="org-left">260\(^{[3]}\)</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Pyramidal</td>
+<td class="org-left">\(I_{1}\)</td>
+<td class="org-right">288</td>
+<td class="org-left">--</td>
+<td class="org-left">288 \(^{[6]}\)</td>
+<td class="org-left">--</td>
+<td class="org-left">--</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">\(I_{2}\)</td>
+<td class="org-right">671</td>
+<td class="org-left">--</td>
+<td class="org-left">788 \(^{[6]}\)</td>
+<td class="org-left">--</td>
+<td class="org-left">--</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>Units are in \(mJm^{-2}\). Square brackets denote method from literature.</li>
+<li>\(^{[1]}\) Benoit (2012), \(^{[2]}\) Bere (1999), \(^{[3]}\) Girshick (1998)</li>
+<li>\(^{[4]}\) Ackland (1992), \(^{[5]}\) Legrand (1984), \(^{[6]}\) Ready (2019), \(^{[7]}\) Chaari (2014)</li>
+
+</ul>
+
+
+<aside class="notes">
+<p>
+Pyramidal plane large minima at 0.5, 0.5, 0.0. 
+</p>
+
+<p>
+For I<sub>1</sub> fault I get 288
+For the other fault, I get 671 mJm<sup>-2</sup>
+</p>
+
+<p>
+Smaller minima is at 0.7, 0.5, 288 mJm<sup>-2</sup>
+</p>
+
+<p>
+In pseudopotential one gets 288 as well! 
+</p>
+
+
+<p>
+Pair potential for the BOP on fitting needs to be tweaked for accurate
+results.
+</p>
+
+</aside>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org41cfd14">
+<h2 id="org41cfd14">Core structures</h2>
+<ul>
+<li>Dislocation cores are sensitive to boundary conditions.</li>
+<li>Sufficient resolution of core structure is necessary ascertain how
+dislocation glide is modified.</li>
+
+</ul>
+
+
+
+</section>
+<section id="slide-org13d9eb3">
+<h3 id="org13d9eb3">Quadrupolar Cell \(\frac{1}{3}\langle11\bar{2}0\rangle\) screw</h3>
+<div class="column" style="float:left; width: 50%">
+<video controls width="650" height="450" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/S_dipole_relaxation_array.ogv" ></video>
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgb11cb59" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/core_relax_initial.gif" alt="core_relax_initial.gif" width="150%" frag="grow">
+</p>
+</div>
+</div>
+
+</section>
+<section>
+
+
+<div id="org87952d1" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/zoom_core_look.png" alt="zoom_core_look.png" width="600" style="position:relative;top:-150px;left:50px;z_index:1;">
+</p>
+</div>
+
+
+<div id="org28c9fd5" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/ghazisaiedi_trinkle_3_core.png" alt="ghazisaiedi_trinkle_3_core.png" width="80%" style="position:absolute;top:280px;left:150px;z_index:2;">
+</p>
+</div>
+
+
+<div id="org1f4c063" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/coordinate_prismatic_plane.png" alt="coordinate_prismatic_plane.png" width="30%" style="position:absolute;top:180px;left:-150px;z_index:2;">
+</p>
+</div>
+
+
+</section>
+<section id="slide-org8b5287b">
+<h3 id="org8b5287b">Oxygen-core quadrupole</h3>
+<video controls width="600" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_core_quad.ogv" ></video>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgd87dcd5">
+<h2 id="orgd87dcd5">Vacancy formation energy</h2>
+<video controls width="600" height="400" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/vacancy_relaxation_26-03-19.ogv" ></video>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(\Delta E_{\text{f}}^{\text{vacancy}}\)</th>
+<th scope="col" class="org-right">[eV]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Relaxed</td>
+<td class="org-right">1.01</td>
+</tr>
+
+<tr>
+<td class="org-left">(Exp.) Hashimoto (1984)</td>
+<td class="org-right">1.27</td>
+</tr>
+
+<tr>
+<td class="org-left">(DFT) GGA-PAW: Angsten (2013)</td>
+<td class="org-right">1.95</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org747a238">
+<h2 id="org747a238">Molecular Dynamics</h2>
+<video controls width="800" height="600" autoplay loop src="file:///home/tigany/Documents/docs/Management/Images/ox_octahedral_md.ogv" ></video>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org3ab9656">
+<h2 id="org3ab9656">Future Work</h2>
+<ul>
+<li>Obtain a model of Ti that more closely matches empirical quantities.</li>
+<li>See how core structure changes with O content.</li>
+<li>Calculate the Peierls barrier on prism, and \(\pi\) planes.</li>
+<li>Calculate secondary Peierls barrier for kink migration with and without
+oxygen.</li>
+<li>Add rutile layer; see how dislocations and oxygen interact with structure.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org281f56c">
+<h2 id="org281f56c">Additional references</h2>
+<ul>
+<li>Ghazisaeidi, Trinkle (2012), <em>Core structure of a screw dislocation in Ti from density functional theory and classical potentials</em>.</li>
+<li>Rodney, Ventelon (2016), <em>Ab initio modelling of dislocation core properties
+in metals and semiconductors</em>.</li>
+<li>Chaari, Clouet (2014), <em>First order pyramidal slip of 1/3 screw dislocations in zirconium</em></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/dist/reveal.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/search/search.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom/zoom.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/audio-slideshow/plugin.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/anything/plugin.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'h/v',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+
+overview: true,
+
+transition: 'linear',
+transitionSpeed: 'default',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom, RevealAudioSlideshow, RevealAnything ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+{ src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize('reduce', 'rgba(120,138,130,0.2)', 'body'); toc_progress.create(); } },
+{ src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/jump/jump.js', async: true },
+{ src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({preventUnanswered: true, skipStartButton: true}); } },
+{ src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/coursemod/coursemod.js', async: true },
+{ src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/accessibility/helper.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+,audioStartAtFragment: true,
+  audio: {
+    advance: -1, autoplay: false, defaultDuration: 0, defaultAudios: false, playerOpacity: 0.8, playerStyle: 'position: fixed; bottom: 9.5vh; left: 0%; width: 30%; height:30px; z-index: 33;' },
+anything: [
+        // Following initialization code for class animate from anything-demo.html.
+        // Copyright (c) 2016 Asvin Goel, under The MIT License (MIT).
+	{className: "animate",  initialize: (function(container, options){
+		Reveal.addEventListener( 'fragmentshown', function( event ) {
+			if (typeof event.fragment.beginElement === "function" ) {
+				event.fragment.beginElement();
+			}
+		});
+		Reveal.addEventListener( 'fragmenthidden', function( event ) {
+			if (event.fragment.hasAttribute('data-reverse') ) {
+				var reverse = event.fragment.parentElement.querySelector('[id=\"' + event.fragment.getAttribute('data-reverse') + '\"]');
+				if ( reverse && typeof reverse.beginElement === "function" ) {
+					reverse.beginElement();
+				}
+			}
+		});
+		if ( container.getAttribute("data-svg-src") ) {
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function() {
+				if (xhr.readyState === 4) {
+					var svg = container.querySelector('svg');
+					container.removeChild( svg );
+					container.innerHTML = xhr.responseText + container.innerHTML;
+					if ( svg ) {
+						container.querySelector('svg').innerHTML = container.querySelector('svg').innerHTML + svg.innerHTML;
+					}
+				}
+				else {
+					console.warn( "Failed to get file. ReadyState: " + xhr.readyState + ", Status: " + xhr.status);
+				}
+			};
+			xhr.open( 'GET', container.getAttribute("data-svg-src"), true );
+			xhr.send();
+		}
+	}) },
+	{className: "randomPic",
+	 defaults: {imgalt: "Dummy alt text",
+		    imgcaption: "Image by {name}",
+		    choices: [ {name: "dummyname", path: "dummypath"} ]},
+	 initialize: (function(container, options){
+	     var choice = Math.trunc( Math.random()*(options.choices.length) );
+	     var img = "<img src='" + options.choices[choice].path + "' alt='" + options.choices[choice].imgalt + "' />";
+	     var caption = options.imgcaption.replace(new RegExp('\{name\}', 'gm'), options.choices[choice].name);
+	     container.innerHTML = img + caption;
+	 }) },
+	{className: "notes",
+	 initialize: (function(container, options){
+	     container.addEventListener('click', function(e) { Reveal.getPlugins().notes.open(); });
+	 }) }
+],
+coursemod: { enabled: true, shown: false },
+});
+</script>
+</body>
+</html>
