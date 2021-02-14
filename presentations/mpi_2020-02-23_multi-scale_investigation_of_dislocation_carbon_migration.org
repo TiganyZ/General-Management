@@ -244,7 +244,7 @@
 ** Carbon concentration on dislocation line
    - We can calculate the carbon concentration on dislocation line,
      $C_d$, where carbon atoms are at equilibrium with the matrix.
-   - We use nominal carbon concentration, to link to the carbon
+   - We use nominal carbon concentration $vC_{\text{nom}}$, to link to the carbon
      concentration in the matrix, $C_{\text{bulk}}$.
    - Included the effect of the C-C first-neighbour repulsive energy
      of carbon within hard-core prismatic site, with atomistics.
@@ -254,10 +254,20 @@
    #   \frac{E_{\text{b}}^i}{k_{\text{B}}T}  \Big)    \end{equation}
 
    # \begin{equation}  N_{\text{oct}}    c_{\text{bulk}} + N_d c_d = N_{\text{oct}} c_{\text{nom}}/3  \end{equation}
+   # #+REVEAL_HTML: </section>
+   # #+REVEAL_HTML: <section data-background-size="contain" data-background="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/mcclean_isotherm_all_500.png">
+
    #+REVEAL_HTML: </section>
-   #+REVEAL_HTML: <section data-background-size="contain" data-background="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/mcclean_isotherm_all_500.png">
+   #+REVEAL_HTML: <section data-background-size="contain" data-background="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/mcclean_isotherm_all_e2_h1.png">
 
 
+
+   #  #+REVEAL: split
+   #  #+CAPTION: Concentration of carbon on the dislocation line as a function of distance from the core at differing dislocation densities and initial nominal carbon concentrations. [[label:conc_dist_disl]]
+   # #+REVEAL_HTML:  <img class="stretch" src="file:///home/tigany/Documents/docs/Management/fe_skf_paper/sebastian/Images/mcclean_isotherm_all.png">
+
+
+# ** What does this tell us?
 
 
 
@@ -284,9 +294,10 @@
    \vec{P}_{j+1} )^2}_{\text{Spring term}}
    + \underbrace{\sum_j \Delta E_{\text{P}}  (\vec{P}_j)}_{\text{Peierls Potential}}  -
      \underbrace{\sum_{j,k} E_{\text{C}}
-     (|\vec{P}_j-\vec{P}_k^{\text{C}}|)}_{\text{C Interaction}}}_{\textbf{From Atomistics}} +
-(\sigma
+     (|\vec{P}_j-\vec{P}_k^{\text{C}}|)}_{\text{C Interaction}}}_{\textbf{From Atomistics}}
++ (\sigma
      \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j,
+v
      \end{equation}
        #+REVEAL_HTML: <div class="column" style="float:left; width: 60%">
       - We can obtain the kink-pair formation enthalpy as a function of
@@ -336,13 +347,13 @@
     dislocation-assisted carbon migration.
   - Atomistics finds the _hard screw core_ to be _ground-state_
     due to carbon interaction.
-  - Shown _*all* carbon segregated to dislocations_, during martensite
+  - _*All* carbon segregated to dislocations_, during martensite
     → ferrite transition, due to large binding energy of C.
   - Therefore, initial assumption of */dislocation-driven carbon migration/* is correct.
   - _All dislocations_, even in _high-purity iron_, are _pinned with
     carbon in a hard core configuration_ (up to 400\deg K).
   - Line-tension model shows amount by which _carbon decreases kink-pair formation
-    enthalpy_ barrier is ahead of dislocation. Drag if behind.
+    enthalpy_ barrier if ahead of dislocation. Drag if behind.
   - Further work, through SCkMC model will ascertain regimes in which
     dislocation-assisted carbon migration is valid.
 
