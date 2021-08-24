@@ -1,0 +1,16 @@
+#+TITLE: Skinner1991: Transferability and the pair potential within the tight-binding bond model: an analytic study for hydrogen
+#+ROAM_KEY: cite:Skinner1991
+- tags ::
+- keywords ::
+
+* Transferability and the pair potential within the tight-binding bond model: an analytic study for hydrogen
+  :PROPERTIES:
+  :Custom_ID: Skinner1991
+  :URL: https://doi.org/10.1088/0953-8984/3/13/006
+  :AUTHOR: Skinner, A. J., & Pettifor, D. G.
+  :NOTER_DOCUMENT: ~/Zotero/storage/BW77R55L/Skinner and Pettifor - 1991 - Transferability and the pair potential within the .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

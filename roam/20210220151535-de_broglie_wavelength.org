@@ -1,0 +1,4 @@
+#+title: de-Broglie Wavelength
+
+- This is the relationship between particles and waves.
+- Relation is $\lambda \cdot p = h$

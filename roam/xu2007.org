@@ -1,0 +1,17 @@
+#+TITLE: Xu2007: First-principles investigation of metal-hydride phase stability: The Ti-H system
+#+ROAM_KEY: cite:Xu2007
+- tags ::
+- keywords ::
+
+* First-principles investigation of metal-hydride phase stability: The Ti-H system
+  :PROPERTIES:
+  :Custom_ID: Xu2007
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.76.064207
+  :AUTHOR: Xu, Q., & Van der Ven, A.
+  :NOTER_DOCUMENT: ~/Zotero/storage/JE7P4RHV/Xu and Van der Ven - 2007 - First-principles investigation of metal-hydride ph.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+n

@@ -1,0 +1,11 @@
+#+TITLE: Adiabatic approximation
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 17:18]--[2021-03-06 Sat 17:20] =>  0:02
+  :END:
+  - By adiabatic, we mean to say that there is /no interaction between
+    different electronic surfaces/.
+  - [[file:2021-02-25--23-13-48--born_oppenheimer_approximation.org][Born–Oppenheimer approximation]] means that there is no influence of
+    the ionic motion on one electronic surface.

@@ -1,0 +1,18 @@
+#+TITLE: NYEt: SOME GEOMETRICAL RELATIONS IN DISLOCATED CRYSTALS
+#+ROAM_KEY: cite:NYEt
+- tags ::
+- keywords ::
+
+* SOME GEOMETRICAL RELATIONS IN DISLOCATED CRYSTALS
+  :PROPERTIES:
+  :Custom_ID: NYEt
+  :URL:
+  :AUTHOR: NYEt, F.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/8JL8X5RT/NYEt - SOME GEOMETRICAL RELATIONS IN DISLOCATED CRYSTALS.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+   This is the original paper of the [[file:2021-03-01--13-53-52--nye_tensor.org][Nye Tensor]]. This is related to
+   [[file:2021-03-02--17-18-11--geometrically_necessary_dislocations.org][Geometrically Necessary Dislocations]].

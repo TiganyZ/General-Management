@@ -1,0 +1,16 @@
+#+TITLE: Lin2014: SIESTA-PEXSI: massively parallel method for efficient and accurate Ab Initio materials simulation without matrix diagonalization
+#+ROAM_KEY: cite:Lin2014
+- tags ::
+- keywords ::
+
+* SIESTA-PEXSI: massively parallel method for efficient and accurate Ab Initio materials simulation without matrix diagonalization
+  :PROPERTIES:
+  :Custom_ID: Lin2014
+  :URL: https://iopscience.iop.org/article/10.1088/0953-8984/26/30/305503
+  :AUTHOR: Lin, L., García, A., Huhs, G., & Yang, C.
+  :NOTER_DOCUMENT: ~/Zotero/storage/5EPEF5EY/Lin et al. - 2014 - SIESTA-PEXSI massively parallel method for effici.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

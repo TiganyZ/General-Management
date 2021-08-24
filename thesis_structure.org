@@ -13,36 +13,124 @@
   within the error limits.
 
 * Introduction: Literature Review
+  A lot of good information already in
+  [[file:literature_and_notes/notes_and_literature.org]]
+
+  For DFT, use the chapter [[file:chapters/current_dft_chapter.org]]
+
+  We have dislocation modelling in
+  [[file:chapters/ti_dislocation_modelling.org]]
+
+
 ** Summary of Thesis
 * Simulation Methodology
 ** Tight-binding
 
    - Explain tight-binding, from the perspective of maybe density
-     functional theory / Horsfield [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
+     functional theory / Horsfield
+     [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
 
-*** TODO Read Majeski & Vogel [[file:~/Documents/books/The%20Structures%20of%20Binary%20Compounds%20by%20J.%20Hafner,%20F.%20Hulliger,%20W.B.%20Jensen,%20J.A.%20Majewski,%20K.%20Mathis,%20P.%20Villars%20and%20P.%20Vogl%20(Eds.)%20(z-lib.org).pdf][Structures of binary compounds chapter 4]]
-    DEADLINE: <2021-02-15 Mon>
+
+** READ Papers to Read [0/2] :READING:ROAM:
+   SCHEDULED: <2021-06-10 Thu 18:00>
+   :PROPERTIES:
+   :COOKIE_DATA: todo
+   :END:
+
+    - [ ] Recite electronic knowledge
+    - [ ] Majeski & Vogel cite:Hafner1989 chapter 4
+    - [ ] Read Horsfield-Smutna cite:Smutna2020
+    - [ ] Read Heine 1980 cite:Heine1980
+    - [ ] Read Harrison
+
+
+*** READ Nematollahi - Understand the specifics of carbon-drag analysis. [0/1]
     :PROPERTIES:
-    :ORDERED:  t
+    :COOKIE_DATA: todo
+    :END:
+    :LOGBOOK:
+    CLOCK: [2021-04-10 Sat 16:50]--[2021-04-10 Sat 16:54] =>  0:04
+    CLOCK: [2021-04-10 Sat 16:29]--[2021-04-10 Sat 16:49] =>  0:20
+    CLOCK: [2021-04-10 Sat 15:57]--[2021-04-10 Sat 16:05] =>  0:08
+    CLOCK: [2021-04-10 Sat 15:52]--[2021-04-10 Sat 15:56] =>  0:04
     :END:
 
-**** TODO Make notes of Majeski/Vogel
-**** TODO Relate to DFT
+**** ROAM Writing: Differences in assumptions for the velocity dependence
 
- 
+     :LOGBOOK:
+     CLOCK: [2021-07-13 Tue 11:52]--[2021-07-13 Tue 12:17] =>  0:25
+     CLOCK: [2021-07-13 Tue 10:55]--[2021-07-13 Tue 11:20] =>  0:25
+     CLOCK: [2021-07-13 Tue 10:23]--[2021-07-13 Tue 10:48] =>  0:25
+     CLOCK: [2021-07-13 Tue 09:50]--[2021-07-13 Tue 10:15] =>  0:25
+     CLOCK: [2021-07-13 Tue 09:19]--[2021-07-13 Tue 09:45] =>  0:26
+     CLOCK: [2021-07-12 Mon 11:30]--[2021-07-12 Mon 11:55] =>  0:25
+     CLOCK: [2021-07-12 Mon 10:34]--[2021-07-12 Mon 10:59] =>  0:25
+     CLOCK: [2021-07-12 Mon 09:46]--[2021-07-12 Mon 10:11] =>  0:25
+     CLOCK: [2021-07-12 Mon 09:16]--[2021-07-12 Mon 09:41] =>  0:25
+     CLOCK: [2021-05-25 Tue 11:27]--[2021-05-25 Tue 11:52] =>  0:25
+     CLOCK: [2021-05-24 Mon 11:53]--[2021-05-24 Mon 12:18] =>  0:25
+     CLOCK: [2021-04-10 Sat 18:30]--[2021-04-10 Sat 18:55] =>  0:25
+     CLOCK: [2021-04-10 Sat 16:59]--[2021-04-10 Sat 17:24] =>  0:25
+     :END:
+     - In Nematollahi, the change in occupancies is dependent on the
+       activation of the energy barrier between sites.
+     - This energy barrier is the migration energy barrier
 
-*** TODO Read Horsfield-Smutna  [[file:papers/Horsfield_Smutna_Fogarty_fitting_TB_potentials_from_DFT_PhysRevMaterials.4.043801.pdf][Horsfield-Smutna-Fitting-TB]]
-    DEADLINE: <2021-02-19 Fri>
+       \begin{align*}
+         \frac{\partial \chi_i}{\partial t} = \sum_{j=1}^4 \left\{
+       &\chi_j (1 - \chi_i) \nu_0^{\text{migration}} \exp{\left[ -
+       E_{\text{barrier}}^{i\rightarrow j} / k_{\text{B}} T\right]}\\ -
+              &\chi_i (1 - \chi_j) \nu_0^{\text{migration}} \exp{\left[ -
+       E_{\text{barrier}}^{j\rightarrow i} / k_{\text{B}} T\right]}
+       \right\} + \frac{\bar{v}_{\text{disl}}}{a/2} [x_{j+} - x_{i}]
+       \end{align*}
 
-*** TODO Read Heine 1980 [[file:papers/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf][Heine Local atomic structure]]
-    SCHEDULED: <2021-02-04 Thu 17:00> DEADLINE: <2021-02-05 Fri>
+     - Last term is a convection term which can be added to account for
+       a moving dislocation (going to the right)
+     - Where a $j+$ site is to the right of the $i^{\text{th}}$ site,
+       and an $j-$ occupied to the left.
+     - With dislocation movement the occupations /move backwards/ from
+       the $j+$ to $i^{\text{th}}$ and from $i^{\text{th}}$ to $j-$
+       sites.
+     - Summation over 4 as 4 "first-neighbour" octahedral sites.
 
-       
 
-*** TODO Summarise the theory - Consolidate here
-    DEADLINE: <2021-03-05 Fri>
+     - In Ivo's paper, the change in occupancy has a time dependence,
+       which is due to the velocity of a dislocation.
+     - This mediated between the two limiting regimes of static and
+       equilbrium occupancies upon dislocation motion.
 
-   
+       \[ \frac{\partial \chi_i}{\partial t} = \bar{v}\frac{\partial
+       \chi_i}{\partial x} = \left( \chi_i^e(x) - \chi_i(x,\bar{v})
+       \right) \nu_0^{\text{solute escape}} \exp{ - E_i(r) / k_{\text{B}} T} \]
+
+     - Here the attempt frequencies are different as one is for a
+       hydrogen to escape from the binding of the dislocation to the
+       bulk, and the other is to escape the relative energy barrier
+       between sites.
+
+     - If it is possible to assume that one can superimpose the
+       occupancy effects of carbon _diffusion_, then we can have an
+       equation for the velocity dependence.
+
+*** ROAM High-mobility zone around hard core has not been investigated: Flesh out idea of this
+    :LOGBOOK:
+    CLOCK: [2021-04-10 Sat 15:56]--[2021-04-10 Sat 15:57] =>  0:01
+    :END:
+  [2021-04-10 Sat 15:56]
+  [[file:~/Documents/docs/Management/roam/nematollahi2016a.org::*Asymmetry
+  of carbon migration barriers due to strain field][Asymmetry of
+  carbon migration barriers due to strain field]]
+  - Velocity defined by orowan's equation in Nematollahi [[file:roam/nematollahi2016a.org][Nematollahi2016a: Multiscale description of carbon-supersaturated ferrite in severely drawn pearlitic wires]]
+  - We can use the self-consistent description of velocity in our
+    calculations such that we know what the velocity is from the line
+    tension model.
+  - Compare with dislocation velocity range found in the paper of
+    80-1000 Å/s.
+  - Intermediate positions of the high mobility zone correspond to
+    hard core config.
+  - What is actually posssible is discrete diffusion within the line
+    tension model! We just need to measure the energy barriers
 
 ** BOP
 ** Embedding
@@ -73,9 +161,308 @@
       and see if the dissociation distance changes, but this is quite a large
       ask in the timeframe
 
-*** TODO Finalize model for fitting
-    DEADLINE: <2021-02-05 Fri>
+*** TODO Titanium work [1/8]
+    :PROPERTIES:
+    :COOKIE_DATA: todo
+    :END:
+    :LOGBOOK:
+    CLOCK: [2021-08-24 Tue 15:54]--[2021-08-24 Tue 15:55] =>  0:01
+    CLOCK: [2021-08-23 Mon 12:28]--[2021-08-23 Mon 12:53] =>  0:25
+    CLOCK: [2021-07-22 Thu 13:27]--[2021-07-22 Thu 13:52] =>  0:25
+    CLOCK: [2021-04-12 Mon 12:38]--[2021-04-12 Mon 13:03] =>  0:25
+    CLOCK: [2021-04-12 Mon 12:00]--[2021-04-12 Mon 12:25] =>  0:25
+    :END:
 
+    <2021-08-06 Fri>--<2021-09-10 Fri>
+
+**** WAITING Embedding Calculations                                 :WAITING:
+     SCHEDULED: <2021-08-24 Tue 11:15>
+     - State "WAITING"    from "WAITING"    [2021-08-23 Mon 11:15] \\
+       Submitted third calculation
+     - State "WAITING"    from "WAITING"    [2021-08-11 Wed 12:04] \\
+       Waiting for calculation on juc with smaller cell to finish
+     - State "WAITING"    from "TODO"       [2021-06-04 Fri 11:18] \\
+       Waiting for the budget of Young to get back to normal
+     :LOGBOOK:
+     CLOCK: [2021-08-24 Tue 15:19]--[2021-08-24 Tue 15:21] =>  0:02
+     CLOCK: [2021-08-23 Mon 11:13]--[2021-08-23 Mon 11:22] =>  0:09
+     CLOCK: [2021-06-02 Wed 11:05]--[2021-06-02 Wed 11:31] =>  0:26
+     CLOCK: [2021-05-26 Wed 16:09]--[2021-05-26 Wed 16:34] =>  0:25
+     CLOCK: [2021-05-26 Wed 15:31]--[2021-05-26 Wed 15:56] =>  0:25
+     CLOCK: [2021-05-25 Tue 14:55]--[2021-05-25 Tue 15:20] =>  0:25
+     :END:
+
+***** DONE Figure out why forces are reducing, but energy is not
+      :LOGBOOK:
+      CLOCK: [2021-06-21 Mon 10:51]--[2021-06-21 Mon 10:51] =>  0:00
+      :END:
+    [2021-06-21 Mon 10:51]
+    [[file:~/Documents/docs/Management/org/TODOs.org::*Hydrogen-titanium fitting][Hydrogen-titanium fitting]]
+
+    - Seems to be due to the fact that the embedding was getting the
+      structure a little wrong: it was all of the atoms made by the
+      bop code with rprune---addition of atoms due to the length of
+      the recursion chain.
+***** TODO Other Dislocation structures if models don't work?
+**** TODO Review s-d tight-binding models [1/1]
+     SCHEDULED: <2021-08-09 Mon 13:00>
+     :PROPERTIES:
+     :COOKIE_DATA: todo
+     :END:
+     :LOGBOOK:
+     CLOCK: [2021-08-10 Tue 13:40]--[2021-08-10 Tue 14:05] =>  0:25
+     CLOCK: [2021-08-10 Tue 13:09]--[2021-08-10 Tue 13:34] =>  0:25
+     CLOCK: [2021-08-09 Mon 12:37]--[2021-08-09 Mon 13:02] =>  0:25
+     CLOCK: [2021-07-12 Mon 16:05]--[2021-07-12 Mon 16:30] =>  0:25
+     CLOCK: [2021-07-12 Mon 15:31]--[2021-07-12 Mon 15:56] =>  0:25
+     CLOCK: [2021-07-12 Mon 14:45]--[2021-07-12 Mon 15:10] =>  0:25
+     CLOCK: [2021-07-12 Mon 14:14]--[2021-07-12 Mon 14:39] =>  0:25
+     CLOCK: [2021-03-03 Wed 14:33]--[2021-03-03 Wed 14:58] =>  0:25
+     CLOCK: [2021-03-01 Mon 11:08]--[2021-03-01 Mon 11:33] =>  0:25
+     CLOCK: [2021-03-01 Mon 10:37]--[2021-03-01 Mon 11:02] =>  0:25
+     CLOCK: [2021-02-26 Fri 11:52]--[2021-02-26 Fri 12:17] =>  0:25
+     CLOCK: [2021-02-24 Wed 16:49]--[2021-02-24 Wed 17:14] =>  0:25
+     CLOCK: [2021-02-24 Wed 16:44]--[2021-02-24 Wed 16:49] =>  0:05
+     CLOCK: [2021-02-24 Wed 16:44]--[2021-02-24 Wed 16:44] =>  0:00
+     :END:
+     [2021-02-24 Wed 16:44]
+
+***** DONE Test binaries to see what works
+
+      _Problem:_
+
+      We obtain error using the
+
+      #+begin_src bash
+module purge
+module load hdf5/1.10.5/openmpi/3.1.0/gcc/8.1.0 libxc/4.3.4/gcc/8.1.0 intel/19.0.3
+module list
+
+export PATH="/home/tigany/bucket/lm/b/gcc-opt-mpi:$PATH"
+
+      #+end_src
+
+      #+begin_src bash
+ BZWTS : --- Brillouin Zone sampling; N=1, W=.005 ---
+ BZWTS (warning): cannot find E_F by bisection, using INTNOS
+ Exit -1 MAKNOS: emin too large
+
+      #+end_src
+
+      _Aim:_
+
+      Find which binaries work for what calculations and why.
+
+      _Solution:_
+      Dimitar fixed the reading of the ctrl file which solved the
+      issue.
+
+****** Binaries
+
+       | Binary                                   | Ti unit | EC     | Ti 2x2x2 | ɣ-surf | SCTB   |
+       |------------------------------------------+---------+--------+----------+--------+--------|
+       | ~lmto/7.13.0/openmpi/3.1.0/intel/14.0.1~ | y       | y      | y        | y      | n_EMIN |
+       | ~gcc_opt_no-native_lmbranch~             | y       | n_EMIN | n_EMIN   | n_EMIN | y      |
+       | ~gcc_opt_native_lmbranch~                | y       | n_EMIN | n_EMIN   | n_EMIN | y      |
+       | ~gcc_debug_no-native_lmbranch~           | y       | y      | n_EMIN   | n_EMIN | y      |
+
+
+       _TiO2 objective function_
+
+       For the intel binary, when running the TiO2 objective function
+       for the solution energies we get NaN for some eigenvalues
+       during self-consistency. This only seems to be a problem for
+       reasonably sized cells.
+       Putting the verbosity up to ~--pr81~ gives:
+       #+begin_src bash
+	  nev, nevmx, nevec, ldim=  217  217  217  217  efmax= 5
+       #+end_src
+       It fails within the first self-consistency cycle.
+
+
+       _Ti sd objective function:_
+
+       On ti, we know the normal intel binaries work for the
+       evaluation of the whole objective function, with the gamma
+       surface relaxation.
+
+       #+begin_src bash
+
+       #+end_src
+
+      
+***** Questions [0/6]
+      - [ ] Check sd band structures from models found
+      - [ ] How are the fault energies in comparison to d-canonical?
+      - [ ] What is the actual structure of the model? s-d?
+      - [ ] What effect does hybridisation actually have?
+      - [ ] Why is the MEAM potential actually reasonable for these
+	stacking fault energies?
+      - [ ] Run dislocation calculations for the sd model to see if there are differences in the core structure
+
+**** WAITING BCC oxygen solution energies DFT comparison            :WAITING:
+     SCHEDULED: <2021-08-30 12:00 Mon>
+     - State "WAITING"    from "TODO"       [2021-08-23 Mon 12:39] \\
+       One must wait for the TiO2 fitting to finish
+     - These calculations are on gherkin
+     - We can use the new binaries which dimitar has made.
+
+
+**** DONE Check the BCC phonon sd Ti bandstructure
+     :LOGBOOK:
+     CLOCK: [2021-07-15 Thu 12:30]--[2021-07-15 Thu 12:30] =>  0:00
+     :END:
+   [2021-07-15 Thu 12:30]
+   [[file:~/Documents/docs/Management/roam/paxton2010.org::*Notes][Notes]]
+**** TODO _Embedding_ [0/1]
+
+      - [ ] Embedding calculation on Young
+
+**** TODO _Model_ [0/3]
+
+      - [ ]   sd model with hybridisation
+      - [ ]  _Finalize_ model for fitting
+      - [ ]  Pettifor force theorem: check/put in fitting
+
+**** TODO _Core structure_ [0/1]
+
+      - [ ]  Energy dependence and core energy
+	- [ ] Core Energy difference in tbe - *bop*
+	  - Tiny difference of 0.53 eV which determines the difference
+	  between each of the core energies.
+
+**** TODO _Gamma Surfaces_ [0/6]
+
+      - [ ]  Calculate gamma surfaces for new model [0/3]
+	- [ ] Planar faults
+	- [ ] Compare to DFT literature of Rodney, Curtin and Tarrat
+	- [ ] Compare to other TB models
+	  - ICAMS model is rubbish!
+
+      - [ ] Think about why a d-canonical model would lead to large spreading?
+	- [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
+
+
+      - [ ] Defect clusters
+
+      - [ ] Binding of oxygen to dislocations if possible
+
+      - [ ] Repulsive energy of oxygen
+
+      - [ ] Check titanium results for the gibbs free energy from anharmonic approximation
+
+***** DONE [#A] Implement Partial occupancy line tension model
+      DEADLINE: <2021-01-28 Thu> SCHEDULED: <2021-01-28 Thu 09:30>
+      :PROPERTIES:
+      :ORDERED:  t
+      :END:
+      :LOGBOOK:
+      CLOCK: [2021-01-28 Thu 17:03]--[2021-01-28 Thu 17:28] =>  0:25
+      CLOCK: [2021-01-28 Thu 16:37]--[2021-01-28 Thu 17:02] =>  0:25
+      CLOCK: [2021-01-28 Thu 15:49]--[2021-01-28 Thu 16:14] =>  0:25
+      CLOCK: [2021-01-28 Thu 14:11]--[2021-01-28 Thu 14:36] =>  0:25
+      CLOCK: [2021-01-28 Thu 11:39]--[2021-01-28 Thu 12:04] =>  0:25
+      CLOCK: [2021-01-28 Thu 10:59]--[2021-01-28 Thu 11:24] =>  0:25
+      CLOCK: [2021-01-28 Thu 10:11]--[2021-01-28 Thu 10:36] =>  0:25
+      CLOCK: [2021-01-27 Wed 17:01]--[2021-01-27 Wed 17:26] =>  0:25
+      CLOCK: [2021-01-27 Wed 16:18]--[2021-01-27 Wed 16:43] =>  0:25
+      CLOCK: [2021-01-27 Wed 15:33]--[2021-01-27 Wed 15:48] =>  0:15
+      CLOCK: [2021-01-27 Wed 15:23]--[2021-01-27 Wed 15:32] =>  0:09
+      CLOCK: [2021-01-27 Wed 11:29]--[2021-01-27 Wed 11:54] =>  0:25
+      CLOCK: [2021-01-27 Wed 10:57]--[2021-01-27 Wed 11:22] =>  0:25
+      CLOCK: [2021-01-27 Wed 10:19]--[2021-01-27 Wed 10:44] =>  0:25
+      CLOCK: [2021-01-27 Wed 09:46]--[2021-01-27 Wed 10:11] =>  0:25
+      CLOCK: [2021-01-26 Tue 13:21]--[2021-01-26 Tue 13:44] =>  0:23
+      CLOCK: [2021-01-26 Tue 13:20]--[2021-01-26 Tue 13:21] =>  0:01
+      CLOCK: [2021-01-26 Tue 13:19]--[2021-01-26 Tue 13:20] =>  0:01
+      CLOCK: [2021-01-26 Tue 11:32]--[2021-01-26 Tue 11:57] =>  0:25
+      CLOCK: [2021-01-26 Tue 11:02]--[2021-01-26 Tue 11:27] =>  0:25
+      CLOCK: [2021-01-26 Tue 10:16]--[2021-01-26 Tue 10:41] =>  0:25
+      CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 10:00] =>  0:21
+      CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 09:39] =>  0:00
+      CLOCK: [2021-01-26 Tue 09:38]--[2021-01-26 Tue 09:38] =>  0:00
+      CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:36] =>  0:00
+      CLOCK: [2021-01-26 Tue 09:35]--[2021-01-26 Tue 09:36] =>  0:01
+      CLOCK: [2021-01-11 Mon 16:51]--[2021-01-11 Mon 17:16] =>  0:25
+      CLOCK: [2021-01-11 Mon 16:21]--[2021-01-11 Mon 16:46] =>  0:25
+      CLOCK: [2021-01-11 Mon 14:36]--[2021-01-11 Mon 14:55] =>  0:19
+      CLOCK: [2021-01-11 Mon 14:30]--[2021-01-11 Mon 14:35] =>  0:05
+      CLOCK: [2021-01-11 Mon 14:30]--[2021-01-11 Mon 14:30] =>  0:00
+      CLOCK: [2021-01-11 Mon 10:46]--[2021-01-11 Mon 10:55] =>  0:09
+      CLOCK: [2021-01-11 Mon 10:30]--[2021-01-11 Mon 10:45] =>  0:15
+      :END:
+
+****** DONE Actions [6/6]
+
+      - [X] Do I just include carbon along the whole dislocation line?
+	Talk to Ivo perhaps about teams and the like
+
+      - [X] Implement the Maxwell-Boltzmann statistics for the concentration.
+
+      - [X]  Include initial summation of concentrations along [5/5]
+	dislocation line.
+	- [X] Constrain total concentration
+	- [X] Make new file which controls the addition of concentration
+          dependence along the dislocation line
+	- [X] Define trap sites for an image:
+	  - These are ones which reside in the plane of the dislocation.
+	  - The solute redistributes in each plane only.
+	  - Does the occupation probability does not "spill over" into
+            other segments.
+	  - Are these just the usual octahedral sites within the line?
+	  - What is the redistribution?
+	    * I assume the redistribution is just the change in
+              concentration from the dislocation moving, so the trap
+              site is in another relative position, therefore the
+              concentration of that particular site is less (think of
+              the spline distance dependence).
+	    * As its intra-planar, then the trap sites depend on the 2d
+              distance from the core position. We know the octahedral
+              positions thankfully.
+	  - We could include the effects of the other sites further from
+            the dislocation also. It would complicate the implementation
+            though, as mappings aren't unique: how can one smoothly
+            transition a site when the hard core does not have a similar
+            distribution of trap sites to the easy core?
+	  - Ivo chooses this latter description, with some reasonable
+            (albeit wrong) assumptions.
+	  - Each core should have all the trap sites from molecular
+            statics described, but then their action should be scaled by
+            the number of sites which "decay" to that position.
+	- [X] Describe paths along the transition between easy and hard
+          core.
+	- [X] Figure out how to circumvent the trap site problem
+	  - From easy to hard there is different mappings of sites.
+	  - Need mapping of all sites such that it is symmetric.
+	  - Can include all sites, but then there is a difference in the
+            range of interactions which are included in the x direction
+            (more than the y direction).
+	  - *Fixed*:
+	    - Will find the many-to-one mappings and
+              multiplicatively scale each of the interactions based on the
+              distance from the initial easy core site.
+	    - Isolated sites will be multiplicatively scaled to zero by
+              the same process.
+	    - This multiplicative action will also modify the energies
+              in the same way.
+
+      - Follow the notes on Ivo's paper [[file:roam/gonginfluencehydrogenplasticity2020.org::#gongInfluenceHydrogenPlasticity2020][The influence of hydrogen on plasticity in pure iron—theory and experiment]]
+      - [X] Why are the dependences not changing with concentration?
+	 They are.
+      - [X] Check that the full temperature dependent concentrations
+	 are giving sensible results.
+      - [X] Solve why Spline is giving zeros for concentration at any distance
+
+****** Notes
+
+      - Making a function such that at a given distance of a solute one
+	can get the McClean isotherm concentration.
+      - Input: distance, Output: concentration
+      - The data fed into the system are the energies from the lorentzian
+	at different distances. These act at formation energies in the
+	equations for the solution of the McClean isotherm.
+
+***** DONE Just look at vacancies and oxygen?
 ** Remarks on tight-binding
 
    - Love it / Loathe it
@@ -83,6 +470,12 @@
      contributions to the total energy.
    - P. W. Anderson's theory on tight-binding. Dismissing it
      initially, but it's the right way to think about solids
+
+
+   - Comment on the state of the art and if machine learning can
+     really give us insights into the electronic structure, or if it
+     just is a good fitting machine with a lack of some physical
+     insight.
 
 * Dislocations in pure metals
 ** Fe
@@ -110,30 +503,6 @@
       calculations.  
 
 ** Ti
-*** TODO Energy dependence and core energy
-    DEADLINE: <2021-02-26 Fri>
-
-**** Think about why a d-canonical model would lead to large spreading? :NOTE:
-     :LOGBOOK:
-     CLOCK: [2020-09-02 Wed 10:46]--[2020-09-02 Wed 10:46] =>  0:00
-     :END:
-   [2020-09-02 Wed 10:46]
-   [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
-
-*** TODO Core Energy difference in tbe - bop
-    DEADLINE: <2021-02-12 Fri>
-
-    - Tiny difference of 0.53 eV which determines the difference
-      between each of the core energies.
-
-*** TODO Calculate gamma surfaces for new model
-    DEADLINE: <2021-02-26 Fri>
-
-    - Planar faults 
-      - Compare to DFT literature of Rodney, Curtin and Tarrat
-      - Compare to other TB models
-	- ICAMS model is rubbish!
-
 *** Notes
 
     How does the orthogonal and canonical d-band model come into
@@ -169,132 +538,6 @@
     - Look at how tight-binding allows us to see the physics by
       breaking down the total energy.
 
-** TODO Defect clusters
-   DEADLINE: <2021-03-26 Fri>
-
-** TODO Binding of oxygen to dislocations if possible
-   DEADLINE: <2021-03-05 Fri>
-
-*** TODO Repulsive energy of oxygen
-    DEADLINE: <2021-03-05 Fri>
-
-*** DONE [#A] Implement Partial occupancy line tension model
-    SCHEDULED: <2021-01-28 Thu 09:30> DEADLINE: <2021-01-28 Thu>
-    :PROPERTIES:
-    :ORDERED:  t
-    :END:
-    :LOGBOOK:
-    CLOCK: [2021-01-28 Thu 17:03]--[2021-01-28 Thu 17:28] =>  0:25
-    CLOCK: [2021-01-28 Thu 16:37]--[2021-01-28 Thu 17:02] =>  0:25
-    CLOCK: [2021-01-28 Thu 15:49]--[2021-01-28 Thu 16:14] =>  0:25
-    CLOCK: [2021-01-28 Thu 14:11]--[2021-01-28 Thu 14:36] =>  0:25
-    CLOCK: [2021-01-28 Thu 11:39]--[2021-01-28 Thu 12:04] =>  0:25
-    CLOCK: [2021-01-28 Thu 10:59]--[2021-01-28 Thu 11:24] =>  0:25
-    CLOCK: [2021-01-28 Thu 10:11]--[2021-01-28 Thu 10:36] =>  0:25
-    CLOCK: [2021-01-27 Wed 17:01]--[2021-01-27 Wed 17:26] =>  0:25
-    CLOCK: [2021-01-27 Wed 16:18]--[2021-01-27 Wed 16:43] =>  0:25
-    CLOCK: [2021-01-27 Wed 15:33]--[2021-01-27 Wed 15:48] =>  0:15
-    CLOCK: [2021-01-27 Wed 15:23]--[2021-01-27 Wed 15:32] =>  0:09
-    CLOCK: [2021-01-27 Wed 11:29]--[2021-01-27 Wed 11:54] =>  0:25
-    CLOCK: [2021-01-27 Wed 10:57]--[2021-01-27 Wed 11:22] =>  0:25
-    CLOCK: [2021-01-27 Wed 10:19]--[2021-01-27 Wed 10:44] =>  0:25
-    CLOCK: [2021-01-27 Wed 09:46]--[2021-01-27 Wed 10:11] =>  0:25
-    CLOCK: [2021-01-26 Tue 13:21]--[2021-01-26 Tue 13:44] =>  0:23
-    CLOCK: [2021-01-26 Tue 13:20]--[2021-01-26 Tue 13:21] =>  0:01
-    CLOCK: [2021-01-26 Tue 13:19]--[2021-01-26 Tue 13:20] =>  0:01
-    CLOCK: [2021-01-26 Tue 11:32]--[2021-01-26 Tue 11:57] =>  0:25
-    CLOCK: [2021-01-26 Tue 11:02]--[2021-01-26 Tue 11:27] =>  0:25
-    CLOCK: [2021-01-26 Tue 10:16]--[2021-01-26 Tue 10:41] =>  0:25
-    CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 10:00] =>  0:21
-    CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 09:39] =>  0:00
-    CLOCK: [2021-01-26 Tue 09:38]--[2021-01-26 Tue 09:38] =>  0:00
-    CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:36] =>  0:00
-    CLOCK: [2021-01-26 Tue 09:35]--[2021-01-26 Tue 09:36] =>  0:01
-    CLOCK: [2021-01-11 Mon 16:51]--[2021-01-11 Mon 17:16] =>  0:25
-    CLOCK: [2021-01-11 Mon 16:21]--[2021-01-11 Mon 16:46] =>  0:25
-    CLOCK: [2021-01-11 Mon 14:36]--[2021-01-11 Mon 14:55] =>  0:19
-    CLOCK: [2021-01-11 Mon 14:30]--[2021-01-11 Mon 14:35] =>  0:05
-    CLOCK: [2021-01-11 Mon 14:30]--[2021-01-11 Mon 14:30] =>  0:00
-    CLOCK: [2021-01-11 Mon 10:46]--[2021-01-11 Mon 10:55] =>  0:09
-    CLOCK: [2021-01-11 Mon 10:30]--[2021-01-11 Mon 10:45] =>  0:15
-    :END:
-
-
-**** TODO Actions [6/6]
-    - [X] Do I just include carbon along the whole dislocation line?
-      Talk to Ivo perhaps about teams and the like
-
-    - [X] Implement the Maxwell-Boltzmann statistics for the concentration.
-
-    - [X]  Include initial summation of concentrations along [5/5]
-      dislocation line.
-      - [X] Constrain total concentration
-      - [X] Make new file which controls the addition of concentration
-        dependence along the dislocation line
-      - [X] Define trap sites for an image:
-	- These are ones which reside in the plane of the dislocation.
-	- The solute redistributes in each plane only.
-	- Does the occupation probability does not "spill over" into
-          other segments.
-	- Are these just the usual octahedral sites within the line?
-	- What is the redistribution?
-	  * I assume the redistribution is just the change in
-            concentration from the dislocation moving, so the trap
-            site is in another relative position, therefore the
-            concentration of that particular site is less (think of
-            the spline distance dependence).
-	  * As its intra-planar, then the trap sites depend on the 2d
-            distance from the core position. We know the octahedral
-            positions thankfully.
-	- We could include the effects of the other sites further from
-          the dislocation also. It would complicate the implementation
-          though, as mappings aren't unique: how can one smoothly
-          transition a site when the hard core does not have a similar
-          distribution of trap sites to the easy core?
-	- Ivo chooses this latter description, with some reasonable
-          (albeit wrong) assumptions.
-	- Each core should have all the trap sites from molecular
-          statics described, but then their action should be scaled by
-          the number of sites which "decay" to that position.
-      - [X] Describe paths along the transition between easy and hard
-        core.
-      - [X] Figure out how to circumvent the trap site problem
-	- From easy to hard there is different mappings of sites.
-	- Need mapping of all sites such that it is symmetric.
-	- Can include all sites, but then there is a difference in the
-          range of interactions which are included in the x direction
-          (more than the y direction).
-	- *Fixed*:
-	  - Will find the many-to-one mappings and
-            multiplicatively scale each of the interactions based on the
-            distance from the initial easy core site.
-	  - Isolated sites will be multiplicatively scaled to zero by
-            the same process.
-	  - This multiplicative action will also modify the energies
-            in the same way.
-
-    - Follow the notes on Ivo's paper [[file:roam/gonginfluencehydrogenplasticity2020.org::#gongInfluenceHydrogenPlasticity2020][The influence of hydrogen on plasticity in pure iron—theory and experiment]]
-    - [X] Why are the dependences not changing with concentration?
-       They are.
-    - [X] Check that the full temperature dependent concentrations
-       are giving sensible results.
-    - [X] Solve why Spline is giving zeros for concentration at any distance
-
-
-**** Notes
-    - Making a function such that at a given distance of a solute one
-      can get the McClean isotherm concentration.
-    - Input: distance, Output: concentration
-    - The data fed into the system are the energies from the lorentzian
-      at different distances. These act at formation energies in the
-      equations for the solution of the McClean isotherm.
-
-   
-** TODO Embedding Calculations
-   SCHEDULED: <2021-02-17 Wed 10:00> DEADLINE: <2021-03-20 Sat>
-
-*** TODO Just look at vacancies and oxygen?
-*** TODO Other Dislocation structures if models don't work?
 ** Surface Energies?
 * Embedding
 * Carbon in Fe
@@ -302,10 +545,71 @@
   - SKF report 
   - Onwards to kMC
 
-** DONE Carbon binding to dislocations
-** TODO Energy dependence with radius - Add data
-   DEADLINE: <2021-02-12 Fri>
+** TODO Fe work [0/6]
+   :PROPERTIES:
+   :COOKIE_DATA: todo
+   :END:
+   <2021-08-13 Fri>--<2021-09-10 Fri>
 
+*** WAITING Defect cluster calculations are ongoing                 :WAITING:
+    SCHEDULED: <2021-08-31 Tue 12:00>
+    :LOGBOOK:
+    CLOCK: [2021-08-24 Tue 15:33]--[2021-08-24 Tue 15:44] =>  0:11
+    :END:
+    - State "WAITING"    from "TODO"       [2021-08-13 Fri 16:29] \\
+      Defect cluster relaxations for Fe-C waiting on onyx
+
+    - <2021-08-23 Mon>
+      - Currently relaxing
+        RESUME_0_site_final_output_single_C_3__6_6_6__fe_bcc on onyx.
+
+    - <2021-08-24 Tue>
+      - Still relaxing C_3 666 site.
+      - Check if relaxation is sufficient and what the positions are
+        like.
+*** TODO Find out why diffusion calculations are not converging.
+*** WAITING Check phonon approximation for the free energy is actually viable :WAITING:
+    - State "WAITING"    from "TODO"       [2021-08-24 Tue 15:47] \\
+      Running full calculation for the final image in the cluster
+      calculation to check that the free energies and the change in them is
+      comparable. I will have to do this for another cell too.
+    - It seems that one would be missing out on some normal modes
+      doing this.
+    - We restrict the collective lattice waves within a particular region
+    - Furthermore, the calculation of the dynamical matrix has the
+      assumption that there is periodicity in all three
+      directions.
+    - Extracting the force from a subset seems unreasonable. It may
+      think that the force from one displacement in the original
+      unit cell, would cause a force somewhere else, as there is a
+      compressive stress always on the subset of the lattice.
+    - On the other hand, we expect that the difference in the
+      energies would be reasonably approximated as then it is the
+      difference in the local atomic environment which would give
+      the energies.
+*** TODO Check which relaxations for the phonons have been done under SC
+*** TODO Forst analysis
+
+*** WAITING Prepare 5 image diffusion neb calculations              :WAITING:
+    - State "WAITING"    from "TODO"       [2021-06-04 Fri 11:18] \\
+      Waiting for the diffusion barriers to converge.
+      - It seems that using the spring term of 0.5 is quite large,
+	perhaps it makes sense to change it to something smaller.
+    :LOGBOOK:
+    CLOCK: [2021-05-25 Tue 10:38]--[2021-05-25 Tue 11:03] =>  0:25
+    CLOCK: [2021-05-24 Mon 11:05]--[2021-05-24 Mon 11:30] =>  0:25
+    CLOCK: [2021-05-24 Mon 09:56]--[2021-05-24 Mon 09:57] =>  0:01
+    :END:
+    [2021-05-24 Mon 09:56]
+    - Calculations are going well for
+      - E9-E9
+      - H3-H4
+
+
+       Some spring constants are too
+      low. Should be around 0.5.
+
+** DONE Carbon binding to dislocations
 ** DONE Concentration Analysis - Add in repulsive energy
    DEADLINE: <2020-09-25 Fri>
 
@@ -332,5 +636,4 @@
 * Line Tension modelling
 * Wish-list
 
-  - Line tension models maybe? 
-
+  - Line tension models maybe?

@@ -1,0 +1,24 @@
+#+TITLE: Treglia1999: Alloy surfaces: segregation, reconstruction and phase transitions
+#+ROAM_KEY: cite:Treglia1999
+- tags ::
+- keywords ::
+
+* Alloy surfaces: segregation, reconstruction and phase transitions
+  :PROPERTIES:
+  :Custom_ID: Treglia1999
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S092702569900004X
+  :AUTHOR: Tréglia, G., Legrand, B., Ducastelle, F., Saúl, A., Gallis, C., Meunier, I., Mottet, C., …
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/Y2PGG7X2/Tréglia et al. - 1999 - Alloy surfaces segregation, reconstruction and ph.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+   Focuses on _surface segregation_, at thermodynamical equilibrium.
+   Two competitive interactions:
+   - between surface and bulk interactions (surface energy vs bulk
+     alloying interactions)
+   - between these chemical forces and the atomic size-mismatch.
+
+     Derived from [[file:2021-03-03--11-13-35--tight_binding.org][tight-binding]]. We can get realistic energetic models
+     such as monte-carlo simulations etc5D.
+** Notes

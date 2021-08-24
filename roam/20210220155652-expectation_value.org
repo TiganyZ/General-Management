@@ -1,0 +1,7 @@
+#+title: Expectation Value
+
+- Expectation value is $\rangle \hat{A} \langle =
+  \int_{\text{all space}} \Psi A \Psi*$.
+- Time dependency is *cancelled out* due to the multiplication of the
+  complex conjugate, given the fact that time dependency will be a
+  complex exponential.

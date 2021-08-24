@@ -1,0 +1,85 @@
+#+TITLE: Finding happiness and saving the world through electronic-structure theory
+
+* Notes
+
+  - Is the [[file:20210225120545-polarisation.org][polarisation]] of a periodic solid bulk quantity, and how
+    should it be defined?
+
+  - In a molecule, no ambiquity
+  - In periodic solide, have dipole in each cell, therefore can do
+    dipole per unit volume $ed/V$.
+  - But we have many choices for the unit cell: polarization can point
+    in a different direction $-ed/V$.
+  - /It gets worse/: centrosymmetric 1d chain.
+  - +    -    +    -
+  - No zero polarization, but can have polarizations basically for
+    anything
+
+
+** Key result
+   - Polarization of a periodic insulating solid is a bulk property
+     and is multivalued.
+   - $P = P_0 + nP_q * P_q = eR/V*$
+   - Centro symmetric insulating solids have centrosymmetric
+     polarization lattices that contain either zero or P_q / 2
+   - Differences between polarisations the p
+   - /A beginners guide to the moder theory of polarization/
+   - Can find videos on youtube.
+
+
+** Perovskite structure: multiferroic bismuth ferrite ,BiFeO3
+   - Iron iron at centre of complex of oxygens and they have magnetic
+     moments.
+   - Two cells which are linked by opposite direction spins.
+   - Has magnetic ordering at high temperatures.
+   - There is a spontaneous ferroelectric polarisation
+   - Surface charge associated with ferroelectricity.
+   - Charged surface (such as thin film), is bad news, as the
+     polarisation may be surpressed , it can change to be segmented
+     etc
+   - As a result of the need to screen the surface charge, one can
+     find a low energy P=0 state?
+
+
+   - Lanthanum ferrite is a trivalent ion
+   - Sandwich BiFeO3 with LaFeO3
+   - Two bismuths go up and two go down going along line
+   - Stabilisation of a meta-stable antiferroelectric phase.
+   - Electric field destabliizes the new phase in teh
+     heterostructure.
+   - Can measure antiferroelectric hysteresis.
+
+   - Therefore can /save the world/ through electronic structure.
+   - Antiferroelectric materialcs can by energy storage materials.
+
+   - In centrocymetric form the ploarization lattice contains the half
+     quantum: +e -e +e layers
+   - $\pm ea/2V$
+   - By accident the size of the half quantum is equal to the
+     spontaneous polarisation.
+   - We can actually have a polarization of 0!
+   - This means that the /surface charge/ compensates.
+   - Size of surface charge from the half quantum is equal to the
+     spontaneous polarisation.
+   - Spontaneous polarisation is /opposite/ to the polarisation
+     orientation to make polarisation of zero.
+   - can make very unhappy surfaces where the valence and conduction
+     bands are moved due the the electric field if we do the
+     opposite.
+   - On charge neutral there is a adsorption.
+   - On unhappy surface there is dissociation.
+   - Therefore we can go from dissociating to adsorbing water through
+     changing the surfaces.
+
+
+
+
+
+* How to save the world
+
+  CHOOSE ONE OF THE SUSTAINABLE DEVELOPMENT GOALS TO SAVE THE WORLD.
+
+  Clean water and sanitation
+  Affordable and clean energy
+  Climate action
+  Life below water.

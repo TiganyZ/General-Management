@@ -1,0 +1,25 @@
+#+TITLE: Casillas-Trujillo2020: Screw dislocation core structure in the paramagnetic state of bcc iron from first-principles calculations
+#+ROAM_KEY: cite:Casillas-Trujillo2020
+- tags ::
+- keywords ::
+
+* Screw dislocation core structure in the paramagnetic state of bcc iron from first-principles calculations
+  :PROPERTIES:
+  :Custom_ID: Casillas-Trujillo2020
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.102.094420
+  :AUTHOR: Casillas-Trujillo, L., Gambino, D., Ventelon, L., & Alling, B.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/D2ENIYZF/Casillas-Trujillo et al. - 2020 - Screw dislocation core structure in the paramagnet.pdf
+  :NOTER_PAGE:
+  :END:
+
+  - Ferromagnetism actually only relevent for the 0\deg K iron.
+  - Changes in the magnetic state can lead to modifications in the
+    structure of the core and affect dislocation mobility.
+  - *Paramagnetic* state of the 1/2<111> screw core, using
+    _noncollinear disordered local moment approximation_
+  - By averaging the energy of several disordered magnetic
+    configurations, we obtain an energy diffreence between the easy
+    and hard-core configurations.
+  - *Lower energy difference* between the cores actually found.
+  - Temperature-dependent dislocation-solute interactions actually
+    might be affected.

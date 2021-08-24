@@ -1,0 +1,11 @@
+#+TITLE: zero-point energy
+* Summary :SUMMARY:
+  The zero-point energy is the energy available in the ground-state of
+  a quantum system.
+
+  Generally it refers to the energy in the ground state of a quantum harmonic oscillator
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-04 Thu 14:35]--[2021-03-04 Thu 14:41] =>  0:06
+  :END:

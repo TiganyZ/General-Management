@@ -1,0 +1,14 @@
+#+TITLE: dislocation intersection
+* Summary :SUMMARY:
+  Dislocations which intersect will generate [[file:2021-03-02--17-36-56--jogs.org][jogs]]. This causes
+  generation of dislocations.
+
+  Each dislocation will gain a segment equal to a [[file:20210105180355-burgers_vector.org][Burgers Vector]] on
+  each dislocation.
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-02 Tue 17:41]--[2021-03-02 Tue 17:48] =>  0:07
+  CLOCK: [2021-03-02 Tue 17:36]--[2021-03-02 Tue 17:36] =>  0:00
+  :END:

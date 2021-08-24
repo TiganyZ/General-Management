@@ -1,0 +1,16 @@
+#+TITLE: Li2016: PEXSI-\$Sigma\$: A Green's function embedding method for Kohn-Sham density functional theory
+#+ROAM_KEY: cite:Li2016
+- tags ::
+- keywords :: Mathematics - Numerical Analysis,Physics - Chemical Physics,Physics - Computational Physics
+
+* PEXSI-\$Sigma\$: A Green's function embedding method for Kohn-Sham density functional theory
+  :PROPERTIES:
+  :Custom_ID: Li2016
+  :URL: http://arxiv.org/abs/1606.00515
+  :AUTHOR: Li, X., Lin, L., & Lu, J.
+  :NOTER_DOCUMENT: ~/Zotero/storage/MPEARTVB/Li et al. - 2016 - PEXSI-$Sigma$ A Green's function embedding metho.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

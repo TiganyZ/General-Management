@@ -1,0 +1,44 @@
+#+TITLE: harmonic approximation
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-01 Thu 14:48]--[2021-07-01 Thu 15:04] =>  0:16
+  CLOCK: [2021-07-01 Thu 14:42]--[2021-07-01 Thu 14:47] =>  0:05
+  :END:
+
+The harmonic approximation in [[file:2021-07-01--13-47-14--lattice_dynamics.org][lattice dynamics]] is a method by which we
+assume that we can approximate the the total energy of a crystal,
+displaced from equliibrium, by a Taylor expansion about the
+equilibrium position $\hat{\mathbf{r}}$. Due to the explicit
+assumption that the system is at equilibrium, the contribution to the
+total energy comes mainly from the terms quadratic in
+$\mathbf{r}$. The harmonic approximation explictly ignores the higher
+order terms.
+
+
+This is all taken from the thesis [[file:vasileiadis.org][Vasileiadis: Calculation of the free
+energy of crystalline solids]].
+
+
+\begin{align*}
+U(\mathbf{r}) = U(\hat{\mathbf{r}})
+&+
+\sum_{\mathbf{I} \in \mathbf{L}}
+\sum^{Z}_{l}
+\sum^{N_I}_i (\mathbf{r}_{\mathbf{I}li} - \hat{\mathbf{r}}_{\mathbf{I}li})^T
+\frac{\partial U}{\partial
+\mathbf{r}_{\mathbf{I}li}} \Bigr|_{\hat{\mathbf{r}}} \\
+&+
+\frac{1}{2}
+\sum_{\mathbf{I} \in \mathbf{L}}
+\sum^{Z}_{l}
+\sum^{N_I}_i
+\sum_{\mathbf{I}^{'} \in \mathbf{L}}
+\sum^{Z}_{l^{'}}
+\sum^{N_{I^{'}}}_{i^{'}}
+(\mathbf{r}_{\mathbf{I}li} - \hat{\mathbf{r}}_{\mathbf{I}li})^T \cdot \frac{\partial^2 U}{\partial
+\mathbf{r}_{\mathbf{I}li}\mathbf{r}_{\mathbf{I^{'}}l^{'}i^{'}}} \Bigr|_{\hat{\mathbf{r}}} \cdot
+(\mathbf{r}_{\mathbf{I^{'}}l^{'}i^{'}} - \hat{\mathbf{r}}_{\mathbf{I^{'}}l^{'}i^{'}}) \\
+&+ \text{H.O.T.}
+\end{align*}

@@ -1,0 +1,17 @@
+#+TITLE: line-tension model
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-01 Thu 16:25]--[2021-07-01 Thu 16:25] =>  0:00
+  CLOCK: [2021-07-01 Thu 16:19]--[2021-07-01 Thu 16:23] =>  0:04
+  :END:
+
+A line tension model of a dislocation considers a dislocation as a
+discretised line which lives in a substrate potential, which is called
+the Peierls potential. Nearest-neighbour points on the line experience
+spring forces.
+
+The line tension model has been used to find [[file:2021-03-04--12-29-07--kink_pair_formation_enthalpy.org][kink-pair formation
+enthalpies]] by using [[file:2021-03-04--14-44-41--transition_state_theory.org][transition-state theory]] where saddle point
+searching algorithms, such as the [[file:2021-07-01--15-23-53--nudged_elastic_band.org][Nudged elastic band]].

@@ -1,0 +1,11 @@
+#+TITLE: Self-consistency
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 18:28]--[2021-03-06 Sat 18:29] =>  0:01
+  :END:
+
+  - Need self-consistency for the [[file:2021-02-25--22-45-30--hartree_fock_approximation.org][Hartree-Fock Approximation]], as the
+    orbitals depend on the other equations.
+  - Relate this to local charge neutrality.

@@ -1,0 +1,16 @@
+#+TITLE: Allan1976: Vacancies in transition metals: Formation energy and formation volume
+#+ROAM_KEY: cite:Allan1976
+- tags ::
+- keywords ::
+
+* Vacancies in transition metals: Formation energy and formation volume
+  :PROPERTIES:
+  :Custom_ID: Allan1976
+  :URL: https://www.sciencedirect.com/science/article/pii/0022369776900081
+  :AUTHOR: Allan, G., & Lannoo, M.
+  :NOTER_DOCUMENT: ~/Zotero/storage/85DNUZS8/Allan and Lannoo - 1976 - Vacancies in transition metals Formation energy a.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

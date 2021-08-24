@@ -1,0 +1,11 @@
+#+TITLE: thermal expansion
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-23 Fri 12:53]--[2021-07-23 Fri 12:56] =>  0:03
+  :END:
+
+Thermal expansion of a material is its ability to expand when
+heated. One can find the thermal expansion for a lattice by accounting
+for anharmonic effects.

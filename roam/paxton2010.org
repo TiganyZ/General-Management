@@ -1,0 +1,16 @@
+#+TITLE: Paxton2010: Electronic structure and total energy of interstitial hydrogen in iron: Tight-binding models
+#+ROAM_KEY: cite:Paxton2010
+- tags ::
+- keywords ::
+
+* Electronic structure and total energy of interstitial hydrogen in iron: Tight-binding models
+  :PROPERTIES:
+  :Custom_ID: Paxton2010
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.82.235125
+  :AUTHOR: Paxton, A. T., & Elsässer, C.
+  :NOTER_DOCUMENT: ~/Zotero/storage/9A8ZZN4A/Paxton and Elsässer - 2010 - Electronic structure and total energy of interstit.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

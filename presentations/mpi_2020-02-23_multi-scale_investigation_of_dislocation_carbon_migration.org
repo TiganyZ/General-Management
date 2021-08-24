@@ -7,6 +7,7 @@
 #+REVEAL_ROOT: file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js
 # /home/tigany/software/reveal.js
 #+LATEX_HEADER: \usepackage[backend=biber,style=abbrv]{biblatex}
+#+LATEX_HEADER: \usepackage{graphicx}
 #+LATEX_HEADER: \addbibresource{../bibliography/zoteroLibrary.bib}
 #+BIBLIOGRAPHY: ../bibliography/zoteroLibrary.bib
 
@@ -32,16 +33,25 @@
 * Introduction
 ** Introduction
    - Rolling contact on bearing raceways causes /degradation in subsurface/ microstructure.
-   - Failure by Rolling Contact Fatigue (RCF).
+   - Plays role in Rolling Contact Fatigue (RCF).
    - Degradation arises in form of /Dark Etching Regions/ (DERs).
    - DERs characterised by development of ferrite and carbide features with
      patches of unaltered martensitic matrix.
+
+   #+REVEAL_HTML: <div class="column" style="float:left; width: 30%">
+   #+ATTR_HTML: :width 90%
+   [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/skf_ball_bearing.png]]
+   #+REVEAL_HTML: </div>
+   #+REVEAL_HTML: <div class="column" style="float:right; width: 70%">
    #+NAME: process
-   #+ATTR_HTML: :width 80%
+   #+ATTR_HTML: :width 100%
    [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/der_picture_fu.png]]
+   #+ATTR_HTML: :align left
+   ↑ Circumferential section showing DER cite:Fu2017.
+   #+ATTR_HTML: :align left
+   ← Cross-section of ball bearing.
+   #+REVEAL_HTML: </div>
 
-
-   Circumferential section showing DER cite:Fu2017.
 
 ** Features of DER
    #+REVEAL_HTML: <div class="column" style="float:left; width: 48%">
@@ -190,6 +200,23 @@
  #    #+REVEAL_HTML: </div>
 
 * Atomistic results
+** Easy and hard core screw dislocations
+   #+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+   - Two types of dislocation core found in bcc iron.
+   - Ground state dislocation core in pure iron is _easy core_.
+   - The _hard core_ is a higher energy, unstable state.
+   # - C-dislocation binding energies and C-C repulsive energies can be used to find the
+   #   concentration of carbon on dislocation line at given T.
+     #+REVEAL_HTML: </div>
+
+   #+REVEAL_HTML: <div class="column" style="float:right; width: 55%">
+   #+ATTR_HTML: :width 100%
+   [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/Images/diagram_of_easy-hard_displacement.png]]
+   Diagram of displaced atoms (grey) compared to perfect lattice (white) for both easy (a) and hard (b)
+   dislocation cores cite:Itakura2012.
+   #+REVEAL_HTML: </div>
+
+
 ** Core reconstruction
    #+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
    - C transforms the easy screw core, the ground-state core structure in pure Fe, to
@@ -244,7 +271,7 @@
 ** Carbon concentration on dislocation line
    - We can calculate the carbon concentration on dislocation line,
      $C_d$, where carbon atoms are at equilibrium with the matrix.
-   - We use nominal carbon concentration $vC_{\text{nom}}$, to link to the carbon
+   - We link the nominal concentration of carbon atoms per iron atom $C_{\text{nom}}$, to the carbon
      concentration in the matrix, $C_{\text{bulk}}$.
    - Included the effect of the C-C first-neighbour repulsive energy
      of carbon within hard-core prismatic site, with atomistics.
@@ -278,7 +305,7 @@
 
 
 ** What does this tell us?
-   - _All_ carbon is segregated to dislocations with carbon around normal
+   - _All_ dislocations are decorated with carbon around normal
      operating temperature (320\deg K), carbon concentrations and
      dislocation densities.
    - We predict that _all dislocations are reconstructed to the hard core_
@@ -289,15 +316,14 @@
 ** Line-tension model of dislocation
 
    \begin{equation}
-   E_{\text{LT}} = \underbrace{
+ {\displaystyle E_{\text{LT}} = \underbrace{
    \underbrace{\frac{K}{2} \sum_j (\vec{P}_j -
    \vec{P}_{j+1} )^2}_{\text{Spring term}}
    + \underbrace{\sum_j \Delta E_{\text{P}}  (\vec{P}_j)}_{\text{Peierls Potential}}  -
      \underbrace{\sum_{j,k} E_{\text{C}}
      (|\vec{P}_j-\vec{P}_k^{\text{C}}|)}_{\text{C Interaction}}}_{\textbf{From Atomistics}}
 + (\sigma
-     \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j,
-v
+     \cdot \vec{b}) \times \vec{l} \cdot \vec{P}_j }
      \end{equation}
        #+REVEAL_HTML: <div class="column" style="float:left; width: 60%">
       - We can obtain the kink-pair formation enthalpy as a function of
@@ -347,13 +373,13 @@ v
     dislocation-assisted carbon migration.
   - Atomistics finds the _hard screw core_ to be _ground-state_
     due to carbon interaction.
-  - _*All* carbon segregated to dislocations_, during martensite
+  - _*All* dislocations are decorated with carbon_, during martensite
     → ferrite transition, due to large binding energy of C.
   - Therefore, initial assumption of */dislocation-driven carbon migration/* is correct.
-  - _All dislocations_, even in _high-purity iron_, are _pinned with
+  - _Dislocations_, even in _high-purity iron_, are _pinned with
     carbon in a hard core configuration_ (up to 400\deg K).
   - Line-tension model shows amount by which _carbon decreases kink-pair formation
-    enthalpy_ barrier if ahead of dislocation. Drag if behind.
+    enthalpy_ if ahead of dislocation. Drag if behind.
   - Further work, through SCkMC model will ascertain regimes in which
     dislocation-assisted carbon migration is valid.
 
@@ -364,3 +390,10 @@ v
 # printbibliography:../bibliography/zoteroLibrary.bib
 bibliographystyle:abbrv
 bibliography:../bibliography/zoteroLibrary.bib
+
+#  LocalWords:  usepackage backend biber abbrv biblatex addbibresource toc solarized num JS src vid
+#  LocalWords:  js async splugins html microstructure RCF DERs ferrite martensitic ATTR DER Fu WEBs
+#  LocalWords:  microbands Lenticular EBSD Misorientation KAM Smelova SEM Nital EDX br pre DFT px
+#  LocalWords:  atomistic SCkMC Katzarov Cottrell lenticular nanocrystalline environemnt img nom
+#  LocalWords:  dislocaton Peierls autoplay Ventelon atomistics frac oct conc disl underbrace vec
+#  LocalWords:  textbf cdot enthalpy Kohler lorentzian Itakura enthalpies kMC bibliographystyle

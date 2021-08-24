@@ -1,0 +1,16 @@
+#+TITLE: Ducastelle1970: Susceptibilite magnetique des nitrures mixtes de vanadium et de chrome
+#+ROAM_KEY: cite:Ducastelle1970
+- tags ::
+- keywords ::
+
+* Susceptibilite magnetique des nitrures mixtes de vanadium et de chrome
+  :PROPERTIES:
+  :Custom_ID: Ducastelle1970
+  :URL: https://www.sciencedirect.com/science/article/pii/0375960170906006
+  :AUTHOR: Ducastelle, F., & Costa, P.
+  :NOTER_DOCUMENT: ~/Zotero/storage/6A9EJUWS/Ducastelle and Costa - 1970 - Susceptibilite magnetique des nitrures mixtes de v.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

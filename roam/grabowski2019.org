@@ -1,0 +1,16 @@
+#+TITLE: Grabowski2019: Ab initio vibrational free energies including anharmonicity for multicomponent alloys
+#+ROAM_KEY: cite:Grabowski2019
+- tags ::
+- keywords ::
+
+* Ab initio vibrational free energies including anharmonicity for multicomponent alloys
+  :PROPERTIES:
+  :Custom_ID: Grabowski2019
+  :URL: http://www.nature.com/articles/s41524-019-0218-8
+  :AUTHOR: Grabowski, B., Ikeda, Y., Srinivasan, P., Körmann, F., Freysoldt, C., Duff, A. I., Shapeev, A., …
+  :NOTER_DOCUMENT: ~/Zotero/storage/T28M6E27/Grabowski et al. - 2019 - Ab initio vibrational free energies including anha.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

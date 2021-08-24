@@ -1,0 +1,12 @@
+#+TITLE: Wannier interpolation for shift current
+
+- In tight binding we have matrix elements like
+  $\bra{R_{\text{a}}m } \hat{H} \ket{R_{\text{b}}n }$
+- In Wannier interpololation, we have both elements like
+  $\bra{R_{\text{a}}m } \hat{H} \ket{R_{\text{b}}n }$, but also like
+    $\bra{R_{\text{a}}m } \hat{r} \ket{R_{\text{b}}n }$
+- So in tight-binding, the matrix elements with respect to the
+  position operator is diagonal, the expectation value of the position
+  just corresponds to the point where the orbital is situated.
+- But in Wannier we have the full position representation of the
+  wavefunction?

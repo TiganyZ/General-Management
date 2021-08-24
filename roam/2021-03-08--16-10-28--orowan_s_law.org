@@ -1,0 +1,20 @@
+#+TITLE: Orowan's Law
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-08 Mon 16:10]--[2021-03-08 Mon 16:15] =>  0:05
+  :END:
+
+  \[ \dot{\epsilon} = \rho b \nu = \rho b a \Gamma \]
+
+  - $\dot{\epsilon}$ is the strain rate
+  - $\rho$ is the dislocation density
+  - $b$ is the burgers vector
+  - $v$ is the dislocation velocity
+
+  - The second equality is for use of [[file:2021-03-04--14-44-41--transition_state_theory.org][transition-state theory]], using
+    the quantum regime.
+
+  - $\Gamma$ is the transition rate over the kink-pair barrier
+  - $a$ I assume is the lattice vector.

@@ -1,0 +1,16 @@
+#+TITLE: Kim2013: Ballistic Spreading of Entanglement in a Diffusive Nonintegrable System
+#+ROAM_KEY: cite:Kim2013
+- tags ::
+- keywords ::
+
+* Ballistic Spreading of Entanglement in a Diffusive Nonintegrable System
+  :PROPERTIES:
+  :Custom_ID: Kim2013
+  :URL: https://link.aps.org/doi/10.1103/PhysRevLett.111.127205
+  :AUTHOR: Kim, H., & Huse, D. A.
+  :NOTER_DOCUMENT: ~/Zotero/storage/QI3APKK3/Kim and Huse - 2013 - Ballistic Spreading of Entanglement in a Diffusive.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

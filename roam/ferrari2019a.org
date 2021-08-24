@@ -1,0 +1,25 @@
+#+TITLE: Ferrari2019a: Phase transitions in titanium with an analytic bond-order potential
+#+ROAM_KEY: cite:Ferrari2019a
+- tags ::
+- keywords :: Condensed Matter - Materials Science
+
+* Phase transitions in titanium with an analytic bond-order potential
+  :PROPERTIES:
+  :Custom_ID: Ferrari2019a
+  :URL: http://arxiv.org/abs/1905.01197
+  :AUTHOR: Ferrari, A., Schröder, M., Lysogorskiy, Y., Rogal, J., Mrovec, M., & Drautz, R.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/8K5MFYYT/Ferrari et al. - 2019 - Phase transitions in titanium with an analytic bon.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+   Here an [[file:2021-03-03--11-03-38--analytic_bop.org][analytic bop]] model is created by fitting an initial
+   tight-binding model and adding an [[file:2021-03-03--11-58-49--embedding_potential.org][embedding potential]]. This was
+   used to mimic the contribution of missing s electrons and sd
+   hybridisation to the cohesive energy.
+
+   It can account for phase transitions.
+
+   The binding energy here 
+
+*** Notes

@@ -1,0 +1,17 @@
+#+TITLE: Lanczos Algorithm
+* Summary :SUMMARY:
+  This is a method which takes a Hermitian matrix tridiagonalises it,
+  by recasting it into a new basis.
+
+  We have an arbitrary starting basis vector) and then subsequently
+  orthogonalise.
+
+  Faster to diagonalise, as the matrix is sparse and we can use
+  tridiagonalisation algorithms to find the eigenvalues.
+
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 11:18]--[2021-03-03 Wed 11:32] =>  0:14
+  :END:

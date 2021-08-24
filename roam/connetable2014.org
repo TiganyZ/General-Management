@@ -1,0 +1,16 @@
+#+TITLE: Connetable2014: DFT study of the solubility of hydrogen and carbon in Ni3Nb-D0a and Ni3Nb-D022 systems
+#+ROAM_KEY: cite:Connetable2014
+- tags ::
+- keywords ::
+
+* DFT study of the solubility of hydrogen and carbon in Ni3Nb-D0a and Ni3Nb-D022 systems
+  :PROPERTIES:
+  :Custom_ID: Connetable2014
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S092583881401007X
+  :AUTHOR: Connétable, D., Galliano, F., Odemer, G., Blanc, C., & Andrieu, É.
+  :NOTER_DOCUMENT: ~/Zotero/storage/7KV8AV4F/Connétable et al. - 2014 - DFT study of the solubility of hydrogen and carbon.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

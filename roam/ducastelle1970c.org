@@ -1,0 +1,16 @@
+#+TITLE: Ducastelle1970c: Modules élastiques des métaux de transition
+#+ROAM_KEY: cite:Ducastelle1970c
+- tags ::
+- keywords ::
+
+* Modules élastiques des métaux de transition
+  :PROPERTIES:
+  :Custom_ID: Ducastelle1970c
+  :URL: http://www.edpsciences.org/10.1051/jphys:019700031011-120105500
+  :AUTHOR: Ducastelle, F.
+  :NOTER_DOCUMENT: ~/Zotero/storage/4ZNMGIEM/Ducastelle - 1970 - Modules élastiques des métaux de transition.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

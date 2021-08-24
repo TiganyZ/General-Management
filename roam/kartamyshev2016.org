@@ -1,0 +1,16 @@
+#+TITLE: Kartamyshev2016: The interaction between light impurities and vacancies in titanium and aluminum metals: A DFT study
+#+ROAM_KEY: cite:Kartamyshev2016
+- tags ::
+- keywords ::
+
+* The interaction between light impurities and vacancies in titanium and aluminum metals: A DFT study
+  :PROPERTIES:
+  :Custom_ID: Kartamyshev2016
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S2405722316300548
+  :AUTHOR: Kartamyshev, A. I., Vo, D. D., & Lipnitskii, A. G.
+  :NOTER_DOCUMENT: ~/Zotero/storage/FMKVELZI/Kartamyshev et al. - 2016 - The interaction between light impurities and vacan.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

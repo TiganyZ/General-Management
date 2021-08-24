@@ -149,7 +149,7 @@ All frequencies are in THz
 ** $\omega$ phase
 #+NAME: omega_phonon_band_spectrum
 #+ATTR_HTML: :width 90% :style position:relative;top:50px;left:-200px;z_index:1;
-[[# file:~/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png]]
+[[file:~/Documents/docs/Management/Images/omega-band_dos_2019-03-21-1.png]]
 
 #+ATTR_REVEAL: :frag fade-in
 #+ATTR_HTML: :width 32% :style position:absolute;top:285px;left:450px;z_index:2;

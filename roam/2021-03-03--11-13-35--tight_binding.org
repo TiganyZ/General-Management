@@ -1,0 +1,12 @@
+#+TITLE: tight-binding
+* Summary :SUMMARY:
+  Tight-binding is a method of electronic strucure calculation. It
+  assumes a [[file:2021-03-03--11-06-24--linear_combination_of_atomic_orbitals.org][Linear Combination of Atomic Orbitals]] basis. Tight-binding
+  describes the matrix elements (overlap integrals / bond integrals) of the
+  hamiltonian, from which we can populate the Hamiltonian.
+
+  To solve, we can diagonalise the matrix, such that we obtain the
+  eigenvalues, where the sum of the eigenvalues is the electronic
+  energy.
+* Questions :QUESTIONS:
+* Notes

@@ -1,0 +1,11 @@
+#+TITLE: HKS functional
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-07 Wed 17:07]--[2021-07-07 Wed 17:08] =>  0:01
+  :END:
+
+
+  The HKS functional is the result of perturbation theory applied to
+  the HKS functional of [[file:2021-03-06--19-05-39--density_functional_theory.org][Density Functional Theory]].

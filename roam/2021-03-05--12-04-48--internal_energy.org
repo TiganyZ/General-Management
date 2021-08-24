@@ -1,0 +1,12 @@
+#+TITLE: Internal Energy
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 12:04]--[2021-03-05 Fri 12:05] =>  0:01
+  :END:
+     * The capacity to do work and release heat.
+     * The energy contained withing the system excluding kinetic energy.
+     * Equation: \[ U = \int ( t\text{d}S -p\text{d}V + \sum_{i}\mu_{i}\text{d}N_{i} ) \]
+     * $\Delta U$ is the total energy added to the system.
+     * Natural variables: $\{ S, V, \{N_{i}\} \}$

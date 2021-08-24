@@ -1,0 +1,60 @@
+#+TITLE: Chiesa2009: Free energy of a ⟨ 110 ⟩ dumbbell interstitial defect in bcc Fe: Harmonic and anharmonic contributions
+#+ROAM_KEY: cite:Chiesa2009
+- tags ::
+- keywords ::
+
+* Free energy of a ⟨ 110 ⟩ dumbbell interstitial defect in bcc Fe: Harmonic and anharmonic contributions
+  :PROPERTIES:
+  :Custom_ID: Chiesa2009
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.79.214109
+  :AUTHOR: Chiesa, S., Derlet, P. M., & Dudarev, S. L.
+  :NOTER_DOCUMENT: ~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+** Information about how a defect behaves at finite T comes from vibrational properties
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::1++7.05]]
+   :END:
+** Generally used the [[file:2021-07-01--13-42-08--harmonic_approximation.org][harmonic approximation]]
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::1++7.05]]
+   :END:
+** Analysis of the low frequency modes can give information of possible transition pathways
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::1++7.05]]
+   :END:
+** For a perfect crystal containing inversion symmetry, third-order anharmonic contributions cancel
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::1++7.05]]
+   :END:
+** At higher temperatures, where atomic vibrations deviate away, a non-negligible anharmonic contribution to the vibrational entropy will occur
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::1++7.05]]
+   :END:
+** In the case of interstitials, little is known about the magnitude of the anharmonic contribution to the free energy
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::2++0.00]]
+   :END:
+** Estimating the free energy becomes problematic when defect diffusion occurs at a time scale comparable to the characteristic vibrational period of the defect
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::2++0.00]]
+   :END:
+** In this regime, where a diffusion event (hop) may no longer be considered a rare event, the defect cannot reach local thermal equilibrium before the next migration and the concept of a harmonic ground state becomes meaningless
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::2++0.46]]
+   :END:
+** When this occurs transition state theory does not apply and people use the [[file:2021-07-01--14-34-28--frenkel_kontorova_model.org][Frenkel Kontorova model]]
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::2++0.46]]
+   :END:
+
+   - Not really sure how people use the Frenkel kontorova model here
+     for say crowdions.
+** Uses EAM potentials of Mendelev and Dudarev which reproduces nondegenerate screw core
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/FBM8JIMY/Chiesa et al. - 2009 - Free energy of a ⟨ 110 ⟩ dumbbell interstitial def.pdf::2++7.05]]
+   :END:
+   [[file:dudarev2005.org][Dudarev2005: A `magnetic' interatomic potential for molecular dynamics simulations]]

@@ -1,0 +1,59 @@
+#+TITLE: Spitzig: The role of internal and effective stresses in the plastic flow of iron single crystals
+#+ROAM_KEY: cite:Spitzig
+- tags ::
+- keywords ::
+
+* The role of internal and effective stresses in the plastic flow of iron single crystals
+  :PROPERTIES:
+  :Custom_ID: Spitzig
+  :URL: 
+  :AUTHOR: Spitzig, W. A., & Keh, A. S.
+  :NOTER_DOCUMENT: /home/tigany/Documents/docs/Management/papers/spitzig-1970.pdf
+  :NOTER_PAGE: 
+  :END:
+
+
+  
+  - It seems that one may be able to get the actual kink-pair
+    formation enthalpy by the following relations:
+
+  - \[ \tau = \tau^* + \tau_i \]
+  - $\tau^*$ component (effective stress) is assumed from short-range
+    obstacles to dislocation motion:
+    - Forest dislocations
+    - Impurity atoms
+    - Peierls stress
+
+  - \[ \tau^* = 1/V^* [ \Delta H_0 + k_{\text{B}}T \text{ln} (l^*
+    \dot{\varepsilon} / (\rho_m A \mathbf{b} \nu^*) )] \]
+
+  - [[file:2021-03-08--16-10-28--orowan_s_law.org][Orowan's Law]]
+
+  - $V^*$ is the /activation volume/
+  - $\Delta H_0$ is the activation enthalpy at
+  - $l^*$ length of dislocation segment involved in thermal activation.
+  - \[ \dot{\varepsilon} \] is the strain rate.
+  - $\rho_m$ is mobile dislocation density.
+  - $A$ is the area swept out by dislocation in fluctuation.
+  - $\mathbf{b}$ is the burger's vector.
+  - $\nu^*$ is the frequency of vibration of the dislocation segment
+    of length $l^*$
+  - Internal stress $\tau_i$ can be estimated from
+
+    \[ \tau_i = \alpha\mu \mathbf{b} \sqrt{\rho}  \]
+  - $\mu$ is the shear modulus and $\alpha$ is a constant.
+
+    
+  - Assumptions are made that the density of mobile dislocations is
+    the same and that the internal stress is constant. 
+
+  
+  # - $\sigma \delta \varepsilon = \delta E$
+  # - Therefore integrating over all the strain gives the total amount
+  #   of energy expended.
+  #   - One can integrate to the point of plastic deformation, when the
+  #     stress-strain curve becomes flat (start of plastic deformation
+  #     stage)
+  # - Points of interest, which might be screw dislocations in the
+  #   single crystal are: C and A
+

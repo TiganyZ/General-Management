@@ -1,0 +1,16 @@
+#+TITLE: Veiga2013: Atomistic modeling of carbon Cottrell atmospheres in bcc iron
+#+ROAM_KEY: cite:Veiga2013
+- tags ::
+- keywords ::
+
+* Atomistic modeling of carbon Cottrell atmospheres in bcc iron
+  :PROPERTIES:
+  :Custom_ID: Veiga2013
+  :URL: https://iopscience.iop.org/article/10.1088/0953-8984/25/2/025401
+  :AUTHOR: Veiga, R. G. A., Perez, M., Becquart, C. S., & Domain, C.
+  :NOTER_DOCUMENT: ~/Zotero/storage/TE6SK3XD/Veiga et al. - 2013 - Atomistic modeling of carbon Cottrell atmospheres .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

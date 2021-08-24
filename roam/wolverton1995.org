@@ -1,0 +1,32 @@
+#+TITLE: Wolverton1995: First-principles theory of short-range order, electronic excitations, and spin polarization in Ni-V and Pd-V alloys
+#+ROAM_KEY: cite:Wolverton1995
+- tags ::
+- keywords ::
+
+* First-principles theory of short-range order, electronic excitations, and spin polarization in Ni-V and Pd-V alloys
+  :PROPERTIES:
+  :Custom_ID: Wolverton1995
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.52.8813
+  :AUTHOR: Wolverton, C., & Zunger, A.
+  :NOTER_DOCUMENT: ~/Zotero/storage/G33DAWS5/Wolverton and Zunger - 1995 - First-principles theory of short-range order, elec.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+   This paper details the
+   [[file:2021-07-15--09-30-11--electronic_entropy.org][electronic
+   entropy]]. Generally this entails a temperature dependent free
+   energy, which arises through the temperature dependence of the
+   electronic density of states and the explicit dependence on
+   tempereture in the
+   [[file:2021-07-15--09-31-47--fermi_dirac_distribution.org][Fermi-dirac
+   distribution]]. As the charge density is given by
+
+   \[ \rho(\mathbf{r}, T)  = \sum_{i} f(\varepsilon,T) |\Psi_i|^2   \]
+   Then, through self-consistency of the charges and potential (and
+   hence the eigenvalues), this leads to an explicit $T$ dependence of
+   the DOS.
+
+   \[ \int_{-\infty}^{+\infty} n(\varepsilon, T) f(\varepsilon, T)
+   \text{d}\varepsilon = N_{\text{tot} }\]

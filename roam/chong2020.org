@@ -1,0 +1,132 @@
+#+TITLE: Chong2020: Mechanistic basis of oxygen sensitivity in titanium
+#+ROAM_KEY: cite:Chong2020
+- tags ::
+- keywords ::
+
+* Mechanistic basis of oxygen sensitivity in titanium
+  :PROPERTIES:
+  :Custom_ID: Chong2020
+  :URL: https://advances.sciencemag.org/lookup/doi/10.1126/sciadv.abc4060
+  :AUTHOR: Chong, Y., Poschmann, M., Zhang, R., Zhao, S., Hooshmand, M. S., Rothchild, E., Olmsted, D. L., …
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+
+** Notes
+*** Introduction
+    :PROPERTIES:
+    :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::1++4.35]]
+    :END:
+    - With small amounts of oxygen in Ti there is [[file:2021-03-15--09-54-55--solute_strengthening.org][Solute Strengthening]] and
+    _decreased ductility_.
+    - This motivates high-cost purification of titanium to avoid
+      "oxygen poisoning".
+    - Increase slip planarity of Ti-O alloys is _caused by an
+      interstitial shuffling mechanism_, which is sensitive to
+      temperature, strain rate and oxygen content.
+    - This leads to an _alteration of twinning behaviour_.
+
+
+    - 0.2 atomic % increase in O causes a several-fold increase in
+      yield stress, but an even larger decrease in ductility and
+      toughness.
+    - "Wavy-to-planar" transition occurs with increasing oxygen content
+    - [[file:2021-03-15--10-08-33--planar_slip_in_ti.org][Planar slip in Ti]] has [[file:20210105175521-dislocations.org][dislocation]] structure more localised to "a region
+      of confined planes", which impairs fracture toughness and strain hardening.
+    - Wavy slip is characterised by a more evenly distributed
+      "multidirectional" dislocation configurations.
+
+    - Wavy slip seen in Ti-Al where transitiy is as a consequence of the
+      chemical short range ordering of Al atoms. The dislocations cause
+      a distruption of SRO (as Al is substitutional) and so dislocation
+      motion is on a softened glide plane.
+
+    - Hypothesised that there is a formation of [[file:2021-03-15--10-14-20--short_range_ordering.org][Short Range Ordering]] in
+      Ti-O alloys, which could be responsible for the propensity of
+      planar dislocation slip at higher oxygen concentrations, however,
+      the much lower concentration of solute atoms in Ti-O alloys,
+      compared with Ti-Al alloys casts doubt as to whether these
+      phenomena have the same mechanistic origin.
+
+      Study [[file:2021-03-15--10-29-52--conc_of_o_on_defects_dislocations.org][Conc. of O on defects/dislocations]]
+
+    - [11-24] twinning is detrimental.
+
+    - Atomistic origin can be attributed to transitions in both
+      dislocation behaviour and twinning activity.
+
+*** Results of Tensile Tests
+    :PROPERTIES:
+    :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::2++0.00]]
+    :END:
+
+     - Three model Ti alloys:
+       - pure Ti (0.05 wt% / 0.15 at% O)
+       - Ti-0.1O (0.10 wt% / 0.31 at% O)
+       - Ti-0.3O (0.30 wt% / 0.88 at% O)
+     - Assessed at 500K, 300K, 100K via uniaxial tensile tests with
+       strain rate of 10^(-3)s^{-1}.
+     - As mentioned before oxygen really causes problems, especially
+       with oxygen content at low temperatures.
+     - Strain hardening is the plot of true stress against true strain
+       = $\epsilon_t = \ln L/L_0$.
+     - Strain hardening ability decreased with increasing oxygen
+       content at room temperature.
+     - At low temperatures, pure Ti and Ti-0.1O have almost identical
+       strain hardening curves, but Ti-0.3O is bad, as before.
+     - _This suggests a propensity of [[file:2021-03-15--10-57-17--deformation_twinning.org][deformation twinning]] at lower
+       temperatures with low oxygen content_
+     - Substantial transition in deformation mechanisms of Ti-0.3O
+       alloy compared to the rest.
+     - Fractography corroborates results.
+     - Brittle intergranular mode shown by Ti-0.3O compared to
+       intragranular ductile fracture of pure Ti/Ti-0.1O.
+
+*** Wavy-to-planar dislocations
+    :PROPERTIES:
+    :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::3++0.00]]
+    :END:
+
+     - Morphology of dislocation structures can be seen as either wavy
+       slip or not
+     - Figure 2A shows gray/blue points which represent wavy
+       slip-dominant and planar slip dominant.
+
+     =How did they categorise wavy vs planar slip?=
+     - Wavy slip has a more "messy" structure compared to the planar
+       slip.
+     - For planar slip, necessary to have low deformation temperature
+       and large strain rate at low oxygen content.
+     - $\matthbf{g}\cdot\mathbf{b}$ analysis showed mot dislocations
+       were $\langle a \rangle$ type, but likely there are $\langle c+a
+       \rangle$ around grain boundaries especiallin in specimens with
+       higher oxygen content and lower deformation temperature where
+       large flow stresses were found.
+
+*** Investigation of SRO slip mechanism
+    :PROPERTIES:
+    :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::3++5.68]]
+    :END:
+**** SRO calculation from first principles cluster espansion and monte carlo found DAPB energies in Ti-0.3O are much smaller.
+     :PROPERTIES:
+     :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::4++0.00]]
+     :END:
+
+**** SRO induced slip would leave a residual strain field cause by destruction of SRO on glide plane
+     :PROPERTIES:
+     :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::4++1.93]]
+     :END:
+
+*** Interstitial Shuffling Mechanism of Ti-O systems
+    :PROPERTIES:
+    :NOTER_PAGE: [[pdf:~/Zotero/storage/5INR667G/Chong et al. - 2020 - Mechanistic basis of oxygen sensitivity in titaniu.pdf::4++4.23]]
+    :END:
+    - Propose novel interstitial shuffling mechanism to account for the
+      temperature and strain rate dependences of the wavy-to-planar
+      slip transition in Ti-O alloys.
+    - ISM model, there is competition between two processes involving
+      the motion of oxygen atoms between different interstitial sites:
+      _either octahedral or hexahedral_.
+    -

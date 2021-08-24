@@ -1,0 +1,18 @@
+#+TITLE: Martensite.org bio
+
+Tigany Zarrouk is a final year PhD student in the Paxton Group of
+King's College London. He studied physics at Imperial College London,
+obtaining his MSci under the supervision of Kim Christensen, where he
+developed a cellular automata to model the emergent phenomena of
+atrial fibrillation in scarred heart tissue. His main interest is in
+the theory and simulation of materials. Working with Dimitry
+Vvedenskey, he modelled self-assembled nano-structures during the
+epitaxial growth of GaAs. His PhD work focusses on the quantum
+simulation of defects in transitions metals, specifically
+dislocation-solute interactions in iron and titanium, to elucidate
+fundamental mechanisms of solid solution strengthening and
+dislocation-assisted solute migration. During this time, he has also
+done work in optimisation, to fit tight-binding interatomic
+potentials. He is sponsored by Rolls-Royce, under an EPSRC CASE
+studentship, and has worked as a research consultant with SKF in the
+Netherlands.

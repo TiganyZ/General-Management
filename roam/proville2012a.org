@@ -1,0 +1,72 @@
+#+TITLE: Proville2012a: Quantum effect on thermally activated glide of dislocations
+#+ROAM_KEY: cite:Proville2012a
+- tags ::
+- keywords ::
+
+* Quantum effect on thermally activated glide of dislocations
+  :PROPERTIES:
+  :Custom_ID: Proville2012a
+  :URL: http://www.nature.com/articles/nmat3401
+  :AUTHOR: Proville, L., Rodney, D., & Marinica, M.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/P65JFIJW/Proville et al. - 2012 - Quantum effect on thermally activated glide of dis.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Notes
+   [[file:2021-03-04--14-35-12--zero_point_energy.org][Zero-point energy]] has an effect on the kink-pair formation enthalpy
+   of [[file:20210105175521-dislocations.org][dislocations]]. This work focussed on dislocations in bcc iron.
+
+   One can find a /rate of crossing/ of the activation barrier (the
+   kink-pair formation energy), from [[file:2021-03-04--14-44-41--transition_state_theory.org][transition-state theory]], for
+   both classical and quantum cases.
+
+   Both equations use the frequencies associated with the harmonic
+   vibrational modes of the crystal $\nu$ at the initial and
+   /activated/ states respectively (obtained by diagonalisation of the
+   Hessian of the system).
+
+   Quantum mechanics can be incorporated by treating the vibrational
+   modes quantum-mechanically. Classical oscillator partition
+   functions are replaced by quantum ones.
+
+   There is thermally-activated tunnelling at the top of the nergy
+   barrier, which is associated with the /transmission factor/ in the
+   rate equation. This coefficient comes from the frequency of the unstable mode at the saddle point transiton
+   (the imaginary frequency).
+
+   This factor only comes in when calculations are done at <6K, at
+   temperatures above this it is close to unity. They only look at
+   temperatures higher.
+
+   From this one can have a _Wigner correction to the energy_. It is
+   around 0.1 eV and decays with temperature. In the zero temperature
+   limit, one can see find the stress at which the effective enthalpy
+   becomes zero.
+
+   - *In this case 0.4GPa for bcc iron using an EAM potential*
+
+
+
+** Summary :SUMMARY:
+   One can find a quantum correction to the kink-pair formation
+   enthalpy using harmonic transition-state theory and using quantum
+   partion functions, with a tunnelling near the top of the barrier
+   given by a transmission factor.
+
+   One finds an energy correction to the kink-pair formation energy,
+   which comes through a Wigner correction to the
+   barrier [[file:henkelman2006.org][Henkelman2006: Theoretical calculations of CH4 and H2 associative desorption from Ni(111): Could subsurface hydrogen play an important role?]].
+
+   One finds a quantum version of [[file:2021-03-08--16-10-28--orowan_s_law.org][Orowan's Law]] seems to agree with
+   experiment. There is a divergence from what is expected
+   classically, rather than with the quantum effects in place.
+
+   # which comes through the entropic contribution to the enthalpy, due
+   # to the vibrational modes available at the transition point.
+
+   This reduces the kink-pair formation enthalpy.
+
+   # dE =  TdS - pdV
+   # dH =  TdS - VdP
+   # dF = -TdS - pdV
+   # dG = -TdS + Vdp

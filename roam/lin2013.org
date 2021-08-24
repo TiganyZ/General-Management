@@ -1,0 +1,16 @@
+#+TITLE: Lin2013: Accelerating atomic orbital-based electronic structure calculation via pole expansion and selected inversion
+#+ROAM_KEY: cite:Lin2013
+- tags ::
+- keywords ::
+
+* Accelerating atomic orbital-based electronic structure calculation via pole expansion and selected inversion
+  :PROPERTIES:
+  :Custom_ID: Lin2013
+  :URL: https://iopscience.iop.org/article/10.1088/0953-8984/25/29/295501
+  :AUTHOR: Lin, L., Chen, M., Yang, C., & He, L.
+  :NOTER_DOCUMENT: ~/Zotero/storage/5LMW9DUD/Lin et al. - 2013 - Accelerating atomic orbital-based electronic struc.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

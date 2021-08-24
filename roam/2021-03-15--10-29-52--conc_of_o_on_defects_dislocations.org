@@ -1,0 +1,11 @@
+#+TITLE: Conc. of O on defects/dislocations
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-15 Mon 10:29]--[2021-03-15 Mon 10:30] =>  0:01
+  :END:
+
+  - One can look at the concentration of oxygen which would go to
+    defects using the Forst method.
+  - It would be useful.

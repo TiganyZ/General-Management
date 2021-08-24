@@ -5,20 +5,6 @@
 [2020-08-27 Thu 12:21]
 [[file:~/Documents/docs/Management/thesis_structure.org::*Tight-binding][Tight-binding]]
 
-** TODO Read Harrison
-   :LOGBOOK:
-   CLOCK: [2020-09-02 Wed 12:33]--[2020-09-02 Wed 12:33] =>  0:00
-   :END:
- [2020-09-02 Wed 12:33]
- [[file:~/Documents/docs/Management/thesis_structure.org::*Statement of the Problem][Statement of the Problem]]
-
-* TODO Recite electronic knowledge
-  :LOGBOOK:
-  CLOCK: [2020-08-27 Thu 23:52]--[2020-08-27 Thu 23:52] =>  0:00
-  :END:
-[2020-08-27 Thu 23:52]
-[[file:~/Documents/docs/Management/thesis_structure.org]]
-
 * DONE Record Habits
   :LOGBOOK:
   CLOCK: [2020-08-27 Thu 23:53]--[2020-08-27 Thu 23:53] =>  0:00
@@ -26,8 +12,8 @@
 [2020-08-27 Thu 23:53]
 [[file:~/Documents/docs/Management/thesis_structure.org]]
 
-* NEXT Check Ti Models :today:
-  SCHEDULED: <2021-02-05 Fri 15:00>
+* DONE Check Ti Models :today:
+  SCHEDULED: <2021-03-01 Mon 15:00>
   :PROPERTIES:
   :LAST_REPEAT: [2020-09-08 Tue 10:15]
   :END:
@@ -61,7 +47,7 @@
  :REPEAT_TO_STATE: NEXT
  :END:
 
-** TODO Run next ti fitting
+** DONE Run next ti fitting
    :PROPERTIES:
    :LAST_REPEAT: [2020-09-08 Tue 10:16]
    :END:
@@ -81,7 +67,7 @@
 [2020-09-02 Wed 12:59]
 [[file:~/Documents/docs/Management/org/refile.org::*Read Harrison][Read Harrison]]
 
-* MEETING with Tony, discuss environmental dependence of bond integrals within BOP :MEETING:
+* DONE with Tony, discuss environmental dependence of bond integrals within BOP :MEETING:
   :LOGBOOK:
   CLOCK: [2020-09-03 Thu 16:14]--[2020-09-03 Thu 16:14] =>  0:00
   :END:
@@ -97,7 +83,7 @@
 [2020-09-09 Wed 11:19]
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Preliminary calculations][Preliminary calculations]]
 
-* TODO Think about the possible interactions of dislocations in dipole configuration upon relaxation
+* DONE Think about the possible interactions of dislocations in dipole configuration upon relaxation
   :LOGBOOK:
   CLOCK: [2020-09-29 Tue 11:05]--[2020-09-29 Tue 11:06] =>  0:01
   :END:
@@ -120,7 +106,7 @@
 [2020-10-06 Tue 10:34]
 [[file:~/Documents/docs/Management/org/refile.org::*Check Ti Models][Check Ti Models]]
 
-* TODO [#B] Compile bop on French supercomputer
+* DONE [#B] Compile bop on French supercomputer
   DEADLINE: <2021-02-05 Fri 16:00> SCHEDULED: <2021-02-05 Fri 14:00>
   :PROPERTIES:
   :ORDERED:  t
@@ -133,7 +119,7 @@
 [[file:~/Documents/docs/Management/fe_skf_paper/sebastian/atomistic_dislocation_carbon_migration_TZ.org::*Analysis of carbon concentration along dislocation][Analysis of carbon concentration along dislocation]]
 
 * DONE [#A] Implement Line Tension McClean Isotherm
-  SCHEDULED: <2021-01-10 Sun 09:30> DEADLINE: <2021-01-15 Fri>
+  DEADLINE: <2021-01-15 Fri> SCHEDULED: <2021-01-10 Sun 09:30>
   - State "NEXT"       from "WAITING"    [2020-12-18 Fri 16:27]
   - State "WAITING"    fromu "NEXT"       [2020-12-16 Wed 17:31] \\
   :LOGBOOK:
@@ -158,7 +144,7 @@
 [2020-12-16 Wed 17:40]
 [[file:~/Documents/docs/Management/org/TODOs.org::*Implement Line Tension McClean Isotherm][Implement Line Tension McClean Isotherm]]
 
-* TODO Concentration Analysis - think of intersites and if it is too much work
+* DONE Concentration Analysis - think of intersites and if it is too much work
   :LOGBOOK:
   CLOCK: [2020-11-23 Mon 11:34]--[2020-11-23 Mon 11:34] =>  0:00
   :END:
@@ -192,8 +178,8 @@
   CLOCK: [2020-12-19 Sat 12:06]--[2020-12-19 Sat 12:30] =>  0:24
   :END:
 
-- Push pull A/B splits 
-- Cardio 
+- Push pull A/B splits
+- Cardio
 
 * DONE Look at org-drill
   SCHEDULED: <2020-12-30 Wed 15:00>
@@ -203,8 +189,8 @@
 [2020-12-19 Sat 11:59]
 *
 
-* TODO Plot C/H line energies and compare with peierls potential of 10 GPa
-  SCHEDULED: <2021-02-12 Fri 10:00>
+* DONE Plot C/H line energies and compare with peierls potential of 10 GPa
+  SCHEDULED: <2021-02-26 Fri 10:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 16:36]--[2021-01-06 Wed 16:36] =>  0:00
   CLOCK: [2020-12-22 Tue 12:25]--[2020-12-22 Tue 12:27] =>  0:02
@@ -215,10 +201,10 @@
 * DONE Chill with Rachel :Personal:
   CLOSED: [2020-12-27 Sun 15:40] SCHEDULED: <2020-12-27 Sun 12:00>
 
-Chill at her pad n play games 
+Chill at her pad n play games
 *
 
-* TODO Read Izzy's paper
+* DONE Read Izzy's paper
   SCHEDULED: <2021-01-28 Thu 17:00>
   :LOGBOOK:
   CLOCK: [2020-12-22 Tue 18:02]--[2020-12-22 Tue 18:07] =>  0:05
@@ -226,13 +212,17 @@ Chill at her pad n play games
 [2020-12-22 Tue 18:02]
 [[file:~/Documents/docs/Management/papers/Evaluating_edge_importance.pdf]]
 
-* NEXT Reading                                                      :MEETING:
-  SCHEDULED: <2021-02-01 Mon 22:00 ++1d>
+* DONE Reading                                                      :MEETING:
+  SCHEDULED: <2021-06-07 Mon 22:00 ++0d>
   :PROPERTIES:
   :STYLE:    habit
-  :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-01-31 Sun 12:15]
+  :REPEAT_TO_STATE: READ
+  :LAST_REPEAT: [2021-06-07 Mon 09:21]
   :END:
+  - State "DONE"       from "READ"       [2021-04-10 Sat 15:59]
+  - State "DONE"       from "READ"       [2021-04-08 Thu 11:50]
+  - State "DONE"       from "READ"       [2021-03-09 Tue 10:07]
+  - State "DONE"       from "NEXT"       [2021-02-28 Sun 23:57]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "NEXT"       [2021-01-26 Tue 00:11]
@@ -256,21 +246,20 @@ Chill at her pad n play games
   CLOSED: [2020-12-25 Fri 18:50] SCHEDULED: <2020-12-24 Thu 12:00>
 
 - Yoga + Meditate
-- Board games 
-- PlayStation games 
-- Presents 
-- pajamas 
-- alcohol (eggnog?) 
-- 2 player board games 
-- Yo, if you haven't showered yet 
-- incept thoughts 
+- Board games
+- PlayStation games
+- Presents
+- pajamas
+- alcohol (eggnog?)
+- 2 player board games
+- Yo, if you haven't showered yet
+- incept thoughts
 
-* DONE Reply to Predrag                                               :Email:
+* DONE Reply to Predrag :Email:
   SCHEDULED: <2021-01-05 Tue 12:00>
   :LOGBOOK:
   CLOCK: [2021-01-05 Tue 12:13]--[2021-01-05 Tue 12:25] =>  0:12
   :END:
-
 
 * DONE Sleepover at mine :Personal:
   CLOSED: [2020-12-27 Sun 04:08] SCHEDULED: <2020-12-26 Sat 12:00>
@@ -296,49 +285,62 @@ Chill at her pad n play games
 * DONE Arrange games/video call with Lizzie :Personal:
   CLOSED: [2021-01-01 Fri 20:10] SCHEDULED: <2020-12-27 Sun 18:30>
 
-* DONE Try GTD once today                                      :Productivity:
+* DONE Try GTD once today :Productivity:
   SCHEDULED: <2021-01-04 Mon 10:00>
   :LOGBOOK:
   CLOCK: [2020-12-29 Tue 19:49]--[2020-12-29 Tue 20:14] =>  0:25
   CLOCK: [2020-12-29 Tue 18:06]--[2020-12-29 Tue 19:47] =>  1:41
   :END:
 
-** TODO Org roam: DFT Mazari :Emacs:WAITING:
-   SCHEDULED: #<2021-01-04 Mon 12:00>
-   - State "WAITING"    from "NEXT"       [2020-12-18 Fri 16:17] \\
-     Test with DFT links to see how it works in practice. 
-     - Task: Make notes of the Implementation by diag/Nicola Mazari notes and see how links work
-   :LOGBOOK:
-   CLOCK: [2021-01-06 Wed 10:33]--[2021-01-06 Wed 10:45] =>  0:12
-   CLOCK: [2021-01-04 Mon 17:04]--[2021-01-04 Mon 17:22] =>  0:18
-   CLOCK: [2021-01-04 Mon 13:46]--[2021-01-04 Mon 14:11] =>  0:25
-   CLOCK: [2020-12-22 Tue 18:10]--[2020-12-22 Tue 18:35] =>  0:25
-   CLOCK: [2020-12-18 Fri 16:00]--[2020-12-18 Fri 16:17] =>  0:17
-   :END:
-
 * DONE Buy protein powder :Personal:
 * DONE But shibari rope :Personal:
-* TODO Tidal :Music:
-* NEXT Review TODO                                                  :MEETING:
-  SCHEDULED: <2021-02-08 Mon 09:00 ++7d>
+* DONE Tidal :Music:
+  SCHEDULED: <2021-04-12 Mon 19:00 .+0d/7d>
   :PROPERTIES:
-  :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-02 Tue 16:23]
+  :STYLE:    habit
+  :LAST_REPEAT: [2021-04-07 Wed 11:35]
   :END:
+  - State "DONE"       from "TODO"       [2021-04-07 Wed 11:35]
+
+* READ Review TODO                                                  :MEETING:
+  SCHEDULED: <2021-08-09 Mon 09:00 .+1d/7d>
+  :PROPERTIES:
+  :REPEAT_TO_STATE: MEETING
+  :LAST_REPEAT: [2021-06-07 Mon 09:43]
+  :STYLE:    nil
+  :END:
+  - State "DONE"       from "MEETING"    [2021-06-07 Mon 09:43]
+  - State "DONE"       from "MEETING"    [2021-06-04 Fri 11:21]
+  - State "DONE"       from "MEETING"    [2021-05-27 Thu 11:01]
+  - State "DONE"       from "MEETING"    [2021-05-24 Mon 13:06]
+  - State "DONE"       from "MEETING"    [2021-04-12 Mon 11:56]
+  - State "DONE"       from "MEETING"    [2021-04-10 Sat 15:59]
+  - State "DONE"       from "MEETING"    [2021-04-07 Wed 11:35]
+  - State "DONE"       from "MEETING"    [2021-03-15 Mon 09:48]
+  - State "DONE"       from "MEETING"    [2021-03-08 Mon 10:16]
+  - State "DONE"       from "MEETING"    [2021-03-05 Fri 11:15]
+  - State "DONE"       from "MEETING"    [2021-03-02 Tue 11:41]
+  - State "DONE"       from "MEETING"    [2021-02-27 Sat 13:32]
+  - State "DONE"       from "NEXT"       [2021-02-15 Mon 10:21]
   - State "DONE"       from "NEXT"       [2021-02-02 Tue 16:23]
   - State "DONE"       from "NEXT"       [2021-01-26 Tue 17:46]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 10:01]
   :LOGBOOK:
+  CLOCK: [2021-08-24 Tue 15:21]--[2021-08-24 Tue 15:33] =>  0:12
+  CLOCK: [2021-06-04 Fri 11:17]--[2021-06-04 Fri 11:21] =>  0:04
+  CLOCK: [2021-03-02 Tue 11:22]--[2021-03-02 Tue 11:40] =>  0:18
   CLOCK: [2021-01-04 Mon 10:29]--[2021-01-04 Mon 10:30] =>  0:01
   CLOCK: [2021-01-04 Mon 10:25]--[2021-01-04 Mon 10:27] =>  0:02
   :END:
 
-* TODO Call dad
-* TODO Order Flying circus physics
-* DONE Follow the Zotero/Roam workflow                         :Productivity:
+* DONE Call dad
+* DONE Order Flying circus physics
+  SCHEDULED: <2021-02-27 Sat 14:00>
+
+* DONE Follow the Zotero/Roam workflow :Productivity:
   SCHEDULED: <2021-01-05 Tue 14:00>
 
-* DONE Call Emilie                                                 :Personal:
+* DONE Call Emilie :Personal:
   SCHEDULED: <2021-01-04 Mon 12:00>
 
 * DONE Email Rolls Royce about Internship
@@ -349,12 +351,11 @@ Chill at her pad n play games
   CLOCK: [2021-01-04 Mon 14:57]--[2021-01-04 Mon 15:22] =>  0:25
   :END:
 
-* DONE #A Yoga with Adrienne                               :Personal:MEETING:
+* DONE #A Yoga with Adrienne :Personal:MEETING:
   SCHEDULED: <2021-01-20 Wed 08:00 +0d>
   :PROPERTIES:
   :LAST_REPEAT: [2021-01-25 Mon 16:09]
   :END:
-
   - State "DONE"       from "TODO"       [2021-01-25 Mon 16:09]
   - State "DONE"       from "TODO"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "TODO"       [2021-01-21 Thu 10:02]
@@ -372,14 +373,14 @@ Chill at her pad n play games
   - State "DONE"       from "TODO"       [2021-01-06 Wed 10:33]
   - State "DONE"       from "TODO"       [2021-01-05 Tue 11:19]
 
-
-* DONE [#A] Set Revision Times                                 :Productivity:
+* DONE [#A] Set Revision Times :Productivity:
   SCHEDULED: <2021-01-04 Mon 10:00>
   :LOGBOOK:
   CLOCK: [2021-01-04 Mon 10:39]--[2021-01-04 Mon 10:41] =>  0:02
   CLOCK: [2021-01-04 Mon 10:30]--[2021-01-04 Mon 10:39] =>  0:09
   :END:
-* TODO MPI talk
+
+* DONE MPI talk
   :LOGBOOK:
   CLOCK: [2021-01-04 Mon 10:27]--[2021-01-04 Mon 10:29] =>  0:02
   :END:
@@ -388,145 +389,254 @@ DEADLINE: <2021-02-15 Sun>
 
 - Head and shoulders photo
 - 15 min talk on Fe-C work
-* TODO Thesis work 
+
+* DONE Thesis work
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-04 Mon 18:23]
+  :LAST_REPEAT: [2021-08-09 Mon 13:57]
   :END:
+  - State "DONE"       from "TODO"       [2021-08-09 Mon 13:57]
   - State "DONE"       from "NEXT"       [2021-01-04 Mon 18:23]
 [2021-01-04 Mon 10:40]
 
-SCHEDULED: <2021-01-05 Tue 17:00 .+1d/3d>
+SCHEDULED: <2021-08-10 Tue 17:00 .+0d/3d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
 
 - Figuring out errors in emacs such that I can use org-noter/org-roam-bibtex framework
-* TODO Go through Luthi Paper to find the 10 GPa calculations
+
+* DONE Go through Luthi Paper to find the 10 GPa calculations
+  SCHEDULED: <2021-03-05 Fri>
   :LOGBOOK:
   CLOCK: [2021-01-05 Tue 12:26]--[2021-01-05 Tue 12:38] =>  0:12
   CLOCK: [2021-01-05 Tue 12:25]--[2021-01-05 Tue 12:26] =>  0:01
   :END:
 [2021-01-05 Tue 12:25]
-* DONE Git repo line tension code 
+
+* DONE Git repo line tension code
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 10:46]--[2021-01-06 Wed 10:58] =>  0:12
   CLOCK: [2021-01-06 Wed 10:45]--[2021-01-06 Wed 10:45] =>  0:00
   :END:
 [2021-01-06 Wed 10:45]
+
 * DONE Finish writing about why carbon has less of an effect than hydrogen on the kink-pair formation enthalpies
   SCHEDULED: <2021-02-02 Tue 17:00>
   :LOGBOOK:
   CLOCK: [2021-01-06 Wed 13:03]--[2021-01-06 Wed 13:04] =>  0:01
   :END:
 [2021-01-06 Wed 13:03]
-* TODO Look at therapy for rachel and I
-  SCHEDULED: <2021-02-04 Thu 18:00>
+
+* DONE Look at therapy for rachel and I
+  SCHEDULED: <2021-04-15 Thu 18:00>
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 18:44]--[2021-01-26 Tue 19:09] =>  0:25
   CLOCK: [2021-01-08 Fri 15:32]--[2021-01-08 Fri 15:33] =>  0:01
   :END:
 [2021-01-08 Fri 15:32]
 - Better help?
+
 * DONE Call Seb
   SCHEDULED: <2021-01-18 Mon 19:00>
   :LOGBOOK:
   CLOCK: [2021-01-08 Fri 15:33]--[2021-01-08 Fri 15:33] =>  0:00
   :END:
 [2021-01-08 Fri 15:33]
+
 * DONE Reply to Predrag about carbon binding energies
   SCHEDULED: <2021-01-13 Wed 13:00>
   :LOGBOOK:
   CLOCK: [2021-01-11 Mon 10:45]--[2021-01-11 Mon 10:46] =>  0:01
   :END:
 [2021-01-11 Mon 10:45]
+
 * DONE Reply to Rolls Royce about internship
   SCHEDULED: <2021-01-26 Tue 13:00>
   :LOGBOOK:
   CLOCK: [2021-01-11 Mon 14:35]--[2021-01-11 Mon 14:36] =>  0:01
   :END:
 [2021-01-11 Mon 14:35]
-** As part of this I am going to contact Aalto for nominal dates
 
-   - Aalto is for 10 weeks
-   - RR ask for a 1-2 month delay.
-   - Initial dates: <2021-03-29 Mon>--<2021-06-18 Fri>
-   - 2 month delay: <2021-05-24 Mon>--<2021-08-13 Fri>
-   - 3 month delay: <2021-06-28 Mon>--<2021-09-17 Fri>
-   - 4 month delay: <2021-07-26 Mon>--<2021-10-15 Fri>
-   - 4 month delay + 1 week: <2021-08-02 Mon>--<2021-10-22 Fri>
-   - 5 month delay: <2021-08-23 Mon>--<2021-11-12 Fri>
+** DONE As part of this I am going to contact Aalto for nominal dates
 
    - As for Aalto, it would be nice if I could change the dates to be
      in summer.
-   - <2021-04-17 Sat>--<2021-06-26 Sat>
-   - <2021-05-15 Sat>--<2021-07-24 Sat>
+
 * DONE Call with Anni
   SCHEDULED: <2021-01-21 Thu 20:00>
   :LOGBOOK:
   CLOCK: [2021-01-21 Thu 10:03]--[2021-01-21 Thu 10:03] =>  0:00
   :END:
 [2021-01-21 Thu 10:03]
-* TODO Compile things for thesis
-  DEADLINE: <2021-05-14 Fri>
-  :LOGBOOK:
-  CLOCK: [2021-01-25 Mon 18:01]--[2021-01-25 Mon 18:02] =>  0:01
-  :END:
-[2021-01-25 Mon 18:01]
-* TODO [#A] Thesis Work
-  SCHEDULED:<2021-02-01 Mon 17:00 .+1d/3d>>
+
+* TODO Misc [0/5]
+  SCHEDULED: <2021-08-06 Fri 18:00 .+4d/7d>
   :PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: TODO
-:LAST_REPEAT: [2021-01-26 Tue 19:13]
-:END:
-  - State "DONE"       from "TODO"       [2021-01-26 Tue 19:13]
+  :COOKIE_DATA: todo
+  :STYLE:    habit
+  :END:
+
+** WAITING Chat to Nigel about RR dates and organisation            :WAITING:
+   - State "WAITING"    from "TODO"       [2021-08-10 Tue 16:55] \\
+     Waiting for a response from Nigel
+   :LOGBOOK:
+   CLOCK: [2021-08-09 Mon 13:55]--[2021-08-09 Mon 13:55] =>  0:00
+   :END:
+ [2021-08-09 Mon 13:55]
+** TODO Book Flights to Helsinki
+   SCHEDULED: <2021-08-16 Mon 14:00>
+   :LOGBOOK:
+   CLOCK: [2021-06-21 Mon 10:43]--[2021-06-21 Mon 10:43] =>  0:00
+   :END:
+ [2021-06-21 Mon 10:43]
+ [[file:~/Documents/docs/Management/efa/django.org::*Run webapp][Run webapp]]
+** TODO Scratch directory pointer on mag
+   :LOGBOOK:
+   CLOCK: [2021-05-10 Mon 14:14]--[2021-05-23 Sun 15:17] => 313:03
+   :END:
+ [2021-05-10 Mon 14:14]
+
+** TODO Relinquish space on Comlab
+   :LOGBOOK:
+   CLOCK: [2021-07-12 Mon 09:11]--[2021-07-12 Mon 09:11] =>  0:00
+   :END:
+ [2021-07-12 Mon 09:11]
+ [[file:~/Documents/docs/Management/thesis_structure.org::*Embedding Calculations][Embedding Calculations]]
+** TODO Buy: Toothbrush heads, black tea, boxers, straight trousers
+   :LOGBOOK:
+   CLOCK: [2021-07-12 Mon 09:14]--[2021-07-12 Mon 09:15] =>  0:01
+   :END:
+ [2021-07-12 Mon 09:14]
+* TODO WRITE! [0/5]
+  SCHEDULED: <2021-08-14 Sat 09:00 .+1d>
+  :PROPERTIES:
+  :STYLE:    habit
+  :REPEAT_TO_STATE: TODO
+  :WILD_NOTIFIER_NOTIFY_BEFORE: 60 30 15 5
+  :LAST_REPEAT: [2021-08-13 Fri 16:32]
+  :COOKIE_DATA: todo
+  :END:
   :LOGBOOK:
+  CLOCK: [2021-08-24 Tue 18:26]--[2021-08-24 Tue 18:51] =>  0:25
+  CLOCK: [2021-08-24 Tue 17:53]--[2021-08-24 Tue 18:18] =>  0:25
+  CLOCK: [2021-08-24 Tue 17:16]--[2021-08-24 Tue 17:41] =>  0:25
+  CLOCK: [2021-08-24 Tue 16:27]--[2021-08-24 Tue 16:52] =>  0:25
+  CLOCK: [2021-08-12 Thu 16:04]--[2021-08-12 Thu 16:29] =>  0:25
+  CLOCK: [2021-08-03 Tue 11:49]--[2021-08-03 Tue 12:14] =>  0:25
+  CLOCK: [2021-08-03 Tue 11:07]--[2021-08-03 Tue 11:32] =>  0:25
+  CLOCK: [2021-08-03 Tue 10:40]--[2021-08-03 Tue 11:05] =>  0:25
+  CLOCK: [2021-05-24 Mon 16:05]--[2021-05-24 Mon 16:30] =>  0:25
   CLOCK: [2021-01-26 Tue 17:50]--[2021-01-26 Tue 18:15] =>  0:25
   :END:
-  - State "DONE"       from "TODO"       [2021-01-25 Mon 00:29]
+** Where to find
+  A lot of good information already in
+  [[file:literature_and_notes/notes_and_literature.org]]
+
+  For DFT, use the chapter [[file:chapters/current_dft_chapter.org]]
+
+  We have dislocation modelling in
+  [[file:chapters/ti_dislocation_modelling.org]]
+
+  Thesis template can be found here
+  [[file:~/Downloads/send_to_luke]]
+
+** TODO Pure titanium fitting  [2/5]
+   - [X] Describe bond integrals
+   - [X] Describe pair potential
+   - [ ] Why are we allowed to vary the canonical ratios?
+     - [ ] Perhaps this is as we are effectively orthogonalizing the
+       full basis set from a non-orthogonal one as found in Urban
+
+   - [ ] Introduction on fitting
+     - Use Luke's paper on overleaf [[https://www.overleaf.com/project/5d36c0f2ee8eac35ddeb27a1]]
+     - Use Luke's Thesis
+     - Use Dimitar's thesis
+   - [ ] Titanium model fitting
+     - Fitting data
+     - Comparison beween d and sd models
+     - Phonon spectra, heat data, phase information and stability.
+     - Pure Titanium dislocations
+
+** TODO Titanium-oxygen interactions with defects [0/4]
+   - [ ] Introduction
+   - [ ] Ti-O Parameters
+     - Extra fitting data
+     - Results of solution energies and vacancy clusters and
+       adsorption energies.
+     - Forst Analysis
+   - [ ] Ti dislocation interaction with oxygen
+
+** TODO Embedding of oxygen in titanium using Embedding approach [0/3]
+   - [ ] Introduction
+   - [ ] Embedding using d-canonical model
+   - [ ] Show pitfalls of the method?
+
+
+** TODO Iron-carbon interactions with defects [0/4]
+   - [ ] Solution energies, Vacancy clusters etc
+   - [ ] Dislocation in iron for easy and hard core
+   - [ ] Dislocation-carbon interactions around each core
+   - [ ] Energy barriers of carbon around the hard core.
+
+** TODO Iron line-tension model chapter [0/4]
+   - [ ] Development of Frenkel-Kontorova model from sampling of
+     Peierls potential of screw dislocation cores.
+   - [ ] Pure results compared to normal peierls potential.
+   - [ ] Adding in the interaction of carbon due to a parameterised
+     lorentzian function.
+   - [ ] Extension of discrete diffusion model of Ivo.
+
+** TODO Conclusion
+
+
 * DONE Call Fam
   SCHEDULED: <2021-01-27 Wed 19:00>
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 00:31]--[2021-01-26 Tue 00:31] =>  0:00
   :END:
 [2021-01-26 Tue 00:31]
-* TODO Reply to Anna
+
+* DONE Reply to Anna
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:38] =>  0:02
   CLOCK: [2021-01-26 Tue 09:36]--[2021-01-26 Tue 09:36] =>  0:00
   :END:
 [2021-01-26 Tue 09:36]
+
 * DONE Ask Tony if I can get a desk chair
   SCHEDULED: <2021-01-26 Tue 10:30>
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 09:38]--[2021-01-26 Tue 09:39] =>  0:01
   :END:
 [2021-01-26 Tue 09:38]
+
 * DONE Toothpaste
   SCHEDULED: <2021-01-26 Tue 12:30>
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 09:39]--[2021-01-26 Tue 09:39] =>  0:00
   :END:
 [2021-01-26 Tue 09:39]
-* TODO Consolidate Items
+
+* DONE Consolidate Items                                            :MEETING:
+  SCHEDULED: <2021-06-08 Tue 17:30 .+0d/3d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-01-29 Fri 17:49]
+  :LAST_REPEAT: [2021-06-06 Sun 19:30]
+  :REPEAT_TO_STATE: TODO
   :END:
+  - State "DONE"       from "TODO"       [2021-05-25 Tue 11:24]
+  - State "DONE"       from "TODO"       [2021-04-10 Sat 15:59]
+  - State "DONE"       from "TODO"       [2021-03-09 Tue 10:07]
+  - State "DONE"       from "TODO"       [2021-03-02 Tue 13:33]
   - State "DONE"       from "TODO"       [2021-01-29 Fri 17:49]
   - State "DONE"       from "TODO"       [2021-01-26 Tue 17:47]
-[2021-01-26 Tue 09:42]
 
-SCHEDULED: <2021-02-04 Thu 17:30 .+1d/3d>
-:PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: TODO
-:END:
-* TODO Gaming Mouse
+* DONE Gaming Mouse
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 13:20]--[2021-01-26 Tue 13:20] =>  0:00
   :END:
 [2021-01-26 Tue 13:20]
+
 * DONE Fill form for desk chair
   SCHEDULED: <2021-01-26 Tue 14:00>
   :LOGBOOK:
@@ -534,7 +644,8 @@ SCHEDULED: <2021-02-04 Thu 17:30 .+1d/3d>
   CLOCK: [2021-01-26 Tue 13:21]--[2021-01-26 Tue 13:21] =>  0:00
   :END:
 [2021-01-26 Tue 13:21]
-* TODO BUY TICKETS to MONTPELLIER
+
+* DONE BUY TICKETS to MONTPELLIER
   DEADLINE: <2021-03-31 Wed>
   :LOGBOOK:
   CLOCK: [2021-01-26 Tue 16:20]--[2021-01-26 Tue 16:21] =>  0:01
@@ -542,24 +653,28 @@ SCHEDULED: <2021-02-04 Thu 17:30 .+1d/3d>
 [2021-01-26 Tue 16:20]
 
 - 26 March 2022 Montpellier
+
 * DONE Pick up medication
   SCHEDULED: <2021-01-27 Wed 13:00>
   :LOGBOOK:
   CLOCK: [2021-01-27 Wed 00:52]--[2021-01-27 Wed 00:53] =>  0:01
   :END:
 [2021-01-27 Wed 00:52]
+
 * DONE Progress Report 6
   SCHEDULED: <2021-02-01 Mon 15:00>
   :LOGBOOK:
   CLOCK: [2021-01-27 Wed 15:32]--[2021-01-27 Wed 15:33] =>  0:01
   :END:
 [2021-01-27 Wed 15:32]
+
 * DONE Buy Moisturiser for face/beard
   SCHEDULED: <2021-01-28 Thu 12:30>
   :LOGBOOK:
   CLOCK: [2021-01-28 Thu 00:11]--[2021-01-28 Thu 00:12] =>  0:01
   :END:
 [2021-01-28 Thu 00:11]
+
 * DONE with Crobaetians
   SCHEDULED: <2021-01-28 Thu 19:00>
   :LOGBOOK:
@@ -567,39 +682,46 @@ SCHEDULED: <2021-02-04 Thu 17:30 .+1d/3d>
   :END:
 [2021-01-28 Thu 00:14]
 [[file:~/Documents/docs/Management/org/TODOs.org::*Gaming Mouse][Gaming Mouse]]
-* TODO Check line tension
+
+* DONE Check line tension
   :LOGBOOK:
   CLOCK: [2021-01-29 Fri 11:42]--[2021-01-29 Fri 11:42] =>  0:00
   :END:
 [2021-01-29 Fri 11:42]
 SKF
 /home/tigany/r/fe/lt/equilibrium/test
+
 * DONE Write out positions of solutes and figure out analytic gradient
   SCHEDULED: <2021-01-29 Fri 14:00>
   :LOGBOOK:
   CLOCK: [2021-01-29 Fri 12:39]--[2021-01-29 Fri 12:40] =>  0:01
   :END:
 [2021-01-29 Fri 12:39]
+
 * DONE Write visual test for trap positions occupancy
   SCHEDULED: <2021-02-01 Mon 10:00>
   :LOGBOOK:
   CLOCK: [2021-01-29 Fri 17:47]--[2021-01-29 Fri 17:48] =>  0:01
   :END:
 [2021-01-29 Fri 17:47]
+
 * DONE Ticket for the laptop
   SCHEDULED: <2021-02-01 Mon 13:00>
   :LOGBOOK:
   CLOCK: [2021-02-01 Mon 12:02]--[2021-02-01 Mon 12:03] =>  0:01
   :END:
 [2021-02-01 Mon 12:02]
-* TODO Line Tension: equilibrium solute conc
-  SCHEDULED: <2021-02-15 Mon 11:00>
+
+* DONE Line Tension: equilibrium solute conc
+  SCHEDULED: <2021-02-23 Tue 11:00>
   :LOGBOOK:
   CLOCK: [2021-02-04 Thu 11:19]--[2021-02-04 Thu 11:44] =>  0:25
   CLOCK: [2021-02-04 Thu 10:47]--[2021-02-04 Thu 10:47] =>  0:00
   :END:
 [2021-02-04 Thu 10:47]
+
 ** Actions [1/3]
+
    - [X] Change the concentration to be site dependent for the
      energies: I actually didn't do this
    - [ ] Think about the Maxwell-Boltzmann statistics, if the binding
@@ -607,12 +729,21 @@ SKF
      - [ ] Will implement different concentrations for particular
        sites.
    - [ ] See this effect for energy mapping
-* TODO Reply to Predrag
-  SCHEDULED: <2021-02-15 Mon 13:00>
+
+** DONE Hard-Easy-Hard Line Tension branch
+   SCHEDULED: <2021-03-02 Tue 16:00>
+   :LOGBOOK:
+   CLOCK: [2021-02-15 Mon 11:06]--[2021-02-15 Mon 11:06] =>  0:00
+   :END:
+ [2021-02-15 Mon 11:06]
+
+* DONE Reply to Predrag
+  SCHEDULED: <2021-02-16 Tue 13:00>
   :LOGBOOK:
   CLOCK: [2021-02-08 Mon 00:16]--[2021-02-08 Mon 00:16] =>  0:00
   :END:
 [2021-02-08 Mon 00:16]
+
 * DONE Moonpig card for condolences for Omar
   SCHEDULED: <2021-02-10 Wed 14:00>
   :LOGBOOK:
@@ -621,12 +752,618 @@ SKF
   :END:
 [2021-02-10 Wed 12:16]
 [[file:~/Documents/docs/Management/org/supervision.org::*with Group][with Group]]
-* TODO MPI presentation
-  SCHEDULED: <2021-02-12 Fri 15:00>
+
+* DONE MPI presentation
+  SCHEDULED: <2021-02-22 Mon 15:00>
   :LOGBOOK:
+  CLOCK: [2021-02-22 Mon 10:43]--[2021-02-22 Mon 11:08] =>  0:25
+  CLOCK: [2021-02-15 Mon 11:31]--[2021-02-15 Mon 11:56] =>  0:25
+  CLOCK: [2021-02-15 Mon 10:24]--[2021-02-15 Mon 10:49] =>  0:25
   CLOCK: [2021-02-10 Wed 17:04]--[2021-02-10 Wed 17:29] =>  0:25
   CLOCK: [2021-02-10 Wed 16:29]--[2021-02-10 Wed 16:54] =>  0:25
   CLOCK: [2021-02-10 Wed 15:08]--[2021-02-10 Wed 15:33] =>  0:25
   CLOCK: [2021-02-10 Wed 15:07]--[2021-02-10 Wed 15:08] =>  0:01
   :END:
 [2021-02-10 Wed 15:07]
+
+* DONE Fit new lorentzian with carbon potential reduced by some constraint
+  SCHEDULED: <2021-02-19 Fri 12:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-16 Tue 12:10]--[2021-02-16 Tue 12:35] =>  0:25
+  CLOCK: [2021-02-16 Tue 10:38]--[2021-02-16 Tue 10:38] =>  0:00
+  CLOCK: [2021-02-16 Tue 10:38]--[2021-02-16 Tue 10:38] =>  0:00
+  :END:
+[2021-02-16 Tue 10:38]
+
+* DONE Get octahedral displacements or submit octahedral calculations
+  SCHEDULED: <2021-02-16 Tue 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-16 Tue 12:09]--[2021-02-16 Tue 12:10] =>  0:01
+  :END:
+[2021-02-16 Tue 12:09]
+
+* DONE MPI: check presentation platform
+  SCHEDULED: <2021-02-16 Tue 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-16 Tue 13:00]--[2021-02-16 Tue 13:01] =>  0:01
+  :END:
+[2021-02-16 Tue 13:00]
+
+* DONE Weighted vests
+  SCHEDULED: <2021-02-19 Fri 18:30>
+    :LOGBOOK:
+  CLOCK: [2021-02-17 Wed 15:10]--[2021-02-17 Wed 15:10] =>  0:00
+  :END:
+[2021-02-17 Wed 15:10]
+
+* DONE Watch /Adam Curtis/
+  SCHEDULED: <2021-03-05 Fri 12:30 .+0d/3d>
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-03-04 Thu 14:16]
+  :END:
+  - State "DONE"       from "TODO"       [2021-03-04 Thu 14:16]
+  - State "DONE"       from "TODO"       [2021-03-03 Wed 14:21]
+  - State "DONE"       from "TODO"       [2021-02-19 Fri 14:05]
+  :LOGBOOK:
+  CLOCK: [2021-02-18 Thu 22:09]--[2021-02-18 Thu 22:10] =>  0:01
+  :END:
+[2021-02-18 Thu 22:09]
+
+* DONE Org roam template, make Cornell Notes Methods
+  SCHEDULED: <2021-02-19 Fri 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-19 Fri 11:50]--[2021-02-19 Fri 11:51] =>  0:01
+  :END:
+[2021-02-19 Fri 11:50]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Watch /Adam Curtis/][Watch /Adam Curtis/]]
+
+* DONE ROAM [2/3]
+  SCHEDULED: <2021-06-07 Mon 18:00 .+0d/4d>
+  :PROPERTIES:
+  :REPEAT_TO_STATE: ROAM
+  :LAST_REPEAT: [2021-04-10 Sat 15:59]
+  :END:
+  - State "DONE"       from "ROAM"       [2021-04-10 Sat 15:59]
+  - State "DONE"       from "ROAM"       [2021-04-07 Wed 11:35]
+  :LOGBOOK:
+  CLOCK: [2021-02-21 Sun 23:23]--[2021-02-21 Sun 23:27] =>  0:04
+  :END:
+  - [ ] Incorporate notes and literature into roam
+  [[file:~/Documents/docs/Management/notes_and_literature.org][file:~/Documents/docs/Management/notes_and_literature.org]]
+  - [X] Org roam: DFT Mazari                                  :Emacs:WAITING:
+  - [X] Nye tensor
+
+* DONE Check results of current line tension models
+  SCHEDULED: <2021-02-22 Mon 09:09>
+  :LOGBOOK:
+  CLOCK: [2021-02-22 Mon 14:52]--[2021-02-22 Mon 15:17] =>  0:25
+  CLOCK: [2021-02-22 Mon 09:12]--[2021-02-22 Mon 09:37] =>  0:25
+  CLOCK: [2021-02-22 Mon 09:09]--[2021-02-22 Mon 09:10] =>  0:01
+  :END:
+[2021-02-22 Mon 09:09]
+
+* DONE with MPI organisers :MEETING:
+  SCHEDULED: <2021-02-22 Mon 10:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-22 Mon 09:10]--[2021-02-22 Mon 09:12] =>  0:02
+  :END:
+[2021-02-22 Mon 09:10]
+
+* DONE Write Bio for tony paxton martensite.org
+  SCHEDULED: <2021-02-22 Mon 16:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-22 Mon 12:30]--[2021-02-22 Mon 12:31] =>  0:01
+  :END:
+[2021-02-22 Mon 12:30]
+
+* DONE Look at kink-pair formation results for static case
+  SCHEDULED: <2021-02-26 Fri 10:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-24 Wed 16:27]--[2021-02-24 Wed 16:27] =>  0:00
+  :END:
+[2021-02-24 Wed 16:27]
+
+* DONE Atomman dislocation config
+  SCHEDULED: <2021-02-26 Fri 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-26 Fri 12:38]--[2021-02-26 Fri 13:03] =>  0:25
+  CLOCK: [2021-02-26 Fri 11:49]--[2021-02-26 Fri 11:49] =>  0:00
+  :END:
+[2021-02-26 Fri 11:49]
+
+* DONE Call Salma
+  SCHEDULED: <2021-03-02 Tue 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-27 Sat 12:16]--[2021-02-27 Sat 12:16] =>  0:00
+  :END:
+[2021-02-27 Sat 12:16]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Order Flying circus physics][Order Flying circus physics]]
+
+* DONE Rachel and Telegraph Hill
+  SCHEDULED: <2021-02-28 Sun 13:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-27 Sat 13:43]--[2021-02-27 Sat 13:43] =>  0:00
+  :END:
+[2021-02-27 Sat 13:43]
+
+* DONE [#A] Present for Emilie
+  DEADLINE: <2021-03-05 Fri 17:00> SCHEDULED: <2021-03-02 Tue 16:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-04 Thu 09:36]--[2021-03-04 Thu 10:01] =>  0:25
+  :END:
+
+* DONE Change agenda format for work and things not so urgent
+  SCHEDULED: <2021-03-02 Tue 16:00>
+  :LOGBOOK:
+  CLOCK: [2021-02-28 Sun 23:58]--[2021-02-28 Sun 23:59] =>  0:01
+  :END:
+[2021-02-28 Sun 23:58]
+
+* DONE DnD character sheets
+
+[2021-02-28 Sun 23:59]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Thesis work][Thesis work]]
+
+* DONE Incorporate displacement field from octahedral site into fe-C calcs
+  SCHEDULED: <2021-03-05 Fri 12:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-01 Mon 11:49]--[2021-03-01 Mon 11:50] =>  0:01
+  :END:
+[2021-03-01 Mon 11:49]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Review s-d tight-binding models][Review s-d tight-binding models]]
+
+* READ Write up the SKF report [3/4]
+  :LOGBOOK:
+  CLOCK: [2021-07-15 Thu 10:48]--[2021-07-15 Thu 11:13] =>  0:25
+  CLOCK: [2021-07-15 Thu 09:32]--[2021-07-15 Thu 09:57] =>  0:25
+  CLOCK: [2021-07-14 Wed 10:16]--[2021-07-14 Wed 10:41] =>  0:25
+  CLOCK: [2021-07-14 Wed 09:41]--[2021-07-14 Wed 10:06] =>  0:25
+  CLOCK: [2021-07-14 Wed 09:10]--[2021-07-14 Wed 09:35] =>  0:25
+  CLOCK: [2021-06-30 Wed 11:23]--[2021-06-30 Wed 11:48] =>  0:25
+  CLOCK: [2021-06-30 Wed 10:53]--[2021-06-30 Wed 11:18] =>  0:25
+  CLOCK: [2021-06-30 Wed 10:01]--[2021-06-30 Wed 10:26] =>  0:25
+  CLOCK: [2021-04-08 Thu 11:51]--[2021-04-08 Thu 12:16] =>  0:25
+  CLOCK: [2021-04-07 Wed 12:02]--[2021-04-07 Wed 12:27] =>  0:25
+  CLOCK: [2021-03-18 Thu 13:33]--[2021-03-18 Thu 13:58] =>  0:25
+  CLOCK: [2021-03-17 Wed 09:41]--[2021-03-17 Wed 10:06] =>  0:25
+  CLOCK: [2021-03-16 Tue 14:18]--[2021-03-16 Tue 14:43] =>  0:25
+  CLOCK: [2021-03-16 Tue 11:24]--[2021-03-16 Tue 11:49] =>  0:25
+  CLOCK: [2021-03-16 Tue 10:40]--[2021-03-16 Tue 11:05] =>  0:25
+  CLOCK: [2021-03-16 Tue 10:10]--[2021-03-16 Tue 10:35] =>  0:25
+  CLOCK: [2021-03-16 Tue 09:25]--[2021-03-16 Tue 09:50] =>  0:25
+  CLOCK: [2021-03-11 Thu 16:20]--[2021-03-11 Thu 16:45] =>  0:25
+  CLOCK: [2021-03-11 Thu 15:09]--[2021-03-11 Thu 15:34] =>  0:25
+  CLOCK: [2021-03-11 Thu 12:14]--[2021-03-11 Thu 12:39] =>  0:25
+  CLOCK: [2021-03-11 Thu 11:09]--[2021-03-11 Thu 11:34] =>  0:25
+  CLOCK: [2021-03-10 Wed 14:17]--[2021-03-10 Wed 14:42] =>  0:25
+  CLOCK: [2021-03-08 Mon 14:58]--[2021-03-08 Mon 15:23] =>  0:25
+  CLOCK: [2021-03-08 Mon 10:53]--[2021-03-08 Mon 11:18] =>  0:25
+  CLOCK: [2021-03-08 Mon 10:20]--[2021-03-08 Mon 10:45] =>  0:25
+  CLOCK: [2021-03-05 Fri 11:16]--[2021-03-05 Fri 11:41] =>  0:25
+  CLOCK: [2021-03-04 Thu 18:32]--[2021-03-04 Thu 18:57] =>  0:25
+  CLOCK: [2021-03-04 Thu 16:59]--[2021-03-04 Thu 17:24] =>  0:25
+  CLOCK: [2021-03-04 Thu 16:12]--[2021-03-04 Thu 16:37] =>  0:25
+  CLOCK: [2021-03-04 Thu 15:37]--[2021-03-04 Thu 16:02] =>  0:25
+  CLOCK: [2021-03-04 Thu 14:15]--[2021-03-04 Thu 14:35] =>  0:20
+  CLOCK: [2021-03-04 Thu 11:04]--[2021-03-04 Thu 11:29] =>  0:25
+  CLOCK: [2021-03-04 Thu 10:16]--[2021-03-04 Thu 10:34] =>  0:18
+  CLOCK: [2021-03-03 Wed 17:10]--[2021-03-03 Wed 17:35] =>  0:25
+  CLOCK: [2021-03-03 Wed 16:36]--[2021-03-03 Wed 17:01] =>  0:25
+  CLOCK: [2021-03-03 Wed 16:04]--[2021-03-03 Wed 16:29] =>  0:25
+  CLOCK: [2021-03-03 Wed 15:30]--[2021-03-03 Wed 15:55] =>  0:25
+  CLOCK: [2021-03-01 Mon 12:14]--[2021-03-01 Mon 12:14] =>  0:00
+  :END:
+[2021-03-01 Mon 12:14]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Incorporate displacement field from octahedral site into fe-C calcs][Incorporate displacement field from octahedral site into fe-C calcs]]
+
+<2021-08-06 Fri>--<2021-08-20 Fri>
+  - [X] Concentration cap validation
+  - [-] Kink-pair formation of hard core from data
+    - On hold due to the core seemingly becoming unstable.
+  - [X] Write up normal line-tension part
+  - [X] Figures
+
+** Line tension
+
+   Currently trying to figure out if the concentration cap is working
+   or not.
+
+** Notes
+
+   - We _expect that carbon has an effect on kink-pair formation
+     energies far from the dislocation due to the long-range of the interaction_.
+   - We do find that displacing the initial formation will reduce the
+     kink-pair formation enthalpy.
+   - Still need to await the results for the d model.
+   - It does still seem as if with the longer-ranged interaction of
+     carbon, there is a more muted effect on the dislocation
+     lineshape.
+   - *Conclusion*: This means that short ranged interactions are
+     important.
+
+** TODO Look at the progression of the x lineshape with the displaced images to see if reminiscent of Hydrogen case.
+   :LOGBOOK:
+   CLOCK: [2021-03-04 Thu 10:34]--[2021-03-04 Thu 10:41] =>  0:07
+   :END:
+
+* DONE Roam add link
+
+https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125?gi=ea2b974720a9
+
+* DONE Fix cluster
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 09:47]--[2021-03-03 Wed 09:48] =>  0:01
+  CLOCK: [2021-03-03 Wed 09:23]--[2021-03-03 Wed 09:47] =>  0:24
+  CLOCK: [2021-03-03 Wed 09:22]--[2021-03-03 Wed 09:22] =>  0:00
+  :END:
+[2021-03-03 Wed 09:22]
+
+* TODO Errorbars for the Peierls Potential
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 09:47]--[2021-03-03 Wed 09:47] =>  0:00
+  :END:
+[2021-03-03 Wed 09:47]
+
+* DONE Check displaced oct relaxations
+  SCHEDULED: <2021-03-13 Sat 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 11:15]--[2021-03-05 Fri 11:16] =>  0:01
+  :END:
+[2021-03-05 Fri 11:15]
+
+* DONE SEBASTIAN: Get figures for article
+  SCHEDULED: <2021-04-13 Tue 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-12 Fri 09:32]--[2021-03-12 Fri 09:32] =>  0:00
+  :END:
+[2021-03-12 Fri 09:32]
+
+* DONE Send tony a copy of the paper by Chzran
+  SCHEDULED: <2021-03-15 Mon 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-12 Fri 13:54]--[2021-03-12 Fri 13:55] =>  0:01
+  :END:
+[2021-03-12 Fri 13:54]
+
+* DONE PRESALE: boiler room
+  DEADLINE: <2021-03-19 Fri 10:00> SCHEDULED: <2021-03-19 Fri 09:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-12 Fri 19:33]--[2021-03-12 Fri 19:34] =>  0:01
+  :END:
+[2021-03-12 Fri 19:33]
+
+* DONE Ask luke about getting vibrational modes from kink formation in iron
+  SCHEDULED: <2021-03-18 Thu 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-13 Sat 19:16]--[2021-03-13 Sat 19:16] =>  0:00
+  :END:
+[2021-03-13 Sat 19:16]
+
+* TODO fermi dirac and mclean line tension
+  :LOGBOOK:
+  CLOCK: [2021-03-30 Tue 12:50]--[2021-03-30 Tue 12:50] =>  0:00
+  :END:
+[2021-03-30 Tue 12:50]
+
+* DONE Check the alternative binding energy calculations
+  SCHEDULED: <2021-04-13 Tue 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-04-09 Fri 11:01]--[2021-04-09 Fri 11:01] =>  0:00
+  :END:
+  - The alternative binding energy calculations did not work. We found
+    that there was a core reconstruction due to the displacement of
+    the three atoms surrounding the core.
+  - Because we did not find that there was an agreement between the
+    dislocation dipole results for the octahedral sites in the first
+    and second neighbour positions, we have chosed to abandon this
+    method for calculating the binding energy, even though from an
+    initial perspective, it seems to be more physical.
+
+[2021-04-09 Fri 11:01]
+
+* TODO Line-tension Model [1/3]
+  :PROPERTIES:
+  :COOKIE_DATA: todo
+  :END:
+  :LOGBOOK:
+  CLOCK: [2021-04-10 Sat 16:49]--[2021-04-10 Sat 16:50] =>  0:01
+  :END:
+
+  <2021-08-06 Fri>--<2021-08-27 Fri>
+
+** DONE Check  neb calculation to find the transition states for carbon migration
+   SCHEDULED: <2021-06-15 Tue>
+
+** TODO Implement velocity dependent term in the equations.
+** TODO Check about the value for the prefactor. Is it the same as that for hydrogen in this case?
+   :LOGBOOK:
+   CLOCK: [2021-04-10 Sat 19:21]--[2021-04-10 Sat 19:30] =>  0:09
+   CLOCK: [2021-04-10 Sat 19:05]--[2021-04-10 Sat 19:21] =>  0:16
+   :END:
+
+* DONE Ti: Increase on-site energy when fitting sd model for hybridisation
+  SCHEDULED: <2021-04-13 Tue 17:00>
+  :LOGBOOK:
+  CLOCK: [2021-04-12 Mon 16:52]--[2021-04-12 Mon 16:52] =>  0:00
+  :END:
+[2021-04-12 Mon 16:52]
+[[file:~/Documents/docs/Management/thesis_structure.org::*Differences in assumptions for the velocity dependence][Differences in assumptions for the velocity dependence]]
+
+* DONE Run neb calculation for H2-H7
+  SCHEDULED: <2021-04-13 Tue 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-04-13 Tue 12:31]--[2021-04-13 Tue 12:32] =>  0:01
+  :END:
+[2021-04-13 Tue 12:31]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Write up the SKF report][Write up the SKF report]]
+
+* DONE Collate results for meeting
+  SCHEDULED: <2021-05-24 Mon 13:30>
+  :LOGBOOK:
+  CLOCK: [2021-05-24 Mon 13:21]--[2021-05-24 Mon 13:46] =>  0:25
+  CLOCK: [2021-05-24 Mon 11:03]--[2021-05-24 Mon 11:04] =>  0:01
+  :END:
+[2021-05-24 Mon 11:03]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Check fitting of the TiO2 Bond integrals][Check fitting of the TiO2 Bond integrals]]
+
+* TODO Hydrogen-titanium fitting [7/9]
+  :PROPERTIES:
+  :COOKIE_DATA: todo
+  :END:
+
+  :LOGBOOK:
+  CLOCK: [2021-08-11 Wed 13:24]--[2021-08-11 Wed 13:49] =>  0:25
+  CLOCK: [2021-07-14 Wed 14:29]--[2021-07-14 Wed 14:54] =>  0:25
+  CLOCK: [2021-07-05 Mon 11:09]--[2021-07-05 Mon 11:34] =>  0:25
+  CLOCK: [2021-06-21 Mon 10:51]--[2021-06-21 Mon 11:13] =>  0:22
+  CLOCK: [2021-06-21 Mon 10:48]--[2021-06-21 Mon 10:51] =>  0:03
+  CLOCK: [2021-06-07 Mon 10:50]--[2021-06-07 Mon 11:13] =>  0:23
+  CLOCK: [2021-06-07 Mon 10:48]--[2021-06-07 Mon 10:49] =>  0:01
+  CLOCK: [2021-06-07 Mon 09:53]--[2021-06-07 Mon 10:18] =>  0:25
+  CLOCK: [2021-06-03 Thu 12:29]--[2021-06-03 Thu 12:32] =>  0:03
+  :END:
+  [2021-06-03 Thu 12:29]
+
+  <2021-08-06 Fri>--<2021-09-03 Fri>
+
+
+
+** TODO Fitting of TiH with TiO2
+   :LOGBOOK:
+   CLOCK: [2021-08-24 Tue 15:55]--[2021-08-24 Tue 16:19] =>  0:24
+   CLOCK: [2021-08-23 Mon 11:46]--[2021-08-23 Mon 12:11] =>  0:25
+   CLOCK: [2021-08-23 Mon 11:22]--[2021-08-23 Mon 11:38] =>  0:16
+   :END:
+
+*** <2021-08-23 Mon>
+    - Write script to extract the best data from the fitting.
+
+*** <2021-08-09 Mon>
+    - Seems like there are partially filled bands in the tio2 phases
+      when running the script as the onsite energies must compete with
+      the TiH phases (which need the d level to be far lower in
+      energy...)
+    - The fitting struggles but we will see what happens.
+
+** TODO Energy barrier for H hopping between interstices
+** DONE Ask for Dimitar's advice on the LMTO binaries
+
+** DONE Combine hydrogen-Ti fitting with that of the TiO2 parameters
+
+   _What parameters can we manipulate?_
+   - Ti-O parameters
+     - All the hoppings as long as the bands aren't changed too much
+       to affect the band structure.
+       - Measure for the deviation from the band structure?
+
+   - Ti-H parameters
+     - Not sure I agree with the calculation of the solution energy:
+       check with validation test.
+     - _Running test on juc now_
+     - Perhaps just run cells in DFT on the big computer pashov is
+       part of.
+     - Maybe change the pair potential prefactor for the adsorption energy
+
+   - Unit testing?
+
+** DONE H in tetrahedral/octahedral site
+** DONE H on surface holo/bridge
+
+- Hydrogen-Hydrogen fitting.
+
+** DONE Check fitting of the TiO2 Bond integrals [1/1]
+   :PROPERTIES:
+   :COOKIE_DATA: todo
+   :END:
+   :LOGBOOK:
+   CLOCK: [2021-08-03 Tue 16:12]--[2021-08-03 Tue 16:37] =>  0:25
+   CLOCK: [2021-08-03 Tue 12:26]--[2021-08-03 Tue 12:51] =>  0:25
+   CLOCK: [2021-05-25 Tue 12:18]--[2021-05-25 Tue 12:43] =>  0:25
+   CLOCK: [2021-05-24 Mon 10:31]--[2021-05-24 Mon 10:56] =>  0:25
+   CLOCK: [2021-05-24 Mon 10:00]--[2021-05-24 Mon 10:25] =>  0:25
+   CLOCK: [2021-04-12 Mon 16:52]--[2021-04-12 Mon 16:53] =>  0:01
+   :END:
+   [2021-04-12 Mon 16:52]
+
+
+ [[file:~/Documents/docs/Management/thesis_structure.org::*Differences
+ in assumptions for the velocity dependence][Differences in assumptions
+ for the velocity dependence]]
+
+*** DONE What is causing rutile to be less favoured than anatase? [1/1]
+
+    - Rutile is actually favoured I was being dumb
+
+    - Is it to do with the extra s orbital on the Ti?
+      - This can cause a strong attraction from sssigma bond integral
+    - [X] Check models with and without s orbital and find the energy
+      difference between phases. Check sasha's calculations
+
+** DONE Fit the H-H hopping integrals by fitting to the s band of the fluorite hydride
+** DONE Total energy differences between phases [0/3]
+
+   Different Ti-H phases that we can fit to:
+
+   Fitting to:
+   - [ ] δ-TiH2 (fcc with 8 hydrogens)
+   - [ ] ε-TiH2 (fcc with 8 hydrogens, c/a < 1)
+   - [ ] γ-TiH  (fcc with 4 hydrogens, c/a > 1) -- Lower temperature phase
+
+
+   - [ ] TiH2 from materials project.
+     - [[https://materialsproject.org/materials/mp-24161/#]]
+     - K = 141GPa
+     - C_11 = 97 GPa
+     - C_12 = 162 GPa
+     - C_44 = -6 GPa
+       Paper found in cite:Poletaev2016
+   - Can fit to the formation energies of these phases from DFT
+   - Just do a little structural optimisation for the bct phases
+     during the fitting.
+   - Current work: doing the DFT calculations to make sure I have the
+     right structures
+   - Fit to get the tight-binding parameters
+   - Look at the energy of hydrogen going to the surface of titanium
+     such that we can see the long-range interaction.
+
+
+   - [ ] TiH4
+   - [ ] TiH3
+
+* DONE Get Concealer and Conditioner from superdrug
+  SCHEDULED: <2021-06-07 Mon 15:00>
+  :LOGBOOK:
+  CLOCK: [2021-06-06 Sun 19:28]--[2021-06-06 Sun 19:29] =>  0:01
+  :END:
+[2021-06-06 Sun 19:28]
+
+* TODO EFA [3/7]
+  :PROPERTIES:
+  :COOKIE_DATA: todo
+  :END:
+
+  <2021-08-06 Fri>--<2021-09-03 Fri>
+
+** TODO Ask Rupert about the Technical Document
+*** TODO Add details of the MVP which we have done to the document
+** TODO Calculator and wireframe                                        :EFA:
+   :LOGBOOK:
+   CLOCK: [2021-06-16 Wed 15:03]--[2021-06-16 Wed 15:03] =>  0:00
+   :END:
+ [2021-06-16 Wed 15:03]
+ [[file:~/Documents/docs/Management/org/TODOs.org::*Look into how to build an application with API][Look into how to build an application with API]]
+
+** TODO Django Web App How to                                           :EFA:
+** HOLD AZ 900 Exam by microsoft                                       :HOLD:
+   - State "HOLD"       from "TODO"       [2021-08-06 Fri 10:58] \\
+     This might be useful for development/deployment later on
+   :LOGBOOK:
+   CLOCK: [2021-06-17 Thu 20:09]--[2021-06-17 Thu 20:10] =>  0:01
+   :END:
+ [2021-06-17 Thu 20:09]
+ [[file:~/Documents/docs/Management/org/TODOs.org::*Figures for RR presentation][Figures for RR presentation]]
+
+** DONE Create Gantt chart for the development
+   SCHEDULED: <2021-08-09 Mon 15:00>
+   - Use Agile for the actual development cycle?
+
+
+** DONE Read contract of Rupert
+
+*** Qualms:
+    Not really any. It seems fine. I could ask for more, but it seems
+    reasonable.
+
+** DONE Look into how to build an application with API                  :EFA:
+
+   SCHEDULED: <2021-06-16 Wed 14:00>
+   :LOGBOOK:
+   CLOCK: [2021-06-16 Wed 10:48]--[2021-06-16 Wed 10:49] =>  0:01
+   :END:
+   [2021-06-16 Wed 10:48]
+   [[file:~/Documents/docs/Management/org/supervision.org::*with EFA
+   Rupert Orson][with EFA Rupert Orson]]
+
+   This might not be necessary given the webapp framework is how
+   clients will interact with things.
+
+   The only use of the API will be for us to extract data from the
+   database for analysis.
+
+
+ 
+* DONE Figures for RR presentation
+  SCHEDULED: <2021-06-17 Thu 16:00>
+  :LOGBOOK:
+  CLOCK: [2021-06-17 Thu 15:44]--[2021-06-17 Thu 16:09] =>  0:25
+  CLOCK: [2021-06-17 Thu 15:43]--[2021-06-17 Thu 15:44] =>  0:01
+  :END:
+[2021-06-17 Thu 15:43]
+* DONE Show Rupert Gitlab stuff
+  SCHEDULED: <2021-07-14 Wed 15:10>
+  :LOGBOOK:
+  CLOCK: [2021-07-14 Wed 10:15]--[2021-07-14 Wed 10:16] =>  0:01
+  :END:
+[2021-07-14 Wed 10:15]
+* TODO Give sasha the repulsive pair potential: test it
+  :LOGBOOK:
+  CLOCK: [2021-07-15 Thu 11:55]--[2021-07-15 Thu 11:55] =>  0:00
+  :END:
+[2021-07-15 Thu 11:55]
+* DONE Contact RR about internship dates
+  SCHEDULED: <2021-07-22 Thu 10:45>
+  :LOGBOOK:
+  CLOCK: [2021-07-22 Thu 10:30]--[2021-07-22 Thu 10:31] =>  0:01
+  :END:
+[2021-07-22 Thu 10:30]
+* DONE Get present for Emilie
+  SCHEDULED: <2021-07-23 Fri 13:00>
+  :LOGBOOK:
+  CLOCK: [2021-07-22 Thu 10:55]--[2021-07-22 Thu 10:56] =>  0:01
+  :END:
+[2021-07-22 Thu 10:55]
+[[file:~/Documents/docs/Management/org/TODOs.org::*Write up the SKF report][Write up the SKF report]]
+* TODO Check reference energies
+[2021-07-22 Thu 13:13]
+* WAITING Chat with Nigel about RR Internship                       :WAITING:
+  - State "WAITING"    from "TODO"       [2021-08-12 Thu 15:05] \\
+    Waiting for response from Nigel's Colleague
+  :LOGBOOK:
+  CLOCK: [2021-08-09 Mon 13:54]--[2021-08-09 Mon 13:54] =>  0:00
+  :END:
+[2021-08-09 Mon 13:54]
+
+
+* MEETING with Counsellor                                           :MEETING:
+  SCHEDULED: <2021-08-26 Thu 17:00 ++7d>
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-08-13 Fri 11:12]
+  :REPEAT_TO_STATE: MEETING
+  :END:
+  - State "DONE"       from "MEETING"    [2021-08-13 Fri 11:12]
+* TODO Fix printers
+  SCHEDULED: <2021-09-02 Thu 10:00>
+  :LOGBOOK:
+  CLOCK: [2021-08-24 Tue 14:40]--[2021-08-24 Tue 15:05] =>  0:25
+  CLOCK: [2021-08-24 Tue 10:32]--[2021-08-24 Tue 10:57] =>  0:25
+  CLOCK: [2021-08-23 Mon 17:47]--[2021-08-23 Mon 18:12] =>  0:25
+  CLOCK: [2021-08-23 Mon 17:10]--[2021-08-23 Mon 17:35] =>  0:25
+  CLOCK: [2021-08-23 Mon 14:08]--[2021-08-23 Mon 14:10] =>  0:02
+  :END:
+[2021-08-23 Mon 14:08]
+
+- Tony has a problem using lpr fm-hp to print
+- See if there is a problem with cups
+* DONE Email Nigel Martin about Accommodation
+  SCHEDULED: <2021-08-24 Tue 09:00>
+  :LOGBOOK:
+  CLOCK: [2021-08-24 Tue 09:08]--[2021-08-24 Tue 09:33] =>  0:25
+  CLOCK: [2021-08-24 Tue 09:07]--[2021-08-24 Tue 09:07] =>  0:00
+  :END:
+[2021-08-24 Tue 09:07]
+* DONE Email Aalto about dates and accommadation
+  SCHEDULED: <2021-08-24 Tue 09:30>
+  :LOGBOOK:
+  CLOCK: [2021-08-24 Tue 09:07]--[2021-08-24 Tue 09:08] =>  0:01
+  :END:
+[2021-08-24 Tue 09:07]

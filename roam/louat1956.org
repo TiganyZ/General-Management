@@ -1,0 +1,16 @@
+#+TITLE: Louat1956: The Effect of Temperature on Cottrell Atmospheres
+#+ROAM_KEY: cite:Louat1956
+- tags ::
+- keywords ::
+
+* The Effect of Temperature on Cottrell Atmospheres
+  :PROPERTIES:
+  :Custom_ID: Louat1956
+  :URL: https://doi.org/10.1088/0370-1301/69/4/305
+  :AUTHOR: Louat, N.
+  :NOTER_DOCUMENT: ~/Zotero/storage/68DZB436/Louat - 1956 - The Effect of Temperature on Cottrell Atmospheres.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

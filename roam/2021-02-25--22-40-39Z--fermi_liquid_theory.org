@@ -1,0 +1,53 @@
+#+TITLE: Fermi Liquid Theory
+* Notes
+  - We can treat the full Hamiltonian
+    \[ \hat{H} = \sum_i -\nabla^{2}_i / 2m + \sum_i V(\mathbf{R}_i)  +
+    \sum_{i<j} V_{\text{int}}(\mathbf{r}_i - \mathbf{r}_j)  \]
+
+  - We can apply the [[file:2021-02-25--22-45-30--hartree_fock_approximation.org][Hartree-Fock Approximation]] such that we can find
+    the ground state.
+
+  - /Fermi liquid theory is to describe the excited states/
+  - Assume that the low energy states can by written as _combinations
+    of quasiparticles_.
+  - N degrees of freedom → 2^N states (occupied/not)
+  - Put electrons into orbital with ground state.
+  - Each single orbital excitation is a quasiparticle
+  - Can have /interactions between the quasiparticles which are the
+    second order + terms/
+
+    \[ E_{\text{excited state}} = \sum_{\alpha} \varepsilon_{\alpha}
+    n_{\alpha} + \sum_{\alpha,\beta} F_{\alpha,\beta} n_{\alpha}
+    n_{\beta} + \cdots  \], where $n_{\alpha} = 0,1$
+  - Make assumption that all the excited states can be written in only
+    *polynomial number of variables*.
+  - N, N^2 for the first and second terms in equation.
+
+** Adding/removing from fermi sphere
+   - Can create quasiparticle outside of fermi sphere $\varepsilon_p >
+     0$
+   - Can make hole quasiparticle inside fermi sphere
+     - This makes excitation energy $-\varepsilon_p > 0$ as the
+       $\varepsilon_p$ is /negative/.
+   - There are *zero energy excitations of holes/electrons at fermi
+     wavevector*.
+   - E_excite |____\pf/___> p
+   - $E_{\text{excite}} =  | \varepsilon_p |$
+   - *Adding interactions makes everything "quasi", so then still
+     have same behaviour*
+   - All e lose energy when being scattered say closer to fermi
+     surface.
+   - Imagine interaction is with hole scattered out past fermi
+     surface (e -> scattered e + hole + e from hole)
+   - As energy conserved (sum of hole + hole generated e + scattered
+     e)
+   - As we have more things in products, then phase space gets
+     smaller and smaller and gets closer to fermi surface.
+   - Electron-hole pairs are quasi particles.
+   - Live forever the closer we get to the fermi surface, as decay
+     time with energy becomes longer.
+
+* Questions :QUESTIONS:
+* Summary :SUMMARY:
+  - This describes the excited states of a system in terms of
+    quasiparticles.

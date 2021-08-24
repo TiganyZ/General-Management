@@ -121,7 +121,11 @@
     /* width: 25%; */
     /* bottom: -5em; */
     /* left: -8em; */
-    box-shadow: 5px 5px 10px #000;
+    /* box-shadow: 5px 5px 10px #000; */
+    /* box-shadow: 10px 10px 5px #ccc; */
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
     width: 50%;
 }
 
@@ -133,7 +137,11 @@
     /* width: 15%; */
     /* bottom: 20em; */
     /* left: 30em; */
-    box-shadow: 5px 5px 10px #000;
+    /* box-shadow: 10px 10px 5px #ccc; */
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+    /* box-shadow: 5px 5px 10px #000; */
     width: 55%;
 }
 

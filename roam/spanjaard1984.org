@@ -1,0 +1,16 @@
+#+TITLE: Spanjaard1984: Comment on "Universal features of bonding in metals
+#+ROAM_KEY: cite:Spanjaard1984
+- tags ::
+- keywords ::
+
+* Comment on "Universal features of bonding in metals
+  :PROPERTIES:
+  :Custom_ID: Spanjaard1984
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.30.4822
+  :AUTHOR: Spanjaard, D., & Desjonquères, M. C.
+  :NOTER_DOCUMENT: ~/Zotero/storage/KPHKMIXN/Spanjaard and Desjonquères - 1984 - Comment on Universal features of bonding in metal.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,16 @@
+#+TITLE: Heine1980: Electronic Structure from the Point of View of the Local Atomic Environment
+#+ROAM_KEY: cite:Heine1980
+- tags ::
+- keywords ::
+
+* Electronic Structure from the Point of View of the Local Atomic Environment
+  :PROPERTIES:
+  :Custom_ID: Heine1980
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S0081194708605032
+  :AUTHOR: Heine, V.
+  :NOTER_DOCUMENT: ~/Zotero/storage/YI9HEUQJ/Electronic_Structure_from_the_Point_of_View_of_the_Local_Atomic_Environment_Heine_1980.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

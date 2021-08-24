@@ -11,13 +11,9 @@
 #+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
 #+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
 
-
-
-
 * Tasks
+** TODO Ti3Al report---DFT chapter
 
-
-** TODO Ti3Al report---DFT chapter 
 - Start with the theory of DFT with the HK theorem and KS equations to solve
   for the density.
 - Talk a bit about the approximations that are made. 
@@ -31,8 +27,8 @@
   implications are for alloy research
 - What can I add to the research. 
 
+** TODO Ti/Ti3Al DFT oxygen interstitial/vacancy binding energy
 
-** TODO Ti/Ti3Al DFT oxygen interstitial/vacancy binding energy 
 Want to find the vacancy formation energy, and the dissolution energy of
 oxygen interstitials at different sites in the Ti3Al lattice. 
 
@@ -41,8 +37,10 @@ energy of oxygen to a vacancy thus elucidating if it is favourable comapared
 to just the normal positions. 
 
 This will provide insight into the high amount of vacancies with oxygen. 
+
 *** Notes on the calculations
 **** Setting up relaxation
+
 - To set up one calculates the self consistent density first by not initiating
 relaxation. 
 
@@ -54,8 +52,8 @@ the overlap of atomic densities.
 One is then able to minimise the energy accordingly. 
 
 **** Basis set optimisatons
-
 ***** Notes on the basis set
+
 It has been seen that the a smaller sphere radius for the oxygen was giving a much
 larger overlap (~17%) in the T2 interstitial site than any of the octahedral
 sites, which have an overlap of ~1.6%. 
@@ -90,9 +88,8 @@ The best sphere radius for the oxygen is 0.78.
 Asking Dimitar about the plane wave basis set, he said to use the defaulf
 values that are generated when making a blm file. 
 
-
-
 ***** Perfect lattice
+
 spec name old rmax new rmax ratio 
 1 Ti 2.707297 3.024213 1.117060 
 2 Al 2.638772 2.947667 1.117060
@@ -109,6 +106,7 @@ Ti RSMH= 1.805 1.805 1.269 1.805 EH= -0.1 -0.1 -0.1 -0.1
 Al RSMH= 1.759 1.759 1.759 EH= -0.1 -0.1 -0.1 RSMH2= 1.759 1.759 EH2= -0.9 -0.9 P= 3.837 3.75 3.392 4.13 5.089
 
 ***** O2 site (least overlap)
+
 spec name old rmax new rmax ratio 
 1 Ti 2.663548 2.746597 1.031179 
 2 Al 2.576718 2.746597 1.065928 
@@ -122,6 +120,7 @@ O RSMH= 0.845 0.82 1.108 1.108 EH=-0.505 -0.1 -0.1 -0.1 RSMH2= 0.845 0.82
    EH2= -1.305 -0.9 P= 2.886 2.858 3.25 4.11
 
 ***** O1 site (next least overlap)
+
 spec name old rmax new rmax ratio 
 1 Ti 2.641151 2.734882 1.035489 
 2 Al 2.638731 3.547117 1.344251 
@@ -154,9 +153,8 @@ O RSMH= 0.831 0.982 0.982 0.982 EH= -0.474 -0.1 -0.1 -0.1 RSMH2= 0.831 0.982
   EH2= -1.274 -0.9 P= 2.871 2.845 3.25 4.11
 
 ***** T2 site (Most overlap)
+
 # 3 ti atom coordination and al atom on to
-
-
 
 *** Vacancy formation energy definition
 
@@ -174,7 +172,9 @@ The solution enthalpy of particular species is given by
 $$ E_{text{solution}} = E( \text{Ti}_{N}X_1 ) - E( \text{Ti}_{N}) - E( X ) $$
 
 This is the same as  a formation energy $\Delta E^{\text{f}}_{\text{O}}$
-*** Vacancy-solute binding energy 
+
+*** Vacancy-solute binding energy
+
 cite:wolverton07_solut_vacan_bindin_alumin
 
 $$ -E_{\text{bind}}( X - \text{Vac} ) = E( \text{Ti}_{N - 2} X_1 \text{Vac}_1 )
@@ -196,7 +196,8 @@ $$ E_{\text{bind}}^{V - X} =   + E( \text{Ti}_{N - 1} X_1 )
                                - E( \text{Ti}_{N - 2} X_1 \text{Vac}_1 )
                                - E( \text{Ti}_{N})                       $$
 
-*** Dilute impurity energy and Vacancy formation energy  
+*** Dilute impurity energy and Vacancy formation energy
+
 cite:wolverton07_solut_vacan_bindin_alumin
 $$ E_{text{impurity}}(X) = E( \text{Ti}_{N-1}X_1 ) 
                          + \frac{N-1}{N} E(\text{Ti}_{N}) 
@@ -205,14 +206,9 @@ $$ E_{text{impurity}}(X) = E( \text{Ti}_{N-1}X_1 )
 $$ E_{text{vacancy}}(\text{Vac}) = E( \text{Ti}_{N-1}\text{Vac}_1 ) 
                                      + \frac{N-1}{N} E(\text{Ti}_{N}) $$
 
-
-
-
-
 *** Basis set
+*** Relevant papers
 
-
-*** Relevant papers 
 cite:bakulin17_absor_diffus_oxygen_ti3al_alloy 
 
 cite:wei11_effec_o_binar_phase_tial_ti3al_alloy
@@ -414,13 +410,14 @@ The configurational entropy of the model system is
      - Nnk ( c_{bb} \text{log} c_{bb} + c_{ab} \text{log} c_{ab} + c_{vb} \text{log} c_{vb} ) \]
 
 ** TODO Approximate Bayesian Computation with Aldo Gielmo
-
 *** Literature
+
 Literature that Aldo has sent me. 
 [[file:literature_and_notes/abc%20model%20choice%20Xian.pdf]]
 [[file:literature_and_notes/nice%20intro%20ABC.pdf]]
 
 *** Plan
+
 Fit tight-binding model using ABC (Approximate Bayesian Computation). 
 
 Initially we are thinking of using the current tight binding model for Titanium, but really one
@@ -433,16 +430,15 @@ for Ti.
 There will be changes to the energy ordering, lattice parameters etc, but it should work quite
 well. 
 
-
-
 ** TODO Read Luke's Thesis for Netherlands
-** TODO Write up fitting and optimisation 
+** TODO Write up fitting and optimisation
 
 Please go to:
 [[file:ti_model_notes.org]]
 
-** TODO Gamma Surfaces for New Model 
+** TODO Gamma Surfaces for New Model
 *** BOP
+
 This was determined using non-periodicity along the z direction. 
 
 
@@ -468,16 +464,13 @@ effect on the stacking fault energy than the free surfaces in the BOP
 simulation. 
 
 **** Basal Gamma Surfaces
-
 ***** tbe
 
 [[file:Images/basal_gamma_surface_tbe_15_layers_2019-09-24png.png]]
 
 [[file:Images/basal_gamma_surface_tbe_15_z.png]]
 
-
 **** Prismatic Gamma Surfaces
-
 ***** tbe
 
 [[file:Images/prismatic_gamma_surface_tbe_15_layers_2019-09-24.png]]
@@ -486,10 +479,11 @@ simulation.
 
 ** TODO Write first section of Literature review
 *** TODO Summarise Stacking Faults and write review
-*** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism. 
+*** TODO Write up the tight binding fitting of oxygen and an explanation for paramagnetism.
 *** TODO Summarise dislocations and Oxygen interactions (review)
 ** TODO See how the PDOS changes with addition of oxygen and how the tetrahedral/octahedral sites change this.
-** TODO Calculate solution enthalpy of oxygen in titanium. 
+** TODO Calculate solution enthalpy of oxygen in titanium.
+
 - The solution enthalpy $E_{\text{sol}}$ and excess volume $\Delta V$ is 
   $$ E_{\text{sol} = E( \text{Ti}_n \text{O} ) - E( \text{Ti}_n ) - E(O) $$
   $$ \Delta V = V( \text{Ti}_n \text{O} ) - V( \text{Ti}_n ) $$
@@ -499,14 +493,18 @@ simulation.
 - Influence of cell sizes and solution enthalpy needs to be considered.
 
 ** TODO Has anyone investigated the stacking faults of Omega phase?
+
    - Maybe as Omega phase doesn't occur that often, perhaps it has not been
      studied in detail.
    - I should look further into thsi
-** TODO Finish doing the gamma surfaces for all planes for pure titanium. 
+
+** TODO Finish doing the gamma surfaces for all planes for pure titanium.
 *** Checking the convergence criteria
+
       - Now checking the convergence criteria.
 
 **** How the lattice parameters change with the fineness of the k mesh
+
      - Maybe with a less fine k mesh the lattice parameters become
        worse. 
      - SOLUTION: The lattice parameters do not change that much under
@@ -517,6 +515,7 @@ simulation.
      [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk.png][e_vs_nk]]
 
 ***** What if rmaxh is smaller or larger?
+
       - If rmaxh is is smaller (say rmaxh = 6.7 bohr) then we get the same
         results. 
    #+CAPTION: Variation of energy with k mesh.
@@ -541,13 +540,15 @@ simulation.
    #+NAME:   fig:c_hcp_vs_nk_large_rmaxh.png
 	[[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_large_rmaxh.png]]
       - Data: [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/a_hcp_vs_nk_rmaxh_large.pkl][a_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/c_hcp_vs_nk_rmaxh_large.pkl][c_hcp large rmaxh]], [[file:~/Documents/disl_gsurf/hcp_pris_screw/hcp_relaxed_pris_screw/gamma_surfaces/e_hcp_vs_nk_rmaxh_large.pkl][e_hcp large rmaxh]]
-      
-**** How does rmaxh change the lattice parameters?
 
+**** How does rmaxh change the lattice parameters?
 ***** How does rmaxh change the energy of a supercell
+
       - How does the number of neighbours change and what is the relation
 	between rmaxh and larger cell sizes.
+
 *** Notes on the model.
+
     It seems that there is a lot of charge moving around when doing the
     relaxations. 
     I think that this may be due to the fact that there is no Hubbard U
@@ -559,13 +560,11 @@ TBE: nbas = 128 nspec = 1 verb 31
 TB: rmaxh = 20, m-stat: F-P rlx-vol, rho 
 bz: metal
      #+END_SRC
-    
 
-     
 *** DONE Implement Homogenous Shear boundary conditions for gamma surface calculation.
-    CLOSED: [2018-11-19 Mon 12:08]
-** Final Model 
+CLOSED: [2018-11-19 Mon 12:08]
 
+** Final Model
 
  fdd=0.2648249504 qdds=0.5697753882 qddp=0.5648597117 qddd=0.8213593849 b0=49.75575654 p0=1.105068573 b1=-5.09734161 p1=0.6991977165 cr2=3.221758936 cr3=-1.141827235 cr1=-6.0 ndt=2.0 r1dd=6.3741123381 rcdd=9.8768388324 rmaxhm=9.9756072207 
 VARGS
@@ -622,10 +621,8 @@ the dislocatons in a stable position in the quadrupolar array.
 There is no asymmetry in relaxations now between the dislocations of different
 sign. This now works as expected. 
 
-
-
-
 ** Embedded atom method
+
 This is a semi empirical method that does not take into account directional
 bonding. It does not treat covalency or charge transfer. Neither does it
 incorporate Fermi surface effects. 
@@ -633,8 +630,9 @@ incorporate Fermi surface effects.
  The main physical property incorporated in the EAM is the moderation of bond
  strength by other bonds (coordination-dependent bond strength).
 
-* Completed Tasks                                                   :ARCHIVE:
+* Completed Tasks :ARCHIVE:
 ** Investigate why rmaxh changes energy
+
    - Variation of rmaxh does not change the energy
    - Obviously the number of neighbours changes with rmaxh.
    - Conclusion: rmaxh only determines what atoms are its neighbours. 
@@ -651,13 +649,15 @@ incorporate Fermi surface effects.
    #+CAPTION: Variation of number of neighbours with change in rmaxh
    #+NAME:   fig:n_neighbours_vs_rmaxh.png
    [[file:~/Documents/ti/complete_titanium/ti_01-11-18/mod_rmaxh/n_neighbours_vs_rmaxh.png]]
-   
-** Show supercell of BOP working 
 
+** Show supercell of BOP working
 ** Check Stability Criteria
+
    - Check if the matrix is complex
    - Check if it is positive definite. 
-*** Results 
+
+*** Results
+
     - Without changing anything, the total energy of hcp in Tony's newest
       model is $E_{\text{tot hcp}} = -0.57230068 \text{Ryd}$
     - I thought perhaps that the lattice parameters and the elastic constants
@@ -701,10 +701,14 @@ C_11 > 0
   True
 
 #+END_SRC
-** Build force constant matrix for hcp 
+
+** Build force constant matrix for hcp
+
    - If the force constant matrix is positive definite then there shan't be
      any soft modes.
+
 *** Results
+
     - File used is [[file:~/Documents/ti/complete_titanium/ti_01-11-18/check_ec_pos_definite/check_ec_pos_definite.py][check_ec_pos_definite.py]]
     - Using Fourth order $\mathcal{O}(h^{4})$ formula for the mixed
       derivatives, one can find the $6\times6$ force constant matrix.
@@ -768,35 +772,28 @@ Force Constant Matrix
  [ 1.0618e-03 -2.4672e-13  1.8512e+00 -1.0618e-03 -2.4672e-13 -7.4015e-13]]
       #+END_SRC
 
-** Make dislocations go through centre of triangle of atoms 
-
-** Investigate why the gamma surface minima are not along the lines joining the vectors. 
-
+** Make dislocations go through centre of triangle of atoms
+** Investigate why the gamma surface minima are not along the lines joining the vectors.
 ** Change the lattice vectors to make the dislocation displacement fields periodic
-
 ** Why is the displacement in the x direction in the graphs of create cells?
-
-** Make sure that the displacements are periodic 
-
+** Make sure that the displacements are periodic
 ** Calculate the Internal elastic constants, like in Cousins cite:Cousins1979
-
 ** Fix pyramidal gamma surface and how it erroneously writes to the site file only 12 atoms
-** Python script: remove include statements  -->  One file.  
-
-
-
-
-
+** Python script: remove include statements  -->  One file.
 ** DONE Could one see how to use Ising model SFEs and Fourier Interpolation?
 CLOSED: [2019-03-13 Wed 19:37]
+
 - Maybe one can do this for the Prismatic stacking fault.
   - The calculation only depends of periodicity perpendicular to the plane
     that one wants the stacking fault on.
   - This means that one can have a stacking that is probably ABCD or something
     Must investigate this further. 
+
 ** DONE Periodic dislocation arrays
 CLOSED: [2019-03-13 Wed 20:21]
+
 *** Clouet vs Cai S and O configuration
+
 Using an array like this
 
 [[file:Images/prismatic_quadrupole_wrong.png][Dipole to make quadrupolar array: before]]
@@ -838,17 +835,23 @@ If one goes through and adds in the contribution from periodic dipoles one
 does not find a periodic field, and even more troubling, is the fact that
 atoms are displaced by a very large amount from the original position in the
 unit cell ($\approx 100$ a.u.). 
+
 *** Periodic dislocation dipoles Prismatic plane
 *** Results
+
 <2019-03-12 Tue 10:20>
+
 **** Prismatic quadrupole cell size 12 x 12 x 1
 ***** Intro
+
 Following the prescription set out by Tarrat, Clouet and Cai, one made a
 supercell that is in the S configuration with a dislocation dipole that obeys
 periodic displacements with an additional strain applied to the cell such that
 the plastic strain that is introduced into the cell from the dislocation
 dipole is cancelled. 
+
 ***** Results
+
 With this cell size one found that there was weird behaviour with the
 dislocations. 
 This cell used 576 atoms. Upon relaxation, it seemed that the dislocations
@@ -860,7 +863,9 @@ lower left quadrant, dissociated into three partials:
 - a $1/18[-4 0 4 3]$ dislocation which was situated approximately c/2 down and
   1/2a to the left
 - and a $1/18[4 -6 2 -3]$ partial situated c upwards and 1/2a across.
+
 ***** Discussion
+
 It seems that a larger cell size is necessary, even though in Clouet they used
 cell sizes of 100 and 256 atoms in the S configuration. 
 
@@ -880,12 +885,10 @@ Cartesian coordinate system of the elastic constants to that of the
 dislocation reference frame is not perfect. 
 
 ***** TODO Check the transformation of the elastic constants is correct
-
-***** TODO Validate the formula used to add strain to the lattice vectors 
-
+***** TODO Validate the formula used to add strain to the lattice vectors
 ***** TODO Find out what is the interaction energy of these dislocations and see if this has a bearing on the simulation
+* Bibliography
 
-* Bibliography 
 <<bibliography link>>
 
 bibliographystyle:unsrt
@@ -895,8 +898,8 @@ bibliography:./bibliography/org-refs.bib
 # \bibliography{org-refs.bib}
 
 * Current Papers
+** Omega phase transformation – morphologies and mechanisms.
 
-** Omega phase transformation – morphologies and mechanisms. 
 Banerjee, S., Tewari, R., & Dey, G. K. (2006). 
 International Journal of Materials Research, 97(7),
 963–977. doi:10.3139/146.101327 

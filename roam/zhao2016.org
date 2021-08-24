@@ -1,0 +1,16 @@
+#+TITLE: Zhao2016: Defect energetics of concentrated solid-solution alloys from ab initio calculations: Ni 0.5 Co 0.5 , Ni 0.5 Fe 0.5 , Ni 0.8 Fe 0.2 and Ni 0.8 Cr 0.2
+#+ROAM_KEY: cite:Zhao2016
+- tags ::
+- keywords ::
+
+* Defect energetics of concentrated solid-solution alloys from ab initio calculations: Ni 0.5 Co 0.5 , Ni 0.5 Fe 0.5 , Ni 0.8 Fe 0.2 and Ni 0.8 Cr 0.2
+  :PROPERTIES:
+  :Custom_ID: Zhao2016
+  :URL: http://xlink.rsc.org/?DOI=C6CP05161H
+  :AUTHOR: Zhao, S., Stocks, G. M., & Zhang, Y.
+  :NOTER_DOCUMENT: ~/Zotero/storage/XW45GVZV/Zhao et al. - 2016 - Defect energetics of concentrated solid-solution a.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

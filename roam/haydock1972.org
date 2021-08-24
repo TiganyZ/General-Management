@@ -1,0 +1,17 @@
+#+TITLE: Haydock1972: Electronic structure based on the local atomic environment for tight-binding bands
+#+ROAM_KEY: cite:Haydock1972
+- tags ::
+- keywords ::
+
+* Electronic structure based on the local atomic environment for tight-binding bands
+  :PROPERTIES:
+  :Custom_ID: Haydock1972
+  :URL: https://iopscience.iop.org/article/10.1088/0022-3719/5/20/004
+  :AUTHOR: Haydock, R., Heine, V., & Kelly, M. J.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/EP82CIIR/Haydock et al. - 1972 - Electronic structure based on the local atomic env.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+
+** Summary :SUMMARY:
+** Notes

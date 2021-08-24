@@ -1,0 +1,16 @@
+#+TITLE: Bavrina2019: DFT Calculations to Study Hydrogen Localization and Diffusion in Disordered Bcc Ti-V-Cr Alloys
+#+ROAM_KEY: cite:Bavrina2019
+- tags ::
+- keywords ::
+
+* DFT Calculations to Study Hydrogen Localization and Diffusion in Disordered Bcc Ti-V-Cr Alloys
+  :PROPERTIES:
+  :Custom_ID: Bavrina2019
+  :URL: https://www.scientific.net/SSP.289.205
+  :AUTHOR: Bavrina, O. O., Shelyapina, M. G., Fruchart, D., & Novaković, N.
+  :NOTER_DOCUMENT: ~/Zotero/storage/VWBF3DVV/Bavrina et al. - 2019 - DFT Calculations to Study Hydrogen Localization an.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

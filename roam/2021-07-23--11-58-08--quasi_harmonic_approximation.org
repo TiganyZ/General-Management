@@ -1,0 +1,24 @@
+#+TITLE: quasi-harmonic approximation
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-23 Fri 13:03]--[2021-07-23 Fri 13:06] =>  0:03
+  CLOCK: [2021-07-23 Fri 12:58]--[2021-07-23 Fri 13:00] =>  0:02
+  :END:
+
+This is a phonon based model where one can introduce a volume
+dependence to [[file:2021-07-01--13-47-14--lattice_dynamics.org][phonons]] in the [[file:2021-07-01--13-42-08--harmonic_approximation.org][harmonic approximation]], such that one can
+find the [[file:2021-03-05--12-06-54--helmholtz_free_energy.org][Helmholtz Free Energy]] at different volumes.
+
+Through use of a [[file:2021-07-23--12-00-07--legendre_transform.org][Legendre transform]], one can find the [[file:2021-03-05--11-50-23--gibbs_free_energy.org][Gibbs Free
+Energy]] from the [[file:2021-03-05--12-06-54--helmholtz_free_energy.org][Helmholtz Free Energy]].
+
+\[ G(T,p) = \min_{V} \left[ E_{\text{lat}}(V) + U_{\text{vib} }(V,T) -
+TS(V,T) + pV \right]  \]
+
+
+In the phonopy paper, by Togo [[file:togo2015.org][Togo2015: First principles phonon
+calculations in materials science]], we have formulations for
+these as
+implemented in the ~phonopy~ code.

@@ -1,0 +1,16 @@
+#+TITLE: Paxtona: An introduction to the tight binding approximation— implementation by diagonalisation
+#+ROAM_KEY: cite:Paxtona
+- tags ::
+- keywords ::
+
+* An introduction to the tight binding approximation— implementation by diagonalisation
+  :PROPERTIES:
+  :Custom_ID: Paxtona
+  :URL:
+  :AUTHOR: Paxton, A. T.
+  :NOTER_DOCUMENT: ~/Zotero/storage/CSAF837B/Paxton - An introduction to the tight binding approximation.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,46 @@
+#+TITLE: Mishin2021: Machine-learning interatomic potentials for materials science
+#+ROAM_KEY: cite:Mishin2021
+- tags ::
+- keywords :: Atomistic simulation,Interatomic potential,Machine-learning
+
+* Machine-learning interatomic potentials for materials science
+  :PROPERTIES:
+  :Custom_ID: Mishin2021
+  :URL: https://www.sciencedirect.com/science/article/pii/S1359645421003608
+  :AUTHOR: Mishin, Y.
+  :NOTER_DOCUMENT: ~/Zotero/storage/BTBUMTZB/Mishin - 2021 - Machine-learning interatomic potentials for materi.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+
+
+** Machine learning can be used to speed up calculations.
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/BTBUMTZB/Mishin - 2021 - Machine-learning interatomic potentials for materi.pdf::5++0.00]]
+   :END:
+   \[ E = \Phi(\left\{\mathbf{R}_i\right\},
+   \left\{\mathbf{p}_i\right\} ) \]
+
+   Which gives invariance under rotations and translations of the
+   coordinate axes and permutations of the atoms. $\mathbf{p}_i$ are a
+   set of parameters.
+
+** Physical basis of traditional potentials
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/BTBUMTZB/Mishin - 2021 - Machine-learning interatomic potentials for materi.pdf::5++0.00]]
+   :END:
+
+*** Metallic systems designed
+   - EAM/MEAM
+   - Angular dependent model (ADP
+
+*** Strongly covalent systems
+    - Tersoff
+    - Stillinger-Weber
+
+
+*** Molecular systems
+    - Reactive bond-order potentials
+    - ReaxFF

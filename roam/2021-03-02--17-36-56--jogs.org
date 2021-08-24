@@ -1,0 +1,14 @@
+#+TITLE: jogs
+* Summary :SUMMARY:
+  Jogs are segments of [[file:20210105175521-dislocations.org][dislocations]], which are generally around a
+  [[file:20210105180355-burgers_vector.org][Burgers Vector]] long, and lie /outside/ of the glide plane of the
+  dislocation in question.
+
+  Jogs on edge dislocations can absorb vacancies/interstitials, which
+  cause movement of the jog.
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-02 Tue 17:36]--[2021-03-02 Tue 17:41] =>  0:05
+  :END:

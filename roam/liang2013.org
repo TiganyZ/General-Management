@@ -1,0 +1,16 @@
+#+TITLE: Liang2013: Atomic structure, mechanical quality, and thermodynamic property of TiH  x  phases
+#+ROAM_KEY: cite:Liang2013
+- tags ::
+- keywords ::
+
+* Atomic structure, mechanical quality, and thermodynamic property of TiH  x  phases
+  :PROPERTIES:
+  :Custom_ID: Liang2013
+  :URL: http://aip.scitation.org/doi/10.1063/1.4816485
+  :AUTHOR: Liang, C. P., & Gong, H. R.
+  :NOTER_DOCUMENT: ~/Zotero/storage/HEH7FSYE/Liang and Gong - 2013 - Atomic structure, mechanical quality, and thermody.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

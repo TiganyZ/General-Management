@@ -1,0 +1,18 @@
+#+TITLE: Helmholtz Free Energy
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 12:06]--[2021-03-05 Fri 12:08] =>  0:02
+  :END:
+
+   - Helmholtz Free Energy:
+     * The energy at constant _temperature_ and _pressure_.
+     * The capacity to do mechanical plus non-mechanical work
+     * Equation: \[ F = U - TS \]
+
+     * Related to the [[file:2021-03-05--12-04-48--internal_energy.org][Internal Energy]] by the subtraction of th
+       entropic term.
+
+     * $\Delta F$ is the total work done on the system.
+     * Natural variables: $\{ T, V, \{N_{i}\} \}$

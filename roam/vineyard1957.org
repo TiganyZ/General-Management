@@ -1,0 +1,16 @@
+#+TITLE: Vineyard1957: Frequency factors and isotope effects in solid state rate processes
+#+ROAM_KEY: cite:Vineyard1957
+- tags ::
+- keywords ::
+
+* Frequency factors and isotope effects in solid state rate processes
+  :PROPERTIES:
+  :Custom_ID: Vineyard1957
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/0022369757900598
+  :AUTHOR: Vineyard, G. H.
+  :NOTER_DOCUMENT: ~/Zotero/storage/BCSK8V5E/Vineyard - 1957 - Frequency factors and isotope effects in solid sta.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

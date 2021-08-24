@@ -1,0 +1,11 @@
+#+TITLE: Local Density Approximation
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 19:24]--[2021-03-06 Sat 19:24] =>  0:00
+  :END:
+
+  - Here, we approximate the *density* of the quantity of interest at
+    every point by it being the same as that in a *non-interacting
+    homogeneous electron gas*.

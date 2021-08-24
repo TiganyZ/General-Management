@@ -2,11 +2,10 @@
 #+AUTHOR: Tigany Zarrouk 
 #+LATEX_HEADER: \usepackage[margin=0.75in]{geometry}
 
+* Bibliography
 
-
-
-* Bibliography 
 <<bibliography link>>
 
 bibliographystyle:unsrt
 bibliography:./bibliography/zoteroLibrary.bib
+

@@ -1,0 +1,241 @@
+#+TITLE: R-R Catch-up Meeting
+#+Author: Tigany Zarrouk 
+#+Date: 18.06.2021
+#+Email: tigany.zarrouk@kcl.ac.uk
+
+
+#+REVEAL_ROOT: file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js
+# /home/tigany/software/reveal.js
+#+LATEX_HEADER: \usepackage[backend=biber,style=abbrv]{biblatex}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \addbibresource{./zoteroLibrary.bib}
+#+BIBLIOGRAPHY: ../bibliography/zoteroLibrary.bib
+
+#+INCLUDE: "~/.emacs.d/oer-reveal-org/config.org"
+
+#+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
+#+REVEAL_THEME: solarized
+#+REVEAL_TRANS: linear 
+
+# Set up the title slide.
+# #+REVEAL_TITLE_SLIDE: <h1 >%t</h1><h2>%a</h2><h3>%e</h3>
+
+# http://cdn.jsdelivr.net/reveal.js/3.0.0/
+
+#+OPTIONS: author:t email:t 
+#+OPTIONS: num:nil toc:nil reveal_slide_number:h/v
+#+REVEAL_EXTRA_JS: { src: 'vid.js', async: true, condition: function() { return !!document.body.classList; } }
+#+REVEAL_EXTERNAL_PLUGINS:({src: "%splugins/chart.js"}”)
+#+REVEAL_EXTRA_CSS: ./extra.css
+
+#+REVEAL_TITLE_SLIDE: title-slide.html
+
+* Introduction
+
+** Introduction to current work
+
+   - Fitted a quantum mechanical model of titanium to
+     look at defect interactions and atomistic mechanisms of solute hardening.
+   - Simulations of oxygen-defect interactions are crucial, as such
+     we use various methods.
+   - Using the same model, in parameters from a TiO2 model,
+     we can look at water on a pure titanium surface (previously asked
+     by Dave Rugg)
+
+* Theory
+
+** Tight Binding
+
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Tight binding is an approximation to DFT.
+- Overlaps between atomic orbitals are key parameters.
+- Parameters can be fitted to experimental data
+- $\mathcal{O}(N^3)$, but much smaller prefactor compared to DFT.
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML:  <img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+#+REVEAL_HTML: </div>
+
+** BOP
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+- BOP is a faster but less accurate $\mathcal{O}(N)$ method of interatomic
+  force calculation within tight-binding.
+- One builds a local density of states from moments, giving detailed
+  electronic structure information.
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML:  <img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
+#+REVEAL_HTML: </div>
+
+
+** Embedding
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+- Idea is to combine speed of BOP ($\mathcal{O}(N)$) with accuracy of
+  tight-binding $\mathcal{O}(N^3)$.
+- Increasing the number of atoms gives freedom to:
+  - Investigate isolated dislocations.
+  - Include solutes at more realistic concentrations.
+  - Simulate interfaces near a surface (e.g. TiO$_2$ and
+    bulk Ti [Future Work
+    ])
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+
+#+REVEAL_HTML:  <img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hex_cell_embedding_crop_text.png" >
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+Invariance theorem with green's function approaches. So good with boundary
+conditions.
+
+#+END_NOTES
+
+
+* Results
+
+** Core structures
+ - Dislocation cores are sensitive to boundary conditions.
+ - Sufficient resolution of core structure is necessary ascertain how
+   dislocation glide is modified.
+
+
+
+** $\frac{1}{3}\langle11\bar{2}0\rangle$ screw
+#+ATTR_HTML: :width 80% :style position:relative;top:0px;left:0px;z_index:1;
+[[file:~/Documents/docs/Management/Images/bop_dislocation_relaxation_prismatic_partials_larger.png]]
+
+#+REVEAL: split
+
+#+ATTR_HTML: :width 40% :style position:relative;top:50px;left:-140px;z_index:1;
+[[file:~/Documents/docs/Management/Images/ddp_ip5_core_quad.png]]
+# [[file:~/Documents/docs/Management/Images/zoom_core_look.png]]
+
+#+ATTR_HTML: :width 40% :style position:absolute;top:50px;left:800px;z_index:2;
+[[file:~/Documents/docs/Management/Images/ghazisaiedi_trinkle_3_core_just_dft.png]]
+
+#+ATTR_HTML: :width 30% :style position:absolute;top:180px;left:-150px;z_index:2;
+[[file:~/Documents/docs/Management/Images/coordinate_prismatic_plane.png]]
+
+
+*** Dislocation Dissociation
+
+    - Correct dissociation found of $\frac{1}{3}[1\bar{2}10] =
+      \frac{1}{6}[1\bar{2}10] + \frac{1}{6}[1\bar{2}10]$.
+    - Dissociation distance between cores is $\sim4c$, which is larger
+      than what is found in DFT.
+
+
+    [[file:~/Documents/docs/Management/Images/final_model_IP1_partial_dd_final.png]]
+
+
+
+** Peierls Stress
+
+   - To find the peierls stress, the critical stress to move a
+     dislocation upon a glide plane, one can incrementally strain and
+     relax the simulation cell until the dislocation has been seen to
+     move to the next peierls valley.
+
+*** Prismatic Peierls Stress
+
+    - Using an increment in the strain of $\epsilon_{xz}$ by $1\times 10^{-4}C_{44}'$, the
+      dislocation moves by c/2 at $\sigma_{xz}= 0.0012C_{44}'$, giving a Peierls stress of $\sigma_{xz} =
+      2C_{44}\epsilon_{xz}= 0.0923$ GPa.
+    - This is half the strain necessary for the MEAM potential of
+      Trinkle et al.
+
+
+** O-dislocation binding
+
+   - 576 atom quadrupolar cell of 1b depth relaxed.
+   - Cell replicated three times, giving depth of 3b.
+   - O placed in octahedral sites at various distances from the
+     dislocation core in the middle layer.
+   - Interaction energy defined as
+
+     \[ E^{\text{Int}}_{} = E_{\text{disl-O}} -   E_{\text{disl}} -
+     E_{\text{perfect-O}} + E_{\text{perfect}} \]
+
+   #+Reveal: split
+   #+ATTR_HTML: :style position:relative;top:10px;left:-180px;z_index:1;
+ [[file:~/Documents/docs/Management/Images/prisotioquad.png]] v
+
+ #+ATTR_HTML: :width 95% :style position:absolute;top:200px;left:450px;z_index:3;
+   [[file:~/Documents/docs/Management/Images/chaari_ti-o_dislocation_interactions.png]]
+
+   #+Reveal: split
+
+   [[file:~/Documents/docs/Management/Images/ti-o_quadinteractions2.png]]
+
+   #+Reveal: split
+
+   [[file:~/Documents/docs/Management/Images/ti-o_quadinteractions.png]]
+
+
+* Current Work
+
+** Embedding: disl-O interaction in Ti
+
+    #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
+
+    - Relaxing O-dislocation cells using embedding approach.
+    #+REVEAL_HTML: </div>
+    #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+    [[file:img/embedding_ti-ox_crop_large_annotated.png]]
+    #+REVEAL_HTML: </div>
+
+
+** Improving basis for Ti
+   - Added $s$ electrons to Ti, for a more realistic
+     description.
+   - Effects on predicted core structure/formation free energies have yet to be determined.
+
+** Water on Ti
+   #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+   Relaxed Structure
+   [[file:img/water_on_dTi_relaxed_tachyon_crop.png]]
+   #+REVEAL_HTML: </div>
+   #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+   Charges ($\text{H}^{\text{-}}$ ion in green)
+   [[file:img/water_on_dTi_relaxed_tachyon_charges_with_colourmap_crop.png]]
+   #+REVEAL_HTML: </div>
+
+
+** Improving Ti-H / H-H Parameters
+   - Fitting the Ti-H/H-H parameters using DFT data of hydrides and
+     energies upon approaching surface.
+   - Useful for future calculations of water on interfaces.
+   [[file:img/ti_hydride_fcc.png]]
+   $\delta\text{-TiH}_2$
+
+
+
+
+
+
+
+
+
+
+
+* Bibliography
+   :PROPERTIES:
+   :CUSTOM_ID: bibliography
+   :END:
+   printbibliography:zoteroLibrary.bib
+
+#  LocalWords:  usepackage backend biber abbrv biblatex addbibresource toc solarized num JS src vid
+#  LocalWords:  js async splugins html microstructure RCF DERs ferrite martensitic ATTR DER Fu WEBs
+#  LocalWords:  microbands Lenticular EBSD Misorientation KAM Smelova SEM Nital EDX br pre DFT px
+#  LocalWords:  atomistic SCkMC Katzarov Cottrell lenticular nanocrystalline environemnt img nom
+#  LocalWords:  dislocaton Peierls autoplay Ventelon atomistics frac oct conc disl underbrace vec
+#  LocalWords:  textbf cdot enthalpy Kohler lorentzian Itakura enthalpies kMC bibliographystyle

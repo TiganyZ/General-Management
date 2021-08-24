@@ -1,0 +1,25 @@
+#+TITLE: Hubbard Model
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+
+  The Hubbard model is a [[file:2021-03-03--11-13-35--tight_binding.org][tight-binding]] based model. It has been
+  primarily used to focus on the metal-insulator/[[file:20200225_Mott_insulator_transition_from_DFT.org][Mott-insulator
+  transition from DFT]].
+
+  Generally the model consists of a tight binding hopping integral
+  $t$, which represents the kinetic energy of the electrons, and then
+  a $U$ parameter, which describes the on-site electron-electron repulsion
+  from a /screened coulomb potential/.
+
+  \[ \hat{H}_h_ = \sum_{ij\sigma} t_{ij} c^{\dagger}_{i\sigma}
+  c_{j\sigma} + \sum_i U n_{i\uparrow}n_{i\downarrow} \]
+
+  Applying a mean-field approximation to the Hubbard model gives the
+  [[file:2021-07-02--15-12-19--stoner_magnetism.org][stoner band model of magnetism]]
+
+  In a weakly correlated case, the only possible magnetic excitations
+  are spin flips .
+
+  In a strongly correlated case we get a [[file:2021-07-02--15-54-21--heisenburg_model.org][Heisenburg Model]], which
+  describes the spins of 4f states well.

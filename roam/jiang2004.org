@@ -1,0 +1,16 @@
+#+TITLE: Jiang2004: Diffusion of interstitial hydrogen into and through bcc Fe from first principles
+#+ROAM_KEY: cite:Jiang2004
+- tags ::
+- keywords ::
+
+* Diffusion of interstitial hydrogen into and through bcc Fe from first principles
+  :PROPERTIES:
+  :Custom_ID: Jiang2004
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.70.064102
+  :AUTHOR: Jiang, D. E., & Carter, E. A.
+  :NOTER_DOCUMENT: ~/Zotero/storage/YN4ZRKBI/Jiang and Carter - 2004 - Diffusion of interstitial hydrogen into and throug.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

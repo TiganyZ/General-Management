@@ -1,0 +1,18 @@
+#+TITLE: Legendre transform
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-23 Fri 13:00]
+  :END:
+
+  This is a way of converting quantities which depend on one quantity,
+  to a conjugate property.
+
+  Examples of this are
+
+  | From        | To       |
+  |-------------+----------|
+  | Position    | Momentum |
+  | Pressure    | Volume   |
+  | Temperature | Entropy  |

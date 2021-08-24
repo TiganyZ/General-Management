@@ -1,0 +1,59 @@
+#+TITLE: Groger2007: Explanation of the discrepancy between the measured and atomistically calculated yield stresses in body-centred cubic metals
+#+ROAM_KEY: cite:Groger2007
+- tags ::
+- keywords ::
+
+* Explanation of the discrepancy between the measured and atomistically calculated yield stresses in body-centred cubic metals
+  :PROPERTIES:
+  :Custom_ID: Groger2007
+  :URL: http://www.tandfonline.com/doi/abs/10.1080/09500830601158781
+  :AUTHOR: Gröger, R., & Vitek, V.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/PZ9C2E9N/Gröger and Vitek - 2007 - Explanation of the discrepancy between the measure.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+   Discrepancy between experimental and theoretical results in bcc metals of the
+   peierls stress (and by extension the  [[file:2021-03-04--12-29-07--kink_pair_formation_enthalpy.org][kink-pair formation enthalpy]]) can be explained by
+   use of a Frank-Read source which generates [[file:20210105175521-dislocations.org][dislocations]].
+
+
+   At a certain distance, pure screw segments are formed, which have a
+   high Peierls stress, and these control its operation.
+
+   But, due to the interaction of emitted dislocations, both screw and
+   non-screw dislocations can move at an applied stress _2-3 times
+   lower_ than the stress necessary for the glide of individual screw
+   dislocations.
+
+
+   Experiments cannot be directly compared.
+
+   Esperiments determin the stress necessary for the operation of
+   sources which are hindered by sessile screw dislocations.
+
+** Notes
+   - There is one study which has got close to the experimental yield
+     stress which considered a planar dislocation network of 1/2[111]
+     screw dislocations with [001] screw junctions.
+     - It moved on the (1-10) plane at a stress ~50% lower than that
+       of an isolated screw.
+   - /In-situ/ TEM of dislocation sources show screw dislocations
+     generated near a source move slowly as a group.
+   - _So they fully control the rate at which the source produces the
+     dislocations._
+   - At high stresses, screw dislocations do not immediately become
+     pure screw immediately after leaving the source.
+
+
+
+   - There are a number of _non-screw_ dislocations between the screws
+     and the source, which can move easily.
+   - These dislocations exert a stress on the screw dislocations.
+   - In combination with the applied stress which act on the screw
+     dislocations as well:
+   - _Screw dislocations can move at an applied CRSS 2-3 times lower than the CRSS necessary for the glide of a single screw
+     dislocation_
+   - It measures the *stress necessary to operate the sources*
+   - These operate at stresses lower than the Peierls stress owing to
+     the collective motion of screw and mixed dislocations produced by them.

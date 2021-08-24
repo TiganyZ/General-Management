@@ -1,0 +1,279 @@
+#+TITLE: Notes on solution energies of H/O in hcp Ti
+#+AUTHOR: Tigany Zarrouk
+#+BIBLIOGRAPHY: ../../bibliography/zoteroLibrary.bib
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{rotating}
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+LATEX_HEADER: \usepackage{subfigure}
+
+
+* Literature
+
+** Solution energies
+
+  There are a number of authors who have investigated H/O solutes in
+  α-Ti.
+
+  For C, N and O, there was an analysis of the solution energies and
+  grain-boundary segregation energies for multiple different grain
+  boundaries cite:Aksyonov2013,Aksyonov2016.
+
+  The reference energy they use in this case is that of the O_2
+  molecule,
+
+  The solution energies of oxygen they obtain are $-5.6 \text{ eV/atom}$, which is in agreement with
+  experimental data from $-5.77 \text{ to }  -6.5 \text{
+  eV/atom}$ cite:Boureau1976,Tetot1978. VASP calculations by Boureau
+  get $-5.75 \text{ eV/atom}$ which also agree cite:Boureau2008.
+
+  In these calculations, Pulay stresses were eliminated by relaxation
+  of lattice constants for each of the cell sizes, which was done
+  using fitting a polynomial to the 2-D variation of the energy with
+  the a and c lattice parameters cite:Francis1990.
+
+  #+CAPTION Table of energies from Aksyonov 2016.
+  | Cell     | E solution | delta V |
+  |----------+------------+---------|
+  | Ti_200 O | -5.592 eV  |     3.7 |
+
+  From Nayak /et al./ cite:Nayak2018, they found solution energies for
+  oxygen in DFT as follows:
+
+  #+CAPTION: Octahedral and tetrahedral solution energies from \cite{Nayak2018}.
+  | Site | E solution [eV] |
+  |------+-----------------|
+  | O    |           -5.54 |
+  | T    |           -4.37 |
+
+
+  Liang also studied oxygen and hydrogen in titanium cite:Liang. The
+  references which he used were $E(\text{H}_2) = 2.233 \text{ eV}$ and
+  $E(\text{O}_2) = -9.855 \text{ eV}$, with a final solution energy of
+  -5.582 eV/atom.
+
+  Connetable cite:Connetable2011, finds that there is a differrence
+  between the insertion energy and the solution energy.
+
+  As for the insertion energy, we find the results
+
+  #+CAPTION: Hydrogen solution eand insertion energies from \cite{Connetable2011}. The remainder from the subtraction of the insertion energy should be half of the bond dissociation energy, which is consistent with what we see.
+  | Type | E Insertion [eV, hydrogen] | E Solution | E Solution - E Insertion |
+  |------+----------------------------+------------+--------------------------|
+  | Oct  |                      -2.72 |      -0.44 |                     2.28 |
+  | Tet  |                      -2.65 |      -0.37 |                     2.28 |
+  #+TBLFM: $4=$3-$2
+
+
+
+
+  For tight-binding we just need the binding energy of the molecules,
+  as we always, when calculating total energies, have the /cohesive/
+  energy, by subtracting the reference energy of the on-site levels
+  from the final energy.
+
+
+
+  In a comment made in cite:Lozovoi2014e, they do not use absolute
+  formation energies, they give them relative to a formation energy of
+  an oxygen vacancy, $E^{\text{f}}(\text{V}_{\text{O} })$ at the
+  rutile surface, as there is not a reliable energy of the
+  $\text{O}_2$ molecule in the non-spin polarized TB model. To
+  calculate the formation energy within tight-binding, one has to
+  account for the /promotion/ energy of preparing the oxygen atom for
+  bonding in the solid from the actual gas phase as well as the
+  dissociation energy of the molecule. One finds the dissociation
+  energy as $E^{\text{dis}}[\text{O}_2] = 5.23$ eV  In the true gas
+  phase, one finds that oxygen has a triplet state, and from doing a
+  coupled cluster calculation, one can find the difference in energy
+  in going from the triplet state to the singlet state to prepare for
+  bonding, 2.399 eV cite:Lozovoi2014e.
+
+  So in the case for the chemical potential in the paxton paper, I
+  assume they found that the energy to add an oxygen atom to the
+  lattice was \[ \mu_{\text{O}} = E^{\text{prom}}[S^1 \rightarrow
+  S^0] + 1/2 E^{\text{dis}}[\text{O}_2] \]
+
+  Going from an oxygen atom dissolved in the bulk, we have the
+  following energies to remove it: take the atom to the surface,
+  remove atoms from surface, join to oxygen molecule.
+
+ \[ E^{\text{dis} } = - ( E[\text{take O out} ] + E[\text{remove from
+  surface} ] - 1/2E[\text{promotion singlet -> triplet} ] -
+  1/2E[\text{O_2 dissociation}] ) \]
+
+
+  \[  \]
+  # The atomisation
+
+  # # From NIST 1970
+
+  # E_ox_diss = 498 #3.95 # kJ/mol
+  # E_ox = - E_ox_diss * 1.0364 / 100. / 2
+
+
+
+
+
+  One can make the link between the insertion and dissolution energies:
+
+  \[ E_{\text{ins}} = E[\text{Ti}_x \text{O}] - E[\text{Ti}_x] - E[O]
+  \]
+  where in this case we have
+  \[ E_{\text{dis} } = E_{\text{ins} } - \frac{1}{2} E_{\text{atomization}}[\text{O}_2] \]
+  where the atomization energy is the energy necessary to separate the
+  atoms infinitely.
+
+
+  In the paper of Paxton cite:Paxton2010, they use half of the binding
+  energy of the $\text{H}_2$ molecule.
+
+  In calculation for the binding energy of the O2 molecule, Bloechl
+  cite:Blochl2000, including the zero-point vibrational energy is
+  5.912 eV. The experimental value is 5.116eV
+  cite:Bokstein2005,Blochl2000. One can also look as the experimental
+  dissociation energy of the O2 molecule, which we find as cite:Darwent1970
+
+  Now we can calculate the solution energies, with the tight-binding
+  model.
+
+  #+CAPTION: Table of the different reference energies available for the $\text{O}_2$ molecule.
+  | Type                                | $1/2 E[ \text{O}_2 ]$ eV |
+  |-------------------------------------+--------------------------|
+  | Dissociation [Exp] cite:Darwent1970 |                   -2.581 |
+  | Dissociation [Exp] cite:Zhang1998   |                   -2.615 |
+  | Binding [Exp] cite:Blochl2000       |                   -2.558 |
+  | DFT [GGA w/ ZPE]  cite:Blochl2000   |                   -2.956 |
+
+  We do the calculations in [[file:~/Documents/ti/final_model_2019-11-06/vacancy_complexes/volume_relaxation/results/2020-05-11_c_relax_kcl/obtain_final_solution_energies.py][obtain_final_solution_energies.py]]
+
+  The solution energies one obtains from the above file are much
+  larger than what one expects from DFT.
+
+  It seems that upon inserting oxygen, there are large energy
+  differences.
+
+*** Solution energies currently
+
+    All energies in eV.
+
+    | Type | E(Ti_xO) | E(Ti) | 1/2 E(O2) | Unrelaxed | Relaxed |
+    |------+----------+-------+-----------+-----------+---------|
+    | O    |          |       |    -2.581 |           |         |
+
+
+*** Note on the reference energy of an O_2 molecule in DFT
+
+    It has been found that DFT is rather bad at describing molecular
+    oxygen cite:Droghetti2008. As we know from Hund's rule, there are two unpaired
+    electrons in the bondong orbitals of oxygen, whihc creates a
+    triplet ground state which is paramagnetic.
+
+
+    The basis for the bad description is that there is a
+    self-interaction error which is apparent in DFT calculations.
+
+*** Table of solution energies obtained from  [[file:~/Documents/ti/final_model_2019-11-06/vacancy_complexes/volume_relaxation/results/2020-05-11_c_relax_kcl/obtain_final_solution_energies.py][obtain_final_solution_energies.py]]
+
+    The difference is large, in terms of solution energies.
+
+    Inserting oxygen into a perfect lattice and relaxing results in an
+    energy difference of -26.4680 eV. This is perhaps because the
+    calculations were not self-consistent: charges will simply be
+    allowed to move wherever they want.	Perhaps repeat with
+    self-consistency including for the volume relaxation. Of course
+    repeat for the perfect lattice.
+
+
+
+** Diffusion
+  There is a thesis by Lucia Scotti has proabably done the most
+  comprehensive work, of C, N and O interstitials, including analysis of diffusion coefficients, cite:Scottia,Scotti2016 which builds upon the
+  work of Wu and Trinkle cite:Wu2011a.
+
+  Wu and Trinkle only used one intermediate image for the NEB
+  calculations such that they could calculate the jump rate and hence
+  the diffusion coefficient, whereas Scotti used 3 intermediate
+  images. Scotti verified that the MSD (multi-state diffusion) method,
+  developed by Landman and Schlesinger cite:Slutsky1957 and KMC are
+  viable methods to find the diffusion coefficients.
+
+** Adsorption
+*** fcc O
+
+    #+tblname: fcc_ads_O_ti
+| d/c_hcp |        Ehf[Ry] |        Ehk[Ry] | Difference[Ry] |
+|---------+----------------+----------------+----------------|
+|     -.6 | -40979.8381239 | -40979.8377544 |     -0.1204799 |
+|     -.5 | -40979.8896455 | -40979.8896436 |     -0.1464245 |
+|     -.4 | -40979.9064827 | -40979.9062408 |     -0.1547231 |
+|     -.3 | -40979.8834656 | -40979.8834611 |    -0.14333325 |
+|     -.2 | -40979.7827964 | -40979.7827942 |     -0.0929998 |
+|     -.1 | -40979.5967965 | -40979.5967946 |             0. |
+   #+TBLFM: $4=($3-@>$3)/2
+
+
+
+
+*** hollow hcp O
+   
+   #+tblname: hhcp_ads_O_ti
+   | distance |            Ehf |            Ehk |   Ehk - End |
+   |----------+----------------+----------------+-------------|
+   |     -1.3 | -10469.5373482 | -10469.5321238 | -0.76776875 |
+   |    -1.25 | -10469.5947034 | -10469.5835887 |  -0.7935012 |
+   |     -1.2 | -10469.5340371 |  -10469.529461 | -0.76643735 |
+   |     -1.1 | -10469.1458046 |   -10469.13736 | -0.57038685 |
+   |       -1 | -10468.8410728 | -10468.8347011 |  -0.4190574 |
+   |      -.9 | -10469.1081916 | -10469.1013938 | -0.55240375 |
+   |      -.8 | -10469.4758856 | -10469.4554046 | -0.72940915 |
+   |     -.75 | -10469.5221462 | -10469.5184089 |  -0.7609113 |
+   |      -.7 | -10469.4748822 | -10469.4661374 | -0.73477555 |
+   |      -.6 | -10469.2131785 | -10469.2090335 |  -0.6062236 |
+   |      -.5 | -10469.0668023 | -10469.0476346 | -0.52552415 |
+   |      -.4 | -10469.3744778 | -10469.3606734 | -0.68204355 |
+   |      -.3 | -10469.5172698 | -10469.5160399 |  -0.7597268 |
+   |      -.2 | -10469.2247144 | -10469.2247226 | -0.61406815 |
+   |      -.1 | -10468.8055939 | -10468.8046348 | -0.40402425 |
+   |        0 | -10468.5069921 | -10468.5060385 |  -0.2547261 |
+   |      .25 | -10468.1292858 | -10468.1261653 |  -0.0647895 |
+   |       .5 | -10468.0341156 | -10468.0303245 |  -0.0168691 |
+   |      .75 | -10468.0105439 | -10468.0060259 |  -4.7198e-3 |
+   |        1 | -10468.0009337 | -10467.9965863 |          0. |
+   #+TBLFM: $4=($3-@>$3)/2
+
+
+
+   #+begin_src gnuplot :var data=hhcp_ads_O_ti :results output :file ./images/hhcp_ads_O_ti_dft.png
+    set title "Unrelaxed DFT O adsorption hollow hcp site"
+    set xlabel "Distance [chcp^{-1}]"
+    set terminal png size 400,300
+    plot data using 1:4 w linespoints lt 1 lw 3 title "DFT Unrelaxed"
+   #+end_src
+
+   #+RESULTS:
+   [[file:./images/hhcp_ads_O_ti_dft.png]]
+
+**** Test obj
+
+
+|--------------+----------+----------+-------------|
+| a            |   9.5272 |   8.3565 | 592532.4407 |
+| B            | 114.6046 | 144.3900 |  38359.0790 |
+| C11          |  64.8628 | 109.3380 |  85525.6969 |
+| Cp           | -37.5806 | -25.8870 |   5912.2730 |
+| C44          |  81.6556 |   2.9530 |  10712.6972 |
+| H_sol_O      |   0.0000 |   0.0000 |      0.0000 |
+| H_sol_T      |   0.0000 |   0.0000 |      0.0000 |
+| H_sol_d      |   0.0000 |   0.0000 |      0.0000 |
+| O_sol_O      |   0.0000 |   0.0000 |      0.0000 |
+| O_sol_T      |   0.0000 |   0.0000 |      0.0000 |
+| O_sol_d      |   0.0000 |   0.0000 |      0.0000 |
+| H_ads_amp_h  |   0.5645 |   0.1087 |  22456.5520 |
+| O_ads_amp_h  |   0.5675 |   0.6811 |   1394.4160 |
+| H_ads_diff   |   1.0870 |   0.0000 | 118167.5702 |
+| O_ads_diff_f |  -1.0247 |   0.0000 | 105004.8926 |
+| O_ads_diff_h |   1.5212 |   0.0000 | 231408.7470 |
+|--------------+----------+----------+-------------|
+|              |          |          | 1211474.4000   |
+#+tblfm:  @>$4=vsum(@I..@II)

@@ -1,0 +1,16 @@
+#+TITLE: Girshick1998b: Atomistic simulation of titanium. I. A bond-order potential
+#+ROAM_KEY: cite:Girshick1998b
+- tags ::
+- keywords ::
+
+* Atomistic simulation of titanium. I. A bond-order potential
+  :PROPERTIES:
+  :Custom_ID: Girshick1998b
+  :URL: http://www.tandfonline.com/doi/abs/10.1080/01418619808221223
+  :AUTHOR: Girshick, A., Bratkovsky, A. M., Pettifor, D. G., & Vitek, V.
+  :NOTER_DOCUMENT: ~/Zotero/storage/CL8UE8LH/Girshick et al. - 1998 - Atomistic simulation of titanium. I. A bond-order .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,23 @@
+#+TITLE: Moments Theorem
+* Summary :SUMMARY:
+
+
+  The $N^{\text{th}}$ moment of the density of states is given by
+  \[ \mu_{i\alpha}^{(N)} = \int E^{N}n_{i\alpha}\text{d}E \]
+
+  One can relate the moments of the local density of states to
+  matrix elements of the Hamiltonian:
+
+  \[ \mu_{i\alpha}^{(N)} = \expval{H}{i\alpha} \]
+
+  This links the $N^{\text{th}}$ moment to the sum of all self
+  returning hopping path starting and ending on the orbital
+  $\ket{i\alpha}$.
+
+  INSERT REFERENCES
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 11:44]--[2021-03-03 Wed 11:45] =>  0:01
+  :END:

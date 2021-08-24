@@ -1,0 +1,16 @@
+#+TITLE: Nguyen-Manh2003: Environmentally dependent bond-order potentials: New developments and applications
+#+ROAM_KEY: cite:Nguyen-Manh2003
+- tags ::
+- keywords ::
+
+* Environmentally dependent bond-order potentials: New developments and applications
+  :PROPERTIES:
+  :Custom_ID: Nguyen-Manh2003
+  :URL: http://link.springer.com/10.1007/BF02712786
+  :AUTHOR: Nguyen-Manh, D., Pettifor, D. G., Cockayne, D. J. H., Mrovec, M., Znam, S., & Vitek, V.
+  :NOTER_DOCUMENT: ~/Zotero/storage/J5LDLWUX/Nguyen-Manh et al. - 2003 - Environmentally dependent bond-order potentials N.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,13 @@
+#+title: polarisation
+
+The polarisation of a molecule is a measure of the dipole moment.
+
+Typically $\mathbf{p} = \mathbf{d} \cdot e = \sum_i q_i \mathbf{r}_i$.
+
+In a periodic system we can have the dipole moment per unit volume $ed/V$
+
+From the polarisation we can have the necessary energy equations (for
+a /spatially uniform/ electric field).
+\[ U = -\mathbf{p} \cdot \mathbf{E}\]
+
+\[ \tau = \mathbf{p} \times \mathbf{E}\]

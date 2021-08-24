@@ -1,0 +1,16 @@
+#+TITLE: Andersen1984: Explicit, First-Principles Tight-Binding Theory
+#+ROAM_KEY: cite:Andersen1984
+- tags ::
+- keywords ::
+
+* Explicit, First-Principles Tight-Binding Theory
+  :PROPERTIES:
+  :Custom_ID: Andersen1984
+  :URL: https://link.aps.org/doi/10.1103/PhysRevLett.53.2571
+  :AUTHOR: Andersen, O. K., & Jepsen, O.
+  :NOTER_DOCUMENT: ~/Zotero/storage/2K8XZ52Y/Andersen and Jepsen - 1984 - Explicit, First-Principles Tight-Binding Theory.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

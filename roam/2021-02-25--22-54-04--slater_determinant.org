@@ -1,0 +1,8 @@
+#+TITLE: Slater Determinant
+* Notes
+* Questions :QUESTIONS:
+* Summary :SUMMARY:
+  - A slater determinant is a way of antisymmetrising the product of
+    single particle orbitals $\phi(\mathbf{r}_i)$.
+  - This makes the fermion wavefunction antisymmetric such that it
+    obeys pauli exclusion.

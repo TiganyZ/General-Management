@@ -1,0 +1,40 @@
+#+TITLE: Thermodynamic Quantities
+* Summary :SUMMARY:
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 12:12]--[2021-03-05 Fri 12:16] =>  0:04
+  :END:
+  [[https://th.fhi-berlin.mpg.de/th/meetings/FHImd2003/Dtalks/FHI-WS2003-L10-Reuter-Ab-Initio_Atomistic_Thermodynamics.pdf]]
+
+  First Law of thermodynamics
+  Say that $U = E^{\text{int}}$ of system.
+
+  \[ \text{d} U = \text{d} Q + \text{d} W \]
+  \[ \text{d} W = - p \text{d} V \]
+  \[ \text{d} Q = T \text{d} S \]
+
+  This gives:
+  $U \rightarrow E^{\text{tot} }$ in total energy calculation.
+
+  \[ \text{d} U = + T \text{d} S - p \text{d} V  \]
+  \[ \text{d} H = + T \text{d} S + V \text{d} p    \]
+  \[ \text{d} F = - S \text{d} T - p \text{d} V   \]
+  \[ \text{d} G = - S \text{d} T + V \text{d} p\]
+
+  Good diagram showing what it means [[https://www.quora.com/Thermodynamics-What-is-an-intuitive-explanation-of-Gibbs-Free-Energy]]
+
+  \[E^{\text{tot.}}(S,V) \]
+  \[H(S,p) =  U + pV	    \]
+  \[F(T,V) =  U - TS	    \]
+  \[G(T,p) = U - TS + pV \]
+
+  This relates the:
+  [[file:2021-03-05--12-04-48--internal_energy.org][Internal Energy]]
+  [[file:2021-03-05--12-06-54--helmholtz_free_energy.org][Helmholtz Free Energy]]
+  [[file:2021-03-05--11-50-23--gibbs_free_energy.org][Gibbs Free Energy]]
+  [[file:2021-03-05--11-51-25--enthalpy.org][Enthalpy]]
+
+
+[[file:~/Documents/docs/Management/Images/Thermodynamic_mnemonic.png]]

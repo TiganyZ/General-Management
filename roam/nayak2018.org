@@ -1,0 +1,16 @@
+#+TITLE: Nayak2018: Insight into point defects and impurities in titanium from first principles
+#+ROAM_KEY: cite:Nayak2018
+- tags ::
+- keywords ::
+
+* Insight into point defects and impurities in titanium from first principles
+  :PROPERTIES:
+  :Custom_ID: Nayak2018
+  :URL: https://www.nature.com/articles/s41524-018-0068-9
+  :AUTHOR: Nayak, S. K., Hung, C. J., Sharma, V., Alpay, S. P., Dongare, A. M., Brindley, W. J., & Hebert, R. J.
+  :NOTER_DOCUMENT: ~/Zotero/storage/WVGBQQUB/Nayak et al. - 2018 - Insight into point defects and impurities in titan.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

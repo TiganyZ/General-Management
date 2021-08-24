@@ -1,0 +1,19 @@
+#+TITLE: Braun1998: Nonlinear dynamics of the Frenkel–Kontorova model
+#+ROAM_KEY: cite:Braun1998
+- tags ::
+- keywords :: Discrete breathers,Disorder,Frenkel–Kontorova model,Kink diffusion,Kinks,Non-linear dynamics,Nonlinear impurity modes,Peierls–Nabarro potential,sine-Gordon equation
+
+* Nonlinear dynamics of the Frenkel–Kontorova model
+  :PROPERTIES:
+  :Custom_ID: Braun1998
+  :URL: https://www.sciencedirect.com/science/article/pii/S0370157398000295
+  :AUTHOR: Braun, O. M., & Kivshar, Y. S.
+  :NOTER_DOCUMENT: ~/Zotero/storage/D5KL2ICK/Braun and Kivshar - 1998 - Nonlinear dynamics of the Frenkel–Kontorova model.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+
+   This goes through the application of Frenkel-Kontorova models
+   [[file:2021-07-01--14-34-28--frenkel_kontorova_model.org][Frenkel Kontorova model]].

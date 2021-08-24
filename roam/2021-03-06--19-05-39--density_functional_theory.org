@@ -1,0 +1,16 @@
+#+TITLE: Density Functional Theory
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 19:05]--[2021-03-06 Sat 19:08] =>  0:03
+  :END:
+
+  A method of finding the total energy from the schrodinger equation by
+  using the correspondence between the external potential and the
+  electronic density.
+
+
+    - The external potential and the number of electrons, N, *completely define* the problem.
+    - Wavefunctions are defined by the schrodintger equation, from which everything else can be calculated.
+    - *The energy and everything else is thus a functional of the external potential and N*

@@ -1,0 +1,18 @@
+#+TITLE: Ventelon2015: Dislocation core reconstruction induced by carbon segregation in bcc iron
+#+ROAM_KEY: cite:Ventelon2015
+- tags ::
+- keywords ::
+
+* Dislocation core reconstruction induced by carbon segregation in bcc iron
+  :PROPERTIES:
+  :Custom_ID: Ventelon2015
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.91.220102
+  :AUTHOR: Ventelon, L., Lüthi, B., Clouet, E., Proville, L., Legrand, B., Rodney, D., & Willaime, F.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/HK87Y9VN/Ventelon et al. - 2015 - Dislocation core reconstruction induced by carbon .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+
+** Notes
+   - Concentration model comes from [[file:treglia1999.org][Treglia1999: Alloy surfaces: segregation, reconstruction and phase transitions]]

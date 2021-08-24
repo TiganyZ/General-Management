@@ -1,0 +1,12 @@
+#+TITLE: diffusivity
+#+roam_alias: diffusion
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-23 Fri 12:49]--[2021-07-23 Fri 12:49] =>  0:00
+  CLOCK: [2021-07-23 Fri 12:36]--[2021-07-23 Fri 12:37] =>  0:01
+  :END:
+
+Diffusivity is generally with regards to a species which moves through
+a lattice. One measures diffusivity through the [[file:2021-07-23--11-37-39--diffusion_coefficient.org][diffusion coefficient]]

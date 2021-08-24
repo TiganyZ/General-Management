@@ -1,0 +1,16 @@
+#+TITLE: Foulkes1989: Tight-binding models and density-functional theory
+#+ROAM_KEY: cite:Foulkes1989
+- tags ::
+- keywords ::
+
+* Tight-binding models and density-functional theory
+  :PROPERTIES:
+  :Custom_ID: Foulkes1989
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.39.12520
+  :AUTHOR: Foulkes, W. M. C., & Haydock, R.
+  :NOTER_DOCUMENT: ~/Zotero/storage/8HWVQN6N/Foulkes and Haydock - 1989 - Tight-binding models and density-functional theory.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

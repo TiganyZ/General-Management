@@ -51,7 +51,7 @@
    the supplementary material. 
 
 
-   Short range interactions can change the resoring force of the
+   Short range interactions can change the restoring force of the
    dislocation due to lattice slip. Which can by described by the
    gamma surface energy. 
 

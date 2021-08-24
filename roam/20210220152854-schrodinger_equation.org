@@ -1,0 +1,12 @@
+#+title: Schrodinger Equation
+
+- Equivalent of the second law of motion (F=ma) in mechanics but for quantum object.
+  - How does an object move with regards to a force?
+  - How does a quantum object respond to a potential?
+- We find \Psi which is a complex amplitude.
+- For one electron
+
+  \[
+  -\hslash^2 / 2m \nabla^2 \Psi(r,t) + V(r,t)\Psi(r,t) = i\hslash
+  \frac{\partial\Psi(r,t)}}{\partial t}
+  \]

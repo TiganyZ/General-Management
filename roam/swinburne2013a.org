@@ -1,0 +1,16 @@
+#+TITLE: Swinburne2013a: Theory and simulation of the diffusion of kinks on dislocations in bcc metals
+#+ROAM_KEY: cite:Swinburne2013a
+- tags ::
+- keywords ::
+
+* Theory and simulation of the diffusion of kinks on dislocations in bcc metals
+  :PROPERTIES:
+  :Custom_ID: Swinburne2013a
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.87.064108
+  :AUTHOR: Swinburne, T. D., Dudarev, S. L., Fitzgerald, S. P., Gilbert, M. R., & Sutton, A. P.
+  :NOTER_DOCUMENT: ~/Zotero/storage/YUH47LKU/Swinburne et al. - 2013 - Theory and simulation of the diffusion of kinks on.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

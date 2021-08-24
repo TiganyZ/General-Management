@@ -1,0 +1,62 @@
+#+TITLE: Kohn-Sham Theory
+#+STARTUP: latexpreview
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 19:54]--[2021-03-06 Sat 19:56] =>  0:02
+  :END:
+
+  - Have a reference system used to solve the schrodinger equation as
+    a functional of the density.
+
+  - Use the Universal functional from [[file:2021-03-06--19-53-21--second_hohenburg_kohn_theorem.org][Second Hohenburg-Kohn Theorem]].
+
+  - Have *non-interacting* electrons (Kohn-Sham electrons) which live in an
+    external potential (Kohn-Sham potential) *such that the charge density is identical to
+    that of the interacting system*.
+
+  - This means we can get a better estimate of the quantum kinetic
+    energy $T_s [n(\mathbf{r})]$ by solving the schrodinger equation
+    for this non-interacting system.
+
+  - The eigenstates are the Kohn-Sham orbitals.
+
+  - From these orbitals we can construct the kinetic energy in the
+    normal way as the expectation value over all of the orbitals.
+
+  - This effective potential sees no exchange-correlation as it is
+    effective.
+
+  - So we can find $T_s$ and $E_H$.
+
+  - We have swept the rest of the approximation into the
+    exchange-correlation.
+
+  - This is not the real kinetic energy.
+
+
+  \[ E[\{\psi_i\}] = \sum_{i=1}^N -1/2 \int \psi_i^{\text{KS} }*(\mathbf{r})
+  \nabla^2 \psi_i^{\text{KS} } (\mathbf{r}) \text{d} \mathbf{r}
+  + E_H[n(\mathbf{r})]  + E_{xc}[n(\mathbf{r})] + \int
+    v_{\text{ext}}n(\mathbf{r}) \text{d} \mathbf{r}\]
+
+
+  - Can use the Euler-Lagrange Equations with respect to a constant
+    number of electrons by the lagrange multiplier $\mu$.
+
+
+  - _Kohn-Sham Equations_
+
+    \[[ -1/2 \nabla^2 + v_H(\mathbf{r}) + v_{xc}(\mathbf{r}) +
+    v_{\text{ext} }(\mathbf{r}) ] \psi_i(\mathbf{r}) =
+    \hat{H}_{\text{KS}} \psi_i(\mathbf{r}) =  \varepsilon_i
+    \psi_i(\mathbf{r}) \]
+
+    \[ v_H (\mathbf{r}) = \int n(\mathbf{r}') / |\mathbf{r} -
+    \mathbf{r}'| \text{d} \mathbf{r}' \]
+
+    \[ v_{\text{xc} }(\mathbf{r}) = \frac{\delta E_{\text{xc}
+    }}{\delta n(\mathbf{r})} \]
+
+    \[ n(\mathbf{r}) = \sum_i^N |\psi_i(\mathbf{r})|^2 \]

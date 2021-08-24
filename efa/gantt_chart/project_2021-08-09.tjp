@@ -1,0 +1,137 @@
+project nil "EFA WebApp Development" "1.0" 2021-08-23 +280d {
+}
+shift s40 "Part time shift" {
+  workinghours wed, thu, fri off
+}
+resource tigany "tigany" {
+}
+task efa "EFA WebApp Development" {
+  purge allocate
+  allocate tigany
+  start 2021-08-23
+  task model "Model | Calculator" {
+    depends !milestones.start
+    task code "Code object structures following Andy's guidelines" {
+      effort 16.0h
+    }
+    task make "Make modules from object structures for separation" {
+      depends !code
+      effort 8.0h
+    }
+    task testing "Testing" {
+      depends !make
+      task check "Check inputs and outputs from python and excel calculator match" {
+        effort 8.0h
+      }
+      task incorporate "Incorporate sanity checks into the code" {
+        effort 8.0h
+      }
+    }
+  }
+  task view "View | Django" {
+    depends !model
+    task code "Code HTML templates for data input" {
+      effort 16.0h
+    }
+    task figure "Figure out data dependencies (do manufacturer units differ?)" {
+      depends !code
+      effort 8.0h
+    }
+    task testing "Testing" {
+      depends !figure
+      task input "Input to MySQL Database remains" {
+        effort 8.0h
+      }
+      task primary "Primary key gives input in database" {
+        effort 8.0h
+      }
+    }
+  }
+  task controller "Controller | View -> Database -> Calculator -> View" {
+    depends !view
+    task interface "Interface between View and Database" {
+      task change_create "Change/create MySQL database from user input" {
+        effort 4.0h
+      }
+      task testing "Testing" {
+        task read "Read correct key and data (units?)" {
+          effort 2.0h
+        }
+        task check "Check wrong key and give exception to view" {
+          effort 2.0h
+        }
+        task change "Change a specific user's inputs to something else" {
+          effort 2.0h
+        }
+      }
+    }
+    task interface_between "Interface between Database and Calculator" {
+      depends !interface
+      task dependency "Dependency Inversion by Database processor" {
+        effort 16.0h
+      }
+    }
+    task interface_between_calculator "Interface between Calculator and View" {
+      depends !interface_between
+      task create "Create interfaces for direct on-the-fly/database query" {
+        effort 16.0h
+      }
+    }
+  }
+  task hosting "Extra: Hosting and Continuous Integration" {
+    depends !controller
+    task configure "Configure Gitlab Continuous integration for in-depth testing" {
+      effort 24.0h
+    }
+    task build "Build automatic deployment" {
+      depends !configure
+      effort 16.0h
+    }
+  }
+  task milestones "Milestones" {
+    task start "Project Start" {
+      milestone
+    }
+    task website "Website Interface prototype" {
+      depends !!view
+      milestone
+    }
+    task calculator_website "Calculator-website integration" {
+      depends !!controller
+      milestone
+    }
+    task hosting "Hosting" {
+      depends !!hosting
+      milestone
+    }
+  }
+}
+textreport report "Plan" {
+formats html
+header '== EFA Web development project =='
+center -8<-
+[#Plan Plan] | [#Resource_Allocation Resource Allocation]
+----
+=== Plan ===
+<[report id="plan"]>
+----
+=== Resource Allocation ===
+<[report id="resourceGraph"]>
+->8-
+}
+# A traditional Gantt chart with a project overview.
+taskreport plan "" {
+headline "Project Plan"
+columns bsi, name, start, end, effort, chart { scale day width 2000 }
+loadunit shortauto
+hideresource 1
+}
+# A graph showing resource allocation. It identifies whether each
+# resource is under- or over-allocated for.
+resourcereport resourceGraph "" {
+headline "Resource Allocation Graph"
+columns no, name, effort, weekly { width 1000 }
+loadunit shortauto
+hidetask ~(isleaf() & isleaf_())
+sorttasks plan.start.up
+}

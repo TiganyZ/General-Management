@@ -1,0 +1,16 @@
+#+TITLE: Kraych2019: Non-glide effects and dislocation core fields in BCC metals
+#+ROAM_KEY: cite:Kraych2019
+- tags ::
+- keywords ::
+
+* Non-glide effects and dislocation core fields in BCC metals
+  :PROPERTIES:
+  :Custom_ID: Kraych2019
+  :URL: https://www.nature.com/articles/s41524-019-0247-3
+  :AUTHOR: Kraych, A., Clouet, E., Dezerald, L., Ventelon, L., Willaime, F., & Rodney, D.
+  :NOTER_DOCUMENT: ~/Zotero/storage/K2DU23SP/Kraych et al. - 2019 - Non-glide effects and dislocation core fields in B.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

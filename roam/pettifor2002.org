@@ -1,0 +1,21 @@
+#+TITLE: Pettifor2002: Bond-order potentials: bridging the electronic to atomistic modelling hierarchies
+#+ROAM_KEY: cite:Pettifor2002
+- tags ::
+- keywords ::
+
+* Bond-order potentials: bridging the electronic to atomistic modelling hierarchies
+  :PROPERTIES:
+  :Custom_ID: Pettifor2002
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S092702560100204X
+  :AUTHOR: Pettifor, D., Oleinik, I., Nguyen-Manh, D., & Vitek, V.
+  :NOTER_DOCUMENT: ~/Zotero/storage/VP3DGCVG/Pettifor et al. - 2002 - Bond-order potentials bridging the electronic to .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+** Bond order integral over greens function
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/VP3DGCVG/Pettifor et al. - 2002 - Bond-order potentials bridging the electronic to .pdf::2++2.69]]
+   :END:
+   [[file:2021-07-15--09-31-47--fermi_dirac_distribution.org][Fermi-dirac distribution]]

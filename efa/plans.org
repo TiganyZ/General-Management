@@ -1,0 +1,85 @@
+#+title: EFA Plans
+#+author: Tigany Zarrouk
+
+* Plans
+  - Primary key for manufacturer
+  - Test by deleting and redoing
+  - Create script with to generate the site cashflow dynamically.
+  - MySQL database
+
+* Code structure
+
+  - Implements the SOLID design principles where possible.
+  - Essentially, create interfaces for communication to abstract
+    dependencies from actual class structures to the interface itself.
+
+
+** Model | Calculator
+
+** View | Django
+
+** Controller | Communication/Interfaces
+* Database
+
+   - This first iteration will be part of the minimum value product, as
+     such, complicated functionality, which will be seen in the final
+     product⸻such as tailoring the calculation to a specific user's
+     community energy as part of EFA⸻is left out.
+
+   - In the final iteration, we will have all the necessary data for a
+     project in a PostgreSQL database.
+
+   - We will store some PV information in the PosgreSQL database such
+     that we can have some time getting used to getting data from
+     there.
+
+   - Perhaps one write some database code to do some
+     calculations from there also.
+
+
+* Objects - made by Andy
+
+| Sheet          | Object       | Properties        |
+|----------------+--------------+-------------------|
+| Insulation     | HouseType    | EnumList          |
+|                |              | BillSavingPounds  |
+|                |              | CO2Savings        |
+|                |              | Weighting         |
+|                | Insulation   | Type              |
+|                |              |                   |
+|                |              |                   |
+|                |              |                   |
+|                |              |                   |
+| HeatPumps      | HeatPumpType | Type              |
+|                | HeatPumpMake | Name              |
+|                |              | Manufacturer      |
+|                |              | HeatPumpType      |
+|                |              | EnergyConsumption |
+|                |              | Emissions         |
+|                |              | EfficiencyRating  |
+|                |              | EnergyOutput      |
+|                |              |                   |
+|                |              |                   |
+| Microwind      | MicroWind    | ???               |
+|                |              |                   |
+|                |              |                   |
+| CablingAndGrid |              | ???               |
+|                |              |                   |
+|                |              |                   |
+| Batteries      | Manufacturer | Name              |
+|                |              |                   |
+|                | Batteries    | Manufacturer      |
+|                |              | ProductName       |
+|                |              | Technology        |
+|                |              | UnitCost          |
+|                |              | Capacity          |
+|                |              | CostperkWh        |
+|                |              | LifetimeCost      |
+|                |              | DischargeDepth    |
+|                |              | LifetimeCycles    |
+|                |              | GuaranteedCycles  |
+|                |              | WarrantyYears     |
+|                |              | EnergyEfficiency  |
+|                |              | OperatingTempMax  |
+|                |              | OperatingTempMin  |
+|                |              | Notes             |

@@ -1,0 +1,57 @@
+#+TITLE: Machine learning and its applications to biomedical materials to finite elements.
+#+author: Caetano R. Miranda
+* Multi-scale approach
+
+  - Use machine learning + first principles
+  - Problem: low elastic modulus materials are required to avoid the
+    bon stress-shielding effect.
+  - Implant materials 60-110GPa
+  - Human bond: 5-30 GPa
+
+  - How can we look for materials which have the right properties.
+  - Current \beta phase Ti-Nb-Zr-Ta alloy only has 55GPa (gum metal)
+
+
+  - Can try trial and error: Multidimensional optimisation
+    - Parameters/properties are unknown
+  - Only the best candidates synthesised. x
+  - ML -> Simulation -> theory
+* Methodology
+
+  - Use materials project database
+  - Use ML: pymatgen, matminer, Keras, TensorFlow
+  - DFT simulations, ATAT for SQS structures
+  - Finite Elements simulations
+
+  - Composition, structure and get the transition and post-transition
+    metals (Ti, Nb)
+  - Exclude compunds with ionic/covalent character
+  - Elastic properties range for Ti alloys
+  - Information on heat of formation and entropy of mixing.
+
+  - Featurization
+  - Feature selection
+  - Regression
+
+
+  - ML modelling and obainining the shear modulus.
+  - Use SelectKBest, to get the best features
+  - Dominant descriptor is the poisson ratio
+  - Then one is able to get a phase diagram using the \Delta
+    S_{\text{mix}} (of Ti/Zr/Nb)
+  - One can find the sweetspot of the elastic moduli.
+  - The ML positions are only based on compositon, not structure, but need
+    first-principles calculations to see if the structures are stable
+    and so forth.
+  - Need the beta phase of titanium as it is crucial for the elastic
+    properties.
+  - Don't want the omega phase, so surpress Zr.
+  - Increasing Nb, we stabilise beta.
+
+
+  - We get reasonable contents of Nb for the biometidal implants.
+  - Found potental alternative the TNZT, so found a new material.
+
+
+  - Then do finite-element analysis using the extracted elastic
+    properties of the theoretical material.

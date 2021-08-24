@@ -1,0 +1,16 @@
+#+TITLE: Legrand1984: Relations entre la structure électronique et la facilité de glissement dans les métaux hexagonaux compacts
+#+ROAM_KEY: cite:Legrand1984
+- tags ::
+- keywords ::
+
+* Relations entre la structure électronique et la facilité de glissement dans les métaux hexagonaux compacts
+  :PROPERTIES:
+  :Custom_ID: Legrand1984
+  :URL: https://www.tandfonline.com/doi/full/10.1080/13642818408227636
+  :AUTHOR: Legrand, P. B.
+  :NOTER_DOCUMENT: ~/Zotero/storage/IDSRLBJU/Legrand - 1984 - Relations entre la structure électronique et la fa.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

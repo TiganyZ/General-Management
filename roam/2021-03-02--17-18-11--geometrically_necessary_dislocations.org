@@ -1,0 +1,29 @@
+#+TITLE: Geometrically Necessary Dislocations
+* Summary :SUMMARY:
+  Geometrically Necessary Dislocations (GNDs) are [[file:20210105175521-dislocations.org][dislocations]] which
+are necessary to accomodate for the bending of a crystal. They are
+usually /like-signed/.
+
+Geometrical constraints of the crystal cause strain gradient
+fields. GNDs are accumulated in these /strain gradient fields/. To
+imagine a strain gradient, think of a bar being bent: there is a
+tensile strain at the top of the bend, and a compressive strain at the
+bottom.	This would say generate edge dislocations of the same sign to accomodate.
+
+These are different from [[file:2021-03-02--17-24-22--statistically_stored_dislocations.org][statistically-stored dislocations]], which are
+formed during plastic deformation of the crystal from [[file:2021-03-02--17-36-32--dislocation_intersection.org][dislocation
+intersection]]s.
+
+The total dislocation density from statistically and geometrically
+necessary dislocations is therefore.
+
+\[ \rho = \rho_s + \rho_g \]
+
+The [[file:2021-03-01--13-53-52--nye_tensor.org][Nye Tensor]] is a way to calculate the GND density
+
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-02 Tue 17:18]--[2021-03-02 Tue 17:21] =>  0:03
+  :END:

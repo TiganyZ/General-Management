@@ -1,0 +1,39 @@
+#+TITLE: Born–Oppenheimer approximation
+* Notes
+  - Have hamiltonian that consists of interaction between:
+      1) nucleus-nucleus
+      2) nucleus-electron
+      3) electron-electron
+** Eigenfunction is product state of electronic GS and nuclear eigenstate :APPROXIMATION:
+  - First assumption is that we can write the eigenfunction of this
+    large hamiltonian as a product state consisting of an electronic
+    ground state and nuclear eigenstate.    \[ \Psi_{\text{total}}  =  \psi_{\text{electronic}}
+    \psi_{\text{nuclear}}  \]
+
+** Kinetic energy term wrt nucleus positions is small         :APPROXIMATION:
+  - Second approximation is that we are able to say, as the mass of the ion
+      $M_{I} \sim 1000 m_{e}$ then we can say that the kinetic energy term of
+      with regard to the nucleus positions will be small.
+  - From this we can say that the action of this nuclear kinetic energy
+      operator on the electronic eigenstate is small.
+  - This means we can neglect the *electronic* wavefunction, and work with
+      the equation \[ \hat{H}\Phi(\mathbf{R}) = E^0_{\mathbf{R}}\Phi(\mathbf{R}) \]
+    - Where $E^{0}_{ \mathbf{R} }$ is the ground state energy hypersurface
+        from the electronic wavefunction. We get this from DFT calculations.
+  - Even now we can only really calculate 8 degrees of freedom for the
+      Nuclear wavefunction.
+
+* Questions :QUESTIONS:
+  - What are the approximations made before the BO approximation?
+  - How is the BO approximation defined?
+  - Under what conditions does the BO approximation fail?
+  - What about the interaction between electronic hypersurfaces?
+  - What is the adiabatic approximation?
+* Summary :SUMMARY:
+  - This is the approximation we make where we decouple the motion of
+    the nuclei from that of the electrons.
+  - Due to the large mass of the nucleus, we can neglect the kinetic
+    energy of the nucleus and assume that electrons /instantaneously
+    relax/ to their ground state upon movement.
+  - This means that the *potential is just a function of the nuclear
+    coordinates.*

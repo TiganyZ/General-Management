@@ -1,0 +1,220 @@
+#+TITLE: Mazari2020: Intro to DFT: Day 1
+#+ROAM_KEY: cite:Mazari2020a
+##+STARTUP: nolatexpreview
+- tags ::
+- keywords ::
+
+#+LATEX_HEADER: \usepackage{physics}
+
+
+* Intro to DFT
+  :PROPERTIES:
+  :Custom_ID: Mazari12020
+  :URL: https://www.youtube.com/watch?v=kYxOWYWxYcQ
+  :AUTHOR: Mazari, N.
+  :END:
+
+** Questions                                                       :QUESTIONS:
+
+** Summary                                                        :SUMMARY:
+
+** Notes
+
+
+* Introduction to Schrödinger's equation
+
+ - Wavelength of electron is comparable to the distance between
+   atoms due to the [[file:20210220151535-de_broglie_wavelength.org][de-broglie wavelength]].
+ - Therefore one needs to find the probability of finding the
+   electron, through solving the
+   [[file:20210220152854-schrodinger_equation.org][schrodinger-equation]]
+ - We need to understand the relationship at every point in space to
+   actually understand what is happening at a particular instant of time, as we need to integrate.
+   - Clasically we just have to know about 6 scalar fields (position
+     and momentum in 3D) at a particular time.
+
+** Time-independent potential                                 :APPROXIMATION:
+   - Consider potential $V = V(r)$, is /independent/ of time.
+   - Ansatz that we have a wavefunction that can be separated into
+     $\Psi(r,t) = \phi(r) f(t)$.
+   - [[file:20210220155205-time_independent_schrodinger_equation.org][Time-independent Schrodinger Equation]]
+   - Time-dependent equation does not matter when it comes to
+     expectation values (complex conjugate multiplication in
+     expectation value equation).
+
+** Adiabatic/Born-oppenheimer                                 :APPROXIMATION:
+   - Only treat the electrons as the quantum mechanical objects in
+     the system.
+   - [[file:2021-03-06--17-18-30--adiabatic_approximation.org][Adiabatic approximation]] means there is no interaction
+     - Think of electronegative atom going slowly and quickly toward
+       metal surface.
+   - [[file:2021-02-25--23-13-48--born_oppenheimer_approximation.org][Born–Oppenheimer approximation]] means we can ignore the effect of
+     nuclei: we separate out the wavefunction to be that of a product
+     of nuclear and electronic parts and we can neglect the action of
+     the nuclear kinetic energy on the electronic wavefunction as the
+     term is small.
+   - This means that wherever nuclei move, we assume the schrodinger
+     equation will always be solved for the electronic part at every
+     instant.
+
+** Hamiltonian
+
+   \[ \hat{H} = \hat{T}_e + \hat{V}_{e-N} + \hat{V}_{e-e} + \hat{T}_N   + \hat{V}_{N-N}\]
+
+   - Use a.u. where $\hslash = 1, m = 1$
+
+     \[ \hat{T}_e = -1/2 \sum_i \nabla^2_i \]
+     \[ \hat{V}_{e-N} = \sum_i [ \sum_I V(\mathbf{R}_I - \mathbf{r}_i)] \]
+     - For each electron have coulombic electron-nuclei reaction.
+
+     \[ \hat{V}_{e-e} = 1/2\sum_i \sum_j \frac{1}{|\mathbf{r}_i - \mathbf{r}_j|}  \]
+
+   - *Electrons feel every other electron moving*
+
+   - The two last terms are *classical* for the nuclei.
+
+* Information Problem
+
+  - $\psi(\mathbf{r}_i, \ldots, \mathbf{r}_n)$
+  - Take an iron atom with 26 electrons.
+  - How can we store the /complex field/ of the wave function which has 26 * 3 = 78 scalar coordinates?
+  - Lets slice a box where an iron atom is into 10, so we have 10 values for each variable, x1, x2, y1, y2 etc etc.
+  - Requires 10^78 entries.
+
+** Use variational principle to help
+
+   \[ E[\Psi] = \expval{\hat{H}}{\Psi} / \expval{\Psi} \]
+
+   - Every time we have a differential equation, we have a [[file:2021-03-06--17-56-45--variational_principle.org][Variational principle]].
+
+   - Can obtain the hartree equations,	if we do the [[file:2021-02-25--22-45-30--hartree_fock_approximation.org][Hartree-Fock Approximation]].
+
+* Hartree Approximation                                       :APPROXIMATION:
+  - Make ansatz that the wavefunction
+    \[ \psi(\mathbf{r}_i, \ldots, \mathbf{r}_n) = \phi(\mathbf{r}_2) \phi(\mathbf{r}_2) \phi(\mathbf{r}_3) \ldots \phi(\mathbf{r}_n) \]
+
+  - This means, using our example for an iron atom, that we just need	10 * 10 * 10 = 1000 numbers (3 scalar fields) for each single particle orbital.
+
+  - So from 10^78 → 26 * 10^3 in terms of number of variables
+
+  - So what are the conditions that the 26 $\phi_i$ satisfy the variational principle?
+
+    \[ \delta E / \delta \phi_i = 0 =  \delta \expval{\hat{H}}{\Psi} / \delta \phi_i \]
+
+  - So we've gone from one impossible equation, to *26 individual differential equations* the hartree equations.
+
+    \[ [ -1/2 \nabla^2 = \sum_I  V(\mathbf{R}_I - \mathbf{r}_i) +
+    \sum_{j \neq i} \int |\phi_j(\mathbf{r}_j)|^2 / |\mathbf{r}_j - \mathbf{r}_i| \text{d} \mathbf{r}_j ] \phi_i(\mathbf{r}_i)
+    \epsilon \phi_i(\mathbf{r}_i) \]
+
+  - Each electron, in this formulation feels a quantum
+    - Kinetic energy
+    - Potential from the nuclei
+    - Hartree operator: the coulombic repulsion for electron j from all the other electrons.
+    - This *removes correlation* as it only depends on the charge density.
+    - It gives the average coulomb repulsion, but this does not give correlative effects.
+
+** Self-consistency
+   - We have n simultaneous 1-particle integro-differential equations.
+   - The equations themselves depend on the other solutions!
+   - Must be solved iteratively for all of the	26 equations if we want to know what happens to electron i,
+     1) Have initial guess for orbitals.
+     2) Construct the hartree operators
+     3) Solution to the Schrodinger-like equations.
+     4) Construct the hartree operators with the new orbitals.
+     5) Repeat until convergence.
+
+** Spin-statistics
+
+   - A set of identical (indistinguishable) fermions has a wavefunction which is totally antisymmetric by exchange.
+     - Swapping $\mathbf{r}_j for \mathbf{r}_k$.
+     - \[    \Psi(r_1, r_2 ,\ldots, r_j, \ldots, r_k, \ldots, r_n)
+	 = - \Psi(r_1, r_2 ,\ldots, r_k, \ldots, r_j, \ldots, r_n) \]
+   - Hartree-Fock takes into account electronic exchange.
+   - We take the wavefunction as a slater determinant of the individual orbitals.
+   - Row index = orbital index
+   - Colum index = position r
+
+
+   - This *enforces the pauli principle* no electrons can be in the same orbital, by the action of the determinant.
+
+** Hartree-Fock
+
+   \[
+   [ - 1/2 \nabla^2
+     + \sum_I  V(\mathbf{R}_I - \mathbf{r}_i) ] \phi_\lambda(\mathbf{r}_i)
+     + [ \sum_{\mu} \int |\phi_{\mu}(\mathbf{r}_j)|^2 / |\mathbf{r}_j - \mathbf{r}_i| \text{d} \mathbf{r}_j ] \phi_\lambda(\mathbf{r}_i)
+     - [ \sum_{\mu} \int \phi_{\mu}*(\mathbf{r}_j) \phi_{\lambda}(\\mathbf{r}_j) / |\mathbf{r}_j - \mathbf{r}_i| \text{d} \mathbf{r}_j ] \phi_\mu\(\mathbf{r}_i
+       = \epsilon \phi_{\lambda} (\mathbf{r}_i) \]
+
+
+     - Here we find that the hartree term has a self-interaction which is cancelled with the exchange term.
+     - Again use variational principle to solve the 26	equations.
+
+     \[ E_{\text{HF}} \ge E_{\text{exact}}   \], difference is the correlation energy.
+
+     - Not good for metals as will usually get an insulator!
+
+* Density Functional Theory
+
+  - [[file:2021-03-06--19-05-39--density_functional_theory.org][Density Functional Theory]]
+  - The external potential and the number of electrons, N, *completely define* the problem.
+  - Wavefunctions are defined by the schrodintger equation, from which everything else can be calculated.
+  - *The energy and everything else is thus a functional of the external potential and N*
+
+
+** Thomas-Fermi
+
+   [[file:2021-03-06--19-08-36--thomas_fermi_theory.org][Thomas-Fermi theory]]
+
+   - Here we say that the energy is a functional of the charge density.
+   - Kinetic energy is tricky,	as *how do we get the curvature of the wavefunction from the charge density*?
+   - *As the charge density is a modulus of the wavefunction we can't*
+     - Think of the free electron.
+     - Density is same everywhere
+     - \[ \rho = || \phi ||^2 \]
+     - \[ \phi(r) = e^{i \mathbf{k}\cdot\mathbf{r}} \]
+     - \[ \expval{-1/2\nabla^2}{\phi}  \]
+     - But actual expval of  curvature	is 1/2k^2
+     - If k is large, then quantum ke is huge
+     - if k is small, we have long wavelengths, so ke is small.
+   - *Charge density has forgotten everything*
+   - So we can try and circumvent this by using the [[file:2021-03-06--19-24-13--local_density_approximation.org][Local Density Approximation]] for the kinetic energy density.
+   - This means we can find the kinetic energy easily.
+   - This actually works worse than Hartree.
+   - But scales linearly!
+
+
+** Hohenburg-Kohn Theorem
+
+   - The density is the basic variable:
+   - The external potential and number of electrons define the	charge density uniquely.
+   - *The HK theorem says the charge density uniquely determines the external potential and the number of electrons*.
+   - [[file:2021-03-06--19-42-36--hohenburg_kohn_theorem.org][Hohenburg-Kohn Theorem]]
+
+
+** Second Hohenburg-Kohn Theorem
+   - [[file:2021-03-06--19-53-21--second_hohenburg_kohn_theorem.org][Second Hohenburg-Kohn Theorem]]
+   - The ground state density $n(\mathbf{r})$ determines the potential of the Schrodinger equation.
+   - Can have a universal functional.
+   - \[ F[n(\mathbf{r})] = \expval{\hat{T}_e \hat{V}_{e-e} \]
+
+   - *Use the variational principle*
+
+     \[ E_{V_\text{ext} }[n(\mathbf{r})] = F[n(\mathbf{r})] + \int V_{\text{ext} }(\mathbf{r}) n(\mathbf{r}) \text{d} \mathbf{r} \ge E_0
+     \]
+
+   - $n(\mathbf{r})$ determines the ground state wavefunction which can be taken as a trial wavefunction in the external potential.
+
+   - *Exact reformulation of quantum mechanics using variational principle*
+
+
+** Kohn-Sham DFT
+
+   -[[file:2021-03-06--19-54-41--kohn_sham_theory.org][ Kohn-Sham Theory]]
+   - Use a reference system of non-interacting electrons (Kohn-Sham electrons)
+   - These electrons are in a potential (Kohn-Sham potential) which gives the same ground-state charge density as the interacting system.
+   - This means we can get the quantum kinetic energy estimate $T_s[n(\mathbf{r})]$ from the eigenstates of the solution of the non-interacting system.
+   - The rest of the approximation goes into the exchange-correlation functional.
+
+   - So we essentially do the same thing as Hartree-Fock, we solve the 26 equations for the single-particle orbitals, but we just don't know the exchange correlation functional.

@@ -1,0 +1,16 @@
+#+TITLE: Aksyonov2013: Grain boundary segregation of C, N and O in hexagonal close-packed titanium from first principles
+#+ROAM_KEY: cite:Aksyonov2013
+- tags ::
+- keywords ::
+
+* Grain boundary segregation of C, N and O in hexagonal close-packed titanium from first principles
+  :PROPERTIES:
+  :Custom_ID: Aksyonov2013
+  :URL: https://iopscience.iop.org/article/10.1088/0965-0393/21/7/075009
+  :AUTHOR: Aksyonov, D. A., Lipnitskii, A. G., & Kolobov, Y. R.
+  :NOTER_DOCUMENT: ~/Zotero/storage/RLE8M4VU/Aksyonov et al. - 2013 - Grain boundary segregation of C, N and O in hexago.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,22 @@
+#+TITLE: Entropy
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 12:34]--[2021-03-05 Fri 12:53] =>  0:19
+  :END:
+
+  [[file:2021-03-05--12-12-23--thermodynamic_quantities.org][Thermodynamic Quantities]]
+
+  - Entropy is there to account for changes to the [[file:2021-03-05--12-04-48--internal_energy.org][Internal Energy]]
+    which are not available to be put into *usable* heat or work.
+
+  - If some process is reversible then the entropy change for the
+    cycle is zero.
+
+  - Free energies are the proportions of first-law energies which are
+    *available* to do work at constant temperature. (Work mediated by
+    thermal energy)
+
+
+  \[ \text{d}Q = T \text{d} S \]

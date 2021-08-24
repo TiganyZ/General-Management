@@ -1,0 +1,54 @@
+#+TITLE: Mott-insulator transition from DFT
+* DFT
+  - One can use the KS orbitals and energies as quasiparticles
+  - Can calculate the band structure
+  - But band gaps are bad
+  - Worst case scenario is the Mott insulator
+  - Where the energy gap is $\Delta_{xc}$
+* Steady state DFT
+  - _Idea_: introduce current $I$ through device as an additional "density"
+  - Hohenburg-Kohn for i-DFT:
+    \[  (n(\mathbf{r}, I)) \rightarrow (v_{\text{ext}}(\mathbf{r}),
+    V)\]
+  - Kohn-Sham system
+        \[  (n(\mathbf{r}, I)) \rightarrow (v_{\text{s}}(\mathbf{r}),
+    V_s)\]
+  - $V = \mu_{\text{left}} - \mu_{\text{right}}$ so the chemical
+    potential between the two different sides of the simulation
+* Spectral functions from i-DFT
+  - Ideal STM limit
+  - Think of STM tip
+  - Can find the greens function to get the derivative of I wrt V
+  - Can the couple tip to some orbitals
+  - Can find the spectral funtion from derivative of i wrt V
+  - Equations for density and current decouple.
+
+
+  1. Solve /equlibrium/ DFT for $n(\mathbf{r})$ and
+     $v_{\text{Hxc}}(\mathbf{r})$
+* MOtt metal-insulator transitoin
+  - Have tight-binding lattice
+  - Where we have hubbard interaction
+  - correlated metal at low U and Z
+    Dynamical Mean-field theory
+  - Neglects non-local correlations
+  - Quasi particle in the middle of transition disappears (kolar 2004
+    physics today)
+** Fermi liquid + DMFT conditions for xc-bias
+   - From th espectral function we can get relations from half filling
+     of spectral derivative.
+   - Can relate to the quasi particle weight
+   - Mott insulating phase
+     n   |   n
+
+   - Metallic phase
+     nIn
+** xc-bias functional for the modd transition
+   - Ansatz: $ V_{\text{xc}} = a(I) \cdot \bar{V}_\text{xc} $
+   - Kondo model
+   - Mott/coulomb blockade
+* Conclusions
+  - Can calculate many body spectral functions from i-DFT
+  - dft-LIKE COST
+  - Kondo effect and coulomb blockade
+  - Mott metal-insulator transition within DFT framework.

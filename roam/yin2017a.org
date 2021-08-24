@@ -1,0 +1,16 @@
+#+TITLE: Yin2017a: Comprehensive first-principles study of stable stacking faults in hcp metals
+#+ROAM_KEY: cite:Yin2017a
+- tags ::
+- keywords ::
+
+* Comprehensive first-principles study of stable stacking faults in hcp metals
+  :PROPERTIES:
+  :Custom_ID: Yin2017a
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S1359645416308035
+  :AUTHOR: Yin, B., Wu, Z., & Curtin, W.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/SQLUCMKE/Yin et al. - 2017 - Comprehensive first-principles study of stable sta.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,16 @@
+#+TITLE: Wu2011a: Direct diffusion through interpenetrating networks: Oxygen in titanium
+#+ROAM_KEY: cite:Wu2011a
+- tags ::
+- keywords :: Condensed Matter - Materials Science
+
+* Direct diffusion through interpenetrating networks: Oxygen in titanium
+  :PROPERTIES:
+  :Custom_ID: Wu2011a
+  :URL: http://arxiv.org/abs/1106.3610
+  :AUTHOR: Wu, H. H., & Trinkle, D. R.
+  :NOTER_DOCUMENT: ~/Zotero/storage/R3APXT9Y/Wu and Trinkle - 2011 - Direct diffusion through interpenetrating networks.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

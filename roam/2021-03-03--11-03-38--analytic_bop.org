@@ -1,0 +1,8 @@
+#+TITLE: analytic bop
+* Summary :SUMMARY:
+  An analytic [[file:2021-03-03--11-04-06--bond_order_potential.org][bond order potential]]
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 11:03]--[2021-03-03 Wed 11:04] =>  0:01
+  :END:

@@ -1,0 +1,80 @@
+#+TITLE: Hartree-Fock Approximation
+* Notes
+** Born-Oppenheimer                                           :APPROXIMATION:
+- The [[file:2021-02-25--23-13-48--born_oppenheimer_approximation.org][Born–Oppenheimer approximation]] is inherently assumed. The full molecular wave
+  function is actually a function of the coordinates of each of the nuclei, in addition to
+  those of the electrons.
+
+** Non-relativistic                                           :APPROXIMATION:
+- Typically, relativistic effects are completely neglected. The momentum operator is
+  assumed to be completely non-relativistic.
+
+** Assume finite basis is approximately complete              :APPROXIMATION:
+- The variational solution is assumed to be a linear combination of a finite number of
+  basis functions, which are usually (but not always) chosen to be orthogonal. The finite
+  basis set is assumed to be approximately complete.
+
+** Eigenfunctions are describable by single Slater determinant :APPROXIMATION:
+- Each energy eigenfunction is assumed to be describable by a single Slater determinant,
+  an antisymmetrized product of one-electron wave functions (i.e., orbitals).
+
+** Mean-field approximation implied                           :APPROXIMATION:
+- The [[file:2021-02-25--23-45-04--mean_field_approximation.org][mean-field approximation]] is implied. Effects arising from deviations from this
+  assumption are neglected.
+- These effects are often collectively used as a definition of
+  the term electron correlation. However, the label "electron correlation" strictly spoken
+  encompasses both Coulomb correlation and Fermi correlation, and the latter is an effect
+  of electron exchange, which is fully accounted for in the Hartree–Fock method.
+- Stated in this terminology, the method only neglects the Coulomb correlation. However,
+  this is an important flaw, accounting for (among others) Hartree–Fock's inability to
+  capture London dispersion.[11]
+
+
+** Assume wavefunction can be a product of single particle orbitals :APPROXIMATION:
+   \[ \Psi\{\mathbf{r}_1\ldots, \mathbf{r}_N\} = \prod_i
+   \phi(\mathbf{r}_i) \]
+   - We pick /single particle orbitals/ $\phi_a(\mathbf{r})$, where $i  = 1\ldots, N$
+   - We need to make a [[file:2021-02-25--22-54-04--slater_determinant.org][Slater Determinant]] such that resulting
+     wavefunction is antisymmetric.
+   - We can find the ground state wavefunction by minimising $min_{\ket{\Psi}}
+     \expval{\hat{H}}{\Psi} / \braket{\Psi}$.
+   - Minimise over N functions, which each have 3 coordinates.
+   - This means we have to vary all of the orbitals which depend on
+     the coordinates of the electrons of the system.
+   - We have three degrees of freedom for each electron, so for a 25
+     electron system (Fe) we must minimise
+   - Resulting from this, we can account for exchange perfectly.
+* Procedure                                                       :PROCEDURE:
+  1. Make ansatz that we can have the full wavefunction of the system
+     as a product of single particle orbitals.
+  2. Make slater determinant to enforce antisymmetrisation.
+  3. Use variational principle $min\phi_a(\mathbf{r})_{}    \expval{\hat{H}}{\Psi} / \braket{\Psi}$.
+
+* Questions :QUESTIONS:
+  - What are the approximations made before Hartree-Fock?
+  - What is the hartree-Fock approximation?
+  - How does one go about solving the schrodinger equation?
+  - How many parameters are involved?
+
+* Summary :SUMMARY:
+  - Takes impossible schrodinger equation and makes it into 26
+    differential equations: the Hartree equations.
+  - Solve for the single-particle orbitals.
+  - This is an independent particle model. (Each electron moves in an
+    effective potential, representing the attraction of nuclei and the
+    average effect of electronic repulsion).
+
+   \[ [ -1/2 \nabla^2 = \sum_I  V(\mathbf{R}_I - \mathbf{r}_i) +
+      \sum_{j \neq i} \int |\phi_j(\mathbf{r}_j)|^2 / |\mathbf{r}_j - \mathbf{r}_i| \text{d} \mathbf{r}_j ] \phi_i(\mathbf{r}_i)
+      \epsilon \phi_i(\mathbf{r}_i) \]
+
+    - Each electron, in this formulation feels a quantum
+      - Kinetic energy
+      - Potential from the nuclei
+      - Hartree operator: coulombic repulsion from all other
+        electrons, *in an average way*.
+      - This *removes correlation* as we are getting the repulsive
+        information from the charge density.
+      - Imagine you're an electron. If another moves for a bit, and
+        then back, the charge density can be the same, but we've
+        *lost the effect of the movement*

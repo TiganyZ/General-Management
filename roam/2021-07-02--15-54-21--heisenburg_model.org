@@ -1,0 +1,12 @@
+#+TITLE: Heisenburg Model
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-02 Fri 16:54]--[2021-07-02 Fri 16:57] =>  0:03
+  :END:
+
+A Heisenburg model is were we have strong correlations between
+electrons .
+
+\[ H_e = -\sum_{ij} J_{ij} \hat{S}_i \cdot \hat{S}_j \]

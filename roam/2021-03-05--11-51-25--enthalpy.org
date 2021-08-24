@@ -1,0 +1,29 @@
+#+TITLE: Enthalpy
+* Summary :SUMMARY:
+
+  The enthalpy change of a system can be thought of as the change in
+  energy of a reaction happening at constant pressure.
+
+  Standard thermodynamic enthalpy is defined as
+
+  #  \[ \text{d} E = T \text{d} S - p \text{d} V \]
+  \[ \text{d} H = T \text{d} S + V \text{d} p \]
+
+  $H = U + pV$,
+
+  $U$ is [[file:2021-03-05--12-04-48--internal_energy.org][Internal Energy]], the energy required to make the system, and  $+ pV$ is the
+  work required to achieve its pressure and volume. It is the work
+  required ($pV$) to *make room* for the system, at constant pressure.
+  (Here our point of reference is a system as 0K)
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 11:51]--[2021-03-05 Fri 12:00] =>  0:09
+  :END:
+   - Enthalpy:
+     * The capacity to do non-mechanical work plus capacity to release heat.
+     * Equation: \[ H = U + pV \]
+     * $\Delta H$ is the total non-mechanical work and heat added to the
+       system.
+     * Natural variables: $\{ S, p, \{N_{i}\} \}$

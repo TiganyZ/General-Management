@@ -1,0 +1,8 @@
+#+TITLE: mean-field approximation
+* Notes
+* Questions :QUESTIONS:
+* Summary :SUMMARY:
+  - This reduces the complexity of a many body problem to that of a
+    one body problem.
+  - One uses an effective potential
+  - As the degrees of freedom aren't correlated this works

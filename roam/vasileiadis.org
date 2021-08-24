@@ -1,0 +1,16 @@
+#+TITLE: Vasileiadis: Calculation of the free energy of crystalline solids
+#+ROAM_KEY: cite:Vasileiadis
+- tags ::
+- keywords ::
+
+* Calculation of the free energy of crystalline solids
+  :PROPERTIES:
+  :Custom_ID: Vasileiadis
+  :URL:
+  :AUTHOR: Vasileiadis, M.
+  :NOTER_DOCUMENT: ~/Zotero/storage/P4BEXWGT/Vasileiadis - Calculation of the free energy of crystalline soli.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

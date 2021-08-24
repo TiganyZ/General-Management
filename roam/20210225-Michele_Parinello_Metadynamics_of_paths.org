@@ -1,0 +1,61 @@
+#+TITLE: Metadynamics of paths
+
+* Sampling problem
+
+  - We have a /collective variable/.
+  - Identify the slow modes of systems by defining appropriace
+    collective variables (reaction corrdinate) $s = s(R)$
+  - Calculate the /marginal/ of the Boltzmann dstribution $P_B(s)$
+    with respect to s
+
+    \[ P(s) = \int dR \delta(s-s(R)) P_B(R) \]
+  - Definel the free energy
+    \[ F(s) = -1/P log(P)\]
+  - Can have a potential that is a function fo the collective variable
+    $v(s(R))$ is added to the Hamiltonial, such that we can change ths
+    $s$ distribution, so that we can sample states of the system
+    well.
+
+* OPES
+  - $V(s) = -\beta log(p^{tg}(s) / P(s))$
+  - Go through cycle of biasing and reweighting to
+  - We build on the fly P(s)
+  - Example is the study of *phase diagrams*.
+
+
+* Example
+  - Study of the crystallisation of Si
+  - Solit to liquit transition is accompanied by a non-metal to metal transition
+  - Tow main difficulties:
+    - Time scale problem -> rare event
+
+** Which potential
+   - Represent the potential as a feed forward neural network trained
+     on an extensive set of DFT calculations.
+   - Each neuron maps to the total energy
+
+** Training the network
+   - We wan to sample the transition state between the two phases, so
+     we use metadynamics.
+   - Configurations using metadynamics simulatios on cheap models.
+
+
+
+* Metadynamics
+
+** How to sample the Boltzmann distribution
+   \[P_B(R)\]
+
+   - Caj ae sampled from moleculsr dynamics solving Hamilton's
+     equations, x
+     if system is orgodic one can compute averages
+
+** Onsager-Machlup path distribution
+   - In the limit of Smoluchovski dynamics, probability of observing a
+   - Trajectory is just a succession of pointsx
+   - We find th epath of th e srajectory is given as a double sum.
+   - So /dynamical problem becomes a static one/
+   - Looks like a classical problem in a high dimensional space energy
+   - Can sample with monte carlo
+   - /Highly parallel/
+   -

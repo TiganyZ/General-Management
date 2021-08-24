@@ -1,0 +1,16 @@
+#+TITLE: Trinkle2006: Empirical tight-binding model for titanium phase transformations
+#+ROAM_KEY: cite:Trinkle2006
+- tags ::
+- keywords ::
+
+* Empirical tight-binding model for titanium phase transformations
+  :PROPERTIES:
+  :Custom_ID: Trinkle2006
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.73.094123
+  :AUTHOR: Trinkle, D. R., Jones, M. D., Hennig, R. G., Rudin, S. P., Albers, R. C., & Wilkins, J. W.
+  :NOTER_DOCUMENT: ~/Zotero/storage/PL5MYVZD/Trinkle et al. - 2006 - Empirical tight-binding model for titanium phase t.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,16 @@
+#+TITLE: Boureau2008: A first-principles study of dilute solutions of oxygen in titanium
+#+ROAM_KEY: cite:Boureau2008
+- tags ::
+- keywords :: Ab initio calculation,Interstitials,Oxidation,Thermodynamics,Titanium
+
+* A first-principles study of dilute solutions of oxygen in titanium
+  :PROPERTIES:
+  :Custom_ID: Boureau2008
+  :URL: https://www.sciencedirect.com/science/article/pii/S1359646208006349
+  :AUTHOR: Boureau, G., Capron, N., & Tétot, R.
+  :NOTER_DOCUMENT: ~/Zotero/storage/U43U2WHV/Boureau et al. - 2008 - A first-principles study of dilute solutions of ox.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

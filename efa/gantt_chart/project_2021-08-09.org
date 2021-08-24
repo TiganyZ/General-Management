@@ -1,0 +1,149 @@
+#+title: EFA Web development project
+#+author: Tigany Zarrouk
+
+# This was found by this lovely webpage [[https://orgmode.org/worg/org-tutorials/org-taskjuggler.html]]
+
+# #+PROPERTY: Effort_ALL 1:00 2.0h 4.h 8h 16h 24h 1d 2d 3d 5d 10d 20d 30d
+#+COLUMNS: %ITEM(Task) %Effort  %BLOCKER %ORDERED
+
+* EFA WebApp Development                                :taskjuggler_project:
+  :PROPERTIES:
+  :start:  2021-08-23
+  :END:
+
+
+** Model | Calculator
+   :PROPERTIES:
+   :ORDERED:  t
+   :BLOCKER:  start
+   :task_id:  model
+   :END:
+
+*** Code object structures following Andy's guidelines
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+    - Create abstract base classes and then modify based on types of input
+    - We want as much separation and as little dependency as possible
+
+*** Make modules from object structures for separation
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+
+*** Testing
+**** Check inputs and outputs from python and excel calculator match
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+**** Incorporate sanity checks into the code
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+     - Conserved quantities?
+
+** View | Django
+   :PROPERTIES:
+   :BLOCKER:  previous-sibling
+   :ORDERED:  t
+   :task_id:  view
+   :END:
+*** Code HTML templates for data input
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+*** Figure out data dependencies (do manufacturer units differ?)
+    :PROPERTIES:
+    :Effort:   8:00
+    :END:
+*** Testing
+**** Input to MySQL Database remains
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+**** Primary key gives input in database
+     :PROPERTIES:
+     :Effort:   8:00
+     :END:
+
+** Controller | View -> Database -> Calculator -> View
+   :PROPERTIES:
+   :BLOCKER:  previous-sibling
+   :ORDERED:  t
+   :task_id:  controller
+   :END:
+
+*** Interface between View and Database
+
+**** Change/create MySQL database from user input
+      :PROPERTIES:
+      :Effort:   4:00
+      :END:
+
+**** Testing
+
+***** Read correct key and data (units?)
+      :PROPERTIES:
+      :Effort:  2:00
+      :END:
+
+***** Check wrong key and give exception to view
+      :PROPERTIES:
+      :Effort:   2:00
+      :END:
+
+
+***** Change a specific user's inputs to something else
+      :PROPERTIES:
+      :Effort:   2:00
+      :END:
+*** Interface between Database and Calculator
+**** Dependency Inversion by Database processor
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+
+*** Interface between Calculator and View
+
+**** Create interfaces for direct on-the-fly/database query
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+
+** Extra: Hosting and Continuous Integration
+   :PROPERTIES:
+   :ORDERED:  t
+   :BLOCKER:  previous-sibling
+   :task_id:  hosting
+   :END:
+*** Configure Gitlab Continuous integration for in-depth testing
+    :PROPERTIES:
+    :Effort:   24:00
+    :END:
+*** Build automatic deployment
+    :PROPERTIES:
+    :Effort:   16:00
+    :END:
+    - Docker image to Amazon EC2
+
+** Milestones
+
+*** Project Start
+    :PROPERTIES:
+    :task_id:  start
+    :END:
+
+*** Website Interface prototype
+    :PROPERTIES:
+    :BLOCKER:  view
+    :END:
+
+*** Calculator-website integration
+    :PROPERTIES:
+    :BLOCKER:  controller
+    :END:
+
+*** Hosting
+    :PROPERTIES:
+    :BLOCKER:  hosting
+    :END:

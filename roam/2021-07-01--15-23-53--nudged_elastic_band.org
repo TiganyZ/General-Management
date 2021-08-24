@@ -1,0 +1,17 @@
+#+TITLE: Nudged elastic band
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-01 Thu 16:23]--[2021-07-01 Thu 16:25] =>  0:02
+  :END:
+
+The nudged elastic band method is a saddle point search method between
+an initial and final configuration. This is used in [[file:2021-03-04--14-44-41--transition_state_theory.org][transition-state
+theory]], such that one can find energy barriers and intermediate
+configurations which are integral to find attempt frequencies and so
+forth.
+
+Generally calculations of the rate constant, in harmonic transition
+state theory, are done using the phonon frequencies at the initial and
+saddle points, by use of [[file:2021-03-04--14-44-41--transition_state_theory.org][transition-state theory]].

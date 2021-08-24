@@ -1,0 +1,16 @@
+#+TITLE: Yoshinaga1971: The solute atmosphere round a moving dislocation and its dragging stress
+#+ROAM_KEY: cite:Yoshinaga1971
+- tags ::
+- keywords ::
+
+* The solute atmosphere round a moving dislocation and its dragging stress
+  :PROPERTIES:
+  :Custom_ID: Yoshinaga1971
+  :URL: https://doi.org/10.1080/14786437108217008
+  :AUTHOR: Yoshinaga, H., & Morozumi, S.
+  :NOTER_DOCUMENT: ~/Zotero/storage/MEZAWIJG/Yoshinaga and Morozumi - 1971 - The solute atmosphere round a moving dislocation a.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

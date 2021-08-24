@@ -1,0 +1,16 @@
+#+TITLE: Scotti2016: Interstitial diffusion of O, N, and C in α -Ti from first-principles: Analytical model and kinetic Monte Carlo simulations
+#+ROAM_KEY: cite:Scotti2016
+- tags ::
+- keywords ::
+
+* Interstitial diffusion of O, N, and C in α -Ti from first-principles: Analytical model and kinetic Monte Carlo simulations
+  :PROPERTIES:
+  :Custom_ID: Scotti2016
+  :URL: http://aip.scitation.org/doi/10.1063/1.4942030
+  :AUTHOR: Scotti, L., & Mottura, A.
+  :NOTER_DOCUMENT: ~/Zotero/storage/MJYYRYSP/Scotti and Mottura - 2016 - Interstitial diffusion of O, N, and C in α .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

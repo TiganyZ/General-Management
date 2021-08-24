@@ -1,0 +1,16 @@
+#+TITLE: Henkelman2006: Theoretical calculations of CH4 and H2 associative desorption from Ni(111): Could subsurface hydrogen play an important role?
+#+ROAM_KEY: cite:Henkelman2006
+- tags ::
+- keywords ::
+
+* Theoretical calculations of CH4 and H2 associative desorption from Ni(111): Could subsurface hydrogen play an important role?
+  :PROPERTIES:
+  :Custom_ID: Henkelman2006
+  :URL: http://aip.scitation.org/doi/10.1063/1.2161193
+  :AUTHOR: Henkelman, G., Arnaldsson, A., & Jónsson, H.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/QXFUYWL6/Henkelman et al. - 2006 - Theoretical calculations of CH4 and H2 associative.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,19 @@
+#+TITLE: force constants
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-19 Mon 10:46]--[2021-07-19 Mon 10:49] =>  0:03
+  CLOCK: [2021-07-19 Mon 10:38]--[2021-07-19 Mon 10:42] =>  0:04
+  :END:
+
+  Force constants are defined in the expansion of the total energy
+  of a lattice due to the displacement of an atom in the harmonic
+  approximation.
+
+  These are the terms which represent the second derivative of the
+  energy surface.
+
+  From Finnis cite:Finnis2003, we know that it is not certain that
+  these force constants are not short-ranged. One can try to analyse
+  this using the [[file:2021-07-19--09-42-52--hellmann_feynman_theorem.org][Hellmann-Feynman Theorem]]

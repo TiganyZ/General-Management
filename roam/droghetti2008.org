@@ -1,0 +1,16 @@
+#+TITLE: Droghetti2008: Predicting \$\\textbackslash text\d\\\^\0\\$ magnetism: Self-interaction correction scheme
+#+ROAM_KEY: cite:Droghetti2008
+- tags ::
+- keywords ::
+
+* Predicting \$\\textbackslash text\d\\\^\0\\$ magnetism: Self-interaction correction scheme
+  :PROPERTIES:
+  :Custom_ID: Droghetti2008
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.78.140404
+  :AUTHOR: Droghetti, A., Pemmaraju, C. D., & Sanvito, S.
+  :NOTER_DOCUMENT: ~/Zotero/storage/4PFD6HN6/PhysRevB.78.140404.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,16 @@
+#+TITLE: Ducastelle1970a: Moments developments and their application to the electronic charge distribution of d bands
+#+ROAM_KEY: cite:Ducastelle1970a
+- tags ::
+- keywords ::
+
+* Moments developments and their application to the electronic charge distribution of d bands
+  :PROPERTIES:
+  :Custom_ID: Ducastelle1970a
+  :URL: https://www.sciencedirect.com/science/article/pii/0022369770901344
+  :AUTHOR: Ducastelle, F., & Cyrot-Lackmann, F.
+  :NOTER_DOCUMENT: ~/Zotero/storage/7JAPXJAI/Ducastelle and Cyrot-Lackmann - 1970 - Moments developments and their application to the .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

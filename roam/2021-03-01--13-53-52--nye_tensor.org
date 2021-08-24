@@ -1,0 +1,37 @@
+#+TITLE: Nye Tensor
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+  - Where do geometrically necessary dislocations fit into this?
+  - How is the Nye tensor defined?
+  - In what way is it related to the distortions of a crystal?
+  - What does it describe, in one sentence?
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-01 Mon 13:53]--[2021-03-01 Mon 13:58] =>  0:05
+  :END:
+  Taking a Burger's circuit of the unit area normal $l_j$ we have a
+  burger's vector $B_i$, given as
+
+  \[ B_i = \alpha_{ij} l_j, (i,j = 1,2,3) \]
+
+  Where the coefficient $\alpha_{ij}$ is the _Nye Tensor_.
+
+  - This relates the unit vector $l_j$ and the [[file:20210105180355-burgers_vector.org][burgers vector]] $B_i$.
+  - This determines the [[file:20210105175521-dislocations.org][dislocation]] state of a particular region.
+
+  Assume
+  \[ B_i = b_i(n r_j l_j), \]
+  where $\mathbf{r}$ is a unit vector parallel to the dislocation and
+  $\mathbf{b}$ is the burgers vector, $n$ is the number of
+  dislocations crossing the the unit area normal to $\mathbf{r}$, then
+
+  \[ \alpha_{ij} = n b_i r_j \]
+
+  - One can relate the curvature of the lattice to the Nye tensor.
+  - Therefore, one can write the /dislocation potential/ at
+    equilibrium in terms of the Nye tensor.
+
+    \[ W = 1/2 \alpha_{ij} k_{ij}, \]
+    where $k_{ij}$ is the curvature of the lattice $\text{d}\phi = k_{ij}
+    \text{d}x$, where $\text{d}\phi$ is the lattice of small rotations
+    abour the three axes.

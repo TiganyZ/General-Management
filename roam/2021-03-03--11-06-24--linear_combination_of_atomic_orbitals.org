@@ -1,0 +1,13 @@
+#+TITLE: Linear Combination of Atomic Orbitals
+* Summary :SUMMARY:
+  This is a basis which consists of atomic orbitals, such as s, p, d
+  etc. They are useful as one can imagine we need /less orbitals/ to
+  capture the intricacies of electronic structure.
+
+
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 11:06]--[2021-03-03 Wed 11:08] =>  0:02
+  :END:

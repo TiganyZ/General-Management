@@ -1,0 +1,11 @@
+#+TITLE: diffusion coefficient
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-23 Fri 12:48]--[2021-07-23 Fri 12:49] =>  0:01
+  CLOCK: [2021-07-23 Fri 12:37]--[2021-07-23 Fri 12:38] =>  0:01
+  :END:
+
+The diffusion coefficient is the prefactor one relates in [[file:2021-07-23--11-38-09--diffusion_equation.org][diffusion
+equation]].

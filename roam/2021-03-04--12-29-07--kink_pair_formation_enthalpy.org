@@ -1,0 +1,9 @@
+#+TITLE: kink-pair formation enthalpy
+* Summary :SUMMARY:
+  This is the energy barrier for a stable kink-pair to form of a
+  [[file:20210105175521-dislocations.org][dislocation]].
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-04 Thu 12:29]--[2021-03-04 Thu 12:30] =>  0:01
+  :END:

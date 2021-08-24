@@ -1,0 +1,23 @@
+#+TITLE: Ghazisaeidi2012b: Core structure of a screw dislocation in Ti from density functional theory and classical potentials
+#+ROAM_KEY: cite:Ghazisaeidi2012b
+- tags ::
+- keywords ::
+
+* Core structure of a screw dislocation in Ti from density functional theory and classical potentials
+  :PROPERTIES:
+  :Custom_ID: Ghazisaeidi2012b
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S1359645411008147
+  :AUTHOR: Ghazisaeidi, M., & Trinkle, D.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/W9LDEIUX/Ghazisaeidi and Trinkle - 2012 - Core structure of a screw dislocation in Ti from d.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+   - Nye tensor for each of these are located around the centre of the
+     dislocation splitting.
+   - Just like with the stress tensor multiplied by a normal vector
+     defining the force in that direction, we can have the burger's
+     vector in a certain direction defined by the multiplication of
+     the stress tensor by the normal direction to the burger's
+     circuit.

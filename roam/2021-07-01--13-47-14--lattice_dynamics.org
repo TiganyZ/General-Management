@@ -1,0 +1,11 @@
+#+TITLE: lattice dynamics
+#+roam_alias: phonons
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-01 Thu 14:47]--[2021-07-01 Thu 14:48] =>  0:01
+  :END:
+
+Lattice dynamics is the method used to find the free energies of
+crystals.

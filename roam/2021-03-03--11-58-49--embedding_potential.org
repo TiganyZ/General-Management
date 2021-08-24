@@ -1,0 +1,9 @@
+#+TITLE: embedding potential
+* Summary :SUMMARY:
+
+  This is a potential which depends on the density, just like an EAM.
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 11:58]--[2021-03-03 Wed 11:59] =>  0:01
+  :END:

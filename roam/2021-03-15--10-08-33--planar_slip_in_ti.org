@@ -1,0 +1,17 @@
+#+TITLE: Planar slip in Ti
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-15 Mon 10:08]--[2021-03-15 Mon 10:09] =>  0:01
+  :END:
+  Planar slip in Ti is generally due to dislocations more localised in
+  the slip plane.
+
+  - "a region
+    of confined planes"
+
+  - The formation of planar slip impairs:
+    1) formability
+    2) fracture toughness
+    3) strain-hardening ability

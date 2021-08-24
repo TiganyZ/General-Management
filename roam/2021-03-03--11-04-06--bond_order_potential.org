@@ -1,0 +1,26 @@
+#+TITLE: bond order potential
+* Summary :SUMMARY:
+  A bond order potential is a linear scaling algorithm (with the
+  number of atoms) to calculate atomic forces by
+  using a [[file:2021-03-03--11-15-07--tight_binding.org][tight-binding]] hamiltonian.
+
+  It does this by the
+  [[file:2021-03-03--11-44-30--moments_theorem.org][Moments Theorem]], which relates the DOS of the crystal to the crystal
+  structure.
+
+  One can tridiagonalise the hamiltionian using the [[file:2021-03-03--11-18-10--lanczos_algorithm.org][Lanczos Algorithm]],
+  in a basis of /recursion orbitals/. This gives /recursion
+  coefficients/.
+
+  These recursion coefficients make it easy to get elements of the greens function, which
+  are fractions terminated at a number of recursion
+  coefficients (for the diagonal elements). These greens function elements are related to the
+  density of states.
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-03 Wed 11:12]--[2021-03-03 Wed 11:13] =>  0:01
+  CLOCK: [2021-03-03 Wed 11:12]--[2021-03-03 Wed 11:12] =>  0:00
+  CLOCK: [2021-03-03 Wed 11:11]--[2021-03-03 Wed 11:12] =>  0:01
+  CLOCK: [2021-03-03 Wed 11:04]--[2021-03-03 Wed 11:04] =>  0:00
+  :END:

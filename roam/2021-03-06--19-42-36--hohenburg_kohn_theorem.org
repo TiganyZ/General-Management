@@ -1,0 +1,15 @@
+#+TITLE: Hohenburg-Kohn Theorem
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 19:42]--[2021-03-06 Sat 19:43] =>  0:01
+  :END:
+
+  The external potential and number of electrons define the charge
+  density uniquely.
+
+  *The HK theorem says the charge density uniquely
+  determines the external potential and the number of electrons*.
+
+  One can prove this by /reducio ad absurdum/.

@@ -1,0 +1,16 @@
+#+TITLE: Lozovoi2014e: Universal tight binding model for chemical reactions in solution and at surfaces. III. Stoichiometric and reduced surfaces of titania and the adsorption of water
+#+ROAM_KEY: cite:Lozovoi2014e
+- tags ::
+- keywords ::
+
+* Universal tight binding model for chemical reactions in solution and at surfaces. III. Stoichiometric and reduced surfaces of titania and the adsorption of water
+  :PROPERTIES:
+  :Custom_ID: Lozovoi2014e
+  :URL: http://aip.scitation.org/doi/10.1063/1.4890492
+  :AUTHOR: Lozovoi, A. Y., Pashov, D. L., Sheppard, T. J., Kohanoff, J. J., & Paxton, A. T.
+  :NOTER_DOCUMENT: ~/Zotero/storage/FNTI8386/Lozovoi et al. - 2014 - Universal tight binding model for chemical reactio.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

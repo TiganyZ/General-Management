@@ -1,0 +1,43 @@
+#+TITLE: Notes on solution energies of H/O in bcc Ti
+#+AUTHOR: Tigany Zarrouk
+#+BIBLIOGRAPHY: ../../bibliography/zoteroLibrary.bib
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{rotating}
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+LATEX_HEADER: \usepackage{subfigure}
+
+
+* Literature
+
+  It seems that there is not much in the literature on bcc Ti, with
+  regards to electronic structure calculations in general. I surmise
+  this is due to the fact that at 0K, the bcc phase is not stable,
+  exhibiting imaginary phonon frequencies, as seen in calculations
+  with our TB Ti model, and in DFT.
+
+** Solution enthalpies
+
+   The solution of O in bcc Ti was actually done by Boureau
+   cite:Boureau2008. They use as the reference the "half the partial molar
+   enthalpy of mixing of O_2", which they obtain from the calorimeter
+   value. Upon insertion of the O site in bcc Ti at 0K, of course, the structure wants to change
+   phase due to the destruction of symmetry. The bcc structure cannot
+   change in to hcp Ti, as the supplied supercells are not
+   commensurate.
+
+   Allowing no relaxation Boureau obtains -5.52
+
+   The expected value for the bcc phase is -9.12 $\text{eV/mol}^{-1}$
+
+
+
+
+** Diffusion
+  
+  One example of bcc Ti calculations are that of Kadkhodaei
+  cite:Kadkhodaei2020, where they were able to investigate anharmonic
+  phonon effects by using the self-consistent harmonic approximation
+  and the temperature dependent effective potential methods (SCHA and TDEP). Notes can be found here [[file:../../roam/kadkhodaei2020.org][Kadkhodaei2020:
+  Phonon-assisted diffusion in bcc phase of titanium and zirconium
+  from first principles]].

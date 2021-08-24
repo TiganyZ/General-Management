@@ -227,7 +227,7 @@ We have a zero-point energy correction
 - Does carbon move with dislocation? 
 
 ** Preliminary Calculations
-** TODO Core reconstruction (ECC -> HCC) by C
+** DONE Core reconstruction (ECC -> HCC) by C
 
    It seems like the hard core configuration is stablised by C [[file:papers/2015_PRB%5BVentelon%20et%20al%20Fe-C%5D.pdf]] .
    Is this the same for hydrogen?
@@ -284,8 +284,8 @@ We have a zero-point energy correction
     4) The change in these solution energies with applied stress to
        find $E_t(\sigma)$.
 
-* TODO Current Calculations
-** TODO Core Reconstruction of C with easy core to hard core.
+* DONE Current Calculations
+** DONE Core Reconstruction of C with easy core to hard core.
 
    - This is to check that tight binding, like DFT, can reproduce the
      stablilisation of the hard screw core in bcc by C in a
@@ -336,8 +336,8 @@ We have a zero-point energy correction
    perspective, but it does look like this puts the strain fields out
    of periodicity...
 
-** TODO Peierls Barrier
-** TODO Peierls Stress
+** DONE Peierls Barrier
+** DONE Peierls Stress
 * DONE Generate Cells for Calculations
   CLOSED: [2020-12-18 Fri 16:34] SCHEDULED: <2019-11-25 Mon>
 
@@ -377,7 +377,7 @@ We have a zero-point energy correction
    - Do temper carbides dissolve with rolling contact fatigue? Or do
      they grow?
 
-** TODO Details of the context of the project.
+** DONE Details of the context of the project.
 *** Initial microstructure of bearing steel
 
     - Machined bearings are heat treated to produce a *martensitic* microstructure.

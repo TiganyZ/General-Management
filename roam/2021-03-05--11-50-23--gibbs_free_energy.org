@@ -1,0 +1,31 @@
+#+TITLE: Gibbs Free Energy
+* Summary :SUMMARY:
+
+  The Gibbs free energy is the capacity to do non-mechanical work.
+
+  *Gibbs energy is the thermodynamic potential that is minimized when
+  a system reaches chemical equilibrium at constant pressure and temperature.*
+
+  $G = H - TS = U + pV - TS$
+  $H = U + pV$
+
+  It is related to the [[file:2021-03-05--11-51-25--enthalpy.org][Enthalpy]] by the subtraction of the entropic
+  term. This gives us the amount of energy to make the system at
+  constant pressure and temperature.
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 12:00]--[2021-03-05 Fri 12:04] =>  0:04
+  CLOCK: [2021-03-05 Fri 11:50]--[2021-03-05 Fri 11:51] =>  0:01
+  :END:
+
+  - Gibbs Free Energy:
+     * The capacity to do non-mechanical work.
+     * The maximum amount of non-expansion work.
+     * The energy at constant temperature and pressure.
+     * Gibbs energy is the thermodynamic potential that is minimized
+       when a system reaches chemical equilibrium at constant pressure
+       and temperature.
+     * Equation: \[ G = U + pV - TS  \]
+     * $\Delta G$ is the total non-mechanical work done on the system.
+     * Natural variables: $\{ T, p, \{N_{i}\} \}$

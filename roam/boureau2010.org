@@ -1,0 +1,16 @@
+#+TITLE: Boureau2010: Comment on “A Statistical−Mechanical Method To Evaluate Hydrogen Solubility in Metal”
+#+ROAM_KEY: cite:Boureau2010
+- tags ::
+- keywords ::
+
+* Comment on “A Statistical−Mechanical Method To Evaluate Hydrogen Solubility in Metal”
+  :PROPERTIES:
+  :Custom_ID: Boureau2010
+  :URL: https://pubs.acs.org/doi/10.1021/jp101851n
+  :AUTHOR: Boureau, G.
+  :NOTER_DOCUMENT: ~/Zotero/storage/UINJQZ53/Boureau - 2010 - Comment on “A Statistical−Mechanical Method To Eva.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

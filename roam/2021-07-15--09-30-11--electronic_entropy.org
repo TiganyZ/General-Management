@@ -1,0 +1,17 @@
+#+TITLE: electronic entropy
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-15 Thu 10:34]--[2021-07-15 Thu 10:34] =>  0:00
+  CLOCK: [2021-07-15 Thu 10:30]--[2021-07-15 Thu 10:31] =>  0:01
+  :END:
+
+  Electronic entropy is the entropy associated with
+  electrons. Generally it can be obtained from the dependence on the
+  [[file:2021-07-15--09-31-47--fermi_dirac_distribution.org][Fermi-dirac
+  distribution]], from which we can use the standard formulas and
+  integrate over the density of states, as was seen in
+  [[file:wolverton1995.org][Wolverton1995: First-principles theory of
+  short-range order, electronic excitations, and spin polarization in
+  Ni-V and Pd-V alloys]].

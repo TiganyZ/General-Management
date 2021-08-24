@@ -204,8 +204,117 @@ systemctl start cups
 
 
 *** To print
-lpr -q {name-of_file}
+    lpr -q {name-of_file}
 
+***  smb protocol and SAMBA
+    _<2021-08-23 Mon>_
+
+    CUPS can also use the SMB (Server Message Block) protocol. This
+    means that one can request services from server programs.
+
+    To enable, and to install, run as su
+    #+begin_src bash
+      system-config-printer
+      yast2 samba-server
+
+    #+end_src
+
+
+**** Info from [[https://www.suse.com/support/kb/doc/?id=000017188]]
+     _Environment_
+     SUSE Linux Enterprise Desktop 11
+     CUPS Printing
+
+     _Situation_
+     How to share a CUPS printer using SAMBA.
+
+     _Resolution_
+     Do the following to setup CUPS printing using SAMBA:
+
+     1. Type in the following command at a terminal as root and follow the prompts to create the printer.
+	#+begin_src bash
+        system-config-printer
+	#+end_src
+
+     2. At the terminal open up the samba server configuration.
+	#+begin_src bash
+        yast2 samba-server
+	#+end_src
+
+     3. Click on the start-up tab and select "During Boot" and then click okay.
+
+     4. Back up the current /etc/samba/smb.conf file
+     #cp /etc/samba/smb.conf /etc/samba/smb.conf-original
+
+     5. Add the following lines to the /etc/samba/smb.conf file
+	#+begin_src conf
+[printers]
+        comment = All Printers
+        path = /var/tmp
+        printable = Yes
+        public = Yes
+        writable = no
+        create mask = 0600
+        browseable = Yes
+        use client driver = yes
+[print$]
+        comment = Printer Drivers
+        path = /var/lib/samba/drivers
+        write list = @ntadmin root
+        force group = ntadmin
+        create mask = 0664
+        directory mask = 0775
+	#+end_src
+     6. Restart samba
+	#+begin_src bash
+   rcsmb restart
+	#+end_src
+     7. On a windows workstation open up windows explorer and type
+        \\IP_ADDRESS_OF_SAMBA_SERVER and then hit enter.
+
+
+     8. Click on the shared printer and then select the driver as you would with any other windows printer.
+
+     9. The setup of the printer is now complete.
+
+***  Adding printer with smb backend
+
+    [[https://www.linuxtopia.org/online_books/network_administration_guides/samba_reference_guide/29_CUPS-printing_131.html]]
+
+    To install a printer with the smb backend on CUPS, use this command:
+
+    #+begin_src bash
+    lpadmin -p winprinter -v smb://WINDOWSNETBIOSNAME/printersharename -P /path/to/PPD
+    #+end_src
+
+    The PPD must be able to direct CUPS to generate the print data for
+    the target model. For PostScript printers, just use the PPD that
+    would be used with the Windows NT PostScript driver. But what can
+    you do if the printer is only accessible with a password? Or if the
+    printer's host is part of another workgroup? This is provided for:
+    You can include the required parameters as part of the smb://
+    device-URI like this:
+
+     smb://WORKGROUP/WINDOWSNETBIOSNAME/printersharename
+
+     smb://username:password@WORKGROUP/WINDOWSNETBIOSNAME/printersharename
+
+     smb://username:password@WINDOWSNETBIOSNAME/printersharename
+
+     Note that the device URI will be visible in the process list of
+     the Samba server (e.g., when someone uses the ps -aux command on
+     Linux), even if the username and passwords are sanitized before
+     they get written into the log files. This is an inherently
+     insecure option; however, it is the only one. Don't use it if you
+     want to protect your passwords. Better share the printer in a way
+     that does not require a password! Printing will only work if you
+     have a working NetBIOS name resolution up and running. Note that
+     this is a feature of CUPS and you do not necessarily need to have
+     smbd running.
+
+
+     #  opal
+     #     K1216733:Pl6_5!n2
 ** YaST
 
 This is a useful way to look at the configuration of the systems. 

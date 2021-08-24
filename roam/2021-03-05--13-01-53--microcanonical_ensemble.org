@@ -1,0 +1,15 @@
+#+TITLE: Microcanonical Ensemble
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-05 Fri 13:01]--[2021-03-05 Fri 13:02] =>  0:01
+  :END:
+
+  - Microcanonical ensemble gives the [[file:2021-03-05--12-06-54--helmholtz_free_energy.org][Helmholtz Free Energy]]
+  - $F = -k_\text{B} \text{ln} Z$, where $Z$ is the partition function.
+  - If groups of degrees of freedom don't depend on each other e.g.:
+    - Nuclear ↔ electronic
+    - Rotational ↔ Vibrational
+  - Can separate $ Z_{\text{Total}} = Z^{\text{A}}Z^{\text{B} }$
+  - So $F = F^{\text{A} } + F^{\text{B} }$

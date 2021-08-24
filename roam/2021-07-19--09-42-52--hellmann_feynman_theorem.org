@@ -1,0 +1,12 @@
+#+TITLE: Hellmann-Feynman Theorem
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-19 Mon 10:42]--[2021-07-19 Mon 10:46] =>  0:04
+  :END:
+
+  This theorem shows how one can calculate forces.
+
+  \[ \frac{\partial E}{\partial \lambda} = \expval{\frac{\partial
+  V_{\text{ext}}}{\partial \lambda} }{\Psi_0} \]

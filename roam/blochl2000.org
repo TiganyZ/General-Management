@@ -1,0 +1,16 @@
+#+TITLE: Blochl2000: First-principles calculations of defects in oxygen-deficient silica exposed to hydrogen
+#+ROAM_KEY: cite:Blochl2000
+- tags ::
+- keywords ::
+
+* First-principles calculations of defects in oxygen-deficient silica exposed to hydrogen
+  :PROPERTIES:
+  :Custom_ID: Blochl2000
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.62.6158
+  :AUTHOR: Blöchl, P. E.
+  :NOTER_DOCUMENT: ~/Zotero/storage/RVRLV8LX/Blöchl - 2000 - First-principles calculations of defects in oxygen.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

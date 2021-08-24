@@ -1,0 +1,13 @@
+#+TITLE: deformation twinning
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-15 Mon 10:57]--[2021-03-15 Mon 11:01] =>  0:04
+  :END:
+
+  Deformation twinning is caused by shear which causes a region to shear,
+  instead of slipping by dislocation motion.
+
+  This causes two planes which bifurcate the regions. About these
+  planes there is reflection symmetry of the crystals on either side.

@@ -1,0 +1,16 @@
+#+TITLE: Andersen1975: Linear methods in band theory
+#+ROAM_KEY: cite:Andersen1975
+- tags ::
+- keywords ::
+
+* Linear methods in band theory
+  :PROPERTIES:
+  :Custom_ID: Andersen1975
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.12.3060
+  :AUTHOR: Andersen, O. K.
+  :NOTER_DOCUMENT: ~/Zotero/storage/W6Z5I2UA/Andersen - 1975 - Linear methods in band theory.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

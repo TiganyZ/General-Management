@@ -1,0 +1,16 @@
+#+TITLE: Lysogorskiy2021: Performant implementation of the atomic cluster expansion (PACE): Application to copper and silicon
+#+ROAM_KEY: cite:Lysogorskiy2021
+- tags ::
+- keywords :: Condensed Matter - Materials Science,Physics - Computational Physics
+
+* Performant implementation of the atomic cluster expansion (PACE): Application to copper and silicon
+  :PROPERTIES:
+  :Custom_ID: Lysogorskiy2021
+  :URL: http://arxiv.org/abs/2103.00814
+  :AUTHOR: Lysogorskiy, Y., van der Oord, C., Bochkarev, A., Menon, S., Rinaldi, M., Hammerschmidt, T., Mrovec, M., …
+  :NOTER_DOCUMENT: ~/Zotero/storage/KNY34652/Lysogorskiy et al. - 2021 - Performant implementation of the atomic cluster ex.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

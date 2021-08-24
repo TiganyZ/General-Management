@@ -1,0 +1,60 @@
+#+TITLE: Hartley2005: Representation of dislocation cores using Nye tensor distributions
+#+ROAM_KEY: cite:Hartley2005
+- tags ::
+- keywords ::
+
+* Representation of dislocation cores using Nye tensor distributions
+  :PROPERTIES:
+  :Custom_ID: Hartley2005
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S0921509305003709
+  :AUTHOR: Hartley, C. S., & Mishin, Y.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/GWT6Q3K3/Hartley and Mishin - 2005 - Representation of dislocation cores using Nye tens.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+   - This relates how the cores of dislocations can by represented by
+     the [[file:2021-03-01--13-53-52--nye_tensor.org][Nye Tensor]] components.
+   - This describes a distribution of infinitesimal dislocations.
+
+   - A dislocation characterised by its burgers vector $ \mathbf{b}$,
+     can be described by a distribution of infinitesimal dislocations
+     $d\mathbf{b}$.
+
+   - The Nye tensor $\mathbf{\alpha}$ describes the distribution of
+     infinitesimal dislocations by
+
+     \[ \text{d}\mathbf{b} = \mathbf{\alpha} \cdot n \text{d} A  \]
+
+   - Integrating over a bounded by a closed circuit, one can recover
+     the burger's vector for a dislocation.
+
+     \[ \mathbf{b} = \int_A (\mathbf{\alpha}\cdot \mathbf{n})
+     \text{d}}A  \]
+
+   - By definition of the burger's circuit, we have, in the dislocated
+     lattice, which has lattice vectors $\text{d}\mathbf{x}'$,
+
+     \[  0 = \sum_{C'} \text{d}\mathbf{x}' \]
+
+   - So in the perfect lattice we have
+
+     \[ \mathbf{b} = - \sum_{C} \text{d}\mathbf{x}, \]
+
+     where
+
+     \[ \text{d}\mathbf{x} = \text{d}\mathbf{x}' \mathbf{G} \]
+
+   - Where $\mathbf{G}$ is the lattice correspondence tensor, which is
+     the Eulerian deformation gradient.
+   - This is the /transpose/ of the Bilby tensor $\mathbf{E}$
+     
+     Therefore we have
+
+     \[ \mathbf{b} = - \int_A (\nabla \times \mathbf{G})
+     \text{d}}A  \]
+
+     so
+
+     \[ \mathbf{\alpha} = - (\nabla \times \mathbf{G}) \]

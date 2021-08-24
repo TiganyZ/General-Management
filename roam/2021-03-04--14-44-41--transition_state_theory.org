@@ -1,0 +1,20 @@
+#+TITLE: transition-state theory
+* Summary :SUMMARY:
+  Transiton-state theory describes the relation between activation
+  barriers (Gibbs energy barriers) which are at the saddle point of a
+  transiton pathway and a /reaction rate/.
+
+  It is similar to an Arrhenius rate equation.
+
+  It is defined in the seminal paper by vineyard [[file:vineyard1957.org][Vineyard1957:
+  Frequency factors and isotope effects in solid state rate processes]],
+  where he defines harmonic transition state theory to get a rate
+  constant.
+
+
+
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-04 Thu 14:44]--[2021-03-04 Thu 14:50] =>  0:06
+  :END:

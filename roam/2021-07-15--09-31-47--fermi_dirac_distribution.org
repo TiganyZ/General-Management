@@ -1,0 +1,16 @@
+#+TITLE: Fermi-dirac distribution
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-15 Thu 10:31]--[2021-07-15 Thu 10:34] =>  0:03
+  :END:
+
+  This is the distribution which distributes indistinguishable,
+  non-interacting particles between states which have a maximum
+  occupancy of one. These are useful for fermions, but they also have
+  similarities to other forms of equation, such as the McClean
+  Isotherm and the Louat theory of solutes on an effective lattice
+  near a defect
+  [[file:louat1956.org][Louat1956: The Effect of Temperature on
+  Cottrell Atmospheres]]

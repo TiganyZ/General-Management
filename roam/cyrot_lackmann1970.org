@@ -1,0 +1,16 @@
+#+TITLE: Cyrot-Lackmann1970: Moments of the density of states and s−d mixing
+#+ROAM_KEY: cite:Cyrot-Lackmann1970
+- tags ::
+- keywords ::
+
+* Moments of the density of states and s−d mixing
+  :PROPERTIES:
+  :Custom_ID: Cyrot-Lackmann1970
+  :URL: https://www.sciencedirect.com/science/article/pii/003810987090195X
+  :AUTHOR: Cyrot-Lackmann, F., Ducastelle, F., & Friedel, J.
+  :NOTER_DOCUMENT: ~/Zotero/storage/5TMTHXIR/Cyrot-Lackmann et al. - 1970 - Moments of the density of states and s−d mixing.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

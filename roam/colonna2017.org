@@ -1,0 +1,16 @@
+#+TITLE: Colonna2017: First principles DFT study of interstitial hydrogen and oxygen atoms in the MAX phase Ti 2 AlN
+#+ROAM_KEY: cite:Colonna2017
+- tags ::
+- keywords ::
+
+* First principles DFT study of interstitial hydrogen and oxygen atoms in the MAX phase Ti 2 AlN
+  :PROPERTIES:
+  :Custom_ID: Colonna2017
+  :URL: http://xlink.rsc.org/?DOI=C7RA05045C
+  :AUTHOR: Colonna, F., & Elsässer, C.
+  :NOTER_DOCUMENT: ~/Zotero/storage/YGP6PR6R/Colonna and Elsässer - 2017 - First principles DFT study of interstitial hydroge.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

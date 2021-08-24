@@ -1,17 +1,64 @@
 * MEETING with Tony Paxton                                          :MEETING:
-  SCHEDULED: <2021-02-15 Mon 12:00 ++7d>
+  SCHEDULED: <2021-08-26 Thu 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-02-09 Tue 10:53]
+  :LAST_REPEAT: [2021-08-13 Fri 11:12]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+
+  - State "DONE"       from "MEETING"    [2021-08-13 Fri 11:12]
+  - State "DONE"       from "MEETING"    [2021-07-22 Thu 10:31]
+  - State "DONE"       from "MEETING"    [2021-06-24 Thu 11:46]
+  - State "DONE"       from "MEETING"    [2021-06-14 Mon 09:55]
+  - State "DONE"       from "MEETING"    [2021-06-04 Fri 11:17]
+  - State "DONE"       from "MEETING"    [2021-05-28 Fri 12:40]
+  - State "DONE"       from "MEETING"    [2021-05-24 Mon 09:32]
+  - State "DONE"       from "MEETING"    [2021-03-16 Tue 09:24]
+  - State "DONE"       from "MEETING"    [2021-03-09 Tue 10:06]
+  - State "DONE"       from "MEETING"    [2021-03-01 Mon 14:47]
+  - State "DONE"       from "MEETING"    [2021-02-26 Fri 11:47]
+  - State "DONE"       from "MEETING"    [2021-02-17 Wed 11:24]
   - State "DONE"       from "MEETING"    [2021-02-09 Tue 10:53]
   - State "DONE"       from "MEETING"    [2021-02-02 Tue 16:23]
   - State "DONE"       from "MEETING"    [2021-01-25 Mon 16:10]
   - State "DONE"       from "MEETING"    [2021-01-18 Mon 15:10]
   - State "DONE"       from "MEETING"    [2021-01-11 Mon 18:42]
 
+
+** <2021-07-22 Thu>
+
+   - Writing:
+
+   - Ongoing things:
+     - Fitting
+     - BCC solution energies.
+     - Other things to regard
+     - Implement automated error handler.
+     - Write totally separate model.
+
+
+** <2021-06-24 Thu>
+
+   Things to mention from this week:
+
+*** Embedding [0/4]
+
+    - [ ] Inconsistency between forces and charges:
+      - Further analysis needed: look at the analysis luke did in his
+        thesis.
+
+    - [ ] Dilute limit oxygen-tet ordering
+
+    - [ ] Oxygen going to the surface.
+
+    - [ ] Ti-H
+
+** <2021-03-22 Mon>
+
+
 ** <2021-02-08 Mon>
+
+
 
    - dislocatiom modelling good
    - carbon is very important,
@@ -21,9 +68,13 @@
 
 ** <2021-02-01 Mon>
 
+
+
 *** Actions
 
+
 *** Notes
+
     - How are Ivo's enthalpies so low?
     - What would be his occupancies?
     - Check that my impkementation is correct for the
@@ -38,7 +89,9 @@
     - Can we use TB to rationalise this
 
 ** <2021-01-25 Mon>
+
 *** Actions
+
     - Distributed dSE ARCHER 2 call.
     - Compile all Ti results.
     - Embedding calculations
@@ -47,9 +100,12 @@
       - Maybe use an experimental reference?
     - Perhaps DFT
 ** <2021-01-18 Mon>
+
 *** Actions
+
     - None
 *** Notes
+
     - Mention the muted effect of carbon due to the longer range
       lorentzian.
     - Gladman
@@ -58,20 +114,35 @@
       the concentration dependence as in Ivo's paper
 
 ** <2021-01-11 Mon>
+
 *** Actions
+
     - None
 *** Notes
+
     - No meeting
     - Continuing with implementation of the line-tension model with
       the concentration dependence as in Ivo's paper
 
 * MEETING with Group                                                :MEETING:
-  SCHEDULED: <2021-02-17 Wed 12:00 ++7d>
+  SCHEDULED: <2021-08-25 Wed 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-02-10 Wed 14:56]
+  :LAST_REPEAT: [2021-08-11 Wed 13:24]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-08-11 Wed 13:24]
+  - State "DONE"       from "MEETING"    [2021-06-14 Mon 09:55]
+  - State "DONE"       from "MEETING"    [2021-06-04 Fri 11:17]
+  - State "DONE"       from "MEETING"    [2021-05-27 Thu 11:01]
+  - State "DONE"       from "MEETING"    [2021-05-24 Mon 09:31]
+  - State "DONE"       from "MEETING"    [2021-04-10 Sat 15:59]
+  - State "DONE"       from "MEETING"    [2021-04-07 Wed 11:35]
+  - State "DONE"       from "MEETING"    [2021-03-18 Thu 13:33]
+  - State "DONE"       from "MEETING"    [2021-03-11 Thu 11:03]
+  - State "DONE"       from "MEETING"    [2021-03-03 Wed 14:21]
+  - State "DONE"       from "MEETING"    [2021-02-24 Wed 16:27]
+  - State "DONE"       from "MEETING"    [2021-02-17 Wed 15:10]
   - State "DONE"       from "MEETING"    [2021-02-10 Wed 14:56]
 ]
   - State "DONE"       from "MEETING"    [2021-02-04 Thu 10:13]
@@ -80,11 +151,14 @@
   - State "DONE"       from "MEETING"    [2021-01-13 Wed 12:45]
 ** <2021-01-13 Wed>
 
+
 *** Actions
+
     - No group meeting
     - Follow up Ivo about his notes and how he defines the trap
       sites in the McClean Isotherm model.
 *** Notes
+
     - Talk about the lorentzian of carbon having a reduced effect
       compared to that of hydrogen
     - Talk about the distance dependence of the self-consistent
@@ -95,3 +169,60 @@
   CLOCK: [2021-02-04 Thu 10:11]--[2021-02-04 Thu 10:12] =>  0:01
   :END:
 [2021-02-04 Thu 10:11]
+* DONE with Decoding the Higher Education Landscape                 :MEETING:
+  SCHEDULED: <2021-03-11 Thu 12:30>
+  :LOGBOOK:
+  CLOCK: [2021-03-04 Thu 16:06]--[2021-03-04 Thu 16:06] =>  0:00
+  :END:
+[2021-03-04 Thu 16:06]
+* DONE with Nigel Martin                                            :MEETING:
+  SCHEDULED: <2021-03-12 Fri 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-08 Mon 18:49]--[2021-03-08 Mon 18:49] =>  0:00
+  :END:
+[2021-03-08 Mon 18:49]
+
+- Research catch up about titanium.
+* DONE Vanderbilt: Berry Phases in Condensed Matter                 :MEETING:
+  SCHEDULED: <2021-03-23 Tue 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-03-11 Thu 11:02]--[2021-03-11 Thu 11:03] =>  0:01
+  :END:
+[2021-03-11 Thu 11:02]
+* MEETING with Sasha                                                :MEETING:
+  SCHEDULED: <2021-08-23 Mon 14:00 ++7d>
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-08-10 Tue 13:07]
+  :END:
+  - State "DONE"       from "MEETING"    [2021-08-10 Tue 13:07]
+  - State "DONE"       from "MEETING"    [2021-06-07 Mon 18:27]
+  - State "DONE"       from "MEETING"    [2021-05-27 Thu 11:01]
+  :LOGBOOK:
+  CLOCK: [2021-05-24 Mon 09:49]--[2021-05-24 Mon 09:49] =>  0:00
+  :END:
+[2021-05-24 Mon 09:49]
+* DONE with Emilie                                                  :MEETING:
+  SCHEDULED: <2021-06-08 Tue 14:00>
+  :LOGBOOK:
+  CLOCK: [2021-06-08 Tue 10:36]--[2021-06-08 Tue 10:36] =>  0:00
+  :END:
+[2021-06-08 Tue 10:36]
+* DONE with EFA Rupert Orson                                        :MEETING:
+  SCHEDULED: <2021-06-15 Tue 16:00>
+  :LOGBOOK:
+  CLOCK: [2021-06-15 Tue 01:01]--[2021-06-15 Tue 01:02] =>  0:01
+  :END:
+[2021-06-15 Tue 01:01]
+* DONE with Dimitar [4/4]                                           :MEETING:
+  SCHEDULED: <2021-06-15 Tue 09:00>
+  :LOGBOOK:
+  CLOCK: [2021-06-15 Tue 01:02]--[2021-06-15 Tue 01:02] =>  0:00
+  :END:
+  [2021-06-15 Tue 01:02]
+  - [X] Devel queue for testing? do 5 min
+  - [X] Budgets: what sort of job size?
+  - [X] How to request memory per process?
+    - [X] Launch 8 processes per node and the large mem ones
+  - [X] Can I parallelize this code to work like lmf: use whole nodes
+    for parallelization?
+    - [X] When running lmf, how do I invoke this option?

@@ -1,0 +1,39 @@
+#+TITLE: Davidson2020: Grand canonical approach to modeling hydrogen trapping at vacancies in \$\textbackslash ensuremath\\textbackslash alpha\\textbackslash text\\textbackslash ensuremath\-\\\textbackslash mathrm\\vphantom\Fe\vphantom\\\$
+#+ROAM_KEY: cite:Davidson2020
+- tags ::
+- keywords ::
+
+* Grand canonical approach to modeling hydrogen trapping at vacancies in \$\textbackslash ensuremath\\textbackslash alpha\\textbackslash text\\textbackslash ensuremath\-\\\textbackslash mathrm\\vphantom\Fe\vphantom\\\$
+  :PROPERTIES:
+  :Custom_ID: Davidson2020
+  :URL: https://link.aps.org/doi/10.1103/PhysRevMaterials.4.063804
+  :AUTHOR: Davidson, E. R. M., Daff, T., Csanyi, G., & Finnis, M. W.
+  :NOTER_DOCUMENT: ~/Zotero/storage/8ISXP2WZ/Davidson et al. - 2020 - Grand canonical approach to modeling hydrogen trap.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+** Lowering of vacancy formation energy by hydrogen is "defactant" effect: Kircheim
+   :PROPERTIES:
+   :NOTER_PAGE: 1
+   :END:
+** Lattice model represents bcc Fe by discrete interstitial sites  cite:Oriani1970 [[file:oriani1970.org][Oriani1970: The diffusion and trapping of hydrogen in steel]]
+   :PROPERTIES:
+   :NOTER_PAGE: 1
+   :END:
+  - bcc Fe lattice represented by discrete tetrahedral interstitial
+    sites.
+  - Vacancy represented by trap sites which correspond to the static
+    equilibrium locations of H.
+  - Vibrational contriution to the free energy from the atomic nuclei
+    has been included with the quasiharmonic approximation.
+  - _Full free energy contribution_ can only be accounted for with
+    off-lattice models. Such as OLKMC.
+** Weak binding of H to the vacancy suggests that H moves smoothly in a continuous landscape of potential
+   :PROPERTIES:
+   :NOTER_PAGE: 2
+   :END:
+   - This implies that the total entropy in the bulk will be greater
+     than the configurational entropy which is captured by the lattice
+     model.

@@ -1,0 +1,20 @@
+#+TITLE: Second Hohenburg-Kohn Theorem
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 19:53]--[2021-03-06 Sat 19:53] =>  0:00
+  :END:
+
+    - The ground state density $n(\mathbf{r})$ determines the potential of the Schrodinger equation.
+    - Can have a universal functional.
+    - \[ F[n(\mathbf{r})] = \expval{\hat{T}_e \hat{V}_{e-e} \]
+
+    - *Use the variational principle*
+
+      \[ E_{V_\text{ext} }[n(\mathbf{r})] = F[n(\mathbf{r})] + \int V_{\text{ext} }(\mathbf{r}) n(\mathbf{r}) \text{d} \mathbf{r} \ge E_0
+      \]
+
+    - $n(\mathbf{r})$ determines the ground state wavefunction which can be taken as a trial wavefunction in the external potential.
+
+    - *Exact reformulation of quantum mechanics using variational principle*

@@ -1,10 +1,24 @@
-* NEXT Stretch                                                      :MEETING:
-  SCHEDULED: <2021-02-10 Wed 09:30 ++2d>
+* DONE Stretch                                                      :MEETING:
+  SCHEDULED: <2021-05-29 Sat 09:30 ++0d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-09 Tue 10:53]
+  :LAST_REPEAT: [2021-05-27 Thu 11:00]
   :END:
+  - State "DONE"       from "NEXT"       [2021-05-27 Thu 11:00]
+  - State "DONE"       from "NEXT"       [2021-04-12 Mon 11:17]
+  - State "DONE"       from "NEXT"       [2021-04-10 Sat 15:58]
+  - State "DONE"       from "NEXT"       [2021-03-16 Tue 14:18]
+  - State "DONE"       from "NEXT"       [2021-03-15 Mon 09:48]
+  - State "DONE"       from "NEXT"       [2021-03-10 Wed 10:30]
+  - State "DONE"       from "NEXT"       [2021-03-07 Sun 18:04]
+  - State "DONE"       from "NEXT"       [2021-03-07 Sun 18:04]
+  - State "DONE"       from "NEXT"       [2021-03-04 Thu 09:36]
+  - State "DONE"       from "NEXT"       [2021-03-02 Tue 11:36]
+  - State "DONE"       from "NEXT"       [2021-02-28 Sun 23:57]
+  - State "DONE"       from "NEXT"       [2021-02-26 Fri 11:47]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:53]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "NEXT"       [2021-01-29 Fri 09:59]
@@ -23,28 +37,37 @@
   - State "DONE"       from "TODO"       [2020-12-22 Tue 19:56]
   - State "DONE"       from "TODO"       [2020-12-20 Sun 13:54]
 
-  - Calf stretch stairs 
-  - Hamstring stretch 
-  - Hip flexor contract release 
-  - Front fold 
-  - Scapular pushups 
-  - One-arm scapular pushups 
-  - Cobra/Dish circles 
-  - Hamstring/Hip flexor stretch 
-  - 90/90 fold to squat 
-  - Lunge arm circles 
-  - Good morning/Overhead squat 
+  - Calf stretch stairs
+  - Hamstring stretch
+  - Hip flexor contract release
+  - Front fold
+  - Scapular pushups
+  - One-arm scapular pushups
+  - Cobra/Dish circles
+  - Hamstring/Hip flexor stretch
+  - 90/90 fold to squat
+  - Lunge arm circles
+  - Good morning/Overhead squat
 
-* NEXT Handstand                                            :Workout:MEETING:
-  SCHEDULED: <2021-02-11 Thu 09:30 .+2d/3d>
+* DONE Handstand                                            :Workout:MEETING:
+  SCHEDULED: <2021-05-29 Sat 09:30 .+0d/3d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-09 Tue 10:54]
+  :LAST_REPEAT: [2021-05-27 Thu 11:00]
   :END:
-
-
-
+  - State "DONE"       from "NEXT"       [2021-05-27 Thu 11:00]
+  - State "DONE"       from "NEXT"       [2021-05-24 Mon 09:31]
+  - State "DONE"       from "NEXT"       [2021-04-12 Mon 11:17]
+  - State "DONE"       from "NEXT"       [2021-04-10 Sat 15:58]
+  - State "DONE"       from "NEXT"       [2021-04-07 Wed 11:35]
+  - State "DONE"       from "NEXT"       [2021-03-15 Mon 09:47]
+  - State "DONE"       from "NEXT"       [2021-03-09 Tue 10:07]
+  - State "DONE"       from "NEXT"       [2021-03-07 Sun 18:04]
+  - State "DONE"       from "NEXT"       [2021-03-04 Thu 09:36]
+  - State "DONE"       from "NEXT"       [2021-03-02 Tue 11:36]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:54]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
@@ -58,22 +81,29 @@
   - State "CANCELLED"  from "NEXT"       [2020-12-28 Mon 17:08]
   - State "DONE"       from "TODO"       [2020-12-28 Mon 17:08]
 [[https://youtu.be/vPE4SGZjo3Q]]
-- Warm up fingers and shoulders 
-- Stretch on floor from wall 
+- Warm up fingers and shoulders
+- Stretch on floor from wall
 - Handstand walk hold 3x30s
-- H-hold 3x20s 
-- Scissor walks 3x5 each leg 
+- H-hold 3x20s
+- Scissor walks 3x5 each leg
 - Free standing handstand 3x5
-- Balance thinking of hips 
+- Balance thinking of hips
 
-* NEXT Upper A                                                      :Workout:
-  SCHEDULED: <2021-02-15 Mon 09:30 ++1w>
+* DONE Upper A                                                      :Workout:
+  SCHEDULED: <2021-05-31 Mon 09:30 ++0w>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-02-09 Tue 10:53]
+  :LAST_REPEAT: [2021-05-24 Mon 09:31]
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
   :END:
-
+  - State "DONE"       from "NEXT"       [2021-05-24 Mon 09:31]
+  - State "DONE"       from "NEXT"       [2021-04-12 Mon 11:56]
+  - State "DONE"       from "NEXT"       [2021-04-07 Wed 11:35]
+  - State "DONE"       from "NEXT"       [2021-03-15 Mon 09:48]
+  - State "DONE"       from "NEXT"       [2021-03-08 Mon 10:16]
+  - State "DONE"       from "NEXT"       [2021-03-02 Tue 11:36]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:53]
   - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
   - State "DONE"       from "NEXT"       [2021-01-18 Mon 15:11]
@@ -81,22 +111,28 @@
   - State "DONE"       from "TODO"       [2021-01-06 Wed 18:09]
 | Exercise                    | Sets |   Reps | Rest |
 |-----------------------------+------+--------+------|
-| Explosive pull ups          |    3 |   5-10 |    2 |
-| Dips                        |    3 |   5-10 |    2 |
-| Archer row                  |    3 |   8-12 |    2 |
+| Explosive wide pull ups     |    3 |   5-10 |    2 |
+| Bulgarian Dips              |    3 |   5-10 |    2 |
+| Ring row                    |    3 |   8-12 |    2 |
 | Archer push-ups             |    3 |   8-12 |    2 |
-| Back extension              |    3 |  10-15 |    1 |
+| YTs                         |    3 |  10-15 |    1 |
 | Weighted hollow body hold   |    3 | 30-45s |    1 |
 | Chest to wall shoulder taps |    3 | 30-60s |    1 |
 
-* NEXT Upper B                                              :Workout:MEETING:
-  SCHEDULED: <2021-02-10 Wed 09:30 ++1w>
+* DONE Upper B                                              :Workout:MEETING:
+  SCHEDULED: <2021-06-02 Wed 09:30 ++0w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-09 Tue 10:54]
+  :LAST_REPEAT: [2021-05-27 Thu 11:00]
   :END:
-
+  - State "DONE"       from "NEXT"       [2021-05-27 Thu 11:00]
+  - State "DONE"       from "NEXT"       [2021-05-24 Mon 09:31]
+  - State "DONE"       from "NEXT"       [2021-04-07 Wed 11:35]
+  - State "DONE"       from "NEXT"       [2021-03-10 Wed 10:30]
+  - State "DONE"       from "NEXT"       [2021-03-04 Thu 09:36]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:54]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
@@ -113,14 +149,20 @@
 | Hanging abs      |    3 | 30-45s |    1 |
 | Handstand        |    3 | 30-60s |    1 |
 
-* NEXT Upper C                                                      :Workout:
-  SCHEDULED: <2021-02-13 Sat 09:30 ++1w>
+* DONE Upper C                                                      :Workout:
+  SCHEDULED: <2021-05-29 Sat 09:30 ++0w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-09 Tue 10:54]
+  :LAST_REPEAT: [2021-05-24 Mon 09:31]
   :END:
-
+  - State "DONE"       from "NEXT"       [2021-05-24 Mon 09:31]
+  - State "DONE"       from "NEXT"       [2021-04-10 Sat 15:59]
+  - State "DONE"       from "NEXT"       [2021-04-07 Wed 11:35]
+  - State "DONE"       from "NEXT"       [2021-03-15 Mon 09:48]
+  - State "DONE"       from "NEXT"       [2021-03-08 Mon 10:15]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:54]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
@@ -137,13 +179,21 @@
 | L-sit                       |    3 | 30-45s |    1 |
 | Handstand                   |    3 | 30-60s |    1 |
 
-* NEXT Lower A                                              :Workout:MEETING:
-  SCHEDULED: <2021-02-16 Tue 09:30 ++1w>
+* DONE Lower A                                              :Workout:MEETING:
+  SCHEDULED: <2021-06-01 Tue 09:30 ++0w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-09 Tue 10:53]
+  :LAST_REPEAT: [2021-05-27 Thu 11:00]
   :END:
+  - State "DONE"       from "NEXT"       [2021-05-27 Thu 11:00]
+  - State "DONE"       from "NEXT"       [2021-05-24 Mon 09:31]
+  - State "DONE"       from "NEXT"       [2021-04-07 Wed 11:35]
+  - State "DONE"       from "NEXT"       [2021-03-16 Tue 14:18]
+  - State "DONE"       from "NEXT"       [2021-03-09 Tue 10:07]
+  - State "DONE"       from "NEXT"       [2021-03-02 Tue 11:36]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:53]
   - State "DONE"       from "NEXT"       [2021-01-26 Tue 20:28]
   - State "DONE"       from "MEETING"    [2021-01-21 Thu 09:59]
@@ -160,14 +210,21 @@
 | Calf Raise            |    3 | failure |    1 |
 | Hollow body hold      |    3 |  30-45s |    1 |
 
-* NEXT Lower B                                                      :Workout:
-  SCHEDULED: <2021-02-14 Sun 09:30 ++1w>
+* DONE Lower B                                                      :Workout:
+  SCHEDULED: <2021-05-30 Sun 09:30 ++0w>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: NEXT
-  :LAST_REPEAT: [2021-02-09 Tue 10:54]
+  :LAST_REPEAT: [2021-05-24 Mon 09:31]
   :END:
-
+  - State "DONE"       from "NEXT"       [2021-05-24 Mon 09:31]
+  - State "DONE"       from "NEXT"       [2021-04-12 Mon 11:56]
+  - State "DONE"       from "NEXT"       [2021-04-07 Wed 11:35]
+  - State "DONE"       from "NEXT"       [2021-03-15 Mon 09:48]
+  - State "DONE"       from "NEXT"       [2021-03-08 Mon 10:15]
+  - State "DONE"       from "NEXT"       [2021-02-28 Sun 23:57]
+  - State "DONE"       from "NEXT"       [2021-02-24 Wed 16:27]
+  - State "DONE"       from "NEXT"       [2021-02-17 Wed 11:24]
   - State "DONE"       from "NEXT"       [2021-02-09 Tue 10:54]
   - State "DONE"       from "NEXT"       [2021-01-31 Sun 12:15]
   - State "DONE"       from "NEXT"       [2021-01-25 Mon 11:59]
@@ -185,7 +242,7 @@
 | Hanging abs       |    3 |    8-15 |    1 |
 | Hollow body hold/L-sit |    3 |    8-15 |    1 |
 
-* DONE Lower C                                                      :Workout:
+* DONE Lower C :Workout:
 
 | Exercise              | Sets |    Reps | Rest |
 |-----------------------+------+---------+------|
@@ -195,4 +252,3 @@
 | L-sit                 |    3 |  15-30s |    2 |
 | Back Extension        |    3 |   10-15 |    2 |
 | Reverse Nordic curl   |    3 |    8-15 |    1 |
-

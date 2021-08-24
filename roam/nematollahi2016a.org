@@ -1,0 +1,58 @@
+#+TITLE: Nematollahi2016a: Multiscale description of carbon-supersaturated ferrite in severely drawn pearlitic wires
+#+ROAM_KEY: cite:Nematollahi2016a
+- tags ::
+- keywords ::
+
+* Multiscale description of carbon-supersaturated ferrite in severely drawn pearlitic wires
+  :PROPERTIES:
+  :Custom_ID: Nematollahi2016a
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S1359645416302051
+  :AUTHOR: Nematollahi, G. A., Grabowski, B., Raabe, D., & Neugebauer, J.
+  :NOTER_DOCUMENT: ~/Zotero/storage/CLNJFFPF/Nematollahi et al. - 2016 - Multiscale description of carbon-supersaturated fe.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+** Chemical potential defined relative to cementite
+   :PROPERTIES:
+   :NOTER_PAGE: (2 . 0.5810055865921788)
+   :END:
+   \[ E^{\text{Perf}}_{\text{form}} =
+   E_{\alpha \text{Fe + C} } -
+   E_{\alpha \text{Fe} } -
+   \mu_{\text{C} }^{\text{Cem.} } \]
+
+   Where we have
+
+   $\mu_{\text{C} }^{\alpha} = E_{\alpha \text{Fe + C } } - E_{\alpha
+   \text{Fe} }$
+
+   $E_{\alpha \text{Fe + C }$ is the total energy of bulk Fe with a C
+   interstitial in an Oh site.
+   $E_{\alpha \text{Fe}$ is the total energy of a perfect bcc Fe
+   lattice.
+
+   \[ \mu_{\text{C} }^{\text{Cem.} } = 1/4 E_{\text{Cem.} } - 3
+   E_{\alpha \text{Fe} } \]
+
+   where $E_{\text{Cem} }$ is the energy associated with the primitive
+   unit cell of cementite and 
+** Discrete diffusion model which has a time-dependent occupancy - Line tension model?
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/CLNJFFPF/Nematollahi et al. - 2016 - Multiscale description of carbon-supersaturated fe.pdf::4++4.75]]
+   :END:
+   - This has a similar form to the velocity dependence in the line
+     tension model. One does need to implement it.
+   - The discrete diffusion model, even if applied ot the line tension
+     model should work.
+   - One needs to rectify the exact regimes in which the occupancy
+     changes between the line tension model of Ivo and this model.
+** Asymmetry of carbon migration barriers due to strain field
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/CLNJFFPF/Nematollahi et al. - 2016 - Multiscale description of carbon-supersaturated fe.pdf::7++1.84]]
+   :END:
+** Intermediate positions of the high-mobility zone correspond to the hard-core configuration 
+   :PROPERTIES:
+   :NOTER_PAGE: [[pdf:~/Zotero/storage/CLNJFFPF/Nematollahi et al. - 2016 - Multiscale description of carbon-supersaturated fe.pdf::9++2.30]]
+   :END:

@@ -142,10 +142,29 @@ Vasily Bulatov.
   Modelling)}.
 \newblock Oxford University Press, dec 2006.
 
-\bibitem{anderson2017theory}
-P.M. Anderson, J.P. Hirth, and J.~Lothe.
+\bibitem{Clouet2009}
+Emmanuel Clouet, Lisa Ventelon, and F.~Willaime.
+\newblock Dislocation core energies and core fields from first principles.
+\newblock {\em Physical Review Letters}, 102(5), February 2009.
+
+\bibitem{Anderson2017}
+Peter~M. Anderson, John~Price Hirth, and Jens Lothe.
 \newblock {\em Theory of Dislocations}.
-\newblock Cambridge University Press, 2017.
+\newblock {Cambridge University Press}, 2017 edition edition.
+\newblock Originally published: New York : McGraw-Hill, 1967. Editions
+  published: New York : Wiley, 1982, and Malabar, FL : Krieger, 1992.
+
+\bibitem{Treglia1999}
+G.~Tréglia, B.~Legrand, F.~Ducastelle, A.~Saúl, C.~Gallis, I.~Meunier,
+  C.~Mottet, and A.~Senhaji.
+\newblock Alloy surfaces: Segregation, reconstruction and phase transitions.
+\newblock 15(2):196--235.
+
+\bibitem{mclean1957grain}
+D.~McLean.
+\newblock {\em Grain Boundaries in Metals}.
+\newblock Monographs on the physics and chemistry of materials. Clarendon
+  Press, 1957.
 
 \bibitem{morito03_disloc_densit_within_lath_marten}
 S.~Morito, J.~Nishikawa, and T.~Maki.
@@ -163,12 +182,6 @@ M.~I. Mendelev, S.~Han, D.~J. Srolovitz, G.~J. Ackland, D.~Y. Sun, and M.~Asta.
 \newblock Development of new interatomic potentials appropriate for crystalline
   and liquid iron.
 \newblock {\em Philosophical Magazine}, 83(35):3977--3994, December 2003.
-
-\bibitem{Paxton2010}
-A.~T. Paxton and C.~Els\"{a}sser.
-\newblock Electronic structure and total energy of interstitial hydrogen in
-  iron: Tight-binding models.
-\newblock {\em Physical Review B}, 82(23), December 2010.
 
 \bibitem{Rodney2009}
 David Rodney and Laurent Proville.
@@ -205,11 +218,46 @@ W.A Spitzig and A.S Keh.
   activated flow in iron single crystals.
 \newblock {\em Acta Metallurgica}, 18(9):1021–1033, Sep 1970.
 
-\bibitem{Ventelon_2013}
-Lisa Ventelon, F.~Willaime, E.~Clouet, and D.~Rodney.
-\newblock Ab initio investigation of the peierls potential of screw
-  dislocations in bcc fe and w.
-\newblock {\em Acta Materialia}, 61(11):3973–3985, Jun 2013.
+\bibitem{Proville2012}
+Laurent Proville, David Rodney, and Mihai-Cosmin Marinica.
+\newblock Quantum effect on thermally activated glide of dislocations.
+\newblock 11(10):845--849.
+
+\bibitem{Maresca2018}
+Francesco Maresca, Daniele Dragoni, Gábor Csányi, Nicola Marzari, and
+  William~A. Curtin.
+\newblock Screw dislocation structure and mobility in body centered cubic
+  {{Fe}} predicted by a {{Gaussian Approximation Potential}}.
+\newblock 4(1):69.
+
+\bibitem{Henkelman2006}
+Graeme Henkelman, Andri Arnaldsson, and Hannes Jónsson.
+\newblock Theoretical calculations of {{CH4}} and {{H2}} associative desorption
+  from {{Ni}}(111): {{Could}} subsurface hydrogen play an important role?
+\newblock 124(4):044706.
+
+\bibitem{Groger2007}
+R.~Gröger and V.~Vitek.
+\newblock Explanation of the discrepancy between the measured and atomistically
+  calculated yield stresses in body-centred cubic metals.
+\newblock 87(2):113--120.
+
+\bibitem{Caillard2010}
+D.~Caillard.
+\newblock Kinetics of dislocations in pure {{Fe}}. {{Part I}}. {{In}} situ
+  straining experiments at room temperature.
+\newblock 58(9):3493--3503.
+
+\bibitem{Jiang2003}
+D.~E. Jiang and Emily~A. Carter.
+\newblock Carbon dissolution and diffusion in ferrite and austenite from first
+  principles.
+\newblock 67(21):214103.
+
+\bibitem{daSilva1976}
+J.R.G. da~Silva and Rex~B. McLellan.
+\newblock Diffusion of carbon and nitrogen in {{B}}.{{C}}.{{C}}. iron.
+\newblock 26(1):83--87.
 
 \bibitem{Nematollahi2016}
 Gh.~Ali Nematollahi, Blazej Grabowski, Dierk Raabe, and J\"{o}rg Neugebauer.

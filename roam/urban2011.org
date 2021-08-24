@@ -1,0 +1,16 @@
+#+TITLE: Urban2011: Parameterization of tight-binding models from density functional theory calculations
+#+ROAM_KEY: cite:Urban2011
+- tags ::
+- keywords ::
+
+* Parameterization of tight-binding models from density functional theory calculations
+  :PROPERTIES:
+  :Custom_ID: Urban2011
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.84.155119
+  :AUTHOR: Urban, A., Reese, M., Mrovec, M., Elsässer, C., & Meyer, B.
+  :NOTER_DOCUMENT: ~/Zotero/storage/2H5KIWKE/Urban et al. - 2011 - Parameterization of tight-binding models from dens.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

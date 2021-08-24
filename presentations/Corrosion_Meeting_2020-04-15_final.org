@@ -11,7 +11,7 @@
 #+REVEAL_EXTRA_CSS: ./extra.css
 #+REVEAL_THEME: solarized
 #+REVEAL_TRANS: linear 
-#+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
+#+OPTIONS: toc:nil reveal_height:800
 
 
 * Motivation 

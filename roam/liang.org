@@ -1,0 +1,16 @@
+#+TITLE: Liang: Ab initio simulation of extended defects of -Ti in presence of interstitial atoms H O
+#+ROAM_KEY: cite:Liang
+- tags ::
+- keywords ::
+
+* Ab initio simulation of extended defects of -Ti in presence of interstitial atoms H O
+  :PROPERTIES:
+  :Custom_ID: Liang
+  :URL: 
+  :AUTHOR: Liang, L.
+  :NOTER_DOCUMENT: ~/Zotero/storage/3IRXVWFG/Liang - Ab initio simulation of extended defects of -Ti in.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

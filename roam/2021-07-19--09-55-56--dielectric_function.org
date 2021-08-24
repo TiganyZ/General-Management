@@ -1,0 +1,20 @@
+#+TITLE: Dielectric function
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-19 Mon 10:55]--[2021-07-19 Mon 10:59] =>  0:04
+  :END:
+
+This describes how a bare external potential is screened to give the
+effective potential as seen by an electon.
+
+The classical dielectric function describes how the bare external
+potential is screened as seen by a test charge. The difference is that
+the test charge sees the potential without the exchange correlation
+part.
+
+The inverse of the dielectric function is related to [[file:2021-07-19--09-49-46--linear_response.org][linear response]]
+by
+
+\[ \epsilon^{-1} = 1 + v_{\text{C} } \chi_{\text{e} } \]

@@ -1,0 +1,16 @@
+#+TITLE: linear response
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-19 Mon 10:49]--[2021-07-19 Mon 10:52] =>  0:03
+  :END:
+
+  Linear response is a relation to the change in electron
+  density/charge upon a change to the external potential.
+
+  In matrix form, in the r representation, we ahve
+
+  \[ \rho - \rho_1 \rightarrow \Delta\rho = \chi_{\text{el} }\Delta V_{\text{ext} } \]
+
+  One can relate this to the inverse of the [[file:2021-07-19--09-55-56--dielectric_function.org][Dielectric function]].

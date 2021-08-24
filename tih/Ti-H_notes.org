@@ -1,0 +1,176 @@
+#+TITLE: Ti-H Notes
+#+AUTHOR: Tigany Zarrouk
+#+BIBLIOGRAPHY: ../bibliography/org-refs.bib
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{rotating}
+#+LATEX_HEADER: \usepackage[margin=1.25in]{geometry}
+#+LATEX_HEADER: \usepackage{subfigure}
+#+LATEX_HEADER: \usepackage{pdflscape}
+
+
+* Introduction
+
+  Fitting Ti-H parameters such that one can finally see what happens
+  when water adsorbs on the surface of titanium. Some spurious
+  interactions were seen prior, with Ti-H parameters being taken
+  as verbatim from the Fe-H model, which of course can be improved
+  upon.
+
+
+* Aim
+
+  To obtain realistic Ti-H parameters, which reproduce necessary data,
+  such as the hydride structures TiH2, mainly focussing on cubic
+  fluorite.
+
+  One can also obtain reasonable H-H interaction parameters, tweaked
+  from the Goodwin-Skinner paper by fitting to the bands.
+
+* Methods
+
+  Fitting parameters using CMAES algorithm.
+
+  H-H interactions are kept to first neighbours in the hydride
+  structure
+  $r_1 = 4, r_2 = 5.8 \text{bohr}$.
+
+  This gives interactions which are too strong, using the Pettifor
+  potential for hydrogen cite:Skinner1991. As such, for a compromise,
+  we fit to the same binding energy, and just change the scaling for
+  the bond integral. We increase the decay rate $n$ of the $ss\sigma$ bond
+  integral. We keep the exponent ratio between the pair potential and
+  the bond integral the same, namely $m/n = 2.097$.
+
+
+
+
+* Results
+
+** <2021-07-15 Thu>
+
+   There are differences between compilers. Seemingly, in one
+   #+begin_src bash
+   module purge && module load lmto/7.13.0/openmpi/3.1.0/intel/14.0.1
+   #+end_src
+
+   It works fine for calculating the sd model phonons.
+
+   For
+   #+begin_src bash
+     module purge
+     module load hdf5/1.10.5/openmpi/3.1.0/gcc/8.1.0 libxc/4.3.4/gcc/8.1.0 intel/19.0.3
+
+     export PATH="/home/tigany/bucket/lm/b/gcc-opt-mpi:$PATH"
+   #+end_src
+
+   It seems like it is not able to find the Fermi level with pure
+   titanium, with the smearing parameters specified...
+
+   I am not sure why this happens. It may need to be investigated.
+*** Notes
+
+
+
+***  Parameter set
+
+   -vsssth=-0.5124868655 -vqsssth=0.3180191690 -vsdsth=-0.4086120545
+   -vqsdsth=0.2531028137 -vbht=154.6439389415 -vmht=-1.3072292306
+   -vpht=1.7575068391 -vr0h2=1.5600000000 -vebh2=-0.3321087436
+   -vmhh=2.3800000000 -vnhh=1.1350000000 -vbhh=0.8724556587
+   -vahh=-0.5258408711 -vr1hh=0.5000000000 -vr2hh=1.0000000000 -vmetal=5
+   -vtetra=0 -vesh=-1 -vdest=-0.8 -vdedt=-0.8 -vdefzv=0
+   -vb1to=48313.9525683159 -vm1to=-12.0000000000 -vp1to=0.0000000000
+   -vb2to=258.9003155035 -vm2to=-1.0000000000 -vp2to=1.5198654273
+   -vsssto=-0.0536661462 -vspsto=0.0933203406 -vsdsto=-0.1688098730
+   -vpdsto=-0.2148348485 -vpdpto=0.1455315421 -vuti=0.9781312861
+   -vnitf=39 -vfdd=0.2381838579 -vqdds=0.6036864173 -vqddp=0.5947908453
+   -vqddd=0.7609223045 -vb0tt=61.5854833811 -vp0tt=1.1860557679
+   -vm0tt=0.0000000000 -vb1tt=-3.4141510027 -vp1tt=0.6681021337
+   -vb2tt=0.0000000000 -vp2tt=0.0000000000 -vm2tt=0.0000000000
+   -vndt=2.0000000000 -vcr1=-6.0634058212 -vcr2=3.8421798332
+   -vfss=-0.1500000000 -vqss=0.3700000000 -vfsds=-1.0181299488
+   -vqsds=1.0000000000 -vest=-0.1944175664 -vr1tts=6.5000000000 -vrctts=10.0000000000
+   -vr1tt=6.5000000000 -vrctt=10.0000000000-vcr3=-1.0000000000
+
+
+
+*** Bands
+
+    Interestingly, one cannot turn off the $ss\sigma$ interactions for
+    the H-H bonds. It seems that making them zero does actually
+    interfere with the band structure:
+
+    - Setting $ss\sigma$ to zero
+      [[file:~/Documents/tih/tih2/fluorite/bands/bands_with_r1hh-2_r2hh-3_new_no_int.pdf]]
+    - TBE with only short range interactions $r_1 \sim 2$, $r_2 \sim 3$:
+      [[file:~/Documents/tih/tih2/fluorite/bands/bands_with_r1hh-2_r2hh-3_new.pdf]]
+    - DFT
+      [[file:~/Documents/tih/tih2/fluorite/bands/tbe_bands/dft/bands_flrt.pdf]]
+
+
+**** Why this behaviour?
+
+     The interactions between the hydrogens should be short
+     ranged. The minimum distance between hydrogens in the fluorite
+     structure, with a lattice parameter of $a_{\text{fluorite}} = 8.38
+     [\text{bohr}]$, is $d = a_{\text{fluorite}} |\mathbf{r}_1 -
+     \mathbf{r}_2|  = a_{\text{fluorite}} \times 0.5 = 4.19
+     [\text{bohr} ]$
+
+
+
+
+
+**** Old
+
+     Bands seem to be fitted quite well
+
+     DFT bands:
+     [[file:~/Documents/tih/tih2/fluorite/bands/tbe_bands/dft/bands_flrt.pdf]]
+
+     TBE bands:
+     [[file:~/Documents/tih/tih2/fluorite/bands/tbe_bands/2021-06-28/bands_flrt_hyb_h.pdf]]
+
+
+
+*** Solution Energies
+    - Seems that removing the shift makes the relaxation quite unstable, causing TBE to
+      quit. These are only available when the shift to the d levels is made.
+    - Why? It seems that the d levels would be much higher in energy than that of the
+      hydrogen levels, as such there would be no hybridisation.
+
+    - If I shift the d levels down, how does this affect the TiO2 rutile/anatase structure? Does this
+      show that we cannot have transferable models as the on-site energy much be changed
+      by such a significant amount?
+
+
+
+*** Adsorption Energies
+
+    [[file:~/Documents/tih/tih2/solution_energies/tbe/plot_H_adsorption/adsorption_energies_with_and_without_shift.png]]
+
+**** No Shift
+
+| distance[bohr] | TBE( E_TiH - E_Ti_last)[Ry] | DFT[Ry] |
+|----------------+-----------------------------+---------|
+|         -1.300 |                     -1.7968 | -0.5094 |
+|         -1.250 |                     -1.8363 | -0.5201 |
+|         -1.200 |                     -1.7988 | -0.5034 |
+|         -1.100 |                     -1.4436 | -0.4368 |
+|         -1.000 |                     -1.4125 | -0.4115 |
+|         -0.900 |                     -1.4532 | -0.4487 |
+|         -0.800 |                     -1.8374 | -0.5123 |
+|         -0.750 |                     -1.8783 | -0.5220 |
+|         -0.700 |                     -1.8380 | -0.5133 |
+|         -0.600 |                     -1.4735 | -0.4652 |
+|         -0.500 |                     -1.4367 | -0.4655 |
+|         -0.400 |                     -1.4311 | -0.5363 |
+|         -0.300 |                     -1.4143 | -0.5697 |
+|         -0.200 |                     -1.2579 | -0.5013 |
+|         -0.100 |                     -0.2490 | -0.3834 |
+|          0.000 |                     -0.1308 | -0.2482 |
+|          0.250 |                     -0.0572 | -0.0197 |
+|          0.500 |                     -0.0267 |  0.0249 |
+|          0.750 |                     -0.0103 |  0.0319 |
+|          1.000 |                      0.0000 |  0.0000 |

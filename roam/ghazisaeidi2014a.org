@@ -1,0 +1,16 @@
+#+TITLE: Ghazisaeidi2014a: Interaction of oxygen interstitials with lattice faults in Ti
+#+ROAM_KEY: cite:Ghazisaeidi2014a
+- tags ::
+- keywords :: Condensed Matter - Materials Science
+
+* Interaction of oxygen interstitials with lattice faults in Ti
+  :PROPERTIES:
+  :Custom_ID: Ghazisaeidi2014a
+  :URL: http://arxiv.org/abs/1403.2806
+  :AUTHOR: Ghazisaeidi, M., & Trinkle, D. R.
+  :NOTER_DOCUMENT: ~/Zotero/storage/VS3NYB7D/Ghazisaeidi and Trinkle - 2014 - Interaction of oxygen interstitials with lattice f.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

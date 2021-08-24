@@ -1,0 +1,16 @@
+#+TITLE: Andersen1985: Canonical Description of the Band Structure of Metals
+#+ROAM_KEY: cite:Andersen1985
+- tags ::
+- keywords ::
+
+* Canonical Description of the Band Structure of Metals
+  :PROPERTIES:
+  :Custom_ID: Andersen1985
+  :URL:
+  :AUTHOR: Andersen, O. and Jepsen, O. and Glötzel, D. and Bassani, F. and Fumi, F. and Tosi, M.P.
+  :NOTER_DOCUMENT: ~/Zotero/storage/D82MG9MI/Andersen, O. and Jepsen, O. and Glötzel, D. and Bassani, F. and Fumi, F. and Tosi, M.P. - 1985 - Canonical Description of the Band Structure of Met.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

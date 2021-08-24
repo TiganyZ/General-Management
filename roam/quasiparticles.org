@@ -1,0 +1,11 @@
+#+TITLE Quasiparticles
+
+- Quasiparticles are the excited states of electrons.
+- If one were to think about all of the potential energy states of the
+  system, then one can see there are 2^N states, if we simply imagine
+  each state to either be /occupied/ or not.
+- This is two many states to consider saying 2^10^23 states.
+- So we just look at the *excited states*
+- These excited states correspond to /combinations of quasiparticles/
+
+  \[ \sum_{\alpha} \]

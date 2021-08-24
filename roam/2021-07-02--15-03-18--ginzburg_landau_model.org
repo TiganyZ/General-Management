@@ -1,0 +1,23 @@
+#+TITLE: Ginzburg-Landau model
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-02 Fri 16:03]--[2021-07-02 Fri 16:09] =>  0:06
+  :END:
+
+The Ginzburg-Landau model is generally a model used to describe
+superconductivity. Where they think of it as a second-order phase
+transition.
+
+Essentially it states that the free energy should have a term akin to
+a quantum-mechanical wavefunction, where there is a complex field
+$\psi(r)$, where $|\psi(r)|^2$ is a measure of the density.
+
+
+In the semi-empirical model of [[file:dudarev2005.org][Dudarev2005: A `magnetic' interatomic
+potential for molecular dynamics simulations]]
+they have a term to describe the magnetic phase transition as (where
+$\zeta$ is an order parameter?)
+
+\[ E_{\text{tot}}(N,\zeta) - E_{\text{tot}}(N,0)  = \alpha\zeta^2 + \beta\zeta^4 \]

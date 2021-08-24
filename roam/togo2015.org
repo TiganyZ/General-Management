@@ -1,0 +1,16 @@
+#+TITLE: Togo2015: First principles phonon calculations in materials science
+#+ROAM_KEY: cite:Togo2015
+- tags ::
+- keywords ::
+
+* First principles phonon calculations in materials science
+  :PROPERTIES:
+  :Custom_ID: Togo2015
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S1359646215003127
+  :AUTHOR: Togo, A., & Tanaka, I.
+  :NOTER_DOCUMENT: ~/Zotero/storage/UDSIT42D/Togo and Tanaka - 2015 - First principles phonon calculations in materials .pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

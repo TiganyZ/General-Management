@@ -144,13 +144,13 @@ the system.
    
    Applying the variational principle to find the ground state,
 
-   \[ \frac{ \exp{ \hat{H} }{ \Psi }}{ \bra{\Psi}\ket{\Psi} } = 0 \]
+   \[ \frac{ \expval{ \hat{H} }{ \Psi }}{ \bra{\Psi}\ket{\Psi} } = 0 \]
 
    we obtain the Hartree equations. 
 
    
 
-   N\:aively, 
+   Näively,
 
 ** Density Functional Theory
 
@@ -226,13 +226,13 @@ To find the eigenvalues, one can replace the problem of solving a fully-interact
 system, with a given electronic density, by an auxiliary non-interacting electronic system which has
 the same electronic density. The resulting eigenvalues can be used to find the expectation value of
 the kinetic energy functional, $T_s[\rho(\mathbf{r})]$, which corresponds to the kinetic energy of the
-non-interacting system.
+non-interacting (Kohn-Sham) system.
 
 The Hohenburg-Kohn-Sham functional can be defined as
 
 \[
-E^{\text{HKS}}[\rho] = T_{\text{s}}[\rho] + E_{\text{H}}[\rho] + E_{\text{xc}}[\rho] + E_{\text{ext}}[\rho] + E_{\text{ZZ}},
-\]
+E_{\text{HKS}}[\rho] = T_{\text{s}}[\rho] + E_{\text{H}}[\rho] + E_{\text{xc}}[\rho] + E_{\text{ext}}[\rho] + E_{\text{ZZ}},
+ \label{eq:hks_functional}\]
 
 where $T_{\text{s}}[\rho]$ is the kinetic energy of the fictitious non-interacting auxiliary system
 acting in the same effective potential $V_{\text{eff}}[\rho]$. The assumption made here is that the
@@ -250,8 +250,12 @@ E_{\text{xc}}[\rho] = \Big( \expval{\hat{T}} - T_{\text{s}}[\rho] \Big) + \Big( 
 where we can interpret the first term as being the increase in kinetic energy from electronic
 correlation in a fully interacting system, compared to a non-interacting one---correlations cause
 electrons to move to more energetically favourable areas of the potential, thus increasing the
-kinetic energy---and the second term is the change in the potential of a fully interacting system,
-with exchange and correlation included, and an electron density acting through the
+kinetic energy---and the second term is difference in energy between a system
+with full electron-electron interactions ($\hat{V}_{\text{int}} = \frac{1}{|
+\mathbf{r} - \mathbf{r}^{'}|}$) , which includes exchange and
+correlation effects, and the standard Hartree energy, which
+represents the energy from purely an electronic density, with no
+exchange-correlation.
 
 The difference between the true kinetic energy $\Delta T = T - T_{\text{s}}$ is now approximated by
 the exchange-correlation functional $E_{\text{xc}}[\rho]$. This is a reasonable
@@ -259,6 +263,8 @@ approximation. Separating the kinetic energy from the long-range coulomb interac
 exchange-correlation potential can be approximated by an approximately local functional. Is this due
 the the fact that correlations basically lead to a screening of the coulomb potential?
 
+
+*** Solving the Kohn-Sham Equations
 
 The process by which this happens are as follows: one solves the Poisson
 equation for the Hartree potential, given an initial input density which on
@@ -289,14 +295,59 @@ The Kohn-Sham eigenvalues are not strictly correct.
 
 *** Hohenburg and Kohn Theories
 
-    
+
+
+
+** From Density Functional Theory to Tight-Binding
+
+   For a solution to the Kohn-Sham equations, one must have a self-consistent
+   density: the input density, from which we construct the effective potential
+   must be within some defined tolerance of the output density---constructed
+   from the eigenvectors found upon diagonalisation of the hamiltonian.
+
+   One can apply perturbation theory to more closely understand the relationship
+   between the input and output densities. We can expand the HKS functional,
+   equation [[eqref:eq:hks_functional]], to second order in deviations from the
+   input density to obtain the second-order HKS functional:
+
+   \begin{align*}
+E_{\text{HKS}}^{(2)}[\rho] = &\sum_{n\text{ occ}} f_n \expval{ \hat{H}^{\text{in}}  }{\psi_n} \\
+    &- \int \text{d}\mathbf{r}
+            \rho^{\text{in}}(\mathbf{r}) V_{\text{xc}}^{\text{in}}(\mathbf{r})
+       + E_{\text{xc}}[\rho^{\text{in}}]
+       - E_{\text{H}}[\rho^{\text{in}}]
+       + E_{\text{ZZ}} \\
+    &+ \frac{1}{2} \int \text{d} \mathbf{r} \int \text{d} \mathbf{r}^{'}
+   \left\{
+      e^2 \frac{\delta \rho(\mathbf{r}) \delta \rho(\mathbf{r}^{'})}{|\mathbf{r} - \mathbf{r}^{'}|} \\
+&+ \delta \rho(\mathbf{r}) \frac{\delta^2 E_{\text{xc}}}{\delta \rho(\mathbf{r}) \delta \rho(\mathbf{r}^{'})} \delta \rho(\mathbf{r}^{'}) \Bigger\} \label{eq:second_order_hks_functional}
+   \end{align*}
+
+   where, $\rho = \rho^{\text{in}} + \delta\rho$.
+   The first line represents the energy from the input hamiltonian, the
+   second line subracts the exchange-correlation energy from the first term, to
+   encapsulate all exchange-correlation effects in the second term on the second line, the third term
+   removes the Hartree contribution from the first line, which is a
+   double-counting correction term, with the final term on the second line being
+   the classical nucleus-nucleus interaction.
+
+   Omitting the final two lines in equation
+   [[eqref:eq:second_order_hks_functional]], we obtain the first-order functional, the Harris-Foulkes
+   functional, where we remove the need for self-consistency in order to
+   find the ground state energy. This is the basis for tight-binding.
+
+   Haydock, and Sutton /et al./
+
+
+
+
 * Defects in Materials
 
 ** Vacancies and Solutes
 
-** Ti3Al Solutes and their effects. 
+# ** Ti3Al Solutes and their effects.
 
-** Current research: Vacancy-Solute Complexes. 
+# ** Current research: Vacancy-Solute Complexes.
 
 
 * Bibliography 

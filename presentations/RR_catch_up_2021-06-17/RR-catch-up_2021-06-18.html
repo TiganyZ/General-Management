@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>R-R Catch-up Meeting</title>
+<meta name="author" content="Tigany Zarrouk"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js/dist/theme/solarized.css" id="theme"/>
+
+<link rel="stylesheet" href="./reveal.js/plugin/accessibility/helper.css"/>
+
+<link rel="stylesheet" href="./reveal.js/plugin/toc-progress/toc-progress.css"/>
+
+<link rel="stylesheet" href="./reveal.js/dist/theme/toc-style.css"/>
+
+<link rel="stylesheet" href="./reveal.js/dist/theme/fonts/source-sans-pro/source-sans-pro.css"/>
+
+<link rel="stylesheet" href="./extra.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-state="no-toc-progress">
+<!-- The following copyright information only applies to the title slide. -->
+<!-- SPDX-FileCopyrightText: 2017-2020 Tigany Zarrouk -->
+<!-- SPDX-License-Identifier: CC0-1.0 -->
+<!-- This is an HTML template for the title slide. -->
+<!-- Embed logos as necessary. -->
+<!-- <a class="nooutlink" href="url"><img class="state-background your-logo-class" src="whatever.png" alt="Whatever" /></a> -->
+<div class="talk-title">
+    <h1 class="no-toc-progress">R-R Catch-up Meeting</h1>
+</div>
+<div class="talk-subtitle">
+    <p></p>
+</div>
+<div class="talk-author">
+  <a href="https://kclpure.kcl.ac.uk/portal/en/persons/tigany-zarrouk(6386ac58-2d9f-4517-8c34-aa9f330bbec9).html">Tigany Zarrouk</a>
+  <p style="font-size: 0.8em"><a href="tigany.zarrouk@kcl.ac.uk">tigany.zarrouk@kcl.ac.uk</a></p><!-- <br /> -->
+</div>
+<div class="talk-author">
+  <p style="font-size: 0.8em"><a href="https://tonypaxton.org/">Tony Paxton</a>
+  <p style="font-size: 0.6em"><a href="tony.paxton@kcl.ac.uk">tony.paxton@kcl.ac.uk</a></p></p>
+</div>
+<!-- <div class="talk-author"> -->
+<!--     <p style="font-size: 0.8em"><a href="tonypaxton.org">Tony Paxton</a> -->
+<!--     <p style="font-size: 0.6em"><a href="tony.paxton@kcl.ac.uk">tony.paxton@kcl.ac.uk</a></p> -->
+<!--     <p>18.06.2021</p></p> -->
+<!-- </div> -->
+<div class="grid">
+  <div class="col-1-3">
+    <a href="https://www.skf.com/uk"><img class="logo-left" src="./img/rolls-royce-logo.png"></a>
+  </div>
+  <div class="col-1-3">
+    <a href="https://quantumcorrosion.org"><img class="logo-middle" src="./img/quantum-corrosion.png "></a>
+  </div>
+  <div class="col-1-3">
+    <a href="https://kclpure.kcl.ac.uk/portal/en/persons/tigany-zarrouk(6386ac58-2d9f-4517-8c34-aa9f330bbec9).html"><img class="logo-right" src="./img/KCL_Logo.png"></a></img>
+  </div>
+</div>
+
+</section>
+
+<section>
+<section id="slide-org0189f16">
+<h2 id="org0189f16">Introduction</h2>
+<div class="outline-text-2" id="text-org0189f16">
+</div>
+</section>
+<section id="slide-org78298e7">
+<h3 id="org78298e7">Introduction to current work</h3>
+<ul>
+<li>Fitted a quantum mechanical model of titanium to
+look at defect interactions and atomistic mechanisms of solute hardening.</li>
+<li>Simulations of oxygen-defect interactions are crucial, as such
+we use various methods.</li>
+<li>Using the same model, in parameters from a TiO2 model,
+we can look at water on a pure titanium surface (previously asked
+by Dave Rugg)</li>
+
+</ul>
+<div class="slide-footer"><br></div>
+
+</section>
+</section>
+<section>
+<section id="slide-org065e213">
+<h2 id="org065e213">Theory</h2>
+<div class="outline-text-2" id="text-org065e213">
+</div>
+</section>
+<section id="slide-org1d82b85">
+<h3 id="org1d82b85">Tight Binding</h3>
+<div class="column" style="float:left; width: 50%">
+
+<ul>
+<li>Tight binding is an approximation to DFT.</li>
+<li>Overlaps between atomic orbitals are key parameters.</li>
+<li>Parameters can be fitted to experimental data</li>
+<li>\(\mathcal{O}(N^3)\), but much smaller prefactor compared to DFT.</li>
+
+</ul>
+
+</div>
+<div class="column" style="float:right; width: 50%">
+<img width="400" src="file:///home/tigany/Documents/docs/Management/Images/OverlappingOrbitalsBondIntegrals.png" >
+</div>
+<div class="slide-footer"><br></div>
+
+</section>
+<section id="slide-org6a46273">
+<h3 id="org6a46273">BOP</h3>
+<div class="column" style="float:right; width: 50%">
+
+<ul>
+<li>BOP is a faster but less accurate \(\mathcal{O}(N)\) method of interatomic
+force calculation within tight-binding.</li>
+<li>One builds a local density of states from moments, giving detailed
+electronic structure information.</li>
+
+</ul>
+
+</div>
+<div class="column" style="float:left; width: 50%">
+<img width="300" src="file:///home/tigany/Documents/docs/Management/Images/bop_pic_nicer.png" >
+</div>
+<div class="slide-footer"><br></div>
+
+
+</section>
+<section id="slide-org3927c28">
+<h3 id="org3927c28">Embedding</h3>
+<div class="column" style="float:left; width: 50%">
+
+<ul>
+<li>Idea is to combine speed of BOP (\(\mathcal{O}(N)\)) with accuracy of
+tight-binding \(\mathcal{O}(N^3)\).</li>
+<li>Increasing the number of atoms gives freedom to:
+<ul>
+<li>Investigate isolated dislocations.</li>
+<li>Include solutes at more realistic concentrations.</li>
+<li>Simulate interfaces near a surface (e.g. TiO\(_2\) and
+bulk Ti [Future Work
+])</li>
+
+</ul></li>
+
+</ul>
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<img width="500" src="file:///home/tigany/Documents/docs/Management/Images/hex_cell_embedding_crop_text.png" >
+</div>
+
+<aside class="notes">
+<p>
+Invariance theorem with green&rsquo;s function approaches. So good with boundary
+conditions.
+</p>
+
+</aside>
+<div class="slide-footer"><br></div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org2cfebd8">
+<h2 id="org2cfebd8">Results</h2>
+<div class="outline-text-2" id="text-org2cfebd8">
+</div>
+</section>
+<section id="slide-orge8155c4">
+<h3 id="orge8155c4">Core structures</h3>
+<ul>
+<li>Dislocation cores are sensitive to boundary conditions.</li>
+<li>Sufficient resolution of core structure is necessary ascertain how
+dislocation glide is modified.</li>
+
+</ul>
+<div class="slide-footer"><br></div>
+
+
+
+</section>
+<section id="slide-org8a68528">
+<h3 id="org8a68528">\(\frac{1}{3}\langle11\bar{2}0\rangle\) screw</h3>
+
+<div id="org67c0097" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/bop_dislocation_relaxation_prismatic_partials_larger.png" alt="bop_dislocation_relaxation_prismatic_partials_larger.png" width="80%" style="position:relative;top:0px;left:0px;z_index:1;">
+</p>
+</div>
+
+<div class="slide-footer"><br></div>
+</section>
+<section>
+
+
+<div id="orgf92d4d5" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/ddp_ip5_core_quad.png" alt="ddp_ip5_core_quad.png" width="40%" style="position:relative;top:50px;left:-140px;z_index:1;">
+</p>
+</div>
+
+
+<div id="org503860e" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/ghazisaiedi_trinkle_3_core_just_dft.png" alt="ghazisaiedi_trinkle_3_core_just_dft.png" width="40%" style="position:absolute;top:50px;left:800px;z_index:2;">
+</p>
+</div>
+
+
+<div id="org28581ad" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/coordinate_prismatic_plane.png" alt="coordinate_prismatic_plane.png" width="30%" style="position:absolute;top:180px;left:-150px;z_index:2;">
+</p>
+</div>
+<div class="slide-footer"><br></div>
+
+
+</section>
+<section id="slide-orge65264c">
+<h4 id="orge65264c">Dislocation Dissociation</h4>
+<ul>
+<li>Correct dissociation found of \(\frac{1}{3}[1\bar{2}10] =
+      \frac{1}{6}[1\bar{2}10] + \frac{1}{6}[1\bar{2}10]\).</li>
+<li>Dissociation distance between cores is \(\sim4c\), which is larger
+than what is found in DFT.</li>
+
+</ul>
+
+
+
+<div id="orgb93d4ab" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/final_model_IP1_partial_dd_final.png" alt="final_model_IP1_partial_dd_final.png">
+</p>
+</div>
+<div class="slide-footer"><br></div>
+
+
+
+</section>
+<section id="slide-org4f13605">
+<h3 id="org4f13605">Peierls Stress</h3>
+<ul>
+<li>To find the peierls stress, the critical stress to move a
+dislocation upon a glide plane, one can incrementally strain and
+relax the simulation cell until the dislocation has been seen to
+move to the next peierls valley.</li>
+
+</ul>
+<div class="slide-footer"><br></div>
+
+</section>
+<section id="slide-org655c080">
+<h4 id="org655c080">Prismatic Peierls Stress</h4>
+<ul>
+<li>Using an increment in the strain of \(\epsilon_{xz}\) by \(1\times 10^{-4}C_{44}'\), the
+dislocation moves by c/2 at \(\sigma_{xz}= 0.0012C_{44}'\), giving a Peierls stress of \(\sigma_{xz} =
+      2C_{44}\epsilon_{xz}= 0.0923\) GPa.</li>
+<li>This is half the strain necessary for the MEAM potential of
+Trinkle et al.</li>
+
+</ul>
+<div class="slide-footer"><br></div>
+
+
+</section>
+<section id="slide-orgad72be5">
+<h3 id="orgad72be5">O-dislocation binding</h3>
+<ul>
+<li>576 atom quadrupolar cell of 1b depth relaxed.</li>
+<li>Cell replicated three times, giving depth of 3b.</li>
+<li>O placed in octahedral sites at various distances from the
+dislocation core in the middle layer.</li>
+<li><p>
+Interaction energy defined as
+</p>
+
+<p>
+\[ E^{\text{Int}}_{} = E_{\text{disl-O}} -   E_{\text{disl}} -
+     E_{\text{perfect-O}} + E_{\text{perfect}} \]
+</p></li>
+
+</ul>
+
+<div class="slide-footer"><br></div>
+</section>
+<section>
+<p style="position:relative;top:10px;left:-180px;z_index:1;">
+<img src="file:///home/tigany/Documents/docs/Management/Images/prisotioquad.png" alt="prisotioquad.png" style="position:relative;top:10px;left:-180px;z_index:1;"> v
+</p>
+
+
+<div id="org76ecd01" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/chaari_ti-o_dislocation_interactions.png" alt="chaari_ti-o_dislocation_interactions.png" width="95%" style="position:absolute;top:200px;left:450px;z_index:3;">
+</p>
+</div>
+
+<div class="slide-footer"><br></div>
+</section>
+<section>
+
+
+<div id="org92f0875" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/ti-o_quadinteractions2.png" alt="ti-o_quadinteractions2.png">
+</p>
+</div>
+
+<div class="slide-footer"><br></div>
+</section>
+<section>
+
+
+<div id="orgc5398ea" class="figure">
+<p><img src="file:///home/tigany/Documents/docs/Management/Images/ti-o_quadinteractions.png" alt="ti-o_quadinteractions.png">
+</p>
+</div>
+<div class="slide-footer"><br></div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org8dedb94">
+<h2 id="org8dedb94">Current Work</h2>
+<div class="outline-text-2" id="text-org8dedb94">
+</div>
+</section>
+<section id="slide-orgcb1ef2b">
+<h3 id="orgcb1ef2b">Embedding: disl-O interaction in Ti</h3>
+<div class="column" style="float:left; width: 50%">
+
+
+<ul>
+<li>Relaxing O-dislocation cells using embedding approach.</li>
+
+</ul>
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<div id="org0019d32" class="figure">
+<p><img src="img/embedding_ti-ox_crop_large_annotated.png" alt="embedding_ti-ox_crop_large_annotated.png">
+</p>
+</div>
+</div>
+<div class="slide-footer"><br></div>
+
+
+</section>
+<section id="slide-org4cb0c36">
+<h3 id="org4cb0c36">Improving basis for Ti</h3>
+<ul>
+<li>Added \(s\) electrons to Ti, for a more realistic
+description.</li>
+<li>Effects on predicted core structure/formation free energies have yet to be determined.</li>
+
+</ul>
+<div class="slide-footer"><br></div>
+
+</section>
+<section id="slide-org5b4afa4">
+<h3 id="org5b4afa4">Water on Ti</h3>
+<div class="column" style="float:left; width: 50%">
+<p>
+Relaxed Structure
+<img src="img/water_on_dTi_relaxed_tachyon_crop.png" alt="water_on_dTi_relaxed_tachyon_crop.png">
+</p>
+</div>
+<div class="column" style="float:right; width: 50%">
+<p>
+Charges (\(\text{H}^{\text{-}}\) ion in green)
+<img src="img/water_on_dTi_relaxed_tachyon_charges_with_colourmap_crop.png" alt="water_on_dTi_relaxed_tachyon_charges_with_colourmap_crop.png">
+</p>
+</div>
+<div class="slide-footer"><br></div>
+
+
+</section>
+<section id="slide-org1917adf">
+<h3 id="org1917adf">Improving Ti-H / H-H Parameters</h3>
+<ul>
+<li>Fitting the Ti-H/H-H parameters using DFT data of hydrides and
+energies upon approaching surface.</li>
+<li>Useful for future calculations of water on interfaces.</li>
+
+</ul>
+<p>
+<img src="img/ti_hydride_fcc.png" alt="ti_hydride_fcc.png">
+\(\delta\text{-TiH}_2\)
+</p>
+<div class="slide-footer"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-bibliography">
+<h2 id="bibliography">Bibliography</h2>
+<p>
+<a href="zoteroLibrary.bib">zoteroLibrary.bib</a>
+</p>
+<div class="slide-footer"><br></div>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js/dist/reveal.js"></script>
+<script src="file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js/plugin/notes/notes.js"></script>
+<script src="file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js/plugin/search/search.js"></script>
+<script src="file:///home/tigany/.emacs.d/elpa/emacs-reveal/emacs-reveal-submodules/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="./reveal.js/dist/theme/hidelinks.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: 'h/v',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: true,
+fragmentInURL: true,
+hashOneBasedIndex: false,
+pdfSeparateFragments: false,
+
+overview: true,
+width: 1400,
+height: 1000,
+
+transition: 'linear',
+transitionSpeed: 'default',
+showNotes: window.location.search.match( /print-pdf/gi ) ? 'separate-page' : false,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

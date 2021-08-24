@@ -1,0 +1,34 @@
+#+TITLE: stoner magnetism
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-02 Fri 16:46]--[2021-07-02 Fri 16:54] =>  0:08
+  CLOCK: [2021-07-02 Fri 16:32]--[2021-07-02 Fri 16:32] =>  0:00
+  CLOCK: [2021-07-02 Fri 16:12]--[2021-07-02 Fri 16:32] =>  0:20
+  :END:
+
+Stoner magnetism or the Stoner band theory of magnetism, is a way of including itinerant magnetism in quantum
+mechanical models, which is generally applied to transition metals and
+orbitals with high-angular momentum (which are short-ranged as a
+result). It has been used in [[file:2021-03-03--11-13-35--tight_binding.org][tight-binding]].
+
+Following Pettifor, we know that a material can become magnetic if the
+lowering in the /exchange energy/ (from the alignment of electron
+spins). This is due to the fact that the exchange integral $I$, must
+be larger than the difference between the bonding and anti-bonding
+level ($2|h|$), and if this is the case, the non-spin polarized state
+becomes unstable.
+
+The stoner model is actually a mean-field approximation to the [[file:2021-07-02--15-32-52--hubbard_model.org][Hubbard Model]]
+
+It consists of there being an exchange integral
+parameter, called $I$ which gives an energy directly proportional to
+the difference in the number of up and down electrons $m =
+N_{\uparrow} - N_{\downarrow}$.
+
+
+Where we have the magnetic energy, which accompanies the formation of
+a local moment as
+
+\[ U_{\text{mag}} = \delta T - \frac{1}{4} Im^2 \]

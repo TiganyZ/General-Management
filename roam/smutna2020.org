@@ -1,0 +1,21 @@
+#+TITLE: Smutna2020: Systematic development of Ab Initio tight-binding models for hexagonal metals
+#+ROAM_KEY: cite:Smutna2020
+- tags ::
+- keywords ::
+
+* Systematic development of Ab Initio tight-binding models for hexagonal metals
+  :PROPERTIES:
+  :Custom_ID: Smutna2020
+  :URL: https://link.aps.org/doi/10.1103/PhysRevMaterials.4.043801
+  :AUTHOR: Smutna, J., Fogarty, R. M., Wenman, M. R., & Horsfield, A. P.
+  :NOTER_DOCUMENT: ~/Zotero/storage/SMYV6DSX/Smutna et al. - 2020 - Systematic development of ab initio tight-b.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+   Creates [[file:2021-03-03--11-13-35--tight_binding.org][tight-binding]] model by fitting.
+
+   Justifies the connection between tight-binding and [[file:2021-03-06--19-05-39--density_functional_theory.org][Density
+   Functional Theory]] by an alternative grouping of terms which make
+   the second-order [[file:2021-07-07--16-07-13--hks_functional.org][HKS functional]].

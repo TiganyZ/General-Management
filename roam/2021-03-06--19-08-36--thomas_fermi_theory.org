@@ -1,0 +1,29 @@
+#+TITLE: Thomas-Fermi theory
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-06 Sat 19:08]--[2021-03-06 Sat 19:11] =>  0:03
+  :END:
+
+  - Write expression for the energy as a *functional* of the charge
+    density.
+
+  - \[ E = E_{kinetic} + E_{external} + E_{\text{el-el} } \]
+
+
+  - A method were we split space into volume elements, and assume that
+    the kinetic energy of the electron in a volume element is the same
+    as in a non-interacting electron gas, where it is proportional to
+    the electronic density.
+  - We use a [[file:2021-03-06--19-24-13--local_density_approximation.org][Local Density Approximation]] for the kinetic energy
+    density.
+  - So we way that the kinetic energy density at each point is equal
+    to that found in a non-interacting homogeneous electron gas.
+  - \[ T(\mathbf{r}) = A\rho^{5/3}(\mathbf{r}) \]
+
+    \[ E_{\text{Thomas-Fermi} }[\rho] =  A\int\rho^{5/3}(\mathbf{r})\text{d} \mathbf{r}  + \int\rho(\mathbf{r})\nu_{\text{ext} }(\mathbf{r})\text{d}  \mathbf{r}    + 1/2 \int\int   \frac{\rho(\mathbf{r}_1)\rho(\mathbf{r}_2)}{|\mathbf{r}_1 -      \mathbf{r}_2|} \text{d} \mathbf{r}_1 \mathbf{r}_2 \]
+  - This means, if we split our space into cubes (volume element), and we have an
+    electronic density associated with each volume element, we can
+    find the kinetic energy at that point (the integrand in the first
+    term above).

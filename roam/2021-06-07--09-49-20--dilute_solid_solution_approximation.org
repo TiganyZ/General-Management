@@ -1,0 +1,9 @@
+#+TITLE: Dilute solid solution approximation
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-06-07 Mon 10:49]--[2021-06-07 Mon 10:50] =>  0:01
+  :END:
+
+  An approximation which

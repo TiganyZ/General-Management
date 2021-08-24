@@ -1,0 +1,16 @@
+#+TITLE: Swinburne2013: Collective transport in the discrete Frenkel-Kontorova model
+#+ROAM_KEY: cite:Swinburne2013
+- tags ::
+- keywords ::
+
+* Collective transport in the discrete Frenkel-Kontorova model
+  :PROPERTIES:
+  :Custom_ID: Swinburne2013
+  :URL: https://link.aps.org/doi/10.1103/PhysRevE.88.012135
+  :AUTHOR: Swinburne, T. D.
+  :NOTER_DOCUMENT: ~/Zotero/storage/7TPP32CL/Swinburne - 2013 - Collective transport in the discrete Frenkel-Konto.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

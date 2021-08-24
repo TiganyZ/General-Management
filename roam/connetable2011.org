@@ -1,0 +1,16 @@
+#+TITLE: Connetable2011: First-principles study of diffusion and interactions of vacancies and hydrogen in hcp-titanium
+#+ROAM_KEY: cite:Connetable2011
+- tags ::
+- keywords ::
+
+* First-principles study of diffusion and interactions of vacancies and hydrogen in hcp-titanium
+  :PROPERTIES:
+  :Custom_ID: Connetable2011
+  :URL: https://iopscience.iop.org/article/10.1088/0953-8984/23/40/405401
+  :AUTHOR: Connétable, D., Huez, J., Andrieu, É., & Mijoule, C.
+  :NOTER_DOCUMENT: ~/Zotero/storage/PN47NEES/Connétable et al. - 2011 - First-principles study of diffusion and interactio.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

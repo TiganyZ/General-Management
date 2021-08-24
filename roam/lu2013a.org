@@ -1,0 +1,16 @@
+#+TITLE: Lu2013a: First-principles study of temperature-dependent diffusion coefficients for helium in α-Ti
+#+ROAM_KEY: cite:Lu2013a
+- tags ::
+- keywords ::
+
+* First-principles study of temperature-dependent diffusion coefficients for helium in α-Ti
+  :PROPERTIES:
+  :Custom_ID: Lu2013a
+  :URL: https://aip.scitation.org/doi/10.1063/1.4825223
+  :AUTHOR: Lu, Y., Zheng, F., & Zhang, P.
+  :NOTER_DOCUMENT: ~/Zotero/storage/P7EQKIF3/Lu et al. - 2013 - First-principles study of temperature-dependent di.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

@@ -1,0 +1,12 @@
+#+TITLE: Short Range Ordering
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-15 Mon 10:14]--[2021-03-15 Mon 10:21] =>  0:07
+  :END:
+
+  This is where there is a regular and predictable arrangement of
+  atoms over a short distance, usually a few atomic spacings.
+
+  An example of being able to get these parameters is given in [[file:hoffmann2016.org][Hoffmann2016: Quantitative description of short-range order and its influence on the electronic structure in Ag-Pd alloys]] .

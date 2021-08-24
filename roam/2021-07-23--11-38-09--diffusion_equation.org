@@ -1,0 +1,31 @@
+#+TITLE: diffusion equation
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-07-23 Fri 12:38]--[2021-07-23 Fri 12:48] =>  0:10
+  :END:
+
+  The diffusion equation has a standard form, if the diffusion
+  coefficient is a constant.
+
+\[
+    \frac{\partial \rho(\mathbf{r}, t)}{\partial t} = D\nabla^2 \rho(\mathbf{r}, t)
+\]
+
+
+
+  Generally, in three
+dimensions, where the diffusion coefficient is different in each
+dimension, but in the single dimension form, we have
+
+#+begin_export latex
+  \frac{\partial \rho(\mathbf{r}, t)}{\partial t} = \nabla \cdot \left( D(\rho,\mathbf{r}) \nabla \rho(\mathbf{r},t) \right)
+#+end_export
+
+
+For three dimensions we have
+
+#+begin_src latex
+  \frac{\partial \rho(\mathbf{r}, t)}{\partial t} = \sum_{i=1}^3 \sum_{j=1}^3 \frac{\partial}{\partial x_i} \left( D_{ij}(\rho,\mathbf{r}) \frac{\partial \rho(\mathbf{r},t)}{\partial x_j}  \right)
+#+end_src

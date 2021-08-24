@@ -1,0 +1,20 @@
+#+title: Time-independent Schrodinger Equation
+
+- Assume that the potential of the Schrödinger equation is
+  *time-independent*.
+
+- Ansatz: $\Psi(r,t) = \phi(r) f(t)$.
+
+- V(r,t) → V(r)
+- This gives the equations to be
+
+  \[ \big[-\frac{\hslash^2}{2m}\nabla^2 +
+  V(\mathbf{r})\big]\phi(\mathbf{r}) = E\phi(\mathbf{r}) \]
+
+  \[ i\hslash\frac{d}{dt} f(t) = E f(t)\]
+- Solution to the second equation does not come into play as generally
+  for some observables of the system, we will perform the
+  [[file:20210220155652-expectation_value.org][Expectation Value]].
+- Complex conjugate multiplication will remove the effect of the
+  time-dependent function.
+- This is the *Equation of motion* of a quantum object

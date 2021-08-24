@@ -1,0 +1,16 @@
+#+TITLE: Paxton1987: Structural stability of silicon in tight-binding models
+#+ROAM_KEY: cite:Paxton1987
+- tags ::
+- keywords ::
+
+* Structural stability of silicon in tight-binding models
+  :PROPERTIES:
+  :Custom_ID: Paxton1987
+  :URL: https://doi.org/10.1088/0022-3719/20/14/001
+  :AUTHOR: Paxton, A. T., Sutton, A. P., & Nex, C. M. M.
+  :NOTER_DOCUMENT: ~/Zotero/storage/P8D9NMQD/Paxton et al. - 1987 - Structural stability of silicon in tight-binding m.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

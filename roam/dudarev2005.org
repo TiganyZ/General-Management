@@ -1,0 +1,23 @@
+#+TITLE: Dudarev2005: A `magnetic' interatomic potential for molecular dynamics simulations
+#+ROAM_KEY: cite:Dudarev2005
+- tags ::
+- keywords ::
+
+* A `magnetic' interatomic potential for molecular dynamics simulations
+  :PROPERTIES:
+  :Custom_ID: Dudarev2005
+  :URL: https://doi.org/10.1088/0953-8984/17/44/003
+  :AUTHOR: Dudarev, S. L., & Derlet, P. M.
+  :NOTER_DOCUMENT: /home/tigany/Documents/docs/Management/papers/Dudarev_2005_J._Phys.__Condens._Matter_17_7097.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+This semi-emipirical potential is based on the rectangular density of
+states model which is mixed with the [[file:2021-07-02--15-12-19--stoner_magnetism.org][stoner magnetism]] [[file:2021-07-02--15-03-18--ginzburg_landau_model.org][Ginzburg-Landau
+model]], such that they can describe the occurrence of spontaneous
+magnetisation or a magnetic phase transition.
+
+This potential apparently reproduces the non-degenerate screw
+core.

@@ -1,0 +1,16 @@
+#+TITLE: Oriani1970: The diffusion and trapping of hydrogen in steel
+#+ROAM_KEY: cite:Oriani1970
+- tags ::
+- keywords ::
+
+* The diffusion and trapping of hydrogen in steel
+  :PROPERTIES:
+  :Custom_ID: Oriani1970
+  :URL: http://www.sciencedirect.com/science/article/pii/0001616070900787
+  :AUTHOR:
+  :NOTER_DOCUMENT: ~/Zotero/storage/F5Q99CA6/1970 - The diffusion and trapping of hydrogen in steel.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

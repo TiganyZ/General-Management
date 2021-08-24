@@ -1,0 +1,17 @@
+#+TITLE: Hoffmann2016: Quantitative description of short-range order and its influence on the electronic structure in Ag-Pd alloys
+#+ROAM_KEY: cite:Hoffmann2016
+- tags ::
+- keywords ::
+
+* Quantitative description of short-range order and its influence on the electronic structure in Ag-Pd alloys
+  :PROPERTIES:
+  :Custom_ID: Hoffmann2016
+  :URL:
+  :AUTHOR: Hoffmann, M., Marmodoro, A., Ernst, A., Hergert, W., Dahl, J., Laukkanen, P., Punkkinen, M. P. J., …
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/Y7HIPB6Y/Hoffmann et al. - 2016 - Quantitative description of short-range order and .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
+   - This is a generalisation of the Warren-Cowley short range order parameter

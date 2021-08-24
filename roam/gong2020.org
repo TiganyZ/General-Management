@@ -1,0 +1,16 @@
+#+TITLE: Gong2020: The influence of hydrogen on plasticity in pure iron—theory and experiment
+#+ROAM_KEY: cite:Gong2020
+- tags ::
+- keywords ::
+
+* The influence of hydrogen on plasticity in pure iron—theory and experiment
+  :PROPERTIES:
+  :Custom_ID: Gong2020
+  :URL: http://www.nature.com/articles/s41598-020-66965-z
+  :AUTHOR: Gong, P., Katzarov, I. H., Nutter, J., Paxton, A. T., & Rainforth, W. M.
+  :NOTER_DOCUMENT: /home/tigany/Zotero/storage/MC6RHHPD/Gong et al. - 2020 - The influence of hydrogen on plasticity in pure ir.pdf
+  :NOTER_PAGE: 
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

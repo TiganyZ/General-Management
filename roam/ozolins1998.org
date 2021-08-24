@@ -1,0 +1,16 @@
+#+TITLE: Ozolins1998: First-principles theory of vibrational effects on the phase stability of Cu-Au compounds and alloys
+#+ROAM_KEY: cite:Ozolins1998
+- tags ::
+- keywords ::
+
+* First-principles theory of vibrational effects on the phase stability of Cu-Au compounds and alloys
+  :PROPERTIES:
+  :Custom_ID: Ozolins1998
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.58.R5897
+  :AUTHOR: Ozoliņš, V., Wolverton, C., & Zunger, A.
+  :NOTER_DOCUMENT: ~/Zotero/storage/JA6ZE852/Ozoliņš et al. - 1998 - First-principles theory of vibrational effects on .pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

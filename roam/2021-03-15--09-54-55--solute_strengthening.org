@@ -1,0 +1,10 @@
+#+TITLE: Solute Strengthening
+* Summary :SUMMARY:
+* Questions :QUESTIONS:
+* Notes
+  :LOGBOOK:
+  CLOCK: [2021-03-15 Mon 09:54]--[2021-03-15 Mon 09:55] =>  0:01
+  :END:
+
+  Strengthening of alloys by inhibition of [[file:20210105175521-dislocations.org][dislocation]] movement by
+  solutes.

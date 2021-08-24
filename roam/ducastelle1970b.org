@@ -1,0 +1,16 @@
+#+TITLE: Ducastelle1970b: Moments developments II. Application to the crystalline structures and the stacking fault energies of transition metals
+#+ROAM_KEY: cite:Ducastelle1970b
+- tags ::
+- keywords ::
+
+* Moments developments II. Application to the crystalline structures and the stacking fault energies of transition metals
+  :PROPERTIES:
+  :Custom_ID: Ducastelle1970b
+  :URL: https://www.sciencedirect.com/science/article/pii/0038109870901870
+  :AUTHOR: Ducastelle, F., & Cryot-Lackmann, F.
+  :NOTER_DOCUMENT: ~/Zotero/storage/CXFW3PQP/Ducastelle and Cryot-Lackmann - 1970 - Moments developments II. Application to the crysta.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes
