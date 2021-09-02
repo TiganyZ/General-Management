@@ -1,0 +1,281 @@
+\chapter{Methods}
+\label{ch:method}
+
+\epigraph{{\textit{''All We Know, Is Don't Let Go''}}}{Taylor Swift}
+
+The findings presented in this thesis are based on the use of molecular dynamics (MD) simulations to study nanopore design and hydrophobicity. The methods used are described in the following section, with a more detailed discussion in \textit{A. R. Leach} \cite{Leach2001} and the GROMACS manual \cite{Apol2013} where appropriate.
+
+\section{Classical Molecular Dynamics Simulations}
+ 
+The behaviour of biological molecules can be described by the interactions between the nuclei and electrons. Via simulation, this complete representation using quantum mechanics is a computationally demanding process, limiting the use of this type of simulation technique to relatively a small number of atoms (<1000) \textit{e.g. enzyme substrate binding sites} \cite{Senn2007,Senn2009}. To efficiently simulate large molecules, be they biological in nature or not, using MD requires the effective ignoring of these nuclear elements, and thus the formation of classical MD simulations \cite{Leach2001}.
+In classical MD simulations, the ``force field'' is a  interpretation of the interactions between all the atoms within the system \cite{Tieleman2010}. The field is a potential energy function, V(\textbf{p}\textsuperscript{N}), where \textbf{p} is the position of such particle and N is the their number. The potential energy is generally calculated from the sum of the bonded and non bonded interactions.
+
+\begin{equation}
+V(\textbf{p}^N) = \sum V_{bonded} + \sum V_{non-bonded}
+\end{equation}
+
+\subsection{Bonded Interactions}
+
+These interactions are composed of bond stretching (V\textsubscript{bonds}), bond angle bending (V\textsubscript{angles}), and bond torsion described as the rotation of dihedral angles, (V\textsubscript{torsions}). To preserve stereochemistry, improper diheadral angles can be incorporated (V\textsubscript{improper}). These interactions are shown diagrammatically in figure \ref{fig:ff_interactions} on page \pageref{fig:ff_interactions}. 
+
+\begin{equation}
+\sum_{} V_{bonded} = \sum_{bonds}\frac{k_B}{2}(l_i - l_{i,0})^2  + \sum_{angles}\frac{k_\theta}{2}(\theta_i - \theta_{i,0})^2  + \sum_{torsions}\frac{V_n}{2}(1+cos(n\omega - \gamma))  \label{eq:bonded_inter2}
+\end{equation}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/MandM/ff_interactions}
+\caption[Bonded interactions] {Bonded interactions. Atoms are represented as red spheres with bonds being shown as grey rods. Figure is adapted from http://cbio.bmt.tue.nl/pumma/index.php/Theory/Potentials.}
+\label{fig:ff_interactions}
+\end{center}
+\end{figure}
+
+The potential energy for a bond stretching and angle terms can be described via Hooke's law, in which the energy varies with the square of the displacement from the reference bond length (b\textsubscript{0}) or angle ($\theta$\textsubscript{0}). Force constants are also implemented (atom set specific) to govern the penalty resulting from bond stretching and angle bending. These values are hard to deform from their high values, thus most of the energetic and conformational changes encountered during simulation are a result of non bonded and torsional effects \cite{Leach2001}.
+
+Torsional angle interactions differ to those previously mentioned with internal rotational barriers lower compared to the other interactions and are also periodic in nature. This can be represented in the conversion between states of alkane chains, such as butane which exists through the ``high'' (eclipsed) and ``lower'' (staggered, gauche or anti) energy states \cite{Mo2010}.
+
+\subsection{Non-Bonded Interactions}
+
+Non bonded terms can be grouped into Van der Waals (VdW) and Coulombic, electrostatic interactions 
+
+\begin{equation}
+\sum_{} V_{non-bonded} = \sum_{} V_{VDW} + \sum_{} V_{electro} 
+\label{eq:nonbonded_inter}
+\end{equation}
+
+
+\begin{equation}
+\sum_{} V_{non-bonded} = \sum\limits_{i=1}^N \sum\limits_{j=i+1}^N  \Bigg( 4 \upepsilon_{ij} \left[ \left( \frac{\upsigma_{ij}}{r_{ij}} \right)^{12} - \left( \frac{\upsigma_{ij}}{r_{ij}} \right)^6 \right] + \frac{q_i q_j}{4\pi \epsilon_0 r_{ij}}\Bigg)
+\end{equation}
+
+
+\subsubsection{Van der Waals Interactions (Lennard-Jones Potential)}
+
+The Lennard-Jones (LJ) potential is used to approximate the interaction between a pair of neutral atoms, thus the VdW term mentioned here. Included in the potential is the strong repulsive term (r\textsuperscript{12}) (Pauli repulsion), present due to overlapping electron orbitals and long attractive long term ranges (r\textsuperscript{6}), originating from short ranged instantaneous dipoles (London dispersion) \cite{Leach2001}. The potential has the following form:
+
+\begin{equation}
+V_{LJ} (r_{ij}) = 4 \upepsilon_{ij} \left( \left[ \frac{\upsigma_{ij}}{r_{ij}} \right]^{12} - \left[ \frac{\upsigma_{ij}}{r_{ij}} \right]^6 \right)
+\label{eq:LJ}
+\end{equation}
+
+in which \textit{$\sigma$\textsubscript{ij}} indicates the distance at which the energy between the two atoms in the system is zero, \textit{$\epsilon$\textsubscript{ij}} describing the strength of the interaction. Both parameters are dependent on the species of \textit{i} \& \textit{j}.
+
+An artifact of the LJ potential is that it has an infinite range, with the force becoming infinitely weak at long distances. Computationally, this is highly demanding as the force must be calculated for every pair of particles within simulation. Thus, a cut-off is introduced to reduce this number of calculations. In this thesis, a cut-off is placed at 12 \AA\ and a smoothing of the potential from 9 \AA\ to reduce complications from a straight cut off. 
+
+\subsubsection{Coulombic Interactions}
+
+Dipoles, based on unequal electron positioning exist due to electronegativity differences resulting in a ``charge'' in a molecule. In the classical MD model this can be replicated by the placement of partial charges within an atom \cite{Apol2013}. The Coulombic interaction between partially charged particles can be calculated using Coulomb's law which includes the particles (\textit{i \& j}), their partial charges (\textit{q\textsubscript{i} \& q\textsubscript{j}}), the distance between them (\textit{r\textsubscript{ij}}), and the produce of permittivity of free space (\textit{$\epsilon$\textsubscript{0}}).
+
+\begin{equation}
+V_{C} (r_{ij}) = \frac{q_i q_j}{4 \pi \upepsilon_0 r_{ij}}
+\label{eq:Coulomb}
+\end{equation}
+ 
+With a scaling of r\textsuperscript{1}, unlike the r\textsuperscript{6} within the LJ potential, the decay to zero is much slower in this form of non bonder interaction. Therefore, more consideration is needed in MD for this long range type of interaction \cite{Tieleman2010}. 
+%an exact treatment of the electrostatics this way would require an evaluation of all paris of atoms , which scales to the N^2 in which N is the number of particles in the system. ffs. 
+
+\subsection{Pair Exclusions}
+
+The non bonded interactions only apply to atoms pairs (\textit{i \& j}) that are within the same molecule (but separated by at least 3 covalent bonds) or part of different molecules. The first and second atoms are excluded completely, with the third using modified scaling LJ parameters, and being force field dependent. 
+
+
+\subsection{The Particle-Mesh Ewald method}
+
+Long range electrostatics are calculated with particle-mesh Ewald (PME) method \cite{Darden1993,Essmann1995} based on the initial Ewald sum method \cite{Ewald1921} originally used to compute the long range electrostatic energies of a crystal system. This method utilises the periodicity of simulation and is based on infinite latticing a volume within the simulation, of which all interactions are summed. Primarily, PME separates electrostatic interaction calculation into a short-range component which converges quickly within real space, and a long-range component that converges quickly in the Fourier space. The separation allows a quicker conversion of both (with the rate dependent on the cancelling Gaussian distributions of the point charges conversion), and the application of a cut-off for the real space with a limited number of modes for the Fourier. The implementation via this method reduces the scaling from \textit{N\textsuperscript{2}} to \textit{N}log(\textit{N}), where N is the number of particles in the system. PME is used in all simulations of this thesis. 
+
+
+\subsection{Force-Field Parametrisation} 
+
+Force fields are parametrised to quantum mechanical and experimental data \cite{Leach2001} with each based on their own initial data sets. For example electrostatic potential fitting (EPF), to calculate accurate partial charges from a QM model and infrared spectroscopy and crystal structures used for the validation of bond strengths and lengths. With the recent increase in simulation time scales and protein folding, these force fields are possibly unsuitable for such purposes with re-parameterisation needed for such an event \cite{Piana2011,Piana2014}. 
+
+In a force field, a way to reduce the number of particles (and thus the number of calculations performed in the simulation and saving time), is to alter the treatment of non polar hydrogen atoms, \textit{e.g.} those on the hydrocarbon lipid tails such as DPPC. They are combined with the carbon ``atom'' to form a single interaction site, defined as an united atom (figure \ref{fig:united}). This may cause difficulties in chiral centres and unsaturated bonds however defined improper dihedrals cease this from occuring \cite{Leach2001}. A number of force fields include the implementation of a united atom, the two being used in this thesis are the OPLS-UA \cite{Jorgensen1984} and GROMOS \cite{Scott1999,Schuler2001}.  
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/MandM/united}
+\caption[United atom representation.] {United atom representation. Figure shows chemical structure of pentane (atomistic) and its united atom representation as green circles, in which hydrogen atoms are not modelled. }
+\label{fig:united}
+\end{center}
+\end{figure}
+
+Many other force fields are available for biological simulations of protein and phospholipid bilayers be they CHARMM \cite{Mackerell1998}, AMBER \cite{Wang2004}, and the Berger lipid set \cite{Berger1997} based on united atom with elements from the OPLS, AMBER and GROMOS force fields. 
+
+%Experimental is density and themodynamic data
+\newpage
+
+\section{Simulation Techniques}
+
+Shown in figure \ref{fig:md_algo} is the basic MD algorithm by which a simulation is conducted.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/MandM/md_algo}
+\caption[MD algorithm] {MD algorithm. Based on a figure in \cite{Apol2013}.}
+\label{fig:md_algo}
+\end{center}
+\end{figure}
+
+Summarised, the change in position and velocity of a particle within simulation can be calculated from their previous, initial state. If no velocity is inserted, they are obtained from a Maxwell-Boltzmann distribution.  
+
+
+\subsection{Equations of Motion}
+In molecular dynamics simulations, the trajectory of the particles is calculated by solving Newtons 2\textsuperscript{nd} law \textit{(F=ma)}, giving the particles' motion, \textit{m\textsubscript{i}} along the coordinate (\textit{z\textsubscript{i}}) with the force \textit{F\textsubscript{zi}} acting in in the z direction.  
+
+\begin{equation}
+\frac{d^{2}x_{i}}{dt^{2}}= \frac{F_{z_{i}}}{m_{i}}
+\label{eq:newton_2nd}
+\end{equation}
+
+Within simulation, it is not possible to analytically describe motion due to the coupled nature of the particles' motion due to the force being dependent to the position relative to the other particles. Therefore a finite difference method must be used \cite{Leach2001}.
+
+Finite difference methods are used to generate trajectories within MD. In essence, the integration is broken down into multiple small stages, with each separated in time (by a fixed time). The force on each particle at time, \textit{t}, is calculated as a vector sum of its interactions with the other particles. From the force calculated, the acceleration on each can be gained, and then combined with the position and velocity at \textit{t}, to calculated at \textit{t +$\delta$t}, with a constant force assumption \cite{Leach2001}.
+
+Multiple algorithms can be used for this, with the GROMACS package using a modification of the Verlet algorithm based on two Taylor expansions (forward and backward), the leap frog algorithm \cite{Hockney1974}. Verlet uses the accelerations and positions at time \textit{t}, and positions from the previous step, \textbf{r}(\textit{t -$\delta$t}), to calculate the next position at \textit{t + $\delta$t}, \textbf{r}(\textit{t + $\delta$t}). The GROMACS package uses the following terms for the leap frog:
+
+\begin{equation} \label{eq:leapfrog}
+\begin{align*}
+r(t + \Delta t) = r(t) + v (t + \frac{\Delta t}{2}) \Delta t \\
+v(t + \frac{\Delta t}{2}) = v(t - \frac{\Delta t}{2}) + a(t)\Delta t \\
+v(t) = \frac{1}{2}\left[ v(t + \frac{\Delta t}{2}) + v(t - \frac{\Delta t}{2}) \right]
+\end{align*}
+\end{equation}
+
+The leap frog is advantageous over the Verlet as it includes explicitly the velocity to calculate the kinetic properties.  Within this, the velocities are calculated at the mid point of the position evaluation and \textit{vice versa}. 
+
+
+\subsection{Choice of Timestep}
+
+Choice of a time step is not a definite value of a MD simulation. If the value is too small, the trajectory will only cover a limited region of the phase space, if too large there may be integration problems due to the high energy atom overlap, leaving to the non-conservation of momentum. The time step should be a 10\textsuperscript{th} of the time of the fastest motion (corresponding to the C-H bond vibration of \til 10 fs) \cite{Leach2001}. In all atomistic simulations of this thesis, a time step of 2 fs is used. 
+
+\subsection{Bond Constraints}
+
+With use of a small time step, to maximise its efficiency it is common to restrain the bond lengths of the fastest bonds, in terms of their vibration (and hydrogen containing). Luckily, these are the least interesting in terms of chemistry to the systems simulated in this thesis. Two methods used are the SHAKE \cite{Ryckaert1977} \& LINCS \cite{Hess1997a} restraints. For both GROMOS and OPLS-UA forcefields used in this thesis, the faster LINCS method is used. 
+
+\subsection{Periodic Boundary Conditions} 
+
+The use of periodic boundary conditions (PBC) in simulation allows for a small number of particles to be simulated. It also eliminates a known artifact of simulation, \textit{e.g.} a box of water in which the edges would be in contact with a vacuum, which is rather unphysiological. PBC impose infinite copies of the simulation box in all three directions so that none of the dimensions are exposed to an effective vacuum (example, figure \ref{fig:PBC}). This also imposes a constant number of particles within the simulation box. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/MandM/PBC}
+\caption[Periodic boundary conditions] {Periodic boundary conditions. The simulation box (center, unshaded) is duplicated periodically in all directions (shaded boxes), creating an infinite system, avoiding convergence problems associated with the box edges. If a particle were to leave the box, \textit{e.g.} the red sphere, it will be replaced by an image particle entering from the opposite side. Shown is a 2D extension, in simulation this would be in all x, y, \& z directions. }
+\label{fig:PBC}
+\end{center}
+\end{figure}
+
+A complication associated with PBC is an unwanted, increased ordering of the system \cite{Tieleman2010} and also problems in regards to ``unphysiological''  membrane fluctuations \cite{Marrink2001} which need to be considered in simulation. With the cut-offs mentioned previously, GROMACS uses a boundary condition with a minimum image convention. Thus only the particles closest to an interacting box are considered for short range interactions. 
+
+\subsection{Pressure and Temperature Control}
+
+In a ``standard'' MD protocol, a constant \textit{NVE} approach is used which controls the number of particles \textit{N}, the volume \textit{V} and the energy of the system, \textit{E} at a constant. Within biological simulation, it is more ideal to maintain the pressure \textit{P} and temperature \textit{T} of the system, therefore a \textit{NPT} approach is used instead. To maintain the systems at physiological temperatures and pressures, multiple algorithms are used by fundamentally applying a barostat and thermostat  to produce constant \textit{NVT} \& \textit{NVP} systems. In this thesis, the Parrinello-Rahman barostat \cite{Parrinello1981} and the V-rescale themostat \cite{Bussi2007d} is used. Other algorithms are available for coupling (\textit{e.g.} for temperature, the Berendsen, Nose-Hoover, Anderson etc. for pressure, also the Berendsen).  
+
+\subsubsection{The Parrinello-Rahman Barostat}
+
+A method to keep a constant pressure on a system is to change the volume of a system (based on Boyle's law). This is done by coupling the system to a pressure bath, with the change in pressure represented as:
+
+
+\begin{equation}
+\frac{dP(t)}{dt} = \frac{1}{\tau_{p}}(P_{bath} - P (t))
+\label{eq:berdendsen3}
+\end{equation}
+
+in which \textit{P(t)} is the pressure of the component at time \textit{t}. \textit{P\textsubscript{bath}} is the pressure of the pressure bath \& \textit{$\tau$\textsubscript{p}} the coupling constant. For this, the box volume is scaled to allow the constant pressure. 
+
+In systems containing a bilayer, full pressure coupling diminishes the surface area of lipids within the simulation, therefore semi-isotropic coupling is used, which allows pressure changes along the x-y bilayer to vary, while the z component is varied independently. Pressure chosen in this thesis is the reference, 1 bar \cite{Tieleman2010}.
+
+
+\subsubsection{The V-rescale Thermostat}
+
+In MD, the systems temperature is related to the kinetic energy of the particles:
+
+\begin{equation}
+K_{NVT} = \frac{1}{2}\sum m_{i} v^{2}_{i} = \frac{3}{2}Nk_{B}T
+\label{eq:berendsen1}
+\end{equation}
+
+where \textit{K} is the kinetic component, \textit{k\textsubscript{B}} the Boltzmann constant, \textit{m} is molecular mass, \textit{v} is the velocity \& \textit{N} the number of molecules. Based on the system, the simplest way to control the temperature is to scale the velocities. In the V-rescale thermostat, the system is coupled to an external heat-bath that is fixed at the chosen temperature \textit{T\textsubscript{bath}}. The velocities of each particle are scaled proportionally to the change in temperature of the \textit{T\textsubscript{bath}} and the system.
+
+\begin{equation}
+\frac{dT(t)}{dt} = \frac{1}{\tau_{t}}(T_{bath} - T (t))
+\label{eq:berdendsen2}
+\end{equation}
+
+where \textit{T} is the temperature of the system at time \textit{t} and $\tau$\textsubscript{t} is the coupling parameter of the system to the bath. The V-rescale is very similar to the more commonly known Berendesen thermostat, however with the implementation of a stochastic term which ensures that correct canonical ensemble is generated \cite{Apol2013}. Within this thesis, all atomistic simulations are conducted as 310 K, with all coarse-grained at a higher 323 K.
+
+\subsection{Water Models}
+
+Multiple water models are possible within an atomistic force field \cite{Chaplin2001} with a trade off between the models' accuracy and complexity. Simple models can be simulated in larger, longer simulations but the more accurate within shorter, smaller systems. Each model is developed to fit well into a particular structure or parameter (be it density or rdf) of water. Within this thesis, the SPC model \cite{Berendsen1987a} is used within the GROMOS force field, in which there is no representation of the lone electron pairs on the oxygen, just a negative atom type with the assumption of point charge (this gives an incorrect dipole moment which is altered by changing the bond angle to 109.42$^\circ$, from the accurate 104.5$^\circ$) and TIP4P \cite{Jorgensen1983} (which has an inward pointing negative charge to try and replicate the lone pair) within the OPLS-UA simulations. 
+
+\section{Energy Minimisation}
+Energy Minimisation (EM) is essential  for the start of a MD simulation. This is initially used to find a low-energy structure by reducing steric clashes in the system giving a more stable starting configuration, which is especially needed for coarse grain to atomistic conversion (explained later in this chapter). Two main methods by which this is performed are the steepest decent and conjugate gradient. Both of these methods involve a gradual change in the Cartesian coordinates, reducing the energy of the system to a minimum. As a method, the steepest descent looks for minima using a line-search approach which is independent of the previous step, thus most effective when the system is far away from the energy minima. The CG-MD simulations used the steepest descent method. For AT-MD systems, a minimum of 5000 steps of steepest descent was used. The conjugate method is based on the next step which is dependent on the previous, and is most effective when the system is at its minima \cite{Leach2001}. 
+
+
+\section{Coarse Grained Simulations}
+
+Coarse graining allows for a decreased complexity of a system (therefore allowing longer time scales to be simulated). Multiple coarse grained (CG) models \& force fields have been built by many groups in recent years with varying degrees of ``coarse-graining'' be it the Martini force field \cite{Marrink2007}, with the approximate 4:1 mapping of atoms of amino acid residues, 1 residue to 1 bead mapping \cite{Shih2006} or approximate shape mapping \cite{Arkhipov2006}. Recently, CG has been applied to the 4:1 mapping of DNA \cite{Uusitalo2015}. Reducing the system in this parameter results in fewer calculations and longer time steps (20 fs for CG) with an increase up to 1000 fold speed up in simulations compared with an atomistic system. 
+
+Within this thesis, CG simulations are used exclusively for protein insertion into a bilayer via a self assembly method (due to the speed up for the CG versus AT method) and a relavitly quick simulation for protein stability. This is done via the Martini model \cite{Marrink2007} for the channels (chapter 6) and a version of the Martini - the Bond force field \cite{Bond2006} for the $\beta$-barrel simulations. The bond force field has been used extensively in simulations of membrane proteins with successes, especially to those of porins, which are to be replicated in this thesis. An application of a harmonic restraint to maintain protein secondary structure between residues \textit{i} and \textit{i + }4 (except a proline) is applied in the Bond force field, however, in the Martini, a form of dihedral angle restraints on the protein backbone is used. 
+
+Even with the advantages mentioned to this simulation method, many disadvantages also follow which makes this an unsuitable model for this thesis. Be it the absence of hydrogen bonding within the protein but also in the CG water model (4 water molecules to 1 water ``bead''). Key hydrophobic interactions and hydrogen bonding are noted in water flow and interactions with proteins and its behaviour with itself and hydrophobic surfaces, thus this is not a suitable model. Possibly with the polarisable CG water model \cite{Yesylevskyy2010b} these interactions could be compared. 
+
+\subsection{Multiscale Simulations}
+
+As described, CG MD is a system in which there a low amount of detail (compared to AT). A CG system can be converted to that of an AT one by mapping the configurations of the AT molecule \textit{e.g.} a lipid to each corresponding CG, choosing the closest fit \cite{Carpenter2008}. Recently, this can be effectively automated into the ``CG2AT'' method  which involves the fragment based fitting approach, of lipid but also protein leading to a fast conversion process \cite{Stansfeld2011} using PULCHRA \cite{Rotkiewicz2008} to fit the AT (protein crystal structure) to that of the CG bead. An example of the conversion is shown in figure \ref{fig:cg2at}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./pictures/MandM/cg2at}
+\caption[Conversion of CG to an AT system] {Conversion of CG to an AT system. A. Equilibrated system in the CG format, below is shown a DPPC lipid in the CG form. B. Conversion allows representation of CG system in an AT resolution for further investigation. Protein is shown in yellow, bilayer hydrocarbon tails in grey, phosphate group in purple, choline group in green and glycerol linkage in pink of a DPPC lipid. Atomistic colours are consistent with oxygen in red. }
+\label{fig:cg2at}
+\end{center}
+\end{figure}
+
+
+\section{Non Equilibrium Methods}
+
+A limitation of Classical Molecular Dynamics is the timescale in which simulations relate to biological events. Within general MD, simulation is in the equilibrium states, however for \textit{e.g.} a conformational change or permeation event to occur (where for OmpF permeation is \tli 10\textsuperscript{8} ions per second \cite{Suenaga1998}, thus 1 translocation event every 10 ns), long simulations are needed which (based on the assumption that is the system is sampled for long enough, all states will be sampled) in turn require longer amounts of time to simulate the ``rare'' events. To overcome this, non-equilibrium methods are used to simulate these events. 
+
+\subsubsection*{Steered Molecular Dynamics (SMD)}
+
+In steered MD (SMD) an external force is applied, driving a system to non equilibrium \cite{Izrailev1998} with the addition of a virtual harmonic spring to two groups of the system (be it the center of mass (c.o.m) of an atom or an entire protein region). A force is applied to the spring, overcoming energy barriers thus driving them towards ion permeation events or apart i.e. protein dissociation events. The force needed is:
+
+\begin{equation}
+F= -k(x-vt)
+\label{eq:smd}
+\end{equation}
+
+where \textit{k} is the spring constant, \textit{x} is the coordinate of the pulling group, and \textit{v} is the velocity. 
+
+\subsubsection*{Potential of Mean Force (PMF)}
+
+Potential of Mean Force (PMF) is an enhanced sampling method which can determine a change in system energy via a reaction coordinate.  It based on the the following, with a PMF being defined as:
+
+\begin{equation}
+W(R)=-kTlnP(R)
+\label{eq:pmf1}
+\end{equation}
+
+To overcome incomplete sampling, a method used to calculated the PMF is umbrella sampling where the potential function is modified to sample unfavourable states. The system is simulated with a biasing window potential, \textit{U(R'R)} which is used to confine the coordinates of R to a small interval window \cite{Roux1995}, \textit{e.g.} a small variation of the z coordinate in this thesis to allow sufficient sampling. The modification of the potential function;
+
+\begin{equation}
+W^{biased}(R')=-kTlnP^{biased}(R)+U(R,R')+C
+\label{eq:pmf_bias}
+\end{equation} 
+
+where U(R,R') is the umbrella potential component of a harmonic function;
+
+\begin{equation}
+U(R') = \frac{1}{2}k(R-R)^2
+\label{eq:pmf_bias2}
+\end{equation}
+
+For a full profile, many simulations are needed, each with a differently sampled \textit{R} region, with the unbiased windows being combined into a PMF profile \cite{Roux1995}. Each window is determined by change of the free energy constant (\textit{C}) by the weighted histogram analysis method (WHAM) \cite{Grossfield}. This algorithm effectively ``guesses'' the free energy constant to estimate a probability. This is then repeated until the guessed constant matches the actual value giving a correct energy profile. Bootstrapping is used to gain a statistical error on the calculated value. Considered in this method is the coordinate \textit{R}, in which sufficient overlap of windows is needed for an accurate energy estimate and also the length of simulation. Other free energy methods are available,   including free energy perturbation \cite{Zwanzig1954}, thermodynamic integration \cite{Straatsma1988}, SMD \cite{Park2003}, umbrella sampling \cite{Torrie1977}, metadynamics \cite{Laio2002}, adaptive biasing force \cite{Darve2001} \& markov state modelling \cite{Prinz2011}. In this thesis, as mentioned, umbrella sampling is used. 
+
+
+\section{Modelling Protein Pores}
+
+Beta-barrel protein pores were built on the idealised $\alpha$ carbon positions of theorised pores \cite{Sansom1995}. The carbon coordinates were feed into MODELLER \cite{Sali1993} to build 50-100 models with the correct anti-parallel beta strands (calculated via hand drawn models) and small loops. Modeller converts the template structure (C$\alpha$ template) and the sequence of the desired pore to give a set of spatial restraints for the protein. The backbone and loop structures are minimised via conjugate gradient methods. Following this, side chain atoms are added and optimised. The resulting structures are scored, with lowest chosen as the model pore.
+
+\section{Software \& Analysis}
+
+All the simulations performed in this thesis were done so using the GROMACS biomolecular simulation package \cite{Scott1999}. Analysis was conducted either using gromacs or locally written code. Visulisastion and graphics were performed with VMD \cite{Humphrey1996} or PyMOL \cite{PyMOL}. Radius profiles were calculated with HOLE \cite{Smart1996} and MDAnalysis \cite{Michaud-Agrawal2011,Stelzl2014}. Graphs were plotted using matplotlib \cite{Hunter2007}. Free energy calculations were done so via WHAM method \cite{Grossfield}.

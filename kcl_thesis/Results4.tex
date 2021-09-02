@@ -1,0 +1,298 @@
+\chapter{Conformational States of a Ligand Gated Ion Channel}
+\label{ch:RC4}
+
+This chapter is based on the the following publication; \\
+Conformational State of the Ligand Gated Serotonin Receptor, A Simulation Study. Trick et al, \textit{in preparation}.
+
+\epigraph{{\textit{''Got a long list of Starbucks Lovers''}}}{Taylor Swift}
+
+\section{Introduction}
+
+The Cys-loop receptor family of pentameric ligand-gated ion channels (pLGIC)  have been resolved to multiple structures in recent years. The charge selectivity of pLGIC's is determined by the selectivity filter \cite{Lynch2004}. The constriction within the homology model of GlyR (based on nAChR) \cite{Keramidas2002}, GABA\textsubscript{A}, GABA\textsubscript{C} \cite{Keramidas2004}, and GluCl channels \cite{Hibbs2011} suggest that the transmembrane (TM) selectivity filter contributes to the conduction of the pore. However it is thought that the charge near the intracellular entrance is also critical for selectivity \cite{Wotring2003}.
+
+Recently the x-ray crystal structure of another cys-loop cation selective pLGIC, the serotonin-gated 5-hydroxytryptamine type 3 (5-HT\textsubscript{3A}) receptor has been solved \cite{Hassaine2014}, whose conformational state is in question (figure \ref{fig:5ht3_1}).
+
+\vspace{10mm}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results4/5ht3_1}
+\caption[Cartoon representation of the \HTa\ receptor.] {Cartoon representation of the \HT\ receptor, (pdb: 4PRIR). A. Full receptor, transmembrane domain indicated with dashed yellow lines and orientation indicated. B. Top down view of A. C. Top down view of transmembrane region. Opaque, central helices indicate pore lining M2 helices. Protein is coloured according to chain.}
+\label{fig:5ht3_1}
+\end{center}
+\end{figure}
+
+Before the crystal structure was solved, it was known via experimental data and homology models that the central gate in the pore of the \HT\ involves the M2 region, discovered to be the pore lining pathway \cite{Corringer2000}. However, without a definitive structure at that moment in time, the position of the gate was in debate. Scanning cysteine accessibility method (SCAM) has been used extensively to determine the helical nature of the TMD. Within the open state 13 positions were modified, however only 3 positions were modified in the closed state, with the pattern of modification consistent with an $\alpha$ helix \cite{Panicker2002}. This method has also given an indication into which residues are pore facing (V291, L293, L287 and S280) for validation of homology models \cite{Reeves2001}. Pre-crystal structure homology-models estimated the F loop to be the key serotonin binding site with a total of 6 loops known to be involved in binding (A to F). Mutations in these loops results in the assumption that lateral movement is involved in the transduction of signal from agonist binding \cite{Thompson2006}. A summary of pre-crystal structure data is concluded in a recent minireview \cite{Lummis2012}. With the structure now available these elements can be studied more accurately and precisely.  
+
+The \HT\ is homologous in structure to other pLGIC (unlike the G protein coupled receptor, 5-HT) however the conduction state of the pore cannot be concluded entirely from the structure. It was crystallised in complex with an inhibitor, which is expected to stabilise a non-conducting form of the channel, therefore it is expected to be a closed, or possibly a desensitised state.  The dimensions of the constrictions are between those of an open and closed channel \cite{Haddadian2008}. The M2 helices are similar to those seen in the GLIC and GluCl (open) structures, however they differ from previously seen closed forms of the many structures of GLIC and ELIC. The M2 helices and dimensions of \HTa\ are shown in figure \ref{fig:5ht3_2}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results4/5ht3_2}
+\caption[M2 helices of 5-HT$_3$ receptor.] {M2 helices of 5-HT$_3$ receptor. A. Top down view of M2. Inward, pore facing residues are shown in stick form. B. Profile of 2/5 M2 helices with sphere representation of cavity, inward pointing residues are indicated again in VdW form and labelled to one letter code. C. Radius calculation of pore region from the crystal structure. Image to scale and corresponding to residue positions of B.}
+\label{fig:5ht3_2}
+\end{center}
+\end{figure}
+
+Based on the nature of other pLGIC's gating and the residues in the M2 helix, it is thought that there could possibly be a hydrophobic gating mechanism in the TMD of the \HT\ channel, thus being of relevance to this thesis and also the conductive state itself. The structure shows a key leucine residues (L9\textquotesingle) within the M2 helices, seen in other pLGIC \cite{Miyazawa2003,Bocquet2009,Hibbs2011} which are known to be hydrophobically gated (and a  radius of \til 2-3 \AA\ which is known from previous hydrophobic cut-off values to be of interest). 
+
+\subsubsection*{Simulations of pLGIC's}
+
+Many simulations have been conducted on ion channels \cite{Ma2012a} and for this family of pLGIC's.
+Ion permeation has been simulated for nAChR which demonstrated a lower water density within the channel pore \cite{Beckstein2006b}. Simulations of the closed ELIC structure show there is complete dehydration in the pore, from the center to the extracellular side in the simulation \cite{Cheng2009}, with the gate position closure point for the homologous GLIC at the L9\textquotesingle\ region \cite{Lynch2004,Keramidas2004,Cheng2007a,Miyazawa2003}. This L9\textquotesingle\ residue is also present in this \HT\ structure (L260). Dehydration events around the L9\textquotesingle\ have also been simualted in GlyR, GLIC and GluCl \cite{Murail2011,LeBard2012,Cheng2012}.
+
+MD utilising Brownian Dynamics (BD) have been used to calculate barrier heights for \Cl\ and \Na\ through the GLIC channel \cite{Cheng2010}. BD and hybrid MD/continuum electrostatics were used to calculate ion energies and barriers through the anion conducting GluCl. Most recently, \textit{Yoluk et. al.} have simulated three different conformations of GluCl via umbrella sampling \cite{Yoluk2015}. ``Multiscale'' simulations have also been conducted by \textit{Zhu et al} \cite{Zhu2010} on GLIC where MD and a mixed elastic network model (ENM) were applied to the protein to induce a conformational change. Movement induced helical tilting and an iris like movement were accompanied by a drying transition. Multiple simulation studies have also noted that simulation of the open, GLIC protein resulted in spontaneous closing of the channel \cite{Willenbring2011,Nury2010,Zhu2010} and a change in the M2 helical tilt angle \cite{Willenbring2011,Hibbs2011}.
+
+Thus, MD can be used to look at permeation, gating and conductive states of many pLGICs. However, it is still computationally demanding to study the entire channel when it is noted that the main gate is indeed in the the pore lining L9\textquotesingle\ position. Therefore the smaller M2 helical construct (figure \ref{fig:5ht3_2}) can be used with  ``short'' umbrella sampling windows and free energy calculations could be used to look at the possible conductive state of the \HT\ receptor by utilising previous methods used in this thesis (umbrella sampling) and adapted equilibrium simulations to deduce if this is a functionally closed or open form of the 5-HT\textsubscript{3} channel. 
+
+\section{Methods}
+
+\subsection{System Preparation}
+
+The transmembrane M2 helices were embedded in a self assembled lipid bilayer (POPC) in a CG martini representation \cite{Marrink2007}.  After AT conversion \cite{Stansfeld2011}, water molecules (\til 25,000 TIP4P \cite{Jorgensen1983}), the protein, lipids (\til 320), and counter ions were present in the system (ionic concentration of 0.15 M). For the umbrella sampling windows, either ion or a water molecule were placed at their respective positions. Water molecules or ions which overlapped with the molecule of interest were repositioned by energy minimization before simulation. Energy minimisation was run for 5000 steps. All simulations were carried out with GROMACS version 4.5.5 \cite{Berendsen1995,Hess2008} with the OPLS United-Atom forcefield \cite{Jorgensen1996}. 
+
+Equilibrium simulations were conducted with long range electrostatic interactions treated with the Particle Mesh Ewald method \cite{Darden1993} with a short range cut off of 1 nm, and a Fourier spacing of 0.12 nm. Simulations were performed in the NPT ensemble with the temperature being maintained at 310 K with a v-rescale thermostat \cite{Bussi2007d} and a coupling constant of $\tau${$_t$} = 0.1 ps. Pressure was maintained semi-isotropically using the Parrinello-Rahman algorithm \cite{Parrinello1981a} at 1 bar coupled at $\tau${$_p$} = 1 ps. The time step for integration was 2 fs with bonds constrained using the LINCS algorithm \cite{Hess1997a}. Analysis was conducted with GROMACS routines, MDAnalysis \cite{Michaud-Agrawal2011}, and locally written code. Water flux was calculated by counting water molecules crossing through an xy plane centred on the protein within a 20 \AA\ diameter shell from this centre. Water fluxes were evaluated over the full length of the simulations.  Molecular graphic images were produced with visual molecular dynamics (VMD) \cite{Humphrey1996} and PyMOL \cite{PyMOL}.
+
+For the equilibrium MD Gaussian network model (GNM) simulations, an elastic mass-and-spring network are added \cite{Atilgan2001b} to all the C$\alpha$ residues between 7-9 \AA\ within the structure. The distance was chosen based on C$\alpha$ distances, any shorter and they would not connect, and any longer the connections were made across the pore to opposite helices. The spring had a force constant of 1000 kJ mol\textsuperscript{-1} nm\textsuperscript{-2}. Simulations were run with the same set up as previous equilibrium MD simulations in this thesis for up to 500 ns. 
+
+\subsection{Umbrella Sampling}
+
+The starting system for the umbrella sampling was obtained from an energy minimised structure mentioned previously. The x and y coordinates for positioning were determined based on the center of mass of the channel. Visual analysis confirmed this was the center of the pore. The z axis coordinate for water was based on the position of the oxygen of the molecule (figure \ref{fig:setup_rc4}).
+
+The reaction coordinate was defined as the z-axis, ranging from \til ±40 \AA\ with the bilayer centre at z = 0 \AA\  This was used to define \til 80 windows along the z axis, with a distance of 1 Å between successive windows. A harmonic biasing potential was applied to the z coordinate of one atom of the molecule with a force constant of 1000 kJ mol\textsuperscript{-1} nm\textsuperscript{-2} acting on the z coordinate only. Each window was simulated for 2 ns (5-HT\textsubscript{3}) or 4 ns (GluCl), completely unrestrained (no position or distance restraints) with no external networks applied on the protein. Convergence was analysed by calculated height of the central barrier as function of time intervals for consecutive 0.1 or 0.2 ns segments extracts from each window. PMFs were computed using the weighted histogram analysis method (WHAM). PMF profiles were tethered and errors were calculated by the bootstrapping method within the Grossfield wham script \cite{Grossfield2006}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results4/setup}
+\caption[PMF windows setup through M2 helices.] {PMF windows setup through M2 helices. Windows are calculated at every 1 \AA\ through the pore lumen. x and y values are chosen from the c.o.m of the protein. Approximate pathway indicated by yellow line. Protein shown in POPC bilayer. Intracellular protein region corresponds to  \til -20 \AA\ in this image and following profiles.}
+\label{fig:setup_rc4}
+\end{center}
+\end{figure}
+
+\newpage
+
+\section{Results and Discussion}
+
+\section{5-HT$_3$ Serotonin Receptor}
+
+Free energy profiles for chloride, sodium and water pathway through the M2 helix bundle were constructed (figure \ref{fig:5ht3_pmf}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results4/5ht3_pmf}
+\caption[Potential of mean force profile of ions and water through 5-HT$_3$ M2 helices.] {Potential of mean force profile of ions and water through 5-HT$_3$ M2 helices. Plot represents the translocation pathway (on the x axis) through the helices with calculated energy from that position (y). Grey shade represents the z co-ordinate of the pore, with secondary vertical lines indicate approximate position of inward pointing residues (shown in one letter code). Intracellular region corresponds to the negative z region of the plot, with the extracellular on the right, positive hand side. Bootstrapping is used to calculate error.} 
+\label{fig:5ht3_pmf}
+\end{center}
+\end{figure}
+
+As the profile shows, a high energy barrier to translocation is noted through the pore lumen. A barrier of \til 72 and 61 \kj\ are noted for \Na\ and \Cl\ ions and 16 \kj\ for water. These correspond to other PMF values for related pLGIC's previously simulated. Such as the ELIC structure \cite{Zhu2012},  \Na\ permeation was calculated at \til 83 \kj\ with a barrier at the L9\textquotesingle\ position. Other studies for the open GLIC structure resulted in much lower values of 12.5 \kj\ for \Na\ \cite{Cheng2010} (and 17 \kj\ for \Na\ \cite{Zhu2012a}) and with other values of 46 \kj\  for Cl\textsuperscript{-} (barrier not at L9\textquotesingle\ but E-2\textquotesingle\ position within the pore) \cite{Fritsch2011a}. The structure of \na\ was assumed to be closed based on the free energy of translocation of sodium through the structure \cite{Beckstein2006b}, in which a barrier of 25 \kj\ is calculated at L9\textquotesingle\ and of 37 \kj\ by others \cite{Ivanov2007}. 
+
+More recently, a PMF of chloride translocation through a closed MD structure of the GluCl channel had a barrier of 62 \kj\ \cite{Yoluk2015}. Thus, based on the varying values of free energy in both closed and open forms of the pLGIC's indicate that it is in a closed form, and with the position of the barrier, indicate it could also be hydrophobically gated.
+
+Firstly to interpret these profiles and determine again, if the proposed 1 \AA\ positioning of the ion and water provides enough coverage in the 3D space to accurately predict a free energy landscape for this channel, the gromacs code g\_wham \cite{Hub2010a} was used to produce a histogram of the overlap of the windows in all the simulations (figure \ref{fig:converge}, A). From the histogram, there is sufficient overlap between the histogram windows to ensure that there is adequate sampling with the pull force applied and with the z coordinate positioning. Also to be considered is the aspect of convergence, which needs to be checked to see if it is adequate for the length of simulations to be used in the calculation. In the figure (\ref{fig:converge}, B), the  convergence is considered after ca. 0.5 ns (where the maximum barrier calculated is no longer variable) of which, the PMF presented on the \HT\ channel are based.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results4/converge}
+\caption[Histogram and convergence profile for M2 helices of the \HT\ channel.] {Histogram and convergence profile for M2 helices of the \HT\ channel. A. Histogram of window overlay of \Na\ ion positions within simulations. B. Plotted is the maximum calculated free energy for incremental windows. i.e., 0 - 0.1 ns, 0.1 - 0.2 ns and so on until 1.9 -2.0 ns (point is plotted at 0.05 increments) for a sodium ion. Shaded grey region is the time which will be omitted from the final shown profile.}
+\label{fig:converge}
+\end{center}
+\end{figure}
+
+To further validate the free energy calculations, and to assess whether the windows are of an adequate length is the movement in the x and y plane of the ion or water molecule. This is shown by the ion movement in the x and y plane (and protein, figure \ref{fig:ion_com_ht3}) within the solvent phase of the simulation (B.) and within the L9\textquotesingle\ region of the alpha helical channel (C.). For the simulation time length used, based on the distribution of the ion within the system for both phases, ample movement for the region is observed in both phases, and is to be assumed gives a proportional representation of movement within this system. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results4/ion_com_ht3}
+\caption[Sodium ion movement within PMF windows for 5-HT$_3$ M2 Region.] {Sodium ion movement within PMF windows for 5-HT$_3$ M2 Region. A. Set up of ion (pink dot) within the c.o.m of the protein (chain coloured cartoon) in which the z values are varied to explore energy landscape in the pore lumen. POPC lipid is shown in VdW. Water and other ions are omitted for clarity. Image is to scale in  figures B and C in the x and y directions. B. Graph of protein and sodium ion c.o.m movement in the simulation for a z value for the ion of 23 \AA\,  where the ion is in the solvent phase of the simulation. C. C.o.m of ion in z = 58 \AA\, which corresponds to the 9\textquotesingle\ leucine within the pore.} 
+\label{fig:ion_com_ht3}
+\end{center}
+\end{figure}
+
+Hydration shells for Na\textsuperscript{+}, Cl\textsuperscript{-} and water transversal through the pores has also been calculated for the M2 channel based on rdf cut-offs from a previous chapter (figure 4.9, chapter 4). It can be noted for both \Na\ and Cl\textsuperscript{-}, the first solvation shell remains intact through translocation through the solvent and M2 helix. In contrast, depletion of the second solvation shell occurs as the ion passes through the channel, for all molecules, with a minima near 0 \angstrom, which corresponds to the L9\textquotesingle  (figure \ref{fig:shells_ht3}). As seen in other hydrophobic gated LGIC's such as GLIC where it is suggested the barrier to the hydrophobic region is present due to the cost of dehydration, and the barrier to \Na\ is due to the dehydration cost imposed by the region \cite{Richards2012}, the higher barrier observed for the hydrophobic pores modelled in this thesis may reflect firstly the large cost of hydration of the hydrophobic constriction and also the cost of removal of (part of) the second hydration shell. Again, this reinforces the views that looking at  solvation through protein pores can give an insight into their gating mechanism as suggested in this thesis through hydrophobic $\beta$-barrels. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8.5cm]{./pictures/Results4/shells_ht3}
+\caption[Hydration shells for water and ions through M2 region.] {Hydration shells for water and ions through M2 region. A. Number of water contacts around a sodium ion with z pathway on the x axis and number of waters within previously calculated rdf (figure 4.9, chapter 4) shells on the y axis. B. Chloride and C. Water contacts. For all, calculated radii is indicated. L9\textquotesingle\ is at \til -1 \angstrom . Graph indicates from the intracellular (negative z region) to extracellular (positive z) regions.} %square is table contents, curly is in the chapter
+\label{fig:shells_ht3}
+\end{center}
+\end{figure}
+
+
+\subsection*{Open or Closed?}
+
+Based on the free energy calculations conducted here, and comparison to other free energy studies of cys-loop pLGIC's, the free energy profiles, the radius of the channel and the positions of the energy barriers  indicate that this structure is closed in terms of ion translocation, and may be hydrophobically gated like other pLGICs. However, based on the radius of the pore and the barrier height calculated for water within the channel, it is possible that water is conductive through the pore. To look at this more, equilibrium simulations are conducted with the introduction of an adaptation of an elastic network model which has been used in previous pLGIC simulations. 
+
+\subsection{Equlibrium MD and GNM}
+ 
+The application of an ENM (elastic network model) has been shown in previous MD simulation studies to improve channel stability, in an open or closed form \cite{Cheng2012,Haddadian2008}. Therefore, to look at the MD conducting state of the pore via water and ion translocations, both a standard protein restraint (positional) and a Gaussian version of an elastic network model (termed GNM, figure \ref{fig:gnm_1}) is used for comparison.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results4/gnm_1}
+\caption[GNM model of 5-HT$_3$ receptor M2 helices.] {GNM model of 5-HT$_3$ receptor M2 helices. Top view cartoon representation of M2 helices (coloured by chain) with harmonic springs indicated  between the helices by lines, connections shown within 7 to 9 \angstrom.}
+\label{fig:gnm_1}
+\end{center}
+\end{figure}
+
+Within the 100 ns positional restraint simulation and the longer, 500 ns GNM simulation of the M2 helices, the radii and water flux were used to evaluate the conductive state of the helices (figure \ref{fig:gnm_stab}).
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results4/gnm_stab}
+\caption[Radius and water plot of \HT\ M2 helices under GNM and positional restraints.] {Radius and water plot of \HT\ M2 helices under GNM and positional restraints. A. Radius profile of M2 for GNM, positional restraints (REST) and the crystal structure. 0 \AA\ indicates 9\textquotesingle\ leucine. B. Water molecules through the M2 helices under the GNM. Dashed lines indicate average phosphate headgroup position. Light blue spheres indicate water, with darker lines being individual waters through. z region shown corresponds to the protein position. White indicates a dry, L9\textquotesingle\ region at \til 53 \angstrom. 30 \AA\ indicates the intracellular end of the protein.}
+\label{fig:gnm_stab}
+\end{center}
+\end{figure}
+
+With the application of a Gaussian network connecting the helices, more flexibility occurs towards the ends of the pore, noted in the shaded range of radii in simulation (figure \ref{fig:gnm_stab}. A), unlike the positional restrained pore. However, even with the two different restraint applications, at the 0 \AA\ position (corresponding to the L9\textquotesingle) remains the minimum radius for both simulations and near to that of the crystal structure value. Based on the radius of the GNM (\til 2.0 \angstrom), this suggests and supports the assumption from the free energy profiles that this is the hydrophobic gate within this protein.
+
+In simulation, no ion flow is noted through either of the pores. This may be a problem of inadequate timescale for the restrained form, however based on the GNM having the same minima (and simulated for 500 ns), this is suggestive that an increase in time of the simulation would not result in an ion conduction event. Water flux is noted through each of the pores (\til 0.1 ns\textsuperscript{-1}) and is comparable to that of the closed, 14-3L $\beta$ barrel pore simulated in chapter 3. Therefore, supporting the assumption that the structure is in a closed conformation. The small water events noted could be due to the structure not being in a fully closed conformation, or the protein is partially water conductive in its closed state. Another possibility is that by using the M2 helices only introduces either side to the bulk and this is not physiological for this channel. The extracellular and intracellular domains disrupt the bulk water near the pore, thus they may not be even water accessible. However, even with  no water or ion conduction and the high energy barriers calculated, it is suggestive that this channel is closed. A sufficient test for such a barrier would be the simulation under CE voltage, seen within chapter 5. Theoretically, this would take \til 10 days to simulate and would give a firmer assumption to the channel state (and also an indication on the breaking voltage of such a motif).
+
+\section{GluCl - Glutamate Gated Chloride Channel}
+
+To test the methodology that short, small umbrella sampling windows on the M2 helices of this class of ion channels can give an accurate representation of the free energy landscape, simulations were run with two, molecule modulated states of the glutamate-gated chloride receptor (GluCl). Agonist or antagonist bound crystal structures are common in the production of an open or closed crystal structure, thus it would be of interest if the removal of such a molecule (and not the characterisation, parametrisation and docking which would be time consuming in comparison) and the use of short simulation windows would an accurate representation of the conductive state of the channel. Simulated here are the partial agonist bound, potentially open ivermectin structure (pdb: 3RHW, \cite{Hibbs2011}) and the allosterically modulated POPC bound channel (pdb: 4TNW, \cite{Althoff2014}) whose state is in question. A summary of both is in table \ref{table:GluCl channel}. 
+
+\begin{table}[H]
+\centering % centering table
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ PDB ID & Ligand & r(L9') \AA\ & State \\  
+ \hline
+ 3RHW & Ivermectin & 3.6 & open  \\
+ \hline
+ 4TNW & POPC & 2.1 & ?  \\
+ \hline
+ \end{tabular}
+\caption[Summary of GluCl channels simulated.] {Summary of GluCl channels simulated.}
+\label{table:GluCl channel}
+\end{table}
+
+
+The 3RHW structure is thought to be in a partially open state based on the pore radius (open at L9\textquotesingle\, with minimum of 2.3 \AA\ at the -2\textquotesingle, Pro234). Ivermectin is a known partial agonist and comparison to the apo, closed form \cite{Hibbs2011} there is a M2 tilt \til 8  $^{\circ}$ away and increased radius at L9\textquotesingle. The 4TNW structure is of more interest as it is thought to be an allosterically modulated form between the open and closed states due to the bound POPC, which is also in the same site as ivermectin. The pore is 'straighter' in comparison to 3RHW, and reported to be wider than that of the closed form.
+
+Between 3RHW and 4TNW, there is a large relative movement seen in the extracellular and the transmembrane domain and a helical tilt of 8.7$^{\circ}$ (in 4TNW, from 3RHW). M2 helices and initial radius of both structures are shown (figure \ref{fig:glucl_1}). 
+ 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results4/glucl_1}
+\caption[M2 helices of GluCl receptor and radii.] {M2 helices of GluCl receptor and radii A. and B. (A. pdb 3RHW, Ivermectin, B. 4TNW, POPC) Profiles of 2/5 M2 helices shown for clarity. colour of each will be consistent throughout this chapter. For both, inward, pore facing residues are shown in VdW spheres with corresponding one letter code. C. Radius calculation of pore region from the crystal structures. Image to scale, colour, and corresponds to residues positions in A. and B. Arrow indicates L9\textquotesingle\ positions with a difference of 1.5 \AA\ between the helices.}
+\label{fig:glucl_1}
+\end{center}
+\end{figure}
+
+Using the same simulation technique as the \HT\ receptor, free energy profiles for chloride, sodium and water through the M2 helical lumen were conducted for both conformations of the \gl\ receptor  (figure \ref{fig:glucl_profile}) . 
+
+\subsection{Ions and Water}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=11cm]{./pictures/Results4/glucl_profile}
+\caption[Potential of mean force profile of ions and water going through both GluCl M2 structures.] {Potential of mean force profile of ions and water going through both GluCl M2 structures. A. 3RHW. B. 4NTW from the intracellular (left) to the extracellular regions (right). Both graphs display the translocation pathway (on the x axis) through the helices with calculated energy from that position (y). Initial grey shade represents the z co-ordinate of the pore. Colour is consistent for B. as A. Bootstrapping is used to calculate error. Profiles shown were calculated using 1.5 to 3.5 ns of simulation.} 
+\label{fig:glucl_profile}
+\end{center}
+\end{figure}
+
+The calculated potential of mean force for both proteins indicates multiple differences between the two. Within the 3RHW structure, high barriers are noted for both \Na\ and water of \til 33 and 29 kJ mol\textsuperscript{-1}. In contrast, the free energy profile recorded for \Cl\ is indeed the lowest with a maximum barrier of 13 kJ mol\textsuperscript{-1}, and also a favourable free energy for the channels intracellular region. For a chloride channel, a lower free energy of translocation and favourable interactions for chloride is not surprising, however with the high water barrier, translocation in this state is questionable. In the 4TNW profile, all indicate a similar barrier height of 12, 13, and 11 \kj\ for sodium, chloride and water. With smaller barriers corresponding to the same region in both profiles for the \Cl\ ion. 
+
+These values are far lower than the previously calculated profiles for \HT\ in this chapter and other profiles previously mentioned, suggesting that they are not a closed state which is initially assumed.  However, the position of the barrier at L9\textquotesingle\ (L254), emphasises the role of the hydrophobic residue at this position in the helix. Looking at open pore PMF values for pLGIC's for the open GLIC structure \cite{Cheng2010} a barrier of 12.5 \kj\ and 17  \kj\ have been calculated for \Na\ \cite{Cheng2010,Zhu2012a}. These values correspond to the 4TNW structure, thus suggesting it may be in a more ``open'' state. Comparison with 3RHW indicate values correspond to that of the \na\ closed form with a barrier of 25 \kj\ \cite{Beckstein2006b} at L9\textquotesingle. Free energy calculations of \gl\ reported a barrier of 62 \kj\ for the closed form, \til 42 \kj\ for a partially open/closed form and \til 21 \kj\ for the open conformation (pdb: 4TNV) \cite{Yoluk2015}. Based on these values (also conducted by short, umbrella sampling windows) and the varied values calculated in this chapter, the conductive state of these two proteins cannot be decisively deduced at present. 
+
+To determine if these profiles are indeed accurate in their representation of the free energy landscape, and that the 1 \AA\ windows are sufficient within these channels, convergence akin to the \HT\ for the 4TNW structure is analysed (figure \ref{fig:glucl_converge}). 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results4/glucl_converge}
+\caption[Convergence profile for M2 helices of GluCl.] {Convergence profile for M2 helices of GluCl. Plotted is the maximum calculated free energy for incremental windows. i.e., 0 - 0.2 ns, 0.2- 0.4 ns and so on until 3.8 - 4.0 ns (points are plotted at 0.1 increments) for chloride ion within the 4TNW structure.}
+\label{fig:glucl_converge}
+\end{center}
+\end{figure}
+
+The convergence calculated is dissimilar to the profile for the 5-HT\textsubscript{3}, since a decrease and then a plateau is not seen or reached within the simulation length. Even up to the 4 ns windows simulated, with variability seen through each of the time points indicated that the simulation is not converged. The same trend is seen for the 3RHW structure (data not shown).  A longer time for each window could be used for convergence, however this negates the utility of a quick estimate method being investigated. Another possibility could be the stability of the protein itself, which will be questioned later. For comparison and consistency in this chapter, the PMF profile shown previously is between 1.5 and 3.5 ns of each simulation window.
+
+Water hydration shells for Na\textsuperscript{+}, Cl\textsuperscript{-} and water conducting through the pores have been calculated for the M2 helices of the \gl\ receptor (figure \ref{fig:glucl_shells}) based on rdf cut-off distances calculated within a previous chapter (figure 4.9, chapter 4). For both ions in both pores, there is a decrease in the second ion solvation shell through the protein region similar to the \HT\ and previous hydrophobic nanopore simulations in this thesis. A larger change is seen for the \Cl\ ion shells, which may be related to its native chloride conductance. As before, there is no depletion from the first solvation shell. Unlike the \HT\ receptor, there is no precise minima at the L9\textquotesingle\ residue, but highly variable water depletion through the pore. This could be due to the inconclusive conductive state of each of the structures. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results4/glucl_shells}
+\caption[Hydration shells for GluCl M2 helices.] {Hydration shells for GluCl M2 helices. A. to C. Correspond to 3RHW and D. to F. 4TNW. A. and D. Number of water contacts with the positioned sodium ion (distances of 3.1 and 5.4 \angstrom) with z pathway on the x axis and number of waters within previously calculated rdf (figure within chapter 4) shells on the y axis. B. and E. Chloride (4.0 and 6.3 \angstrom) and C. and F. Water contacts (4.8 \angstrom). For all, calculated radii is indicated. Profile is from intracellular (negative z) to extracellular (positive z).} %square is table contents, curly is in the chapter
+\label{fig:glucl_shells}
+\end{center}
+\end{figure}
+
+Based on the utility of the application of a GNM to the channel previously studied in this chapter, similar connections were applied to 4TNW (400 ns) and 3RHW (100 ns), in which pore radius and flux were analysed for an indicated into their conductive states (figure \ref{fig:gnm_stab_glucl}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results4/gnm_stab_glucl}
+\caption[Radius and flux of GNM M2 helices of GluCl.] {Radius and flux of GNM M2 helices of GluCl. A. Radius profile of GNM model structures of GluCl. 0 \AA\ indicates L9\textquotesingle. Dashed line indicateds radius of a water molecule. B. Water flux through the M2 helices under GNM simulation. Grey region indicates simulation length for 3RHW structure.}
+\label{fig:gnm_stab_glucl}
+\end{center}
+\end{figure}
+
+Pore radius, which is used as a measure of pore ``openness'' is varied between the two forms, which is to be expected based on the initial conformations. For the 3RHW structure (only simulated for 100 ns due to time constraints towards the end of this thesis), a trend comparable to the radius profile of the static structure (figure \ref{fig:glucl_1}) is noted with a decreasing radius towards the intracellular region (negative) with the minimum corresponding to P243. However, highly variable regions are noted at the N and C termini. This could be due to the limitation of the positioning of the GNM in the model, with the constriction falling below the cut-off and the larger, extracellular region falling above. In the physiological form, the GNM would be continued in both directions by protein, thus the termini are expected to be less flexible than simulated here. Within the POPC modulated form, the constriction radius is that of the crystal structure (figure \ref{fig:glucl_1}) and also highly conserved again at the L9\textquotesingle\ residue, re-emphasising the importance of this residue and its position in channel gating.  
+
+Seen in ENM simulation studies \cite{Cheng2012}, is the decrease in radius at L9\textquotesingle\ position from 3.3 \AA\ in the static, crystal structures down to 1.8 \AA\ in the ENM of GluCl in an open conformation. This change it not seen in these structures, which could be down to the initial conformation of the helices. In relation to water and ion flow through the pores, based on the PMF profiles (figure \ref{fig:glucl_profile}), the conductive states of both suggest that ion flow could be possible through both structures. However, in each of the simulated models, no ion flow was noted through the pores, but higher water flows  were observed (\til 3.5 ns\textsuperscript{-1}) than in the closed \HT\ receptor, relating to their more open nature than that of the closed serotonin channel. 
+
+Unlike the \HT\ receptor simulated, within umbrella sampling windows, major deformation has been noted in the M2 helices (\HT\ data not shown, figure \ref{fig:gnm_stab_glucl}). Within an umbrella sampling window, protein helical deformation and unfolding occurs within 2 ns of ion restraint within the protein region. This reflects a possible non-native physiological state of the helices and instability. Within the 4 ns window, helical deformation is noted throughout the structure, indicating that this may not be an accurate assumption for the free energy state of these proteins. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results4/glu_unfold_4}
+\caption[Stability of M2 helices of 4TNW during sampling.]{Stability of M2 helices of 4TNW during sampling. A. to C. Snapshots of the protein (cartoon, chain coloured) in the bilayer (grey surface) during an umbrella sampling simulation of 4 ns. Chloride is positioned at 53 \AA\ which is the same z value as L9\textquotesingle. A. 0 ns. B. 2 ns. C. 4 ns. D. Time evolution of secondary structure in simulation calculated by DSSP \cite{Carter2003}. Blue region represents changing $\alpha$-helical regions of the structure.}
+\label{fig:glu_unfold_4}
+\end{center}
+\end{figure}
+
+Established from these simulations and free energy calculations for this type of protein structure, short, unrestrained, truncated umbrella sampling windows are not an accurate and predictable method for estimating conductive states based on free energy calculations. This could be due to the fact that these proteins are modulated by external molecules which are not included in simulation, and create a destabilising effect. Secondly, each state is not in a definite open or closed state, which could also reflect on the stability of the protein. It would be interesting to simulate more via equilibrium methods to investigate the true nature of the pore and possibly the whole protein in MD. To predict more accurate, agonist/antagonists could be included, however time scales (and previously mentioned methods) could make this inefficient. Also to be considered are the roles of possible protein C$\alpha$ restraints or possibly the introduction of a GNM into the umbrella sampling windows, as done so by \textit{Yoluk et al} \cite{Yoluk2015}. 
+
+\section{Conclusion}
+
+From this chapter, I have revealed that the \HT\ channel is in a closed conformation to cations and anions based on free energy calculations and is hydrophobically gated. The short windows and free energy windows on this stable structure established a possible protocol for looking at other ion channels, their conductivity and state. However, the method is limited to structures which are present in an anticipated stable form, shown by the variation in the GluCl calculations. 
+
+\subsection*{M2 helices}
+
+The use of the M2 helices for simulation, and not simulating the entire protein has been shown to influence and be selectivity dependent, thus the estimate of selectivity and permeation can be estimated from this region. With it being suggested that within the \HT\ receptor, a single ring of charged amino acids at the intracellular end of the pore (E250) can control the selectivity with mutation (E250A) resulting in a non selective channel \cite{Thompson2003}. Next to this pore facing glutamate is residue R251 (R0\textquotesingle) which has been shown to be conserved in pLGICs, and a change in its charge state being associated with a change in pore selecitivty \cite{Cymes2011b}. In the GlyR channel, mutations of this conserved residue did not generate any functional channels \cite{Lynch1997}, however within the $\alpha$7-GluCl$\beta$ chimera channel \cite{Sunesen2006} and $\rho$1 GABA\textsubscript{R} \cite{Cheng2007a} (both pLGIC's, at R0'), channels were functional and demonstrated lower, moderate changes in their selectivity ratio for both ions. 
+
+Therefore it is of interest to consider other, non-lumen facing residues. General mutations within the M2 helices of GlyR also change the selectivity from being anion to cation selective, (P250$\Delta$, A251E and T265V), with the corresponding three inverse mutations making the $\alpha$7 \na\ anion selective \cite{Keramidas2000}. Within the \HT\ pore simulated in this chapter, D247 is not included in the pore lining residues, therefore this may have an even larger reflection on the high energy barrier calculated.
+
+\subsection*{Remainder of the channel}
+
+However, use of the M2 region alone is thought not to be substantial enough to determine accurate conductivities, selectivity and even a possible gated state of the channel with various conformations of the extra- and intracellular domains of the protein are known to determine the state of the pore.
+
+It is known that ion flow through the channels is dominated by the narrowest region, with emphasis on residues at the narrowest parts (M2 helices) and also the charged rings at the intracellular and extracellular regions \cite{Imoto1986}, and the cytoplasmic domain \cite{Kelley2003}. Origin of the ion selectivity in the Cys-loop family of membrane proteins have been investigated with charged amino acids in the extracellular domain (ECD) aiding conductance and selectivity. Previous investigations using computational, structural and electrophysiology of \na\ concluded in negative residues in the ECD contributing to the cationic selectivity of the channel \cite{Sine2010}. Also electrophysiology has been conducted on a heteropentameric \na\ channel with focus on the residues on the permeation pathway on the intracellular turn of the M2 channel, 4 Glu and 1 Gln of the differing subunits at -1\textquotesingle  contributing to the cationic conductance \cite{Cymes2012}. 
+
+Single channel conductance and ion selectivity is not wholly to do with the M2 region in \na\ or 5-HT\textsubscript{3} channels. Experimentally it is shown that the intracellular domain of eukaryotic pLGIC's, especially the TM3-TM4 linker, are associated with conductance and gating of the proteins \cite{Peters2010,Moroni2011}, with simulation indicating key residues within the \HT\ receptor within the M2-M3 loops \cite{Melis2009}. Positive residue insertion in the extracellular loop region of the \HT\ M2-M3 channel resulted in a non-functional construct (A24K, A275K) \cite{Thompson2003}. Considering the 5-HT\textsubscript{3A} isoform, rings of charges in the extracellular vestibule influence the ion permeation (D113 and D127). Neutralising mutations of these charges or reversal (\textit{e.g.} D113K) changes the conductance of the channel, with complete loss of current with the D127K mutation \cite{Livesey2011}.Therefore, even with the calculated barrier height within the M2 helices, within for example an open structure as simulated, selectivity cannot be assumed from free energy calculations of the M2 region alone. 
+
+Also seen within the nAChR channel, there is a suggested extracellular domain selectivity filter composed of a ring of lysine (K42) residues, 24 \AA\ above the lipid membrane that is thought to act to stabilise ions in the extracellular vestibule of the channel \cite{Hansen2008}. That is similar feature is observed in the \gl\ channel, with 3 layers of positive residues (lysine) within the ECD. It is thought these positive residues could act as an electrostatic well for \Cl\ ions, since free energy profiles have an energy minimum of \til 10 kJ mol\textsuperscript{-1} in this region \cite{Cheng2012}.
+
+Looking more closely at the different isoforms of the \HT\ receptor, assembled as homomers of 5-HT\textsubscript{3A} (simulated in chapter) or heteromers of 5-HT\textsubscript{3A} and 5-HT\textsubscript{3B}. In electrophysiology, the differing forms produce differing channel currents of 0.4 pS (A form) \cite{Brown1998,Hussy1994} and 16 pS \cite{Davies1999} (B form). Interestingly, the M2 helices of 5-HT\textsubscript{3B} appear not to be cation selective (or less selective than that of 5-HT\textsubscript{3A} \cite{Davies1999}). Now with the high resolution crystal structure being determined and with homology modelling for other conformational states, the investigation of the mechanism of the role of that mutation can be investigated. It is proposed that these arginine residues in the intracellular region of the 5-HT\textsubscript{3A} may cause electrostatic repulsion of cations \cite{Kozuska2013}, causing a lower conductance than that of the 5-HT\textsubscript{3AB} form. With similar arginine residues in the TM3/TM4 linker \cite{Kelley2003} and involved in cation repulsion \cite{Kozuska2013}.
+
+This could be related to the gating conformational change of pLGIC, where ligand binding is proposed to cause a lateral twisting through the protein, resulting in a twist of the M2 pore changing it from an open to a closed state (or \textit{vice versa}) thus changing their conductive state \cite{Sansom1995,Unwin1995,Lynch1997}. Twist motion has been associated with channel gating \cite{Taly2005,Taly2006} and seen within the well studied pLGIC, nAChR, changes between open and closed models indicate this twist motion, opening the M2 helices \cite{Haddadian2008}.  Targeted MD simulations of the $\alpha$7 \na\ have indicated that a change in the bottom ligand binding site, which is the region thought to allosterically translate motion to the pore domain. With substrate targeting, the channel partially opens within 4 ns with key charged residues involved in ligand binding \cite{Cheng2006}. Acetylcholine binding to \na\ resulted in ligand binding domain movement, with an \til 1 \AA\ outward displacement within the extracellular domain $\beta$ subunit. This resulted down to straightening within the M2 which changes the pore diameter \cite{Unwin2012} linking the ECD to motion within the helices and accounting for the different M2 helical tilt angles.
+
+Within computational models of \gl\ , a variety of pore sizes have been calculated \cite{Cheng2012}, which have also been noted in other studies \cite{Keramidas2002,Keramidas2000,Cymes2011b}. These models give variations in the open channel state noted via electrophysiology which could also be accountable for the states crystallised and simulated here. Five conductive states have also been observed for GlyR \cite{Lynch2004}. Therefore suggesting that there may be no definitive open state if for example, one is running free energy calculations on the protein to analyse its conformational state. 
+
+Short (16ns) constant electric field simulations have also been applied to the cationic \na\ channel \cite{Wong2008}. A small voltage (100 mV) resulted in a conduction cation event with transient water in the pore region. A higher field caused more cations to traverse the pore, thus suggesting that it could be possible to simulate such pores, especially the \HT\ under such voltage, and also using the CE implemented voltage shown in chapter 5. 
+
+With the structure of the \HT\ solved, biochemical mutation data can be mapped onto the conductance and gating states of the channel, therefore an assumption of the whole protein may give more accurate barrier/accessibility results than looking at the M2 region only. However, there is computational limitation to the simulation of an entire channel of this size. Also with some of these mutational studies, it is unknown if they could be involved in the selectivity, conduction and gating pathways directly, which is what these type of computational studies examine. 
+
+\subsection*{pH dependence}
+
+With the questioned role of charged residues in the selectivity and conductive states of these pores, it has been found that within a \na\ channel, 4 of the glutamate residues (at -1\textquotesingle) are de-protonated within the pH range of 6-9, and that 2/4 of the residues contribute to the size of the current measured through the pore. Therefore they are thought to adopt positions which alter the current through the pore based on their protonation state \cite{Cymes2012}.
+
+pH has also been questioned in the GLIC crystal structure, was formed under acidic conditions \cite{Hilf2008}. In simulations in which the acidity was removed, to a pH of \til 7, rapid channel closure at the hydrophobic leucine region occurred followed by a quaternary twist at the ECD region of the M2 helices \cite{Nury2010} and is considered to be pH gated \cite{Cheng2010a}. Therefore, pH may be a factor to consider for the \HT\ conductive state, not just the M2 helices but as an entire protein channel. The structure simulated in this thesis was crystalised at pH 7.4, however acidification for example could be used to assess key residues for conduction. 
+
+Several simulations have noted dehydration events around the L9\textquotesingle\ of LGIC's  \cite{Murail2011,LeBard2012,Cheng2012} however some note this could be down to imprecise protonation states of the channels, with others suggesting that with different protonation states result in a similar dehydration event \cite{LeBard2012,Cheng2012,Nury2010} due to external factors, for example membrane potential and ionic current. Thus \pka\ needs to be established and considered for conductive states and gating of the pores, considering the charged residues within the lumen of the \HT\ channel and also the influence of surrounding residues. 
+
+\subsection*{Accuracy and other free energy methods}
+
+Comparison to other free energy calculations of pLGIC's is vast and varied. Brownian dynamics (BD) and hybrid MD/continuum electrostatics are used to calculate the free energy of \Na\ and \Cl\ through the channel with barriers noted at 9' L254 and 2' P243 for \Na\ of \til 25 \kj\ and for \Cl\ \til 15 \kj\ \cite{Cheng2012}. BD simulations also indicate permeability ratios for both ion species with \Cl\ being  more permeable than Na\textsuperscript{+}. These values are comparable to the values calculated and indicate that 15 \kj\ is the appropriate value for an open, chloride ion channel. 
+
+Ion permeation barriers have also been calculated in the \na\ and GlyR pLGIC's. ABF calculations with both \Na\ and \Cl\ of both pores indicate a barrier corresponding to anion rejection of \til  35 \kj\ for \Cl\ within \na\ with the barrier associated with the hydrophobic region. Within the GlyR model, a barrier of  \til 29 \kj\ is found for Na\textsuperscript{+}. However, no hydrophobic barrier akin to the \na\ channel is observed \cite{Ivanov2007}, therefore the various free energy methods used are all indicating similar barriers within the open and closed structures. 
+
+The use of the ENM/GNM may be a useful direction for the study of these M2 helices. It is known from MD relaxation that closed state channels are often formed \cite{Nury2010,Zhu2010}. This is undesirable if simulation involves a structure of a questionable state. Demonstrated in \cite{Cheng2012} is the use of such a ENM-protein method on maintaining channel stability and openness through a simulation, be it for the full receptor.  Also simulated under ENM were hybrid MD/BD simulations and ABF calculations for free energy calculations \cite{Darve2008,Chipot2005}. Due to the size of the system in this case, the TMD domain of the channel is an all atom form, however the extracellular region is at a lower resolution in a continuum electrostatic representation thus being more computationally and time efficient.  I have tried to extrapolate this from the structure in this chapter with the use of just the M2 construct.
+
+Recently, a free energy profile using umbrella sampling methods was constructed of an entire \gl\ channel using varying conformations derived from simulation (with the removal and addition of agonist glutamate to induce conformational change) \cite{Yoluk2015}. Within this study, short windows of 2 ns were run at every 0.5 \AA\ through the lumen of three different conformations of the \gl\ receptor, termed closed, half open/closed and open based on the radius of the M2 helices. Energy barriers for \Cl\ were reported through the pore at the L9\textquotesingle\ position of \til 63 and  42 \kj\  and within the ``open'' structure \til 21 kJ mol\textsuperscript{-1}. These results agree with the calculated closed state values for the \HT\ profiled in this chapter, but also to the hydrophobic barriers calculated in the 14-$\beta$ stranded, three leucine hydrophobic pores within this thesis (and paper \cite{Trick2014}). 
+
+

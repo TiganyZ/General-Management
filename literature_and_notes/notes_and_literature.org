@@ -2593,5 +2593,4 @@ at methods such as Krylov-Subsapace, Lanczos and folded-spectrum methods.
 <<bibliography link>>
 
 bibliographystyle:unsrt
-bibliography:./bibliography/org-refs.bib
-
+bibliography:../bibliography/org-refs.bib

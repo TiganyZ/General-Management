@@ -1,0 +1,1130 @@
+@article{Itakura2012,
+  doi = {10.1016/j.actamat.2012.03.033},
+  url = {https://doi.org/10.1016/j.actamat.2012.03.033},
+  year = {2012},
+  month = may,
+  publisher = {Elsevier {BV}},
+  volume = {60},
+  number = {9},
+  pages = {3698--3710},
+  author = {M. Itakura and H. Kaburaki and M. Yamaguchi},
+  title = {First-principles study on the mobility of screw dislocations in bcc iron},
+  journal = {Acta Materialia}
+}
+@article{Clouet2015,
+abstract = {Despite similarities in crystallography and electronic structure in titanium and zirconium, it is shown that plasticity proceeds differently between the two, associated with differing dislocation configuration stability.},
+author = {Clouet, Emmanuel and Caillard, Daniel and Chaari, Nermine and Onimus, Fabien and Rodney, David},
+doi = {10.1038/nmat4340},
+file = {:home/tigany/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Clouet et al. - 2015 - Dislocation locking versus easy glide in titanium and zirconium.pdf:pdf},
+issn = {1476-1122},
+journal = {Nature Materials},
+keywords = {Atomistic models,Mechanical properties,Metals and alloys},
+month = {sep},
+number = {9},
+pages = {931--936},
+publisher = {Nature Publishing Group},
+title = {{Dislocation locking versus easy glide in titanium and zirconium}},
+url = {http://www.nature.com/articles/nmat4340},
+volume = {14},
+year = {2015}
+}
+
+@article{Clouet2012,
+abstract = {Plasticity in zirconium is controlled by 1/3{\textless}1-210{\textgreater} screw dislocations gliding in the prism planes of the hexagonal close-packed structure. This prismatic and not basal glide is observed for a given set of transition metals like zirconium and is known to be related to the number of valence electrons in the d band. We use ab initio calculations based on the density functional theory to study the core structure of screw dislocations in zirconium. Dislocations are found to dissociate in the prism plane in two partial dislocations, each with a pure screw character. Ab initio calculations also show that the dissociation in the basal plane is unstable. We calculate then the Peierls barrier for a screw dislocation gliding in the prism plane and obtain a small barrier. The Peierls stress deduced from this barrier is lower than 21 MPa, which is in agreement with experimental data. The ability of an empirical potential relying on the embedded atom method (EAM) to model dislocations in zirconium is also tested against these ab initio calculations.},
+archivePrefix = {arXiv},
+arxivId = {1210.1082},
+author = {Clouet, Emmanuel},
+doi = {10.1103/PhysRevB.86.144104},
+eprint = {1210.1082},
+file = {:home/tigany/Downloads/PhysRevB.86.144104.pdf:pdf},
+issn = {10980121},
+journal = {Physical Review B - Condensed Matter and Materials Physics},
+number = {14},
+pages = {1--11},
+title = {{Screw dislocation in zirconium: An ab initio study}},
+volume = {86},
+year = {2012}
+}
+@article{Cousins1979,
+author = {Cousins, C S G},
+doi = {10.1088/0022-3719/12/6/011},
+file = {:home/tigany/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Cousins - 1979 - Electrostatic contributions to the second- and third-order inner elastic constants of HCP metals for a range of axial r.pdf:pdf},
+issn = {0022-3719},
+journal = {Journal of Physics C: Solid State Physics},
+month = {mar},
+number = {6},
+pages = {989--994},
+publisher = {IOP Publishing},
+title = {{Electrostatic contributions to the second- and third-order inner elastic constants of HCP metals for a range of axial ratios}},
+url = {http://stacks.iop.org/0022-3719/12/i=6/a=011?key=crossref.7bb40068db548a916b6ab6db4617d15a},
+volume = {12},
+year = {1979}
+}
+
+@article{xu15_linear_respon_dft_study_trend,
+  author =	 {Zhongnan Xu and Jan Rossmeisl and John R. Kitchin},
+  title =	 {A Linear Response Dft+u Study of Trends in the Oxygen
+                  Evolution Activity of Transition Metal Rutile Dioxides},
+  journal =	 {The Journal of Physical Chemistry C},
+  volume =	 119,
+  number =	 9,
+  pages =	 {4827-4833},
+  year =	 2015,
+  doi =		 {10.1021/jp511426q},
+  url =		 {https://doi.org/10.1021/jp511426q},
+  DATE_ADDED =	 {Mon Feb 11 08:52:00 2019},
+}
+
+@Article{Benoit_2012,
+  author       = {Benoit, Magali and Tarrat, Nathalie and Morillo, Joseph},
+  title	       = {Density functional theory investigations of
+                  titaniumγ-surfaces and stacking faults},
+  year	       = 2012,
+  volume       = 21,
+  number       = 1,
+  month	       = {Dec},
+  pages	       = 015009,
+  issn	       = {1361-651X},
+  doi	       = {10.1088/0965-0393/21/1/015009},
+  url	       = {http://dx.doi.org/10.1088/0965-0393/21/1/015009},
+  journal      = {Modelling and Simulation in Materials Science and
+                  Engineering},
+  publisher    = {IOP Publishing}
+
+}
+
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645412007604-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645412007604-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645412007604-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645412007604-main.pdf]]
+@article{Hu2013,
+author = {Hu, Qing-miao and Yang, Rui},
+doi = {10.1016/j.actamat.2012.10.023},
+file = {:home/tigany/Downloads/1-s2.0-S1359645412007604-main.pdf:pdf},
+issn = {1359-6454},
+journal = {Acta Materialia},
+keywords = {first-principles calculations,hcp metals,ising model,stacking fault energy},
+number = {4},
+pages = {1136--1145},
+publisher = {Acta Materialia Inc.},
+title = {{Basal-plane stacking fault energy of hexagonal close-packed metals based on the Ising model}},
+url = {http://dx.doi.org/10.1016/j.actamat.2012.10.023},
+volume = {61},
+year = {2013}
+}
+
+@article{Zope2003,
+  doi = {10.1103/physrevb.68.024102},
+  url = {https://doi.org/10.1103/physrevb.68.024102},
+  year  = {2003},
+  month = {jul},
+  publisher = {American Physical Society ({APS})},
+  volume = {68},
+  number = {2},
+  author = {Rajendra R. Zope and Y. Mishin},
+  title = {Interatomic potentials for atomistic simulations of the Ti-Al system},
+  journal = {Physical Review B}
+}
+
+@article{Denteneer1987,
+  doi = {10.1088/0022-3719/20/32/001},
+  url = {https://doi.org/10.1088/0022-3719/20/32/001},
+  year  = {1987},
+  month = {nov},
+  publisher = {{IOP} Publishing},
+  volume = {20},
+  number = {32},
+  pages = {L883--L887},
+  author = {P J H Denteneer and W van Haeringen},
+  title = {Stacking-fault energies in semiconductors from first-principles calculations},
+  journal = {Journal of Physics C: Solid State Physics}
+}
+
+
+@article{Ballentine1986,
+  doi = {10.1088/0022-3719/19/7/010},
+  url = {https://doi.org/10.1088/0022-3719/19/7/010},
+  year  = {1986},
+  month = {mar},
+  publisher = {{IOP} Publishing},
+  volume = {19},
+  number = {7},
+  pages = {981--993},
+  author = {L E Ballentine and M Kolar},
+  title = {Recursion,  non-orthogonal basis vectors,  and the computation of electronic properties},
+  journal = {Journal of Physics C: Solid State Physics}
+}
+
+@article{Sutton1988,
+  doi = {10.1088/0022-3719/21/1/007},
+  url = {https://doi.org/10.1088/0022-3719/21/1/007},
+  year  = {1988},
+  month = {jan},
+  publisher = {{IOP} Publishing},
+  volume = {21},
+  number = {1},
+  pages = {35--66},
+  author = {A P Sutton and M W Finnis and D G Pettifor and Y Ohta},
+  title = {The tight-binding bond model},
+  journal = {Journal of Physics C: Solid State Physics}
+}
+
+@INBOOK{Paxton:153084,
+      author       = {Paxton, Anthony T.},
+      title        = {{A}n {I}ntroduction to the {T}ight {B}inding
+                      {A}pproximation - {I}mplementation by {D}iagonalisation},
+      volume       = {42},
+      address      = {Jülich},
+      publisher    = {John von Neumann Institute for Computing},
+      reportid     = {FZJ-2014-02759},
+      isbn         = {978-3-9810843-8-2},
+      series       = {NIC series},
+      pages        = {145-176},
+      year         = {2009},
+      comment      = {NIC Series Volume 42 : Multiscale Simulation Methods in
+                      Molecular Sciences, Lecture Notes, Johannes Grotendorst,
+                      Norbert Attig, Stefan Blügel, Dominik Marx, chapter 5, p.
+                      145-176, Jülich : John von Neumann Institute for Computing,
+                      2009. ISBN: 978-3-9810843-8-2},
+      booktitle     = {NIC Series Volume 42 : Multiscale
+                       Simulation Methods in Molecular
+                       Sciences, Lecture Notes, Johannes
+                       Grotendorst, Norbert Attig, Stefan
+                       Blügel, Dominik Marx, chapter 5, p.
+                       145-176, Jülich : John von Neumann
+                       Institute for Computing, 2009. ISBN:
+                       978-3-9810843-8-2},
+      ddc          = {004},
+      typ          = {PUB:(DE-HGF)7},
+      url          = {http://juser.fz-juelich.de/record/153084},
+}
+@article{Foulkes1989,
+  doi = {10.1103/physrevb.39.12520},
+  url = {https://doi.org/10.1103/physrevb.39.12520},
+  year  = {1989},
+  month = {jun},
+  publisher = {American Physical Society ({APS})},
+  volume = {39},
+  number = {17},
+  pages = {12520--12536},
+  author = {W. Matthew C. Foulkes and Roger Haydock},
+  title = {Tight-binding models and density-functional theory},
+  journal = {Physical Review B}
+}
+
+@article{Priester1986,
+  doi = {10.1103/physrevb.33.7386},
+  url = {https://doi.org/10.1103/physrevb.33.7386},
+  year  = {1986},
+  month = {may},
+  publisher = {American Physical Society ({APS})},
+  volume = {33},
+  number = {10},
+  pages = {7386--7388},
+  author = {C. Priester and G. Allan and M. Lannoo},
+  title = {Tight-binding calculation of the band offset at the Ge-{GaAs} (110) interface using a local charge-neutrality condition},
+  journal = {Physical Review B}
+}
+
+@incollection{Heine1980,
+  doi = {10.1016/s0081-1947(08)60503-2},
+  url = {https://doi.org/10.1016/s0081-1947(08)60503-2},
+  year  = {1980},
+  publisher = {Elsevier},
+  pages = {1--127},
+  author = {Volker Heine},
+  title = {Electronic Structure from the Point of View of the Local Atomic Environment},
+  booktitle = {Solid State Physics}
+}
+
+@article{Finnis1997,
+  doi = {10.1557/proc-491-265},
+  url = {https://doi.org/10.1557/proc-491-265},
+  year  = {1997},
+  month = {jan},
+  publisher = {Cambridge University Press ({CUP})},
+  volume = {491},
+  author = {M. W. Finnis and A. T. Paxton and M. Methfesselt and M van Schilfgaarde},
+  title = {Self-Consistent Tight-Binding Approximation Including Polarisable Ions},
+  journal = {{MRS} Proceedings}
+}
+
+@article{NguyenManh2000,
+  doi = {10.1103/physrevlett.85.4136},
+  url = {https://doi.org/10.1103/physrevlett.85.4136},
+  year  = {2000},
+  month = {nov},
+  publisher = {American Physical Society ({APS})},
+  volume = {85},
+  number = {19},
+  pages = {4136--4139},
+  author = {D. Nguyen-Manh and D. G. Pettifor and V. Vitek},
+  title = {Analytic Environment-Dependent Tight-Binding Bond Integrals: Application {toMoSi}2},
+  journal = {Physical Review Letters}
+}
+
+@article{Horsfield1996,
+  doi = {10.1103/physrevb.53.15381},
+  url = {https://doi.org/10.1103/physrevb.53.15381},
+  year  = {1996},
+  month = {jun},
+  publisher = {American Physical Society ({APS})},
+  volume = {53},
+  number = {23},
+  pages = {15381--15384},
+  author = {A. P. Horsfield and A. M. Bratkovsky},
+  title = {O(N) tight-binding methods with finite electronic temperature},
+  journal = {Physical Review B}
+}
+
+@article{Gillan1989,
+  doi = {10.1088/0953-8984/1/4/005},
+  url = {https://doi.org/10.1088/0953-8984/1/4/005},
+  year  = {1989},
+  month = {jan},
+  publisher = {{IOP} Publishing},
+  volume = {1},
+  number = {4},
+  pages = {689--711},
+  author = {M J Gillan},
+  title = {Calculation of the vacancy formation energy in aluminium},
+  journal = {Journal of Physics: Condensed Matter}
+}
+
+@article{Christian1995,
+  doi = {10.1051/jp4:1995801},
+  url = {https://doi.org/10.1051/jp4:1995801},
+  year  = {1995},
+  month = {dec},
+  publisher = {{EDP} Sciences},
+  volume = {05},
+  number = {C8},
+  pages = {C8--3--C8--10},
+  author = {J. W. Christian and G. B. Olson and M. Cohen},
+  title = {Classification of Displacive Transformations : What is a Martensitic Transformation ?},
+  journal = {Le Journal de Physique {IV}}
+}
+
+
+@phdthesis{liang:tel-01355132,
+  TITLE = {{Ab initio simulation of extended defects of \&-Ti in presence of interstitial atoms H \& O}},
+  AUTHOR = {Liang, Liang},
+  URL = {https://pastel.archives-ouvertes.fr/tel-01355132},
+  NUMBER = {2016SACLX009},
+  SCHOOL = {{Universit{\'e} Paris-Saclay}},
+  YEAR = {2016},
+  MONTH = Mar,
+  KEYWORDS = {Stacking-Faults ; Twin ; Ab initio simulation ; Dislocation core ; Titanium ; Titane ; Coeur de dislocation ; Solut{\'e} ; Simulation ab initio ; Macle ; Fautes d'empilements},
+  TYPE = {Theses},
+  PDF = {https://pastel.archives-ouvertes.fr/tel-01355132/file/52452_LIANG_2016_archivage.pdf},
+  HAL_ID = {tel-01355132},
+  HAL_VERSION = {v1},
+}
+
+@article{Biget1989,
+  doi = {10.1080/01418618908209818},
+  url = {https://doi.org/10.1080/01418618908209818},
+  year  = {1989},
+  month = {apr},
+  publisher = {Informa {UK} Limited},
+  volume = {59},
+  number = {4},
+  pages = {747--757},
+  author = {M. P. Biget and G. Saada},
+  title = {Low-temperature plasticity of high-purity $\upalpha$-titanium single crystals},
+  journal = {Philosophical Magazine A}
+}
+@article{Luo2016,
+  doi = {10.1088/1367-2630/18/11/113049},
+  url = {https://doi.org/10.1088/1367-2630/18/11/113049},
+  year  = {2016},
+  month = {nov},
+  publisher = {{IOP} Publishing},
+  volume = {18},
+  number = {11},
+  pages = {113049},
+  author = {Ye Luo and Anouar Benali and Luke Shulenburger and Jaron T Krogel and Olle Heinonen and Paul R C Kent},
+  title = {Phase stability of {TiO}2polymorphs from diffusion Quantum Monte Carlo},
+  journal = {New Journal of Physics}
+}
+
+@article{Ghazisaeidi2012,
+  doi = {10.1016/j.actamat.2011.11.024},
+  url = {https://doi.org/10.1016/j.actamat.2011.11.024},
+  year  = {2012},
+  month = {feb},
+  publisher = {Elsevier {BV}},
+  volume = {60},
+  number = {3},
+  pages = {1287--1292},
+  author = {M. Ghazisaeidi and D.R. Trinkle},
+  title = {Core structure of a screw dislocation in Ti from density functional theory and classical potentials},
+  journal = {Acta Materialia}
+}
+@article{Tarrat2009,
+  doi = {10.3139/146.110055},
+  url = {https://doi.org/10.3139/146.110055},
+  year  = {2009},
+  month = {mar},
+  publisher = {Carl Hanser Verlag},
+  volume = {100},
+  number = {3},
+  pages = {329--332},
+  author = {Nathalie Tarrat and Magali Benoit and Joseph Morillo},
+  title = {Core structure of screw dislocations in hcp Ti: an ab initio {DFT} study},
+  journal = {International Journal of Materials Research}
+}
+
+@article{Yang2018,
+  doi = {10.1038/s41598-018-20257-9},
+  url = {https://doi.org/10.1038/s41598-018-20257-9},
+  year  = {2018},
+  month = {jan},
+  publisher = {Springer Nature},
+  volume = {8},
+  number = {1},
+  author = {Jia Xi Yang and Heng Lv Zhao and Hao Ran Gong and Min Song and Qing Qiang Ren},
+  title = {Proposed mechanism of {HCP}{\hspace{0.167em}}$\rightarrow${\hspace{0.167em}}{FCC} phase transition in titianium through first principles calculation and experiments},
+  journal = {Scientific Reports}
+}
+
+@article{Bilby 1955,
+  doi = {10.1098/rspa.1955.0171},
+  url = {https://doi.org/10.1098/rspa.1955.0171},
+  year  = {1955},
+  month = {aug},
+  publisher = {The Royal Society},
+  volume = {231},
+  number = {1185},
+  pages = {263--273},
+  title = {Continuous distributions of dislocations: a new application of the methods of non-Riemannian geometry},
+  author = {Bilby Bruce Alexander and Bullough. R  and Smith Edwin}
+  journal = {Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences}
+}
+@article{Banerjee_2006,
+  title =	 {Omega phase transformation – morphologies and mechanisms},
+  volume =	 {97},
+  ISSN =	 {2195-8556},
+  url =		 {http://dx.doi.org/10.3139/146.101327},
+  DOI =		 {10.3139/146.101327},
+  number =	 {7},
+  journal =	 {International Journal of Materials Research},
+  publisher =	 {Carl Hanser Verlag},
+  author =	 {Banerjee, S. and Tewari, R. and Dey, G. K.},
+  year =	 {2006},
+  month =	 {Jul},
+  pages =	 {963–977}
+}
+
+@article{wolverton07_solut_vacan_bindin_alumin,
+  author =	 {C. Wolverton},
+  title =	 {Solute-Vacancy Binding in Aluminum},
+  journal =	 {Acta Materialia},
+  volume =	 55,
+  number =	 17,
+  pages =	 {5867-5872},
+  year =	 2007,
+  doi =		 {10.1016/j.actamat.2007.06.039},
+  url =		 {https://doi.org/10.1016/j.actamat.2007.06.039},
+  DATE_ADDED =	 {Fri May 17 12:07:48 2019},
+}
+
+@article{deng16_ab_initio_solut_inter_impur,
+  author =	 {Lei Deng and Lizhong Tang and Xingming Zhang and Jianfeng
+                  Tang and Ruilian Li and Huiqiu Deng},
+  title =	 {Ab Initio Solute-Interstitial Impurity Interactions in
+                  Vanadium Alloys: the Roles of Vacancy},
+  journal =	 {RSC Advances},
+  volume =	 6,
+  number =	 82,
+  pages =	 {78621-78628},
+  year =	 2016,
+  doi =		 {10.1039/c6ra11429f},
+  url =		 {https://doi.org/10.1039/c6ra11429f},
+  DATE_ADDED =	 {Fri May 17 14:08:19 2019},
+}
+
+@article{bakulin17_absor_diffus_oxygen_ti3al_alloy,
+  author =	 {A. V. Bakulin and A. M. Latyshev and S. E. Kulkova},
+  title =	 {Absorption and Diffusion of Oxygen in the Ti3al Alloy},
+  journal =	 {Journal of Experimental and Theoretical Physics},
+  volume =	 125,
+  number =	 1,
+  pages =	 {138-147},
+  year =	 2017,
+  doi =		 {10.1134/s1063776117070019},
+  url =		 {https://doi.org/10.1134/s1063776117070019},
+  DATE_ADDED =	 {Fri May 17 15:36:15 2019},
+}
+
+@article{wei11_effec_o_binar_phase_tial_ti3al_alloy,
+  author =	 {Ye Wei and Hong-Bo Zhou and Ying Zhang and Guang-Hong Lu and
+                  Huibin Xu},
+  title =	 {Effects of O in a Binary-Phase Tial-Ti3al Alloy: From Site
+                  Occupancy To Interfacial Energetics},
+  journal =	 {Journal of Physics: Condensed Matter},
+  volume =	 23,
+  number =	 22,
+  pages =	 225504,
+  year =	 2011,
+  doi =		 {10.1088/0953-8984/23/22/225504},
+  url =		 {https://doi.org/10.1088/0953-8984/23/22/225504},
+  DATE_ADDED =	 {Fri May 17 15:39:45 2019},
+}
+
+@article{bakulin18_effec_impur_format_energ_point,
+  author =	 {A. V. Bakulin and S. E. Kulkova},
+  title =	 {Effect of Impurities on the Formation Energy of Point
+                  Defects in the $\gamma$-TiAl Alloy},
+  journal =	 {Journal of Experimental and Theoretical Physics},
+  volume =	 127,
+  number =	 6,
+  pages =	 {1046-1058},
+  year =	 2018,
+  doi =		 {10.1134/s1063776118120130},
+  url =		 {https://doi.org/10.1134/s1063776118120130},
+  DATE_ADDED =	 {Fri May 17 16:39:16 2019},
+}
+
+@article{mishin00_diffus_ti_al_system,
+  author =	 {Y. Mishin and Chr. Herzig},
+  title =	 {Diffusion in the Ti-Al System},
+  journal =	 {Acta Materialia},
+  volume =	 48,
+  number =	 3,
+  pages =	 {589-623},
+  year =	 2000,
+  doi =		 {10.1016/s1359-6454(99)00400-0},
+  url =		 {https://doi.org/10.1016/s1359-6454(99)00400-0},
+  DATE_ADDED =	 {Fri May 17 16:45:07 2019},
+}
+
+@article{koizumi08_oxygen_diffus_ti3al_singl_cryst,
+  author =	 {Y. Koizumi and M. Kishimoto and Y. Minamino and H. Nakajima},
+  title =	 {Oxygen Diffusion in Ti3al Single Crystals},
+  journal =	 {Philosophical Magazine},
+  volume =	 88,
+  number =	 24,
+  pages =	 {2991-3010},
+  year =	 2008,
+  doi =		 {10.1080/14786430802419135},
+  url =		 {https://doi.org/10.1080/14786430802419135},
+  DATE_ADDED =	 {Fri May 17 18:40:07 2019},
+}
+
+
+@article{hohenburg64_inhomog_electron_gas,
+  title = {Inhomogeneous Electron Gas},
+  author = {Hohenberg, P. and Kohn, W.},
+  journal = {Phys. Rev.},
+  volume = {136},
+  issue = {3B},
+  pages = {B864--B871},
+  numpages = {0},
+  year = {1964},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRev.136.B864},
+  url = {https://link.aps.org/doi/10.1103/PhysRev.136.B864}
+}
+
+@article{kohn65_self_cons_eq,
+  title = {Self-Consistent Equations Including Exchange and Correlation Effects},
+  author = {Kohn, W. and Sham, L. J.},
+  journal = {Phys. Rev.},
+  volume = {140},
+  issue = {4A},
+  pages = {A1133--A1138},
+  numpages = {0},
+  year = {1965},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRev.140.A1133},
+  url = {https://link.aps.org/doi/10.1103/PhysRev.140.A1133}
+}
+
+@article{hagen98_point_defec_chemic_poten_order_alloy,
+  author =	 {Michael Hagen and Michael W. Finnis},
+  title =	 {Point Defects and Chemical Potentials in Ordered Alloys},
+  journal =	 {Philosophical Magazine A},
+  volume =	 77,
+  number =	 2,
+  pages =	 {447-464},
+  year =	 1998,
+  doi =		 {10.1080/01418619808223764},
+  url =		 {https://doi.org/10.1080/01418619808223764},
+  DATE_ADDED =	 {Thu Jul 4 14:29:44 2019},
+}
+
+
+@article{dutta18_bayes_infer_spread_proces_networ,
+  author =	 {Ritabrata Dutta and Antonietta Mira and Jukka-Pekka Onnela},
+  title =	 {Bayesian Inference of Spreading Processes on Networks},
+  journal =	 {Proceedings of the Royal Society A: Mathematical, Physical
+                  and Engineering Sciences},
+  volume =	 474,
+  number =	 2215,
+  pages =	 20180129,
+  year =	 2018,
+  doi =		 {10.1098/rspa.2018.0129},
+  url =		 {https://doi.org/10.1098/rspa.2018.0129},
+  DATE_ADDED =	 {Thu Nov 14 18:38:21 2019},
+}
+
+
+% No doi found to create entry in /home/tigany/Documents/docs/Management/papers/%5bDuane_C._Wallace%5d_Thermodynamics_of_Crystals(b-ok.xyz).pdf.
+% No doi found to create entry in /home/tigany/Documents/docs/Management/papers/0704.3055.pdf.
+
+
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S0039602818301602-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S0039602818301602-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S0039602818301602-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S0039602818301602-main.pdf]]
+@article{sahoo18_surfac_phase_diagr_titan_oxygen,
+  author =	 {Sanjubala Sahoo and S. Pamir Alpay and Rainer
+                  J. Hebert},
+  title =	 {Surface Phase Diagrams of Titanium in Oxygen,
+                  Nitrogen and Hydrogen Environments: a First
+                  Principles Analysis},
+  journal =	 {Surface Science},
+  volume =	 677,
+  number =	 {nil},
+  pages =	 {18-25},
+  year =	 2018,
+  doi =		 {10.1016/j.susc.2018.05.007},
+  url =		 {https://doi.org/10.1016/j.susc.2018.05.007},
+  DATE_ADDED =	 {Mon Dec 16 21:52:26 2019},
+}
+
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645417306481-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645417306481-main.pdf]]
+% [[file:/home/tigany/Documents/docs/Management/papers/1-s2.0-S1359645417306481-main.pdf]]
+@article{fu17_strain_induc_marten_decay_bearin,
+  author =	 {Hanwei Fu and Wenwen Song and Enrique
+                  I. Galindo-Nava and Pedro
+                  E.J. Rivera-D{\'i}az-del-Castillo},
+  title =	 {Strain-Induced Martensite Decay in Bearing Steels
+                  Under Rolling Contact Fatigue: Modelling and
+                  Atomic-Scale Characterisation},
+  journal =	 {Acta Materialia},
+  volume =	 139,
+  number =	 {nil},
+  pages =	 {163-173},
+  year =	 2017,
+  doi =		 {10.1016/j.actamat.2017.08.005},
+  url =		 {https://doi.org/10.1016/j.actamat.2017.08.005},
+  DATE_ADDED =	 {Mon Dec 16 21:52:38 2019},
+}
+
+% No doi found to create entry in /home/tigany/Documents/docs/Management/presentations/RR-presentation_2019-09-18_pdfgen.pdf.
+% No doi found to create entry in /home/tigany/Documents/docs/Management/presentations/skf_2019-11-25_dislocation_mediated_C_migration_in_DERs.pdf.
+% No doi found to create entry in /home/tigany/Documents/docs/Management/papers/%5bDuane_C._Wallace%5d_Thermodynamics_of_Crystals(b-ok.xyz).pdf.
+% No doi found to create entry in /home/tigany/Documents/docs/Management/papers/0704.3055.pdf.
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.4890343.pdf
+% No doi found to create entry in /home/tigany/Documents/docs/Management/papers/0704.3055.pdf.
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.4890343.pdf
+
+
+@article{boleininger16_gauss_polar_ion_tight_bindin,
+  author =	 {Max Boleininger and Anne AY Guilbert and Andrew
+                  P. Horsfield},
+  title =	 {Gaussian Polarizable-Ion Tight Binding},
+  journal =	 {The Journal of Chemical Physics},
+  volume =	 145,
+  number =	 14,
+  pages =	 144103,
+  year =	 2016,
+  doi =		 {10.1063/1.4964391},
+  url =		 {https://doi.org/10.1063/1.4964391},
+  DATE_ADDED =	 {Mon Dec 16 22:29:01 2019},
+}
+
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.4903408.pdf
+
+
+@article{bagayoko14_under_densit_funct_theor_dft,
+  author =	 {Diola Bagayoko},
+  title =	 {Understanding Density Functional Theory (DFT) and
+                  Completing It in Practice},
+  journal =	 {AIP Advances},
+  volume =	 4,
+  number =	 12,
+  pages =	 127104,
+  year =	 2014,
+  doi =		 {10.1063/1.4903408},
+  url =		 {https://doi.org/10.1063/1.4903408},
+  DATE_ADDED =	 {Mon Dec 16 22:29:51 2019},
+}
+
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.4966939.pdf
+
+
+@article{salloom16_effec_elemen_stack_fault_energ,
+  author =	 {R. Salloom and R. Banerjee and S. G. Srinivasan},
+  title =	 {Effect of $\beta$-stabilizer Elements on Stacking
+                  Faults Energies and Ductility of $\alpha$-titanium
+                  Using First-Principles Calculations},
+  journal =	 {Journal of Applied Physics},
+  volume =	 120,
+  number =	 17,
+  pages =	 175105,
+  year =	 2016,
+  doi =		 {10.1063/1.4966939},
+  url =		 {https://doi.org/10.1063/1.4966939},
+  DATE_ADDED =	 {Mon Dec 16 22:30:07 2019},
+}
+
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.5030950.pdf
+
+
+@article{dutta18_bayes_calib_force_field_from_exper_data,
+  author =	 {Ritabrata Dutta and Zacharias Faidon Brotzakis and
+                  Antonietta Mira},
+  title =	 {Bayesian Calibration of Force-Fields From
+                  Experimental Data: Tip4p Water},
+  journal =	 {The Journal of Chemical Physics},
+  volume =	 149,
+  number =	 15,
+  pages =	 154110,
+  year =	 2018,
+  doi =		 {10.1063/1.5030950},
+  url =		 {https://doi.org/10.1063/1.5030950},
+  DATE_ADDED =	 {Mon Dec 16 22:30:43 2019},
+}
+
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.532437.pdf
+
+
+@article{bott98_nonsin_hankel_funct_as_new,
+  author =	 {E. Bott and M. Methfessel and W. Krabs and
+                  P. C. Schmidt},
+  title =	 {Nonsingular Hankel Functions As a New Basis for
+                  Electronic Structure Calculations},
+  journal =	 {Journal of Mathematical Physics},
+  volume =	 39,
+  number =	 6,
+  pages =	 {3393-3425},
+  year =	 1998,
+  doi =		 {10.1063/1.532437},
+  url =		 {https://doi.org/10.1063/1.532437},
+  DATE_ADDED =	 {Mon Dec 16 22:31:06 2019},
+}
+
+@article{ghazisaeidi14_inter_oxygen_inter_with_lattic_fault_ti,
+  author =	 {M. Ghazisaeidi and D.R. Trinkle},
+  title =	 {Interaction of Oxygen Interstitials With Lattice
+                  Faults in Ti},
+  journal =	 {Acta Materialia},
+  volume =	 76,
+  number =	 {nil},
+  pages =	 {82-86},
+  year =	 2014,
+  doi =		 {10.1016/j.actamat.2014.05.025},
+  url =		 {https://doi.org/10.1016/j.actamat.2014.05.025},
+  DATE_ADDED =	 {Mon Dec 16 22:31:09 2019},
+}
+
+@article{itakura13_effec_hydrog_atoms_screw_disloc,
+  author =	 {M. Itakura and H. Kaburaki and M. Yamaguchi and
+                  T. Okita},
+  title =	 {The Effect of Hydrogen Atoms on the Screw
+                  Dislocation Mobility in Bcc Iron: a First-Principles
+                  Study},
+  journal =	 {Acta Materialia},
+  volume =	 61,
+  number =	 18,
+  pages =	 {6857-6867},
+  year =	 2013,
+  doi =		 {10.1016/j.actamat.2013.07.064},
+  url =		 {https://doi.org/10.1016/j.actamat.2013.07.064},
+  DATE_ADDED =	 {Mon Dec 16 22:34:58 2019},
+}
+
+% No doi found to create entry in /home/tigany/Documents/docs/Management/papers/0704.3055.pdf.
+% Multiple dois found in /home/tigany/Documents/docs/Management/papers/1.4890343.pdf
+
+@article{Clouet2009,
+  doi = {10.1103/physrevlett.102.055502},
+  url = {https://doi.org/10.1103/physrevlett.102.055502},
+  year = {2009},
+  month = feb,
+  publisher = {American Physical Society ({APS})},
+  volume = {102},
+  number = {5},
+  author = {Emmanuel Clouet and Lisa Ventelon and F. Willaime},
+  title = {Dislocation Core Energies and Core Fields from First Principles},
+  journal = {Physical Review Letters}
+}
+@book{anderson2017theory,
+  title={Theory of Dislocations},
+  author={Anderson, P.M. and Hirth, J.P. and Lothe, J.},
+  isbn={9781316785102},
+  url={https://books.google.co.uk/books?id=3IDBDQAAQBAJ},
+  year={2017},
+  publisher={Cambridge University Press}
+}
+
+@article{Chen2013,
+  doi = {10.1088/0965-0393/21/5/055023},
+  url = {https://doi.org/10.1088/0965-0393/21/5/055023},
+  year = {2013},
+  month = jun,
+  publisher = {{IOP} Publishing},
+  volume = {21},
+  number = {5},
+  pages = {055023},
+  author = {Z M Chen and M Mrovec and P Gumbsch},
+  title = {Atomistic aspects of {\textdollar}{\textbackslash}case$\lbrace$1$\rbrace$$\lbrace$2$\rbrace${\textbackslash}langle 1{\textbackslash}, 1{\textbackslash}, 1 {\textbackslash}rangle{\textdollar} screw dislocation behavior in$\upalpha$-iron and the derivation of microscopic yield criterion},
+  journal = {Modelling and Simulation in Materials Science and Engineering}
+}
+
+@article{Ventelon2015,
+  doi = {10.1103/physrevb.91.220102},
+  url = {https://doi.org/10.1103/physrevb.91.220102},
+  year = {2015},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {91},
+  number = {22},
+  author = {Lisa Ventelon and B. L\"{u}thi and E. Clouet and L. Proville and B. Legrand and D. Rodney and F. Willaime},
+  title = {Dislocation core reconstruction induced by carbon segregation in bcc iron},
+  journal = {Physical Review B}
+}
+
+@article{Chaari2018,
+author = {Chaari, Nermine and Rodney, David and Clouet, Emmanuel},
+year = {2018},
+month = {11},
+pages = {},
+title = {Oxygen-dislocation interaction in titanium from first principles}
+}
+
+@article{Yu2015,
+  doi = {10.1126/science.1260485},
+  url = {https://doi.org/10.1126/science.1260485},
+  year = {2015},
+  month = feb,
+  publisher = {American Association for the Advancement of Science ({AAAS})},
+  volume = {347},
+  number = {6222},
+  pages = {635--639},
+  author = {Qian Yu and Liang Qi and Tomohito Tsuru and Rachel Traylor and David Rugg and J. W. Morris and Mark Asta and D. C. Chrzan and Andrew M. Minor},
+  title = {Origin of dramatic oxygen solute strengthening effect in titanium},
+  journal = {Science}
+}
+
+@book{vasilybulatov2006,
+ Author = {Vasily Bulatov},
+ title = {Computer Simulations of Dislocations (Oxford Series on Materials Modelling)},
+ description = {Computer Simulations of Dislocations (Oxford Series on Materials Modelling) (Book, 2006)},
+ publisher = {Oxford University Press},
+ interhash = {aa2de230a449203efb67477971b504ee},
+ intrahash = {5ea99d1e44b2d2913ad01013e976c500},
+ year = {2006},
+ month = {dec},
+ isbn = {0198526148},
+ url = {https://www.xarg.org/ref/a/0198526148/}
+}
+
+@article{Aksyonov2016,
+  doi = {10.1088/0953-8984/28/38/385001},
+  url = {https://doi.org/10.1088/0953-8984/28/38/385001},
+  year = {2016},
+  month = jul,
+  publisher = {{IOP} Publishing},
+  volume = {28},
+  number = {38},
+  pages = {385001},
+  author = {D A Aksyonov and T Hickel and J Neugebauer and A G Lipnitskii},
+  title = {The impact of carbon and oxygen in alpha-titanium:ab initiostudy of solution enthalpies and grain boundary segregation},
+  journal = {Journal of Physics: Condensed Matter}
+}
+
+@article{Paxton2013,
+  doi = {10.1103/physrevb.87.224110},
+  url = {https://doi.org/10.1103/physrevb.87.224110},
+  year = {2013},
+  month = jun,
+  publisher = {American Physical Society ({APS})},
+  volume = {87},
+  number = {22},
+  author = {A. T. Paxton and C. Els\"{a}sser},
+  title = {Analysis of a carbon dimer bound to a vacancy in iron using density functional theory and a tight binding model},
+  journal = {Physical Review B}
+}
+@article{Legrand1985,
+  doi = {10.1080/01418618508237608},
+  url = {https://doi.org/10.1080/01418618508237608},
+  year = {1985},
+  month = jul,
+  publisher = {Informa {UK} Limited},
+  volume = {52},
+  number = {1},
+  pages = {83--97},
+  author = {Par B. Legrand},
+  title = {Structure du coeur des dislocations vis 1/3{\langle}1120{\rangle} dans le titane},
+  journal = {Philosophical Magazine A}
+}
+
+@article{Conforto2017,
+  doi = {10.1098/rsta.2016.0417},
+  url = {https://doi.org/10.1098/rsta.2016.0417},
+  year = {2017},
+  month = jun,
+  publisher = {The Royal Society},
+  volume = {375},
+  number = {2098},
+  pages = {20160417},
+  author = {E. Conforto and I. Guillot and X. Feaugas},
+  title = {Solute hydrogen and hydride phase implications on the plasticity of zirconium and titanium alloys: a review and some recent advances},
+  journal = {Philosophical Transactions of the Royal Society A: Mathematical,  Physical and Engineering Sciences}
+}
+@article{Veiga2011,
+  doi = {10.1016/j.actamat.2011.07.048},
+  url = {https://doi.org/10.1016/j.actamat.2011.07.048},
+  year = {2011},
+  month = oct,
+  publisher = {Elsevier {BV}},
+  volume = {59},
+  number = {18},
+  pages = {6963--6974},
+  author = {R.G.A. Veiga and M. Perez and C.S. Becquart and E. Clouet and C. Domain},
+  title = {Comparison of atomistic and elasticity approaches for carbon diffusion near line defects in $\upalpha$-iron},
+  journal = {Acta Materialia}
+}
+
+@article{Becquart2007,
+  doi = {10.1016/j.commatsci.2006.11.005},
+  url = {https://doi.org/10.1016/j.commatsci.2006.11.005},
+  year = {2007},
+  month = jul,
+  publisher = {Elsevier {BV}},
+  volume = {40},
+  number = {1},
+  pages = {119--129},
+  author = {C.S. Becquart and J.M. Raulot and G. Bencteux and C. Domain and M. Perez and S. Garruchet and H. Nguyen},
+  title = {Atomistic modeling of an Fe system with a small concentration of C},
+  journal = {Computational Materials Science}
+}
+@article{Makri2019,
+  doi = {10.1063/1.5064465},
+  url = {https://doi.org/10.1063/1.5064465},
+  year = {2019},
+  month = mar,
+  publisher = {{AIP} Publishing},
+  volume = {150},
+  number = {9},
+  pages = {094109},
+  author = {Stela Makri and Christoph Ortner and James R. Kermode},
+  title = {A preconditioning scheme for minimum energy path finding methods},
+  journal = {The Journal of Chemical Physics}
+}
+@article{Rodney2009,
+  doi = {10.1103/physrevb.79.094108},
+  url = {https://doi.org/10.1103/physrevb.79.094108},
+  year = {2009},
+  month = mar,
+  publisher = {American Physical Society ({APS})},
+  volume = {79},
+  number = {9},
+  author = {David Rodney and Laurent Proville},
+  title = {Stress-dependent Peierls potential: Influence on kink-pair activation},
+  journal = {Physical Review B}
+}
+@article{Hanlumyuang2010,
+  doi = {10.1016/j.actamat.2010.06.024},
+  url = {https://doi.org/10.1016/j.actamat.2010.06.024},
+  year = {2010},
+  month = sep,
+  publisher = {Elsevier {BV}},
+  volume = {58},
+  number = {16},
+  pages = {5481--5490},
+  author = {Y. Hanlumyuang and P.A. Gordon and T. Neeraj and D.C. Chrzan},
+  title = {Interactions between carbon solutes and dislocations in bcc iron},
+  journal = {Acta Materialia}
+}
+@article{Clouet2008,
+  doi = {10.1016/j.actamat.2008.03.024},
+  url = {https://doi.org/10.1016/j.actamat.2008.03.024},
+  year = {2008},
+  month = aug,
+  publisher = {Elsevier {BV}},
+  volume = {56},
+  number = {14},
+  pages = {3450--3460},
+  author = {Emmanuel Clouet and S{\'{e}}bastien Garruchet and Hoang Nguyen and Michel Perez and Charlotte S. Becquart},
+  title = {Dislocation interaction with C in $\upalpha$-Fe: A comparison between atomic simulations and elasticity theory},
+  journal = {Acta Materialia}
+}
+@article{Lthi2019,
+  doi = {10.1088/1361-651x/ab28d4},
+  url = {https://doi.org/10.1088/1361-651x/ab28d4},
+  year = {2019},
+  month = jul,
+  publisher = {{IOP} Publishing},
+  volume = {27},
+  number = {7},
+  pages = {074002},
+  author = {B L\"{u}thi and F Berthier and L Ventelon and B Legrand and D Rodney and F Willaime},
+  title = {Ab initio thermodynamics of carbon segregation on dislocation cores in bcc iron},
+  journal = {Modelling and Simulation in Materials Science and Engineering}
+}
+@article{Fu2017,
+  doi = {10.1016/j.actamat.2017.02.006},
+  url = {https://doi.org/10.1016/j.actamat.2017.02.006},
+  year = {2017},
+  month = apr,
+  publisher = {Elsevier {BV}},
+  volume = {128},
+  pages = {176--187},
+  author = {H. Fu and E.I. Galindo-Nava and P.E.J. Rivera-D{\'{\i}}az-del-Castillo},
+  title = {Modelling and characterisation of stress-induced carbide precipitation in bearing steels under rolling contact fatigue},
+  journal = {Acta Materialia}
+}
+
+
+@PhdThesis{Simpson2019,
+  author = 	 {E. Simpson},
+  title = 	 {A Tight Binding Study of Dislocations in Iron and Their Interactions with Hydrogen},
+  school = 	 {King's College London},
+  year = 	 {2019}
+}
+
+@article{Bhadeshia2018,
+  doi = {10.1080/02670836.2018.1470746},
+  url = {https://doi.org/10.1080/02670836.2018.1470746},
+  year = {2018},
+  month = may,
+  publisher = {Informa {UK} Limited},
+  volume = {34},
+  number = {14},
+  pages = {1666--1668},
+  author = {H. K. D. H. Bhadeshia},
+  title = {Solution to the Bagaryatskii and Isaichev ferrite{\textendash}cementite orientation relationship problem},
+  journal = {Materials Science and Technology}
+}
+
+@article{Cai2003,
+  doi = {10.1080/0141861021000051109},
+  url = {https://doi.org/10.1080/0141861021000051109},
+  year = {2003},
+  month = jan,
+  publisher = {Informa {UK} Limited},
+  volume = {83},
+  number = {5},
+  pages = {539--567},
+  author = {Wei Cai and Vasily V. Bulatob and Jinpeng Chang and Ju Li and Sidney Yip},
+  title = {Periodic image effects in dislocation modelling},
+  journal = {Philosophical Magazine}
+}
+
+@article{Maugis2020,
+  doi = {10.1016/j.matlet.2020.127725},
+  url = {https://doi.org/10.1016/j.matlet.2020.127725},
+  year = {2020},
+  month = jul,
+  publisher = {Elsevier {BV}},
+  volume = {270},
+  pages = {127725},
+  author = {P. Maugis and D. Kandaskalov},
+  title = {Revisiting the pressure effect on carbon migration in iron},
+  journal = {Materials Letters}
+}
+
+@article{Warhadpande2013,
+  doi = {10.1080/10402004.2013.847999},
+  url = {https://doi.org/10.1080/10402004.2013.847999},
+  year = {2013},
+  month = nov,
+  publisher = {Informa {UK} Limited},
+  volume = {57},
+  number = {1},
+  pages = {66--76},
+  author = {Anurag Warhadpande and Farshid Sadeghi and Ryan D. Evans},
+  title = {Microstructural Alterations in Bearing Steels under Rolling Contact Fatigue: Part 2{\textemdash}Diffusion-Based Modeling Approach},
+  journal = {Tribology Transactions}
+}
+
+@article{Warhadpande1_2013,
+  doi = {10.1080/10402004.2012.754073},
+  url = {https://doi.org/10.1080/10402004.2012.754073},
+  year = {2013},
+  month = may,
+  publisher = {Informa {UK} Limited},
+  volume = {56},
+  number = {3},
+  pages = {349--358},
+  author = {Anurag Warhadpande and Farshid Sadeghi and Ryan D. Evans},
+  title = {Microstructural Alterations in Bearing Steels under Rolling Contact Fatigue Part 1{\textemdash}Historical Overview},
+  journal = {Tribology Transactions}
+}
+@article{Swahn1976,
+  doi = {10.1007/bf02656592},
+  url = {https://doi.org/10.1007/bf02656592},
+  year = {1976},
+  month = aug,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {7},
+  number = {8},
+  pages = {1099--1110},
+  author = {H. Swahn and P. C. Becker and O. Vingsbo},
+  title = {Martensite decay during rolling contact fatigue in ball bearings},
+  journal = {Metallurgical Transactions A}
+}
+
+@article{voskamp97_state_resid_stres_induc_by,
+  author =	 {A. P. Voskamp and E. J. Mittemeijer},
+  title =	 {State of Residual Stress Induced By Cyclic Rolling
+                  Contact Loading},
+  journal =	 {Materials Science and Technology},
+  volume =	 13,
+  number =	 5,
+  pages =	 {430-438},
+  year =	 1997,
+  doi =		 {10.1179/mst.1997.13.5.430},
+  url =		 {https://doi.org/10.1179/mst.1997.13.5.430},
+  DATE_ADDED =	 {Sat Aug 8 16:32:53 2020},
+}
+
+@article{creuze00_inter_segreg_order_effec,
+  author =	 {J{\'e}rôme Creuze and Fabienne Berthier and Robert
+                  T{\'e}tot and Bernard Legrand},
+  title =	 {Intergranular Segregation and Ordering Effect: a
+                  Mixed Monte Carlo Mean-Field Approach},
+  journal =	 {Physical Review B},
+  volume =	 62,
+  number =	 4,
+  pages =	 {2813-2824},
+  year =	 2000,
+  doi =		 {10.1103/physrevb.62.2813},
+  url =		 {https://doi.org/10.1103/physrevb.62.2813},
+  DATE_ADDED =	 {Sat Aug 8 17:51:46 2020},
+}
+
+@article{hashemi11_stren_hardn_statis_correl_api_x65_steel,
+  author =	 {S.H. Hashemi},
+  title =	 {Strength-Hardness Statistical Correlation in Api X65
+                  Steel},
+  journal =	 {Materials Science and Engineering: A},
+  volume =	 528,
+  number =	 3,
+  pages =	 {1648-1655},
+  year =	 2011,
+  doi =		 {10.1016/j.msea.2010.10.089},
+  url =		 {https://doi.org/10.1016/j.msea.2010.10.089},
+  DATE_ADDED =	 {Sun Aug 9 19:40:58 2020},
+}
+
+@article{Nematollahi2016,
+  doi = {10.1016/j.actamat.2016.03.052},
+  url = {https://doi.org/10.1016/j.actamat.2016.03.052},
+  year = {2016},
+  month = jun,
+  publisher = {Elsevier {BV}},
+  volume = {111},
+  pages = {321--334},
+  author = {Gh. Ali Nematollahi and Blazej Grabowski and Dierk Raabe and J\"{o}rg Neugebauer},
+  title = {Multiscale description of carbon-supersaturated ferrite in severely drawn pearlitic wires},
+  journal = {Acta Materialia}
+}

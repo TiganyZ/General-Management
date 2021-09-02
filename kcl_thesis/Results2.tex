@@ -1,0 +1,303 @@
+\chapter{Free Energy Landscapes for Permeation in Designed Pores}
+\label{ch:RC2}
+
+This chapter is based on the latter half of the following publication; \\
+Designing a Hydrophobic Barrier within Biomimetic Nanopores. Trick et al, (2014)
+ACS Nano. 8 11268-79.
+ 
+\epigraph{{\textit{''And the Haters Gonna Hate, Hate, Hate, Hate, Hate''}}}{Taylor Swift}
+
+
+\section{Introduction}
+
+Nanofluidics, the study of the behaviour, manipulation and control of fluids within the nanoscale has become a major field recently due to the biotechnological uses of water manipulation via ionic and water flow for water desalination,\cite{Kim2010,Corry2011c,Yang2013b,Chan2013,Liu2015}, electronics \cite{Vlassiouk2008b,Pardon2013}, analytical separation of biological molecules \cite{Cao2002} and lab-on-a-chip structures \cite{Herold2009} with the use of synthetic and biological based nanopores. Based on the wide use of such pores and interest in water control, it is of interest to investigate the full permeation properties of such pores created in the previous chapter.  
+
+As mentioned previously, when designing nanopores, one approach is to mimic key features of biological nanopores to act as templates and mimics for the development of such model pores. 
+Throughout this thesis and in the work of others, MD simulations play a key role in allowing us to understand the physical basis of nanopore function and conductance. Following on form the previous chapter, here I use to use free energy simulations do determine if transplantation of a hydrophobic ring into a biomimetic model (3\textsuperscript{rd} generation pore) is a true hydrophobic barrier (and not just an unfortunate case of a too short a timescale of simulation).
+
+MD simulations and free energy calculations have been used to investigated hydrophobicity in a number of constructs such as protein channels of pLGICs, nAChR, GluCl, and GLIC  \cite{Beckstein2006b,Yoluk2015,Zhu2010,Zhu2012}, potassium channels \cite{Berneche2001,Fowler2013,Aryal2014g}, also within theoretical models and CNT \cite{Hummer2001,Waghe2002c,Garate2014} (along with the hydrophilic version, boron nitride nanopores \cite{Won2007,Hilder2009,Hilder2012}). Additionally, MD simulations and free energy calculations have been used to look at ion conduction \cite{Peter2005,Allen2006}, which would be of interest to the model pores studied here.
+
+In this study, I use the previously designed $\beta$-barrel nanopores (figure \ref{fig:pores_remind}) that contain a possible hydrophobic barrier based on the chemical nature and radius of the pores (which lie within the hydrophobic transition radius). Equilibrium and non-equilibrium MD simulations are used to explore the barrier present in the nanopores using various molecule types. To quantify the barriers, potential of mean force (PMF) calculations are used to reveal 1D energy landscapes of permeation. These studies provide a detailed example of the use of MD simulation to design and evaluate simple model nanopores based on a $\beta$-barrel template, with a prospect of their further development. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/pores_remind}
+\caption[Model Pores in which permeation will be investigated.] {Model Pores in which permeation will be investigated via free energy methods. Shown in cartoon are the pores which were designed and simulated in the previous chapter.} %square is table contents, curly is in the chapter
+\label{fig:pores_remind}
+\end{center}
+\end{figure}
+
+
+\section{Methods}
+
+\subsection{System Preparation}
+The hydrophobic nanopores were embedded in a self assembled DPPC bilayer using methods from the previous section. After AT conversion, water molecules (SPC) and counter ions were present in the system (ionic concentration of 1M). For the equilibrium simulations, I initially restrained the protein and the ion (with the ion being placed in the center of the leucine band) with a force constant of 1000 kJmol\textsuperscript{-1}nm\textsuperscript{-2} for 2.5 ns. After the time elapsed, the restraints were removed and the system was simulated for another 2.5 ns. For the steered MD (SMD) simulations, the ion was placed just above the lumen facing leucine residues of a STLLLTS nanopore (in initial simulations I tried placing the ion further above the leucine residues however all runs were unsuccessful) at a pulling rate of 2 \AA\ ns\textsuperscript{-1} with a spring constant of 350 kJmol\textsuperscript{-1}nm\textsuperscript{-2}. For the umbrella sampling simulations the molecule was placed at the center of mass (c.o.m) position of the protein (x and y) in the center of the pore lumen, with the z coordinate being varied. Particles which overlapped with the molecule were repositioned via energy minimization before simulation. Energy minimisation (steepest decent algorithm) was run for 5000 steps. All simulations were carried out with GROMACS version 4.5.5 \cite{Berendsen1995,Hess2008} with the united atom GROMOS96 43a1 forcefield \cite{Scott1999,Schuler2001}.
+
+
+\subsection{Umbrella Sampling}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{./pictures/Results2/setup}
+\caption[Simulated molecules and pore axis for umbrella sampling.] {Simulated molecules and pore axis for umbrella sampling. A. Molecules in which free energy profiles will be calculated for in this chapter. From the left, Na\textsuperscript{+} ion, Cl\textsuperscript{-} ion, water molecule, methane and benzene. Images are not to scale. B. Cartoon representation of protein with spheres (orange) indicating the PMF pathway through the pore lumen. right - 90$^{\circ}$ rotation of figure with surf representation of the surface.} %square is table contents, curly is in the chapter
+\label{fig:setup-rc3}
+\end{center}
+\end{figure}
+
+
+The initial system for the umbrella sampling simulations were obtained from a 60 ns equilibration simulation of the nanopore model in a lipid bilayer. The reaction coordinate was defined as the z/pore axis, ranging from ±40 \AA\ with the bilayer and protein centre at z = 0 \AA\ (figure \ref{fig:setup-rc3}). This defined \til 80 windows along the z axis, with spacing of 1 \AA\ between successive windows. A harmonic biasing potential was applied to the z coordinate of one atom of the molecule (ion and methane, main bead. Benzene CD2 and water OW atom types) with a force constant of 1000 kJ mol\textsuperscript{-1}nm\textsuperscript{-2} acting on the z coordinate only. Each window was simulated for 2 ns for both ion and water windows, 4 ns for methane, and 10 ns for benzene. Convergence for water and ion was analyzed by calculating the height of the central barrier as a function of time intervals for consecutive 0.1 ns segments from each 2 ns window. Methane convergence was calculated for every 0.5 ns, and benzene for every 1 ns. PMF profiles were computed using the weighted histogram analysis method (WHAM) \cite{Grossfield}. PMF profiles were tethered and errors were calculated by the bootstrapping method. 
+
+\section{Results and Discussion}
+
+\subsection{Landscape of Various Molecules}
+
+As mentioned, vaying types of molecular permeation pathways have been simulated to identify and investigate ``barriers'' or ``energetic wells'' to such, with the hypothesis of an energetic barrier for polar molecules such as Na\textsuperscript{+}, Cl\textsuperscript{-} ions, water and favourable pathways for more hydrophobic molecules such as methane and benzene through a hydrophobic pore.
+
+\subsection{Types of Simulation}
+
+To analyse the permeation pathway of these molecule classes and the model pores under conduction, equilibrium and various non-equilibrium methods are used to probe the energetics of transport of these molecules. These being-
+
+\begin{itemize}
+\item Equilibrium - used in the previous chapter and continued here as equilibrium simulations with the implementation of positional restraints on select ions and protein. 
+\item Steered Molecular Dynamics (SMD) - a Na\textsuperscript{+} ion is pulled through the pore of the STLLLTS Pore.
+\item Umbrella sampling - calculated a potential of mean force (PMF) profile for the conduction of ions through the protein pore. 
+\end{itemize}
+
+\subsubsection{Equilibrium and Positional Restraints}
+
+So far, I have only measured water conductance through these model pores, considering this as a proxy for ionic conductance. I initiated the explorations of the behaviour of ions within the hydrophobic models by taking a dewetted state from a simulation of e.g. the STNLLNT model, and restraining a Cl\textsuperscript{-} ion in the region of the dry central constriction. Whilst the ion was restrained in this position it resulted in persistent wetting of the central region of the pore. However, upon removing the restraint on the ion, the ion was quickly expelled from the central region of the pore, leading to pore dewetting (figures \ref{fig:restraint_image} and \ref{fig:restraint_1}). This suggests that the de-wetted state of the channel in the absence of an ion is more stable, and that the pore is functionally closed. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results2/restraint_image}
+\caption[Snapshots of ion restraint within the STNLLNT nanopore.] {Snapshots of ion restraint within the STNLLNT nanopore. Cl\textsuperscript{-} ion (shown in dark blue sphere) within the nanopore and bilayer (DPPC phosphate particles indicated with dashes). At 0 ns, the ion is restrained within the LL region of the pore, within the hydrophobic gap. At 2.5 ns, the restraints upon the ion are removed, with wetting of the hydrophobic gap and the ion. After 0.5 ns, (3 ns), the ion is expelled from the pore and dewetting occurs. } %square is table contents, curly is in the chapter
+\label{fig:restraint_image}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results2/restraint_1}
+\caption[Water around the ion within the STNLLNT pore during the restraint simulation.] {Water around the ion within the STNLLNT pore during the restraint simulation. Represented in the z position of water (light blue points) within the volume of the pore, and restrained ion (blue). Shaded grey indicates region where restraints were removed. Cartoon on the right shows approximate position of the protein and bilayer (purple spheres). Dashes indicate phosphate z positions of the DPPC lipid.} 
+\label{fig:restraint_1}
+\end{center}
+\end{figure}
+
+This expulsion event suggests there is a barrier present, and this observation also argues for a more detailed analysis of the energy landscapes of permeation through these surprisingly complex model nanopores.
+
+\subsubsection{Steered Molecular Dynamics}
+
+For this method, the force was applied to the (protein and) ion, which induced the ``pulling'' of a sodium ion through the lumen of the hydrophobic STLLLTS pore (figure \ref{fig:smd_up}). Complementary to the restrain simulations performed previously, the ion pathway was shown to be unfavourable. Positioning was very dependent on the ion being directly above the LLL-hydrphobic region and within the protein pore vicinity (if not, the ion would pass through the bilayer). A force of \til 100 kj mol\textsuperscript{-1} nm\textsuperscript{-2} is observed (figure \ref{fig:smd_up}, B.)  between \til 75 and 80 \AA\ within the the force profile. Nevertheless no quantitative values can be actually obtained from such a ``noisy'' pull profile and possible limitations to the method itself. The change in pull force also suggests that there is a barrier in this region, therefore supporting the conclusion that more detailed analysis of such pores is needed for quantification of a barrier. This detailed analysis is performed using free energy calculations. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/smd_up}
+\caption[Steered MD Simulation of ion translocation through STLLLTS pore.] {Steered MD Simulation of ion translocation through STLLLTS pore. A. cartoon representation of STLLLTS pore in which a Na\textsuperscript{+} shown at the top of the pore (red sphere) is pulled through the pore, direction shown by yellow arrow. B. Pull force profile from simulation. The height of the plot corresponds to the protein height.} 
+\label{fig:smd_up}
+\end{center}
+\end{figure}
+
+
+\subsection{Ions and Water Through Hydrophobic Barriers}
+
+\subsubsection{Ions}
+
+The PMF profile for a \Cl\ ion (figure \ref{fig:ion_main}) through the hydrophobic pores displays the expected behaviour based on previous simulations, of having an energetic barrier within the pore. These values calculated are comparable to other hydrophobic regions observed within such pores as the cationic \na\ (\til 26 \kj\ for \Na\ also  \til 18 \kj\ for Cl\textsuperscript{-1}) \cite{Beckstein2006b}, the small mechanosensitive channel MscS (\til 40 to 80 \kj\ at its barrier) \cite{Anishkin2004}, the TWIK potassium channel (\til 20 \kj\ for K\textsuperscript{+}) \cite{Aryal2014g}, and a bacterial homologue such as the GLIC channel (\til 83 \kj\ is calculated for \Na\ ) \cite{Zhu2012}. Also other free energy calculations of the linear peptide of gramicidin A (\til 33 \kj\ for K\textsuperscript{+}) \cite{Allen2006} show equivalent values to the calculated barrier.
+
+The energetic barrier height observed in this chatper is also approximately equal to those for simple model nanopores,  in which a barrier of \til 19 \kj\ was calculated for a cation through a model hydrophobic pore \cite{Beckstein2004a}, 24 \kj\ for \Cl\ transport through a 8.5 \AA\ radius pore \cite{Dzubiella2005}, and also CNT in which values ranged from 96 to 12 \kj\ for tubes ranging from 6.6 to 9.3 \AA\ in diameter \cite{Corry2008}. Based on diameter, the corresponding CNT to this protein model would have no barrier, however is has a differing in chemical nature and structure. Another model, based on larger dimensions of the nuclear porin complex (32 nm diameter pore and a 10 nm bead), indicate a barrier of \til 23 \kj\ based on the hydrophobic particle type which also supports this theoretical value. 
+
+Therefore, the values calculated here for a theoretical pore constructed out of a theoretical $\beta$-barrel protein are equivalent to other models and proteins. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/ion_main}
+\caption[Potential of mean force profile of a chloride ion through 3\textsuperscript{rd} generation pores.] {Potential of mean force profile of a chloride ion through 3\textsuperscript{rd} generation pores. Pore models have been aliased from STLLLTS to LLL, STNLLNT to NLLN, and STNLLTS to NLL. Plot represents the translocation pathway (on the x axis) which in this thesis is termed z, through the nanopore with calculated energy from that position (y). Barrier heights correspond to 46, 26 and 20 \kj\ for the LLL, NLLN, and NLL pores. Initial grey shade represents the z coordinate of the pore, with secondary inner shading indicates the central mutated region of the pore.}  %square is table contents, curly is in the chapter
+\label{fig:ion_main}
+\end{center}
+\end{figure}
+
+To determine firstly if the 1 \AA\ positioning of the ion (and following molecules) is sufficient to provide enough overlap in the 1D pathway and 2D x-y space to accurately predict a free energy landscape, the gromacs code g\_wham \cite{Hub2010a} was used to produce a histogram of the overlap of the simulation windows of a profile (figure \ref{fig:stnl_con2}, A). As can be seen, there is sufficient overlap between the histogram windows to ensure that there is adequate sampling with the pull force applied and with the z coordinate positioning. Also to be considered is whether the length of simulations used in each umbrella sampling windows is sufficient to allow convergence of the free energy (figure \ref{fig:stnl_con2}, B.). Convergence is observed after ca. 0.5 ns, with the PMF presented (in figure \ref{fig:ion_main}) based on data collected for the last 1.5 ns of each window. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{./pictures/Results2/stnl_con2}
+\caption[Histogram and convergence profile for STNLLTS pore.] {Histogram and convergence profile for STNLLTS pore. A. Histogram of the count (how often a window falls into a specific peak) of the window overlay of chloride ion at varying z position within each simulation. B. Plotted is the maximum calculated free energy for incremental windows. i.e., 0 - 0.1 ns, 0.1 - 0.2 ns and so on until 1.9 -2.0 ns (point is plotted at 0.1 increments). Shaded grey region is the time which will be omitted from the final profile.} 
+\label{fig:stnl_con2}
+\end{center}
+\end{figure}
+
+Another observation into an adequate length of simulation is the movement in the x and y plane of the solute. For windows that are too short in time scale, inadequate sampling of the x-y space would occur, thus not giving an accurate representation of the possible interacting groups within the structure. This is shown in the ion movement in the x and y plane  (figure \ref{fig:ion_com_lll}) for the ion within the solvent phase (B.) and within the protein pore (C.). For the simulation time scale used, based on the distribution and movement of the ion within the system for both phases, ample movement for the region is observed and gives proportional representation of movement within the system. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/ion_com_lll}
+\caption[Chloride ion movement within simulation windows for STLLLTS pore.] {Chloride ion movement within simulation windows for STLLLTS pore. A. The initial set up of ion (blue dot) within the lumen of the protein (grey cartoon) in which the z values are varied to explore the energy landscape in the pore lumen. DPPC lipid is shown in VdW representation. Water and other ions are omitted for clarity. Image is to scale in figures B and C in the x and y directions. B. Plot of protein and chloride ion c.o.m movement z value for the ion of 30 \angstrom,  where the ion is in the solvent phase of the simulation. C. Ion at z = 73 \AA\, which is the center of the LLL motif of the pore. D. Zoom of C. Ion and protein colours are consistent throughout images.} %square is table contents, curly is in the chapter
+\label{fig:ion_com_lll}
+\end{center}
+\end{figure}
+
+It is of importance to probe the origin of the energetic barriers in the profile shown, which may be further elucidated by calculating the solvation numbers around the ion. This is based  on the numbers of chloride ion-water contacts as a function of pore axis position during the simulations. Radial distribution function (rdf) analysis was conducted on both chloride and sodium ions (figure \ref{fig:rdf}) to indicate the hydration shell distances within these simulations. From this, the number of waters around the chloride ion of interest was calculated for both hydration shells (for Cl\textsuperscript{-}, 4.0 and 6.3 \angstrom\ and Na\textsuperscript{+}, 3.1 and 5.4 \angstrom) which will be used as distance cut-offs for chloride-water contacts through the model pores.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results2/rdf}
+\caption[Radial distribution function of water around a \Cl\ and \Na\ ion.] {Radial distribution function of water around a \Cl\ and \Na\ ion. Profile indicates distances between water-oxygen atom and water-hydrogen atom to the ion. Value used in this thesis are from the water-oxygen values, with values obtained from the base of the first and second corresponding peaks to include the entire shell.}  %square is table contents, curly is in the chapter
+\label{fig:rdf}
+\end{center}
+\end{figure}
+
+Water contacts for chloride ion at both hydration shell distances are calculated for all three pores (figure \ref{fig:shells_llls_ion}). It can be noted for the chloride ions first solvation shell remains intact in translocation through the solvent and pore region. In contrast, a significant depletion of the second solvation shell occurs as the ion passes through the hydrophobic constriction. This suggests that the energetic barrier may reflect the large cost of hydration of the hydrophobic constriction and also the the cost of removal of (part of) the second hydration shell. This is noted especially for the LLL pore which undergoes a 'double dip' of ion dehydration through the central region of the protein. This has also been simulated in varying radii channel-ion systems. In this study, a \Na\ ion is present most likely in the center of the pore where it can form the most complete solvation shell \cite{Lynden-Bell1996a}.  Based on the radius of the proteins shown previously, (chapter 3, figure 3.22, A.) all three of the pores have a minimum radius of \til 5-6 \AA\ which would interact with the outer hydration shell, and directly interact and contribute to the decrease in water. This has been noted in the study of the GLIC channel where it is suggested that the barrier to Na\textsuperscript{+} permeation presented by the hydrophobic gate arises largely from the cost of hydrating the pore \cite{Zhu2012}. A similar analysis has been presented for anions passing through simple models of narrow hydrophobic nanopores \cite{Richards2012}. Thus, looking at the solvation through the pore can give an insight into the gating mechanism in use. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results2/shell_llls_ion}
+\caption[Water hydration shells of a chloride ion through the 3\textsuperscript{rd} generation pores.] {Water hydration shells of a chloride ion through the 3\textsuperscript{rd} generation pores. A. LLL model pore with z coordinate on the x axis and number of waters from calculated rdf (figure \ref{fig:rdf}) shells on the y axis. B. NLL and C. NLLN pore. For both, shell radii is consistent with values shown in A. Grey region in plots represents protein region.} %square is table contents, curly is in the chapter
+\label{fig:shells_llls_ion}
+\end{center}
+\end{figure}
+
+A more detailed inspection of the hydrophobic region within the model nanopores would be a free energy calculation and profile of selected 1\textsuperscript{st} and 2\textsuperscript{nd} generation pores. Within equilibrium simulation, they exhibited a change in water flux through the pore (chapter 3, figure 3.20) with mutation within only one ring of residues within the constriction region, from a complete hydrophobic pore to one with a glutamine residue constriction. From the free energy profile (figure \ref{fig:gen2_profile}), akin to the 3\textsuperscript{rd} generation pores, the GAVLVAG complete hydrophobic pore has a higher barrier ca. 60 kJ mol\textsuperscript{-1}. In contrast, the hybrid model has no significant barrier and revealed a relatively flat permeation profile with a central minimum of ca. 2 kJ mol\textsuperscript{-1}. Based on water flux I have judged the GAVQ pore to be open (35 ns\textsuperscript{-1}) whilst the GAVL pore was closed (0.3 ns\textsuperscript{-1}). This relation of water flux and PMF calculation initially supports the assumption that calculations of water fluxes can be used as initial screen of models, as functionally open or closed. This assumption is also supported in the water-ion hydration shells of these model pores (figure \ref{fig:2nd_shell}). 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=11cm]{./pictures/Results2/gen2_profile}
+\caption[Potential of mean force profile of \Cl\ through a 1\textsuperscript{st} and 2\textsuperscript{nd} generation pore.] {Potential of mean force profile of \Cl\ through a 1\textsuperscript{st} and 2\textsuperscript{nd} generation pore.  A. Cartoon of the 1\textsuperscript{st} and 2\textsuperscxript{nd} generation pores from previous chapter. B. Potential of mean force profile of pores from A. In the legend, L denotes GAVLVAG pore and G,  GAVQVAG. Grey region indicates the pore region, with darker grey showing the central three residues.}
+\label{fig:gen2_profile}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results2/2nd_shell}
+\caption[Hydration shells of a \Cl\ ion through selected 1\textsuperscript{st} and 2\textsuperscript{nd} generation pores.] {Hydration shells of a \Cl\ ion through selected 1\textsuperscript{st} and 2\textsuperscript{nd} generation pores. A. GAVQVAG pore and B. GAVLVAG pore. For B, radius and representation is consistent with figure A. Grey indicates protein pore region.} %square is table contents, curly is in the chapter
+\label{fig:2nd_shell}
+\end{center}
+\end{figure}
+
+\subsubsection{Water}
+
+The other important molecule to consider in terms of energetic transport from previous findings is that of water through these pores, based on the assumption that their transport can be related to that of ion transport. With the profiles generated for free energy calculations (figure \ref{fig:water_main}), as anticipated from equilibrium simulations and \Cl\ ion free energy profiles, there is a clear correlation between the height of the central energy barrier and the rate of water transport through the pores. Akin to the ion barriers, the water barrier and height are within the same region of the protein. Such as the STLLLTS pore, which in equilibrium simulations exhibited a very low conductance for water. In contrast, the two models with only a double ring of leucine residues at the central constriction, showed higher water conductance in simulation and had smaller free energy barriers. Comparable conductive values of water transport through pores are noted within \ahl\ with a maximum calculated value of \til 4 \kj\ \cite{Wong-ekkabut2015}, the mammalian ``porins'' Aqp1 and GlpF have water free energy transport values of \til 4 \kj\ \cite{DeGroot2001}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/water_main}
+\caption[Potential of mean force profile for water through 3\textsuperscript{rd} generation pores.] {Potential of mean force profile for water through 3\textsuperscript{rd} generation pores. Pore models have been aliased from STLLLTS to LLL, STNLLNT to NLLN, and STNLLTS to NLL, with calculated barriers of 24, 15 and 9 \kj\ . Plot represents the translocation pathway (on the x axis) through the nanopore with calculated energy (y). Grey region represents the pore, with secondary shading to indicate the central mutated region of the pore.}  %square is table contents, curly is in the chapter
+\label{fig:water_main}
+\end{center}
+\end{figure}
+
+As with the \Cl\ free energy calculations, there is also detailed information into the the origin of the energetic barrier within the profiles by calculating the hydration shell solvation numbers. Rdf analysis was conducted using a water molecule  (figure \ref{fig:water_rdf} A.) within a 100 ns equilibrium simulation to estimate the distances of hydration shells. From this, the number of water molecules around the water of interest was calculated  (4.8 \angstrom, to encompass all molecules) and will be used for future calculations of water shell contacts. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./pictures/Results2/water_rdf}
+\caption[Radial distribution function (rdf) of water around a selected water molecule and the water shell contacts through 3\textsuperscript{rd} generation pores.] {Radial distribution function (rdf) of water around a selected water molecule and the water shell contacts through 3\textsuperscript{rd} generation pores. A. Rdf profile indicates distance between water-oxygen and water molecule (blue), water-hydrogen and water molecule (light blue), and water-molecule and water-molecule (red line) within a 100 ns simulation. B. Water contacts within 4.8 \AA\ of STLLLTS (lilac), STNLLNT (orange), and STNLLTS (green line, as denoted previously). Grey box indicates protein region.}  %square is table contents, curly is in the chapter
+\label{fig:water_rdf}
+\end{center}
+\end{figure}
+
+Akin to the second hydration shell of chloride, all three nanopore systems indicate a decrease in surrounding water, as the selected water molecule is moved through the protein. This is suggestive that hydration is a critical aspect to ion conduction through these pores as well as water flow, with the completely ``dry'' LLL pore having no water molecules (apart from restrained water) within the central hydrophobic region and no attempt of solvation as noted in the ion profiles. The rdf value is lower than that of the radius of the pore at the most constricted region and should not interact with the pore directly. Overall, both ion and water hydration radii suggests that the energetic barrier may reflect largely the cost of hydration of the hydrophobic constriction (as evidenced by the water PMF) plus the cost of removal of (part of) the second hydration shell. 
+
+To conclude this section, a PMF profile was also calculated for a \Na\ ion through the STLLLTS pore. Comparison of the three free energy profiles for the STLLLTS model (figure \ref{fig:lll_all}) shows those calculated for  Cl\textsuperscript{-} and Na\textsuperscript{+} to be broadly similar, both with a higher and wider barrier than that for water, and with a symmetrical profile through the symmetrical pore as estimated.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/lll_all}
+\caption[PMF profile of Na\textsuperscript{+}, Cl\textsuperscript{-}, and water through STLLLTS pore.] {PMF profile of Na\textsuperscript{+}, Cl\textsuperscript{-}, and water through STLLLTS pore. Plot is that of previously shown chloride and water, now including the sodium ion free energies of 46, 24 and 41 \kj\ through the pore. Representation is consistent with previous profiles with darker grey region of the LLL residues. }  %square is table contents, curly is in the chapter
+\label{fig:lll_all}
+\end{center}
+\end{figure}
+
+The energy profiles of water and ions through these pores are encouraging as it suggests water permeation may indeed be used as a proxy for ion permeation in designing hydrophobic gates or barriers into nanopores and for other hydrophobic residue containing membrane proteins. It is noted that the barriers are substantially higher for ions than they are for water, seen for simple models of nanopores \cite{Beckstein2004a}, gramicidin A \cite{Allen2006}, and \na\ receptor \cite{Beckstein2006b}. 
+
+Overall, the nanopore PMF profiles can be compared with those for a model (based on a relatively low resolution structure) of the closed state of much studied \na\ \cite{Beckstein2006b}. For the \na\ M2 helix bundle model, the barriers were somewhat lower barriers than for our hydrophobic barrier nanopores, reflecting that the \na\ channel is a more polar pore and contains a single hydrophobic ring of leucine sidechains at the 9\textquotesingle\ position of the M2 helices, forming its central barrier. Within the related GLIC channel, the free energy barrier to ion permeation through the pore is estimated to be ca. 83 kJ mol\textsuperscript{-1} in the closed state and  ca.17 kJ mol\textsuperscript{-1} when the channel is open \cite{Zhu2012}. These correspond to a change in radius in the pore focusing at the L9\textquotesingle\ position. The lower value of \Na\ in this in comparison to the higher GLIC value could be accounted for by the radius at position 9\textquotesingle on M2 of GLIC (\til 1.7 \angstrom). Also more recently, with the publication of structures of similar pLGIC's, more protein structures are available for a comparison of hydrophobicity in constriction regions be it the 5HT\textsubscript{3} receptor and GluCl channels. Recently calculated are the barriers to permeation for chloride through the chloride selective GluCl  channel, where the closed structure barrier is estimated at 62 kJ mol\textsuperscript{-1} and 21 kJ mol\textsuperscript{-1} when open. These correspond to a change in pore radius at  it's L9' position and also correspond and agreed to the values calculated here. 
+
+The barrier difference between \Na\ and \Cl\ has also been noted in other simulations on hydrophobic nanopores, with calculated values of 16 and 24 \kj\ for the ions, within a hydrophobic channel (radius of 8.5 \AA\ and a length of 10 \angstrom) \cite{Dzubiella2005}. The difference and change in barrier height has been correlated  to the decrease in solvation free energy of the ions in a bulk SPC/E water model \cite{Lynden-Bell1996a}, which is similar to the one used in these simulations. 
+
+Comparison of the PMF profiles for water and for ions allows reflection on whether we can use water permeation as a (computationally cheaper) proxy for ionic conductance, in filtering out designs based on the former. For the STLLLTS model pore, it is evident that the energetic barriers for ions are higher than for water so a conclusion that the pore would be functionally closed based on the water permeation alone would be correct. This assumption has been verified in the 2\textsuperscript{nd} generation hydrophobic-x pores. 
+
+\subsection{Hydrophobic Transport}
+
+Lastly, I investigate the transport of hydrophobic molecules through model nanopores, which is of relevance to biological pores that selectively transport such molecules. Examples include the FadL porin which is known to transport long-chain fatty acids \cite{VandenBerg2004b,Zou2008} and the related porin TodX, which transports toluene across the bacterial outer membrane \cite{Hearn2008}. With biomimetic pores and the basic hydrophobic molecule available within the force field, it was of a final interest to calculate these energies and investigate possible favourable interactions.
+
+Two hydrophobic molecules, methane and benzene, were used for umbrella sampling windows through the STLLLTS nanopore. Within the GROMOS forcefield, aliphatic hydrogen atoms are not included in the field, thus methane for this simulation is modelled as a hydrophobic bead. Benzene is modelled with all hydrogen atoms (figure 4.2, A.).
+
+The free energy profile of both hydrophobic molecules are presented (figure \ref{fig:met_benz}), in which windows from 2.5 - 4.0 ns are used for methane and 4.0 - 9.0 ns for benzene. Profiles shown are normalised at zero (figure \ref{fig:met_benz}, A.) and also from the free energy of hydration for both (\til 8 \kj\ methane, -4 \kj\ benzene) \cite{Abraham1984}. For comparative values to ions and water, values corrected to zero will be considered.  As initally expected, from the chemical nature of both species and the nature of the pore, when entering the protein hydrophobic region, free energy does decrease and to different degrees, however the profile is not symmetrical, as seen in ion and water profiles for this pore. 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/met_benz}
+\caption[PMF profile of methane and benzene through the STLLLTS pore.] {PMF profile of methane and benzene through the STLLLTS pore. A. Profiles of both corrected to zero with minima of \til -12 and -25 \kj\ for methane and benzene. B. Profiles correct to the free energy of hydration for both species. Grey region indicates the protein region, with darker shade showing LLL region.}  %square is table contents, curly is in the chapter
+\label{fig:met_benz}
+\end{center}
+\end{figure}
+
+To repeat the previously mentioned protocol, convergence is calculated from the simulation windows to gain an accurate representation of the free energy. The free energy is calculated for smaller regions of the simulation (figure \ref{fig:con_benz_met}) in order to assess the overall convergence of the window. Firstly, simulations for both these molecules were extended from the ion and water simulation lenth scales to 4 ns per windows for methane and 10 ns for benzene. Window ``splitting'' lead to varied profiles for both sets of hydrophobic molecules, which can be clearly seen especially in the 9-10 ns profile (black) for the benzene profile (B.). Thus, based on the lack of convergence of these profiles, the time scales used for these windows were not sufficient to allow a correct profile estimate. Longer simulations need to be considered, as in the case of free energy profiles of nucleotides through \ahl\ and MspA \cite{Manara2015c,Manara2015d}, where 150 to 250 ns were used for each window, with a sum of 40 $\mu$s in simulation for each nucleotide. This is not a fast, efficient method of estimating nanopore behaviour, thus a different free energy method should be considered if these molecular translocation pathways are to be considered in these biomimetic models. 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/con_benz_met}
+\caption[Convergence PMF profiles for methane and benzene through the STLLLTS pore.] {Convergence PMF profiles for methane and benzene through the STLLLTS pore. A. Methane calculated PMF profile for every 0.5 ns increments to the end of simulation (at 4 ns). Colours and times are shown in the legend. B. Benzene calculated PMF profile for 1 ns increments to the end of the simulation at 10 ns.}  
+\label{fig:con_benz_met}
+\end{center}
+\end{figure}
+
+As shown previously in this chapter, an estimate of whether the simulation time scale is adequate is by monitoring the movement of benzene within the 10 ns windows. As noted for the ion profiles, when windows are too short in time scale, inadequate sampling of the space would occur thus not giving an accurate representation of the possible interacting groups within the system. This could be the origin for the poor convergence noted.  Benzene movement within the x and y plane (figure \ref{fig:ben_com_lll}) within the solvent (B.) and the protein pore (C.) is shown. Based on the distribution of the benzene movement within the system for both phases, ample movement for the region is observed and gives an anticipated proportional representation of movement within the system. Hence, lack of sampling in the x/y plane is not the main cause of an unconverged profile.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/ben_com_lll}
+\caption[Benzene movement within umbrella window simulations for STLLLTS pore.] {Benzene movement within umbrella window simulations for STLLLTS pore. A. The molecule was placed within the c.o.m of the protein (grey cartoon) in which the z values are varied to explore the energy landscape through the protein pore. DPPC lipid is shown in VdW representation. Water and other ions in the system are omitted for clarity. Images are to scale in figures B and C in the x and y directions. B. Graph of protein and benzene c.o.m movement in the simulation in z value for the ion at 30 \AA\, in which the ion is in the solvent phase. C. C.o.m of benzene at z = 71 \AA\ which is the center of the LLL motif of the pore. D. Zoom in of C.} %square is table contents, curly is in the chapter
+\label{fig:ben_com_lll}
+\end{center}
+\end{figure}
+
+
+Even though the profiles are unexpected from initial anticipations, water shells around both molecules were investigated to assess their behaviour and possible contributions to the profiles. The rdf profiles were calculated based on 10 ns simulations of both molecules in solvent, with hydration shell values noted and used for water-shell counts (figure \ref{fig:met_benz_shells}). The symmetrical decrease in the hydration shells is comparable to that seen with the polar molecules. However unlike the polar species, both hydration shells are affected by the protein environment, with there being no water around either molecules within the center of the LLL region. Based on the hydrophobicity of the solute and the chemical nature of leucine, this is an expected behaviour in this region. However, it raises the discrepancy in  relation to the water contacts and free energy barriers for this type of molecule. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{./pictures/Results2/met_benz_shells}
+\caption[Radial distribution function of water around methane and benzene and hydration shells within the STLLLTS pore.] {Radial distribution function of water around methane and benzene and hydration shells within the STLLLTS pore. A. Rdf profile showing distance between water-oxygen to methane or benzene in a 10 ns simulation. B. and C. Water contacts shown within cut-off distance of the STLLLTS pore for B. Methane and C. Benzene. Grey box indicates protein pore z coordinates, where the center of the LLL pore is = 70 \angstrom.} 
+\label{fig:met_benz_shells}
+\end{center}
+\end{figure}
+
+A possible reason for the ``atypical'' free energy profiles noted in this section could be down to the interactions with the protein and hydrophobic molecule. Porins which transport hydrophobic solutes, based on the structures and proposed mechanisms, a simple hydrophobic region is not sufficient for transport. Within FadL, diffusion of the transported fatty acid occurs from a low binding site to a high affinity binding site. From there, it is proposed that spontaneous conformational changes occur within the N terminus, resulting in a release from the high binding site. With this, conformational change is also expected in the hatch domain to open the channel and allow conduction \cite{VanDenBerg2005,Zou2008}. In the 14$\beta$-barrel TodX, there are similarities to the STLLLTS pore in terms of size and a continuous channel through the porin which transports toluene. However like FadL, affinity sites are needed for specificity and further inspection into the hydrophobic channel reveals polar and hydrophobic residues lining the pathway \cite{Hearn2008}. Thus, more specific and intricate pathways are needed for hydrophobic transport. 
+
+In simulations where an ion is placed and restrained within the hydrophobic region, sequential wetting of the ion occurs, allowing water into the region and providing a buffer between the ion and the pore. Within the hydrophobic restraint windows, presentation of benzene or methane within the region results in no hydration, thus keeping the molecule within the dry region. The pore radius of the hydrophobic porins is smaller than that of the STLLLTS model, thus the residues  replace the void (present here) and directly interact with the hydrophobic solute. In the simulations presented here, structural changes occur within the nanopore which have not been noted in these types of simulations in this chapter  (figure \ref{fig:benz_pore}). From the figure, major deformation is occurring within the protein pore, as a possible compensation to size difference, and thus changing the chemical and structural relationship between the protein and molecule from the original protein design. Also noted is the change in radius from a pore in which benzene is present (figure \ref{fig:benz_pore}, B. water) in the solvent phase and within the LLL region (protein). This could explain the variation within the free energy profiles, but also suggests based on the negative free energy that this LLL motif could be a binding site for a hydrophobic molecule. 
+
+\hfill 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results2/benz_pore}
+\caption[Protein deformation and radius within benzene simulation windows.] {Protein deformation and radius within benzene simulation windows. A. Benzene (grey, center of the image at 71 \AA\ within the pore) and protein shown at 0 ns (start of simulation) and at 10 ns (end, right hand image). B. Radii profile of two windows mentioned in A. in which benzene is at \textasciitilde 30 \AA\ (water) or in the middle of the pore (\til 71 \angstrom, in the protein shown in A).}
+\label{fig:benz_pore}
+\end{center}
+\end{figure}
+
+\newpage
+
+\section{Conclusion}
+
+
+In this study, I have shown that there is a true hydrophobic barrier within the modelled STLLLTS nanopore (and also within the first generation GAVLVAG pore). Also based on the methods used, free energy estimates of translocation can be calculated, and accurately predicted for ions and water molecules going through hydrophobic regions. This therefore extends previously known studies on nanopore design and chemical behaviour as well as the energetics of hydrophobic nanopores/hydrophobic gating and their biomimicry. 
+
+In terms of free energy of biomimietic nanopores, the results do suggest that these motifs are indeed transferable and, as well as being dependent on radius, are also implemented by the height (in terms of number of rings in this case) of the hydrophobic region, leading to an idea that there may be certain 'aspect ratios' for such motifs. This can aid in the progression of possible transplantation into larger pores which may be above the `critical' radius for such a motif. 
+
+The methods employed in this section may also be transferable to other possible proteins (be it nanopore or a channel) in which hydrophobic gating could be investigated, as a relatively quick way of establishing if such a gating form is present. With the assumption that short, small spaced windows  can be used to explore the free energy will in theory not allow much protein movement, shown with the free energy calculations for the GluCl receptor \cite{Yoluk2015}. 
+
+Another outcome would be the use of water as a proxy for conductance of a pore. Shown in this chapter is that high water barriers to permeation do actually correspond to regions which are functionally closed to ions. In turn, allowing for the prediction of conductivity from shorter simulations without sufficient ion conduction events.
+
+However, a downfall to this section would be the inability for accurate profiling of hydrophobic molecules through such biomimetic regions. As mentioned previously, this could be down to the fundamental conduction pathway for hydrophobic molecules, which needs to be investigated more for accurate biomimicry. Another could be due to the lack of hydrogen atoms on the leucine and hydrophobic residues which may change and influence critical interactions. Further simulations could be used to investigate this type of interaction and system with the use of an all-atom force field to investigate such properties. 
+
+Umbrella sampling has been used in this chapter to investigate the free energy, however there are other methods available to estimate free energy of translocation through channels \cite{Domene2009}. Umbrella sampling has been used in this case due to its previously implementation into hydrophobicity and barriers \cite{Beckstein2006b}, and the manipulation of the time scale of simulation, which allowed for multiple ``short'' simulations to be used to calculate free energies. However, a newer method such as metadynamics \cite{Laio2002,Piccinini2008} could be used. 
+
+Based on the motif here, I predict (based on simulations of single file water in simple nanopores \cite{Vaitheeswaran2004f,Dzubiella2004d}) that application of a sufficient voltage across a hydrophobic barrier would lead to voltage dependent wetting and functionally opening the pore. This will be investigated and simulated in the next chapter. 
+ 

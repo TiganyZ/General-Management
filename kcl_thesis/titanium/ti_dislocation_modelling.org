@@ -1,0 +1,176 @@
+#+TITLE: Review: Modelling dislocations in titanium
+#+AUTHOR: Tigany Zarrouk 
+
+* Plan                                                      :noexport:ignore:
+
+  Go through the papers of 
+
+  - Legrand 1985  cite:Legrand1985
+  - Ackland
+  - Girshick (BOP) 
+  - Trinkle papers (core structure between DFT and not)
+  - Magali and Benoit, Tarrat
+  - Locking vs unlocking Rodney 
+  - Chaari 
+
+
+  - First look for evidence of screw dislocations in titanium
+    controlling the plastic deformation of the material: Feugas
+
+
+  The $\langle a \rangle, \langle 11\bar{2}0 \rangle$ screw
+  dislocation
+  
+    
+  Screw dislocations in titanium are , hence they
+  control most of the plastic deformation in the material cite:Conforto2017
+
+  To ascertain how screw dislocations move in titan
+
+
+
+* Methods 
+  
+** Rugg
+   Theoretical analysis showed 
+
+   Solute-dislocation interactions arise from two primary mechanisms:
+   elastic interactions mediated by the long-ranged strain fields
+   produced by a dislocation, and shorter-ranged interactions with the
+   dislocation core that are generally referred to as “chemical”
+   interactions (4, 6). The former are generally weak (on the scale of
+   ~0.1 eV per solute atom); in fact, symmetry constraints have the
+   consequence that there should be no linear elastic interaction at
+   all between oxygen interstitials at octahedral sites and a straight
+   <a> screw dislocation in the hcp structure. Analysis is found in
+   the supplementary material. 
+
+
+   Short range interactions can change the restoring force of the
+   dislocation due to lattice slip. Which can by described by the
+   gamma surface energy. 
+
+   Two paths: 
+   - I  = octahedral site in perfect lattice
+   - II = Newly formed octahedral site formed by slip of 0.5a
+
+   - If oxygen on path of the slip plane (prismatic, I assume)
+     1. GSF energy is much higher than for pure ti
+     2. Original octahedral site gradually disappears and transforms
+        to a tetrahedral site with a lower interstitial volume, when
+        the magnitude of the slip is 0.5a.
+     3. Concurrently, a new octahedral site is formed on the basal
+        plane of the Ti structure.
+     4. Changing from the tetrahedral to the new octahedral site
+        reduces the energy by as much as 1.6 eV.
+     5. These results give a barrier for oxygen shuffle (hopping) from
+        path I to path II varies between 0.45-0.95eV, depending on
+        magnitude of slip displacement, which gives a large diffusion
+        barrier.
+     6. Large increase in energy coupled with the large diffusion
+        barrier means that the oxygen cannot move and thus there are
+        strengthening effects.
+     7. The volume changes can be correlated with changes in
+        interstitial volume upon dislocation slip.
+     8. The most pronounced volume changes occur on the prismatic slip
+        plane, where the core structure of the dislocation is spread.
+     9. Interaction energies are apparently quite weak (~60meV on neighbouring
+        prismatic planes to the dislocation spread) or a distance
+        larger than c/2 on the prismatic plane of the dislocation
+        spread.
+     10. With oxygen in the vicinity of the dislocation core there is
+         a strong repulsive interaction which causes the dislocation
+         to cross slip onto an adjacent prismatic plane.
+     11. If oxygen is on the basal plane (path II) then there is only
+         a small repulsive interaction (-50meV). 
+
+
+   So arguments summarised as follows:
+   1. As evidenced by oxygen being found on basal planes in lightly
+      deformed samples, due to the slip of a dislocation deforming the
+      octahedral site into one of a smaller interstitial volume,
+      oxygen will change site to an octahedral void on the basal plane
+      of the dislocation, where the oxygen will remain 'stuck'.
+   2. Cross-slip of the dislocation may occur onto another prismatic
+      plane. This will generate edge segments which connect the two
+      screw dislocations in each of their planes. These edge segments
+      can only move on the basal planes perpendicular to the prismatic
+      planes. Due to the high GSF energy, their mobility is limited.
+   3. The resolved shear stress to move these edge segments is zero if
+      one were to apply stress to cause the dislocation to move on the
+      prismatic plane. This effectively causes a pinning effect of the
+      oxygen near the dislocation core, providing a mechanism for
+      oxygen solute strengthening. 
+
+** Chaari 
+
+   - Know that dislocation, in plane wave codes, seems to have a
+     ground state in the first order pyramidal plane and to move it
+     must change into a metastable state dissociated on the prismatic
+     plane to glide easily. This is the locking-unlocking mechanism of
+     Rodney.
+   - Extend work of Rugg to see how oxygen can change the transitions
+     between core states which allow for glide.
+   
+   - Main results are
+     1. When the oxygen is placed in an octahedral site which is
+        destroyed upon dissociation of the dislocation into partials on either the
+        ground-state pyramidally spread core or the metastable
+        prismatic core, the core transforms to a compact
+        one, due to the strong repulsive effect of the oxygen. (This
+        site is the one between the partials.)
+     2. When the oxygen is away from the dislocation centre of the prismatically
+        spread configuration, the core is destabilised and it falls
+        into the ground-state prismatically spread configuration.
+     3. The narrowing of spreading (changing to compact core from
+        oxygen near the partials) can be evidenced by Yu, where
+        HAADF-STEM observations found that the dislocation core of
+        titanium was smaller with 0.1wt% oxygen, where oxygen was
+        found in the core vicinity.
+     4. Yu /et al/ used a cell height of only one burger's vector, so
+        their interaction energies differ from those found by Chaari
+        (3b cell height). The interaction energies are much higher in
+        this work.
+     5. In the sites created by the stacking fault ribbon on
+        dissociation, the core configuration is stable.
+     6. The third case, where the stacking fault ribbon on the
+        pyramidal plane creates a new site by the pyramidal fault,
+        which correspond to octahedral sites in the twinned hcp
+        crystal For the pyramidal/mixed prismatic-pyramidal core
+        configurations, where this site is created, one finds that the
+        core remains/becomes close to the mixed prismatic-pyramidally
+        spread core.
+    
+   Conclusions
+
+   1. Lowest energy core configuration in Ti-O alloys is the
+      pyramidally spread core.
+   2. Predict that oxygen does not segregate to dislocations in these
+      alloys.
+   3. When a glissile prismatic core encounters an oxygen atom, the
+      core transforms to one that is pyramidally spread, to avoid the
+      obstacle.
+   4. This is evidenced by shorter glide distances on the prismatic
+      plane between pinning points in experiments.
+   5. Due to this cross-slip, jogs are formed, which agrees with
+      /post-mortem/ analysis showing that most screw dislocations have
+      jogs in the presence of oxygen. This explains high lattice
+      friction.
+   6. At higher temperatures, the bypass mechanism will be in
+      competition with oxygen migrating out of the repulsive region,
+      allowing the dislocation to remain in its glide plane.
+   7. A reconstruction of the pyramidal core induced by interaction
+      with oxygen allows us to understand why cross-slip in pyramidal
+      planes becomes more active with the addition of oxygen. And it
+      can glide in the pyramidal plane by nucleation of kink-pairs.
+
+
+ 
+
+
+
+   
+
+* What did each method find
+
+* 

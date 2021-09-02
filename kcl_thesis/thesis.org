@@ -1,0 +1,126 @@
+#+TITLE:
+#+OPTIONS: toc:nil
+#+OPTIONS: date:nil
+#+OPTIONS: title:nil
+#+OPTIONS: author:nil
+
+#+SETUPFILE: setup.org
+
+
+#+BEGIN_EXPORT latex
+\frontmatter
+
+\begin{titlepage}
+
+\maketitle
+
+\end{titlepage}
+
+\include{dedication}
+%\include{declaration}
+\include{acknowledgements}
+
+\include{publications}
+
+\addcontentsline{toc}{chapter}{Abstract}
+\include{abstract}
+%\addcontentsline{toc}{chapter}{List of Abbreviations}
+\include{abbreviations}
+
+
+
+% *********************** Adding TOC and List of Figures ***********************
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+% ******************************** Main Matter *********************************
+\mainmatter
+
+#+END_EXPORT
+
+
+#+INCLUDE: "./introduction/introduction.org" :lines "2-"
+
+#+INCLUDE: "./theory/current_dft_chapter.org" :lines "12-"
+
+#+INCLUDE: "./titanium/ti_fitting.org" :lines "3-"
+
+#+INCLUDE: "./titanium/ti_dislocation_modelling.org" :lines "3-"
+
+#+INCLUDE: "./iron/atomistic_dislocation_carbon_migration_line-tension.org" :lines "11-"
+
+
+#+BEGIN_EXPORT latex
+\clearpage
+\chapter{Investigating dislocation-assisted carbon migration in bcc Fe}
+\label{ch:FeC_carbon_migration}
+#+END_EXPORT
+
+
+#+BEGIN_EXPORT latex
+% ********************************** Back Matter *******************************
+% Backmatter should be commented out, if you are using appendices after References
+%\backmatter
+
+% ********************************** Bibliography ******************************
+\begin{spacing}{0.9}
+
+% To use the conventional natbib style referencing
+% Bibliography style previews: http://nodonn.tipido.net/bibstyle.php
+% Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
+
+
+\bibliographystyle{ieeetr}
+%\bibliographystyle{plainnat} % use this to have URLs listed in References
+\cleardoublepage
+\bibliography{../bibliography/zoteroLibrary.bib} % Path to your References.bib file
+
+
+% If you would like to use BibLaTeX for your references, pass `custombib' as
+% an option in the document class. The location of 'reference.bib' should be
+% specified in the preamble.tex file in the custombib section.
+% Comment out the lines related to natbib above and uncomment the following line.
+
+% \printbibliography[heading=bibintoc, title={References}]
+
+
+\end{spacing}
+
+% ********************************** Appendices ********************************
+
+\begin{appendices} % Using appendices environment for more functunality
+
+#+END_EXPORT
+
+
+
+#+INCLUDE: "./iron/appendix.org"
+
+# %\include{appendix1}
+# %\include{appendix2}
+
+#+BEGIN_EXPORT latex
+\end{appendices}
+
+% *************************************** Index ********************************
+\printthesisindex % If index is present
+
+#+END_EXPORT
+
+* Build :noexport:
+
+Bind derivatives change variable values *locally* on export.
+
+These two are because I'm defining the title and toc manually using latex, so I don't want org-latex to take care of that.
+#+BIND: org-latex-title-command ""
+#+BIND: org-latex-toc-command ""
+This is so that src code blocks get src highlighting from the minted package.
+#+BIND: org-latex-listings minted
+This beautifies table borders. It will only work if the booktabs package is loaded, which I do in the setup file.
+#+BIND: org-latex-tables-booktabs t
+And this configuration increases the default width of images, so that they are larger and more readable on print.
+#+BIND: org-latex-image-default-width ".97\\linewidth"

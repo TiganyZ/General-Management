@@ -1,0 +1,45 @@
+@unpublished{AxPyMOL,
+	Author = {{Schr\"odinger, LLC}},
+	Date-Added = {2010-08-19 17:58:20 -0400},
+	Date-Modified = {2010-08-19 18:04:08 -0400},
+	Month = {May},
+	Title = {The {AxPyMOL} Molecular Graphics Plugin for {Microsoft PowerPoint}, Version~1.0},
+	Year = {2010}}
+
+@unpublished{JyMOL,
+	Author = {{Schr\"odinger, LLC}},
+	Date-Added = {2010-08-19 17:55:56 -0400},
+	Date-Modified = {2010-08-19 18:08:56 -0400},
+	Month = {August},
+	Title = {The {JyMOL} Molecular Graphics Development Component, Version~1.0},
+	Year = {2010}}
+
+@unpublished{PyMOL,
+	Annote = {PyMOL
+
+The PyMOL Molecular Graphics System, Version 1.3, Schr{\"o}dinger, LLC.},
+	Author = {{Schr\"odinger, LLC}},
+	Date-Added = {2010-08-19 17:29:55 -0400},
+	Date-Modified = {2010-08-19 18:08:54 -0400},
+	Month = {August},
+	Title = {The {PyMOL} Molecular Graphics System, Version~1.3r1},
+	Year = {2010}}
+@incollection{Izrailev1998,
+year={1999},
+isbn={978-3-540-63242-9},
+booktitle={Computational Molecular Dynamics: Challenges, Methods, Ideas},
+editor={Deuflhard, Peter and Hermans, Jan and Leimkuhler, Benedict and Mark, AlanE. and Reich, Sebastian and Skeel, RobertD.},
+doi={10.1007/978-3-642-58360-5_2},
+title={Steered Molecular Dynamics},
+publisher={Springer Berlin Heidelberg},
+author={Izrailev, Sergei and Stepaniants, Sergey and Isralewitz, Barry and Kosztin, Dorina and Lu, Hui and Molnar, Ferenc and Wriggers, Willy and Schulten, Klaus},
+pages={39-65},
+language={English}
+}
+@unpublished{Gram1884,
+year = {1884},
+title = {{\"U}ber die isolierte F{\"a}rbung der Schizomyceten in Schnitt- und Trockenpr{\"a}paraten},
+author = {Gram, H C},
+volume = {2},
+pages = {185 - 189}
+}

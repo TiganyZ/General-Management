@@ -1,0 +1,182 @@
+* Regularisation of interaction energy in quadrupolar array
+  :PROPERTIES:
+  :APPENDIX: t
+  :END:
+
+  \label{sec:Ainteractionenergy}
+
+
+  In isotropic elasticity, the elastic energy of a single dislocation dipole in an
+  infinite lattice is given by
+
+
+  \[ E_{\text{el}}^{\infty} = \frac{\mu b^2}{4\pi} \ln \left( \frac{r}{r_{c}} \right)  \]
+
+  The contribution from periodic images to the correction is
+
+  \[ E_{\text{img} } = E_{\text{el}} (\mathbf{a}, \mathbf{c}_i , r_c) - E_{\text{el}}^{\infty}
+  (\mathbf{a}, r_c),\]
+
+  "Ghost" dipoles are introduced to account for the conditional convergence of the sum at $\pm\alpha
+  \mathbf{b}$ and $\pm \beta\mathbf{b}$, where $\alpha = \beta = 0.5$. We define $E_{\text{dg}} (\mathbf{R})$ as the
+  interaction energy of a ghost dislocation and a dipole at $\mathbf{R}$ anisotropic elasticity
+  equations as shown in cite:Cai2003.
+
+
+  Defining,
+   \[ E_{\text{dd}} (\mathbf{R}) = \frac{\mu b^2}{2\pi}
+  \ln \frac{|\mathbf{R}|^2}{|\mathbf{R}+\mathbf{a}|\cdot|\mathbf{R}-\mathbf{a}|},
+  \]
+  we obtain,
+  \[ E_{\text{img}} = \frac{1}{2}\sum_{\mathbf{R}} [ E_{\text{dd}} (\mathbf{R}) - E_{\text{dg}} (\mathbf{R}) ] - \frac{1}{2}
+  E_{\text{dg}} (\mathbf{R} = 0),  \]
+
+  which can be subtracted from the total energy as given from atomistic calculations, for a
+  regularised interaction energy.
+
+
+* Zero-point energy calculation
+  :PROPERTIES:
+  :APPENDIX: t
+  :END:
+
+  \label{sec:zeropointenergy}
+
+  After relaxation of the C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
+  numerical derivative of forces observed on the carbon atom after displacement by $\pm 0.015 \AA$ in
+  each of the $X$, $Y$ and $Z$ directions.  The three atoms surrounding the core on the first and
+  third layers were again fixed in $Z$ coordinate. The zero-point energy is given by
+
+  \[ E_z = \frac{1}{2} \sum_{i=1}^3 \frac{h}{2\pi} \sqrt{ k_i /
+  m_{\text{C}} },  \]
+  where $k_i$ are the eigenvalues of the Hessian and $m_\text{C}$ is
+  the mass of carbon.
+
+* Smooth mapping of sites in equilibrium line-tension model
+  :PROPERTIES:
+  :APPENDIX: t
+  :END:
+   \label{sec:smoothsitemapping}
+
+   To approximate the position of trap sites upon dislocation movement, the
+   $x$-coordinate of the dislocation core position, $P_x$, was used to obtain the trap
+   site positions around the core.
+
+   Focussing on one half of the the path of a dislocation between peierls
+   valleys, the segment of a dislocation going between an easy core to hard
+   core, one can define forward and backwards paths, a dislocation travelling
+   from the easy core towards the hard core, and vice versa. The trap sites at
+   the end points are well-defined: when $P_x = P_x^{\text{easy}} = 0$, the trap
+   sites are exactly those found upon relaxation of the easy core, similarly,
+   when $P_x = P_x^{\text{hard}} = a\sqrt{2} / (2\sqrt{3}) = d$, the trap sites are
+   those found upon relaxation of the hard core. These positions can be seen in
+   section ref:sec:fec_binding.
+
+   One can define trap site mappings for these forward and backwards paths: for an easy
+   core site to a hard core site, $E_j^{\alpha} \rightarrow H_k^{\beta}$, and
+   from hard core to easy core $H_l^{\gamma} \rightarrow E_m^{\delta}$, where
+   $j,k,l,m$ denote a particular trap site position, with labels defined in section ref:sec:fec_binding and
+   $\alpha,\beta,\gamma,\delta$ are labels which denote which of the six possible sectors the
+   site belongs to. These six sectors arise from the combination of the
+   three-fold rotational and reflection symmetry found in the crystal---thus one
+   need only have the trap sites for one sector and apply the appropriate rotation and/or
+   reflection to obtain the necessary trap site position at the given endpoint. These mappings are not
+   symmetric for the forward and backwards paths, /e.g./ are many easy core trap
+   sites which map to the H1 site, due to its strong binding energy, as found in
+   atomistic simulations of reconstruction, but, quite clearly, these mappings
+   # cannot be imposed for a dislocation going from hard to easy core. There were
+   # sites in this implementation which did not have a clear mapping, and were
+   # mapped to themselves.
+
+
+   For a given mapping, one can linearly interpolate between the two positions to give a trap site position for an
+   intermediate dislocation core.
+
+   \[ P^{\text{trap forward}}_{j,k}(P_x) =  \left( 1-\frac{P_x}{d} \right) E_j^{\alpha} +   \frac{P_x}{d}H_k^{\beta},\]
+   \[ P^{\text{trap backward}}_{l,m}(P_x) =  \left( 1-\frac{P_x}{d} \right) E_m ^{\delta} + \frac{P_x}{d}H_l^{\gamma}.\]
+
+   To define trap site mappings for core positions at $P_x > d$, one need only
+   swap the forward for the backwards path, due to reflection symmetry about
+   $P_x = d$, thus allowing for well defined trap sites for all core positions
+   between the peierls valleys. This can be seen in the kink-pair formation of
+   the canonical-$d$ tight-binding model in figure ref:fig:kpoccupancies.
+
+    #+ATTR_LATEX: :width 1.\textwidth
+    #+CAPTION: Positions of trap sites around dislocation segments upon kink-pair formation at a nominal carbon concentration of 30 appm. Path only shown to the hard core to demonstrate smooth mapping of trap sites going from easy to hard core. Equilibrium occupancies shown by coloured circles. [[label:fig:kpoccupancies]]
+    [[file:Images/mclean_position_movement_occupancy_forward_alternate.png]]
+
+
+   #   With these mappings, we also change the interaction energy.
+
+   # # >> Easy << >> Hard <<
+   # #   4  1       3  6
+   # # 2      5   5      2
+   # #   6  3       1  4
+
+
+   # SiteLabel("E1",  1) => SiteLabel("H1", 6),
+   # SiteLabel("E2",  1) => SiteLabel("H1", 6),
+   # SiteLabel("E3",  1) => SiteLabel("H1", 6),
+   # SiteLabel("E4",  1) => SiteLabel("H1", 6),
+   # SiteLabel("E5",  1) => SiteLabel("H2", 3),
+   # SiteLabel("E6",  1) => SiteLabel("H2", 6),
+   # SiteLabel("E7",  1) => SiteLabel("H2", 6),
+   # SiteLabel("E8",  1) => SiteLabel("H2", 3),
+   # SiteLabel("E9",  1) => SiteLabel("H2", 6),
+   # SiteLabel("E10", 1) => SiteLabel("H6", 6),
+
+   # SiteLabel("E1",  2) => SiteLabel("H2", 5), # E -> H sector 2
+   # SiteLabel("E2",  2) => SiteLabel("H2", 5),
+   # SiteLabel("E3",  2) => SiteLabel("H2", 5),
+   # SiteLabel("E4",  2) => SiteLabel("H2", 5),
+   # SiteLabel("E5",  2) => SiteLabel("H7", 1),
+   # SiteLabel("E6",  2) => SiteLabel("H3", 5),
+   # SiteLabel("E7",  2) => SiteLabel("E7", 2),
+   # SiteLabel("E8",  2) => SiteLabel("E8", 2),
+   # SiteLabel("E9",  2) => SiteLabel("H4", 5),
+   # SiteLabel("E10", 2) => SiteLabel("E10", 2), #SiteLabel("E10", 2) => SiteLabel("H5", 5),
+
+   # SiteLabel("E1",  3) => SiteLabel("H2", 1), # E -> H sector 3
+   # SiteLabel("E2",  3) => SiteLabel("H2", 1),
+   # SiteLabel("E3",  3) => SiteLabel("H2", 4),
+   # SiteLabel("E4",  3) => SiteLabel("H6", 1),
+   # SiteLabel("E5",  3) => SiteLabel("H2", 4),
+   # SiteLabel("E6",  3) => SiteLabel("H5", 4),
+   # SiteLabel("E7",  3) => SiteLabel("H4", 4),
+   # SiteLabel("E8",  3) => SiteLabel("H2", 4),
+   # SiteLabel("E9",  3) => SiteLabel("H5", 1),
+   # SiteLabel("E10", 3) => SiteLabel("E10", 3),
+
+   # SiteLabel("E2",  4) => SiteLabel("H2", 5),
+   # SiteLabel("E3",  4) => SiteLabel("H2", 3),
+   # SiteLabel("E4",  4) => SiteLabel("H6", 3),
+   # SiteLabel("E6",  4) => SiteLabel("H5", 3),
+   # SiteLabel("E7",  4) => SiteLabel("H4", 3),
+   # SiteLabel("E8",  4) => SiteLabel("H2", 3),
+   # SiteLabel("E9",  4) => SiteLabel("H5", 5),
+
+   # SiteLabel("E2",  5) => SiteLabel("H1", 6),
+   # SiteLabel("E3",  5) => SiteLabel("H1", 6),
+   # SiteLabel("E4",  5) => SiteLabel("H1", 6),
+   # SiteLabel("E6",  5) => SiteLabel("H2", 2),
+   # SiteLabel("E7",  5) => SiteLabel("H2", 2),
+   # SiteLabel("E8",  5) => SiteLabel("H2", 4),
+   # SiteLabel("E9",  5) => SiteLabel("H2", 2),
+
+   # SiteLabel("E2",  6) => SiteLabel("H2", 1),
+   # SiteLabel("E3",  6) => SiteLabel("H2", 1),
+   # SiteLabel("E4",  6) => SiteLabel("H2", 1),
+   # SiteLabel("E6",  6) => SiteLabel("H3", 1),
+   # SiteLabel("E7",  6) => SiteLabel("E7",  6),
+   # SiteLabel("E8",  6) => SiteLabel("E8",  6),
+   # SiteLabel("E9",  6) => SiteLabel("H4", 1)
+
+# * Bibliography
+# <<bibliography link>>
+
+# bibliographystyle:unsrt
+
+# bibliography:./bibliography/org-refs.bib
+
+# \bibliographystyle{plain}
+# \bibliography{./bibliography/org-refs.bib}

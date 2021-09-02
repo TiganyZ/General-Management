@@ -39,11 +39,14 @@ on time.
 
 Assuming that we have non-relativistic electrons, the Schr\:odinger equation one must solve is then 
 
-
-\[\Big( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i \sum_j    \frac{1}{|
+#+BEGIN_EXPORT latex
+  \begin{equation}
+    \Big( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i \sum_j    \frac{1}{|
 \mathbf{r}_i - \mathbf{r}_j |}+ \sum_i \sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |} \Big)
-\mathbf{ \Psi }(\{\mathbf{r}\}; t) = E \mathbf{ \Psi }(\{\mathbf{r}\}; t),\]
-
+  \mathbf{ \Psi }(\{\mathbf{r}\}; t) = E \mathbf{ \Psi }(\{\mathbf{r}\}; t),
+    \label{eq:non_rel_schrodinger}
+  \end{equation}
+#+END_EXPORT
 
 where $\mathbf{ \Psi }(\{\mathbf{r}\}; t)$ is an eigenstate and Hartree units have been used( $e = m = \hslash = 4\pi\epsilon_0 = 1$ ).
 

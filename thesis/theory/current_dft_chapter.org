@@ -1,0 +1,360 @@
+#+Author: Tigany Zarrouk 
+#+Title: DFT Theory and Application to Defect Cluster Concentration
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+#+LATEX_HEADER: \usepackage{physics}
+#+LATEX_HEADER: \usepackage{cases}
+#+LATEX_HEADER: \graphicspath{ {./} }
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{arrows,plotmarks,calc,positioning,fit}
+#+LATEX_HEADER: \usetikzlibrary{shapes.geometric, decorations.pathmorphing, patterns, backgrounds}
+#+LATEX_HEADER: \newcommand{\tikzremember}[1]{{  \tikz[remember picture,overlay]{\node (#1) at (0,11pt) { };}}}
+#+LATEX_HEADER: \tikzset{snake it/.style={decorate, decoration=snake}}
+#+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
+
+PLAN 
+
+- Start with the theory of DFT with the HK theorem and KS equations to solve
+  for the density.
+- Talk a bit about the approximations that are made. 
+- Alloy theory and the structure of Ti3Al
+- Look at literature to do with all of this. Go through why solutes are
+  incredibly important and why it is necessary do to this research.
+- How can solutes lead to failure and why is oxygen in particular bad for the alloy.
+- Is it wavy or planar slip
+- Go into the calculations and what I have done for them
+- Cite the research about the Fe and C vacancy concentration and what the
+  implications are for alloy research
+- What can I add to the research. 
+
+* Introduction 
+
+To accurately model the behaviour of an assembly of atoms we must use quantum mechanics. The
+wavelength of electrons, as described by de Broglie $\lambda = \hslash/p$, is of comparable length
+to the atomic spacing in solids. The first postulate of quantum mechanics states that a quantum
+mechanical system can be described by a wavefunction, a function of the positions of the quantum
+mechanical entities, and time, which satisfies the Schr\:odinger wave equation. As such we know that
+the state of the system can be fully described by a /many body wavefunction/: a wavefunction which
+is a function of the positions of each of the electrons and nuclei in the system, which also depends
+on time.
+
+Assuming that we have non-relativistic electrons, the Schr\:odinger equation one must solve is then 
+
+
+\[\Big( \sum_{i} - \frac{1}{2} \nabla_{i}^{2} + \frac{1}{2} \sum_i \sum_j    \frac{1}{|
+\mathbf{r}_i - \mathbf{r}_j |}+ \sum_i \sum_I \frac{-Z_I}{| \mathbf{r}_i - \mathbf{R}_I |} \Big)
+\mathbf{ \Psi }(\{\mathbf{r}\}; t) = E \mathbf{ \Psi }(\{\mathbf{r}\}; t),\]
+
+
+where $\mathbf{ \Psi }(\{\mathbf{r}\}; t)$ is an eigenstate and Hartree units have been used( $e = m = \hslash = 4\pi\epsilon_0 = 1$ ).
+
+A time-independent observable is the expectation value of a given operator, 
+
+\[ \expval{\hat{O}} = \frac{\expval{\hat{O}}{\mathbf{ \Psi }} }{ \bra{\mathbf{ \Psi}}\ket{\mathbf{ \Psi }} }, \]
+this is an integral over all of the coordinates. 
+
+The electronic density operator is defined as 
+
+\[ \hat{\rho}(\mathbf{r}) = \sum_{i=1}^{N} \delta ( \mathbf{r} - \mathbf{r}_{i} ) \]
+
+\[ \rho(\mathbf{r}) = \frac{\expval{\hat{n}(\mathbf{r})}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} }. \]
+
+The total energy is the expectation value of the Hamiltonian:
+
+\begin{align}
+ E &= \frac{\expval{\hat{H}}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }}}\\
+   &= \expval{\hat{T}} + \expval{\hat{V}_{\text{int}}} + \int \text{d}^3 V_{\text{ext}} \rho(\mathbf{r}) + E_{II}, 
+\label{eq:totalenergy}
+\end{align}
+
+where 
+
+\[ V_{\text{ext}}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$\] 
+
+is the external potential due to the coulomb interaction between the electrons and the nuclei---the
+expectation value has been explicitly written as an integral over the local electron density,
+$E_{II}$ is the classical electrostatic nucleus-nucleus interaction energy, $V_{\text{int}}$ is the
+electron-electron interaction energy and $\expval{\hat{T}}$ is the expectation value of the
+electronic kinetic energy.
+ 
+Stationary points in the total energy correspond to eigenstates of the many-body Hamiltonian. One can
+vary the ratio, or the numerator, in eqref:eq:totalenergy. The latter must be subjected
+to the constraint of orthonormality ($\bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} = 1$), which is
+possible with the use of Lagrange multipliers. One finds that upon variation of the bra
+$\bra{\mathbf{\Psi}}$ that the ket must satisfy the time-independent Schr\:odinger equation:
+
+\[ \hat{H}\ket{\mathbf{\Psi}_m} = E \ket{\mathbf{\Psi}}, \]
+where $\ket{\mathbf{\Psi}_m}$ is an eigenstate.
+
+Quite often, the state we would most like to find is the lowest energy state (/ground state/) of the
+system, as this is the fundamental state from which other mechanisms return to or start from. This
+necessarily occurs at zero kelvin by the third law of thermodynamics. To find this state for the
+full system, one must minimise the energy with respect to the parameters of the many-body
+wavefunction that satisfies the Schr\:odinger equation and appropriate symmetry constraints
+(e.g. for electrons, $\mathbf{\Psi}$ must be antisymmetric). This quickly leads to an explosion of
+complexity: just describing wavefunction of the 22 electrons present in a single titanium, in a
+coarse 10x10x10 grid, one would need to tabulate $(10^3)^22=10^66$ complex numbers to describe the
+electronic wavefunction at each point in the grid. Clearly, minimising a function of this complexity
+is costly. To make the problem tractable, we must make a few approximations.
+
+** Born-Oppenheimer Approximation
+
+The first impose an adiabatic approximation on the time-independent wavefunction, which allows us to separate
+nuclear and electronic motion: this is the Born-Oppenheimer approximation. One must first make the
+assumption that the wavefunction which describes the system is a product state between the nuclear
+and electronic portions of the system.
+
+\[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
+
+where $\psi_{\mathbf{R}}(\mathbf{r})$ is the electronic wavefunction and $\Phi(\mathbf{R})$ is
+the nuclear portion of the wavefunction.
+
+Due to the large disparity in mass between an electron and the nucleus of an atom ($M_\text{Nuc} \sim
+2000 m_e$) we can neglect the contribution to the Hamiltonian that comes from the nuclear
+kinetic energy operator acting on the electronic wavefunction.
+
+\[T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
+1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})\]
+
+
+\[T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i =
+1}^{M} - \frac{1}{2m_{i}} \nabla^{2}_{\mathbf{r}_{i}}
+\psi_{\mathbf{R}}(\mathbf{r}) \]
+
+This results in the motion of the electrons being instantaneous with regard to the
+motion of the ions in the system: electrons relax into their ground state instantly with
+respect to any configuration of the ions. This results in the total energy being a function of
+only the nuclear coordinates cite:Finnis1997. 
+
+To obtain the total energy, we can solve for the electronic part of the wavefunction and then
+solve for the nuclear wavefunction,
+
+\[ \Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),\]
+
+where $E_{\mathbf{R}}$ contains all of the information of the configuration of the electrons in
+the system. 
+
+
+** Self-Consistent Mean-Field Theory
+   
+   A major development on the path to tractable calculations is that of Hartree and Hartree-Fock
+   theory. A ansatz is made for the many-electron wavefunction, whereby we assume it is a product
+   state between single particle orbitals:
+
+   \[ \Psi_{}(\{\mathbf{r}\}) = \phi(\mathbf{r}_1)\phi(\mathbf{r}_2)\ldots \phi(\mathbf{r}_n). \]
+   
+   Applying the variational principle to find the ground state,
+
+   \[ \frac{ \expval{ \hat{H} }{ \Psi }}{ \bra{\Psi}\ket{\Psi} } = 0 \]
+
+   we obtain the Hartree equations. 
+
+   
+
+   Näively,
+
+** Density Functional Theory
+
+*** Theory 
+
+Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
+find the ground-state solution for a given configuration of ions. A computationally tractable
+way of doing this for a many-body solid describing all of the electrons is via the /Density
+Functional Theory/. 
+
+Hohenburg and Kohn's seminal paper in 1964 proved that there exists an energy functional of the
+electron density which can provide the exact ground-state energy and density upon
+minimisation. This reduces the number of variables from $3N$ to that of only 3 for any number
+of electrons $N$ in the system of interest.
+
+In 1965, Kohn and Sham then developed a formalism to practically calculate this ground-state density via
+a set of self-consistent equations: the Kohn-Sham equations. 
+
+The main tenet of Density Functional Theory is: given a system that consists of $N$ electrons,
+there exists an energy functional of the local electron density $E[\rho(\mathbf{r})]$, which
+corresponds to an antisymmetric wavefunction $\ket{\Psi}$; upon minimisiation by
+variation of the electron density, subject to the constraint that the number of electrons is
+conserved, \[ \int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting density is unique
+and the value of the functional is the ground-state energy. To obtain this result we can go
+through the following theory.
+
+Assuming $\rho(\mathbf{r})$ is the exact ground state density, and $\ket{\Psi}$
+is the ground-state, by the variational principle we can write, 
+
+\[ \bra{\Psi} \mathcal{\hat{T}} + \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i -
+\mathbf{r}_j |}  \ket{\Psi} + \int \rho(\mathbf{r}) V_{\text{ext}}(\mathbf{r})
+\text{d}\mathbf{r} \geq E_0. 
+\label{eq:dftvarprinciple} \]
+
+The state $\bra{\Psi}$ may not be unique. To make it so, one can subject equation ref:eq:dftvarprinciple
+to the constraints that the number of electrons is conserved and that $\rho$ is constant. 
+
+This defines the functional: 
+
+\[ F[\rho] = \underset{\Psi \rightarrow \rho}{\text{min}} \bra{\Psi} \mathcal{\hat{T}} +
+\frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}  \ket{\Psi} = T[\rho] +
+E_{ee}[\rho],   \]
+
+where the notation $\Psi \rightarrow \rho$ is to show that the minimisation is with respect to
+all $\Psi$ that can make the density $\rho$. 
+
+One can see the functional with the minimum value as the ground-state energy is then 
+
+\[ E[\rho] = F[\rho] + E_{\text{ext}}[\rho], \]
+
+where \[ E_{\text{ext}}[\rho] = E_{\text{ext}}[\rho(\mathbf{r})] =  \int \rho(\mathbf{r})
+V_{\text{\text{ext}}}(\mathbf{r}), \]
+of which its functional derivative is $V_{\text{ext}}$.
+
+By the Euler-Lagrange equations, one finds that the ground state must satisfy 
+
+\[ \frac{\delta F[\rho]}{\delta \rho(\mathbf{r}) } + V_{\text{ext}}= \mu. \]
+
+A functional is an entity that maps a function to a value, similar as how a function maps a
+variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
+electron density which has the correct ground state energy upon minimising the energy with respect to
+the electron density cite:hohenburg64_inhomog_electron_gas. Thus all the information of the
+system is contained in the electron density, which reduces the minimisation
+problem fron $4M$ variables to one of just 3 for any number of electrons in the system. 
+
+To actually find this density, one can use the Kohn-Sham equations to find a self-consistent
+solution for the electron density cite:kohn65_self_cons_eq. 
+
+
+
+
+To find the eigenvalues, one can replace the problem of solving a fully-interacting electronic
+system, with a given electronic density, by an auxiliary non-interacting electronic system which has
+the same electronic density. The resulting eigenvalues can be used to find the expectation value of
+the kinetic energy functional, $T_s[\rho(\mathbf{r})]$, which corresponds to the kinetic energy of the
+non-interacting (Kohn-Sham) system.
+
+The Hohenburg-Kohn-Sham functional can be defined as
+
+\[
+E_{\text{HKS}}[\rho] = T_{\text{s}}[\rho] + E_{\text{H}}[\rho] + E_{\text{xc}}[\rho] + E_{\text{ext}}[\rho] + E_{\text{ZZ}},
+ \label{eq:hks_functional}\]
+
+where $T_{\text{s}}[\rho]$ is the kinetic energy of the fictitious non-interacting auxiliary system
+acting in the same effective potential $V_{\text{eff}}[\rho]$. The assumption made here is that the
+ground state density of the non-interacting, auxiliary system is equal to that of the system with
+full electronic interactions. 
+
+This definition of the functional redefines the exchange-correlation functional: the difference
+between the true kinetic energy and that of the non-interacting system is added to it. Such that the
+true exchange-correlation functional has the form of
+
+\[
+E_{\text{xc}}[\rho] = \Big( \expval{\hat{T}} - T_{\text{s}}[\rho] \Big) + \Big( \expval{\hat{V}_{\text{int}}} - E_{\text{H}}[\rho]\Big)
+\]
+
+where we can interpret the first term as being the increase in kinetic energy from electronic
+correlation in a fully interacting system, compared to a non-interacting one---correlations cause
+electrons to move to more energetically favourable areas of the potential, thus increasing the
+kinetic energy---and the second term is difference in energy between a system
+with full electron-electron interactions ($\hat{V}_{\text{int}} = \frac{1}{|
+\mathbf{r} - \mathbf{r}^{'}|}$) , which includes exchange and
+correlation effects, and the standard Hartree energy, which
+represents the energy from purely an electronic density, with no
+exchange-correlation.
+
+The difference between the true kinetic energy $\Delta T = T - T_{\text{s}}$ is now approximated by
+the exchange-correlation functional $E_{\text{xc}}[\rho]$. This is a reasonable
+approximation. Separating the kinetic energy from the long-range coulomb interactions means that the
+exchange-correlation potential can be approximated by an approximately local functional. Is this due
+the the fact that correlations basically lead to a screening of the coulomb potential?
+
+
+*** Solving the Kohn-Sham Equations
+
+The process by which this happens are as follows: one solves the Poisson
+equation for the Hartree potential, given an initial input density which on
+the first iteration is a sum of atom-centred charges, one finds the total
+effective potential for the system which is the sum of the Hartree potential,
+the potential from the nuclei ($V_{\text{ext}}$) and the exchange-correlation
+potential $V_{\text{xc}}$. The Schr\:odinger equation is subsequently solved,
+and a new electron density is found. This density can be put back into the
+Poisson's equation to find the hartree potential and start the cycle
+again. These equations must be solved self-consistently as the electron
+density that one puts into Poisson's equation is the quantity that one solves
+for. Once the input and output densities are within some tolerance of each
+other, then one can say that the $\rho^{\text{out}}(\mathbf{r}) =
+\rho^{\text{exact}}(\mathbf{r})$, and the resulting Kohn-Sham eigenvalues are
+the ground state energies.
+
+The Kohn-Sham eigenvalues are not strictly correct. 
+
+
+*** Kohn-Sham Equations and Self-Consistency
+ 
+
+*** Practical steps towards accurate calculations
+
+
+    
+*** Thomas-Fermi model 
+
+*** Hohenburg and Kohn Theories
+
+
+
+
+** From Density Functional Theory to Tight-Binding
+
+   For a solution to the Kohn-Sham equations, one must have a self-consistent
+   density: the input density, from which we construct the effective potential
+   must be within some defined tolerance of the output density---constructed
+   from the eigenvectors found upon diagonalisation of the hamiltonian.
+
+   One can apply perturbation theory to more closely understand the relationship
+   between the input and output densities. We can expand the HKS functional,
+   equation [[eqref:eq:hks_functional]], to second order in deviations from the
+   input density to obtain the second-order HKS functional:
+
+   \begin{align*}
+E_{\text{HKS}}^{(2)}[\rho] = &\sum_{n\text{ occ}} f_n \expval{ \hat{H}^{\text{in}}  }{\psi_n} \\
+    &- \int \text{d}\mathbf{r}
+            \rho^{\text{in}}(\mathbf{r}) V_{\text{xc}}^{\text{in}}(\mathbf{r})
+       + E_{\text{xc}}[\rho^{\text{in}}]
+       - E_{\text{H}}[\rho^{\text{in}}]
+       + E_{\text{ZZ}} \\
+    &+ \frac{1}{2} \int \text{d} \mathbf{r} \int \text{d} \mathbf{r}^{'}
+   \left\{
+      e^2 \frac{\delta \rho(\mathbf{r}) \delta \rho(\mathbf{r}^{'})}{|\mathbf{r} - \mathbf{r}^{'}|} \\
+&+ \delta \rho(\mathbf{r}) \frac{\delta^2 E_{\text{xc}}}{\delta \rho(\mathbf{r}) \delta \rho(\mathbf{r}^{'})} \delta \rho(\mathbf{r}^{'}) \Bigger\} \label{eq:second_order_hks_functional}
+   \end{align*}
+
+   where, $\rho = \rho^{\text{in}} + \delta\rho$.
+   The first line represents the energy from the input hamiltonian, the
+   second line subracts the exchange-correlation energy from the first term, to
+   encapsulate all exchange-correlation effects in the second term on the second line, the third term
+   removes the Hartree contribution from the first line, which is a
+   double-counting correction term, with the final term on the second line being
+   the classical nucleus-nucleus interaction.
+
+   Omitting the final two lines in equation
+   [[eqref:eq:second_order_hks_functional]], we obtain the first-order functional, the Harris-Foulkes
+   functional, where we remove the need for self-consistency in order to
+   find the ground state energy. This is the basis for tight-binding.
+
+   Haydock, and Sutton /et al./
+
+
+
+
+* Defects in Materials
+
+** Vacancies and Solutes
+
+# ** Ti3Al Solutes and their effects.
+
+# ** Current research: Vacancy-Solute Complexes.
+
+
+* Bibliography 
+<<bibliography link>>
+
+bibliographystyle:unsrt
+bibliography:../bibliography/org-refs.bib
+
+# \bibliographystyle{plain}
+# \bibliography{org-refs.bib}

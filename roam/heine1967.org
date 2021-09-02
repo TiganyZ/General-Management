@@ -1,0 +1,16 @@
+#+TITLE: Heine1967: \$s\textbackslash ensuremath\-\d\$ Interaction in Transition Metals
+#+ROAM_KEY: cite:Heine1967
+- tags ::
+- keywords ::
+
+* \$s\textbackslash ensuremath\-\d\$ Interaction in Transition Metals
+  :PROPERTIES:
+  :Custom_ID: Heine1967
+  :URL: https://link.aps.org/doi/10.1103/PhysRev.153.673
+  :AUTHOR: Heine, V.
+  :NOTER_DOCUMENT: ~/Zotero/storage/LB7QX3V8/PhysRev.153.673.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

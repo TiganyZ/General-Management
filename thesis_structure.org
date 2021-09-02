@@ -161,11 +161,13 @@
       and see if the dissociation distance changes, but this is quite a large
       ask in the timeframe
 
-*** TODO Titanium work [1/8]
+*** TODO Titanium work [1/9]
     :PROPERTIES:
     :COOKIE_DATA: todo
     :END:
     :LOGBOOK:
+    CLOCK: [2021-08-26 Thu 14:24]--[2021-08-26 Thu 14:31] =>  0:07
+    CLOCK: [2021-08-25 Wed 09:18]--[2021-08-25 Wed 09:43] =>  0:25
     CLOCK: [2021-08-24 Tue 15:54]--[2021-08-24 Tue 15:55] =>  0:01
     CLOCK: [2021-08-23 Mon 12:28]--[2021-08-23 Mon 12:53] =>  0:25
     CLOCK: [2021-07-22 Thu 13:27]--[2021-07-22 Thu 13:52] =>  0:25
@@ -176,7 +178,15 @@
     <2021-08-06 Fri>--<2021-09-10 Fri>
 
 **** WAITING Embedding Calculations                                 :WAITING:
-     SCHEDULED: <2021-08-24 Tue 11:15>
+     SCHEDULED: <2021-09-01 Wed 13:00>
+     - State "WAITING"    from "WAITING"    [2021-08-26 Thu 09:13] \\
+       The juc cluster seems fine now. Still running after 16 hours. Check in
+       6 hours
+     - State "WAITING"    from "WAITING"    [2021-08-25 Wed 13:21] \\
+       Had core dump from last run. Retrying without changing anything as
+       using
+       gdb <path-to-binary> <core-file>
+       with any of the core files does not work
      - State "WAITING"    from "WAITING"    [2021-08-23 Mon 11:15] \\
        Submitted third calculation
      - State "WAITING"    from "WAITING"    [2021-08-11 Wed 12:04] \\
@@ -184,6 +194,12 @@
      - State "WAITING"    from "TODO"       [2021-06-04 Fri 11:18] \\
        Waiting for the budget of Young to get back to normal
      :LOGBOOK:
+     CLOCK: [2021-08-31 Tue 10:34]--[2021-08-31 Tue 10:34] =>  0:00
+     CLOCK: [2021-08-31 Tue 10:30]--[2021-08-31 Tue 10:33] =>  0:03
+     CLOCK: [2021-08-26 Thu 09:16]--[2021-08-26 Thu 09:16] =>  0:00
+     CLOCK: [2021-08-26 Thu 09:16]--[2021-08-26 Thu 09:16] =>  0:00
+     CLOCK: [2021-08-26 Thu 09:12]--[2021-08-26 Thu 09:15] =>  0:03
+     CLOCK: [2021-08-25 Wed 13:07]--[2021-08-25 Wed 13:22] =>  0:15
      CLOCK: [2021-08-24 Tue 15:19]--[2021-08-24 Tue 15:21] =>  0:02
      CLOCK: [2021-08-23 Mon 11:13]--[2021-08-23 Mon 11:22] =>  0:09
      CLOCK: [2021-06-02 Wed 11:05]--[2021-06-02 Wed 11:31] =>  0:26
@@ -301,11 +317,28 @@ export PATH="/home/tigany/bucket/lm/b/gcc-opt-mpi:$PATH"
       - [ ] Run dislocation calculations for the sd model to see if there are differences in the core structure
 
 **** WAITING BCC oxygen solution energies DFT comparison            :WAITING:
-     SCHEDULED: <2021-08-30 12:00 Mon>
+     SCHEDULED: <2021-09-06 Mon 12:00>
+     :LOGBOOK:
+     CLOCK: [2021-08-31 Tue 10:25]--[2021-08-31 Tue 10:30] =>  0:05
+     :END:
      - State "WAITING"    from "TODO"       [2021-08-23 Mon 12:39] \\
        One must wait for the TiO2 fitting to finish
      - These calculations are on gherkin
      - We can use the new binaries which dimitar has made.
+
+**** WAITING Pure Ti canonical ratio model
+     - See how the canonical ratio changes things in the model
+     - Justification for exponentials is essentially to allow the bond
+       integrals more freedom for variation, which has limited
+       transferability in other models.
+     - Canonical ratio is fitting in other thing. We actually see that
+       the bandwidths from the functions which were fitted to the
+       Urban results are smaller
+     - The range for the bond integrals seems reasonable, so perhaps
+       the actual orthogonalisation procedure is not as good as they
+       say when applied to the tbe code.
+     - I suppose it really depends on the ranges of the bond
+       integrals.
 
 
 **** DONE Check the BCC phonon sd Ti bandstructure
@@ -551,23 +584,6 @@ export PATH="/home/tigany/bucket/lm/b/gcc-opt-mpi:$PATH"
    :END:
    <2021-08-13 Fri>--<2021-09-10 Fri>
 
-*** WAITING Defect cluster calculations are ongoing                 :WAITING:
-    SCHEDULED: <2021-08-31 Tue 12:00>
-    :LOGBOOK:
-    CLOCK: [2021-08-24 Tue 15:33]--[2021-08-24 Tue 15:44] =>  0:11
-    :END:
-    - State "WAITING"    from "TODO"       [2021-08-13 Fri 16:29] \\
-      Defect cluster relaxations for Fe-C waiting on onyx
-
-    - <2021-08-23 Mon>
-      - Currently relaxing
-        RESUME_0_site_final_output_single_C_3__6_6_6__fe_bcc on onyx.
-
-    - <2021-08-24 Tue>
-      - Still relaxing C_3 666 site.
-      - Check if relaxation is sufficient and what the positions are
-        like.
-*** TODO Find out why diffusion calculations are not converging.
 *** WAITING Check phonon approximation for the free energy is actually viable :WAITING:
     - State "WAITING"    from "TODO"       [2021-08-24 Tue 15:47] \\
       Running full calculation for the final image in the cluster
@@ -587,9 +603,29 @@ export PATH="/home/tigany/bucket/lm/b/gcc-opt-mpi:$PATH"
       energies would be reasonably approximated as then it is the
       difference in the local atomic environment which would give
       the energies.
+*** WAITING Defect cluster calculations are ongoing                 :WAITING:
+    SCHEDULED: <2021-09-06 Mon 12:00>
+    :LOGBOOK:
+    CLOCK: [2021-08-24 Tue 15:33]--[2021-08-24 Tue 15:44] =>  0:11
+    :END:
+    - State "WAITING"    from "TODO"       [2021-08-13 Fri 16:29] \\
+      Defect cluster relaxations for Fe-C waiting on onyx
+
+    - <2021-08-23 Mon>
+      - Currently relaxing
+        RESUME_0_site_final_output_single_C_3__6_6_6__fe_bcc on onyx.
+
+    - <2021-08-24 Tue>
+      - Still relaxing C_3 666 site.
+      - Check if relaxation is sufficient and what the positions are
+        like.
+*** TODO Find out why diffusion calculations are not converging.
 *** TODO Check which relaxations for the phonons have been done under SC
 *** TODO Forst analysis
-
+    :LOGBOOK:
+    CLOCK: [2021-08-31 Tue 15:43]--[2021-08-31 Tue 15:47] =>  0:04
+    :END:
+    - Write this up in one of the chapters perhaps.
 *** WAITING Prepare 5 image diffusion neb calculations              :WAITING:
     - State "WAITING"    from "TODO"       [2021-06-04 Fri 11:18] \\
       Waiting for the diffusion barriers to converge.

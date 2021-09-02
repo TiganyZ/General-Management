@@ -35,6 +35,15 @@
    [[file:~/Documents/ti/sd_model_2021-07-15/objective_function_output_2021-07-15/omega/omega-band_dos.pdf]]
 
 
+* sd model original
+  The full objective function can be found here
+
+  [[file:~/Documents/ti/sd/2021-03-15_sd_ti_model/output_run_obj_2021-08-25T17-56-30]]
+
+** Objective function
+
+
+
 * Canonical-d model
 ** Objective Function
 

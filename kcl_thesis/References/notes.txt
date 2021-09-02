@@ -1,0 +1,9 @@
+I changes the ieeert file in 
+
+/usr/share/texlive/texmf-dist/bibtex/bst/base/ieeert.bst 
+
+the original is there if you need to revert back. 
+
+also if you want a manual et al, add in
+
+J, Trick. and others. 

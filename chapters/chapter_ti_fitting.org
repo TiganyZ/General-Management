@@ -30,26 +30,29 @@
 
 * Fitting
 
-  The d-band model of titanium was chosen to be of a simple form
-  initially, from which one could build up complexity as and when.
-
   The overlap integrals were chosen to have a simple exponential
   distance dependence, as initially formulated by Ducastelle,
   cite:Ducastelle1970c and Allan cite:Allan1976. This form was
   originally motivated by an approximation to the density of states,
   of which the form was taken to be a Gaussian fitted to the
-  second-moment of the distribution cite:Spanjaard1984. Extensions of
-  pseudopotential theory to transition metals, by incorporating d-band
-  resonances, suggest a fifth-degree power law distance dependence of
-  the d-orbitals for transition metal matrix elements
-  cite:Heine1980,Pettifor1995,Harrison1989. However, it has not been
-  shown that a power-law dependence exhibits better transerability
-  over a simple exponential dependence cite:Skinner1991,Paxton2010,
-  in-fact, many power-law models have not fared well in predicting
-  data outside of their fitting range
-  cite:Paxton1987,Paxton1989. Transferability has been consistently
+  second-moment of the distribution cite:Spanjaard1984. Analysis of
+  the hybridisation of $d$ states with nearly-free electron states in
+  transition metals gives rise to $d$-band resonances, which suggest a
+  fifth-degree power law distance dependence of d-orbitals for the
+  matrix elements
+  cite:Heine1967,Heine1980,Andersen1985,Harrison1989,Pettifor1995. However, it has
+  not been shown that a power-law dependence exhibits better
+  transerability over a simple exponential dependence
+  cite:Skinner1991,Paxton2010. Many power-law models have not
+  fared well in predicting data outside of their fitting range
+  cite:Paxton1987,Paxton1989,Girshick1998a,Trinkle2006,Ferrari2019a. Furthermore,
+  exponentials do not have large first or second derivatives compared
+  to power laws when modified by the cutoff function, which
+  complicates fitting for elastic properties, and would provide
+  erroneous forces
+  cite:Pashov2012. Transferability has been consistently
   shown for the iron tight-binding model created by Paxton and
-  Elsässer cite:Paxton2010, which used an exponential
+  Elsässer cite:Paxton2010, which a more flexible exponential
   dependence. Their model predicts data well outside of their fitting
   range: non-degenerate dislocation core structures found in the bcc
   phase cite:Simpsonb,Simpson2020, phonons and vacancy-formation
@@ -57,40 +60,40 @@
   suitable when incorporated with Fe-H/Fe-C interactions, to describe
   of hydrides and carbides cite:Paxton2010,Paxton2013.
 
-  Canonical band theory cite:Andersen1985,Paxton2009a suggests that the bond integrals are in the
-  ratio
-  \[
-  \label{eq:canonical_band_ratio}
-  dd\sigma:  dd\pi:  dd\delta = -6:4:-1.
-  \]
-  These ratios are only applicable to the fifth-order power law
-  dependence of the bond integrals, as there is no characteristic
-  $d$-orbital radius from which to compare the ratios. It has been
-  shown that non-orthogonal models of titanium, which have been
-  subsequently orthogonalised to a $d$-band only model, have canonical
-  ratios which deviate largely from canonical band theory; in the case
-  of Urban /et al./ the ratio turned out to be $dd\sigma: dd\pi:
-  dd\delta = -4.3 : 3.6 : -1$, in which the ordering of the ratio
-  magnitudes changed cite:Urban2011.
+  # Canonical band theory cite:Andersen1985,Paxton2009a suggests that the bond integrals are in the
+  # ratio
+  # \[
+  # \label{eq:canonical_band_ratio}
+  # dd\sigma:  dd\pi:  dd\delta = -6:4:-1.
+  # \]
+  # These ratios are only applicable to the fifth-order power law
+  # dependence of the bond integrals, as there is no characteristic
+  # $d$-orbital radius from which to compare the ratios. It has been
+  # shown that non-orthogonal models of titanium, which have been
+  # subsequently orthogonalised to a $d$-band only model, have canonical
+  # ratios which deviate largely from canonical band theory; in the case
+  # of Urban /et al./ the ratio turned out to be $dd\sigma: dd\pi:
+  # dd\delta = -4.3 : 3.6 : -1$, in which the ordering of the ratio
+  # magnitudes changed cite:Urban2011.
 
-  To obtain better fitting results, these ratios were allowed to vary
-  from those found from canonical band theory. This is standard
-  practice in other models . Non-orthogonal models
-  of titanium, which have been subsequently orthogonalised to a
-  $d$-band only model, have canonical ratios which deviate largely from
-  canonical band theory; in the case of Urban /et al./ the ratio
-  turned out to be $dd\sigma: dd\pi: dd\delta = -2.7 : 6.4 : -1$,
-  in which the ordering of the ratio magnitudes changed
-  cite:Urban2011. We do not allow the ratios to deviate by more than
-  20% in our fitting.
-  # WHY??-
+  # To obtain better fitting results, these ratios were allowed to vary
+  # from those found from canonical band theory. This is standard
+  # practice in other models . Non-orthogonal models
+  # of titanium, which have been subsequently orthogonalised to a
+  # $d$-band only model, have canonical ratios which deviate largely from
+  # canonical band theory; in the case of Urban /et al./ the ratio
+  # turned out to be $dd\sigma: dd\pi: dd\delta = -2.7 : 6.4 : -1$,
+  # in which the ordering of the ratio magnitudes changed
+  # cite:Urban2011. We do not allow the ratios to deviate by more than
+  # 20% in our fitting.
+  # # WHY??-
 
 
   The bond integrals and pair potential ranges were chosen to start
   decaying to zero by a multiplicative polynomial between first and
   second neighbours in the hcp structure, going to zero between the
   second and third-neighbours. It was verified that the cutoffs were
-  not very close to other neighbour shells in other titanium
+  not close to neighbour shells found in titanium
   polymorphs, such that in future simulations, there would be no large
   and sudden forces arising from the inclusion of extra neighbours
   upon deformation. A multiplicative cutoff type was preferred over
@@ -108,7 +111,7 @@
 
 
   The form of the pair potential was chosen to be simple sum of two
-  exponentials and a rapidly decaying power law. The exponentials,
+  exponentials and a rapidly decaying power law term. The exponentials,
   which have one large positive term, and a smaller negative term,
   contribute the most over the range of interaction, with the power
   law chosen to only increase the repulsion at smaller distances. The
@@ -116,63 +119,80 @@
   energies more reminiscent of DFT. This will be discussed in section
   *SECTION LABEL*. The resultant pair potential was highly repulsive
   at short distances, yet became slightly
-  attractive at larger distances. This allowed for one to approximately account for
-  hybridisation effects in this simple $d$-orbital only model, as done
+  attractive at larger distances. This allowed for one to
+  approximately account for attractive effect of $s-d$ hybridisation
+  in this simple $d$-orbital only model, as done
   in previous exclusively $d$-orbital tight-binding models for
-  titanium cite:Girshick1998a.
+  titanium cite:Girshick1998a. Even though hybridisation is
+  not strictly pairwise in character, we did not deem it necessary at
+  this time to complicate matters further.
 
 
   # Insert table for the parameters
-     fdd=0.1958363809 qdds=0.5591275855 qddp=0.5690351902 qddd=0.7745947522 b0=58.0906936439 p0=1.2185323579 b1=-3.2299188646 p1=0.6862915307 b2=593519.1134129359 m2=-11.5000000000 p2=0.0000000000 ndt=2.0000000000 cr1=-6.0000000000 cr2=3.0474400934 cr3=-1.2317472193 r1dd=6.5000000000 rcdd=10.0000000000 rmaxhm=10.1000000000 npar=18
+  # d-band model
+  # fdd=0.1958363809 qdds=0.5591275855 qddp=0.5690351902 qddd=0.7745947522 b0=58.0906936439 p0=1.2185323579 b1=-3.2299188646 p1=0.6862915307 b2=593519.1134129359 m2=-11.5000000000 p2=0.0000000000 ndt=2.0000000000 cr1=-6.0000000000 cr2=3.0474400934 cr3=-1.2317472193 r1dd=6.5000000000 rcdd=10.0000000000 rmaxhm=10.1000000000 npar=18
+
+  # sd model
+  # fdd=0.2180620493 qdds=0.6040045421 qddp=0.6169684817 qddd=0.7700371748 b0=62.9010414470 p0=1.1762055161 m0=0.0000000000 b1=-3.0294300785 p1=0.6180563234 b2=0.0000000000 p2=0.0000000000 m2=0.0000000000 ndt=2.0000000000 cr1=-6.0312481443 cr2=4.0191710557 fss=-0.1500000000 qss=0.3700000000 fsds=-0.0636998339 qsds=0.3392893716 esti=-0.2100000000 edti=0.0800000000 r1dd=6.5000000000 rcdd=10.0000000000 cr3=-1.0000000000 rmaxhm=10.1000000000
+
 
   # Insert figure for the bond integrals and the pair potential.
+  # > Probably good to compare the bond integrals of the sd model,
+  # > to the d model
+  # > Do I use the model fitted to the TiH/TiO2 things?
+  # > Plotting found in [[file:~/Documents/ti/plot_bond_integrals/]]
+
+  #+NAME: d_sd_bond_integrals
+  [[file:~/Documents/ti/plot_bond_integrals/d_sd_bond_integrals_with_multiplicative_polynomial_cutoffs_2021-08-25T19:51:44.439701.png]]
+
 
   # Insert figure for the bands compared to DFT
+  # > Use the band plot of dimitar for all the coloured bands?
 
   # Insert figure for the table of properties.
   #+NAME: canonical_d_table.
-   | Quantity  |   From Model |       Target |
-   |-----------+--------------+--------------|
-   | a_hcp     |   5.58523112 |   5.57678969 |
-   | c/a       |   1.58371266 |   1.58731122 |
-   | a_omega   |   8.93475285 |   8.73254342 |
-   | c_omega   |   5.38726911 |   5.32343103 |
-   | a_4h      |   5.57584691 |   5.56325146 |
-   | c_4h      |  18.09810672 |  17.75908031 |
-   | a_6h      |   5.57365569 |   5.54639384 |
-   | c_6h      |  27.18378460 |  26.77136353 |
-   | a_bcc     |   6.20079768 |   6.17948863 |
-   | a_fcc     |   7.87290654 |   7.88677000 |
-   | DE(o,h)   |   0.58764167 |  -0.63343333 |
-   | DE(4h,h)  |   1.58019500 |   3.17160000 |
-   | DE(6h,h)  |   2.48264833 |   3.72005000 |
-   | DE(b,h)   |   5.35128500 |   7.63520000 |
-   | DE(f,h)   |   3.78088500 |   4.51880000 |
-   | c_11      | 171.60928873 | 176.10000000 |
-   | c_33      | 198.90063708 | 190.50000000 |
-   | c_44      |  47.42549704 |  50.80000000 |
-   | c_12      |  94.65941969 |  86.90000000 |
-   | c_13      |  61.22624060 |  68.30000000 |
-   | M_freq_0  |   2.59341377 |   2.85858719 |
-   | M_freq_1  |   2.59341378 |   2.85858719 |
-   | M_freq_2  |   2.59341378 |   2.85858719 |
-   | M_freq_3  |   2.59341379 |   2.85858719 |
-   | M_freq_4  |   5.85272461 |   5.66706047 |
-   | M_freq_5  |   5.85272461 |   5.66706047 |
-   | H_freq_0  |   3.82320403 |   4.80643423 |
-   | H_freq_1  |   3.82320403 |   5.58010025 |
-   | H_freq_2  |   6.40288977 |   5.65316738 |
-   | H_freq_3  |   6.40288977 |   6.36651842 |
-   | H_freq_4  |   7.92857431 |   6.40050186 |
-   | H_freq_5  |   7.92857431 |   7.64082373 |
-   | bandw.  G |   3.69394702 |   5.87085872 |
-   | bandw.  K |   4.65178817 |   4.97424321 |
-   | bandw.  M |   5.19329495 |   7.78109872 |
-   | bandw.  L |   4.21232412 |   6.34433701 |
-   | bandw.  H |   3.54700549 |   9.70902614 |
-   | DOSerr_h  |   0.00000000 |   0.00000000 |
-   | DOSerr_o  |   0.00000000 |   0.00000000 |
-   | E_pris_f  |  98.95340236 | 220.00000000 |
+   | Quantity  |    $d$ model | $s-d$ model |       Target |
+   |-----------+--------------+-------------+--------------|
+   | a_hcp     |   5.58523112 |             |   5.57678969 |
+   | c/a       |   1.58371266 |             |   1.58731122 |
+   | a_omega   |   8.93475285 |             |   8.73254342 |
+   | c_omega   |   5.38726911 |             |   5.32343103 |
+   | a_4h      |   5.57584691 |             |   5.56325146 |
+   | c_4h      |  18.09810672 |             |  17.75908031 |
+   | a_6h      |   5.57365569 |             |   5.54639384 |
+   | c_6h      |  27.18378460 |             |  26.77136353 |
+   | a_bcc     |   6.20079768 |             |   6.17948863 |
+   | a_fcc     |   7.87290654 |             |   7.88677000 |
+   | DE(o,h)   |   0.58764167 |             |  -0.63343333 |
+   | DE(4h,h)  |   1.58019500 |             |   3.17160000 |
+   | DE(6h,h)  |   2.48264833 |             |   3.72005000 |
+   | DE(b,h)   |   5.35128500 |             |   7.63520000 |
+   | DE(f,h)   |   3.78088500 |             |   4.51880000 |
+   | c_11      | 171.60928873 |             | 176.10000000 |
+   | c_33      | 198.90063708 |             | 190.50000000 |
+   | c_44      |  47.42549704 |             |  50.80000000 |
+   | c_12      |  94.65941969 |             |  86.90000000 |
+   | c_13      |  61.22624060 |             |  68.30000000 |
+   | M_freq_0  |   2.59341377 |             |   2.85858719 |
+   | M_freq_1  |   2.59341378 |             |   2.85858719 |
+   | M_freq_2  |   2.59341378 |             |   2.85858719 |
+   | M_freq_3  |   2.59341379 |             |   2.85858719 |
+   | M_freq_4  |   5.85272461 |             |   5.66706047 |
+   | M_freq_5  |   5.85272461 |             |   5.66706047 |
+   | H_freq_0  |   3.82320403 |             |   4.80643423 |
+   | H_freq_1  |   3.82320403 |             |   5.58010025 |
+   | H_freq_2  |   6.40288977 |             |   5.65316738 |
+   | H_freq_3  |   6.40288977 |             |   6.36651842 |
+   | H_freq_4  |   7.92857431 |             |   6.40050186 |
+   | H_freq_5  |   7.92857431 |             |   7.64082373 |
+   | bandw.  G |   3.69394702 |             |   5.87085872 |
+   | bandw.  K |   4.65178817 |             |   4.97424321 |
+   | bandw.  M |   5.19329495 |             |   7.78109872 |
+   | bandw.  L |   4.21232412 |             |   6.34433701 |
+   | bandw.  H |   3.54700549 |             |   9.70902614 |
+   | DOSerr_h  |   0.00000000 |             |   0.00000000 |
+   | DOSerr_o  |   0.00000000 |             |   0.00000000 |
+   | E_pris_f  |  98.95340236 |             | 220.00000000 |
 
 
 

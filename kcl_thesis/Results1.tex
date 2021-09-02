@@ -1,0 +1,403 @@
+\chapter{Designing and Simulating Nanopores}
+\label{ch:RC1}
+
+This chapter is based on the first half of the following publication;
+Designing a Hydrophobic Barrier within Biomimetic Nanopores. Trick et al,  (2014)
+ACS Nano. 8 11268-79.
+
+\epigraph{{\textit{''I don't know about you, But I'm feeling 22''}}}{Taylor Swift}
+
+\section{Introduction}
+As mentioned previously in chapter 1, nanopores in membranes have a wide range of potential applications, and can be derived from \textit{e.g.} existing biological nanopores, formed by stacks of synthetic cyclic peptides, or non-biological synthetic pores \cite{Ghadiri1994,Clark1999,Sakai2013}.
+
+In designing nanopores, one approach is to mimic key features of biological pores (\textit{e.g.} those of ion channels and bacterial porins) of known structure and function such as bacterial porins, which provide a wide range of conductances and selectivities to inorganic ions, and also to small polar and/or charged solutes such as sugars and antibiotics. Porins, and related outer membrane proteins from Gram negative bacteria have the potential to provide design motifs for biomimetic nanopores, and to act as templates for generation of functional pores, as mentioned previously in the porin OprP and OmpG.
+
+Molecular dynamics (MD) simulations (methods, chapter 2) play a key role in allowing us to understand the physical basis of nanopore function, both for biological pores such as general porins, OpdK and OmpF, \ahl\ and for models based on CNT's or theoretical model pores, where simulations are used to explore more general models of pore selectivity and gating. An example being that of the selectivity in OprP, where simulation identified the key phosphate binding sites and residues \cite{Pongprayoon2009,Modi2012d,Modi2014} therefore allowing biomimicry of such features into a nanopore model pore \cite{Pongprayoon2012}. 
+
+In order to design a biomimetic pore, one may wish to transplant a key structural and functional feature from a more complex ion channel into a simple $\beta$-barrel template such as a hydrophobic gate, which has not been found in a $\beta$-barrel nanopore (OmpW is a hydrophobic $\beta$-barrel, however this is very narrow and binds detergent molecules \cite{Hong2006}). Therefore, one may wish to test whether a hydrophobic barrier formed by consecutive rings of hydrophobic sidechains in the pore lining (as seen in the nicotinic acetylcholine receptor and related channels) can be designed into a ``bland'' (no selectivity or gated) high conductance $\beta$-barrel in order to control the conductance of the resultant nanopore.
+
+In this results chapter, I designed $\beta$-barrel nanopores that contain a hydrophobic barrier. I use MD simulations to explore the function of such nanopores, initially using water flux as a proxy for ionic conductance. I explore the behaviour of these pores as a function of the size (in terms of number of strands) and hydrophobicity of the amino acid sidechains forming the designed hydrophobic barrier.  These studies provide a detailed example of the use of MD simulation to design and evaluate simple model nanopores based on a $\beta$-barrel template, with a prospect of their further development for biotechnological applications. 
+
+
+\section{Methods}
+
+\subsection{Building Protein Models}
+Atomic coordinates for the initial models were generated using idealized models for transmembrane $\beta$ barrels \cite{Sansom1995}, allowing for the mapping of the C$\alpha$ positions of a desired barrel template as a function of number of strands, shear, and length of the barrel. The resultant C$\alpha$ templates were used as inputs for MODELLER \cite{Sali1993} in conjunction with designed sequences in FASTA format (figure \ref{fig:c3f6}). Pore radius profiles of the resultant models were calculated using HOLE \cite{Smart1996}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3f6}
+\caption[Building a protein pore from the C$\alpha$\ backbone (16$\beta$ example).] {Building a protein pore from the C$\alpha$\ backbone (16$\beta$ example). A. C$\alpha$ backbone model output (from \cite{Sansom1995}). B. Initial modeller design with basic protein backbone (blue and green strands) to implement the correct strand hydrogen bonding and loop (pink) length. C. Final protein build for this model of 16$\beta$ funnel hydrophobic pore. Ranging blue colours indicated modelled lumen pointing residue positions.}
+\label{fig:c3f6}
+\end{center}
+\end{figure}
+
+
+\subsection{Simulation Protocol}
+Atomistic models of designed pores were converted to a coarse grained (CG) representation using a locally modified version of the widely used MARTINI forcefield \cite{Bond2006}. CG MD simulations of duration 1 $\mu$s were used to position the nanopores within a DPPC phospholipid  bilayer (figure \ref{fig:c3f-1}). At the end of the simulation, the orientated pore-bilayer system was converted back to an atomistic representation using a CG2AT protocol \cite{Stansfeld2011}. 
+ 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results1/c3f-1}
+\caption[Coarse grained self assembly of protein pore in DPPC lipid ] {Coarse grained self assembly of protein pore in DPPC lipid. A. All CG particles in the system are shown including lipid and head groups (grey tails, pink/green/blue head groups), sodium (red) chloride (dark blue) ions, water (cyan) and protein (yellow). B. As  A, however for clarity, only protein and lipid are shown using previous colours at the starting configuration. C. to F. Progress through simulation with time noted above.} 
+\label{fig:c3f-1}
+\end{center}
+\end{figure}
+
+Atomistic simulations were performed using GROMACS version 4.5.5 \cite{Hess2008} \\(www.gromacs.org) and using the GROMOS96 43a1 forcefield \cite{Scott1999,Schuler2001}. Long range electrostatic interactions were treated with the Particle Mesh Ewald method with a short range cut off of 1 nm, a Fourier spacing of 0.12 nm \cite{Darden1993,Essmann1995}, and the SPC water model was used \cite{Berendsen1987a}. Simulations were performed in the NPT ensemble with the temperature being maintained at 310 K with a V-rescale thermostat \cite{Bussi2007d} and a coupling constant of $\tau${$_t$} = 0.1 ps. Pressure was maintained semi-isotropically using the Parrinello-Rahman \cite{Parrinello1981} algorithm at 1 bar coupled at $\tau${$_p$} = 1 ps. The time step for integration was 2 fs with bonds constrained using the LINCS algorithm \cite{Hess1997a}. Analysis was conducted with GROMACS routines, MD Analysis \cite{Michaud-Agrawal2011}, and locally written code. I performed an initial equilibration of each system containing \til 330 DPPC lipids and \til 50,000 water molecules for 1 ns during which the protein was restrained. Water flux was calculated by counting water molecules crossing through the centred protein (on x and y) within a 20 \AA\ diameter shell from this centre. Water crossings were counted as upwards (positive) if parallel to z and downwards (negative) if anti-parallel (figure \ref{fig:waterflow}). Water fluxes were evaluated over the full length of the simulations and shown as the sum of the flux. In most cases this did not lead to a major change in estimated flux compared to evaluating the flux, \textit{e.g.} the latter half of the simulation. Pore radii with error estimate for a simulation was calculated using MDAnalysis. Molecular graphic images were produced with visual molecular dynamics (VMD) \cite{Humphrey1996}.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/waterflow}
+\caption[Example of water flux calculation through a nanopore] {Example of water flux calculation through a nanopore. Diagram to represent the calculation of water flux through a nanopore. When 'yellow water' passes through the pore center of mass (not shown) in an upward, parallel (yellow water) or downward, anti parallel manner (red water) it will be considered a conductive event in simulation.} 
+\label{fig:waterflow}
+\end{center}
+\end{figure}
+
+
+\section{Results and Discussion}
+
+\subsection{Biomimicry and Barrel Design}
+
+\subsubsection{Modelling $\beta$-Barrel Nanopores}
+Based on detailed visual inspection of the known structures of bacterial $\beta$-barrel membrane proteins, I set out to design biomimetic model nanopores with 12, 14 or 16 strands per $\beta$-barrel. Such pores are seen within naturally occurring $\beta$-barrel proteins, for example the porin NanC (pdb: 2WJQ \cite{Wirth2009}) of 12$\beta$ strands, and the lytic toxins \ahl\  (pdb: 7AHL \cite{Song1996}), and $\gamma$-hemolysin (pdb: 3B07 \cite{Yamashita2011}) of 14 and 16 $\beta$-strands respectively. 
+
+To generate and evaluate these models I used the following workflow. The initial C$\alpha$ template was generated based on the idealized geometry of a transmembrane $\beta$-barrel pore (figure \ref{fig:c3f6}). The strand lengths (of 20 residues per strand) were used to generate nanopores of \til 40-42 \AA\ in length, sufficient to span a lipid bilayer. These templates were converted to protein models and then embedded in a phospholipid bilayer for evaluation in terms of stability and permeation properties by use of atomistic MD simulations. 
+
+To generate minimalist biomimetic $\beta$-barrel nanopores which would sit stably within a lipid bilayer, the outer surface of the barrel was covered with hydrophobic leucine sidechains (figure \ref{fig:c3f7}) which interact with the hydrophobic core of DPPC. The $\beta$-strands were connected via short flexible loops of glycine residues (2 to 3 residues) with a band of tryptophan residues included on the outer surface at each end of the barrel. These amphipathic aromatic sidechains are known to ‘lock’ membrane proteins into place in a lipid bilayer by forming hydrogen bonds to lipid headgroups \cite{Killian1998,Stansfeld2013a}. Together these features were designed to form a stable, bilayer spanning nanopore and allowing the nature of the inwards, lumen facing pore-lining sidechains to be designed in order to control water and ion permeation events.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3f7}
+\caption[Residue positions on a 16$\beta$ pore.] {Residue Positions on a 16$\beta$ pore. Shown is that of the funnel-hydrophoboic pore. A. All external, lipid-facing leucine residues (dark blue) shown in stick form.  B. Internal lumen water-facing residues shown through backbone cartoon (shades of blue). C. Image of B rotated 90$^{\circ}$ looking through the conductive pore axis with inward pointing residues in stick form. Functional residues are always built to be lumen facing.}
+\label{fig:c3f7}
+\end{center}
+\end{figure}
+
+In order to evaluate these models, atomistic MD simulations (of duration from 40 to 100 ns, see table \ref{fig:c3t1} for a full list of simulations in this chapter) were performed for each nanopore embedded in a DPPC bilayer with a NaCl solution of 1M. Models were assessed in terms of conformational stability of the protein, dimensions of the transbilayer pore, and the flow of water and ions through the pore. Due to timescales of simulation, water conduction will be used as a proxy for ion conduction for this series of simulations. 
+
+\subsubsection*{Design Principles}
+In our initial exploration of possible designs, I explored both funnel (F) and hourglass (HG) shaped pores (Figure \ref{fig:conceptnp_beads}). The latter have a central constriction which mimics porins, as many have a central constriction \cite{Cowan1992b,Schirmer1995c,Biswas2008c}. The overall size of the nanopores was determined by the number of $\beta$-strands (N) in the barrel (where N=12, 14, or 16 $\beta$ strands) whilst the shape (F or HG) was determined by the sizes and positions of the residues lining the pore. The nature of the pore-lining sidechains was varied to yield either a hydrophobic (lined by glycine, alanine, valine or leucine residues) or hydrophilic (lined by serine, threonine, asparagine and glutamine residues) model pore (figure \ref{fig:c3f2}). Thus each pore design may be described by the number of $\beta$-strands in the barrel template, the overall shape of the pore, and by specification of the rings of sidechains lining the pore. An example of a pore, as a 2D sheet representation is shown (figure \ref{fig:c3f4}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/conceptnp_beads}
+\caption[Theoretical pore concept shape and residue design.] {Theoretical pore concept shape and residue design. A. Concept of nanopore lumen shapes to be implemented into designed pore. B. Implementation of dimensions can acquired by using different residue R groups (shown here in beads according to proposed R group volume).} %square is table contents, curly is in the chapter
+\label{fig:conceptnp_beads}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./pictures/Results1/c3f2}
+\caption[Polar and non-polar amino acids.] {Polar and non-polar amino acids. Amino acids which will be used impose shape and functionality within model nanopores. Grouped on polarity and size of increasing R group, with the largest at the bottom. Residue names are coloured by polarity which will be used throughout this thesis (pink - hydrophilic, blue - hydrophobic).}
+\label{fig:c3f2}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3f4}
+\caption[Theoretical $\beta$ strand concept and residue placement.] {Theoretical $\beta$ strand concept and residue placement. A 2D sheet of a model protein pore, where each residue is shown as a circle with residue as a one letter code. Due to the hydrogen bonding pattern (shear), residues will be staggered in the folded form. Minor adjustments made after modelling ensures no pore occlusion by excess tryptophan residues or glycine loops. Hydrophilic residues coloured to polarity. N and C termini are indicated.}
+\label{fig:c3f4}
+\end{center}
+\end{figure}
+
+
+The overall conformational stability of these pore models was evaluated by measurement of the root mean square deviation (RMSD) of both the protein and C$\alpha$ carbons from the initial pore model over the course of the atomistic MD simulation. An example, the \textit{N=12}, funnel (F), STNQNTS model shows that the overall C$\alpha$ RMSD  plateaus at ca. 4 \AA\ (figure \ref{fig:c3_12S}), just a little higher than would be the case for comparable simulations of native porin structures \cite{Watanabe1997,Soares1995}. The conformational fluctuations are higher for the inter-strand loops, again as expected (figure \ref{fig:c3_12S}, E.). Thus, the \textit{de novo} designed nanopores behave in a similar manner to porins in MD simulations in a bilayer on a \til 100 ns timescale. Calculation of the pore radius profile at selected time points during the simulation suggests that the initial model structure of the pore does indeed ``relax'' to adopt a more clearly, hourglass or funnel profile shape as expected from the initial model structure. Comparable changes in pore radius profiles have also been seen in simulations of porins \cite{Khalid2006,Kumar2010} and confirm the importance of relaxing initial pore models by MD simulation before evaluating them in terms of pore radius and permeability properties. 
+
+Having established an overall methodology, I use this to explore three generations of nanopore design. The 1\textsuperscript{st} generation, as described in the next section provides an overall exploration of pore size, shape, and hydrophobicity of the pore lining residues. The 2\textsuperscript{nd} generation models explored further refinements of the stable \textit{N=14}, HG 1\textsuperscript{st} generation models. Both \textit{N=14}, HG STNQNTS and \textit{N=14}, HG GAVLVAG were used as ‘host’ pores for a central ring of  ``guest'' residues, yielding ``hydrophilic-x'' and ``hydrophobic-x'' models respectively. This involved the replacement of the central, constricting residues of either the hydrophobic or hydrophilic pore with the opposite polarity residue, such as the hydrophobic leucine was introduced into the central ring of the hydrophilic STNQNTS pore or a hydrophilic glutamine residue, was introduced into the central ring of the otherwise hydrophobic GAVLVAG pore.  In the 3\textsuperscript{rd} generation of models, \textit{N=14}, HG models were explored further, combining an overall hydrophilic pore lining with 1, 2 or 3 rings of L sidechains to yield a central hydrophobic constriction of increasing thickness.
+
+\begin{table}[H]
+\begin{center}
+\caption[Table of nanopore simulations in chapter 3.] {Table of nanopore simulations in chapter 3.}
+\label{fig:c3t1}
+\includegraphics[width=\linewidth]{./pictures/Results1/c3t1}
+\begin{tablenotes}
+\footnotesize
+\item *Residues are coloured as depicted before with hydrophobic residues in blue, and hydrophilic in pink. W and Y residues are in purple. 
+\end{table notes}
+\end{center}
+\end{table}
+
+
+\subsection{First Generation Pores}
+
+Focus will be placed on the pores based on their size, of 12, 14 or 16 $\beta$ strands and secondly, on the polarity of the residues within the lumen of the hydrophobic or hydrophilic pores. 
+
+I first examined water flux as a proxy for ionic conductance, \textit{i.e.} as a simple measure of pore ‘openness’. This was used due to the time scales for ion conduction events, requiring substantially longer simulation times in order to detect these rare events \cite{Beckstein2001} in conductance  through proteins of the 1\textsuperscript{st} generation of pore models. Stability and cumulative water fluxes (either 'upwards' or 'downwards' dependent on whether the direction of flow is measured in a positive or negative z direction) were evaluated for these models over the course of the simulations, with water flux scaling approximately with the cross-sectional area of the central constriction of the pore \cite{Trick2014}.
+
+
+\subsubsection{12 $\beta$ Models: Stability and Conduction}
+
+These series of pores were modelled theoretically on the backbone structure of the bacterial OMP NanC (\textit{N = 12, S = 12}) in figure \ref{fig:c3f8} (A). For this pore, 4 models are built;
+\begin{enumerate}[i]
+\setlength\itemsep{0.1em}
+  \item 12$\beta$ Funnel (F) Hydrophobic
+  \item 12$\beta$ Hourglass (HG) Hydrophobic
+  \item 12$\beta$ F Hydrophilic 
+  \item 12$\beta$ HG Hydrophilic
+\end{enumerate}
+
+To assess the stability of the pore in the bilayer during a 100 ns AT MD simulation, RMSD, hydrogen bonding between the main chain of the protein pore, root mean square fluctuations (RMSF), and radii profiles are analysed from the simulation. To assess the (as previously mentioned) 'openness' of the pore, water flux profiles are calculated for water movement through the pore (see figures \ref{fig:c3_12S} and \ref{fig:c3_12h}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3f8}
+\caption[NanC porin and 1\textsuperscript{st} generation N=12, 12$\beta$ pores.] {NanC porin and 1\textsuperscript{st} generation N=12, 12$\beta$ pores. A. Silver cartoon of the bacterial porin shown, perpendicular to the membrane plane, with a $\beta$ strand height of \til 25 \AA\ and including loops \til 52 \AA\ . B. Funnel and hourglass hydrophobic pores with the same numbers as in the text. Residue colouring is consistent to polarity of residues shown before. Model pore strand length is \til 38 \angstrom, and when including loops is \til 45 \angstrom.}
+\label{fig:c3f8}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./pictures/Results1/c3_12S}
+\caption[RMSD, backbone hydrogen count and RMSF for \textit{N=12}, model pores.] {RMSD, backbone hydrogen count and RMSF for \textit{N=12}, 12$\beta$ model pores. A and B. RMSD for both HG and F pores (pink (Q) - hydrophilic, blue (L) - hydrophobic pore) for C$\alpha$ and protein. C and D. Backbone hydrogen bond count with consistent colours as A. and B.  E and F. RMSF.}
+\label{fig:c3_12S}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_12h}
+\caption[Radii profile and water flux measurement of \textit{N=12}, 12$\beta$ pores.] {Radii profile and water flux measurement of \textit{N=12}, 12$\beta$ pores. A and B. Radii profile of all 4 pores, with the x axis representing the z axis going through the lumen of the pore and radius on y. Dotted line on plot at \til 1.9 \angstrom\ indicates the radius of a water molecule which will be considered as the radius of a pore being open or closed. C and D. Water flux profiles of water conduction through the pores. Solid line indicates an upward flux, and dashed, downward.}
+\label{fig:c3_12h}
+\end{center}
+\end{figure}
+
+
+From the previous assessments of the \textit{N=12} models, it can be noted that \textit{de novo} protein design, in the manner presented in this thesis, is a feasible method to build and simulate nanopores. In terms of stability, all four of the pores of this size and chemical character are stable in terms of the plateau, and also rational RMSD profile with a maxima at \til 4 - 5 \AA\ (a exception from figure \ref{fig:c3_12S} A., is the hydrophilic hourglass pore which required a longer simulation time to maintain stability). The hydrogen bond contacts within 3.5 \AA\ of the barrel backbone (which are considered to assess the stability of the pore, if the protein is unstable and ``fall apart'' one would expect a decrease in the number of hydrogen bonds over time) are at a constant level throughout the simulation suggesting protein backbone stability for this non-physiological pore. Throughout all simulations, hydrophilic pores exhibit on average a higher number of hydrogen bond contacts than their hydrophobic counterparts (which could be due to the excessive presence hydrophobicity of residues, exhibiting partial intrinsic stability in terms of backbone bonding). All pores show an expected RMSF profile based on simulations of other pore and porin proteins, with high  RMSF peaks depicting more mobile loop regions of the protein. 
+
+In terms of relating stability to conduction, interestingly in the previous figure (\ref{fig:c3_12h}), even though exhibiting details showing a stable pore, the 12$\beta$ hydrophobic HG and F models are both functionally closed in terms of radii (\textit{i.e.} narrower than the radius of a water molecule) and in water flux (figure \ref{fig:c3_12h} A,B and D). Therefore, analysis of the protein structure (as in figure \ref{fig:c3_12S}) alone is not sufficient to assess the functionality of these pores, with further investigation needed. Both hydrophilic forms of these 12$\beta$ pores exhibit a water flux and are thus considered to be ``open'' pores in this case. 
+
+\subsubsection{14 $\beta$ Models: Stability and Conduction}
+
+The next series of pores are modelled on the transmembrane domain of $\alpha$-Hemolysin ($\alpha$HL) which has \textit{N=14} and \textit{S=14}. As before, four protein models are constructed and modelled;
+
+\begin{enumerate}[i]
+\setlength\itemsep{0.1em}
+  \item 14$\beta$ F Hydrophobic
+  \item 14$\beta$ HG Hydrophobic
+  \item 14$\beta$ F Hydrophilic 
+  \item 14$\beta$ HG Hydrophilic
+\end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3f9}
+\caption[First generation \textit{N=14}, 14$\beta$ pores.] {First generation \textit{N=14}, 14$\beta$ pores. Boxes show the funnel and hourglass hydrophobic pores with same roman numbering as shown in the text previously. Residue colouring is consistent to polarity of residues previously.}
+\label{fig:c3f9}
+\end{center}
+\end{figure}
+
+Stability and openness of the pore is assessed in the same manner as \textit{N=12} pores, shown in figures \ref{fig:c3_14S} and \ref{fig:c3_14h}. 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./pictures/Results1/c3_14S}
+\caption[RMSD, backbone hydrogen count and RMSF for \textit{N=14}, 14$\beta$ model pores.] {RMSD, backbone hydrogen count and RMSF for \textit{N=14}, 14$\beta$ model pores. A and B. RMSD for both HG and F pores (pink (Q) - hydrophilic, blue (L) - hydrophobic pore) for C$\alpha$ and protein. C and D. Backbone hydrogen bond count with consistent colours as A. and B.  E and F. RMSF.}
+\label{fig:c3_14S}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_14h}
+\caption[Radii profile and water flux measurement of \textit{N=14}, 14$\beta$ pores.] {Radii profile and water flux measurement of \textit{N=14}, 14$\beta$ pores. A and B. Radii profile of all 4 pores, with the x axis representing the z axis going through the lumen of the pore and radius on y. Dotted line on plot at \til 1.9 \angstrom\ indicates the radius of a water molecule which will be considered as the radius of the pore being open or closed. C and D. Water flux profiles of water conduction through the pores. Solid line indicates an upward flux, and dashed, downward.}
+\label{fig:c3_14h}
+\end{center}
+\end{figure}
+
+Similar structural trends between these model pores and the previous pores can be noted from the profiles in figure \ref{fig:c3_14S}. Again, all four exhibit RMSD stability and plateau during the simulation (except the hydrophobic, funnel pore) between values of 4 - 5 \AA. RMSF profiles for all indicate a fluctuations in structure akin to a native porin, and to that of the \textit{N=12} pore.  Also noted are a stable number of backbone hydrogen bonds with a hydrophobic and hydrophilic pore trend seen previously. Precise values are noted in table \ref{table:14hb}. 
+
+\begin{table}[H]
+\centering % centering table
+\begin{tabular}{ |c|c| } 
+ \hline
+  Pore & Hydrogen Bond Count \\  
+  \hline
+ Hydrophilic HG & 233 $\pm$ 7 \\ \hline
+ Hydrophilic F & 227 $\pm$ 7 \\ \hline
+ Hydrophobic HG & 169 $\pm$ 6 \\ \hline
+ Hydrophobic F & 168 $\pm$ 6 \\
+ \hline
+ \end{tabular}
+\caption{Hydrogen bond contacts of \textit{N=14}, 14$\beta$ 1\textsuperscript{st} generation pores} %title of the table
+\label{table:14hb}
+\end{table}
+
+Unlike the previous smaller model pores, this series of model pores and simulations exhibit the initial desired structure, such as the hourglass models maintaining a central constriction and the funnel pores maintaining their end restriction (figure \ref{fig:c3_14h}). All are shown to be functionally open pores in terms of their radii to that of a water molecule (indicated on figure as black line, figure \ref{fig:c3_14h}, A and B) which can also be seen in simulation. To investigate the ``functionally open'' hydrophobic pores further, even larger pores shall be modelled to gain insight into their stability and water conduction. 
+
+\subsubsection{16 $\beta$ Models: Stability and Conduction} 
+
+Finally, simulated and modelled as part of the series of the 1\textsuperscript{st} generation pores are those modelled on the octameric protein (and also lytic) $\gamma$-Hemolysin with a \textit{S=16} and \textit{N=16}. Structurally, $\gamma$-HL is identical to that of $\alpha$HL, (barrel and cap domain), however it is formed from 8 monomers rather than 7. Four models are modelled on the TMD and shown (figure \ref{fig:c3f10});
+\begin{enumerate}[i]
+\setlength\itemsep{0.1em}
+  \item 16$\beta$ Funnel (F) Hydrophobic
+  \item 16$\beta$ Hourglass (HG) Hydrophobic
+  \item 16$\beta$ F Hydrophilic 
+  \item 16$\beta$ HG Hydrophilic
+\end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3f10}
+\caption[First generation \textit{N=16}, 16$\beta$ pores.] {First generation \textit{N=16}, 16$\beta$ pores. Boxes show the funnel and hourglass hydrophobic pores with same roman numbering as shown in the text previously. Residue colouring is consistent to polarity of residues.}
+\label{fig:c3f10}
+\end{center}
+\end{figure}
+
+Stability and openness of the pore is assessed in the same manner for \textit{N=12} and \textit{N=14} pores, shown in figures \ref{fig:c3_16S} and \ref{fig:c3_16h}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{./pictures/Results1/c3_16S}
+\caption[RMSD, backbone hydrogen count and RMSF for \textit{N=16}, 16$\beta$ model pores.] {RMSD, backbone hydrogen count and RMSF for \textit{N=16}, 16$\beta$ model pores. A and B. RMSD for both HG and F pores (pink (Q) - hydrophilic, blue (L) - hydrophobic pore) for C$\alpha$ and protein. C and D. Backbone hydrogen bond count with consistent colours as A. and B.  E and F. RMSF.}
+\label{fig:c3_16S}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_16h}
+\caption[Radii profile and water flux measurement of \textit{N=16}, 16$\beta$ pores.] {Radii profile and water flux measurement of \textit{N=16}, 16$\beta$ pores. A and B. Radii profile of all 4 pores, with the x axis representing the z axis going through the lumen of the pore and radius on y. Dotted line on plot at \til 1.9 \angstrom\ indicates the radius of a water molecule which will be considered as the radius of a pore being open or closed. C and D. Water flux profiles of water conduction through the pores. Solid line indicates an upward flux, and dashed, downward.}
+\label{fig:c3_16h}
+\end{center}
+\end{figure}
+
+
+Similarly to the previously modelled and simulated pores, the RMSD, RMSF, and hydrogen bond contacts indicate that these larger model protein pores are structurally stable. Following the trend of the smaller \textit{N=12}, to the \textit{N=14} barrel, this \textit{N=16} is the largest pore in terms of number of residue numbers and radius, therefore in comparison to the other pores, it has a higher number of hydrogen bond contacts and follows the trend of having fewer contacts in the hydrophobic barrels than their hydrophilic counterpart. As with the \textit{N=14} pores, all are functionally open in regards to the radii (and water diameter) but differ in water flux. All \textit{N=16} pores have a considerably higher water flux, unseen in the other models (figure \ref{fig:c3_16h}). Both hydrophilic pore models have maintained their initial desired shape, however there is more deviation within the hourglass models. Therefore this raises a possible question regarding the stability induced by the position of lumen facing residues and also residue polarity, especially those hydrophobic in nature. 
+
+Overall, within the simulations of 1\textsuperscript{st} generation models, an interesting characteristic has arisen from this series of simulations. We can see that the \textit{N=14}, HG models form stable pores which conduct water, however they are sufficiently narrow to be functionally sensitive (in terms of water flux) to the nature (hydrophilic vs. hydrophobic) of the pore lining residues (with a flux of 31.9 ns\textsuperscript{-1} and and 0.4 ns\textsuperscript{-1} for the HG hydrophilic and HG hydrophobic pores respectively). Also, in simulation of the  1\textsuperscript{st} generation pores, the hourglass pores maintained their desired initial shape more consistently than the funnel shaped pore models, thus leading into a continuation in pore modelling in which functionality will be 'mutated ' into the \textit{N=14}, 14-$\beta$ HG pore to switch functionality between the hydrophobic and hydrophilic pores. 
+
+\subsection{Second Generation Pores}
+
+\subsubsection*{Switching Functionality}
+
+In the 2\textsuperscript{nd} generation of models I either introduced a central ring of hydrophobic residues into a hydrophilic HG pore (by replacement of the central glutamine ring by a hydrophobic residue 'X' to give the hydrophilic-x models. \textit{i.e} STNQNTS to become STNLNTS), or I incorporated a central ring of glutamine residues into the hydrophobic HG pore, to give a hydrophobic-Q model (GAVLVAG to GAVQVAG), depicted in figure \ref{fig:c3_2ndgen}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=11cm]{./pictures/Results1/c3_2ndgen}
+\caption[Second generation model pores.] {Second generation model pores. A. Hydrophilic hybrid pore STNLNTS (previously STNQNTS). B. Hydrophobic hybrid pore GAVLVAG (previously GAVLVAG). Colour of residues is consistent with previous models.}
+\label{fig:c3_2ndgen}
+\end{center}
+\end{figure}
+
+\subsubsection*{Stability and Conduction}
+
+It is instructive to compare the details of the original models with their 2\textsuperscript{nd} generation counterparts, with mutation of the central ring giving the pores a more heterogeneous chemical lumen. These new 2\textsuperscript{nd} generation pores are stable (figure \ref{fig:c3_2ndS}), as seen with the 1\textsuperscript{st} generation models. Observation of conductance, in terms of radii is similar both for the hydrophobic-Q and hydrophilic-L pores, and the hydrophobic-Q model radius is equal to its sole-hydrophobic 1\textsuperscript{st} generation parent (radii, GAVQ \til 4.4 \AA\ and GAVL \til 4.5 \angstrom). Interestingly, this small change in radius from the original pore, resulted in an \til 40 fold increase in flux of water through the pore (figures \ref{fig:c3_2ndH} and \ref{fig:c3_2ndOther}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_2ndS}
+\caption[RMSD, RMSF, and backbone hydrogen count of\textit{N=14}, 2\textsuperscript{nd} generation pores.] {RMSD, RMSF, and backbone hydrogen count of\textit{N=14}, 2\textsuperscript{nd} generation pores. A. RMSD for both hybrid pores (pink hues, GAVQVAG and blue - STNLNTS pore) for C$\alpha$ and protein. B. RMSF for both model pores, same y scale as A.. C. Backbone hydrogen bond count for both pores (within 3.5 \AA\ ), colours are consistent with B.}
+\label{fig:c3_2ndS}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_2ndH}
+\caption[Radii profile and water flux of \textit{N=14}, 2\textsuperscript{nd} generation pores.] {Radii profile and water flux of \textit{N=14}, 2\textsuperscript{nd} generation pores. A. Radii profile for both hybrid pores, with the x axis representing the z axis going through the lumen of the pore and radius on y. Dotted line on the plot at \til 1.9 \angstrom\ indicates the radius of water a molecule. B. Water flux profiles of water conduction through the pores. Solid line indicates an 'upward' flux, dashed indicates downward.}
+\label{fig:c3_2ndH}
+\end{center}
+\end{figure}
+
+In previous observations of the 1\textsuperscript{st} generation pores, I note that the water conductance of the hydrophobic GAVLVAG \textit{N=14} pore is \til 0.5 ns\textsuperscript{-1} and is less than that of the single file conductance of water (ca. 3 ns\textsuperscript{-1}) in the aquaporin channel \cite{Borgnia1999,Zhu2004}. Modelling and simulation of the 2\textsuperscript{nd} generation pores, where leucine was replaced with glutamine at the constriction of an otherwise hydrophobic pore, has enabled a ``hydrophobic barrier'' to be breached with a flux increase to \til 35 ns\textsuperscript{-1}. This change in conductance is due to the ability of polar, hydrogen bonding sidechains to stabilise water within a hydrophobic barrier region, demonstrated both in earlier simulation studies of simple models of nanopores \cite{Beckstein2001} and in more recent combined experimental and computations studies of ion channels, such as the TWIK-1 potassium channel \cite{Aryal2014g}.
+
+
+I also examined a series of hydrophilic-x models (STN-X) in which a central hydrophobic ring was introduced into a hydrophilic, HG pore. All of the hydrophilic-x pores showed significant water conductance (figure \ref{fig:c3_2ndOther} A. and C.). However, as the size of the residue R group that  forms the hydrophobic constriction ring were increased a reduction in water conduction was observed. It is interesting to note that there is a greater increased conductance in the hydrophilic-W model than in the smaller hydrophilic-Y pore, even though the tryptophan sidechain is larger than tyrosine. This seemed to reflect a change in conformation via rotation of the smaller Y sidechains, which resulted in local pore deformation, thus resulting in a narrower pore and a smaller water flux. 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_2ndOther}
+\caption[Radii profile and water flux of other \textit{N=14}, 2\textsuperscript{nd} generation pores.] {Radii profile and water flux of other \textit{N=14}, 2\textsuperscript{nd} generation pores. A and B. Radii profile of both pores, STN-X in which X is a hydrophobic residue and GAV-Z pores. x axis is the z axis going through the lumen of the pore with radii shown on the y. C and D. Water flux profiles of water conduction through the pores. Solid line indicates an 'upward' flux, dashed indicates downward. GAVL line is present along the x axis.}
+\label{fig:c3_2ndOther}
+\end{center}
+\end{figure}
+
+Based on these 2\textsuperscript{nd} generation models, I have observed that the functional ‘openness’ of the pores can be successfully modulated by changing the nature of the central constriction, and that this is most sensitive when a central hydrophobic barrier is implented into a hydrophilic pore. This was then explored in further detail within the 3\textsuperscript{rd} generation models.
+
+\subsection{Third Generation Pores}
+
+The 2\textsuperscript{nd} generation hydrophilic-x (STNX) models revealed that the introduction of a single ring of leucine residues is not sufficient to functionally close the pore, Therefore, I will now move on to the 3\textsuperscript{rd} generation L-gate models, where I will examine the effect of increasing the thickness of the central hydrophobic constriction by introducing either two or three rings of leucines producing STNLLNT, STNLLTS, and STLLLTS pore models (figure \ref{fig:c3_3rdgen}) for further investigations into water flux.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_3rdgen}
+\caption[Third generation \textit{N=14} model pores.] {Third generation \textit{N=14} model pores. Shown in cartoon, with consistent residue colours are A. STLLLTS pore, B. STNLLTS pore, and lastly, C. STNLLNT pores. All are a hybrid model of 1\textsuperscript{st} generation hydrophilic  STNQNTS pore.}
+\label{fig:c3_3rdgen}
+\end{center}
+\end{figure}
+
+Each of these models has a minimum radius of \til 5.5 to 6 \AA\ (figure \ref{fig:c3_3rdhole}) and is comparable in this aspect to values which result in hydrophobic gating (chapter 1, introduction) of simplified models of nanopores \cite{Beckstein2001}, with dynamic changes in water seen between 4 and 7 \angstrom . Significantly, for all three models dynamic wetting/dewetting is observed within our simulations, seen as stochastic steps in the cumulative water flux plot (figure \ref{fig:c3_waterflux}). Visualisation of the simulations reveals that, as anticipated, the dewetting occurs in the vicinity of the central rings of the hydrophobic leucine sidechains. In terms of water conductances this ranges from \til 30 ns\textsuperscript{-1} for the STNLLTS, \til 6 ns\textsuperscript{-1} for the STNLLNT,  to \til 0.2 ns\textsuperscript{-1} for the STLLLTS pore, akin to the initial full hydrophobic pore model and also an order of magnitude less than aquaporin water flux \cite{Borgnia1999,Zhu2004}. The amphipathic pore of aquaporin is continuously occupied by water and so does not exhibit dewetting events. For all simulated pores, as in previous simulations, protein pore stability was monitored during the simulation which is shown in figure \ref{fig:c3_3rdstab}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{./pictures/Results1/c3_3rdhole}
+\caption[Radii profiles for \textit{N=14}, 3\textsuperscript{rd} generation pores.] {Radii profiles for \texit{N=14}, 3\textsuperscript{rd} generation pores. LLL denotes STLLLTS, NLL is STNLLTS, and NLLN is the STNLLNT pore. This abbreviation is used throughout this thesis. x axis is the z axis going through the lumen of the pore with radii shown on the y.}
+\label{fig:c3_3rdhole}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=11cm]{./pictures/Results1/c3_waterflux}
+\caption[Water flux through the \textit{N=14} 3\textsuperscript{rd} generation pores.]{Water flux through the \textit{N=14} 3\textsuperscript{rd} generation pores. Water Flux profiles of water conduction through pores. Solid line indicates an 'upward' flux, dashed indicates ``downward''. Colour of pores is consistent across these figures. Shown in i, ii, and iii are simulation snapshots of stochastic dewettting, wetting and dewetting of the NLL nanopore at 22, 46, and 63 ns intervals.}
+\label{fig:c3_waterflux}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results1/c3_3rdstab}
+\caption[RMSD, RMSF, and backbone hydrogen bond count of the \textit{N=14}, 3\textsuperscript{rd} generation 14$\beta$ pores.] {RMSD, RMSF, and backbone hydrogen count of the \textit{N=14}, 3\textsuperscript{rd} generation 14$\beta$ pores. A. RMSD for all three models (colors of models consistent as before and in this figure) for C$\alpha$ (CA) and protein. C. RMSF of all three pores. C. Backbone hydrogen bond count.}
+\label{fig:c3_3rdstab}
+\end{center}
+\end{figure}
+
+
+
+\subsection{Implementing Barriers into $\alpha$-Hemolysin}
+
+A further extension of the hydrophobic barriers implement via a leucine ring constriction is used to  computationally model the motif back into the native protein, that the pore is modelled upon ($\alpha$-Hemolysin). The TM region of the protein was mutated using modeller to create a triple leucine ring within the pore (figure \ref{fig:c3_alphaseq}). Six residues were mutated on the 2$\beta$ strands on each monomer (of the heptamer) to leucine (T117L, G119L, N121L, G137L, N139L and S141L). Two other residues were mutated to smaller residues to emphasise the leucine band as a potential barrier (N123A and L135A). Simulation protocol was identical to that of the model pores mentioned previously in this chapter, however the cap domain was not simulated and the protein region was restrained using positional restraints. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3_alphaseq}
+\caption[$\alpha$-Hemolysin mutated transmembrane $\beta$-barrel region.] {$\alpha$-Hemolysin mutated transmembrane $\beta$-barrel region. Left. $\alpha$-HL barrel with residues coloured to the right hand sequence. Only inward, lumen pointing residues are shown. Right. Residues of the barrel, residues in colour are lumen facing. One letter code indicates membrane facing residues. Boxed are the six residues that are mutated to leucine, with the residues in bold cyan indicating the two residues mutated to alanine. }
+\label{fig:c3_alphaseq}
+\end{center}
+\end{figure}
+
+Within simulation, akin to the 3\textsuperscript{rd} generation pores, a ``3L'' motif in this protein pore was sufficient to exclude water from that pore region (figure \ref{fig:c3_alphaWTLLL}, C.). The introduction of the leucine ring has not decrease the constriction radius of the pore, however has moved it further down the barrel and increased it in height (mutation of L135) and is within the upper cut-off of hydrophobicity affecting confined water. Related this to flux, the $\alpha$HL-LLL pore has a flux indistinguishable to the LLL 3\textsuperscript{rd} generation pore (\til 0.2 ns\textsuperscript{-1} for both 3L pores). For \ahl\ wild type (WT) the flux is \til 19 ns\textsuperscript{-1}, which is comparable to other nanotube simulations (single walled CNT) of 17 ns\textsuperscript{-1} \cite{Hummer2001}, but is lower than other simulated \ahl\ fluxes (66 ns\textsuperscript{-1}, \cite{Wong-ekkabut2015}) in which the entire pore was modelled. This suggest that this method of forming a hydrophobic barrier could actually be transplanted into a WT $\alpha$HL pore (provided that key mutations would not affect the folding of the protein) therefore modulating its activity and flux without the use of an external adaptor protein. 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results1/c3_alphaWTLLL}
+\caption[$\alpha$-Hemolysin transmembrane barrel, radii profile, and water flux of WT and LLL region.] {$\alpha$-Hemolysin transmembrane barrel, radii profile, and water flux of WT and LLL region. A. $\alpha$HL TM region indicating leucine residues (blue) and lumen. Numbers indicate the orientation of the protein in B. B. Radii profile of WT $\alpha$-HL and LLL model. Navy stars indicate the region in which 3 leucine mutation is present. C. Water flux profiles of water conduction through pores represented in B. Solid line indicates an 'upward' flux, dashed indicates ``downward''. }
+\label{fig:c3_alphaWTLLL}
+\end{center}
+\end{figure}
+
+\newpage
+
+\section{Conclusion}
+
+
+In this chapter, I have computationally designed and simulated biomimetic protein nanopores of a stable and conductive nature akin to the biological protein pores they are based upon in a lipid bilayer. From these pores, I have also computationally transplanted a hydrophobic barrier to water and ion flux (derived from gating mechanisms in the nicotinic acetylcholine receptor and in the bacterial MscS mechanosensitive channel \cite{Beckstein2006b,Anishkin2004}) into this family of nanopores. Simulated was the transplantation of such a barrier into a biological protein pore. Thus leading to an argument that this method is a suitable method for design of motifs for protein nanopores. The designed nanopores mimic the template proteins in terms of overall nanopore stability in ca. 100 ns MD simulations in a simple phospholipid bilayer. Using these models, I have investigated the effect of size, shape, and of the hydrophobicity/hydrophilicty of the pore lining residues on water flux through the nanopores (in part using water as a proxy for ionic currents). A number of clear trends have emerged, in particular the generation of a hydrophobic barrier (along with associated stochastic wetting/dewetting behaviour \cite{Vaitheeswaran2004f,Dzubiella2004d}) when a central constriction lined by successive rings of leucine residues is engineered into the pore. To investigate this barrier in more detail, more analysis of permeation free energy landscapes will be conducted in the next chapter.
+
+Inevitably, there are methodological limitations to this study. In particular, I have not explored for all models simulated the water model employed. With the \FF\ used, the SPC model was employed, however there are other water models of differing polarisability which could be used \cite{Chaplin2001}.  It could be of interest to examine how the use of polarisable force fields \cite{Huang2014} for water and protein could affect the behaviour of a conduction in these pores. Also it will be of interest to study the effect of the aliphatic hydrogen atoms on non-polar amino acids (which are excluded in the GROMOS \FF\ used). One may also wish to question the timescale in which these simulations were conducted in relation to structure and conductivity. Based on previous simulation papers, this is a widely used simulation length on which to observe the stability of protein pores and porins. However as noted in this chapter, the possibility of instability induced by a highly-hydrophobic pore may raise the issue of whether 100 ns is long enough to observe protein stability. Regarding conduction, as previously mentioned water flux is used as a proxy for ion conduction due to the timescale and high number of simulations completed in this chapter. For these series of proteins, ion conduction does occur with a water conduction event (however in much lower numbers, \til 1-5 per 100 ns simulation (data not shown), compared to the \til 30 per 100 ns for OmpF \cite{Suenaga1998}) which is consistent with time scales of ion conduction events, thus water observation allows for a shorter simulation to observe if a pore is conductive. Also there have been studies on the computation of transport within nanopores which suggests that a change in the neighbour-list within the gromacs code is needed for accurate solute translocation \citep{Wong-Ekkabut2012}. This was tested for a simulation in this chapter, however the decrease in neighbour-list from 10 to 1 (as suggested) resulted in \til 10 fold increase in computation time. 
+
+Furthermore a difficultly arising from such pores simulated in this chapter would be (in the event of synthesising the protein pore in wet lab) protein folding due firstly, to the multiple mutations in the native protein and secondly, the introduction of a high degree of hydrophobicity to the protein itself which is known to be a driving force of globular protein folding \cite{Pace1996}. 
+
+It would also be of interest to explore possible sensitivity to the nature of the lipid bilayer in which the pore is embedded. The porin group of proteins (which the 12$\beta$ barrel pores are based upon) are mainly present in the outer membrane of gram negative bacteria, which consists of an LPS bilayer (not that of the phospholipid one simulated here) which is known to affect the gating and conduction of these porins \cite{Zeth2000}. Thus in further studies it may be of interest to investigate the influence of bilayer composition. Also relating to this area is the membrane in which the industrial sponsor uses (Oxford Nanopore Technologies) which is known to insert stable pores. However details of such membrane composition are not in the public domain. 

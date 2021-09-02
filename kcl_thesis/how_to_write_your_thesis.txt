@@ -1,0 +1,11 @@
+How to write your thesis.
+
+make a .tex file and then use texmaker to edit it.  
+
+use the build.sh script. I've alised it like this
+alias e "sh build.sh compile thesis"
+alias r "sh build.sh clean"
+
+easy enough. I've commented throughout. thesis.tex is the backbone, add in and rremove .tex there, to add in packages go to Preamble and do it in the preamble.tex file there. Most of it is laid out for common sense/me. References are made in mendeley. export as .bib. I' wrote a shell to clean it up. rm_month. have a look
+
+ 

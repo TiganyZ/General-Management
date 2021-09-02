@@ -1,0 +1,19 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces Table of energies used to calculate the Peierls potential. All values in meV. \(\Delta E_{\text {P}}^{\text {DFT}}\) values taken from \cite {Itakura2012}. \relax }}{45}{table.caption.8}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Decay relations between the initial and final sites upon relaxation of carbon intersitials around the hard core. \relax }}{49}{table.caption.9}%
+\contentsline {table}{\numberline {8.3}{\ignorespaces Table of energies leading to the zero-point energy corrected binding energy using the cluster method for simulation of dislocation-carbon interactions. \textsuperscript {a} Tight-binding quadrupolar array results, starting from a fully relaxed easy core quadrupole extended to a depth of 3b with carbon introduced into the iH1 site in the middle layer, by both dislocations. \textsuperscript {b} DFT results of Ventelon, using the same quadrupolar configuration as in \textsuperscript {a}. In both quadrupolar simulations, carbon ended up in the H1 site.\relax }}{52}{table.caption.10}%
+\contentsline {table}{\numberline {8.4}{\ignorespaces Kink-pair formation energies between DFT, and the two flavours of tight-binding used with the line-tension model .\relax }}{59}{table.caption.11}%
+\contentsline {table}{\numberline {8.5}{\ignorespaces Peierls stress of screw dislocation taken from the line tension model with the effect of the correction to the Peierls stress from quantum effects, estimated by Proville \cite {Proville2012}. DFT results are found from papers of Itakura and Krach \cite {Itakura2012,Kraych2019}, where Itakura \emph {et al.} used a DFT-derived line-tension model, and Kraych used DFT NEB calculations. \(^{*}\) corresponds to use of Itakura DFT data in this implementation of the line-tension model. \relax }}{65}{table.caption.12}%
+\contentsline {table}{\numberline {8.6}{\ignorespaces Enhancement factors to the kink nucleation rate and corresponding critical temperatures. \(c_d\) was taken as the value reached from self-consistency at T=300K, at a dislocation density of \(\rho = 10^{15}\), as seen in figure \ref {cdhardeasy}. Kink-pair nucleation rate enhancements steadily increase until concentrations at which all dislocations are decorated with carbon, in the cases of \(C_{\text {nom}} \geq 500\) appm. The critical temperatures are all well above operating temperature, so we can expect rate enhancements during operation. \relax }}{67}{table.caption.13}%
+\contentsline {table}{\numberline {8.7}{\ignorespaces Kink-pair nucleation rate in an environment of carbon using the results of the canonical \(d \text {-band}\) model, using from equations \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:kinkrate}\unskip \@@italiccorr )}} and \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:jumprate}\unskip \@@italiccorr )}} \relax }}{75}{table.caption.14}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

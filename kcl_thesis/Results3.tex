@@ -1,0 +1,369 @@
+\chapter{Electrowetting of Biomimetic Pores}
+\label{ch:RC3}
+
+This chapter is based on following publication; \\
+Electrowetting of a Hydrophobic Gate: Computational Electrophysiology of Voltage-Gating in a Biomimetic Nanopore. Trick et al, \textit{in preparation}.
+
+\vspace{10mm}
+ 
+\epigraph{{\textit{''Darling I'm a nightmare dressed like a day dream''}}}{Taylor Swift}
+
+\section{Introduction}
+
+Manipulation of hydrophobic gating within nanopore devices can be done with varying techniques such as light \cite{Vlassiouk2006}, pH \cite{Rios2011}, and pressure \cite{Smirnov2010}. Most interesting in terms of utility is via voltage-gating, which was first noted in nanopores with broken symmetry \cite{Siwy2006}, and more recently with the use of hydrophobic nanopores \cite{Powell2011}. Conically shaped nanopores with pores ranging from  of 4 to 30 nm in diameter at the narrower end and \til 500 nm at the wider end are modified with (trimethylsilyl)diazomethane prepared in 12 $\mu$m  thick polyethylene terephthalate (PET). Demonstrated in their work is that measurements of these hydrophobic nanopores do indeed undergo a reversible wetting and dewetting transition under applied voltage (previously only pressure was applied to induced a change in conduction in such pores \cite{Smirnov2010}).
+
+Experimentally, the mechanism of reversible wetting and dewetting transition is considered to be an effect of capillary condensation \cite{Sacha2006,Gomez-Monivas2003}, in which above a few nm, reversible wetting and dewetting will be stalled due to a high activation barrier for evaporation within the compartment \cite{Lee1984,Lum1997,Lum1998,Lefevre2004,Luzar2004,Husowitz2004,Smirnov2010}. Nanoscale water has differing properties to that of the bulk phase, allowing for different water densities near hydrophobic surfaces \cite{Lee1984,Doshi2005}. This difference in water density enables spontaneous evaporation. Reversible filling in the absence of a field has been seen in nanopores simulated in this thesis driven by interfacial hydrogen bonding \cite{Lee1984,Luzar1985,Daub2007}. Filling in an electric field can be attributed to the orientation of the water dipole under such a field, and a change in water density in the hydrophobic regions of the nanopores, which results in a wetting event \cite{Dzubiella2004d,Dzubiella2005,Smirnov2011}. It has been noted that this is thermodynamically favourable for a  range of nanopore diameters but may be only kinetically realistic in a small nanopore diameter \cite{Smirnov2011}. 
+
+Computationally this has been simulated by \textit{Vaitheeswaran et al} \cite{Vaitheeswaran2004f}, where conduction events were initiated and controlled in a CNT  (in a so called (6,6) CNT with a diameter of \til 10 \angstrom) in a constant electric field. Modelled theoretical hydrophobic nanopores  with two reservoirs of unequal cations have also been shown to induce wetting when the confined water undergoes strong electro-constriction \cite{Dzubiella2003x} (which has also been noted experimentally \cite{Toney1994}). Changes in the radius and length in this model gave qualitatively the same results; when the pore radius was larger than 5 \angstrom, the pore would always be in a wet state \cite{Allen2003g}. For smaller hydrophobic nanopores the electric field strength that imitates water permeation is sensitive to length and pore radius, suggestive that ion channel hydrophobicity is dependent on geometry. Further MD investigations have been conducted of wetting in cylindrical hydrophobic nanopores, with more focus on the pore radius and the electric field \cite{Dzubiella2005}. A theoretical hydrocarbon based nanopore, which is sufficiently wide to allow water infiltration but not to exceed the kinetic threshold for spontaneous water expulsion (therefore remaining filled) has also been simulated. Within this model, radius is varied to investigate water expulsion, and also a constant electric field is applied and overall wetting occurs. Characteristic water dipoles within the applied field and pore are noted in this model \cite{Vanzo2015x}.
+
+Based on the vast previous investigations it would be of interest to probe the possibility of such mechanism in the pores created in this thesis, especially the STLLLTS nanopore previously investigated to understand voltage induced wetting, and also consider other nanopores with different  dimensions (be it diameter and width of hydrophobic region). Constant electric field and computational electrophysiology (CE) simulations are used to implement voltage within the hydrophobic nanopore models. 
+
+\section{Methods}
+
+\subsection{Models \& Equilibrium Molecular Dynamics}
+
+Models simulated are formed from the same method as chapter 3. C$\alpha$ models were generated using idealized models for transmembrane $\beta$ barrels \cite{Sansom1995} and these templates were used as inputs for MODELLER 9v9 \cite{Sali1993}. Atomistic models of designed pores were converted to a CG representation using procedures described previously with a locally modified version of the MARTINI force field \cite{Bond2007}. CG MD simulations of 1 $\mu$s were used to position the nanopores within a bilayer, and at the end of the simulation the system was converted back to an atomistic system using CG2AT \cite{Stansfeld2011}. Systems were equilibrated for 1 ns. For CE simulations, this system was duplicated and minimised for simulation.
+
+\subsection{Implementing Charge Imbalance}
+
+Charge imbalance was applied by either a constant electric field \cite{Gumbart2012} or via computational electrophysiology (CE) \cite{Kutzner2011}. 
+
+\subsubsection*{Constant Electric Field}
+
+Due to the implication of the PBC and the mono-bilayer system where there is no defined compartmentalisation of systems as seen experimentally and physiologically, there is no explicit charge imbalance which would result in a potential difference across the bilayer. Therefore, the use of a constant electric field, perpendicular to the plane of the bilayer results in a potential difference. This is based on:
+
+\begin{equation}
+\Delta V \approx |\overrightarrow{E}|\cdot L_z
+\label{eq:constantfield_1}
+\end{equation}
+
+Where the change in potential difference is dependent on the field applied and the length of the box in simulation. This drives the ions and proteins directionally (z for the proteins in this chapter) \cite{Suenaga1998,Tieleman2001x} and the conductions are simulated by imposing a force on all charged atoms within the system \cite{Sachs2004,Aksimentiev2005a,Crozier2001,Wells2007}.
+
+\begin{equation}
+\overrightarrow{F} = q_i\cdot \overrightarrow{E}
+\label{eq:constantfield_2}
+\end{equation}
+
+The force exerted on each particle depends on its charge and the strength of the applied field. This method results in a gradient which is linear of the z axis of the simulation box, therefore being an approximate of experimental conductions \cite{Roux2008} and induce ion translocation \cite{Delemotte2008}. The field itself within GROMACS is assumed as a linear field rather than a varied field based on what atoms are present in the system thus is a basic approximation \cite{Apol2013}. 
+
+An electric change i.e. Q\textsubscript{1} is noted to produce an electric field in the space around itself and the field produced, exerts a force on any charge, Q\textsubscript{2}. The strength at any point is defined at the electrical force per unit charge experienced by a test charge at point P. 
+
+\begin{equation}
+\textbf{E} \equiv \textbf{F}/Q\textsubscript{t}
+\label{eq:field1}
+\end{equation} 
+
+This equation associates a vector (\textbf{E}) with each point in the system. Charge Q\textsubscript{t} may affect the surrounding charges thus E is dependent on the test charge. Rearrangement gives F = qE which in the  SI units of newtons per coulomb (N C\textsuperscript{-1}) which is equivalent to volts per meter (V m\textsuperscript{-1}) which is how the field is interpreted in simulation  (V nm\textsuperscript{-1}). Within this chapter this will range from 0.1 to 1.5 V nm\textsuperscript{-1}.
+
+\subsubsection*{Computational Electrophysiology}
+
+To simulate voltage caused by an ion asymmetry, the vacuum-buffer \cite{Delemotte2008} or the double bilayer method \cite{Sachs2004a,Dzubiella2004d,Gurtovenko2005a,Denning2008} with the implementation of an ion-swap method for longer simulations \cite{Kutzner2011} can be used. All are based on direct charge imbalance from ions within the simulation system. 
+
+Used for this chapter is the a double bilayer system which has been created from a single bilayer simulation, via the duplication and the movement (within the z plane) of the initial pdb file.  Formed is a system in which the central region (figure \ref{fig:setup_1}, C. region $\alpha$) is now enclosed to the rest of the system. 
+
+A charge imbalance is imposed to create region, $\alpha$, as a cathode or anode (and thus the $\beta$ as the opposite). An example from this piece of work is that is charge imbalance of 2 cations (779 in $\alpha$ , 781 in $\beta$  \& 780 chloride ions in each) results in a voltage difference of 0.25 V (figure \ref{fig:CE_basic}). As the system conducts and depletes an ion for the cation or anion reservoir, this is followed by a randomly selected water molecule within the corresponding region being replaced with an ion to maintain the gradient and potential throughout simulation (the CE method) \cite{Kutzner2011}. Variation in initial ion concentrations allows for variation in the potential simulated. 
+
+Within the gromacs code, and based on the theory above, the electrostatic potential ($\psi$) across a system can be computed using a double integral of charge density \cite{Apol2013}. 
+
+\begin{equation}
+\psi(z) - \psi(-\infty) = -\int_{-\infty}^{z}dz'\int_{-\infty}^{z'}\rho(z^n)dz^n/\epsilon_0
+\end{equation}
+
+in which, $\psi$ (electrostatic potential), where the position of z = -$\infty$ is far enough from the bulk phase of the system so that the field experienced is zero. This method allows for the effective splitting into separate contributions from lipids, ions and water. Firstly in each slice (approximately 200 in a box), the sum of all charges is calculated. From there, it is integrated to give the electric field within the simulation. A second integral gives the potential. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results3/setup_1}
+\caption[Set up of double bilayer system used in the computational electrophysiology simulations.] {Set up of double bilayer system used in the computational electrophysiology simulations. A. Standard bilayer system used within this thesis. B. System from A. is duplicated, original shown with pink protein. C. System is manipulated so that shown central region ($\alpha$) has a differing ion concentration to the $\beta$ region. Water is omitted for clarity.}
+\label{fig:setup_1}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results3/CE_basic}
+\caption[Visualisation of CE voltage.] {Visualisation of CE voltage. A. Plot of the potential along the z axis of the system. Grey region indicates bilayer. Blue plot is the calculated potential. Red bars indicate voltage in both regions, with the difference (0 and 0.25) being the potential difference. B. Corresponding system to scale, water molecules in cyan/white and DPPC phosphate head groups in pink. Remaining lipid chains and ions omitted for clarity.}
+\label{fig:CE_basic}
+\end{center}
+\end{figure}
+
+\subsection{System Setup \& Parameters}
+
+Atomistic simulations were performed using GROMACS version 4.6.5 \cite{VanderSpoel2013}
+ with the GROMOS96 43a1 forcefield \cite{Scott1999,Schuler2001}. Long range electrostatic interactions were treated with the Particle Mesh Ewald method \cite{Darden1993,Essmann1995} with a short range cut off of 1 nm and a Fourier spacing of 0.12 nm. The SPC model was used for water. Simulations were performed in the NPT ensemble with the temperature being maintained at 310 K with a v-rescale thermostat \cite{Bussi2007d} and a coupling constant of $\tau${$_t$} = 0.1 ps. Pressure was maintained semi-isotropically using the Parrinello-Rahman algorithm \cite{Parrinello1981} at 1 bar coupled at $\tau${$_p$} = 1 ps. The time step for integration was 2 fs with bonds constrained using the LINCS algorithm \cite{Hess1997a}. Ion concentration is 1 M for all simulations, with \til 400 lipids and \til 44,000 water molecules simulated for constant electric field, and \til 800 DPPC lipids and \til 88,000 waters within the CE simulations. Simulations were conducted for 100 ns using constant electric field and 50 ns for CE. Analysis was conducted with GROMACS, CE implemented GROMACS, MDAnalysis \cite{Michaud-Agrawal2011}, and locally written code. Water flux was calculated by counting the water molecules crossing through an x y area using the method described previously in chapter 3. Pore radii with an error estimate from simulation was calculated within an add-on of MDAnalysis \cite{Stelzl2014}. Voltage was estimated using GROMACS code, and water count was estimated using VMD locally written code.  Molecular graphic images were produced with visual molecular dynamics (VMD) \cite{Humphrey1996}.
+
+
+\section{Results \& Discussion}
+
+\subsection{Ascertaining Hydrophobic Ratios}
+
+Initial investigations into voltage induced wetting of hydrophobic nanopores requires protein nanopores of the correct diameter and height to allow for a voltage induced wetting event to be feasible. Based on models and designs from chapter 3, $\beta$ barrels with 16 and 18 $\beta$-strands were constructed with an increasing number of leucine rings within the central region of the protein, to test for a pore which was closed in terms of water flux (and also used as a measure of pore openness in this thesis). Previous calculation of the 14$\beta$-barrel pores indicate that 3 leucine residue rings are sufficient to omit water and cease conduction through the pore. For the 16 and 18 barrels, cumulative water fluxes and pore radii were evaluated for these models over the course of an equilibrium simulation (100 ns) to determine if any of the models behaved in a similar manner to that of the 14-3L pore (figure \ref{fig:ratio_fh}) with fluxes in table \ref{table:fluxes1}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results3/ratio_fh}
+\caption[Water flux and radii profiles for 14, 16 \& 18 x-L $\beta$ pores.] {Water flux and radii profiles for 14, 16 \& 18 x-L $\beta$ pores. A,C \& E. Water flux for 14, (A.), 16 (B.), \& 18 (C.) $\beta$ barrels. Within each, the number of central leucine residue rings is varied from 1 ring (1L) up to 3 rings (3L). Only upward flux is shown for clarity. B, D \& F. Radius profiles for corresponding pores in A, C \& E. Colours are consistent with flux profiles. Dashed line indicates radius of water (1.9 \angstrom). A \& B results are repeated from previous chapters for comparison.}
+\label{fig:ratio_fh}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\centering % centering table
+\begin{tabular}{ |c|c| } 
+ \hline
+ Pore model & Flux (ns\textsuperscript{-1}) \\  
+ \hline
+ 16-3L & 58.9  \\
+ 16-4L & 1.7  \\
+ 16-5L & 0.3  \\
+ 16-6L & 1.3  \\
+ 16-7L & 1.1  \\
+ \hline
+ 18-6L & 12.2  \\
+ 18-7L & 43.2  \\
+ 18-8L & 1.6  \\
+ \hline
+ \end{tabular}
+\caption[Fluxes through 16\bee\ \& 18\bee\ barrel hybrid pores.] {Fluxes through 16\bee\ \& 18\bee\ barrel hybrid pores under equilibrium simulation conditions. Pores with the lowest flux are considered for further simulation, larger fluxes calculated for 18$\beta$ 6 \& 7 L due to longer water expulsion from the pore. }
+\label{table:fluxes1}
+\end{table}
+
+The outcome of the equilibrium simulations in comparison to the 14\bee\ pore (A \& B in figure \ref{fig:ratio_fh}), indicate that within the wider pores with the varied height-radius ratio (aspect ratio), there is a ``leucine cut-off'' in which a hydrophobic plug and no water flux is present. Due to lack of free energy calculations on these pores, it is unknown if they are indeed true hydrophobic barriers or a limitation of simulation timescale. However it is of interest to look at these models for the purpose of understanding how voltage can overcome hydrophobicity. Functionally, all pores have a radius that is sufficient to allow water transport but what can be observed from the fluxes in table \ref{table:fluxes1}, water flux does vary in simulation with minimal fluxes for the 16-5L model \& 18-8L model noted.  The 14-3L, 16-5L and 18-8L pores are investigated for voltage induced breaking of the hydrophobic gate via simulation. Images of all three protein pores are shown (figure \ref{fig:ratio}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results3/ratio}
+\caption[Model pores simulated under voltage.] {Model pores simulated under voltage, using a constant electric field and CE. From investigations under equilibrium, the three pores are shown (backbone in cartoon. Inward, lumen facing residues only shown, in VdW representation) which are simulated. Pores are denoted by size (14, 16 or 18) and the number of leucine 'rings' (3, 5 or 8) in this case.}
+\label{fig:ratio}
+\end{center}
+\end{figure}
+
+\subsection{14$\beta$ Pore}
+
+\subsubsection*{Constant Electric Field Simulations}
+
+Voltage induced wetting of the hydrophobic hybrid 14-3L $\beta$ barrel pore was conducted with both voltage simulation methods. A constant electric field was used initially to test the system with a known computational method, which has been previously used to investigate hydrophobic barriers \cite{Dzubiella2005,Bratko2007,Vanzo2015x,Winarto2015}. Two states are detected in the nanopore with application of a lower, and higher electric field (figure \ref{fig:electro}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=11.5cm]{./pictures/Results3/electro}
+\caption[Constant electric field filling of 14-3L$\beta$ pore.] {Constant electric field filling of 14-3L$\beta$ pore. A. Dry, closed (no water within leucine region) pore. B. Wet, open pore. Water shown as VdW spheres and protein in cartoon with residues coloured to hydrophobic colouring scheme. Lipids and ions omitted. States are defined visually, but also by the number of waters within the pore. C. Plot of constant electric field voltage against the number of waters within the pore. Voltage calculated from gromacs \cite{VanderSpoel2013}, by measuring the voltage difference between the bilayer head groups. Water count is that of the number of waters within the pore volume, within the leucine region. Each point represents a separate simulation of differing constant electric field inputs. \textit{A \& B} indicates regions of the plot which correspond to A. and B. from the dry to wet transition. Curve fitted using a sigmoid function within matplotlib \cite{Hunter2007}, V\textsubscript{\sfrac{1}{2}} \til 0.77. Error is calculated from standard error of the mean from water count within the pore.}
+\label{fig:electro}
+\end{center}
+\end{figure}
+
+Water filling is seen within the nanopore upon application of higher constant electric fields (figure \ref{fig:electro}, B. and C.), therefore creating two discrete states, interpreted as the voltage induced break of the hydrophobic barrier. Wetting is induced when a voltage of V\textsubscript{\sfrac{1}{2}} \til 0.8 V is applied across the bilayer. Higher errors can be noted for transient breaks (between 0.7 \& 0.85 V) where the pore does not become water conducting at the start of the  simulation unlike the higher voltages, lower error values which break within 2 ns.
+
+\subsubsection{Computational Electrophysiology}
+
+Within the set up of this method, an arbitrary number of ions (cation or anions), are ``swapped'' from the $\alpha$ to the $\beta$ regions (figure \ref{fig:setup_1}) to create the voltage. Initially, an ion swap of 18 cations (1187 and 1205 within the respective regions) was simulated to implement a voltage. This created a voltage of 1.2 V through the simulation box (representation of a lower measured voltage in figure \ref{fig:CE_basic}). Under this potential, conduction breaks were noted in the simulation from dry non-conductive, to water and ion conducting pores, akin to the higher voltage breaks seen with the constant electric field.
+
+
+\subsubsection{Water}
+
+A more detailed inspection is required into the conduction breaking event of the pores under 1.2 V, specifically the initiation of the breakage event. Within the nanopore simulations conducted under applied field (images not shown) and within this CE breakage, the barrier is initially broken by water entry into the hydrophobic region of the pore (figure \ref{fig:water_fill}) rather than by a Coulombic ion event as seen in newer simulations of a potassium channel \cite{Kopfer2014a}. Previously hypothesised from crystal structures, experiments, and simulations \cite{Zhou2003,Domene2003,Miller2001,Morais-Cabral2001} is the conduction event of water-ion-water within the selectivity filter of the K\textsuperscript{+} channel under a constant electric field. However, in the newer, CE method, a direct Coulomb knock-on is obtained in which no water is present in the ion conduction event within the selectivity filter. It would be of interest thus to observe if changes occur in water conduction within nanopores and hydrophobic pores of these models with comparison to simulations of hydrophobic nanopore models under a constant electric field \cite{Dzubiella2005}.  The water and ion flow through the pores can be surveyed in more detail in figure \ref{fig:14_waterfill}. Within these pores, water breaks the hydrophobic barrier first, and is then followed by multiple ion conduction events.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{./pictures/Results3/water_fill}
+\caption[Water entry in the 14-3L$\beta$ at 1.2 V.] {Water entry in the 14-3L$\beta$ at 1.2 V. Ions and lipid omitted for clarity. Protein shown in a surface representation. A. Pore at 0.3 ns. B. First water chain transverses leucine barrier region forming a water wire (blue, middle of the pore) at 0.32 ns. C. Ordered and continued filling of the pore at 0.33 ns.}
+\label{fig:water_fill}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{./pictures/Results3/14_waterfill}
+\caption[Water filling of 14-3L$\beta$ pore at 1.2 V.] {Water filling of 14-3L$\beta$ pore at 1.2 V. A. Plot of the z position of a particle (water or ion species) over time. Dashed lines indicate average z position of the phosphate P8 atom to represent the lipid boundaries. White region until 0.3 ns indicates unfilled leucine region shown in figure \ref{fig:water_fill}, A.  B. Extension of A up to 10 ns. Colours are consistent with A.}
+\label{fig:14_waterfill}
+\end{center}
+\end{figure}
+
+Water entry (with and without a voltage) into the hydrophobic regions of theoretical nanopores and CNT's has been studied extensively, however most studies are based on the older, constant field method and not on a potential difference created from ion asymmetry. Therefore, it would be of interest to verify is the same mechanism is also present in these protein pores.  Previous simulations of water and pores focus upon theoretical hydrophobic pores \cite{Beckstein2001,Allen2003g} and CNT's \cite{Hummer2001,Waghe2002c} which both exhibit radius/length dependent filling of the pore, and like this pore also exhibit water entry, before ion entry into the hydrophobic region.
+
+Water densities and ordering (figure \ref{fig:water_order}) within the ion-induced CE voltage are in agreement with other electro-simulation pore studies \cite{Dzubiella2005,Delemotte2012,Vernier2006a}. Within the no-voltage conducing pores previously simulated in this thesis, no orientation is noted within the water dipole moment, however orientation is seen within conduction events under voltage. Orientated water is noted in OmpF and OmpC porins \cite{Acosta2015} and within the aquaporin \cite{DeGroot2001,Tajkhorshid2002} which has been studied in more detail \cite{Gravelle2013,Tang2014c,Han2015}. The highly charged constriction of OmpF and the half helical dipoles with the Aqp1 (aquaporin) structure are assumed to influence the water structure within the pore. Hence in this simulation, the simulated voltage is influencing water in a similar same manner. Furthermore, there is also good agreement of the water and phosphate densities through the system as seen in other studies \cite{Ziegler2008a}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results3/water_order}
+\caption[Water ordering within 14-3L$\beta$ pore at 1.2 V.] {Water ordering within 14-3L$\beta$ pore at 1.2 V. A. Double x-axis plot of water order (cosine of water dipole moment, navy) and phosphate density (dark red) through the double bilayer system B. Cosine  of the water dipole moment through a single bilayer of three systems, the CE 1.2 V (navy), no-voltage equilibrium system of conducting STNLNTS pore (L, pink), and conducting STNQNTS pore (Q, green) from chapter 3.}
+\label{fig:water_order}
+\end{center}
+\end{figure}  
+
+
+\subsection*{Reversibility of Electrowetting}
+
+A decrease in voltage below the threshold value of opening has been shown to expel water from hydrophobic solid state nanopores \cite{Powell2011}, computational models \cite{Vanzo2015x}, and closed electropores \cite{Vernier2006,Delemotte2012,Hu2013c}. To validate this hypothesis with this system, the CE element of the simulation was removed. After an ion permeation even, an ion swap would not occur and thus deplete the voltage (previously used method to simulate voltage \cite{Dzubiella2003x,Vernier2006}). After a number of ion conduction events, there is a decrease in voltage and the system should return to an equilibrium. This was conducted for 14$\beta$ pore starting at 1.2 V (figure \ref{fig:14_novolt}). 
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results3/14_novolt}
+\caption[CE system with depleted voltage from 1.2 V.] {CE system with depleted voltage from 1.2 V. A. Cartoon and VdW representation of the first 5 ns of simulation. Ions and lipids omitted for clarity. i. System at 0 ns in which both pores are saturated with water. ii. 1 ns into simulation in which bottom, purple pore is no longer water filled. iii. 3 ns, top yellow pore (as well as bottom pore) are both no longer filled. B. Graphical representation of drying. Top plot (i) corresponds to the yellow, top pore and (ii) to the purple. Each point represents the z position of either water, chloride or sodium ion within the indicated z plane. Black dashes indicate average DPPC phosphate position.}
+\label{fig:14_novolt}
+\end{center}
+\end{figure}  
+
+Within this system, a drying transition occurs for both pores within 2.5 ns of the simulation as the voltage decreases. For the remainder of the simulation they remain in a dry state (data not shown, simulation 50 ns in length). Ion conduction events occur in the direction of the chloride ions migrating to the anode region and \textit{vice versa}. Thus, in agreement with other hydrophobic pores and electroporation studies in which without voltage, water is expelled \cite{Vernier2006a,Powell2011}. Dewetting of nanopores is thermodynamically favourable but is only predicted to be feasible kinetically in nanopores with a diameters of several nanometers \cite{Leung2003,Hummer2001,Beckstein2003}, which this pore falls into. It has been noted for solid state pores with a diameter greater than 20 nm that there is no expulsion of water after water-input stimulus (be it pressure, or field) with surface hydrophobicity restored. These pores are thought to be kinetically stalled due to a high activation barrier for dewetting \cite{Smirnov2010,Lum1998,Lum1997,Luzar2004,Lee1984,Smirnov2011}.
+
+\subsection*{Range of Voltages}
+
+With the establishment that this method is viable for simulation of hydrophobic gating within the 14-3L pore, simulations were conducted with varying voltages, akin to the constant electric field simulations. As anticipated, there is a similar trend to that of the constant electric field in the transition from a dry pore to a wet pore creating two differing pore states (figure \ref{fig:14CE}). The voltage required for a transition between the dry and wet pore states is higher using this method, as opposed to the constant electric field method, with the transition voltage of V\textsubscript{\sfrac{1}{2}} \til 1 V. Based on the difference of the two methods, this discrepancy is not significant as transition voltages to experimental values are firstly highly ranged and also a factor out, which are to be discussed further on. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=13cm]{./pictures/Results3/14CE}
+\caption[CE simulations of the 14-3L $\beta$ pore at multiple voltages.] {CE simulations of the 14-3L $\beta$ pore at multiple voltages. Plot of the voltage (calculated within gromacs, \cite{VanderSpoel2013}) with the water count. As with figure \ref{fig:electro}, states are defined by number of waters within the leucine region of the pore, with the dry pores being at the low voltages and wet at the high voltages.  Curve fitted using a sigmoid function within matplotlib \cite{Hunter2007}, V\textsubscript{\sfrac{1}{2}} \til 0.97. Error is calculated from standard error of the mean from water count within the pore. Multiple points at each voltage position indicate conductive values for each of the pores (2 pores per simulation). 1 dot indicates only one stable conductive pore in simulation.}
+\label{fig:14CE}
+\end{center}
+\end{figure}
+
+
+From the ion conduction events through the pores (figure \ref{fig:ion_cond}), the current and conductance is calculated for the  open pores (table \ref{table:14conduct}). The experimentally calculated conductance of $\alpha$-HL is 720 pS \cite{Wong2006}, which is within range of the calculated values and relates to the size of the pore. However, variance in the protein structure under high voltages and the small time scale used could present an inaccurate estimate.  Related conductance can be compared with the OmpF porin with a conductance of 800 pS, and PhoE with a conductance of 600 pS \cite{Cowan1992b}. In a model nanopore of 16$\beta$ based on its size, conductance is predicted to be 480 pS \cite{Sansom1995}. All are comparable and reasonable values to this non-biological pore. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=9cm]{./pictures/Results3/ion_cond}
+\caption[Ion conductions through the 14-3L pores at 1.2 V.] {Ion conductions through the 14-3L pores at 1.2 V. Shown are the difference in ion fluxes (up flux minus down flux) for both \Na\ and \Cl\ through both of the conducting pores. Chloride selectivity shall be discussed later on.}
+\label{fig:ion_cond}
+\end{center}
+\end{figure}
+
+\begin{table}[H]
+\centering % centering table
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Voltage (V) & Current (pA) & Conductance (pS) \\  
+ \hline
+ 1.00 & 610 & 610 \\
+ 1.00 & 200 & 200 \\
+ 1.11 & 250 & 230 \\
+ 1.16 & 850 & 730 \\
+ 1.20 & 580 & 480 \\
+ 1.20 & 800 & 670 \\
+ 1.49 & 440 & 300 \\
+ \hline
+ \end{tabular}
+\caption{Current and conductances of 14-3L$\beta$ pore under varying CE voltage.} 
+\label{table:14conduct}
+\end{table}
+
+\subsection*{Lipid Stability}
+
+The effect of voltage on membranes has been looked at widely experimentally and computationally using the constant electric field \cite{Abiror1979,Gumbart2012,Tieleman2004,Ziegler2008a} and basic asymmetric ion concentrations \cite{Vernier2006a} with high fields known to cause destabilisation and electroporation  \cite{Chernomordik1983,Nuccitelli2006,Weaver1981}. 
+
+To assess stability of the lipid membrane, densities and bilayer thicknesses are assessed (figure \ref{fig:14_lipid}). The data suggests that under higher voltages  (1.49 V is the maximum simulated), induced via the CE method, the bilayer is still stable in terms of density, however is showing characteristic membrane thinning. This has been seen within droplet interface bilayers (DIB) where an applied potential difference ($\pm$ 100 mV) caused thinning of 0.44 \AA\ within a DPhPC/hexadecane DIB \cite{Gross2011a} and is also seen in simulation \cite{Hu2013c}. With longer simulations at higher voltages, electropores may occur.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results3/14_lipid}
+\caption[Lipid density and thickness of CE 14-3L$\beta$ systems.] {Lipid density and thickness of CE 14-3L$\beta$ systems. A. DPPC density through the simulation system at two differing voltages. Shaded grey region represents bilayer region of the box. B. Bilayer thickness of both leaflets. Colours correspond to A. Dashed indicates lower leaflet, calculated by plotting average phosphate distance difference through simulation. Difference in thickness between the two bilayers at the end of simulation is \til 2 \angstrom.}
+\label{fig:14_lipid}
+\end{center}
+\end{figure}  
+
+\subsection*{Protein Stability}
+
+To determine the stability of the biomimetic pores under the higher range of voltages (previously simulation only goes up to 0.3 V \cite{Kutzner2011} for PorB and 0.2 V nm\textsuperscript{-1} for gramicidin A \cite{Siu2007}, which in simulation, both were considered stable) the structure in terms of radius is used as a measure. In figure \ref{fig:14CE}, it can be noted that as the voltage increases, the number of functional pores (white dots within the figure) decreases from two to one in some of the cases. In simulations at lower voltages, both pores remain in a functional state (open) however with an increase in voltage, pore closure is observed (figure \ref{fig:stability_14}). Complete pore collapse is not seen, however a change in the lumen constriction results in a smaller pore and hence a decrease in water flux. This regulation of flux is noted as a possible form of gating in the VDAC anion pore \cite{Zachariae2012b}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\linewidth]{./pictures/Results3/stability_14}
+\caption[Radius and flux under voltage of the 14-3L pore.] {Radius and flux under voltage of the 14-3L pore. A. Cartoon representation and surface of both 14-3L proteins (1 and 2) in the double bilayer CE system at 1.1 V. B. Water flux through pores 1 and 2 mentioned in A. Number corresponds to the protein. C. Radius of proteins 1 and 2. Dashed lined indicates radius of a water molecule.}
+\label{fig:stability_14}
+\end{center}
+\end{figure}  
+
+Following from the electric field simulations and the utility of the CE method to control voltage, the CE method will now be used as the simulation technique to evaluate the possible wetting and dewetting events of other pores (figure \ref{fig:ratio}, 16-5L and 18-8L$\beta$).
+
+\subsection{16 \& 18$\beta$ Pore}
+\subsection*{Water and Ion Conduction}
+
+As simulated under equilibrium conditions earlier in this chapter, both the 16-5L and 18-8L pores have the ability to expel water in simulation (100 ns). Thus, akin to the 14$\beta$ pores, they are simulated under the CE methodology to investigate whether they indeed undergo reversible wetting and dewetting. This is conducted in the same manner as the 14$\beta$ model with water count in the pore accounting for the state of the pore in varying voltages (figure \ref{fig:1618_CE}). 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results3/1618_CE}
+\caption[CE simulations of the 16-5L and 18-8L$\beta$ pores at multiple voltages.] {CE simulations of the 16-5L and 18-8L$\beta$ pores at multiple voltages. Plot of the voltage (calculated within gromacs, \cite{VanderSpoel2013}) with the water count (16 in squares, 18 in triangles). As with figure \ref{fig:electro}, states are defined by number of waters within the leucine region of the pore, with the dry pores being at the low voltages and wet at the high. Line fitted using matplotlib \cite{Hunter2007}. Grey region indicates voltages that resulted in pore formation within the DPPC bilayer. Error is calculated from standard error of the mean from water count within the pore. Multiple points at each voltage position indicate conductive values for each of the pores (2 pores per simulation).}
+\label{fig:1618_CE}
+\end{center}
+\end{figure}
+
+
+Unlike the smaller, 14-3L $\beta$ pore, only one dry state is present under varying voltages for both sized models. Additional higher voltages are used to test whether this could be the limiting aspect. Resultant from the high voltages used (indicated as grey region in figure \ref{fig:1618_CE}) is the electroporation of the bilayer and no conduction is observed through the respective pores. This has been seen in simulations of Gramcidin A in DMPC \cite{Siu2007}, in which electropores were formed with and without the protein at a field strength of 0.35 V nm\textsuperscript{-1} (equivalent to \til 1.4 V across the DMPC,  thickness of \til 40 \AA\ \cite{Tristram-Nagle2002}).
+
+\subsection*{Protein and Lipid Stability}
+
+To determine the stability of these pores under these (even) higher voltages, the radius and RMSD is considered. From figure \ref{fig:stability_18}, in contrast to the conducting 14-3L $\beta$ pore, the protein deformation and stability are more pronounced in both these larger pores.  Deformation is apparent in the strand positioning across the pore lumen and also an increasing RMSD for both ranges of voltage. This could be due to the field strength or the `high' hydrophobicity of the protein pore, intrinsically acting to destabilise the barrel. The apparent instability could be accountable for the lack of a break and hence a conduction event. However noted before, both pores are of a radius which is conducting, even with the protein destabilisation. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results3/stability_18}
+\caption[Stability of 18-8L$\beta$ pores under CE voltage.] {Stability of 18-8L$\beta$ pores under CE voltage. A. Overlay of cartoon of both bilayer pores in simulations under 1.25 V and 3.33 V. B. RMSD of pores in figure A with voltages and number indicating the two pores within a simulation. C. Radius of pores. Colours correspond to figures A and B.}
+\label{fig:stability_18}
+\end{center}
+\end{figure}
+
+The increased voltages used to try to create a wetting transition in these pores can be viewed also in terms of membrane thickness (figure \ref{fig:thickness}). The bilayer thickness is shown to decrease with a higher voltage, resulting in a thinner bilayer as seen before with the conducting 14$\beta$ pore, with a similar change in thickness noted between the ``low'' and ``high'' voltage bilayers, which also occurs within these simulated models. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=12cm]{./pictures/Results3/thickness}
+\caption[DPPC Thickness under CE voltage for 16-5L$\beta$ pore.] {DPPC Thickness under CE voltage for 16-5L$\beta$ pore. Bilayer thickness of both leaflets, dashed indicates lower membrane within simulation box. Calculated from the average phosphate P8 distances through simulation. Difference in thickness between the two bilayers of \til 2 \angstrom.}
+\label{fig:thickness}
+\end{center}
+\end{figure}
+
+As previously demonstrated, higher voltages induce electroporation events within the bilayer. A more detailed view of this is to look at bilayer deformation in relation to the densities of the protein and the bilayer (figure \ref{fig:bilayer_16_15}).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{./pictures/Results3/bilayer_16_15}
+\caption[Lipid and 16-5L$\beta$ pore density at high voltage (2.5 V).] {Lipid and 16-5L$\beta$ pore density at high voltage (2.5 V). A \& B. Density is of the membrane and of the protein (yellow circle) looking down the z coordinate at 0 ns (A.) and 50 ns (B.). Electropore formation is towards the top right and bottom right regions of B. C. Representation of electroporation of the bilayer. Ions are shown as blue and red spheres (Cl\textsuperscript{-} \& Na\textsuperscript{+}), water as transparent cyan and DPPC in grey surface.}
+\label{fig:bilayer_16_15}
+\end{center}
+\end{figure}
+
+Viewed from the density and pore structure is that of a characteristic electropore forming in the bilayer. Comparable to this are MD and electric field simulations on the water conduction pathway through gramicidin A in a DMPC bilayer. At high field strengths, there was the formation of electropores both near and far to that of the protein \cite{Siu2007}. However, the protein is shown to have stabilised the membrane close to it, up to distances of 20 to 30 \AA\ from it. This could also be a form of stabilisation in this pore, explaining why the electropore forms at the furthest distance to the protein at the PBC.
+
+Extensive simulation studies have been conducted showing pore formation within constant electric fields and with the application of mechanical stress in phospholipid bilayers \cite{Tieleman2003} of which, the molecular basis is described in much detail \cite{Tieleman2004,Vernier2007}. It is suggested from many a simulation, pore formation is driven by the electric field induced rearrangements and realignments of the water dipoles and charges at the membrane-water interface be it their dipoles at the water-liquid/water-vapour interface into an more energetically favourable configuration \cite{Vernier2006a,Tokman2013}. The most likely candidate for the initiation of pore formation in this case is the water and head group dipoles as well as the enthalpy and entropic contributions at the membrane interface \cite{Marrink1993,Saiz2002}. Emphasis on the interface of the water dipole orientation and the charge density gradients during pore initiation have shown to be a factor \cite{Tieleman2003,Tieleman2004,Vernier2006} therefore provide a sequence of pore formation events that are apparent across many bilayer systems \cite{Tarek2005,Tieleman2003,Tieleman2004,Vernier2006,Polak2013}.
+
+Electropores have been simulated and formed at \til 3.1 V membrane potential in DOPC bilayers under double bilayer conditions \cite{Vernier2006a}, and varying minimum pore forming values have been established for phospholipid of varying tail lengths \cite{Vernier2007}. A field of 280 mV nm\textsuperscript{-1} has been shown to induce pores in DPPC, with higher fields (380 mV nm\textsuperscript{-1}) reported for DOPC, with values corresponding to the thickness of the bilayer. In comparison to the breaking voltages seen for the 16 and 18$\beta$ pores within this study (2.1 V break) with a bilayer thickness of between 40 to 42 \angstrom, all values simulated are higher than physiological recordings be it formation or pores on a black lipid membrane (0.25 - 0.5 V) \cite{Melikov2001}. A higher voltage is considered for these types of simulation due to the surface area under a potential. Hence for electropores to occur in simulation, one must either increase the simulated area or simulation time (computationally infeasible) or by increasing transmembrane potential \cite{Chernomordik1983,Nuccitelli2006,Weaver1981} which has been used in simulations in this thesis. It has been shown that pore formation induced at higher voltages in simulation still show the same characteristics as those seen experimentally \cite{Tieleman2004}. 
+
+Experimental evidence indicates that living cells in external fields have limited formation of conductive pores to a maximum of 1.5 V \cite{Frey2006,Marszalek1990,Tanaka1986}. However, in MD all values appear to be higher \cite{Gurtovenko2005,Tarek2005,Tieleman2004,Vernier2006,Polak2013a}. Therefore, simulation can be used to assess the breaking point of hydrophobicity, however the breaking points may be higher as indicated from electroporation values. This also limits the lipid scaffold to an upper value. 
+
+DPPC breaks and forms electropores at 2.2 V \cite{Polak2013}, via a constant electric field, and at 2.1 V within this chapter, under a CE voltage. Once initiated, the pores become effectively hydrophilic, \cite{Abiror1979,Glaser1988}, with phospholipid head group rearrangement along the water pathway, in a number of nanoseconds \cite{Sugar1984,Weaver1984x}, which is present in the electropores formed in the high voltage protein-lipid simulations. Ion conduction events through the electropore have also been noted in other studies \cite{Vernier2006a}. 
+
+\section{Conclusion}
+
+\subsection{Hydrophobicity and Water}
+
+Within this chapter, it is has been shown that electrowetting of a hydrophobic gate within a $\beta$-barrel nanopore is possible in simulation. Also based on current estimates, a larger barrier (be it in the 16-5L and 18-8L pore models) would require a higher membrane potential to break, which unfortunately due to the bilayer was not possible with this set-up. Interestingly, looking at the water properties within the hydrophobic region here, they have similarities to other proteins with hydrophobicity under a voltage, for example the simulations of MscS \cite{Spronk2006}. The structure initially indicates an open protein pore, however with similar features to that of a hydrophobic gating mechanism. Simulations with a constant electric field were conducted on the MscS protein in a lipid bilayer in which current and water flow through the pore was visualized through the channel with comparable values to experiments. No current electric field simulations resulted in an occluded, dehydrated pore \cite{Sotomayor2007}. Lateral pressure applied in simulation resulted in a higher conducting pore and thus could be used in combination with this method to measure conductance events.  Various water models and wetting energies of the hydrophobic pores of mechanosensitive channels were conducted \cite{Anishkin2010c}. Hydrophobic regions have also been noted in the TWIK channel  \cite{Aryal2014g} and nAChR \cite{Wang2008}. Interestingly to this study is the \Cl\ selectivity of the pores under voltage. This has not been noted in other hydrophobic conducting pore studies thus selectivity remains elusive. Within this thesis, it has been shown that the 14-3L has a similar barrier to \Cl\ and \Na\ (chapter 4, free energy profile) therefore it is expected to be selective for both under a biasing potential. With further investigative simulations using varying anions and differing water models, an insight can be given as to their effect. However remains questionable in this thesis.
+
+Based on these hydrophobic models it would be of interest to be able to acquire an `aspect ratio' of hydrophobic length/width for an estimate into how much voltage is needed to break a certain degree of hydrophobicity. For example, a protein with a certain degree of hydrophobicity or a hydrophobically modified solid state nanopore, akin to those built in \cite{Powell2011} it would be beneficial to predict how much of the solid state pore is chemically modified. An initial state to this could be the breaking of the larger pores, to establish that this method is indeed correct for these pores. This may be conducted using a lipid with a higher voltage capacitance, as shown in the higher breakage points of ester and ether forms of DPhPC (2.7 V and 3.4 V in simulation) \cite{Polak2013} or a possible scaling down of the models. 
+
+Water ordering is a critical part of hydrophobic wetting under voltage. In hypothetical models, simulations have shown intermittent filling above the critical radius, R\textsubscript{c}, for a model hydrophobic nanopore under equilibrium conditions. Below the radius, filling was induced (into what was a 'dry' pore) with the application of an electric field generated by an ionic imbalance with the simulation which is replicated in the simulations presented here. Within the newly wetted region, the bulk water properties varied, to double of the mean calculated and a noted decrease in the dielectric permittivity due to variations in the hydrogen bonding network in water \cite{Dzubiella2005}. Bulk, dielectric and hydrogen bonding variations within the pores have not been assessed but assuming the same breaking trend, would be expected to display similar properties. A more physical chemistry approach could be taken with such models to assess such properties.
+
+Field induced wetting of hydrocarbon like nanopores (separated at distances from 9 to 40 \angstrom) also are shown to have a threshold break with the wetting pattern dependent on field direction, with a field parallel to the pore axis resulting in a wetting event (perpendicular fields resulted in no water-events through the pore region) \cite{Bratko2007}.  However, fields induced perpendicular to the water surface edge enhance the evaporation \cite{Okuno2009}. Direction of the electric field and the roughness of the surface results in the directional pulling of water \cite{Yen2012a}. Thus, it may be of interest to other possible pore models to consider the directionality of the field and thus, the possibility of an off-center field which may enhance wetting or allow a different wetting pattern with differing protein functionality. This has also been noted in solid state hydrophobic nanopores, from the work noted in \cite{Smirnov2011a}. Hypothesised is the initial breaking factor which wets these pores, be it a menisci overlap event due to an increase in water curvature at the water-vapour-hydrophobic interface or a pure electrowetting event in which the position of the menisci migrate towards the hydrophobic region (within a 100 nm diameter pore) \cite{Smirnov2011}. For the water event here, due to the small size of the pore it is unclear which event is allowing the water initiation. This may be more clearly shown in larger pores if simulation conditions can be formed to allow such an event. 
+
+Within a CNT pore model, a 8.1 \AA\ diameter (6,6) CNT is shown to fill under an electric field \cite{Vaitheeswaran2004f}, akin to the 14$\beta$ pore in this study with its larger diameter. Energy of transfer depends on the water-tube interaction potential, Hence, the potential of a water-hydrophobic amino acid may be of a consideration to the cost of wetting and transfer to this system. Also under an applied electric field, the liquid to pore-liquid (`ice' due to its ordered hydrogen bonding) transition has been simulated. Seen in the lumen of (7,7), 9.3 \AA\ diameter and (10,10) > 1.1 \AA\ diameter CNTs,  with an increase the lifetime of the hydrogen bonds within the larger pores. This may indicate the initial equilibrium de-wetting events in which the larger pores, resulting in a slower de-wetting transition \cite{Winarto2015}. This is also seen in equilibrium systems in this chapter (figure \ref{fig:ratio_fh} for the 16 and 18 models which displayed slower initial dewetting). Within the applied field, water dipoles are shown to direct themselves in a parallel direction to the pore which is observed in the electropores from this chapter. Also from simulation, ion dependence is analysed in a CNT model with an applied field simulation with varying ionic concentration. This results in no change of the water initiation within the CNT \cite{Kofinger2008}. As a result, the ionic concentration used in these simulations would not affect the water initiation events, which have also been simulated and analysed in the applied field method of the work in this chapter, with no change in the water initiation event. However, noted in \cite{Innes2015}, varying salt concentrations were used for transport through modified solid state hydrophobic nanopores. Different gating was noted with differing ion concentration.
+ 
+Water entry into certain CNT's is shown to be thermodynamically favourable. The free energy decreases in a filled nanopore state to an unfilled one \cite{Lu2004,Pascal2011}. The driving force changes with a diameter change within the nanopore. Filling is shown to be entropically driven in a small diameter tube due to the increase in transitions and rotations of the water within the confined pore compared to that of the bulk water.  Also hydrogen bonding in the larger diameter CNT's impose a favourable enthalpic contributions to the system due to a rigid hydrogen bonding network within the pore lumen which may be transferable to the energetics of water entry into the model pores in this thesis. Such studies may be conducted with the pores created in this thesis. Water confined in hydrophilic `SCNT's' (silicon carbide nanotubes) show the same filling trend to that of the hydrophobic form. Water molecules within SCNT's have structures and properties that resemble those in the hydrophobic single-walled carbon nanotube since both are controlled by the confinement and geometry allowed within the lumen of the pore \cite{Yang2011}. Hence it may be expanded that the filling events noted in these nanotubes, solid state models and the protein models in this thesis may all be consequently analysed and theorised based on a geometry-confinement assumption as well as chemical character. 
+
+Shape is also an important factor when considering water translocation, as shown within the various shaped pores within this thesis, the theorised hourglass shape of aquaporins \cite{Gravelle2013} and water flow rates within CNT is varied by the shape of the system and the field applied to the system \cite{Wang2011}. Also functionality, with functionalised CNT's and graphene sheets \cite{Striolo2006} and also more complicated CNT junction shapes \cite{Tu2009} and modelled charge regions within a CNT \cite{Lu2013f} may be of interest in further voltage simulations under this method to establish a correct water-entry route and conductivity through the pores. 
+
+\subsection{Bilayers}
+
+
+The mechanism of biological membrane electroporation was first hypothesised for lipid bilayers in 1979 \cite{Abiror1979}, with varying simulation methods used to model the breakdown of the bilayer itself. With lipid bilayers, a constant field method has been shown computationally to accurately study bilayers and pore initiation events \cite{Gumbart2012}. Compartmentalised ion simulations have also been performed \cite{Vernier2006a}, however not with the ion-swap method used in this chapter, thus longer timescale simulations can be produced with the depletion of voltage. Physiologically, it is known that electroporation can also occur in a bilayer, when a cell is exposed to a long electrical pulse (ms) or a low AC signal (Hz to kHz) In this case, the energy is dissipated to the membrane, which has a capacity for charging \cite{Cole1937}. Once capacitance is reached, the energy is dissipated in the formation of pores. Thus, in the double bilayers under low voltage in this chapter, we may see electropores in simulation but we would have to simulate for very long computational time scales, which is not feasible at this moment in time. Therefore, higher voltages have been used in this, and many other studies to observe such defects. 
+
+Again, akin to the hydrophobic pores under voltage, water in the newly formed electropores in this, and other findings are found to be orientated to the voltage (data not shown) \cite{Vernier2007,Hu2013c}. Previous simulations have shown that the pore is unstable if the field is returned to zero before the walls of the pore are fully assembled by head group reorientation, therefore a simulation of sufficient length is needed. This control was not conducted with the electropores formed in this chapter, however it may be of interest to conduct in the future under this method and with varying lipid head and tail groups.
+
+Simulations with voltage have also been conducted on asymmetric bilayer systems \cite{Marrink1993,Saiz2002}. In an asymmetric bilayer, the water dipole orientation is reinforced at the more positive side of the membrane (POPS and POPC compositions), thus directional pores are formed depending on the lipid composition. In an asymmetryic DOPS:DOPC bilayer, it was noted to break at an applied field of -450 mV nm\textsuperscript{-1} (which regarding bilayer thickness corresponds to \til -3.4 V through the membrane) \cite{Vernier2006b} which is higher than the values calculated in this thesis and is lipid-side dependent \cite{Gurtovenko2014a}. This may be of interest if trying to simulate voltage dependent proteins under asymmetric lipid compositions.
+
+More to note for this system are previous simulations on the theory of electroporation under a high voltage \cite{Hu2013c}, where membrane thinning under voltage occurs (as seen previously with the non-conducting pores under a high voltage). Again noted, this is due to the Maxwell stress generated (which occurs at two surfaces who have differing dielectrics). This event has been noted in membrane thinning by \cite{Needham1989,Kummrow1991} and also in membrane rupture \cite{Isambert1998,Gao2008}. Based on the new DIB method \cite{Gross2011a}, this could be investigated with such hydrophobic proteins using this manner which can be used to measure membrane thinning as well as a change in bilayer thickness under voltage.
+
+Another aspect to the water-hydrophobic region transition is to note the electroporation with POPC and water-vacuum-water systems in simulation. At higher induced voltages, water bridges were noted through the vacuum and the bilayer. The water bridges had dipoles parallel to the field \cite{Ho2013}, which raises the possibility within the models of this thesis that induced voltage levels and water filling may be an issue of timescale within simulation. Thus, it may be of interest to conduct a long-low voltage simulation to check this aspect.  
+
+A direct comparison between MD and experiments may not be valid for this system. PME is used in this thesis, but is known to introduce artifacts (faster than direct calculation) in the charge profile and sensitive to the system length perpendicular to the bilayer plane \cite{Spohr1997}. Therefore within the voltage and applied fields, precise electrostatic contributions may generate errors in potentials therefore exact values cannot be extrapolated. Another MD limitation is the water model used within these voltage simulations. Based on the various water models \cite{Chaplin2001} and the influence on water dipoles on membrane and within hydrophobic regions, it would be of interest to compare such models. The basic SPC water model was used here and it would be of interest to also use a model which presents a lone pair electron charge, such as the TIP4P model \cite{Jorgensen1983}. However, it has been shown that the water model used did not affect the evaporation of water under a field \cite{Okuno2009} therefore changes (if any) may be slight. 

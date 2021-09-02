@@ -470,7 +470,7 @@ SCHEDULED: <2021-08-10 Tue 17:00 .+0d/3d>
   :END:
 [2021-01-21 Thu 10:03]
 
-* TODO Misc [0/5]
+* TODO Misc [1/5]
   SCHEDULED: <2021-08-06 Fri 18:00 .+4d/7d>
   :PROPERTIES:
   :COOKIE_DATA: todo
@@ -478,15 +478,23 @@ SCHEDULED: <2021-08-10 Tue 17:00 .+0d/3d>
   :END:
 
 ** WAITING Chat to Nigel about RR dates and organisation            :WAITING:
+   SCHEDULED: <2021-09-02 Thu 13:15>
    - State "WAITING"    from "TODO"       [2021-08-10 Tue 16:55] \\
      Waiting for a response from Nigel
    :LOGBOOK:
+   CLOCK: [2021-08-31 Tue 14:36]--[2021-08-31 Tue 14:48] =>  0:12
+   CLOCK: [2021-08-31 Tue 10:17]--[2021-08-31 Tue 10:25] =>  0:08
    CLOCK: [2021-08-09 Mon 13:55]--[2021-08-09 Mon 13:55] =>  0:00
    :END:
  [2021-08-09 Mon 13:55]
-** TODO Book Flights to Helsinki
+** DONE Book Flights to Helsinki
    SCHEDULED: <2021-08-16 Mon 14:00>
+   - State "DONE"       from "WAITING"    [2021-08-31 Tue 15:56]
+   - State "WAITING"    from "TODO"       [2021-08-26 Thu 09:11] \\
+     Put on hold until early September <2021-09-06 Mon>. Perhaps look at flights on the
+     sunday instead.
    :LOGBOOK:
+   CLOCK: [2021-08-26 Thu 09:09]--[2021-08-26 Thu 09:12] =>  0:03
    CLOCK: [2021-06-21 Mon 10:43]--[2021-06-21 Mon 10:43] =>  0:00
    :END:
  [2021-06-21 Mon 10:43]
@@ -508,16 +516,26 @@ SCHEDULED: <2021-08-10 Tue 17:00 .+0d/3d>
    CLOCK: [2021-07-12 Mon 09:14]--[2021-07-12 Mon 09:15] =>  0:01
    :END:
  [2021-07-12 Mon 09:14]
-* TODO WRITE! [0/5]
-  SCHEDULED: <2021-08-14 Sat 09:00 .+1d>
+* TODO WRITE! [1/9]
+  SCHEDULED: <2021-08-27 Fri 09:00 +1d>
   :PROPERTIES:
   :STYLE:    habit
   :REPEAT_TO_STATE: TODO
   :WILD_NOTIFIER_NOTIFY_BEFORE: 60 30 15 5
-  :LAST_REPEAT: [2021-08-13 Fri 16:32]
+  :LAST_REPEAT: [2021-09-02 Thu 16:53]
   :COOKIE_DATA: todo
   :END:
+  - State "DONE"       from "TODO"       [2021-09-02 Thu 16:53]
+  - State "DONE"       from "TODO"       [2021-08-25 Wed 17:38]
+  - State "DONE"       from "TODO"       [2021-08-24 Tue 18:00]
   :LOGBOOK:
+  CLOCK: [2021-09-01 Wed 14:48]--[2021-09-01 Wed 14:49] =>  0:01
+  CLOCK: [2021-08-31 Tue 15:25]--[2021-08-31 Tue 15:34] =>  0:09
+  CLOCK: [2021-08-25 Wed 17:38]--[2021-08-25 Wed 17:38] =>  0:00
+  CLOCK: [2021-08-25 Wed 16:27]--[2021-08-25 Wed 16:52] =>  0:25
+  CLOCK: [2021-08-25 Wed 11:14]--[2021-08-25 Wed 11:39] =>  0:25
+  CLOCK: [2021-08-25 Wed 10:19]--[2021-08-25 Wed 10:44] =>  0:25
+  CLOCK: [2021-08-25 Wed 09:49]--[2021-08-25 Wed 10:14] =>  0:25
   CLOCK: [2021-08-24 Tue 18:26]--[2021-08-24 Tue 18:51] =>  0:25
   CLOCK: [2021-08-24 Tue 17:53]--[2021-08-24 Tue 18:18] =>  0:25
   CLOCK: [2021-08-24 Tue 17:16]--[2021-08-24 Tue 17:41] =>  0:25
@@ -531,15 +549,27 @@ SCHEDULED: <2021-08-10 Tue 17:00 .+0d/3d>
   :END:
 ** Where to find
   A lot of good information already in
-  [[file:literature_and_notes/notes_and_literature.org]]
+  [[file:~/Documents/docs/Management/literature_and_notes/notes_and_literature.org]]
 
-  For DFT, use the chapter [[file:chapters/current_dft_chapter.org]]
+  For DFT, use the chapter
+ [[file:~/Documents/docs/Management/chapters/current_dft_chapter.org]]
+
 
   We have dislocation modelling in
-  [[file:chapters/ti_dislocation_modelling.org]]
+  [[file:~/Documents/docs/Management/chapters/ti_dislocation_modelling.org]]
 
   Thesis template can be found here
-  [[file:~/Downloads/send_to_luke]]
+  [[file:~/Downloads/phd_thesis_compiler]]
+** DONE Org Thesis setup
+   :LOGBOOK:
+   CLOCK: [2021-09-01 Wed 14:49]--[2021-09-01 Wed 15:12] =>  0:23
+   :END:
+** TODO Think of the general focus of the work
+   In the modelling of these defects, how is it useful?
+
+   What can we improve upon, what types of models can we make?
+
+** TODO Matplotlib / gnuplot style choices?
 
 ** TODO Pure titanium fitting  [2/5]
    - [X] Describe bond integrals
@@ -564,7 +594,7 @@ SCHEDULED: <2021-08-10 Tue 17:00 .+0d/3d>
      - Extra fitting data
      - Results of solution energies and vacancy clusters and
        adsorption energies.
-     - Forst Analysis
+     - Forst Analysis cite:Forst2006
    - [ ] Ti dislocation interaction with oxygen
 
 ** TODO Embedding of oxygen in titanium using Embedding approach [0/3]
@@ -1106,12 +1136,20 @@ https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freaki
 [2021-05-24 Mon 11:03]
 [[file:~/Documents/docs/Management/org/TODOs.org::*Check fitting of the TiO2 Bond integrals][Check fitting of the TiO2 Bond integrals]]
 
-* TODO Hydrogen-titanium fitting [7/9]
+* TODO Hydrogen-titanium fitting [8/11]
   :PROPERTIES:
   :COOKIE_DATA: todo
   :END:
 
   :LOGBOOK:
+  CLOCK: [2021-09-01 Wed 11:12]--[2021-09-01 Wed 11:31] =>  0:19
+  CLOCK: [2021-08-31 Tue 16:30]--[2021-08-31 Tue 16:56] =>  0:26
+  CLOCK: [2021-08-31 Tue 15:57]--[2021-08-31 Tue 16:22] =>  0:25
+  CLOCK: [2021-08-31 Tue 11:03]--[2021-08-31 Tue 11:11] =>  0:08
+  CLOCK: [2021-08-25 Wed 17:07]--[2021-08-25 Wed 17:32] =>  0:25
+  CLOCK: [2021-08-25 Wed 15:16]--[2021-08-25 Wed 15:41] =>  0:25
+  CLOCK: [2021-08-25 Wed 13:56]--[2021-08-25 Wed 14:21] =>  0:25
+  CLOCK: [2021-08-25 Wed 13:22]--[2021-08-25 Wed 13:32] =>  0:10
   CLOCK: [2021-08-11 Wed 13:24]--[2021-08-11 Wed 13:49] =>  0:25
   CLOCK: [2021-07-14 Wed 14:29]--[2021-07-14 Wed 14:54] =>  0:25
   CLOCK: [2021-07-05 Mon 11:09]--[2021-07-05 Mon 11:34] =>  0:25
@@ -1126,24 +1164,79 @@ https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freaki
 
   <2021-08-06 Fri>--<2021-09-03 Fri>
 
+** DONE Put in 2x2 data from sasha
+   :LOGBOOK:
+   CLOCK: [2021-08-31 Tue 15:34]--[2021-08-31 Tue 15:43] =>  0:09
+   CLOCK: [2021-08-31 Tue 15:22]--[2021-08-31 Tue 15:25] =>  0:03
+   CLOCK: [2021-08-31 Tue 14:23]--[2021-08-31 Tue 14:36] =>  0:13
+   CLOCK: [2021-08-31 Tue 12:12]--[2021-08-31 Tue 12:37] =>  0:25
+   CLOCK: [2021-08-31 Tue 11:33]--[2021-08-31 Tue 11:58] =>  0:25
+   CLOCK: [2021-08-31 Tue 11:11]--[2021-08-31 Tue 11:28] =>  0:17
+   :END:
+
+   I should probably put in the data. This will make it much slower,
+   but for how much gain, given that the amplitude is reasonable, it
+   is just the energy gaps. Perhaps one can just add in the energy gap
+   difference as a fixed difference into the objective function, but
+   this relies on the assumption that regardless of the parameters
+   used, there will be the same static difference, which is likely an
+   erroneous assumption.
+
+** TODO Put in bandwidth monitor for TiH2 fluorite phase
+
+
+   _GGA DFT_
+   - With coloured bands
+   [[file:~/Documents/tih/tih2/fluorite/bands/r-fluorite_ec_2021-06-16--13-58-39/bnds.flrt]]
+
+   _TBE example_
+   - No coloured bands
+   [[file:~/Documents/tih/tih2/fitting/check_combined_fitting/r-tih2_obj_2021-08-31--16-34-49/bnds.flrt]]
 
 
 ** TODO Fitting of TiH with TiO2
    :LOGBOOK:
+   CLOCK: [2021-09-01 Wed 14:47]--[2021-09-01 Wed 14:48] =>  0:01
+   CLOCK: [2021-09-01 Wed 11:36]--[2021-09-01 Wed 12:01] =>  0:25
    CLOCK: [2021-08-24 Tue 15:55]--[2021-08-24 Tue 16:19] =>  0:24
    CLOCK: [2021-08-23 Mon 11:46]--[2021-08-23 Mon 12:11] =>  0:25
    CLOCK: [2021-08-23 Mon 11:22]--[2021-08-23 Mon 11:38] =>  0:16
    :END:
 
-*** <2021-08-23 Mon>
-    - Write script to extract the best data from the fitting.
 
-*** <2021-08-09 Mon>
-    - Seems like there are partially filled bands in the tio2 phases
-      when running the script as the onsite energies must compete with
-      the TiH phases (which need the d level to be far lower in
-      energy...)
-    - The fitting struggles but we will see what happens.
+   - <2021-09-01 Wed 11:23>
+     - Putting in the bandwidth monitoring seems to be helping the bands
+       somewhat, at the cost of the elastic properties of the TiH2
+       phase.
+     - We will see what happens as the fitting continues.
+     - The band gaps of the TiO2 phases seems fine.
+     - Anatase still is lower energy than Rutile but we will have to
+       live with that.
+
+   - <2021-08-31 Tue 12:29>
+     - Bands for the TiO2 phases seems okay, but for the TiH2
+       fluorite phase, they are quite off it seems...
+     - Revise the fitting for TiH.
+   - <2021-08-31 Tue 12:19>
+     - Binary works for older version found in ti:/home/tigany/bucket/lm/b/gcc-opt-mpi
+   - <2021-08-31 Tue 12:14>
+     - Seems like binary ti:/home/tigany/lm/b/gcc_opt_2021-08-12  fails for all the tio2 calcluations: rutile,
+       anatase and fluorite.
+     - But seems to get the gaps right?
+     - Get seg faults when reading the syml file
+
+   - <2021-08-31 Tue 11:00>
+     - Put in the new data of sasha for 2x2
+
+   - <2021-08-23 Mon>
+     - Write script to extract the best data from the fitting.
+
+   - <2021-08-09 Mon>
+     - Seems like there are partially filled bands in the tio2 phases
+       when running the script as the onsite energies must compete with
+       the TiH phases (which need the d level to be far lower in
+       energy...)
+     - The fitting struggles but we will see what happens.
 
 ** TODO Energy barrier for H hopping between interstices
 ** DONE Ask for Dimitar's advice on the LMTO binaries
@@ -1237,13 +1330,23 @@ https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freaki
   :END:
 [2021-06-06 Sun 19:28]
 
-* TODO EFA [3/7]
+* TODO EFA [3/9]
+  SCHEDULED: <2021-08-26 Thu 09:00>
   :PROPERTIES:
   :COOKIE_DATA: todo
   :END:
-
   <2021-08-06 Fri>--<2021-09-03 Fri>
 
+** TODO Import from CSV the things necessary for the database
+   SCHEDULED: <2021-08-31 Tue 10:00>
+   :LOGBOOK:
+   CLOCK: [2021-08-31 Tue 10:34]--[2021-08-31 Tue 10:42] =>  0:08
+   CLOCK: [2021-08-26 Thu 16:06]--[2021-08-26 Thu 16:31] =>  0:25
+   CLOCK: [2021-08-26 Thu 15:33]--[2021-08-26 Thu 15:58] =>  0:25
+   CLOCK: [2021-08-26 Thu 14:55]--[2021-08-26 Thu 15:20] =>  0:25
+   CLOCK: [2021-08-26 Thu 14:31]--[2021-08-26 Thu 14:49] =>  0:18
+   :END:
+** TODO Hosting on amazon EC2, is it fine to handle a large postgreSQL database?
 ** TODO Ask Rupert about the Technical Document
 *** TODO Add details of the MVP which we have done to the document
 ** TODO Calculator and wireframe                                        :EFA:
@@ -1325,7 +1428,8 @@ https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freaki
 [[file:~/Documents/docs/Management/org/TODOs.org::*Write up the SKF report][Write up the SKF report]]
 * TODO Check reference energies
 [2021-07-22 Thu 13:13]
-* WAITING Chat with Nigel about RR Internship                       :WAITING:
+* DONE Chat with Nigel about RR Internship
+  - State "DONE"       from "WAITING"    [2021-08-31 Tue 10:17]
   - State "WAITING"    from "TODO"       [2021-08-12 Thu 15:05] \\
     Waiting for response from Nigel's Colleague
   :LOGBOOK:
@@ -1335,7 +1439,7 @@ https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freaki
 
 
 * MEETING with Counsellor                                           :MEETING:
-  SCHEDULED: <2021-08-26 Thu 17:00 ++7d>
+  SCHEDULED: <2021-09-02 Thu 17:00 ++7d>
   :PROPERTIES:
   :LAST_REPEAT: [2021-08-13 Fri 11:12]
   :REPEAT_TO_STATE: MEETING
@@ -1367,3 +1471,33 @@ https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freaki
   CLOCK: [2021-08-24 Tue 09:07]--[2021-08-24 Tue 09:08] =>  0:01
   :END:
 [2021-08-24 Tue 09:07]
+* WAITING Accommodation in Derby                                    :WAITING:
+  SCHEDULED: <2021-08-31 Tue>
+  - State "WAITING"    from "TODO"       [2021-08-25 Wed 15:00] \\
+    Waiting on response from student.com
+  :LOGBOOK:
+  CLOCK: [2021-08-25 Wed 14:34]--[2021-08-25 Wed 14:59] =>  0:25
+  CLOCK: [2021-08-25 Wed 14:33]--[2021-08-25 Wed 14:33] =>  0:00
+  :END:
+  [2021-08-25 Wed 14:33]
+
+  - Mickelover is a 20/25 min cycle away from Elton Rd
+  - Can book studen accommodation, will just await a reply
+  - Cathedral quarter seems like a good shout
+* TODO Reply to Nigel
+  :LOGBOOK:
+  CLOCK: [2021-08-26 Thu 09:40]--[2021-08-26 Thu 10:05] =>  0:25
+  CLOCK: [2021-08-26 Thu 09:16]--[2021-08-26 Thu 09:34] =>  0:18
+  CLOCK: [2021-08-26 Thu 09:16]--[2021-08-26 Thu 09:16] =>  0:00
+  :END:
+[2021-08-26 Thu 09:16]
+* TODO Contract for Rolls-Royce
+  SCHEDULED: <2022-05-22 Sun> DEADLINE: <2022-05-22 Sun>
+  :LOGBOOK:
+  CLOCK: [2021-08-26 Thu 10:24]--[2021-08-26 Thu 12:04] =>  1:40
+  :END:
+  [2021-08-26 Thu 10:24]
+
+  Date for one month prior to report
+  <2022-04-22 Fri 09:00>
+  - I must give an annual report by 22 May 2022.
