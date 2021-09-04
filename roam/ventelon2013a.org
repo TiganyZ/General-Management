@@ -1,0 +1,16 @@
+#+TITLE: Ventelon2013a: Ab initio investigation of the Peierls potential of screw dislocations in bcc Fe and W
+#+ROAM_KEY: cite:Ventelon2013a
+- tags ::
+- keywords ::
+
+* Ab initio investigation of the Peierls potential of screw dislocations in bcc Fe and W
+  :PROPERTIES:
+  :Custom_ID: Ventelon2013a
+  :URL: https://linkinghub.elsevier.com/retrieve/pii/S135964541300222X
+  :AUTHOR: Ventelon, L., Willaime, F., Clouet, E., & Rodney, D.
+  :NOTER_DOCUMENT: ~/Zotero/storage/KB9R9E9K/Ventelon et al. - 2013 - Ab initio investigation of the Peierls potential o.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

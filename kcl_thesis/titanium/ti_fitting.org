@@ -137,64 +137,193 @@
    #+BEGIN_EXPORT latex
      \begin{figure}[H]
        \begin{center}
-         \includegraphics[width=\textwidth]{./images/d_sd_bond_integrals.png}
+         \includegraphics[width=\textwidth]{pictures/sd-d_bond_integrals_together.png}
          \caption[Bond integrals of both $d$ and $sd$ titanium tight-binding models.] {Bond integrals of both $d$ and $sd$ titanium tight-binding models. First and second derivatives shown to demonstrate that there are no abberations when the bond integrals decay to zero between $r_1$ and $r_c$.} %square is table contents, curly is in the chapter
          \label{fig:d_sd_bond_integrals}
        \end{center}
      \end{figure}
    #+END_EXPORT
 
+   # Regularization is generally used so parameters dont become
+   # ridiculous and so it stops overfitting
+   # [[https://towardsdatascience.com/intuitions-on-l1-and-l2-regularisation-235f2db4c261]]
 
+   The bond integrals and pair potential were fitted to reproduce DFT
+   and empirical data, as detailed in table *INSERT TABLE REF*.
+   An objective function was defined as
+
+   #+BEGIN_EXPORT latex
+     \begin{equation}
+       E(\mathbf{x}) = \sum_i
+       w_i(f_i(\mathbf{x}) - \hat{f}_i (\mathbf{x}))^2 + \left(     \alpha
+       ||\mathbf{x}||_2 + (1-\alpha) || \mathbf{x} ||_1 \right),
+       \label{eq:objective_function}
+     \end{equation}
+   #+END_EXPORT
+
+   where $\mathbf{x}$ is a vector of input parameters,
+   $f_i(\mathbf{x})$ are quantities calculated from the input
+   parameters and $\hat{f}_i(\mathbf{x})$ are the respective target
+   quantities from DFT or empirical data. $w_i$ are the weights for
+   each quantity. Quantities of higher importance, such as lattice and
+   elastic constants, were given larger weights in the objective
+   function, as such, the optimiser would have a preference to
+   minimise these quantities. To mitigate the overfitting of
+   parameters (and to dissuade parameters from becoming too large), an
+   Elastic Net regularisation term was added to the objective
+   function, the final term in equation [[eqref:eq:objective_function]],
+   which consists of the L1 and L2 of the input parameter vector
+   $\mathbf{x}$. The L2 norm acts as a penalty for large input
+   parameters, and the L1 norm gives further penalties, but has the
+   added benefit of allowing sparsity of the parameters during
+   optimisation: it allows redundant parameters, say in the pair
+   potential, to go to zero cite:Hastie2009,Bishop2006.
+
+   The objective function was minimised within pre-defined constraints
+   by use of the the CMA-ES (Covariance Matrix Adaptation-Evolution
+   Strategy) algorithm, using the python implementation by Hansen
+   cite:hansen2019pycma. Parameters put into the CMA-ES algorithm were
+   first transformed to have similar sensitivities with respect to the
+   bounds in which they are sought cite:Hansen2016. This allows for
+   the initial assumption of the CMA-ES algorithm, that the covariance
+   matrix is unity, to be more readily satisfied, and a better
+   conditioned parameter space for the CMA-ES
+   cite:Jastrebski2006,Hansen2011. This mitigates premature
+   convergence. Parameters were consequently transformed back,
+   allowing for evaluation of the objective function and loss
+   function, of which the latter was consequently fed into the CMA-ES
+   optimiser.
+
+
+   The data used to fit to was a mix of DFT and empirical data. Great
+   importance was given to the hcp lattice parameter, and the
+   structural energy differences between the titanium polymorphs, all
+   of which were compared to GGA LMTO calculations using the questaal
+   suite cite:Pashov2020. Bandwidths at the high symmetry points of
+   the hcp bands were used as targets, and calculated from DFT by
+   ascertaining bands of dominant $d$ character and taking the
+   difference between the highest and lowest eigenvalues. $d$
+   character was determined by by decomposition of the eigenvector
+   norm by summation over corresponding orbital subsets, similar to a
+   Mulliken analysis.
+
+   To hasten the fitting of parameters, if a set of parameters
+   produced a quantity which was out of an acceptable range, then the
+   objective function would immediately cease and submit a large value
+   to the objective function, dissuading the optimisation algorithm
+   from searching close to that area in parameter space.
+
+   All calculations for each of the phases, bar the $4h$ and $6h$
+   phases, were done with a k-mesh of
+   $30\times 30\times 30$. The $4h$ and $6h$ phases had their k-points
+   along the $c$-axis reduced by 2 and 4 times respectively.
+   Optimal lattice parameters were found by minimisation of the cohesive energy
+   with respect to the given lattice constant(s) using a Nelder-Mead
+   algorithm. Elastic constants were determined by the dependence of
+   the energy with respect to particular strains of the structure, about the optimal
+   lattice parameters cite:Fast1995,Girshick1998. A fifth-order
+   polynomial was fitted, to each of these dependences, and the
+   curvature extracted from the minimum, from which the constants can
+   be calculated.   The bulk modulus was determined similarly, but from
+   the dependence of the cohesive energy with volume.
+
+   When evaluating the $C_{11}$, $C_{12}$ and $C_{66}$, it was
+   necessary to fully relax the structure (without modifying the
+   volume) at each strain, prior to polynomial fitting. This is due to
+   the fact that in a strained hcp lattice there are internal degrees
+   of freedom that are not accounted for when applying a homogeneous
+   strain cite:Clouet2012. One can also calculate the change to these
+   three constants by calculating internal elastic constants, as in
+   the paper by Cousins cite:Cousins1979. Two of these calculated internal
+   elastic constants (which modify all of the aforementioned elastic
+   constants) are related to two phonon frequencies of the optical
+   branches at the $\Gamma$-point.
+
+
+   Results from the first stages of fitting found that soft modes
+   would appear in the phonon spectra for omega and hcp phases,
+   despite their structural stability indicated by their elastic
+   constants cite:Wallace1998,Nye1984. As such it was necessary to calculate the phonon density
+   of states during objective function evaluation, to verify there
+   were no negative densities, as represented in the ~phonopy~ code
+   cite:Togo2015.
+
+   The parameters obtained are shown in table ref:table:titanium_objective_function
 
    # Insert figure for the bands compared to DFT
    # > Use the band plot of dimitar for all the coloured bands?
 
    # Insert figure for the table of properties.
-   #+NAME: canonical_d_table.
-    | Quantity  |    $d$ model | $sd$ model |       Target |
-    |-----------+--------------+-------------+--------------|
-    | a_hcp     |   5.58523112 |             |   5.57678969 |
-    | c/a       |   1.58371266 |             |   1.58731122 |
-    | a_omega   |   8.93475285 |             |   8.73254342 |
-    | c_omega   |   5.38726911 |             |   5.32343103 |
-    | a_4h      |   5.57584691 |             |   5.56325146 |
-    | c_4h      |  18.09810672 |             |  17.75908031 |
-    | a_6h      |   5.57365569 |             |   5.54639384 |
-    | c_6h      |  27.18378460 |             |  26.77136353 |
-    | a_bcc     |   6.20079768 |             |   6.17948863 |
-    | a_fcc     |   7.87290654 |             |   7.88677000 |
-    | DE(o,h)   |   0.58764167 |             |  -0.63343333 |
-    | DE(4h,h)  |   1.58019500 |             |   3.17160000 |
-    | DE(6h,h)  |   2.48264833 |             |   3.72005000 |
-    | DE(b,h)   |   5.35128500 |             |   7.63520000 |
-    | DE(f,h)   |   3.78088500 |             |   4.51880000 |
-    | c_11      | 171.60928873 |             | 176.10000000 |
-    | c_33      | 198.90063708 |             | 190.50000000 |
-    | c_44      |  47.42549704 |             |  50.80000000 |
-    | c_12      |  94.65941969 |             |  86.90000000 |
-    | c_13      |  61.22624060 |             |  68.30000000 |
-    | M_freq_0  |   2.59341377 |             |   2.85858719 |
-    | M_freq_1  |   2.59341378 |             |   2.85858719 |
-    | M_freq_2  |   2.59341378 |             |   2.85858719 |
-    | M_freq_3  |   2.59341379 |             |   2.85858719 |
-    | M_freq_4  |   5.85272461 |             |   5.66706047 |
-    | M_freq_5  |   5.85272461 |             |   5.66706047 |
-    | H_freq_0  |   3.82320403 |             |   4.80643423 |
-    | H_freq_1  |   3.82320403 |             |   5.58010025 |
-    | H_freq_2  |   6.40288977 |             |   5.65316738 |
-    | H_freq_3  |   6.40288977 |             |   6.36651842 |
-    | H_freq_4  |   7.92857431 |             |   6.40050186 |
-    | H_freq_5  |   7.92857431 |             |   7.64082373 |
-    | bandw.  G |   3.69394702 |             |   5.87085872 |
-    | bandw.  K |   4.65178817 |             |   4.97424321 |
-    | bandw.  M |   5.19329495 |             |   7.78109872 |
-    | bandw.  L |   4.21232412 |             |   6.34433701 |
-    | bandw.  H |   3.54700549 |             |   9.70902614 |
-    | DOSerr_h  |   0.00000000 |             |   0.00000000 |
-    | DOSerr_o  |   0.00000000 |             |   0.00000000 |
-    | E_pris_f  |  98.95340236 |             | 220.00000000 |
+
+   # Use multi row and multi column for better formatting of the table.
+   #+BEGIN_EXPORT latex
+     \begin{table}[H]
+       \centering
+       \begin{tabular}{lccc}
+          Quantity  &    $d$ model &   $sd$ model &       Target \\
+          \hline
+         $a_{\text{hcp}}$ [bohr]&   5.585 &   5.674 &   5.577 \\
+         $c/a(\text{hcp})$ &   1.584 &   1.586 &   1.587 \\
+          $a_{\text{omega}}$ [bohr] &   8.935 &   9.039 &   8.733 \\
+          $c_{\text{omega}}$ [bohr] &   5.387 &   5.486 &   5.323 \\
+          $a_{\text{4h}}   $ [bohr] &   5.576 &   5.681 &   5.563 \\
+          $c_{\text{4h}}   $ [bohr] &  18.098 &  18.328 &  17.759 \\
+          $a_{\text{6h}}   $ [bohr] &   5.574 &   5.676 &   5.546 \\
+          $c_{\text{6h}}   $ [bohr] &  27.184 &  27.579 &  26.771 \\
+          $a_{\text{bcc}}  $ [bohr] &   6.201 &   6.201 &   6.179 \\
+         $a_{\text{fcc}}  $  [bohr] &   7.873 &   8.013 &   7.887 \\
+         \hline
+          $E(\omega) - E( \text{hcp})  [\unit{\milli\rydberg}]$ &   0.588 &  -0.357 &  -0.633 \\
+          $E(4h)- E(\text{hcp}) $ [\unit{\milli\rydberg}] &   1.580 &   1.663 &   3.172 \\
+          $E(6h)- E(\text{hcp}) $ [\unit{\milli\rydberg}] &   2.483 &   2.400 &   3.720 \\
+          $E(\text{bcc}) - E( \text{hcp})  $ [\unit{\milli\rydberg}] &   5.351 &   7.958 &   7.635 \\
+          $E(\text{fcc}) - E( \text{hcp})  $ [\unit{\milli\rydberg}] &   3.780 &   3.825 &   4.519 \\
+         \hline
+          $C_{11}$ [GPa] & 171.6 & 167.3 & 176.1 \\
+          $C_{33}$ [GPa] & 198.9 & 205.2 & 190.5 \\
+          $C_{44}$ [GPa] &  47.4 &  46.6 &  50.8 \\
+          $C_{12}$ [GPa] &  94.7 &  96.7 &  86.9 \\
+          $C_{13}$ [GPa] &  61.2 &  60.9 &  68.3 \\
+         \hline
+         hcp bandwidth $\Gamma$ [eV] &   3.69 &   8.90 &   5.87 \\
+         hcp bandwidth $K$ [eV] &   4.65 &   4.79 &   4.97 \\
+         hcp bandwidth $M$ [eV] &   5.19 &   5.54 &   7.78 \\
+         hcp bandwidth $L$ [eV] &   4.21 &   5.43 &   6.34 \\
+         hcp bandwidth $H$ [eV] &   3.54 &   4.85 &   9.70 \\
+         \hline
+         $E_{\text{prismatic}$ fault  &         99.0 &        110.4 & 220.0 \\
+         $E_{\text{basal}$ fault &              &        208.9 &              \\
+         $E_{\text{pyramidal I}$ fault   &              &        154.6 &              \\
+
+       \end{tabular}
+       \caption[Table of the titanium objective function values compared to DFT target data.] {Table of the titanium objective function values compared to DFT target data. The hcp lattice parameter, and the structural energy differences between titanium polymorphs were given large weights in the objective function. \label{table:titanium_objective_function}}
+       \end{table}
+   #+END_EXPORT
 
 
+   # #+BEGIN_EXPORT latex
+   #   \qty{98.953}{\milli\joules\per\metre\squared} \langle {} \rangle \mu
+   # #+END_EXPORT
+
+
+
+
+
+    ----------     E_prismatic_fault     -----------
+
+    | tbe: |  98.953 | mJ/m^2 |                |
+    | DFT: | 250.000 | mJ/m^2 | [Benoit  2012] |
+    | DFT: | 233.000 | mJ/m^2 | [Ackland 1999] |
+
+
+    ----------     E_Basal_fault I2     -----------
+
+    | tbe: | 211.658 | mJ/m^2 |                 |
+    | DFT: | 260.000 | mJ/m^2 | [Benoit  2012]  |
+
+   
+   # sd 44.26737066
+   #   13.17181191
 
    # The motivaton behind this starting
    # point was such that one could use the work of Legrand

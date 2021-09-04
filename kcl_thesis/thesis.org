@@ -6,7 +6,7 @@
 
 #+SETUPFILE: setup.org
 
-
+#+latex_header: \usepackage{siunitx}
 #+BEGIN_EXPORT latex
 \frontmatter
 
@@ -93,7 +93,6 @@
 % ********************************** Appendices ********************************
 
 \begin{appendices} % Using appendices environment for more functunality
-
 #+END_EXPORT
 
 
@@ -108,7 +107,6 @@
 
 % *************************************** Index ********************************
 \printthesisindex % If index is present
-
 #+END_EXPORT
 
 * Build :noexport:

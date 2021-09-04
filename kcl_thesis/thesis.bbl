@@ -94,6 +94,56 @@ A.~T. Paxton and C.~Elsässer, ``Analysis of a carbon dimer bound to a vacancy
   in iron using density functional theory and a tight binding model,'' vol.~87,
   no.~22, p.~224110.
 
+\bibitem{Hastie2009}
+T.~Hastie, R.~Tibshirani, and J.~Friedman, {\em The {{Elements}} of
+  {{Statistical Learning}}}.
+\newblock Springer {{Series}} in {{Statistics}}, {Springer New York}.
+
+\bibitem{Bishop2006}
+C.~M. Bishop, {\em Pattern Recognition and Machine Learning}.
+\newblock Information Science and Statistics, {Springer}.
+
+\bibitem{hansen2019pycma}
+N.~Hansen, Y.~Akimoto, and P.~Baudis, ``{{CMA}}-{{ES}}/pycma on {{Github}}.''
+  Zenodo, DOI:10.5281/zenodo.2559634.
+
+\bibitem{Hansen2016}
+N.~Hansen, ``The {{CMA Evolution Strategy}}: {{A Tutorial}}.''
+\newblock Comment: ArXiv e-prints, arXiv:1604.xxxxx.
+
+\bibitem{Jastrebski2006}
+G.~Jastrebski and D.~Arnold, ``Improving {{Evolution Strategies}} through
+  {{Active Covariance Matrix Adaptation}},'' in {\em 2006 {{IEEE International
+  Conference}} on {{Evolutionary Computation}}}, pp.~2814--2821, {IEEE}.
+
+\bibitem{Hansen2011}
+N.~Hansen, R.~Ros, N.~Mauny, M.~Schoenauer, and A.~Auger, ``Impacts of
+  invariance in search: {{When CMA}}-{{ES}} and {{PSO}} face ill-conditioned
+  and non-separable problems,'' vol.~11, no.~8, pp.~5755--5769.
+
+\bibitem{Pashov2020}
+D.~Pashov, S.~Acharya, W.~R.~L. Lambrecht, J.~Jackson, K.~D. Belashchenko,
+  A.~Chantis, F.~Jamet, and M.~van Schilfgaarde, ``Questaal: A package of
+  electronic structure methods based on the linear muffin-tin orbital
+  technique,'' vol.~249, p.~107065.
+\newblock Comment: a number of small corrections.
+
+\bibitem{Wallace1998}
+D.~C. Wallace, {\em Thermodynamics of Crystals}.
+\newblock {Dover Publications}.
+\newblock Originally published: New York : Wiley, 1972. With new pref.
+
+\bibitem{Nye1984}
+J.~F. Nye, {\em Physical Properties of Crystals: Their Representation by
+  Tensors and Matrices}.
+\newblock {Clarendon Press ; Oxford University Press}, 1st published in pbk.
+  with corrections, 1984~ed.
+\newblock Cataloging based on CIP information Includes indexes.
+
+\bibitem{Togo2015}
+A.~Togo and I.~Tanaka, ``First principles phonon calculations in materials
+  science,'' vol.~108, pp.~1--5.
+
 \bibitem{Fu2017}
 H.~Fu, W.~Song, E.~I. Galindo-Nava, and P.~E. Rivera-Díaz-del Castillo,
   ``Strain-induced martensite decay in bearing steels under rolling contact

@@ -1,0 +1,16 @@
+#+TITLE: Clouet2012a: Screw dislocation in zirconium: An Ab Initio study
+#+ROAM_KEY: cite:Clouet2012a
+- tags ::
+- keywords ::
+
+* Screw dislocation in zirconium: An Ab Initio study
+  :PROPERTIES:
+  :Custom_ID: Clouet2012a
+  :URL: https://link.aps.org/doi/10.1103/PhysRevB.86.144104
+  :AUTHOR: Clouet, E.
+  :NOTER_DOCUMENT: ~/Zotero/storage/4DC8RA9G/Clouet - 2012 - Screw dislocation in zirconium An ab initioi.pdf
+  :NOTER_PAGE:
+  :END:
+** Questions :QUESTIONS:
+** Summary :SUMMARY:
+** Notes

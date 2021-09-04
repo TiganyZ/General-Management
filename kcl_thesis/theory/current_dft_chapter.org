@@ -53,30 +53,52 @@
    \end{equation}
  #+END_EXPORT
 
+
  where $\mathbf{ \Psi }(\{\mathbf{r}\}; t)$ is an eigenstate and Hartree units have been used( $e = m = \hslash = 4\pi\epsilon_0 = 1$ ).
 
  A time-independent observable is the expectation value of a given operator,
 
- \[ \expval{\hat{O}} = \frac{\expval{\hat{O}}{\mathbf{ \Psi }} }{ \bra{\mathbf{ \Psi}}\ket{\mathbf{ \Psi }} }, \]
+
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \expval{\hat{O}} = \frac{\expval{\hat{O}}{\mathbf{ \Psi }} }{ \bra{\mathbf{ \Psi}}\ket{\mathbf{ \Psi }} },
+\end{equation}
+#+END_EXPORT
+
  this is an integral over all of the coordinates.
 
  The electronic density operator is defined as
 
- \[ \hat{\rho}(\mathbf{r}) = \sum_{i=1}^{N} \delta ( \mathbf{r} - \mathbf{r}_{i} ) \]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \hat{\rho}(\mathbf{r}) = \sum_{i=1}^{N} \delta ( \mathbf{r} - \mathbf{r}_{i} )
+\end{equation}
+#+END_EXPORT
 
- \[ \rho(\mathbf{r}) = \frac{\expval{\hat{n}(\mathbf{r})}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} }. \]
+
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+  \rho(\mathbf{r}) = \frac{\expval{\hat{n}(\mathbf{r})}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }} }.
+  \end{equation}
+  #+END_EXPORT
+
 
  The total energy is the expectation value of the Hamiltonian:
-
- \begin{align}
-  E &= \frac{\expval{\hat{H}}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }}}\\
-    &= \expval{\hat{T}} + \expval{\hat{V}_{\text{int}}} + \int \text{d}^3 V_{\text{ext}} \rho(\mathbf{r}) + E_{II},
- \label{eq:totalenergy}
- \end{align}
-
+  #+BEGIN_EXPORT latex
+  \begin{align}
+   E &= \frac{\expval{\hat{H}}{\mathbf{ \Psi }} }{ \bra{\mathbf{\Psi}}\ket{\mathbf{ \Psi }}}\\
+     &= \expval{\hat{T}} + \expval{\hat{V}_{\text{int}}} + \int \text{d}^3 V_{\text{ext}} \rho(\mathbf{r}) + E_{II},
+  \label{eq:totalenergy}
+  \end{align}
+  #+END_EXPORT
  where
 
- \[ V_{\text{ext}}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$\]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+  V_{\text{ext}}(\mathbf{r}) = \sum_{I} -\frac{eZ_{I}}{|\mathbf{r} - \mathbf{R}_I|} \label{eq:externaleZpotential}$
+   \end{equation}
+  #+END_EXPORT
+
 
  is the external potential due to the coulomb interaction between the electrons and the nuclei---the
  expectation value has been explicitly written as an integral over the local electron density,
@@ -90,7 +112,12 @@
  possible with the use of Lagrange multipliers. One finds that upon variation of the bra
  $\bra{\mathbf{\Psi}}$ that the ket must satisfy the time-independent Schr\:odinger equation:
 
- \[ \hat{H}\ket{\mathbf{\Psi}_m} = E \ket{\mathbf{\Psi}}, \]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \hat{H}\ket{\mathbf{\Psi}_m} = E \ket{\mathbf{\Psi}},
+\end{equation}
+#+END_EXPORT
+
  where $\ket{\mathbf{\Psi}_m}$ is an eigenstate.
 
  Quite often, the state we would most like to find is the lowest energy state (/ground state/) of the
@@ -104,6 +131,9 @@
  electronic wavefunction at each point in the grid. Clearly, minimising a function of this complexity
  is costly. To make the problem tractable, we must make a few approximations.
 
+
+
+
 *** Born-Oppenheimer Approximation
 
  The first impose an adiabatic approximation on the time-independent wavefunction, which allows us to separate
@@ -111,7 +141,12 @@
  assumption that the wavefunction which describes the system is a product state between the nuclear
  and electronic portions of the system.
 
- \[ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}), \]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \psi(\mathbf{R}, \mathbf{r}) = \Phi(\mathbf{R}) \cdot \psi_{\mathbf{R}}(\mathbf{r}),
+\end{equation}
+#+END_EXPORT
+
 
  where $\psi_{\mathbf{R}}(\mathbf{r})$ is the electronic wavefunction and $\Phi(\mathbf{R})$ is
  the nuclear portion of the wavefunction.
@@ -120,13 +155,23 @@
  2000 m_e$) we can neglect the contribution to the Hamiltonian that comes from the nuclear
  kinetic energy operator acting on the electronic wavefunction.
 
- \[T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
- 1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})\]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+T_{\text{Nuclear}}(\mathbf{R}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{I =
+ 1}^{M} - \frac{1}{2M_{I}} \nabla^{2}_{\mathbf{R}_{I}} \psi_{\mathbf{R}}(\mathbf{r})
+\end{equation}
+#+END_EXPORT
 
 
- \[T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i =
+
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+T_{\text{Electronic}}(\mathbf{r}) \psi_{\mathbf{R}}(\mathbf{r}) = \sum_{i =
  1}^{M} - \frac{1}{2m_{i}} \nabla^{2}_{\mathbf{r}_{i}}
- \psi_{\mathbf{R}}(\mathbf{r}) \]
+ \psi_{\mathbf{R}}(\mathbf{r})
+\end{equation}
+#+END_EXPORT
+
 
  This results in the motion of the electrons being instantaneous with regard to the
  motion of the ions in the system: electrons relax into their ground state instantly with
@@ -136,7 +181,12 @@
  To obtain the total energy, we can solve for the electronic part of the wavefunction and then
  solve for the nuclear wavefunction,
 
- \[ \Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),\]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \Big( T_{\text{Nuclear}} + E_{\mathbf{R}} \Big) \Phi(\mathbf{R}) = E_{\text{Total}} \Phi(\mathbf{R}),
+\end{equation}
+#+END_EXPORT
+
 
  where $E_{\mathbf{R}}$ contains all of the information of the configuration of the electrons in
  the system.
@@ -148,11 +198,21 @@
     theory. A ansatz is made for the many-electron wavefunction, whereby we assume it is a product
     state between single particle orbitals:
 
-    \[ \Psi_{}(\{\mathbf{r}\}) = \phi(\mathbf{r}_1)\phi(\mathbf{r}_2)\ldots \phi(\mathbf{r}_n). \]
+     #+BEGIN_EXPORT latex
+   \begin{equation}
+ \Psi_{}(\{\mathbf{r}\}) = \phi(\mathbf{r}_1)\phi(\mathbf{r}_2)\ldots \phi(\mathbf{r}_n).
+\end{equation}
+#+END_EXPORT
+
    
     Applying the variational principle to find the ground state,
 
-    \[ \frac{ \expval{ \hat{H} }{ \Psi }}{ \bra{\Psi}\ket{\Psi} } = 0 \]
+     #+BEGIN_EXPORT latex
+   \begin{equation}
+ \frac{ \expval{ \hat{H} }{ \Psi }}{ \bra{\Psi}\ket{\Psi} } = 0
+\end{equation}
+#+END_EXPORT
+
 
     we obtain the Hartree equations.
 
@@ -181,41 +241,72 @@
  there exists an energy functional of the local electron density $E[\rho(\mathbf{r})]$, which
  corresponds to an antisymmetric wavefunction $\ket{\Psi}$; upon minimisiation by
  variation of the electron density, subject to the constraint that the number of electrons is
- conserved, \[ \int_{\text{all space}} \rho(\mathbf{r}) = N, \] the resulting density is unique
+ conserved,  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \int_{\text{all space}} \rho(\mathbf{r}) = N,
+\end{equation}
+#+END_EXPORT
+ the resulting density is unique
  and the value of the functional is the ground-state energy. To obtain this result we can go
  through the following theory.
 
  Assuming $\rho(\mathbf{r})$ is the exact ground state density, and $\ket{\Psi}$
  is the ground-state, by the variational principle we can write,
 
- \[ \bra{\Psi} \mathcal{\hat{T}} + \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i -
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \bra{\Psi} \mathcal{\hat{T}} + \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i -
  \mathbf{r}_j |}  \ket{\Psi} + \int \rho(\mathbf{r}) V_{\text{ext}}(\mathbf{r})
  \text{d}\mathbf{r} \geq E_0.
- \label{eq:dftvarprinciple} \]
+ \label{eq:dftvarprinciple}
+\end{equation}
+#+END_EXPORT
+
 
  The state $\bra{\Psi}$ may not be unique. To make it so, one can subject equation ref:eq:dftvarprinciple
  to the constraints that the number of electrons is conserved and that $\rho$ is constant.
 
  This defines the functional:
 
- \[ F[\rho] = \underset{\Psi \rightarrow \rho}{\text{min}} \bra{\Psi} \mathcal{\hat{T}} +
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ F[\rho] = \underset{\Psi \rightarrow \rho}{\text{min}} \bra{\Psi} \mathcal{\hat{T}} +
  \frac{1}{2} \sum_i\sum_j \frac{1}{| \mathbf{r}_i - \mathbf{r}_j |}  \ket{\Psi} = T[\rho] +
- E_{ee}[\rho],   \]
+ E_{ee}[\rho],
+\end{equation}
+#+END_EXPORT
+
 
  where the notation $\Psi \rightarrow \rho$ is to show that the minimisation is with respect to
  all $\Psi$ that can make the density $\rho$.
 
  One can see the functional with the minimum value as the ground-state energy is then
 
- \[ E[\rho] = F[\rho] + E_{\text{ext}}[\rho], \]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ E[\rho] = F[\rho] + E_{\text{ext}}[\rho],
+\end{equation}
+#+END_EXPORT
 
- where \[ E_{\text{ext}}[\rho] = E_{\text{ext}}[\rho(\mathbf{r})] =  \int \rho(\mathbf{r})
- V_{\text{\text{ext}}}(\mathbf{r}), \]
+
+  where
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+  E_{\text{ext}}[\rho] = E_{\text{ext}}[\rho(\mathbf{r})] =  \int \rho(\mathbf{r})
+ V_{\text{\text{ext}}}(\mathbf{r}),
+   \end{equation}
+   #+END_EXPORT
+
  of which its functional derivative is $V_{\text{ext}}$.
 
  By the Euler-Lagrange equations, one finds that the ground state must satisfy
 
- \[ \frac{\delta F[\rho]}{\delta \rho(\mathbf{r}) } + V_{\text{ext}}= \mu. \]
+  #+BEGIN_EXPORT latex
+   \begin{equation}
+ \frac{\delta F[\rho]}{\delta \rho(\mathbf{r}) } + V_{\text{ext}}= \mu.
+\end{equation}
+#+END_EXPORT
+
 
  A functional is an entity that maps a function to a value, similar as how a function maps a
  variable to a value. The Hohenburg-Kohn theorem states that there exists a functional of the
@@ -238,9 +329,13 @@
 
  The Hohenburg-Kohn-Sham functional can be defined as
 
- \[
+  #+BEGIN_EXPORT latex
+   \begin{equation}
  E_{\text{HKS}}[\rho] = T_{\text{s}}[\rho] + E_{\text{H}}[\rho] + E_{\text{xc}}[\rho] + E_{\text{ext}}[\rho] + E_{\text{ZZ}},
-  \label{eq:hks_functional}\]
+  \label{eq:hks_functional}
+   \end{equation}
+   #+END_EXPORT
+
 
  where $T_{\text{s}}[\rho]$ is the kinetic energy of the fictitious non-interacting auxiliary system
  acting in the same effective potential $V_{\text{eff}}[\rho]$. The assumption made here is that the
@@ -251,9 +346,12 @@
  between the true kinetic energy and that of the non-interacting system is added to it. Such that the
  true exchange-correlation functional has the form of
 
- \[
+  #+BEGIN_EXPORT latex
+   \begin{equation}
  E_{\text{xc}}[\rho] = \Big( \expval{\hat{T}} - T_{\text{s}}[\rho] \Big) + \Big( \expval{\hat{V}_{\text{int}}} - E_{\text{H}}[\rho]\Big)
- \]
+    \end{equation}
+  #+END_EXPORT
+
 
  where we can interpret the first term as being the increase in kinetic energy from electronic
  correlation in a fully interacting system, compared to a non-interacting one---correlations cause

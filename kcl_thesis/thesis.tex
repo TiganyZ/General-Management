@@ -1,10 +1,12 @@
-% Created 2021-09-02 Thu 19:16
+% Created 2021-09-04 Sat 16:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[a4paper,12pt,oneside,print,numbered,index,PageStyleIII]{PhDThesisPSnPDF}
-  \doublespacing
+  \onehalfspacing
 \input{Preamble/preamble}
 \input{thesis-info}
 \usepackage{physics}
+\usepackage{siunitx}
+\usepackage{siunitx}
 
 \newcommand{\mboxparagraph}[1]{\paragraph{#1}\mbox{}\\}
 \newcommand{\mboxsubparagraph}[1]{\subparagraph{#1}\mbox{}\\}
@@ -53,7 +55,7 @@
 
 
 \chapter{Introduction}
-\label{sec:org35fe2dd}
+\label{sec:org500ebb9}
 \label{ch:Intro}
 
 We can have equations and reference them using \texttt{eqref}, as seen in \eqref{larmor}.
@@ -68,7 +70,7 @@ And we can have some code as well, as seen in code snippet \ref{code}.
 \begin{verbatim}
 (setq phd-thesis-status 'finishing)
 \end{verbatim}
-\captionof{figure}{\label{orgf77540b}Example code.}
+\captionof{figure}{\label{org1e509cf}Example code.}
 
 
 Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
@@ -78,16 +80,16 @@ Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis 
 Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
 
 \section{Theoretical Background}
-\label{sec:org793f0da}
+\label{sec:org2c23545}
 
 Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.  Curabitur vulputate vestibulum lorem.  Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.  Sed id ligula quis est convallis tempor.  Curabitur lacinia pulvinar nibh.  Nam a sapien.
 
 
 \chapter{Theory}
-\label{sec:org5093989}
+\label{sec:org4766bac}
 \label{chapter:theory}
 \section{Introduction}
-\label{sec:org1f19249}
+\label{sec:org92b6ab2}
 
 To accurately model the behaviour of an assembly of atoms we must use quantum mechanics. The
 wavelength of electrons, as described by de Broglie \(\lambda = \hslash/p\), is of comparable length
@@ -159,7 +161,7 @@ electronic wavefunction at each point in the grid. Clearly, minimising a functio
 is costly. To make the problem tractable, we must make a few approximations.
 
 \subsection{Born-Oppenheimer Approximation}
-\label{sec:org2110a34}
+\label{sec:orgb52179d}
 
 The first impose an adiabatic approximation on the time-independent wavefunction, which allows us to separate
 nuclear and electronic motion: this is the Born-Oppenheimer approximation. One must first make the
@@ -198,7 +200,7 @@ the system.
 
 
 \subsection{Self-Consistent Mean-Field Theory}
-\label{sec:orgbdcf766}
+\label{sec:org5472724}
 
 A major development on the path to tractable calculations is that of Hartree and Hartree-Fock
 theory. A ansatz is made for the many-electron wavefunction, whereby we assume it is a product
@@ -217,11 +219,11 @@ we obtain the Hartree equations.
 Näively,
 
 \subsection{Density Functional Theory}
-\label{sec:org1f9f4c9}
+\label{sec:orgb280513}
 
 \begin{enumerate}
 \item Theory
-\label{sec:orgf430ebb}
+\label{sec:org3c400cf}
 
 Now that the electronic motion has been decoupled from that of the nucleus, we can now try to
 find the ground-state solution for a given configuration of ions. A computationally tractable
@@ -332,7 +334,7 @@ the the fact that correlations basically lead to a screening of the coulomb pote
 
 
 \item Solving the Kohn-Sham Equations
-\label{sec:org47e92dc}
+\label{sec:org6f0711a}
 
 The process by which this happens are as follows: one solves the Poisson
 equation for the Hartree potential, given an initial input density which on
@@ -353,26 +355,26 @@ The Kohn-Sham eigenvalues are not strictly correct.
 
 
 \item Kohn-Sham Equations and Self-Consistency
-\label{sec:orgdc10676}
+\label{sec:org098bb98}
 
 
 \item Practical steps towards accurate calculations
-\label{sec:orgf5106d6}
+\label{sec:org27f20f5}
 
 
 
 \item Thomas-Fermi model
-\label{sec:org676352a}
+\label{sec:org5efbecd}
 
 \item Hohenburg and Kohn Theories
-\label{sec:org59e1043}
+\label{sec:org5336b6a}
 \end{enumerate}
 
 
 
 
 \subsection{From Density Functional Theory to Tight-Binding}
-\label{sec:org6f9dd12}
+\label{sec:orgd9636fb}
 
 For a solution to the Kohn-Sham equations, one must have a self-consistent
 density: the input density, from which we construct the effective potential
@@ -416,23 +418,23 @@ Haydock, and Sutton \emph{et al.}
 
 
 \chapter{Defects in Materials}
-\label{sec:orge3e7f11}
+\label{sec:org30765dd}
 
 \section{Vacancies and Solutes}
-\label{sec:org2197782}
+\label{sec:org6c409bf}
 
 \chapter{Fitting a titanium tight-binding model}
-\label{sec:org4865220}
+\label{sec:org2d4daf4}
 \label{ch:ti_fitting}
 \section{Introduction (What, how, where, when, why?)}
-\label{sec:orgade33e2}
+\label{sec:orgdd09327}
 Fitted canonical d titanium model such that we could have a better
 description of titanium within a tight-binding framework. Empirical
 potential are not accurate enough to describe the intricacies of the
 titanium structure.
 
 \section{Fitting}
-\label{sec:org3b7394e}
+\label{sec:org9a1bb20}
 
 The overlap integrals were chosen to have a simple exponential
 distance dependence, as initially formulated by Ducastelle,
@@ -506,65 +508,153 @@ this time to complicate matters further.
 
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[width=\textwidth]{./images/d_sd_bond_integrals.png}
+    \includegraphics[width=\textwidth]{pictures/sd-d_bond_integrals_together.png}
     \caption[Bond integrals of both $d$ and $sd$ titanium tight-binding models.] {Bond integrals of both $d$ and $sd$ titanium tight-binding models. First and second derivatives shown to demonstrate that there are no abberations when the bond integrals decay to zero between $r_1$ and $r_c$.} %square is table contents, curly is in the chapter
     \label{fig:d_sd_bond_integrals}
   \end{center}
 \end{figure}
 
+The bond integrals and pair potential were fitted to reproduce DFT
+and empirical data, as detailed in table \textbf{INSERT TABLE REF}.
+An objective function was defined as
+
+\begin{equation}
+  E(\mathbf{x}) = \sum_i
+  w_i(f_i(\mathbf{x}) - \hat{f}_i (\mathbf{x}))^2 + \left(     \alpha
+  ||\mathbf{x}||_2 + (1-\alpha) || \mathbf{x} ||_1 \right),
+  \label{eq:objective_function}
+\end{equation}
+
+where \(\mathbf{x}\) is a vector of input parameters,
+\(f_i(\mathbf{x})\) are quantities calculated from the input
+parameters and \(\hat{f}_i(\mathbf{x})\) are the respective target
+quantities from DFT or empirical data. \(w_i\) are the weights for
+each quantity. Quantities of higher importance, such as lattice and
+elastic constants, were given larger weights in the objective
+function, as such, the optimiser would have a preference to
+minimise these quantities. To mitigate the overfitting of
+parameters (and to dissuade parameters from becoming too large), an
+Elastic Net regularisation term was added to the objective
+function, the final term in equation \eqref{eq:objective_function},
+which consists of the L1 and L2 of the input parameter vector
+\(\mathbf{x}\). The L2 norm acts as a penalty for large input
+parameters, and the L1 norm gives further penalties, but has the
+added benefit of allowing sparsity of the parameters during
+optimisation: it allows redundant parameters, say in the pair
+potential, to go to zero \cite{Hastie2009,Bishop2006}.
+
+The objective function was minimised within pre-defined constraints
+by use of the the CMA-ES (Covariance Matrix Adaptation-Evolution
+Strategy) algorithm, using the python implementation by Hansen
+\cite{hansen2019pycma}. Parameters put into the CMA-ES algorithm were
+first transformed to have similar sensitivities with respect to the
+bounds in which they are sought \cite{Hansen2016}. This allows for
+the initial assumption of the CMA-ES algorithm, that the covariance
+matrix is unity, to be more readily satisfied, and a better
+conditioned parameter space for the CMA-ES
+\cite{Jastrebski2006,Hansen2011}. This mitigates premature
+convergence. Parameters were consequently transformed back,
+allowing for evaluation of the objective function and loss
+function, of which the latter was consequently fed into the CMA-ES
+optimiser.
 
 
-\begin{table}[htbp]
-\label{tab:orgaec642b}
-\centering
-\begin{tabular}{lrlr}
-Quantity & \(d\) model & \(sd\) model & Target\\
-\hline
-a\textsubscript{hcp} & 5.58523112 &  & 5.57678969\\
-c/a & 1.58371266 &  & 1.58731122\\
-a\textsubscript{omega} & 8.93475285 &  & 8.73254342\\
-c\textsubscript{omega} & 5.38726911 &  & 5.32343103\\
-a\textsubscript{4h} & 5.57584691 &  & 5.56325146\\
-c\textsubscript{4h} & 18.09810672 &  & 17.75908031\\
-a\textsubscript{6h} & 5.57365569 &  & 5.54639384\\
-c\textsubscript{6h} & 27.18378460 &  & 26.77136353\\
-a\textsubscript{bcc} & 6.20079768 &  & 6.17948863\\
-a\textsubscript{fcc} & 7.87290654 &  & 7.88677000\\
-DE(o,h) & 0.58764167 &  & -0.63343333\\
-DE(4h,h) & 1.58019500 &  & 3.17160000\\
-DE(6h,h) & 2.48264833 &  & 3.72005000\\
-DE(b,h) & 5.35128500 &  & 7.63520000\\
-DE(f,h) & 3.78088500 &  & 4.51880000\\
-c\textsubscript{11} & 171.60928873 &  & 176.10000000\\
-c\textsubscript{33} & 198.90063708 &  & 190.50000000\\
-c\textsubscript{44} & 47.42549704 &  & 50.80000000\\
-c\textsubscript{12} & 94.65941969 &  & 86.90000000\\
-c\textsubscript{13} & 61.22624060 &  & 68.30000000\\
-M\textsubscript{freq}\textsubscript{0} & 2.59341377 &  & 2.85858719\\
-M\textsubscript{freq}\textsubscript{1} & 2.59341378 &  & 2.85858719\\
-M\textsubscript{freq}\textsubscript{2} & 2.59341378 &  & 2.85858719\\
-M\textsubscript{freq}\textsubscript{3} & 2.59341379 &  & 2.85858719\\
-M\textsubscript{freq}\textsubscript{4} & 5.85272461 &  & 5.66706047\\
-M\textsubscript{freq}\textsubscript{5} & 5.85272461 &  & 5.66706047\\
-H\textsubscript{freq}\textsubscript{0} & 3.82320403 &  & 4.80643423\\
-H\textsubscript{freq}\textsubscript{1} & 3.82320403 &  & 5.58010025\\
-H\textsubscript{freq}\textsubscript{2} & 6.40288977 &  & 5.65316738\\
-H\textsubscript{freq}\textsubscript{3} & 6.40288977 &  & 6.36651842\\
-H\textsubscript{freq}\textsubscript{4} & 7.92857431 &  & 6.40050186\\
-H\textsubscript{freq}\textsubscript{5} & 7.92857431 &  & 7.64082373\\
-bandw.  G & 3.69394702 &  & 5.87085872\\
-bandw.  K & 4.65178817 &  & 4.97424321\\
-bandw.  M & 5.19329495 &  & 7.78109872\\
-bandw.  L & 4.21232412 &  & 6.34433701\\
-bandw.  H & 3.54700549 &  & 9.70902614\\
-DOSerr\textsubscript{h} & 0.00000000 &  & 0.00000000\\
-DOSerr\textsubscript{o} & 0.00000000 &  & 0.00000000\\
-E\textsubscript{pris}\textsubscript{f} & 98.95340236 &  & 220.00000000\\
+The data used to fit to was a mix of DFT and empirical data. Great
+importance was given to the hcp lattice parameter, and the
+structural energy differences between the titanium polymorphs, all
+of which were compared to GGA LMTO calculations using the questaal
+suite \cite{Pashov2020}. Bandwidths at the high symmetry points of
+the hcp bands were used as targets, and calculated from DFT by
+ascertaining bands of dominant \(d\) character and taking the
+difference between the highest and lowest eigenvalues. \(d\)
+character was determined by by decomposition of the eigenvector
+norm by summation over corresponding orbital subsets, similar to a
+Mulliken analysis.
+
+To hasten the fitting of parameters, if a set of parameters
+produced a quantity which was out of an acceptable range, then the
+objective function would immediately cease and submit a large value
+to the objective function, dissuading the optimisation algorithm
+from searching close to that area in parameter space.
+
+Results from the first stages of fitting found that soft modes
+would appear in the phonon spectra for omega and hcp phases,
+despite their structural stability indicated by their elastic
+constants \cite{Wallace1998,Nye1984}. As such it was necessary to calculate the phonon density
+of states during objective function evaluation, to verify there
+were no negative densities, as represented in the \texttt{phonopy} code
+\cite{Togo2015}.
+
+The parameters obtained are shown in table \ref{table:titanium_objective_function}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lccc}
+     Quantity  &    $d$ model &   $sd$ model &       Target \\
+     \hline
+    $a_{\text{hcp}}$ [bohr]&   5.585 &   5.674 &   5.577 \\
+    $c/a(\text{hcp})$ &   1.584 &   1.586 &   1.587 \\
+     $a_{\text{omega}}$ [bohr] &   8.935 &   9.039 &   8.733 \\
+     $c_{\text{omega}}$ [bohr] &   5.387 &   5.486 &   5.323 \\
+     $a_{\text{4h}}   $ [bohr] &   5.576 &   5.681 &   5.563 \\
+     $c_{\text{4h}}   $ [bohr] &  18.098 &  18.328 &  17.759 \\
+     $a_{\text{6h}}   $ [bohr] &   5.574 &   5.676 &   5.546 \\
+     $c_{\text{6h}}   $ [bohr] &  27.184 &  27.579 &  26.771 \\
+     $a_{\text{bcc}}  $ [bohr] &   6.201 &   6.201 &   6.179 \\
+    $a_{\text{fcc}}  $  [bohr] &   7.873 &   8.013 &   7.887 \\
+    \hline
+     $E(\omega) - E( \text{hcp})  [\unit{\milli\rydberg}]$ &   0.588 &  -0.357 &  -0.633 \\
+     $E(4h)- E(\text{hcp}) $ [\unit{\milli\rydberg}] &   1.580 &   1.663 &   3.172 \\
+     $E(6h)- E(\text{hcp}) $ [\unit{\milli\rydberg}] &   2.483 &   2.400 &   3.720 \\
+     $E(\text{bcc}) - E( \text{hcp})  $ [\unit{\milli\rydberg}] &   5.351 &   7.958 &   7.635 \\
+     $E(\text{fcc}) - E( \text{hcp})  $ [\unit{\milli\rydberg}] &   3.780 &   3.825 &   4.519 \\
+    \hline
+     $C_{11}$ [GPa] & 171.6 & 167.3 & 176.1 \\
+     $C_{33}$ [GPa] & 198.9 & 205.2 & 190.5 \\
+     $C_{44}$ [GPa] &  47.4 &  46.6 &  50.8 \\
+     $C_{12}$ [GPa] &  94.7 &  96.7 &  86.9 \\
+     $C_{13}$ [GPa] &  61.2 &  60.9 &  68.3 \\
+    \hline
+    hcp bandwidth $\Gamma$ [eV] &   3.69 &   8.90 &   5.87 \\
+    hcp bandwidth $K$ [eV] &   4.65 &   4.79 &   4.97 \\
+    hcp bandwidth $M$ [eV] &   5.19 &   5.54 &   7.78 \\
+    hcp bandwidth $L$ [eV] &   4.21 &   5.43 &   6.34 \\
+    hcp bandwidth $H$ [eV] &   3.54 &   4.85 &   9.70 \\
+    \hline
+    $E_{\text{prismatic}$ fault  &         99.0 &        110.4 & 220.0 \\
+    $E_{\text{basal}$ fault &              &        208.9 &              \\
+    $E_{\text{pyramidal I}$ fault   &              &        154.6 &              \\
+
+  \end{tabular}
+  \caption[Table of the titanium objective function values compared to DFT target data.] {Table of the titanium objective function values compared to DFT target data. The hcp lattice parameter, and the structural energy differences between titanium polymorphs were given large weights in the objective function. \label{table:titanium_objective_function}}
+  \end{table}
+
+
+
+
+
+----------     E\textsubscript{prismatic}\textsubscript{fault}     -----------
+
+\begin{center}
+\begin{tabular}{lrll}
+tbe: & 98.953 & mJ/m\textsuperscript{2} & \\
+DFT: & 250.000 & mJ/m\textsuperscript{2} & [Benoit  2012]\\
+DFT: & 233.000 & mJ/m\textsuperscript{2} & [Ackland 1999]\\
 \end{tabular}
-\end{table}
+\end{center}
+
+
+----------     E\textsubscript{Basal}\textsubscript{fault} I2     -----------
+
+\begin{center}
+\begin{tabular}{lrll}
+tbe: & 211.658 & mJ/m\textsuperscript{2} & \\
+DFT: & 260.000 & mJ/m\textsuperscript{2} & [Benoit  2012]\\
+\end{tabular}
+\end{center}
 
 \section{sd fitting: Including hybridisation}
-\label{sec:orge305c89}
+\label{sec:orgb28a156}
 
 We included s orbitals such that one could more readily model the
 Ti\(^{4+}\) oxidation state of the Ti ion, which would give a more
@@ -572,10 +662,10 @@ physical representation of titanium ions in quantum electrochemistry
 calculations.
 
 \chapter{Methods}
-\label{sec:org43387a2}
+\label{sec:orgb7e4734}
 
 \section{Rugg}
-\label{sec:org135f4e8}
+\label{sec:orgca50ffb}
 Theoretical analysis showed 
 
 Solute-dislocation interactions arise from two primary mechanisms:
@@ -653,7 +743,7 @@ oxygen solute strengthening.
 \end{enumerate}
 
 \section{Chaari}
-\label{sec:org7725474}
+\label{sec:org44a820d}
 
 \begin{itemize}
 \item Know that dislocation, in plane wave codes, seems to have a
@@ -729,17 +819,17 @@ can glide in the pyramidal plane by nucleation of kink-pairs.
 
 
 \chapter{What did each method find}
-\label{sec:org9822d6f}
+\label{sec:org1064e93}
 
 \chapter{}
-\label{sec:org933235b}
+\label{sec:orgf7bf406}
 
 \chapter{Dislocation-carbon interactions in Fe-C}
-\label{sec:orgb88bba5}
+\label{sec:orge53f932}
 \label{chapter:dislocation_carbon_FeC}
 
 \section{Introduction}
-\label{sec:orgabbe8cc}
+\label{sec:orgba0bc6d}
 
 Martensitic steels are frequently used in bearings due to their resilience to service conditions,
 being subject to high rotational speeds and contact pressures. However, under cyclic loading
@@ -835,7 +925,7 @@ dislocation motion in the martensitic matrix, mitigating failure by RCF.
 
 
 \section{Computational Method}
-\label{sec:orgf447060}
+\label{sec:orge39fa28}
 
 
 We use the tight-binding model of Paxton and Elsässer \cite{Paxton2013}, which has been shown to
@@ -850,7 +940,7 @@ behaviours.
 
 
 \subsection{Peierls Potential}
-\label{sec:orgd9b90dc}
+\label{sec:orgae9e6dd}
 
 To determine the Peierls potential of the \(1/2\langle 111 \rangle\) screw dislocation, we followed the
 procedure detailed in Itakura \cite{Itakura2012}. Quadrupolar arrays of dislocations were
@@ -919,7 +1009,7 @@ interaction energies must be subracted, which is achieved by the correction term
     = \frac{1}{2} ( E_{\text{INT}}^{i} - E_{\text{INT}}^{\text{E}} )\).
 
 \subsection{Preliminary calculations}
-\label{sec:orgeb0168d}
+\label{sec:orga880bac}
 
 To determine the binding energy of carbon to dislocations, we used the cluster method, as shown
 in figure \ref{fig:dislocationschematics}, right. Simulation
@@ -969,7 +1059,7 @@ predicted by dipole calculations which allow all degrees of freedom
 to be relaxed.
 
 \subsection{Fe-C binding energies}
-\label{sec:org06864d3}
+\label{sec:orge0f4d55}
 We calculated the carbon-dislocation binding energies as in Itakura
  \cite{itakura13_effec_hydrog_atoms_screw_disloc}.
 
@@ -992,7 +1082,7 @@ situated in an octahedral site in a perfect cluster of the same size.
 
 Calculations were also
 \subsection{Carbon concentration on dislocation line}
-\label{sec:org5b4d1d0}
+\label{sec:org78f8970}
 \label{sec:carbon_concentration}
 
 Using the Fe-C binding energies, one can predict the equilibrium carbon
@@ -1046,7 +1136,7 @@ Further discussion on carbon concentration formulations is given in section
 \ref{sec:concentration_statistics_discussion}.
 
 \subsection{Line Tension Model}
-\label{sec:org8f75a83}
+\label{sec:org48a38e0}
 \label{sec:ltmodelintro}
 
 The kink-pair formation enthalpy is defined as the minimum energy necessary to to
@@ -1094,7 +1184,7 @@ on the dataset of Itakura \cite{Itakura2012}.
 
 \begin{enumerate}
 \item Line-tension model in carbon environment
-\label{sec:org2d1054d}
+\label{sec:org1d944d7}
 
 Dislocations form Cotrell atmospheres of carbon, which influence their
 motion. Analysis of the dynamics of a dislocation moving from one Peierls
@@ -1151,7 +1241,7 @@ detailed in section \ref{sec:ltmodelintro}.
 
 
 \item Extension to more Fermi-Dirac statistics
-\label{sec:orgf4a60c0}
+\label{sec:org9453c4f}
 \label{sec:concentration_statistics_discussion}
 
 Cottrell and Bilby's assumption of Maxwell-Boltzmann statistics, as seen in
@@ -1194,10 +1284,10 @@ configurational entropy would not be significantly enhanced compared to the latt
 
 
 \section{Results}
-\label{sec:orgc951007}
+\label{sec:orgb7ede14}
 
 \subsection{Peierls Potential}
-\label{sec:org77730ee}
+\label{sec:orgf46ed39}
 
         \begin{figure}
 \centering
@@ -1301,7 +1391,7 @@ effect the Peierls potential has on the pathway taken by a
 dislocation moving from one Peierls valley to the next.
 
 \subsection{Preliminary calculations}
-\label{sec:org8e4f4ec}
+\label{sec:org0935f51}
 
 
 To validate the cluster simulation method, the excess energy, defined as the difference in energy
@@ -1339,7 +1429,7 @@ energy.
 
 
 \subsection{Fe-C binding energies}
-\label{sec:orge8929d0}
+\label{sec:orgc52d6b6}
 \label{sec:fec_binding}
 
 As found in DFT simulations by Ventelon \cite{Ventelon2015}, when a carbon was placed in the
@@ -1479,7 +1569,7 @@ resultant Fe-C binding energy from tight-binding.
 
 
 \subsection{Carbon concentration along on line}
-\label{sec:org43adba5}
+\label{sec:org699e1a2}
 
 The variation of carbon concentration along the dislocation line for the highest
 binding energy sites of the easy and hard cores can be seen in figure
@@ -1517,13 +1607,13 @@ the easy core by the adjacent carbon.
 
 
 \subsection{Line Tension Model}
-\label{sec:orgb8fbbf1}
+\label{sec:org1555547}
 \label{sec:ltmodel}
 
 \textbf{*} Insert here what the line tension model neglects in terms of energetics \textbf{*}
 \begin{enumerate}
 \item Prerequisites
-\label{sec:orgd6d58ad}
+\label{sec:orgdd565b8}
 
 The \(K\) coefficient for the line tension model was calculated from atomistic simulations, using
 the method of Itakura \cite{Itakura2012}, by calculation of a Hessian from the displacement of
@@ -1557,7 +1647,7 @@ This distance-dependence agrees well with previous calculations of the binding e
 at larger distances from the core \cite{Hanlumyuang2010}.
 
 \item Kink-pair formation in pure iron
-\label{sec:org1f635fe}
+\label{sec:orgb4bf98b}
 
 \begin{figure}[htbp]
 \centering
@@ -1626,7 +1716,7 @@ TB (d-orthog.) & 0.53 eV\\
 
 
 \item Kink-pair formation enthalpy with a single carbon
-\label{sec:orgaacc02e}
+\label{sec:org6a61729}
 
 To understand how kink-pair nucleation is affected by carbon, one
 can study the formation of a kink-pair but with the
@@ -1768,7 +1858,7 @@ directly compared to the true kink-pair formation enthalpy necessary for a
 single screw dislocation to undergo thermally-activated movement.
 
 \item Kink-pair nucleation rate
-\label{sec:org1daff70}
+\label{sec:org850578d}
 \label{sec:kink-pair_nucleation_rate}
 
 One can use an Arrhenius law to calculate the attempt frequency of a process given an
@@ -1894,7 +1984,7 @@ is greater than the migration barrier energy in high mobility zone:
 dislocation mobility, as it cannot catch up with the dislocation.
 
 \item Kink-trapping
-\label{sec:org6713796}
+\label{sec:orgf73cfa9}
 
 Kink-trapping is the energetic barrier to kink-migration along the dislocation line
 due to the change in binding energy of a kink sweeping past a defect. The
@@ -1923,11 +2013,11 @@ planes causing pinning and the formation of edge dipoles seen in experiment \cit
 \end{enumerate}
 
 \subsection{Line-tension equilibrium conditions}
-\label{sec:orga9d5b33}
+\label{sec:org35b187b}
 
 \begin{enumerate}
 \item Dynamics of straight 1/2\(\langle 111 \rangle\) screw dislocation
-\label{sec:org9233989}
+\label{sec:org372d820}
 
 Figure \ref{fig:straighttbequib} shows the potential a straight screw
 dislocation experiences as it moves between peierls valleys in an
@@ -1970,7 +2060,7 @@ In reality, we have a situation which is between the two. This can be accounted 
 a continuity term which is dependent on dislocation velocity \cite{Gong2020}.
 
 \item Dynamics of kink-pair formation in equilibrium
-\label{sec:org0f3f659}
+\label{sec:orgc23fca4}
 \label{sec:kinkpairformationequib}
 The line-tension upon kink-pair formation, in the limit of slow glide, can
 be seen in figure \ref{fig:kinkpairequib}. As the hard core is stabilised with
@@ -2060,7 +2150,7 @@ formation enthalpies, as \(H_{\text{k}} = H_{\text{k}}(\bar{v}_{\text{d}})\) and
 
 
 \subsection{Diffusion Barriers}
-\label{sec:orgbd62493}
+\label{sec:org1ebf45f}
 
 The diffusion barriers of carbon close to the easy core have been found to decrease---for some
 transitions---from 0.87eV for bulk diffusion, down to barriers around 0.2eV
@@ -2086,7 +2176,7 @@ dislocations in bcc iron, validating the EAM results of Nematollahi and the Fe-C
 
 \begin{enumerate}
 \item Theory
-\label{sec:org3b56bea}
+\label{sec:org5f476a8}
 
 Using the diffusion barriers, we can find useful quantities, such as diffusion coefficients for each
 of the carbon sites around the hard core of the dislocation.
@@ -2136,7 +2226,7 @@ this. However for accurate elucidation of effects at finite temperature, anharmo
 included.
 
 \item Computational Method
-\label{sec:org3952113}
+\label{sec:orgc08a0cf}
 
 Elucidation of the diffusion barriers of carbon, was achieved using the Climbing-Image Nudged
 Elastic Band (CI-NEB) method with either 5 or 9 images. Fully-relaxed cluster simulation cells of
@@ -2171,7 +2261,7 @@ atoms are extracted and fed into phonopy, from which we obtain the vibrational f
 
 
 \item Enthalpies in dislocation movement with static carbon
-\label{sec:org3764bc9}
+\label{sec:orgbb7b1ef}
 
 The change in Gibbs free energy between differing configurations
 of a dislocation-carbon system can indicate favourable
@@ -2265,7 +2355,7 @@ If this energy change, \(\Delta E_{
 
 \begin{enumerate}
 \item Caveats for the calculation of the vibrational free energy on a subsection of lattice
-\label{sec:orgc0589f6}
+\label{sec:org51f98ec}
 
 In doing the phonon calculations on a subset of the simulation cell, one
 assumes here that the force constants generated are not long-ranged. To
@@ -2285,7 +2375,7 @@ the Debye model, or the local harmonic model \cite{Garbulsky1996}.
 
 
 \item Modification of occupancies due to diffusion barrier
-\label{sec:org10f520c}
+\label{sec:orgdf17c87}
 
 
 To model the solute atmosphere around a dislocation in an environment of
@@ -2375,7 +2465,7 @@ equation for the velocity dependence.
 
 
 \section{Discussion}
-\label{sec:org03ba825}
+\label{sec:org9c1dbd3}
 \label{sec:discussion}
 
 
@@ -2437,7 +2527,7 @@ figure \ref{cdhardeasy}.
 
 
 \section{Future work}
-\label{sec:org6f77811}
+\label{sec:org10cb741}
 
 Using the kink-pair formation enthalpies and the binding energies of carbon to screw dislocations, one can proceed
 with self-consistent kinetic Monte Carlo simulations of dislocation glide in an environment of carbon to
@@ -2478,7 +2568,7 @@ barrier to determine if there are significant modifications to the kink-pair nuc
 rate.
 
 \section{Conclusion}
-\label{sec:org998cefd}
+\label{sec:orgc39ebc0}
 
 Dislocation-assisted carbon migration is thought to be a viable mechanism by which martensite
 decays to form DER regions---mostly composed of ferrite interspersed in a martensitic
@@ -2565,7 +2655,7 @@ SCkMC simulations will be used to determine dislocation dynamics in an environme
 
 
 \chapter{Regularisation of interaction energy in quadrupolar array}
-\label{sec:orge7295bf}
+\label{sec:org9147535}
 \label{sec:Ainteractionenergy}
 
 
@@ -2599,7 +2689,7 @@ regularised interaction energy.
 
 
 \chapter{Zero-point energy calculation}
-\label{sec:org4779751}
+\label{sec:org84f01e1}
 \label{sec:zeropointenergy}
 
 After relaxation of the C-dislocation system, a 3x3 Hessian matrix is constructed by taking the
@@ -2613,7 +2703,7 @@ where \(k_i\) are the eigenvalues of the Hessian and \(m_\text{C}\) is
 the mass of carbon.
 
 \chapter{Smooth mapping of sites in equilibrium line-tension model}
-\label{sec:org04609de}
+\label{sec:org3d1b800}
 \label{sec:smoothsitemapping}
 
 To approximate the position of trap sites upon dislocation movement, the

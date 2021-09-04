@@ -125,12 +125,13 @@
       the concentration dependence as in Ivo's paper
 
 * MEETING with Group                                                :MEETING:
-  SCHEDULED: <2021-09-01 Wed 12:00 ++7d>
+  SCHEDULED: <2021-09-08 Wed 12:00 ++7d>
   :PROPERTIES:
-  :LAST_REPEAT: [2021-08-25 Wed 09:05]
+  :LAST_REPEAT: [2021-09-01 Wed 13:53]
   :REPEAT_TO_STATE: MEETING
   :END:
 
+  - State "DONE"       from "MEETING"    [2021-09-01 Wed 13:53]
   - State "DONE"       from "MEETING"    [2021-08-25 Wed 09:05]
   - State "DONE"       from "MEETING"    [2021-08-11 Wed 13:24]
   - State "DONE"       from "MEETING"    [2021-06-14 Mon 09:55]
@@ -191,7 +192,7 @@
   :END:
 [2021-03-11 Thu 11:02]
 * MEETING with Sasha                                                :MEETING:
-  SCHEDULED: <2021-08-23 Mon 14:00 ++7d>
+  SCHEDULED: <2021-09-07 Tue 14:00 ++7d>
   :PROPERTIES:
   :LAST_REPEAT: [2021-08-10 Tue 13:07]
   :END:

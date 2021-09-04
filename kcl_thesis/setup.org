@@ -1,6 +1,7 @@
 #+latex_class: PhDThesisPSnPDF
 #+latex_class_options: [a4paper,12pt,oneside,print,numbered,index,PageStyleIII]
-#+latex_header: \doublespacing
+#+latex_header: \onehalfspacing
 #+latex_header: \input{Preamble/preamble}
 #+latex_header: \input{thesis-info}
 #+latex_header: \usepackage{physics}
+#+latex_header: \usepackage{siunitx}
